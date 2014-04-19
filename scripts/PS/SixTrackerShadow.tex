@@ -1,0 +1,58 @@
+ % Sombras en un cojunto de seguidores  con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\input{preambulo}
+\begin{document}
+\def\az{0 }%signo contrario a las ecuaciones!
+\def\beta{45 }
+\def\rad{10 }
+\def\rang{\rad 2 div }%fundamental dejar el espacio detrás si luego va a formar parte de otra ecuación
+\def\rtvec{\rad 1.05 mul }
+\def\rtang{\rang 1.2 mul }
+
+
+%\begin{center}
+\begin{pspicture}(-2,0)(11,6)
+%\psframe(-2,0)(11,6)
+        %\psgrid
+        \psset{unit=6pt}
+
+        
+        \uput[0](45,24){$Sur$}
+        
+        \multido{\ilns=20+-15,\ins=0+3}{2}{%
+                \multido{\ilew=0+20,\iew=1+1}{3}{%  
+                        \rput{\az}(\ilew,\ilns){\psframe[fillstyle=solid](-5,-2.5)(5,2.5)}
+                        \fpAdd{\iew}{\ins}{\isuma}
+                        \rput(\ilew,\ilns){$s_{\isuma}$}
+                                            }}
+       \psline{<-}(50,23)(50,15)%Eje NORTE SUR
+       \psset{linewidth=.3,linestyle=dashed}
+        \psline{<-}(25,5)(35,5)
+        \uput[90](30,5){$FS_{eo}$}
+        \psline{<-}(15,5)(5,5)
+        \uput[90](10,5){$FS_{eo}$}
+        \psline{<-}(20,7.5)(20,17.5)
+        \uput[0](20,12.5){$FS_{ns}$}
+        \psline{<-}(15,7.5)(5,17.5)
+        \uput[45](10,12.5){$FS_d$}
+        \psline{<-}(25,7.5)(35,17.5)
+        \uput[135](30,12.5){$FS_d$}
+        
+        
+    \end{pspicture}
+%\end{center}
+\end{document}

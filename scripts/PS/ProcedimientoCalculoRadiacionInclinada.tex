@@ -1,0 +1,34 @@
+ % Procedimiento de cálculo de Radiación inclinada con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\pspicture(-2,-2.5)(9,6)
+
+\psset{unit=4pt}             
+\rput[0](0,40){\rnode{Gd}{\psframebox{$G_{d}(0)$}}}         
+\rput[0](0,25){\rnode{Dd}{\psframebox{$\begin{array}{c}D_{d}(0) \\ B_{d}(0)\end{array}$}}}       
+\rput[0](0,10){\rnode{G}{\psframebox{$\begin{array}{c}D(0) \\ B(0) \\ G(0)\end{array}$}}}             
+\rput[0](25,10){\rnode{Inclin}{\psframebox{$\begin{array}{c}D(\beta,\alpha)\\B(\beta,\alpha)\\G(\beta,\alpha)\end{array}$}}}         
+\rput[0](50,10){\rnode{Inclind}{\psframebox{$\begin{array}{c}D_{d}(\beta,\alpha)\\B_{d}(\beta,\alpha)\\G_{d}(\beta,\alpha)\end{array}$}}}         
+\rput[0](25,-10){\rnode{Eff}{\psframebox{$\begin{array}{c}D_{ef}(\beta,\alpha)\\B_{ef}(\beta,\alpha)\\G_{ef}(\beta,\alpha)\end{array}$}}}         
+\rput[0](50,-10){\rnode{Effd}{\psframebox{$\begin{array}{c}D_{efd}(\beta,\alpha)\\B_{efd}(\beta,\alpha)\\G_{efd}(\beta,\alpha)\end{array}$}}}         
+\ncline{->}{Gd}{Dd}         
+\ncline{->}{Dd}{G}         
+\ncline{->}{G}{Inclin}         
+\ncline{->}{Inclin}{Inclind}         
+\ncline{->}{Inclin}{Eff}         
+\ncline{->}{Eff}{Effd}                                        
+\endpspicture
+

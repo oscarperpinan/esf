@@ -1,0 +1,6842 @@
+%PDF-1.4
+%Å‚Å„ÅœÅ”\r
+1 0 obj
+<<
+/CreationDate (D:20081110095723)
+/ModDate (D:20081110095723)
+/Title (R Graphics Output)
+/Producer (R 2.8.0)
+/Creator (R)
+>>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents 6 0 R
+/Resources 4 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 7 0 R
+>>
+stream
+q
+Q q
+Q q
+BT
+0.000 0.000 0.000 rg
+/F3 1 Tf 14.00 0.00 0.00 14.00 128.06 487.95 Tm (Funcion de densidad de probabilidad) Tj
+ET
+Q q
+BT
+0.000 0.000 0.000 rg
+/F2 1 Tf 12.00 0.00 0.00 12.00 215.27 18.00 Tm (Productividad Diaria) Tj
+ET
+Q q
+BT
+0.000 0.000 0.000 rg
+/F2 1 Tf 0.00 12.00 -12.00 0.00 20.62 237.87 Tm (Density) Tj
+ET
+Q q
+Q q
+0.000 0.000 0.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+130.35 458.94 m 130.35 464.61 l S
+191.13 458.94 m 191.13 464.61 l S
+251.91 458.94 m 251.91 464.61 l S
+312.70 458.94 m 312.70 464.61 l S
+373.48 458.94 m 373.48 464.61 l S
+434.26 458.94 m 434.26 464.61 l S
+Q q
+Q q
+0.000 0.000 0.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+63.08 81.41 m 57.41 81.41 l S
+63.08 176.08 m 57.41 176.08 l S
+63.08 270.76 m 57.41 270.76 l S
+63.08 365.43 m 57.41 365.43 l S
+BT
+0.000 0.000 0.000 rg
+/F2 1 Tf 10.00 0.00 0.00 10.00 32.29 77.82 Tm (0.00) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 32.29 172.49 Tm (0.05) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 32.29 267.17 Tm (0.10) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 32.29 361.84 Tm (0.15) Tj
+ET
+Q q
+Q q
+0.000 0.000 0.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+130.35 56.80 m 130.35 51.13 l S
+191.13 56.80 m 191.13 51.13 l S
+251.91 56.80 m 251.91 51.13 l S
+312.70 56.80 m 312.70 51.13 l S
+373.48 56.80 m 373.48 51.13 l S
+434.26 56.80 m 434.26 51.13 l S
+BT
+0.000 0.000 0.000 rg
+/F2 1 Tf 10.00 0.00 0.00 10.00 127.57 38.29 Tm (0) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 188.35 38.29 Tm (2) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 249.13 38.29 Tm (4) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 309.92 38.29 Tm (6) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 370.70 38.29 Tm (8) Tj
+ET
+BT
+/F2 1 Tf 10.00 0.00 0.00 10.00 428.70 38.29 Tm (10) Tj
+ET
+474.99 81.41 m 480.66 81.41 l S
+474.99 176.08 m 480.66 176.08 l S
+474.99 270.76 m 480.66 270.76 l S
+474.99 365.43 m 480.66 365.43 l S
+Q q
+Q q 63.08 56.80 411.91 402.14 re W n
+0.000 0.502 1.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.29 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.86 80.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.44 81.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.89 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.13 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 171.29 77.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.85 76.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.45 75.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.32 81.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 151.18 77.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.16 78.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 127.72 76.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.33 80.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.58 77.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.72 81.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.58 77.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.89 82.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.98 77.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.93 78.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.13 75.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.81 79.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.61 79.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.58 77.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.29 76.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.16 76.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.39 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.55 77.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.68 78.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.81 79.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.72 75.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 276.37 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.67 77.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.09 76.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.29 80.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.02 81.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.90 80.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.87 78.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.92 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.77 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.88 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.16 79.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 130.92 78.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.19 78.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.62 78.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 237.85 76.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.10 75.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.30 80.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.67 76.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.33 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 253.47 80.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 311.57 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.61 75.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 236.41 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.21 82.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.08 82.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.48 80.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.27 76.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.03 76.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.57 78.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.71 76.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.55 80.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.30 78.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.88 76.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.57 81.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.51 78.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.21 80.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.83 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.25 80.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 140.91 80.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.73 79.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.88 76.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.38 78.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.00 75.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.33 80.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.34 76.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.49 76.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.61 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 244.60 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.93 76.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.82 76.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.69 77.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.19 75.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.09 76.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.76 80.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.14 83.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.11 78.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.95 80.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.67 82.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.14 79.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 230.89 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 182.53 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.00 75.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 251.25 82.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 190.73 75.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.85 79.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.18 78.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.23 79.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.63 77.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.13 77.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.15 77.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.55 77.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 228.84 83.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.76 78.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.86 79.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.63 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.93 82.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.73 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.83 76.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.89 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.29 75.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 159.57 80.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.35 77.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.02 81.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.17 79.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.14 77.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.43 81.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.02 77.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.79 80.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.87 79.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.98 79.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.52 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.36 79.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.86 77.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.03 76.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.95 75.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.28 75.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.49 75.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.67 76.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.73 79.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.18 76.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.68 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.47 79.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.60 81.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.48 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.84 77.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.53 75.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.65 76.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.38 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.64 76.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.15 80.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.70 79.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.70 79.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.71 76.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.36 82.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.52 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.40 78.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.14 81.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.07 80.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.09 79.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.35 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.00 78.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.75 81.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.91 82.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.77 80.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.93 82.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.58 80.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.24 76.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.03 79.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.31 78.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.20 80.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.19 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.55 76.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.25 76.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.88 75.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.96 79.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.86 81.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.32 81.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.06 82.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.65 76.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.25 82.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.44 80.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.86 80.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.49 79.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.27 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.85 76.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 400.70 79.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.49 79.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.36 82.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.32 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.13 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.48 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.23 78.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.31 82.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.45 77.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.67 81.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.87 76.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.66 77.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.00 79.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 399.05 82.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.29 79.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.52 79.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.02 77.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 403.76 79.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 398.13 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.93 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.60 75.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.50 75.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.98 81.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 234.01 75.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 212.11 78.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 226.20 75.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.83 80.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.33 78.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.67 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.07 79.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.66 78.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.90 81.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.33 75.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.84 79.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 396.40 79.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.79 80.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.07 78.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.53 81.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.03 76.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.26 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.85 79.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.56 76.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.58 80.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.45 79.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 222.56 81.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.14 78.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.05 75.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.60 78.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 208.85 76.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.03 76.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.12 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.18 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.70 80.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.71 77.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.23 75.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.89 79.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.97 78.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.15 76.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.27 76.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.82 81.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.98 79.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.47 75.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.23 81.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.33 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.98 76.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.10 80.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 241.19 81.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.44 82.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.76 79.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.79 75.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 251.98 77.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.56 76.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.04 76.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.05 80.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.26 79.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.18 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.00 81.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 358.88 79.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.67 76.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.76 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 190.31 79.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 256.98 76.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.16 79.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.69 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.80 77.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.05 75.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.40 80.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 218.41 78.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 177.17 77.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.04 76.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.14 76.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 190.02 80.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.78 82.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.97 79.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.76 82.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.65 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.17 78.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 248.58 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.00 81.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.09 78.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.45 76.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.62 82.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.88 79.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.86 79.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.26 82.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 155.39 80.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.62 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.54 78.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.99 77.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.98 75.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.29 77.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.46 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.52 79.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.64 80.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.78 79.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.18 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.91 82.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.57 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.32 79.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.99 75.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.96 78.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.18 76.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.31 78.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.54 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.62 80.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.86 80.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.71 78.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.52 81.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.34 77.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.31 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.72 77.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.39 77.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.91 76.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.72 80.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 178.81 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.01 83.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 217.98 79.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 140.79 75.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.43 77.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.07 75.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.54 78.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.89 76.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.35 82.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.91 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 217.01 80.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.82 81.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.23 76.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 156.99 77.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 151.87 82.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.73 79.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.23 81.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 137.79 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 219.48 75.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 259.14 77.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.35 82.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 155.48 82.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 149.65 79.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 144.97 82.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 203.21 75.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 217.52 80.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.82 80.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 174.72 81.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.81 83.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.12 77.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 165.57 79.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.57 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.16 80.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.69 78.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.97 75.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.39 79.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.43 81.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.82 77.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.35 77.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.77 80.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 276.44 80.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 208.29 81.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 179.06 79.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.33 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.19 77.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.45 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.04 77.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 273.99 75.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.73 78.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.94 77.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.31 76.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.73 76.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.38 81.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.71 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.66 80.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.06 79.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.38 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.66 75.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.59 80.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.94 78.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.71 81.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 244.38 78.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.86 81.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.08 79.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 177.22 80.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.28 78.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.19 79.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.40 76.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.18 76.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.99 77.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.95 75.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.15 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.09 81.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.04 75.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.76 75.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.97 79.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.81 76.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.61 76.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 284.20 83.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.52 77.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 165.17 78.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.81 77.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.47 79.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.88 80.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.81 77.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 130.57 80.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.76 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.46 79.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.33 80.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 159.97 77.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.04 76.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.41 78.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 127.72 82.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.82 77.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.39 81.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.86 82.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 184.92 82.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.72 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.41 78.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.68 80.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.26 82.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 134.07 78.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 210.40 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.24 79.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.13 75.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.55 76.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.60 76.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.52 80.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.41 78.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.63 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 146.12 79.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 157.21 77.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 231.32 80.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.53 79.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.58 81.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.71 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 248.32 75.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.54 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.49 81.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 238.46 75.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.03 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.42 77.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 260.15 77.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.21 81.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 165.86 78.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.95 76.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 179.74 78.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 244.22 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 145.40 78.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 156.96 80.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 199.94 80.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.63 77.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 155.22 77.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.38 75.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.84 78.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.19 76.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.87 79.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.47 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.43 81.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.45 82.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.05 82.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.94 79.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.19 81.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.46 77.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.43 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.62 80.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.63 79.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.00 76.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 254.56 78.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 272.97 79.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 217.68 81.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.65 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.83 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.88 75.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.93 82.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 221.11 80.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.61 82.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 210.26 81.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.49 81.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.83 76.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.70 80.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.08 79.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.48 81.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.01 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.28 79.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.20 77.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.60 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.61 80.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.30 78.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.67 82.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.36 76.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.47 75.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.69 82.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.79 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.93 75.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.93 82.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.32 75.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.10 79.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.63 76.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.37 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.15 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.08 82.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.59 79.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.73 78.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.71 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.75 82.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.05 76.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.60 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.32 77.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.30 81.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.41 82.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.72 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.02 76.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.15 81.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.25 81.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.46 82.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.76 80.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.01 78.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.64 79.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.65 80.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.44 81.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.94 79.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.15 76.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.63 77.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.15 78.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.74 79.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.20 77.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.98 79.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.21 82.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.20 81.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.94 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.66 78.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.69 80.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.11 75.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.31 79.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.06 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.61 82.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.36 75.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.53 78.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.97 81.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.69 78.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.08 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 226.71 78.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.87 82.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.59 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.37 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.71 81.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.96 75.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 189.50 76.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.90 75.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.67 75.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.05 75.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.90 82.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.52 78.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.32 77.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.27 82.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.37 77.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.00 78.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.08 80.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.06 75.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.74 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.67 81.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.84 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.88 81.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.67 79.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.46 75.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.19 81.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.60 83.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.62 81.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.10 82.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.42 78.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.67 77.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.39 76.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.06 82.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.15 78.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.58 76.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 223.23 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.15 76.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.50 76.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.74 76.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.08 81.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.93 79.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.26 78.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.24 76.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.46 78.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 405.09 80.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 400.60 77.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.94 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.19 81.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 223.79 76.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 177.51 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.52 77.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.86 76.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.86 77.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.22 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.59 78.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.03 80.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.25 76.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 396.80 79.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.73 76.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.82 80.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.35 80.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.85 82.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 209.19 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.09 82.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.21 80.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.92 78.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.97 79.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.13 76.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.85 75.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 127.72 82.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.35 80.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.31 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.24 75.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.84 75.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.03 80.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.08 75.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.85 75.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 146.54 81.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.84 75.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.91 77.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.25 79.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.08 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.42 78.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.85 78.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.91 80.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.11 83.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 241.74 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.66 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.75 75.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 212.00 78.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.49 79.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.35 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.88 82.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.26 82.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.41 82.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.43 77.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 237.52 77.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.49 80.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.25 77.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.48 79.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.56 76.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.14 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.19 81.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.16 81.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.76 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 223.84 81.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.72 75.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.99 76.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.06 75.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.21 81.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.47 78.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.72 79.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.13 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.06 79.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.34 83.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.22 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.50 75.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.38 75.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 240.36 77.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.45 79.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.98 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.76 77.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.08 78.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.94 77.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 174.51 82.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.09 77.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.26 75.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.91 75.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.65 82.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.51 82.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.64 81.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.87 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 147.90 80.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.52 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.57 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.69 77.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.17 75.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 162.44 78.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.80 79.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.90 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.01 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.94 82.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.92 79.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.51 80.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.42 80.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.05 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 175.24 79.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.30 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.52 79.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 254.00 78.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 260.15 78.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 221.86 75.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 194.05 82.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 153.77 77.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 253.61 82.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.51 76.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.23 82.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.19 77.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.36 78.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.96 77.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.39 79.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.05 81.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.75 75.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.26 81.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.29 78.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 205.31 83.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.06 82.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.69 81.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.20 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.49 78.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.81 79.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.95 75.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.91 77.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 131.27 81.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.02 81.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 249.39 75.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.52 77.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.28 81.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.54 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.16 76.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.55 81.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.75 77.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.33 76.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.74 80.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 200.16 76.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 168.85 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.24 78.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 153.01 77.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 259.71 79.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.24 79.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.04 79.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.96 76.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.16 82.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.99 75.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.11 75.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.56 77.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.40 75.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.71 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.86 81.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 258.08 75.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 157.56 82.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 156.13 78.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.81 77.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.05 81.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.39 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.45 75.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.02 75.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.94 75.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 205.12 77.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.28 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.35 75.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 256.96 82.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.71 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.97 82.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.95 77.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.71 79.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.50 81.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.75 82.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.61 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.04 75.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.82 78.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.86 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.45 77.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.62 80.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.17 79.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.11 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 156.94 81.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.10 76.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 221.77 80.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.62 77.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.43 78.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.24 82.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.33 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.89 82.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.78 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.62 75.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.28 76.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.24 82.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.63 81.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 167.37 78.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 157.43 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 160.15 82.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.91 76.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 180.83 76.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.83 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 258.81 76.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.93 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.51 81.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.47 81.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.78 76.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.03 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.18 78.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.00 75.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.99 78.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.81 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.45 78.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.50 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.36 82.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.19 78.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.01 82.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.10 81.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.12 80.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 189.88 79.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 236.37 77.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 144.24 79.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.43 78.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.09 80.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.67 80.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.87 79.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.86 82.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 171.64 81.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.12 76.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 210.36 77.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.29 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 204.63 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.81 77.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.56 78.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.07 79.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.77 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.71 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 210.47 77.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.55 78.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 184.08 79.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.69 78.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.79 82.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.79 76.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.44 79.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.16 79.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 344.25 77.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.64 79.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.30 76.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.78 76.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.41 77.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.43 75.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.36 82.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.87 82.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.69 79.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.59 81.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.97 82.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.82 76.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 232.73 80.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.44 78.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.70 79.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.05 77.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.98 78.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.98 75.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.30 75.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.24 78.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.98 80.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.77 82.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.70 75.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 344.75 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.90 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.77 77.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.18 81.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 233.79 78.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.03 75.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.30 82.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.78 78.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.93 82.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.58 80.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.73 79.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.33 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.02 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.14 78.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.34 79.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.53 77.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.58 77.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.79 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.14 80.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.59 79.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.65 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 358.50 75.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.83 77.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 214.05 81.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.83 78.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.26 75.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.30 80.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.86 80.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.36 83.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.51 78.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.27 80.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.76 78.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.52 76.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.75 82.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.96 79.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.95 78.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.63 76.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.93 80.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.48 77.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.95 76.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.98 80.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.10 80.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.11 82.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.84 80.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.27 81.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.11 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.70 75.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.71 79.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.28 81.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.99 78.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.92 78.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.54 78.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.75 80.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.66 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.70 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.68 78.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 256.50 81.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.63 75.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.25 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.03 78.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.24 78.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.60 79.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.49 76.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.34 80.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.17 83.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.00 76.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.85 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.70 77.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.28 75.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.11 81.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.29 83.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.32 78.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 397.66 76.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.29 82.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.83 77.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 397.49 75.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.51 76.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.45 82.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.47 75.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.85 78.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.61 81.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.13 76.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.77 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.94 80.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.49 81.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.35 78.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.38 79.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.63 77.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.60 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.62 81.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.51 77.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.88 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.78 79.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.00 75.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.06 81.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.27 77.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.98 78.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.52 78.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.68 76.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.43 77.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.36 76.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.97 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.24 80.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 190.08 78.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 240.09 81.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.26 80.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.81 82.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.23 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.84 80.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.40 78.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.13 81.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 402.57 79.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 400.62 80.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.32 75.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.00 78.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 398.98 78.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.49 80.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.43 78.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.82 76.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.13 81.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.80 79.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 234.28 77.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.58 75.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.81 79.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.41 82.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.23 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.25 81.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.79 78.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.02 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.76 76.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.74 81.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.92 76.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.90 76.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.87 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.87 83.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.32 77.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.36 82.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.78 79.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.60 81.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.40 77.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.31 77.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.34 80.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.43 76.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.83 83.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.91 78.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.54 77.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.13 76.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.64 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.13 82.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.47 81.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.18 83.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.39 79.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.26 80.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.47 81.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.92 80.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.37 76.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 183.89 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.01 77.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.51 78.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.74 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.33 79.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.38 77.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.41 77.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 226.64 76.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.49 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.61 76.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.34 75.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.35 81.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.29 82.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 245.69 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.00 81.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.00 79.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.72 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.69 81.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.39 76.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 233.56 79.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.76 82.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.67 81.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.60 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.24 77.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.41 78.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.52 76.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.99 75.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.55 75.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 211.66 82.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 284.68 76.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.52 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.96 77.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.62 78.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.53 81.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.79 80.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.46 75.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 160.69 75.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 162.12 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 147.37 81.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.32 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 132.41 78.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.74 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.33 75.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.15 82.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 245.99 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.39 80.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.91 77.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.74 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.86 80.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.95 80.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.41 78.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.99 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.33 78.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.38 78.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.95 78.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.99 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.31 76.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 311.55 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.45 76.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 284.87 80.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.37 82.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 241.01 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.17 82.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 254.28 75.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.98 81.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.86 81.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.33 82.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.43 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.56 77.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.28 78.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.22 79.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.69 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.89 81.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.87 81.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 211.66 82.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.83 82.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.66 79.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.15 77.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.19 81.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.48 79.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.83 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.42 76.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.90 80.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.31 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.43 76.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.32 79.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.56 82.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.70 77.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.79 76.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.66 80.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.60 80.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.87 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.29 77.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.70 78.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.86 79.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.42 77.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.87 79.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.48 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.46 79.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.78 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.34 82.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 237.13 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.63 75.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.27 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 253.04 78.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.88 75.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.04 76.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.63 79.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.01 80.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.34 77.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.70 82.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.25 80.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.59 80.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 218.77 80.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.00 81.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.90 75.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.85 79.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.48 76.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.13 82.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.13 76.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.00 82.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.00 77.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.96 78.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.36 79.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.23 78.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.04 82.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.86 78.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 189.23 75.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.88 78.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 142.42 79.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 203.39 78.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 171.80 79.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.01 78.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.70 81.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.98 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.25 78.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.79 81.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.52 76.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 189.69 79.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.68 81.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.97 77.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.88 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.20 81.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.42 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.48 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.58 76.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.11 82.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.73 79.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.65 76.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.73 81.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 217.01 77.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.01 82.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.33 79.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 182.60 77.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.25 83.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 185.59 81.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.45 75.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.98 78.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.90 77.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 239.48 80.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.60 75.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 242.63 76.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.90 75.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.97 81.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.87 77.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.94 81.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.55 76.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.49 78.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.52 81.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 248.26 75.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.50 81.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 157.10 80.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 177.75 80.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.24 80.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.99 78.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.45 75.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.16 76.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.90 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.50 76.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.32 78.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.47 78.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.65 78.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.48 79.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.54 78.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 205.27 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.81 76.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.18 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.60 78.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.75 78.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.52 78.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.13 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.00 82.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.71 75.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.29 80.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.79 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.67 76.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 214.80 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.98 82.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.81 79.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.72 82.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.44 81.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.08 82.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.83 79.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.66 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.60 76.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.97 82.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.45 75.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.50 76.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.43 75.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.00 82.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.32 78.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 258.55 80.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.14 82.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.87 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.51 81.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.77 76.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.17 80.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.27 77.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 282.10 82.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.52 81.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.63 76.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.81 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.77 81.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.01 79.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.10 77.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.35 76.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.36 76.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.54 75.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.54 78.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.37 79.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.92 76.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.17 81.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.82 77.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.16 75.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.09 76.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.71 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.49 82.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.80 76.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.63 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.83 81.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.46 77.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.19 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 242.45 77.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.56 78.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.49 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.39 82.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.15 75.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.15 75.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.65 75.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.14 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.16 78.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.07 77.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.65 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.59 78.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.99 78.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.41 76.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.13 77.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.25 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.13 79.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 282.83 78.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.90 82.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.23 80.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.79 75.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.59 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.08 75.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.14 79.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.09 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.63 82.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.39 76.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.09 78.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.65 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.31 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.41 82.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.12 82.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 399.90 75.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 396.56 78.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 276.53 81.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.00 80.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.53 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.44 78.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.99 81.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.96 81.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.37 75.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.81 78.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.88 80.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.86 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.77 76.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.55 80.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.62 81.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.52 77.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.24 78.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.54 79.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.05 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.58 77.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.32 79.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.73 77.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.18 83.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.13 76.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.71 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.71 80.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.78 79.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.69 77.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.94 82.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.43 76.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.65 75.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.33 82.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.59 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 234.37 76.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.57 77.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.53 77.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.66 77.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.81 82.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.16 77.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.05 76.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.50 76.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.24 78.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.51 75.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.60 76.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 271.54 78.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.38 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.96 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.48 81.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 256.74 76.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 239.25 81.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.57 80.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.68 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.36 76.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.76 82.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.09 81.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.10 81.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.86 80.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.15 80.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.47 80.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.14 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.64 81.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.67 75.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.39 83.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.52 83.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 179.69 81.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.04 80.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.22 79.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.36 79.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.60 80.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.41 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 249.61 75.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.44 75.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.14 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 378.54 81.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.58 77.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.93 77.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.44 80.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.81 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.54 82.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.21 79.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 278.93 77.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.36 81.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.98 76.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.35 80.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 146.59 80.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.17 75.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.39 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.94 81.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.31 79.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.27 80.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 218.71 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.22 80.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.45 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.21 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.84 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.92 76.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.55 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.75 75.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.37 79.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.60 78.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.38 77.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 183.33 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 153.30 78.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.95 82.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 194.03 81.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.15 77.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.55 81.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.30 79.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.64 79.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 340.16 78.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.94 80.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.11 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 325.67 80.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.84 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 260.90 76.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.09 80.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.68 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.73 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 147.70 79.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 174.15 78.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.66 81.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.87 82.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.58 75.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.55 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 234.81 75.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.14 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.07 78.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.53 76.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.03 79.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.81 76.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 251.96 76.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.53 75.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.02 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 242.31 79.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 167.38 80.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.58 82.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.98 75.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 164.30 76.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.67 79.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.85 82.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.80 81.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.43 78.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 239.26 76.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.99 78.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 276.36 80.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.09 75.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.35 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.32 76.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 317.34 77.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.02 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.04 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.81 75.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.07 75.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.66 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.33 79.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.97 75.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.53 75.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 272.42 77.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 209.36 80.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 137.14 77.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.78 80.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.68 75.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.36 79.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.16 80.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 149.92 76.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 148.00 76.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.47 79.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.25 81.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.97 82.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.98 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.75 81.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.06 82.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.14 77.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 201.44 80.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.79 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 231.36 77.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.13 77.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.34 81.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.55 82.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 266.36 80.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.76 80.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 204.22 82.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 146.22 82.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 182.88 78.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.95 82.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.04 78.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.47 76.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.41 78.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.27 81.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.98 75.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 238.82 81.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 256.74 81.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.04 82.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.40 76.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.85 78.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.51 81.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.12 82.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.83 76.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.52 77.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.12 83.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 233.62 77.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.72 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 179.20 79.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.32 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 168.30 78.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.41 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.16 81.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 296.02 78.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.60 80.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.30 78.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.66 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.12 75.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 134.26 82.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 140.87 82.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.91 81.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 133.42 80.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 137.07 79.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 175.61 76.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.29 77.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.99 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.43 77.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 159.28 76.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.34 78.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.52 78.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 271.08 82.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 230.00 80.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.09 79.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.55 82.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 203.69 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 134.92 81.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 201.53 82.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 282.96 82.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.29 82.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 294.71 81.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.72 80.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 218.79 78.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.02 81.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.51 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.09 82.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.26 79.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.33 80.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 240.63 82.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 236.39 80.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.48 83.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.00 82.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.01 75.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 224.59 81.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.73 81.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.94 76.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.55 81.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.18 82.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 145.58 78.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 223.22 77.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.13 82.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.46 78.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.08 75.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.56 75.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 136.93 82.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.00 78.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.03 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.17 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.55 78.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 254.33 76.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.60 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.19 79.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.45 80.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 200.93 82.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 240.79 80.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.74 79.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.64 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 167.40 77.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.67 77.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.37 80.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.77 75.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.38 80.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.57 77.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.72 79.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 311.70 81.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.64 77.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 195.39 80.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 203.57 76.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.76 77.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.04 76.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.29 80.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.92 81.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.41 76.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.42 75.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.10 80.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.46 80.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.30 80.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.67 81.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.93 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.52 77.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.93 78.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.75 81.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.52 78.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.37 76.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.27 75.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.17 80.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.56 80.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.45 82.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.74 77.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.98 79.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.83 77.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.59 79.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.57 77.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.45 75.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.71 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.90 82.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 339.37 78.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.07 82.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 358.51 81.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.30 80.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.74 79.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.59 75.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.37 79.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.09 76.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.38 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.92 82.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.51 79.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.34 78.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.24 77.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.39 82.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.80 78.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.63 80.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.58 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.22 79.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.58 81.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.06 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.11 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.43 77.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.25 75.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.62 81.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.12 77.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.72 76.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 359.87 79.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.30 80.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.41 80.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.06 81.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.60 76.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.01 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.91 81.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.40 78.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.71 83.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.06 76.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.92 80.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.88 79.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.17 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.10 75.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.12 79.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.49 75.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.64 78.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.04 82.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.71 79.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 380.52 82.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.00 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.10 75.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.93 81.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.10 82.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.35 78.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.63 75.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.33 81.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.62 82.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.41 78.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.73 83.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.59 79.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.54 76.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.55 75.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.42 81.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.98 79.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.57 81.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.20 81.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.10 76.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.05 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 231.09 82.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.69 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.40 78.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 398.22 77.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.41 80.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.37 82.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.32 80.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.24 80.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.04 79.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.55 78.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.44 80.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.54 79.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.52 78.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.63 81.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.63 77.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.63 79.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.91 80.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.62 82.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.47 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.39 78.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.04 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.96 75.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.07 78.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.29 80.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.17 80.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.62 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 358.12 78.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.91 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.55 75.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.64 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.10 77.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 228.71 77.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.89 76.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.04 75.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.72 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 396.29 75.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.67 76.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.64 75.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.28 79.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.75 77.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.38 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.41 77.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.33 80.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 383.64 78.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.27 81.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.14 81.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.20 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.08 76.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.68 76.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.36 77.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.95 81.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.91 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.85 79.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.23 81.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 272.62 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 212.79 78.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.16 78.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.62 79.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.21 77.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 377.07 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.67 80.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.75 75.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.64 77.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 273.43 79.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.75 76.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.12 81.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 360.50 78.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.15 79.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.28 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 151.81 82.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.18 80.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.74 82.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 228.95 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.66 79.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.82 83.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.85 80.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 189.70 82.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.27 80.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 205.01 80.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 244.99 78.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 205.59 75.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.26 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.73 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.01 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.85 76.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.78 81.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.26 80.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.63 75.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.58 77.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.62 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.33 81.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.08 78.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 265.76 78.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.58 79.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.10 80.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.85 80.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 168.31 77.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.77 79.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.22 80.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 244.70 76.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.18 82.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 258.01 81.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.37 82.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 150.55 75.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 175.71 77.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 171.68 76.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 241.54 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.70 75.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.67 77.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 242.53 75.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.13 77.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.72 78.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.95 79.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.69 76.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.77 82.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.85 77.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.85 82.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.67 76.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.33 78.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.05 83.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 284.78 82.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.67 78.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 280.03 80.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 253.44 81.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.37 82.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 151.50 80.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 214.96 76.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.95 79.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 181.82 78.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 172.31 77.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 241.88 80.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 199.66 78.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.89 81.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.59 79.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.89 76.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.50 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 230.53 75.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 249.29 75.22 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 177.95 79.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.42 83.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 253.47 82.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.03 80.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.39 79.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 138.18 81.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.05 80.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.91 80.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.55 76.54 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.40 78.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.32 75.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.76 75.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.95 79.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.40 78.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.38 75.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.12 81.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.59 78.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.20 75.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.55 80.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.35 79.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.11 81.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.18 77.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.19 77.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.76 78.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 249.85 77.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 151.49 81.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.72 80.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.65 79.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.91 77.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 311.35 78.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.85 78.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.17 82.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 304.43 82.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 282.51 80.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.13 77.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 174.85 81.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.29 76.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.54 78.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 160.62 79.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.06 78.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 139.29 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.26 82.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 263.64 79.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.45 81.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 147.98 80.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 273.69 76.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.93 78.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.00 78.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 178.81 78.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 165.01 77.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 185.39 80.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 141.04 78.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.20 82.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 210.63 76.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.44 80.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 141.66 81.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 132.04 81.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 133.20 81.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 272.74 80.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.99 82.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.93 76.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 160.53 75.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.83 81.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 157.64 76.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 174.03 82.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 134.26 76.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.11 80.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.09 75.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 305.08 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.55 77.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 145.66 80.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.35 76.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.76 75.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 225.16 76.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.59 80.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.34 82.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 246.17 77.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 134.18 81.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.20 77.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 249.97 76.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 169.79 80.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.77 82.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 187.68 83.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 206.28 79.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.81 82.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 132.11 82.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 229.32 75.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.83 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 168.69 79.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 251.89 82.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 149.23 79.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 168.65 75.44 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 176.67 82.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 209.34 76.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.08 78.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.69 80.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.45 75.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.00 75.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.57 76.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.70 77.74 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.70 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.12 81.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.30 81.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.20 75.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.78 79.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 258.10 82.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.21 79.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.02 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.86 81.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 327.72 82.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 323.68 79.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.30 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.82 76.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.31 75.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 230.29 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.39 75.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.73 76.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 306.06 76.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 275.45 76.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 152.32 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.24 76.48 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 285.54 75.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.49 80.10 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 192.87 81.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 335.36 79.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.78 76.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 200.08 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 191.39 78.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.99 76.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 247.18 80.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.88 75.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.41 81.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.10 81.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.65 75.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.47 82.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 252.92 79.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 313.63 80.79 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.47 75.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.89 75.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 277.94 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.19 80.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 242.69 82.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 182.99 79.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 264.91 79.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.08 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.04 81.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.18 82.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 274.80 79.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 233.20 82.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 143.84 82.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 208.75 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 239.96 79.68 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 346.07 78.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.76 77.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 262.33 77.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.70 80.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 235.35 81.16 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.70 82.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.57 78.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 355.56 79.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.49 82.77 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.23 75.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.24 76.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.39 82.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 287.50 82.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 337.62 82.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.00 82.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.14 82.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.25 77.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.53 82.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 324.18 77.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.51 76.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.50 80.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.89 78.00 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.04 82.24 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 344.62 79.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.78 80.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.78 82.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.22 75.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.74 79.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.20 78.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 356.90 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 302.26 78.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 353.44 80.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.68 77.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.48 75.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.13 79.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 332.08 81.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 357.77 79.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.98 78.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.45 80.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.16 82.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.02 79.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.16 76.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 345.88 80.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.70 79.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.77 78.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 361.13 82.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 364.89 79.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 363.39 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.12 82.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 372.67 77.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.97 79.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.66 82.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.59 78.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.25 79.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.91 77.09 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.79 80.67 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.38 77.90 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.93 82.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.78 77.12 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.83 82.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.93 77.92 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.18 75.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.85 81.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.22 78.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.14 81.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.31 75.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.02 80.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.91 82.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 366.10 76.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.67 82.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 382.50 79.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.79 76.40 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.78 77.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.11 78.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 297.19 78.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 344.06 75.19 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.76 77.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.63 81.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.77 75.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.03 79.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 331.21 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.73 80.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 398.12 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.41 76.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.51 76.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.12 80.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.87 79.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.48 76.46 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 375.50 77.96 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.65 80.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 379.70 81.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.71 79.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 276.72 79.41 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 311.04 79.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.95 79.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 393.34 80.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.15 82.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 371.98 81.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 376.32 78.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.53 77.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 362.52 79.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 216.83 79.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 239.67 81.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 281.63 78.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 367.94 81.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.55 79.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.62 81.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.68 81.52 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 389.30 80.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 395.34 82.56 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.81 76.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 388.14 80.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 392.61 76.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.98 81.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.76 77.81 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.39 75.91 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 391.78 79.66 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 390.38 77.99 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 394.68 81.50 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.04 80.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.72 80.84 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.39 80.27 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 387.15 80.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 385.81 82.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 384.46 78.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 381.33 76.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 178.34 79.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.41 80.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 250.07 77.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 231.36 78.57 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 255.51 75.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 269.54 79.85 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 386.01 77.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 342.27 81.36 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.38 81.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.98 80.37 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 369.84 77.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.83 79.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 286.67 80.60 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.31 75.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 368.51 78.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.58 75.39 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 374.14 81.80 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.78 76.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 373.45 81.34 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 370.60 77.61 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 365.82 75.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 349.29 77.70 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 338.70 80.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.39 81.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 348.26 76.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.85 78.89 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 267.34 80.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 225.00 82.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 196.79 80.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 166.38 82.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 354.55 77.71 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 207.14 81.06 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 260.27 80.01 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 158.11 79.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 161.59 77.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 173.41 77.63 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 212.55 77.51 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.15 77.93 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 271.08 77.31 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 167.70 79.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.85 76.18 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 316.07 76.83 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 330.28 80.38 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 163.80 77.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 351.31 79.95 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 343.39 77.58 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.85 76.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 352.75 75.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 350.95 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 347.40 80.23 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 344.63 79.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 341.82 77.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.38 81.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 202.07 78.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 193.47 78.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 219.35 75.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 180.15 82.55 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.60 76.65 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 200.81 75.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.91 76.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.87 77.28 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 279.55 81.05 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.29 80.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 336.31 82.82 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 320.43 78.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.68 78.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.92 81.88 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 196.18 75.17 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.85 82.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 326.92 77.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 173.97 81.20 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 170.37 79.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 284.85 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 288.82 79.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 322.56 81.43 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 334.09 80.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 333.39 78.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 329.20 75.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.43 79.98 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 328.86 79.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 319.94 82.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 314.37 78.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 146.10 79.53 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 309.06 78.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 220.80 78.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 301.46 78.94 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 310.31 75.47 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 303.97 80.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 188.84 79.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 308.17 80.25 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 321.77 79.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 307.13 79.26 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 154.38 81.72 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 261.40 76.35 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 186.19 81.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 215.70 77.08 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 171.74 76.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.13 76.73 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 318.33 76.29 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.30 82.32 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 243.02 75.21 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 227.49 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 315.13 76.13 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 312.06 80.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 293.94 78.45 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.64 80.69 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 299.50 79.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 140.16 79.07 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 145.19 82.75 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 197.24 77.11 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 298.33 76.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 223.55 82.14 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 295.34 81.62 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 292.75 81.03 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 300.22 82.86 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 291.58 81.30 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 290.86 76.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 153.00 78.42 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 232.60 82.02 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 268.95 77.78 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 289.45 76.97 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 283.72 82.04 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.02 75.87 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 257.93 77.76 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 245.10 80.33 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 270.78 76.64 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 232.84 82.59 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 236.56 81.15 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 185.12 81.49 Tm (l) Tj 0 Tr
+ET
+BT
+/F1 1 Tf 1 Tr 6.65 0 0 6.65 135.90 78.47 Tm (l) Tj 0 Tr
+ET
+88.38 81.50 m
+95.75 81.89 l
+103.12 83.38 l
+110.50 87.74 l
+117.87 97.62 l
+125.25 114.84 l
+132.62 138.10 l
+139.99 162.65 l
+147.37 183.17 l
+154.74 196.59 l
+162.12 202.47 l
+169.49 202.34 l
+176.86 199.11 l
+184.24 195.56 l
+191.61 192.42 l
+198.99 189.00 l
+206.36 185.61 l
+213.73 184.16 l
+221.11 186.38 l
+228.48 192.42 l
+235.86 200.91 l
+243.23 209.80 l
+250.60 217.66 l
+257.98 224.94 l
+265.35 234.50 l
+272.72 250.91 l
+280.10 278.05 l
+287.47 315.75 l
+294.85 357.44 l
+302.22 392.66 l
+309.59 413.80 l
+316.97 420.95 l
+324.34 419.55 l
+331.72 414.64 l
+339.09 408.96 l
+346.46 405.25 l
+353.84 407.42 l
+361.21 417.31 l
+368.59 430.25 l
+375.96 434.25 l
+383.33 414.72 l
+390.71 363.81 l
+398.08 288.67 l
+405.46 209.59 l
+412.83 146.86 l
+420.20 108.61 l
+427.58 90.53 l
+434.95 83.86 l
+442.33 81.93 l
+449.70 81.50 l
+S
+Q q
+Q q
+0.000 0.000 0.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+63.08 56.80 411.91 402.14 re S
+Q q
+Q q
+Q q
+Q
+endstream
+endobj
+7 0 obj
+138638
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Kids [
+5 0 R
+]
+/Count 1
+/MediaBox [0 0 504 504]
+>>
+endobj
+4 0 obj
+<<
+/ProcSet [/PDF /Text]
+/Font << /F1 9 0 R /F2 10 0 R /F3 11 0 R >>
+/ExtGState << >>
+>>
+endobj
+8 0 obj
+<<
+/Type /Encoding
+/BaseEncoding /WinAnsiEncoding
+/Differences [ 45/minus ]
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /ZapfDingbats
+>>
+endobj
+10 0 obj <<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Helvetica
+/Encoding 8 0 R
+>> endobj
+11 0 obj <<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Helvetica-Bold
+/Encoding 8 0 R
+>> endobj
+xref
+0 12
+0000000000 65535 f 
+0000000021 00000 n 
+0000000163 00000 n 
+0000139005 00000 n 
+0000139088 00000 n 
+0000000212 00000 n 
+0000000292 00000 n 
+0000138983 00000 n 
+0000139192 00000 n 
+0000139286 00000 n 
+0000139369 00000 n 
+0000139466 00000 n 
+trailer
+<<
+/Size 12
+/Info 1 0 R
+/Root 2 0 R
+>>
+startxref
+139568
+%%EOF

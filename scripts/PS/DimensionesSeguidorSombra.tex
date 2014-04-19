@@ -1,0 +1,123 @@
+ % Dimensiones de un seguidor solar con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\def\Rectangle(#1,#2)(#3,#4){
+newpath
+#1 #2 moveto
+#3 #2 lineto
+#3 #4 lineto
+#1 #4 lineto
+ closepath }
+
+\def\cercle(#1,#2)#3{%
+newpath
+ #1 #2 #3 0 360 arc
+closepath }
+
+\def\ARC(#1,#2)#3#4#5{%
+newpath
+ #1 #2 #3 #4 #5 arc }
+
+\def\ARCN(#1,#2)#3#4#5{%
+newpath
+ #1 #2 #3 #4 #5 arcn }
+
+\def\Sombra(#1,#2){%
+        \NodeIIItoIID[origine=#1 #2 0,normale=90 \BETA neg add \ALFA](-3,-1){s1}
+        %\psdot(s1)
+        \NodeIIItoIID[origine=#1 #2 0,normale=90 \BETA neg add \ALFA](3,-1){s2}
+        %\psdot(s2)
+        \NodeIIItoIID[origine=\s 180 \ALFA add cos mul #1 add \s 180 \ALFA add sin mul #2 add 0,normale=90 \BETA neg add \ALFA](-3,-1){s3}
+        %\psdot(s3)
+        \NodeIIItoIID[origine=\s 180 \ALFA add cos mul #1 add \s 180 \ALFA add sin mul #2 add 0,normale=90 \BETA neg add \ALFA](3,-1){s4}
+        %\psdot(s4)
+        \pspolygon[linecolor=gray,fillstyle=solid,fillcolor=lightgray](s1)(s3)(s4)(s2)}\psset{hatchwidth=0.02}
+
+
+\def\rad{20 }
+\def\radang{\rad 1.8 div }
+
+\def\az{60 }%cuidado con los signos
+\def\el{45 }
+\def\BETA{90 -\el add }
+\def\ALFA{\az }
+
+\def\W{23 }
+\def\L{10 }
+\def\Lns{30 }
+\def\Lew{50 }
+\def\TANel{\el sin \el cos div }
+
+\def\Sa{\L \BETA cos mul }
+\def\Sb{\L \BETA sin mul \TANel div  } 
+\def\s{\Sa \Sb add }
+
+
+	\psset{unit=.25cm}
+	\pspicture(-24,-9)(2,9)
+		%\psframe(-24,-9)(2,9)
+		%\psgrid
+		\psset{THETA=-20,PHI=20,Dobs=30,Decran=30,arrowsize=0.3}
+		%\axesIIID(10,10,10)
+		\psset{linestyle=solid,linewidth=.5pt,linecolor=gray,fillstyle=solid,fillcolor=gray}
+		\planThreeDput[normale=90 \ALFA](0,0,0){\Rectangle(\W 2 div neg,0)(\W 2 div,\Sa)}
+		\psset{linestyle=solid,linewidth=.5pt,linecolor=gray,fillstyle=solid,fillcolor=lightgray}
+		\planThreeDput[normale=90 \ALFA](0,0,0){\Rectangle(\W 2 div neg,\Sa)(\W 2 div,\s)}
+		
+		
+		\psset{linestyle=solid,linewidth=1pt,linecolor=black,fillstyle=solid,fillcolor=blue!30}
+		\planThreeDput[normale=90 \BETA neg add \ALFA](0,0,0){\Rectangle(\W 2 div neg,0)(\W 2 div,\L)}
+		
+		\NodeIIItoIID(0,0){O}
+		\NodeIIItoIID[origine=0 0 0,normale=90 \BETA neg add \ALFA](\W 2 div neg,\L){P1}
+		\psdot[dotsize=5pt](P1)
+		
+		
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](0,0){S1}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa neg,0){S2}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa neg 2 div,0){S12}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](\s neg,0){S3}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa \s add 2 div neg,0){S23}
+		\psdot[dotsize=5pt](S1)
+		\psdot[dotsize=5pt](S2)
+		\psdot[dotsize=5pt](S3)
+		
+		\psline[linestyle=dotted](P1)(S2)
+		
+		
+		%\psdot[dotsize=5pt](0,0,0)
+		
+		\psset{fillstyle=none,linecolor=black,linewidth=.4pt,linestyle=dashed}
+		\planThreeDput[normale=0 270 \ALFA add](\W 2 div \ALFA sin mul,\W 2 div neg \ALFA cos mul,0){\ARC(0,0){\Sa 0.5 mul}{180 \BETA neg add}{180}}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul \W 2 div neg \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa 0.5 mul neg,\Sa 0.25 mul \BETA  sin \BETA cos div mul){BETA}
+		%\psdot[dotsize=5pt](BETA)
+		\uput{3pt}[180](BETA){$\beta$}
+		
+		
+		
+		\psset{fillstyle=none,linestyle=solid,linecolor=black,linewidth=.4pt}
+		
+		%\planThreeDput[normale=90 \ALFA,translation=0 0 0]{\Cota(\W 2 div neg,0)(\W 2 div 3 add neg,\Sa)}
+		\uput{5pt}[270](S12){$L \cdot \cos(\beta)$}
+		%\planThreeDput[normale=90 \ALFA,translation=0 0 0]{\Cota(\W 2 div neg,\Sa)(\W 2 div 3 add neg,\s)}
+		\uput{5pt}[270](S23){$\frac{L \cdot \sin(\beta)}{\tan(\gamma_s)}$}
+		
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul neg \W 2 div \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa 0.5 mul neg,\Sa 0.5 mul \BETA  sin \BETA cos div mul){L}
+		\uput{3pt}[180](L){L}
+		\uput{3pt}[180](O){W}
+	
+	
+	\endpspicture

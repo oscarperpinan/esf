@@ -1,0 +1,518 @@
+#+TITLE: Datos de Radiación Solar
+#+AUTHOR:    Oscar Perpiñán Lamigueiro (UPM)
+#+EMAIL:     oscar.perpinan@upm.es
+#+DATE:      Abril de 2014
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  es
+#+OPTIONS:   H:2 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [xcolor={usenames,svgnames,dvipsnames}]
+#+LATEX_HEADER: \usepackage{gensymb}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+#+LATEX_HEADER: \lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {º}{{\textordmasculine}}1}
+#+LATEX_HEADER: \usepackage{mathpazo}
+#+LATEX_HEADER: \usefonttheme{serif}
+#+LATEX_HEADER: \usecolortheme{rose}  
+#+LATEX_HEADER: \usetheme{Goettingen}
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue, breaklinks=true}
+#+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+#+LATEX_HEADER: \bibliographystyle{plain}
+
+
+
+* Introducción
+
+** Variabilidad Temporal y Espacial
+
+- La irradiancia solar extraterrestre depende de la latitud y el instante temporal (/proceso determinista/).
+- La irradiancia solar incidente en la superficie terrestre es resultado de la interacción con la atmósfera cambiante: *variabilidad temporal y espacial* (/proceso estocástico/).
+
+** Variabilidad Temporal
+Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
+[[file:~/Copy/Docencia/LibroESF/Figuras/VariabilidadRadiacionDiario.pdf]]
+
+\nocite{Perpinan2009}
+
+** Variabilidad Temporal 
+#+BEGIN_LaTeX
+\[
+\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
+\]
+#+END_LaTeX
+
+- Predicción para un (día, mes, año) *determinado*: 
+
+  - Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{G}$
+
+- Predicción para un (día, mes, año) *promedio (durante N años)*: 
+
+  - Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{\overline{G}}$
+
+** Variabilidad Espacial
+
+#+ATTR_LATEX: :width 0.9\textwidth
+[[file:~/Copy/Docencia/LibroESF/Figuras/SpatialVariability.jpg]]
+
+#+BEGIN_LaTeX
+  \[
+  COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
+  \]
+#+END_LaTeX
+
+\nocite{Gueymard.Wilcox2011a}
+
+** Variabilidad Espacial
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/SpatialVariability_Annual.jpg]]
+#+END_CENTER
+
+** Estimación a partir de Medidas
+
+- Para estimar la radiación incidente es necesario contar con:
+  - *Medidas cercanas* (variabilidad espacial): distancia no superior a 10 km.
+  - *Series temporales* largas (variabilidad temporal): 10 años. 
+
+** Fuentes de datos
+
+- *Estaciones meteorológicas*
+  - Series largas y con tiempos de muestreo altos.
+  - Baja resolución espacial (medidas puntuales)
+  - Precisión en caso de medida directa.
+  - Tipos: 
+    - Con medidor de radiación
+    - Sin medidor de radiación (modelos empíricos).
+
+\pause
+
+- *Imágenes de satélite*
+
+  - Tiempos de muestreo bajos (mejorando)
+
+  - Resolución espacial alta
+
+  - Error debido a la estimación.
+
+\pause 
+
+- *Híbrido*
+
+  - Medidas terrestres combinadas con imágenes de satélite
+
+* Estaciones Meteorológicas
+
+** Estaciones Meteorológicas: medida directa
+
+*** La medida directa de radiación solar se realiza con un piranómetro.
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:~/Copy/Docencia/LibroESF/Figuras/piranometro.jpg]]
+#+END_CENTER
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+- Pila termoeléctrica (termopares con barniz negro)
+- Alojamiento con dos hemiesferas de cristal.
+- Flujo de calor por radiación provoca tensión eléctrica en termopila.
+
+** Estaciones Meteorológicas: medida directa
+
+*** La medida directa de radiación solar se realiza con un piranómetro.
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[file:~/Copy/Docencia/LibroESF/Figuras/piranometro.jpg]]
+#+END_CENTER
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+
+- Respuesta espectral plana para radiación visible.
+- Respuesta perfecta al coseno del ángulo de incidencia (pérdidas por reflexión).
+
+** Estaciones Meteorológicas: medida directa
+
+*** La medida directa de radiación solar se realiza con un piranómetro.
+  - Requiere mantenimiento y calibración frecuente.
+
+*** La red de estaciones que miden directamente radiación es escasa para estimaciones precisas en regiones grandes
+  - La proporción de estaciones con piranómetros es baja respecto a
+    las que miden temperatura ambiente y precipitación (1:500).
+
+** Estaciones Meteorológicas: modelos empíricos
+*** Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos
+
+- Relaciones entre radiación y otras variables
+  - Horas de brillo (/sunshine duration/)
+  - Cobertura nubosa
+  - Temperatura ambiente
+  - Precipitación
+  - Humedad
+  - ...
+- Los coeficientes de los modelos sólo se pueden ajustar en estaciones
+  con medidas de radiación.
+- Los coeficientes dependen del lugar de ajuste, pero se pueden
+  interpolar para otras localizaciones.
+
+** Estaciones Meteorológicas: modelos empíricos
+
+- Radiación y Horas de Brillo (Angstrom y Prescott)
+
+#+BEGIN_LaTeX
+  \[
+  \frac{G(0)}{B_o(0)} = a_1 + b_1 \frac{S}{S_o}
+  \]
+#+END_LaTeX
+
+- Problema: poca disponibilidad de datos
+
+** Estaciones Meteorológicas: modelos empíricos
+- Radiación y Temperatura (Bristow y Campbell)
+#+BEGIN_LaTeX
+  \[
+  G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
+  \]
+#+END_LaTeX
+
+- Variaciones con más variables: Lluvia (si/no), rango antes y después, velocidad viento, humedad relativa.
+
+#+BEGIN_LaTeX
+\[
+  G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0) \cdot \left(1 +
+    \sum_1^n p_j \cdot v_j \right) + p_{n+1}
+\]
+#+END_LaTeX
+
+\nocite{Antonanzas-Torres.Sanz-Garcia.ea2013}
+
+* Imágenes de Satélite
+
+** Fundamentos
+
+- Los satélites meteorológicos están equipados con *radiómetros*
+  (sensores de radiación electromagnética a diferentes frecuencias)
+  que captan *radiación emitida por la Tierra*.
+
+- La radiación emitida por la Tierra depende de la *reflexión del
+  suelo*, y la *geometría y composición de la atmósfera*.
+
+- Diferentes fenómenos físicos se detectan en *bandas de frecuencias*
+  distintas (canales).
+
+- Existen diversos procedimientos para *estimar radiación solar* en
+  superficie a partir de la información de los diferentes canales del
+  radiómetro.
+
+** Satelites Geoestacionarios Europeos: Meteosat
+
+- *MFG*: Meteosat First Generation (7 satélites)
+  - Equipados con el radiómetro MVIRI (Meteosat Visible and Infrared Imager).
+  - Tres canales: visible, infrarrojo, vapor de agua.
+- *MSG*: Meteosat Second Generation (3 satélites)
+  - Equipados con dos radiómetros:
+    - *SEVIRI* (Spinning Enhanced Visible and InfraRed Imager): 12 canales
+    - GERB (Geostationary Earth Radiation Budget): infrarrojo visible.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.3\textwidth
+[[file:~/Copy/Docencia/LibroESF/Figuras/Tierra_MSG.jpg]]
+#+END_CENTER
+
+
+** Procedimientos: Heliosat-2
+
+*** Pasos
+- Establecer *albedo de referencia* (/suelo/).
+- Estimar *índice de cobertura nubosa*.
+- Estimar radiación en superficie a partir de cobertura nubosa y *modelo de cielo claro*.
+
+*** 
+- Empleado para base HelioClim
+- Usan datos de MVIRI
+- Accesible via SoDa: http://www.soda-is.com/heliosat/index.html
+
+\nocite{Rigollier.Lefevre.ea2004}
+
+** Procedimientos: CM SAF
+
+
+- *Fundamento*:
+  - Se emplea un *Radiative Transfer Model (RTM)*, libRadtran, para
+    generar una matriz de estados (*Look-up table, LUT*) relaciona la
+    transmitancia atmosférica y el albedo de la atmósfera para
+    variedad de estados.
+  - La irradiancia en superficie se estima multiplicando la
+    irradiancia extra-atmosférica por la *transmitancia atmosférica
+    determinada interpolando en la LUT*.
+
+\pause
+
+- *Dos LUTs*: cielo nuboso, cielo claro.
+  - *Cielo nuboso*:
+    - Estimación de albedo y estado atmosférico a partir de imágenes.
+    - Estimación de transmitancia interpolando en LUT para cielo nuboso.
+  - *Cielo claro*:
+    - Estimación de transmitancia interpolando en LUT para cielo claro *sin estimación previa* de albedo.
+
+\pause
+
+- Emplean datos del *radiómetro MSG/SEVIRI*
+
+\nocite{Mueller.Matsoukas.ea2009}
+
+
+
+** Procedimientos: LSA SAF
+
+- Generación de *máscara de nubes* a partir de imagen usando algoritmo de [[http://www.nwcsaf.org/][NWC-SAF]].
+- Para *zonas sin nubes*: modelo de cielo claro sin usar datos de imagen.
+- Para *zonas cubiertas*: modelo de transmitancia atmosférica a partir de imágenes.
+- Emplean datos del *radiómetro MSG/SEVIRI*
+  
+\nocite{Geiger.Meurey.ea2008}
+
+* Fuentes de Datos: Estaciones Terrestres
+
+** Baseline Surface Radiation Network
+
+*** http://www.bsrn.awi.de/
+
+- BSRN provides near-continuous, long-term, in situ-observed,
+  Earth-surface, broadband irradiances (solar and thermal infrared)
+  and certain related parameters from a network of more than 50
+  globally diverse sites.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.5\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/BSRN.png]]
+#+END_CENTER
+
+** Baseline Surface Radiation Network
+- Validation and confirmation of satellite and computer model
+  estimates.
+
+- Datos desde:  http://www.bsrn.awi.de/en/data/data_retrieval_via_pangaea/
+
+
+** Measurement and Instrumentation Data Center NREL
+*** http://www.nrel.gov/midc/
+Radiación global, directa y difusa (y otras variables) con muestreo de
+  1 min en diversas localidades de EEUU.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.3\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/NRELStation.jpg]]
+#+END_CENTER
+
+
+# ** Surfrad NOAA
+# *** http://www.esrl.noaa.gov/gmd/grad/surfrad/
+# - Support climate research with accurate, continuous, long-term measurements of the surface radiation budget over the United States.
+# - Currently seven SURFRAD stations are operating in climatologically
+#   diverse regions: Montana, Colorado, Illinois, Mississippi,
+#   Pennsylvania, Nevada and South Dakota.
+
+** MAGRAMA-SIAR
+*** [[http://eportal.magrama.gob.es/websiar/Inicio.aspx]]
+- El Sistema de Información Agroclimática para el Regadío (SiAR)
+  registra datos agroclimáticos relacionados con demanda hídrica de
+  las zonas de riego.
+
+- Más de 400 estaciones. 
+
+- Valores diarios y horarios
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.35\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/EstacionesSIAR.jpeg]]
+#+END_CENTER
+
+** MAGRAMA-SIAR
+*** Sensores
+- Temperatura y Humedad
+- Piranómetro
+- Anemoveleta
+- Pluviómetro
+- Temperatura del suelo  (algunas)
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.4\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/EstacionSIAR.png]]
+#+END_CENTER
+
+
+** AEMET
+*** [[http://www.aemet.es/es/eltiempo/observacion/radiacion][Radiación]]
+- Alrededor de 30 estaciones en todo el territorio.
+- Medidas de global, difusa y directa.
+- Sólo gráficas.
+
+*** [[http://www.aemet.es/es/eltiempo/observacion/ultimosdatos][Estaciones "convencionales"]]
+- Presión, temperatura, viento, humedad, lluvia.
+- Permite descarga de datos horarios por día.
+
+** Redes de Comunidades Autónomas
+
+- [[http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp][Meteogalicia]]  
+- [[http://meteo.navarra.es/estaciones/mapadeestaciones.cfm][MeteoNavarra]]
+- [[http://www.meteo.cat/xema/AppJava/SeleccioPerComarca.do][Cataluña]]
+
+* Fuentes de Datos: Satélite
+
+** SSE-NASA
+*** Surface meteorology and Solar Energy (SSE)
+- 200 satellite-derived meteorology and solar energy parameters
+  *monthly averaged* from 22 years of data
+- Resolución 1ºx1º
+
+[[https://eosweb.larc.nasa.gov/cgi-bin/sse/sse.cgi]]
+
+** EUMETSAT - SAF
+- *[[http://www.eumetsat.int][EUMETSAT]]* is the European operational satellite agency for monitoring
+  weather, climate and the environment.
+- *[[http://www.eumetsat.int/website/home/Satellites/GroundSegment/Safs/index.html][Satellite Application Facilities]] (SAFs)*
+  - Dedicated centres of excellence for processing satellite data.
+  - Generate and disseminate operational EUMETSAT products and
+    services.
+
+** SAFs
+- [[http://www.cmsaf.eu/bvbw/appmanager/bvbw/cmsafInternet][SAF on Climate Monitoring (CM SAF)]]: provision of satellite-derived geophysical parameter data sets suitable for *climate monitoring*
+
+  - Environmental Data Records (EDR): time-tagged earth-located
+    geophysical parameters produced from sensor data. EDRs are derived
+    in low to medium latency not fulfilling strictest climate
+    requirements.
+
+  - Climate Data Records (CDR): time series of measurements of
+    sufficient length, consistency, and continuity to determine climate
+    variability and change.
+
+- [[http://landsaf.meteo.pt][SAF on Land Surface Analysis]] (LSA SAF): generates, archives and
+  disseminates, on an *operational basis*, a set of parameters involved
+  in the surface radiation budget, evapotranspiration, vegetation
+  cover and and fire-related products.
+
+** SAFs: Radiación 
+
+- *CM SAF*: Surface incoming shortwave radiation ([[http://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=RAD_MVIRI_V001][SIS]])
+
+  - AEMET ha analizado las estimaciones para España en su [[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas_radiacion_solar][Atlas de Radiación]].
+
+- *LSA SAF*: Down-welling surface short-wave radiation flux ([[http://landsaf.meteo.pt/algorithms.jsp?seltab=1&starttab=1][DSSF]])
+
+# ** INPE (Brasil)
+# http://www.dgi.inpe.br/CDSR/
+
+** ADRASE - CIEMAT
+*** http://adrase.es
+- Radiación solar media mensual, resolución aproximada de 5x5 km.
+  - Media mensual y anual más probable durante un periodo de largo
+    plazo (imágenes de satélite, modelo aproximadamente Heliosat)
+  - Variabilidad esperada de los valores diarios mensuales: (series
+    largas de datos de estaciones de AEMET y extrapolación espacial
+    con IDW)
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.35\textheight
+[[file:~/Copy/Docencia/LibroESF/Figuras/adrase.png]]
+#+END_CENTER
+
+* Métodos híbridos
+
+** Interpolación Espacial
+*** *Objetivo*: mejorar la resolución espacial de medidas dispersas
+
+- *Inverse Distance Weighting (IDW)*: determinista.
+
+- *Ordinary Kriging*: modelo determinista para la media (constante) y estocástico para residuos.
+
+#+BEGIN_LaTeX
+\[
+  \hat{z}(\mathbf{s}) = \mu + \epsilon(\mathbf{s})
+\]
+#+END_LaTeX
+
+- *Kriging with External Drift (KED)*: modelo determinista para la media incorporando información de una variable con alta densidad espacial.
+#+BEGIN_LaTeX
+\[  \hat{z}(\mathbf{s}_\theta) =  \sum_{k=0}^p \hat{\beta}_k q_k(\mathbf{s}_\theta) + 
+  \sum_{i=1}^n \lambda_i \epsilon(\mathbf{s}_i)
+\]
+#+END_LaTeX
+
+\nocite{Journee.Bertrand2010}
+\nocite{Antonanzas-Torres.Canizares.ea2013}
+\nocite{Bojanowski.Vrieling.ea2013}
+
+
+** Corrección por topografía
+
+*** Sky-View Factor (SVF)
+Proporción de cielo visible para un receptor horizontal (afecta a la radiación difusa isotrópica)
+#+BEGIN_LaTeX
+\[
+SVF=1-\int_0^{2\pi}sin^{2} \theta_{hor} d\theta
+\]
+#+END_LaTeX
+
+*** Horizon blocking
+Bloqueo de región circunsolar por horizonte: afecta a radiación
+directa y difusa anisotrópica
+
+** Corrección por topografía
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:~/R/downscaling/paper/algorithmScheme.pdf]]
+#+END_CENTER
+** Corrección por topografía
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.9\textwidth
+[[file:~/Copy/Docencia/LibroESF/Figuras/downscaling.pdf]]
+#+END_CENTER
+
+\nocite{Bosch.Batlles.ea2010}
+\nocite{Tovar-Pescador.Pozo-Vazquez.ea2006}
+\nocite{Antonanzas-Torres.MartinezdePison.ea2013}
+\nocite{Hofierka.Suri2002}
+
+** PVGIS - =r.sun=
+*** http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php
+PVGIS (Photovoltaic Geographical Information System) is a research,
+demonstration and policy-support instrument for geographical
+assessment of the solar energy resource in the context of integrated
+management of distributed energy generation.
+- Computation of clear-sky global irradiation on a horizontal surface
+- Sky obstruction by local terrain features (hills or mountains)
+  calculated from the digital elevation model.
+- Interpolation of the clear-sky index and computation of global
+  irradiation on a horizontal surface.
+
+
+* Bibliografía
+
+** Bibliografía
+   :PROPERTIES:
+   :BEAMER_OPT: allowframebreaks,label=
+   :END:
+
+
+\bibliography{/home/oscar/Dropbox/bibliografia/BibUTF8}

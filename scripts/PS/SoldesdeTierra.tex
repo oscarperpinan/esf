@@ -1,0 +1,47 @@
+ % Sol visto desde la Tierra con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\newpsstyle{GradGrayWhite}{fillstyle=gradient,%
+    gradbegin=blue,gradend=white,linewidth=0.05mm}%
+\newpsstyle{GradYellowWhite}{fillstyle=gradient,%
+    gradbegin=yellow,gradend=white,linewidth=0.05mm}%
+\definecolor{GrisClair} {rgb}{0.6,0.7,0.8}
+
+\begin{pspicture}(-7.5,-4)(6,3)
+	
+	\psset{THETA=30,PHI=10,Dobs=125,Decran=10,unit=1cm}
+	\pNodeThreeD(60;-90;23.5){Sol}
+	\pNodeThreeD(60;90;-23.5){SolOpuesto}
+	\pNodeThreeD(60,0,0){Equinoccio1}
+	\pNodeThreeD(-60,0,0){Equinoccio2}
+	\pNodeThreeD(40,-25,0){PEc}
+	\pNodeThreeD(0,0,30){Norte}
+	\pNodeThreeD(0,0,-30){Sur}
+	
+	\FrameThreeD[normaleLongitude=90,normaleLatitude=90](0,0,0)(60,0)(-60,-70)
+	\CircleThreeD[normaleLongitude=90,normaleLatitude=66.5](0,0,0){60}
+	\rput(Sol){\SphereThreeD[style=GradYellowWhite](0,0,0){5}}
+	
+	\SphereThreeD[linewidth=0.1mm,style=GradGrayWhite](0,0,0){20}
+	\SphereCercleThreeD(0,0,0){20}
+	\psline[linestyle=dashed](SolOpuesto)(Sol)
+	\psline[linestyle=dashed](Equinoccio1)(Equinoccio2)
+	
+	\psline{->}(Sur)(Norte)
+	\uput[90](Norte){Polo Norte}
+	\uput[0](SolOpuesto){Ecl\'iptica}
+	\uput[180](PEc){Plano Ecuatorial}
+\end{pspicture}

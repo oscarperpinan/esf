@@ -1,0 +1,59 @@
+*Estudio del comportamiento de una asociación de células solares
+*SIN diodos de paso y afectadas por sombras parciales
+
+.subckt celula 303 300 302 310 
+
+*Entre 300 y 301 está la fuente de corriente (de 300 a 301), 
+*Fuente de corriente dependiente de la radiación (fuente de tensión)
+*Entre 302(+) y 310(-) se aplica la entrada de radiación
+*La salida se produce entre 303(+) y 300 (-)
+*Isc depende de la radiación, que estará en kW/m2 (1 kW/m2 equivale a Isc)
+
+grad 300 301 302 310 dc 4.3
+
+d1 301 300 diode1
+.model diode1 d is=1e-6 n=1.5
+
+Rsh 301 300 100
+Rs 301 303 1e-4
+
+.ends
+*___________________________
+
+
+xcel1 1 0 101 100 celula
+xcel2 2 1 101 100 celula
+xcel3 3 2 101 100 celula
+xcel4 4 3 102 100 celula
+xcel5 5 4 101 100 celula
+xcel6 6 5 101 100 celula
+
+
+xcel11 11 0 101 100 celula
+xcel21 21 11 101 100 celula
+xcel31 31 21 101 100 celula
+xcel41 41 31 103 100 celula
+xcel51 51 41 101 100 celula
+xcel61 6 51 101 100 celula
+
+xcel12 12 0 101 100 celula
+xcel22 22 12 101 100 celula
+xcel32 32 22 101 100 celula
+xcel42 42 32 104 100 celula
+xcel52 52 42 101 100 celula
+xcel62 6 52 101 100 celula
+
+
+vbias 6 0 dc 0
+vrad1 101 100 dc 1
+vrad2 102 100 dc .3
+vrad3 103 100 dc 1
+vrad4 104 100 dc 1
+
+
+
+
+.print dc v(1) v(4) v(3) i(vbias) i(Rs.xcel1) i(Rs.xcel4) i(Rs.xcel11) i(Rs.xcel12)
+.dc vbias 0 3.6 0.01 >cell_3_sinDiodos.dat
+
+.end

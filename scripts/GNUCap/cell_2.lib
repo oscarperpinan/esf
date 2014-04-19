@@ -1,0 +1,15 @@
+.subckt cell_2 300 303 302 
+.param area=1, j0=1, jsc=1, j02=1, rs=1, rsh=1
+
+girrad 301 300 302 300 value={(jsc/1000)*v(302)*area}
+
+d1 301 300 diode
+.model diode d(is={j0*area})
+
+d2 301 300 diode2
+.model diode2 d(is={j02*area}, n=2)
+
+Rs 301 300 {rs}
+Rsh 301 302 {rsh}
+
+.ends cell_2

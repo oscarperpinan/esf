@@ -1,0 +1,149 @@
+ % Sombras en estructuras estáticas con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\def\Rectangle(#1,#2)(#3,#4){
+newpath
+#1 #2 moveto
+#3 #2 lineto
+#3 #4 lineto
+#1 #4 lineto
+ closepath }
+
+\def\cercle(#1,#2)#3{%
+newpath
+ #1 #2 #3 0 360 arc
+closepath }
+
+\def\ARC(#1,#2)#3#4#5{%
+newpath
+ #1 #2 #3 #4 #5 arc }
+
+\def\ARCN(#1,#2)#3#4#5{%
+newpath
+ #1 #2 #3 #4 #5 arcn }
+
+\def\Sombra(#1,#2){%
+        \NodeIIItoIID[origine=#1 #2 0,normale=90 \BETA neg add \ALFA](-3,-1){s1}
+        %\psdot(s1)
+        \NodeIIItoIID[origine=#1 #2 0,normale=90 \BETA neg add \ALFA](3,-1){s2}
+        %\psdot(s2)
+        \NodeIIItoIID[origine=\s 180 \ALFA add cos mul #1 add \s 180 \ALFA add sin mul #2 add 0,normale=90 \BETA neg add \ALFA](-3,-1){s3}
+        %\psdot(s3)
+        \NodeIIItoIID[origine=\s 180 \ALFA add cos mul #1 add \s 180 \ALFA add sin mul #2 add 0,normale=90 \BETA neg add \ALFA](3,-1){s4}
+        %\psdot(s4)
+        \pspolygon[linecolor=gray,fillstyle=solid,fillcolor=lightgray](s1)(s3)(s4)(s2)}
+\psset{hatchwidth=0.02}
+
+
+\def\rad{\Lns }
+\def\radang{\rad 1.8 div }
+
+\def\az{60 }%cuidado con los signos
+\def\el{45 }
+\def\BETA{90 -\el add }
+\def\ALFA{45 }
+
+\def\W{70 }
+\def\L{10 }
+\def\Lns{30 }
+\def\Lew{30 }
+\def\TANel{\el sin \el cos div }
+
+\def\Sa{\L \BETA cos mul }
+\def\Sb{\L \BETA sin mul \TANel div  } 
+\def\s{\Sa \Sb add }
+
+%\begin{center}
+	\psset{unit=.5cm}
+	\pspicture(-5,-6)(12,8)
+		%\psframe(-5,-4)(19,8)
+		%\psgrid
+		\psset{THETA=-20,PHI=20,Dobs=100,Decran=20,arrowsize=0.3}
+		%\axesIIID(20,20,20)%
+		%\planThreeDput[normale=90 0,linecolor=gray,fontscale=0.5](0,0,0){\Grille(-10,-8)(10,8)}
+		\pnodeXYZ(0,0,0){O}
+		\pnodeXYZ(0,0,\Lns){Z}
+		\uput[90](Z){$\vec{\mu}_c$}
+		\pnodeSphericalCoor(\Lns 1.5 mul,0,0){X}
+		\uput[180](X){$\vec{\mu}_h$}
+		\pnodeSphericalCoor(\Lew 1.5 mul,90,0){Y}
+		\uput[0](Y){$\vec{\mu}_\bot$}
+		\psline{->}(O)(X)
+		\psline{->}(O)(Y)
+		\psline{->}(O)(Z)
+		
+		%\pnodeXYZ(\Lns,0,0){Seg2}
+		%\pnodeXYZ(\Lns,\Lew,0){Seg3}
+		\pnodeXYZ(\W 2 div,0,0){Seg1}
+		\pnodeXYZ(\W 2 div,\Lew,0){Seg4}
+		\pnodeXYZ(\W 2 div,\Lew 2 div,0){Lew}
+		%\pnodeXYZ(\Lns 2 div,\Lew,0){Lns}
+		
+		%\pnodeSphericalCoor(\rad,\ALFA,90 \BETA neg add){V}
+		%\pnodeSphericalCoor(\rad 90 \BETA neg add cos mul,\ALFA,0){Vp}
+		
+		
+		
+		%\psline(A)(B)
+		%\psline(B)(C)
+		%\Sombra(0,0)
+		%\Sombra(\Lns,0)
+		%\Sombra(0,\Lew)
+		%\Sombra(\Lns,\Lew)
+		\psset{linestyle=solid,linewidth=.5pt,linecolor=gray,fillstyle=solid,fillcolor=lightgray}
+		\planThreeDput[normale=90 \ALFA](0,0,0){\Rectangle(\W 2 div neg,0)(\W 2 div,\s)}
+		%\planThreeDput[normale=90 \ALFA,translation=\Lns 0 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\s)}
+		\planThreeDput[normale=90 \ALFA,translation=0 \Lew 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\s)}
+		%\planThreeDput[normale=90 \ALFA,translation=\Lns \Lew 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\s)}
+		
+		
+		\psset{linestyle=solid,linewidth=1pt,linecolor=black,fillstyle=solid,fillcolor=blue!30}
+		\planThreeDput[normale=90 \BETA neg add \ALFA](0,0,0){\Rectangle(\W 2 div neg,0)(\W 2 div,\L)}
+		%\planThreeDput[normale=90 \BETA neg add \ALFA,translation=\Lns 0 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\L)}
+		\planThreeDput[normale=90 \BETA neg add \ALFA,translation=0 \Lew 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\L)}
+		%\planThreeDput[normale=90 \BETA neg add \ALFA,translation=\Lns \Lew 0]{\Rectangle(\W 2 div neg,0)(\W 2 div,\L)}
+		
+		%\psset{fillstyle=none,linecolor=black,linewidth=.4pt,linestyle=dashed}
+		%\planThreeDput[normale=0 270 \ALFA add,]{\ARC(0,0){\radang}{90 \BETA neg add}{90}}
+		%\planThreeDput[normale=90 0]{\ARC(0,0){\radang}{-90}{-90 \az add}}
+		%\pnodeSphericalCoor(\radang,\ALFA,90 \BETA add 2 div){BETA}
+		%\pnodeXYZ(\radang \el 2 div cos \az cos mul mul,\radang \el 2 div cos \az sin mul mul,\radang \el 2 div sin mul){phi}
+		%\uput{0pt}[45](BETA){$\beta$}
+		%\pnodeSphericalCoor(\radang,\ALFA 2 div,0){ALFA}
+		%\pnodeXYZ(\radang \az 2 div cos mul,\radang \az 2 div sin mul,0){theta}
+		%\uput{5pt}[225](ALFA){$\alpha$}
+		
+		
+		\psset{linewidth=1pt,linecolor=black,arrows=<->,arrowsize=5pt}
+		%\psline(O)(Seg2)
+		\psline(Seg1)(Seg4)
+		%\psline(Seg3)(Seg4)
+		%\psline(Seg3)(Seg2)
+		\uput{10pt}[180](Lew){$D$}
+		%\uput{3pt}[90](Lns){$L_{ns}$}
+		
+		%\psset{linestyle=solid,linecolor=black,linewidth=.4pt,arrowsize=4pt}
+		%\psline{->}(O)(V)
+		%\psline{->}(O)(Vp)
+		%\psset{linestyle=dashed,linewidth=.2pt}
+		%\psline(Vp)(V)
+		
+		%\uput[0](V){$\vec{\mu}_{2x}$}
+		\NodeIIItoIID[origine=\W 2 div \ALFA sin mul neg \W 2 div \ALFA cos mul 0,normale=0 270 \ALFA add](\Sa 0.5 mul neg,\Sa 0.5 mul \BETA  sin \BETA cos div mul){L}
+		\uput{3pt}[180](L){L}
+		\uput{3pt}[180](O){W}
+	\endpspicture
+%\end{center}

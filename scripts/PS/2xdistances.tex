@@ -1,0 +1,70 @@
+ % Sombras en un cojunto de seguidores  con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\input{preambulo}
+\begin{document}
+\def\az{30 }%signo contrario a las ecuaciones!
+\def\beta{45 }
+\def\rad{10 }
+\def\rang{\rad 2 div }%fundamental dejar el espacio detrás si luego va a formar parte de otra ecuación
+\def\rtvec{\rad 1.05 mul }
+\def\rtang{\rang 1.2 mul }
+
+
+%\begin{center}
+\begin{pspicture}(-2,0)(11,6)
+%\psframe(-2,0)(11,6)
+        %\psgrid
+  
+\psset{unit=6pt} 
+\rput{\az}(0,0){\psframe[fillstyle=solid,fillcolor=blue!30](-5,-2.5)(5,2.5)} 
+\rput(0,0){$T_X$}
+  \rput{\az}(0,-15){\psframe[fillstyle=solid,fillcolor=blue!30](-5,-2.5)(5,2.5)}
+\rput(0,-15){$T_0$}
+
+% \psset{linewidth=0.5pt, linestyle=dashed}
+% \rput{\az}(0, 0){\psline(5, -2.5)(5, -12.5)}
+% \rput{\az}(0, 0){\psline(-5, 2.5)(-10, 2.5)}        
+
+
+\rput{\az}(0,0){\pnode(5, 2.5){A}}
+\rput{\az}(0,0){\pnode(7, 2.5){A2}}
+\rput{\az}(0,0){\pnode(8, 2.5){B}}
+\psline[linestyle=dashed, linewidth=0.5pt](A)(B)
+\rput{\az}(0,-15){\pnode(5, 2.5){C}}
+\rput{\az}(0,-15){\pnode(7, 2.5){C2}}
+\rput{\az}(0,-15){\pnode(15, 2.5){D}}
+\psline[linestyle=dashed, linewidth=0.5pt](C)(D)
+\rput{\az}(0,0){\pnode(7, -15){E}}
+
+\psIntersectionPoint(A2)(E)(C2)(D){IP}
+\psline{<->}(IP)(A2)
+\psRelNode(IP)(A2){.5}{dl}
+\uput{2pt}[0]{\az}(dl){$d_L$}
+
+
+\rput{\az}(0,0){\pnode(5, -2.5){F}}
+\rput{\az}(0,0){\pnode(5, -15){G}}
+\psline[linestyle=dashed, linewidth=0.5pt](F)(G)
+\rput{\az}(0,-15){\pnode(5, 0){H}}
+\rput{\az}(0,-15){\pnode(15, 0){I}}
+\psIntersectionPoint(F)(G)(H)(I){IP2}
+\psline{<->}(IP2)(H)
+
+\psRelNode(IP2)(H){.5}{dw}
+\uput{2pt}[90]{\az}(dw){$d_W$}
+\end{pspicture}
+\end{document}

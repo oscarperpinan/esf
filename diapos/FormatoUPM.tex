@@ -1,0 +1,59 @@
+\usepackage{mathpazo}%Letra palatino con fuentes para matemáticas
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\usepackage[spanish]{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+
+\usepackage{hyperref}
+% \hypersetup{pdfauthor={Oscar Perpi\~n\'an},%
+%     pdftitle={Energ\'ia Solar Fotovoltaica},%
+%     filecolor=blue,%
+%     urlcolor=blue}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+%    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    bookmarksnumbered=false,
+    bookmarksopen=false,
+    breaklinks=true,
+    backref=true,
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Energía Solar Fotovoltaica},    % title
+    pdfauthor={Oscar Perpiñán Lamigueiro},     % author
+    pdfsubject={Electrotecnia},   % subject of the document
+    pdfcreator={AucTeX/Emacs},   % creator of the document
+    pdfproducer={LaTeX}, % producer of the document
+    pdfnewwindow=true,      % links in new window
+    pdfborder={0 0 0},
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=,          % color of internal links
+    citecolor=BrickRed,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=Blue           % color of external links 
+}
+
+\usepackage[emulate=units]{siunitx}
+\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\newunit{\wattpeak}{Wp}
+\newunit{\watthour}{Wh}
+\newunit{\amperehour}{Ah}
+
+\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+\usefonttheme{serif} 
+\usefonttheme{structuresmallcapsserif} 
+
+\useinnertheme[shadow=true]{rounded}
+\useoutertheme{shadow}
+%\usecolortheme[named=BrickRed]{structure} %sirve para cambiar el color genérico
+\usecolortheme{orchid}
+\usecolortheme{whale}

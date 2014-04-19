@@ -1,0 +1,35 @@
+ % Tensión y corriente en circuito inductivo puro con PSTricks
+ % Copyright (C) 2010 Oscar Perpiñán Lamigueiro
+ %
+ % This program is free software; you can redistribute it and/or
+ % modify it under the terms of the GNU General Public License
+ % as published by the Free Software Foundation; either version 2
+ % of the License, or (at your option) any later version.
+ %
+ % This program is distributed in the hope that it will be useful,
+ % but WITHOUT ANY WARRANTY; without even the implied warranty of
+ % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ % GNU General Public License for more details.
+ %
+ % You should have received a copy of the GNU General Public License
+ % along with this program; if not, write to the Free Software
+ % Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+\psset{xunit=8,yunit=3}
+\begin{pspicture}(-0.4,-1.2)(1,1.2)
+  \psgrid[griddots=5,gridlabels=0pt](-0.2,-1)(1,1)
+	\psaxes[Dx=0.2,Ox=0,Oy=0,Dy=0.4,ticks=x,
+          axesstyle=frame](0,0)(-0.2,-1)(1,1)
+ %\rput(0.5,1.3){Curves example}
+ \rput(-0.3,0){\shortstack{%
+   \textcolor{blue}{Corriente}\\
+      \textcolor{red}{Tensi\'on}}}
+  \rput(0.5,-1.3){$t$}
+  \psplot[linecolor=red,linewidth=2pt]% 1 radian = 57.296 degrees
+         {-0.2}{1}{x 360 mul cos}  % sin(2pi*t)
+  \psplot[linecolor=blue,linewidth=2pt]%
+      {-0.2}{1}{x 360 mul sin} % cos(2pi*t) %La corriente adelanta 90 grados a la tensión
+   \cnode(0.2,0.309017){0.1}{Cos1}
+   \cnode(0.45,0.309017){0.1}{Sin1}
+   \ncline{->}{Cos1}{Sin1}%Tension origen de fases
+   \naput{$\pi/2$}
+\end{pspicture}
