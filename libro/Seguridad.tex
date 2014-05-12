@@ -20,7 +20,7 @@ aplicados a un sistema fotovoltaico.
 
 Durante el desarrollo de este capítulo se hará continua referencia
 a un documento básico en la práctica de la ingeniería eléctrica en
-España: el Reglamento Electrotécnico de Baja Tensión (REBT) \citep{RD_842_2002}.
+España: el Reglamento Electrotécnico de Baja Tensión (REBT) \cite{RD_842_2002}.
 Esta normativa, aprobada por Real Decreto en el año 2002, consta de
 29 artículos que son desarrollados en un conjunto de 51 Instrucciones
 Técnicas Complementarias (ITC-BT) y acompañadas por varias guías de
@@ -134,7 +134,7 @@ fibrilación muscular.
 \includegraphics[scale=0.23]{../figs/CurvaIntensidadContactoTiempo}
 
 \caption[Efecto de la corriente que circula por el cuerpo humano]{Efecto de la corriente que circula por el cuerpo humano según su
-intensidad y tiempo de duración \citep{PerezGabarda2000,PerezGabarda2000a}.\label{fig:EfectoCorriente}}
+intensidad y tiempo de duración \cite{PerezGabarda2000,PerezGabarda2000a}.\label{fig:EfectoCorriente}}
 
 \end{figure}
 
@@ -176,7 +176,7 @@ la tensión eléctrica. Los efectos también dependen de la edad, el
 sexo, el estado físico, la fatiga o el miedo. 
 
 En base a estas consideraciones, se establecen unos requisitos para
-la tensión y la corriente de seguridad \citep{RD_842_2002,Gomez-Vidal2000,MestreRovira2002,PerezGabarda2000}: 
+la tensión y la corriente de seguridad \cite{RD_842_2002,Gomez-Vidal2000,MestreRovira2002,PerezGabarda2000}: 
 \begin{itemize}
 \item Se establecen dos condiciones: emplazamientos secos o húmedos (instalaciones
 de interior); emplazamientos mojados (instalaciones en intemperie).
@@ -262,7 +262,7 @@ en un generador fotovoltaico con esquema de conexión a tierra IT.}
 Así, la resistencia de aislamiento del generador, $R_{iso}$, es:\begin{eqnarray}
 R_{iso} & = & \frac{R_{iso}^{(m)}}{N_{T}}\label{eq:RisoIT}\end{eqnarray}
 y por tanto, se puede demostrar que la corriente de fuga máxima en
-una conexión IT es \citep{Gomez-Vidal2000}: 
+una conexión IT es \cite{Gomez-Vidal2000}: 
 
 \begin{equation}
 I_{f}=\frac{V_{ocG}}{R_{iso}+R_{h}}\label{eq:If_IT}\end{equation}
@@ -299,7 +299,7 @@ persona puede aproximarse por esta última, $R_{iso}||R_{h} \simeq R_h$. El comp
 eléctrico de un ser humano puede ser representado con una resistencia
 tipo de $R_{h}=\SI{1000}{\ohm}$. Para la capacidad es posible adoptar
 un valor de $C_{iso}=\SI{1}{\micro\farad}$\nomenclature[Ciso]{$C_{iso}$}{Capacidad distribuida de un generador fotovoltaico con esquema de conexión a tierra IT}
-de acuerdo a ensayos en sistemas reales \citep{Gomez-Vidal2000}.
+de acuerdo a ensayos en sistemas reales \cite{Gomez-Vidal2000}.
 De esta forma, la constante de tiempo de este sistema es $T\simeq C_{iso}\cdot R_{h}=\SI{1}{\milli\second}$.
 Según la norma CEI479-2 la corriente de descarga tiene una duración
 equivalente a tres veces la constante de tiempo del circuito, $T_{desc}=3\cdot T=\SI{3}{\milli\second}$
@@ -312,7 +312,7 @@ I_{desc} & = & \frac{V_{ocG}}{R_{h}\cdot\sqrt{6}}\label{eq:IdescIT}\end{eqnarray
 Según la norma CEI479-2, dado que la descarga dura $\SI{3}{\milli\second}$,
 se necesitan tensiones de generador superiores a los $\SI{1000}{\volt}$
 para producir dolor, y tensiones superiores a los $\SI{3000}{\volt}$
-para que exista riesgo por fibrilación \citep{PerezGabarda2000a}.
+para que exista riesgo por fibrilación \cite{PerezGabarda2000a}.
 
 
 \subsection{Protección contra contactos indirectos}
@@ -332,7 +332,7 @@ como el representado en la figura \ref{fig:ContactoIndirectoTT} produce
 una tensión de contacto, $V_{c}$\nomenclature[Vc]{$ V_{c}$}{Tensión de contacto},
 que depende de la corriente de fuga y la resistencia de la tierra
 de protección. Es posible demostrar que la máxima corriente de fuga
-posible es la de cortocircuito del generador \citep{Gomez-Vidal2000}.
+posible es la de cortocircuito del generador \cite{Gomez-Vidal2000}.
 Por tanto, 
 
 \begin{equation}
@@ -431,7 +431,7 @@ que entran en contacto con ella.
 En un sistema fotovoltaico es de uso común que el esquema de tierra
 sea IT en la zona del generador fotovoltaico y TT a partir de la salida
 del inversor. En este contexto, todo el sistema de protecciones reseñado
-se puede condensar en tres niveles \citep{Gomez-Vidal2000}:
+se puede condensar en tres niveles \cite{Gomez-Vidal2000}:
 \begin{itemize}
 \item Nivel 1: Refuerzo del aislamiento de las partes activas. 
 \item Nivel 2: Sistema de detección de aislamiento.
@@ -682,7 +682,7 @@ son lugares con mayor probabilidad de impacto.
 El efecto de una descarga eléctrica sobre un sistema fotovoltaico
 se manifiesta mayoritariamente en forma de sobretensión inducida.
 Esta sobretensión aparece por tres fenómenos de acoplamiento diferenciados:
-el galvánico, el capacitivo y el inductivo \citep{Becker.Vaaben.ea2000}.
+el galvánico, el capacitivo y el inductivo \cite{Becker.Vaaben.ea2000}.
 
 El acoplamiento galvánico surge cuando la descarga se produce de forma
 directa sobre alguna parte del sistema. En esta situación, los elementos
@@ -703,7 +703,7 @@ Para entender el acoplamiento inductivo hay que recordar que una descarga
 eléctrica supone una corriente de gran valor en un lapso de tiempo
 muy corto%
 \footnote{El 50\% de las descargas conducen $\SI{30}{\kilo\ampere}$, con un
-ratio de $\SI{20}{\kilo\ampere\per\micro\second}$ \citep{Becker.Vaaben.ea2000}.%
+ratio de $\SI{20}{\kilo\ampere\per\micro\second}$ \cite{Becker.Vaaben.ea2000}.%
 }, originando una inducción magnética a su alrededor. Según describe
 la ley de Faraday-Lenz, un campo magnético variable produce una fuerza
 electromotriz proporcional a la variación de su flujo. Así, aquellos
@@ -791,7 +791,7 @@ factores principales: la probabilidad estadística de tormentas eléctricas
 en la zona%
 \footnote{El cálculo de esta probabilidad requiere del uso de mapas de nivel
 isoceráunico y puede ser estimada mediante el procedimiento descrito
-en el apartado 4.2 de \citep{Becker.Vaaben.ea2000}.%
+en el apartado 4.2 de \cite{Becker.Vaaben.ea2000}.%
 } y el tamaño del sistema a proteger. En general, los sistemas fotovoltaicos
 cuya potencia es inferior a $\SI{500}{\Wp}$ (por ejemplo, los
 sistemas domésticos de electrificación rural) no requieren de sistemas
@@ -939,7 +939,7 @@ entre polos y tierra.\label{fig:Caja-de-protecci=0000F3n}}
 
 \subsubsection{Cortocircuitos y sobrecargas}
 
-Según el RD 1663-2000 \citep{RealDecreto2000} es necesario incluir
+Según el RD 1663-2000 \cite{RealDecreto2000} es necesario incluir
 un interruptor general manual, que será un interruptor magnetotérmico
 omnipolar. Este interruptor, que se ubica en el cuadro de contadores
 de la instalación fotovoltaica, será accesible sólo a la empresa distribuidora,
@@ -1015,7 +1015,7 @@ la red quedará desprotegido.
 Por otra parte, es importante tener en cuenta que, al estar basado
 en la ley de Faraday (fuerza electromotriz creada por un flujo magnético
 \emph{variable}), no funciona en circuitos de corriente continua%
-\footnote{Como anécdota, el RD 1663/2000 \citep{RealDecreto2000} ocasiona más
+\footnote{Como anécdota, el RD 1663/2000 \cite{RealDecreto2000} ocasiona más
 de un quebradero de cabeza al incluir en su artículo 11 el requerimiento
 de incorporar un {}``interruptor automático diferencial, con el fin
 de proteger a las personas en el caso de derivación de algún elemento
@@ -1025,7 +1025,7 @@ de la parte continua de la instalación''%
 
 \subsubsection{Puesta a tierra}
 
-Según el RD1663/2000 \citep{RealDecreto2000}, en que se fijan las
+Según el RD1663/2000 \cite{RealDecreto2000}, en que se fijan las
 condiciones técnicas para la conexión de instalaciones fotovoltaicas
 a la red, la puesta a tierra se realizará de forma que no altere la
 de la compañía eléctrica distribuidora, con el fin de no transmitir

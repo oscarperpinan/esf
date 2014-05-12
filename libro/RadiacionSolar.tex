@@ -191,7 +191,7 @@ estocástico y una distribución angular de la radiación difusa.
 
 Uno de los primeros intentos de realizar una descripción del comportamiento
 estocástico de la radiación solar fue llevado a cabo por Liu y Jordan
-en 1960 \citep{Liu.Jordan1960}. Para caracterizar la radiación solar
+en 1960 \cite{Liu.Jordan1960}. Para caracterizar la radiación solar
 en un lugar propusieron el índice de claridad, $K_{T}$\nomenclature[Kt]{$K_{T}$}{Índice de claridad}.
 Este índice es la relación entre la radiación global y la radiación
 extra-atmosférica, ambas en el plano horizontal. Según la definición
@@ -224,7 +224,7 @@ presenta la radiación solar durante un periodo está determinada por
 el valor promedio de la radiación durante ese periodo. Por ejemplo,
 conocer la media mensual de la radiación solar diaria en un determinado
 lugar permite saber cómo se comportará la radiación diaria durante
-ese mes \citep{Aguiar.Collares-Pereira1992}.
+ese mes \cite{Aguiar.Collares-Pereira1992}.
 \item Sólo es significativa la autocorrelación con un día de retraso. Es
 decir, el índice de claridad para un día concreto sólo está influido
 por el índice de claridad del día anterior. 
@@ -246,7 +246,7 @@ global, y se comprobó la existencia de una correlación negativa entre
 ambos parámetros. Más aún, dada la definición del índice de claridad,
 la expresión de la correlación para medias mensuales se hace independiente
 de la localidad y adquiere validez casi universal. Es de uso frecuente
-la correlación para índices mensuales propuesta por Page \citep{Page1961}(Figura
+la correlación para índices mensuales propuesta por Page \cite{Page1961}(Figura
 \ref{fig:KtmFDm}):\begin{equation}
 F_{Dm}=1-1.13\cdot K_{Tm}\label{eq:Page}\end{equation}
 \nomenclature[Fdm]{$F_{Dm}$}{Fracción de difusa mensual}
@@ -293,7 +293,7 @@ con fiabilidad adecuada empleando las correlaciones para medias mensuales.
 
 Cuando sea necesario el cálculo de la radiación difusa en un día determinado,
 es recomendable la correlación propuesta por Collares Pereira y Rabl
-\citep{Collares-Pereira.Rabl1979}(Figura \ref{fig:KtFDd}):\begin{equation}
+\cite{Collares-Pereira.Rabl1979}(Figura \ref{fig:KtFDd}):\begin{equation}
 F_{Dd}=\begin{cases}
 0.99 & K_{Td}\leq0.17\\
 1.188-2.272\cdot K_{Td}+9.473\cdot K_{Td}^{2}-21.856\cdot K_{Td}^{3}+14.648\cdot K_{Td}^{4} & K_{Td}>0.17\end{cases}\label{eq:FDdCollares}\end{equation}
@@ -314,9 +314,9 @@ En la escala temporal diaria, a pesar de que la definición del índice
 de claridad permite atenuar la influencia de la latitud, los efectos
 derivados de la climatología local se hacen más evidentes. De aquí
 la existencia de una variedad muy amplia de correlaciones para valores
-diarios (unas 250 publicadas según algunos autores \citep{Miguel.Bilbao.ea2001}),
+diarios (unas 250 publicadas según algunos autores \cite{Miguel.Bilbao.ea2001}),
 muchas de las cuales aplican sólo a un lugar concreto. El lector interesado
-puede consultar las siguientes referencias \citep{Miguel.Bilbao.ea2001,Soler1990,Gopinathan.Soler1995,Macagnan1993}.
+puede consultar las siguientes referencias \cite{Miguel.Bilbao.ea2001,Soler1990,Gopinathan.Soler1995,Macagnan1993}.
 Estos mismos comentarios son aplicables de forma aún más acentuada
 a las correlaciones entre valores horarios, y como ejemplo se proponen
 estas referencias\footnote{Implementadas en \texttt{solaR} \cite{Perpinan2012b}. Consulte \href{http://search.r-project.org/R/library/solaR/html/corrFdKt.html}{\texttt{corrFdKt}}.} \cite{Collares-Pereira.Rabl1979, Erbs.Klein.ea1982, Ridley.Boland.ea2010}.
@@ -423,7 +423,7 @@ irradiancia.}.
 Por otra parte, el análisis de valores \emph{medios} en \emph{largas}
 series temporales ha mostrado que la relación entre la irradiancia
 y la irradiación difusa es equivalente a la existente entre la irradiancia
-y la irradiación extra-atmosférica \citep{Collares-Pereira.Rabl1979}
+y la irradiación extra-atmosférica \cite{Collares-Pereira.Rabl1979}
 (ecuación \ref{eq:Rd}):
 
 \begin{equation}
@@ -475,7 +475,7 @@ en su curva y no en la de la radiación difusa.%
 \end{centering}
 
 \caption{Perfil de irradiancia difusa y global obtenido a partir del generador
-empírico de \citep{Collares-Pereira.Rabl1979} para valores de irradiancia
+empírico de \cite{Collares-Pereira.Rabl1979} para valores de irradiancia
 tomadas cada 10 minutos.\label{fig:Perfil-de-irradiancia} }
 
 \end{figure}
@@ -557,7 +557,7 @@ planos que miran al ecuador y, por tanto, orientados hacia esta región
 circunsolar. Los modelos anisotrópicos toman en consideración esta
 distribución y ponderan las contribuciones de la región circunsolar y
 el resto de la esfera celeste. Es destacable la propuesta de
-\citep{Hay.McKay1985} (ecuación \ref{eq:DifusaHay}). Estos autores
+\cite{Hay.McKay1985} (ecuación \ref{eq:DifusaHay}). Estos autores
 proponen tratar la radiación procedente de la región circunsolar como
 si fuese radiación directa (ecuación \ref{eq:DifusaCircumsolar}) y el
 resto de la esfera celeste como isotrópica (ecuación
@@ -651,18 +651,18 @@ mensual y anual durante el período comprendido entre 2001-2008.}
 La variabilidad diaria oscila entre 0.6 para el invierno y 0.1 para
 el verano. Los valores mensuales oscilan entre el 0.35 para el invierno
 y 0.1 para el verano. La variabilidad anual es del 2.5\%. Estos resultados
-son similares a los publicados por PVGIS \citep{Suri.Huld.ea2007}.
+son similares a los publicados por PVGIS \cite{Suri.Huld.ea2007}.
 
 Para analizar la variabilidad de la irradiación en el plano inclinado,
 tengamos en cuenta que ésta es una función de la irradiación horizontal,
 y por tanto su variabilidad puede ser derivada mediante la teoría
-de la propagación del error \citep{Navidi2008}:
+de la propagación del error \cite{Navidi2008}:
 
 \begin{equation}
 \delta_{G_{ef}}=\frac{\overline{G(0)}}{\overline{G(I)}}\cdot\left|\frac{dG(I)}{dG(0)}\right|\cdot\delta_{G(0)}\end{equation}
 
 
-Es posible mostrar \citep{Perpinan2009} que, para sistemas de seguimiento
+Es posible mostrar \cite{Perpinan2009} que, para sistemas de seguimiento
 a doble eje, el valor absoluto de la derivada es mayor que la unidad
 durante todo el período estudiado. De esta forma, la variabilidad
 de la irradiación incidente es superior al de la irradiación horizontal.
@@ -727,7 +727,7 @@ mediante la ecuación\footnote{Implementada en las funciones
   \href{http://search.r-project.org/R/library/solaR/html/fInclin.html}{\texttt{fInclin}}
   y
   \href{http://search.r-project.org/R/library/solaR/html/calcGef.html}{\texttt{calcGef}}
-  de \texttt{solaR} \cite{Perpinan2012b}} \ref{eq:FTb} \citep{Martin.Ruiz2001}: 
+  de \texttt{solaR} \cite{Perpinan2012b}} \ref{eq:FTb} \cite{Martin.Ruiz2001}: 
 \begin{equation}
 FT_{B}(\theta_{s})=\frac{\exp(-\frac{\cos(\theta_{s})}{a_{r}})-\exp(-\frac{1}{a_{r}})}{1-\exp(-\frac{1}{a_{r}})}
 \label{eq:FTb}
@@ -879,7 +879,7 @@ la mayor producción \emph{anual}.
 
 % Esta función no es aplicable de forma directa cuando tomamos en consideración
 % la interacción con la atmósfera, cuya composición y comportamiento
-% varía con el lugar en cuestión. No obstante, es posible mostrar \citep{Lorenzo2006c}
+% varía con el lugar en cuestión. No obstante, es posible mostrar \cite{Lorenzo2006c}
 % que cuando $\Delta=\beta-|\phi|$ toma valores entre $\ang{-20}$
 % y $\ang{10}$ la influencia de la radiación de difusa no es importante,
 % y por tanto aún podemos encontrar una función universal para la radiación
@@ -893,7 +893,7 @@ Será necesario realizar los correspondientes cálculos de irradiación
 global incidente con diversas inclinaciones. Del análisis de las curvas
 correspondientes es posible obtener una relación que ligue la latitud
 con el ángulo de inclinación que maximiza la producción\emph{ anual
-}de un sistema fotovoltaico. En \citep{Lorenzo2006c} se propone la
+}de un sistema fotovoltaico. En \cite{Lorenzo2006c} se propone la
 siguiente relación entre el ángulo de inclinación y la latitud (ambos
 en grados): \begin{equation}
 \beta_{opt}=3.7+0.69\cdot|\phi|\label{eq:BetaOptimo}\end{equation}
@@ -922,7 +922,7 @@ Norte.\label{fig:PerdidasInclinacionOptima}}
 Con este mismo análisis es posible relacionar la irradiación anual
 para el ángulo óptimo de inclinación, $\beta_{opt}$, con la irradiación
 anual en el plano horizontal , donde $\beta_{opt}$ está en grados
-\citep{Caamano1998,Lorenzo2006c}:\nomenclature[Ga]{$G_{a}$}{Irradiación global anual}
+\cite{Caamano1998,Lorenzo2006c}:\nomenclature[Ga]{$G_{a}$}{Irradiación global anual}
 
 \begin{equation}
 \frac{G_{a}(0)}{G_{a}(\beta_{opt})}=1-4.46\cdot10^{-4}\cdot\beta_{opt}-1.19\cdot10^{-4}\cdot\beta_{opt}^{2}
@@ -938,7 +938,7 @@ las curvas que relacionan la irradiación anual global efectiva con
 la irradiación anual global incidente para sistemas estáticos. Dicho
 de otra forma, podemos obtener regresiones que cuantifican las pérdidas
 angulares y pérdidas por suciedad en términos anuales para sistemas
-estáticos. Por ejemplo, en las referencias \citep{Caamano1998,Lorenzo2002}
+estáticos. Por ejemplo, en las referencias \cite{Caamano1998,Lorenzo2002}
 se proponen las siguientes ecuaciones:
 
 \begin{eqnarray}

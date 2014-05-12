@@ -52,10 +52,9 @@
 \feetbelowfloat
 
 
-%\usepackage{babelbib}%para BABELBIB BIBTEX
-
-\usepackage[spanish, noabstract, sort, nonamereplace]{flexbib}
-\bibpunct{[}{]}{,}{n}{}{;} %comandos de natbib: separadores [], etc.
+\usepackage[citestyle=authoryear,bibstyle=authoryear,doi=true,url=true]{biblatex}
+\addbibresource{../biblio.bib}
+\let\cite\parencite
 
 \renewcommand{\bibsection}{%
 	\chapter*{\bibname}
