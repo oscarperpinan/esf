@@ -52,8 +52,17 @@
 \feetbelowfloat
 
 
-\usepackage[citestyle=authoryear, backend=bibtex, bibstyle=authoryear, doi=true, url=true]{biblatex}
+\usepackage[citestyle=alphabetic, bibstyle=alphabetic, maxbibnames=5,minbibnames=3,
+backend=bibtex, doi=true, url=true]{biblatex}
+
+\DefineBibliographyStrings{spanish}{%
+  andothers        = {et\addabbrvspace al\adddot},
+  andmore          = {et\addabbrvspace al\adddot},
+  in               = {},
+}
+
 \addbibresource{../biblio.bib}
+
 \let\cite\parencite
 
 \renewcommand{\bibsection}{%
