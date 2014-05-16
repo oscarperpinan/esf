@@ -1,20 +1,29 @@
 Energía Solar Fotovoltaica
 ===
-<img src="http://oscarperpinan.github.io/img/portadaESF.png" alt="portadaESF" height="180" align="left"/>Este repositorio contiene los ficheros fuente del libro
+
+<img src="http://oscarperpinan.github.io/img/portadaESF.png"
+alt="portadaESF" height="180" align="left"/>Este repositorio contiene
+los ficheros fuente del libro
 ["Energía Solar Fotovoltaica"](http://procomun.wordpress.com/documentos/libroesf/)
 y sus
-[presentaciones asociadas](http://www.slideshare.net/oscarperpinan).
+[presentaciones asociadas](http://www.slideshare.net/oscarperpinan). Este
+libro consta de 9 capítulos que cubren los aspectos más importantes de
+esta tecnología desde el punto de visto de la ingeniería de sistemas:
+geometría y radiación solar, dispositivos, módulos y generadores
+fotovoltaicos, las tres principales aplicaciones (sistemas de conexión
+a red, autónomos de electrificación rural, y autónomos de bombeo de
+agua), seguridad eléctrica en sistemas fotovoltaicos, y tiempo de
+recuperación energética. Cuenta con un conjunto de ejercicios
+resueltos relacionados con cada capítulo.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.
-
-Este libro consta de 9 capítulos que cubren los aspectos más
-importantes de esta tecnología desde el punto de visto de la
-ingeniería de sistemas: geometría y radiación solar, dispositivos,
-módulos y generadores fotovoltaicos, las tres principales aplicaciones
-(sistemas de conexión a red, autónomos de electrificación rural, y
-autónomos de bombeo de agua), seguridad eléctrica en sistemas
-fotovoltaicos, y tiempo de recuperación energética. Cuenta con un
-conjunto de ejercicios resueltos relacionados con cada capítulo.
+<a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+alt="Licencia Creative Commons" style="border-width:0"
+src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br
+/>Esta obra está bajo una <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia
+Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+Internacional</a>.
 
 La maduración de este libro se ha realizado en el contexto del Máster
 de Energías Renovables y Mercado Energético de la EOI y en los cursos
