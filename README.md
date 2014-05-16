@@ -1,7 +1,7 @@
 Energía Solar Fotovoltaica
 ===
 
-<img src="http://oscarperpinan.github.io/img/portadaESF.png"
+<img src="figs/portadaESF.png"
 alt="portadaESF" height="180" align="left"/>Este repositorio contiene
 los ficheros fuente del libro
 ["Energía Solar Fotovoltaica"](http://procomun.wordpress.com/documentos/libroesf/)
