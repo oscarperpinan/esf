@@ -7,10 +7,7 @@ y sus
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.
 
-
-![portada](http://oscarperpinan.github.io/img/portadaESF.png)
-
-Este libro consta de 9 capítulos que cubren los aspectos más
+<img src="http://oscarperpinan.github.io/img/portadaESF.png" alt="portadaESF" height="160" />Este libro consta de 9 capítulos que cubren los aspectos más
 importantes de esta tecnología desde el punto de visto de la
 ingeniería de sistemas: geometría y radiación solar, dispositivos,
 módulos y generadores fotovoltaicos, las tres principales aplicaciones
