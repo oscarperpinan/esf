@@ -10,7 +10,7 @@
 #+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 #+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/readable/bootstrap.min.css">
 #+HTML_HEAD:    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+#+BIND: org-html-postamble nil
 
 * 
   :PROPERTIES:
@@ -35,9 +35,10 @@ Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Li
   :PROPERTIES:
   :HTML_CONTAINER_CLASS: container center-block
   :END:
-    [[file:ESF.pdf][PDF]]
+  #+ATTR_HTML: :class btn btn-info btn-lg :role button
+  [[file:ESF.pdf][PDF]]
 
-* Capítulos
+* Capítulos y Presentaciones
   :PROPERTIES:
   :HTML_CONTAINER_CLASS: container
   :END:
@@ -51,95 +52,113 @@ Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Li
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.1][Capítulo]]
 *** Geometría solar
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.2][Capítulo]] 
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:GeometriaSolar.pdf][Presentación]]
 *** Radiación solar
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.3][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:RadiacionSolar.pdf][Presentación]]
 *** La célula solar
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.4][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button    
     [[file:Celula.pdf][Presentación]]
 *** Asociación de dispositivos fotovoltaicos
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.5][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ModuloyGenerador.pdf][Presentación]]
 *** Sistemas fotovoltaicos de conexión a red
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.6][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFCR_ConceptosGenerales.pdf][Conceptos Generales]]
-
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFCR_Diseno.pdf][Diseño]]
-
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFCR_ProductividadSombras.pdf][Productividad y Sombras]]
 
 *** Sistemas fotovoltaicos autónomos
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.7][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFA_Componentes.pdf][Componentes]]
-
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFA_Diseno.pdf][Diseño]]
 *** Sistemas fotovoltaicos de bombeo
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.8][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFB_Componentes.pdf][Componentes]]
-
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFB_Diseno.pdf][Diseño]]
 
 *** Seguridad eléctrica en sistemas fotovoltaicos
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.9][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:SFCR_Seguridad.pdf][Presentación]]
-*** Tiempo de retorno energético de sistemas fotovoltaicos
+
+*** Tiempo de retorno energético
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#chapter.10][Capítulo]]
-    
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:EPBT.pdf][Presentación]]
 
-*** Ejercicios de geometría y radiación solar
+** Ejercicios
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: row
+   :END:
+*** Geometría y radiación solar
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#appendix.Alph2][Capítulo]]
-*** Ejercicios de diseño
+*** Diseño de sistemas
     :PROPERTIES:
     :HTML_CONTAINER_CLASS: col-md-4
     :END:
+    #+ATTR_HTML: :class btn btn-info btn-sm :role button
     [[file:ESF.pdf#appendix.Alph3][Capítulo]]
 
 
 * 
    :PROPERTIES:
-   :HTML_CONTAINER_CLASS: footer
+   :HTML_CONTAINER_CLASS: footer container
    :END:
 
+   2014 Oscar Perpiñán Lamigueiro.
