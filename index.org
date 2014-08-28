@@ -6,8 +6,16 @@
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+LINK_UP:
 #+LINK_HOME:
-#+HTML_HEAD:    <link rel="stylesheet" type="text/css" href="styles.css" />
+#+OPTIONS: html-style:nil
+#+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+#+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/readable/bootstrap.min.css">
+#+HTML_HEAD:    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+
+* 
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container jumbotron
+  :END:
 En esta página puedes acceder al libro *Energía Solar Fotovoltaica* y
 a las presentaciones de cada capítulo. En [[https://github.com/oscarperpinan/esf][el repositorio asociado]]
 puedes encontrar los ficheros fuente.
@@ -23,33 +31,115 @@ Creative Commons.
 [[http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png]]
 Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional]].
 
-- Libro :: 
-	   [[file:ESF.pdf][Libro completo]]
-- Introducción ::
-		 [[file:ESF.pdf#chapter.1][capítulo]]
-- Geometría solar ::
-		    [[file:ESF.pdf#chapter.2][capítulo]] ... [[file:GeometriaSolar.pdf][presentación]]
-- Radiación solar ::
-		    [[file:ESF.pdf#chapter.3][capítulo]] ... [[file:RadiacionSolar.pdf][presentación]]
-- La célula solar ::
-		    [[file:ESF.pdf#chapter.4][capítulo]] ... [[file:Celula.pdf][presentación]]
-- Asociación de dispositivos fotovoltaicos ::
-     [[file:ESF.pdf#chapter.5][capítulo]] ... [[file:ModuloyGenerador.pdf][presentación]]
-- Sistemas fotovoltaicos de conexión a red ::
-     [[file:ESF.pdf#chapter.6][capítulo]] ... [[file:SFCR_ConceptosGenerales.pdf][presentación]]
-- Sistemas fotovoltaicos autónomos ::
-     [[file:ESF.pdf#chapter.7][capítulo]] ... [[file:SFA_Diseno.pdf][presentación]]
-- Sistemas fotovoltaicos de bombeo ::
-     [[file:ESF.pdf#chapter.8][capítulo]] ... [[file:SFB_Diseno.pdf][presentación]]
-- Seguridad eléctrica en sistemas fotovoltaicos ::
-     [[file:ESF.pdf#chapter.9][capítulo]] ... [[file:SFCR_Seguridad.pdf][presentación]]
-- Tiempo de retorno energético de sistemas fotovoltaicos ::
-     [[file:ESF.pdf#chapter.10][capítulo]] ... [[file:EPBT.pdf][presentación]]
-- Enlaces útiles ::
-		   [[file:ESF.pdf#appendix.Alph1][capítulo]]
-- Ejercicios de geometría y radiación solar ::
-     [[file:ESF.pdf#appendix.Alph2][capítulo]]
-- Ejercicios de diseño ::
-     [[file:ESF.pdf#appendix.Alph3][capítulo]]
+* Libro
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container center-block
+  :END:
+    [[file:ESF.pdf][PDF]]
 
-------
+* Capítulos
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container
+  :END:
+
+
+** 
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: row
+   :END:
+*** Introducción
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.1][Capítulo]]
+*** Geometría solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.2][Capítulo]] 
+    
+    [[file:GeometriaSolar.pdf][Presentación]]
+*** Radiación solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.3][Capítulo]]
+    
+    [[file:RadiacionSolar.pdf][Presentación]]
+*** La célula solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.4][Capítulo]]
+    
+    [[file:Celula.pdf][Presentación]]
+*** Asociación de dispositivos fotovoltaicos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.5][Capítulo]]
+    
+    [[file:ModuloyGenerador.pdf][Presentación]]
+*** Sistemas fotovoltaicos de conexión a red
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.6][Capítulo]]
+    
+    [[file:SFCR_ConceptosGenerales.pdf][Conceptos Generales]]
+
+    [[file:SFCR_Diseno.pdf][Diseño]]
+
+    [[file:SFCR_ProductividadSombras.pdf][Productividad y Sombras]]
+
+*** Sistemas fotovoltaicos autónomos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.7][Capítulo]]
+    
+    [[file:SFA_Componentes.pdf][Componentes]]
+
+    [[file:SFA_Diseno.pdf][Diseño]]
+*** Sistemas fotovoltaicos de bombeo
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.8][Capítulo]]
+    
+    [[file:SFB_Componentes.pdf][Componentes]]
+
+    [[file:SFB_Diseno.pdf][Diseño]]
+
+*** Seguridad eléctrica en sistemas fotovoltaicos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.9][Capítulo]]
+    
+    [[file:SFCR_Seguridad.pdf][Presentación]]
+*** Tiempo de retorno energético de sistemas fotovoltaicos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#chapter.10][Capítulo]]
+    
+    [[file:EPBT.pdf][Presentación]]
+
+*** Ejercicios de geometría y radiación solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#appendix.Alph2][Capítulo]]
+*** Ejercicios de diseño
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-4
+    :END:
+    [[file:ESF.pdf#appendix.Alph3][Capítulo]]
+
+
+* 
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: footer
+   :END:
+
