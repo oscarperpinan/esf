@@ -29,129 +29,12 @@
 #+LATEX_HEADER: \usepackage{mathpazo}
 #+LATEX_HEADER: \usefonttheme{serif}
 #+LATEX_HEADER: \usecolortheme{rose}  
-#+LATEX_HEADER: \usetheme{Goettingen}
+#+LATEX_HEADER: \usetheme[hideothersubsections]{Goettingen}
 #+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue, breaklinks=true}
 #+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 #+LATEX_HEADER: \bibliographystyle{plain}
 
 
-
-# * Estadística
-
-# *** Variable aleatoria y proceso estocástico
-
-# -  Una variable aleatoria es una función que asigna un único numero real
-#    a cada resultado de un espacio muestral en un experimento.
-
-# -  Un proceso estocástico es una variable aleatoria que evoluciona a lo
-#    largo del tiempo (p.ej. la radiación).
-
-# *** Función de densidad de probabilidad
-
-# La función de densidad de probabilidad, $f(X)$, de una variable
-# aleatoria asigna probabilidad a un
-# suceso:$$P(a<X<b)=\int_{a}^{b}f(x)dx$$
-
-# $$P(X<b)=\int_{-\infty}^{b}f(x)dx$$
-
-# $$P(X>a)=\int_{a}^{\infty}f(x)dx$$
-
-# 
-
-# *** Función de Densidad de Probabilidad
-
-# [[../figs/FuncionDensidadProbabilidad.pdf]]
-
-# 
-
-# *** Histograma
-
-# [[../figs/Histograma.pdf]]
-
-# *** Media, varianza y desviación estándar
-
-# La media de una variable aleatoria es el centro de masas de su función
-# densidad de
-# probabilidad:$$\mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx$$
-
-# La varianza de una variable aleatoria es la media del cuadrado de las
-# desviaciones respecto a la
-# media:$$\sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx$$
-
-# La desviación estándar es la raiz cuadrada de la varianza:
-# $\sigma_{X}=\sqrt{\sigma_{X}^2}$
-
-# *** Combinación lineal de variables aleatorias
-
-# La media de la suma de varias variables aleatorias independientes es la
-# suma de las medias:$$\mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}$$
-
-# La varianza de la /suma o resta/ de varias variables aleatorias
-# independientes es la /suma/ de las
-# varianzas:$$\sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}$$
-
-# *** Media y varianza de la media muestral
-
-# Una muestra de una población es un conjunto de variables aleatorias
-# independientes ($X_{1}...X_{n}$). Si se toma una muestra de una
-# población cuya media es $\mu$ y su varianza es $\sigma^{2}$, entonces la
-# media de la muestra es otra variable
-# aleatoria:$$\overline{X}=\frac{1}{n}\sum_{n}X_{i}$$
-
-# que es una suma de variables aleatorias.
-
-# *** Media y varianza de la media muestral
-
-# Por tanto, la media de la media muestral es la suma de las medias:
-# $$\overline{X}=\mu$$
-
-# y la varianza de la media muestral es la suma de las
-# varianzas:$$\sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}$$
-
-# Por tanto, una forma de reducir la incertidumbre es realizar la medida
-# en repetidas ocasiones.
-
-# *** Mediana y cuartiles
-
-# -  La mediana divide el conjunto de valores de la variable en dos
-#    mitades iguales (divide el area encerrada por la función densidad de
-#    probabilidad en dos partes iguales).
-
-# -  Los cuartiles dividen este area en cuatro partes iguales.
-
-# -  El area encerrada entre cada par de cuartiles es igual al 25% del
-#    total.
-
-# -  La mediana es el segundo cuartil.
-
-# -  La distancia intercuartil (definida entre los cuartiles 1 y 3) es una
-#    medida de la dispersión de la variable.
-
-# 
-
-# *** Gráficos boxplot
-
-# [[../figs/GraficoBoxplot.pdf]]
-
-# *** Desviación entre modelo y observación
-
-# Si tenemos un modelo que aproxima el comportamiento de una variable
-# aleatoria, definimos el error cuadrático medio
-# como:$$RMSE^{2}=\int_{-\infty}^{\infty}x^2_{D}\cdot f_{X_{D}}(x)dx=\sigma^2_{X_{D}}+\mu_{X_{D}}^{2}$$
-
-# siendo $X_{D}$ la variable aleatoria que define la desviación entre
-# modelo y observación.
-
-# El coeficiente de correlación entre dos conjuntos de datos es una medida
-# numérica de la relación /lineal /entre los dos conjuntos (si la relación
-# no es lineal, este coeficiente no
-# sirve):$$r=\frac{1}{n-1}\cdot\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{\sigma_{X}}\right)\cdot\left(\frac{y_{i}-\bar{y}}{\sigma_{Y}}\right)$$
-
-# 
-
-# *** Gráficos de dispersión
-
-# [[../figs/GraficoDispersion.pdf]]
 
 * Naturaleza de la radiación solar
 
@@ -594,3 +477,1024 @@ g_{i} = g_{i1}|\alpha|^{2}+g_{i2}|\alpha|+g_{i3}
    -  Un generador desorientado $\ang{20}$ del Sur e inclinado $\ang{40}$ en un lugar con latitud $\ang{50}\mathrm{N}$ y una media anual de la irradiación global diaria en el plano horizontal de $\SI{5250}{\watthour\per\meter\squared}$, suponiendo una suciedad media.
 
 
+
+* Bases de Datos
+** Introducción
+
+*** Variabilidad Temporal y Espacial
+
+- La irradiancia solar extraterrestre depende de la latitud y el instante temporal (/proceso determinista/).
+- La irradiancia solar incidente en la superficie terrestre es resultado de la interacción con la atmósfera cambiante: *variabilidad temporal y espacial* (/proceso estocástico/).
+
+*** Variabilidad Temporal
+Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
+[[../figs/VariabilidadRadiacionDiario.pdf]]
+
+\nocite{Perpinan2009}
+
+*** Variabilidad Temporal 
+#+BEGIN_LaTeX
+\[
+\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
+\]
+#+END_LaTeX
+
+- Predicción para un (día, mes, año) *determinado*: 
+
+  - Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{G}$
+
+- Predicción para un (día, mes, año) *promedio (durante N años)*: 
+
+  - Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{\overline{G}}$
+
+*** Variabilidad Espacial
+
+#+ATTR_LATEX: :width 0.9\textwidth
+[[../figs/SpatialVariability.jpg]]
+
+#+BEGIN_LaTeX
+  \[
+  COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
+  \]
+#+END_LaTeX
+
+\nocite{Gueymard.Wilcox2011a}
+
+*** Variabilidad Espacial
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SpatialVariability_Annual.jpg]]
+#+END_CENTER
+
+*** Estimación a partir de Medidas
+
+- Para estimar la radiación incidente es necesario contar con:
+  - *Medidas cercanas** (variabilidad espacial): distancia no superior a 10 km.
+  - *Series temporales* largas (variabilidad temporal): 10 años. 
+
+*** Fuentes de datos
+
+- *Estaciones meteorológicas*
+  - Series largas y con tiempos de muestreo altos.
+  - Baja resolución espacial (medidas puntuales)
+  - Precisión en caso de medida directa.
+  - Tipos: 
+    - Con medidor de radiación
+    - Sin medidor de radiación (modelos empíricos).
+
+\pause
+
+- *Imágenes de satélite*
+
+  - Tiempos de muestreo bajos (mejorando)
+
+  - Resolución espacial alta
+
+  - Error debido a la estimación.
+
+\pause 
+
+- *Híbrido*
+
+  - Medidas terrestres combinadas con imágenes de satélite
+
+** Estaciones Meteorológicas
+*** Estaciones Meteorológicas: medida directa
+
+**** La medida directa de radiación solar se realiza con un piranómetro.
+**** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[../figs/piranometro.jpg]]
+#+END_CENTER
+**** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+- Pila termoeléctrica (termopares con barniz negro)
+- Alojamiento con dos hemiesferas de cristal.
+- Flujo de calor por radiación provoca tensión eléctrica en termopila.
+
+*** Estaciones Meteorológicas: medida directa
+
+**** La medida directa de radiación solar se realiza con un piranómetro.
+**** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.8\textwidth
+[[../figs/piranometro.jpg]]
+#+END_CENTER
+**** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+
+- Respuesta espectral plana para radiación visible.
+- Respuesta perfecta al coseno del ángulo de incidencia (pérdidas por reflexión).
+
+
+*** Estaciones Meteorológicas: medida directa
+
+**** La medida directa de radiación solar se realiza con un piranómetro.
+  - Requiere mantenimiento y calibración frecuente.
+
+**** La red de estaciones que miden directamente radiación es escasa para estimaciones precisas en regiones grandes
+  - La proporción de estaciones con piranómetros es baja respecto a
+    las que miden temperatura ambiente y precipitación (1:500).
+
+** Estaciones Meteorológicas: modelos empíricos
+*** Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos
+
+- Relaciones entre radiación y otras variables
+  - Horas de brillo (/sunshine duration/)
+  - Cobertura nubosa
+  - Temperatura ambiente
+  - Precipitación
+  - Humedad
+  - ...
+- Los coeficientes de los modelos sólo se pueden ajustar en estaciones
+  con medidas de radiación.
+- Los coeficientes dependen del lugar de ajuste, pero se pueden
+  interpolar para otras localizaciones.
+
+*** Estaciones Meteorológicas: modelos empíricos
+
+- Radiación y Horas de Brillo (Angstrom y Prescott)
+
+#+BEGIN_LaTeX
+  \[
+  \frac{G(0)}{B_o(0)} = a_1 + b_1 \frac{S}{S_o}
+  \]
+#+END_LaTeX
+
+- Problema: poca disponibilidad de datos
+
+*** Estaciones Meteorológicas: modelos empíricos
+- Radiación y Temperatura (Bristow y Campbell)
+#+BEGIN_LaTeX
+  \[
+  G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
+  \]
+#+END_LaTeX
+
+- Variaciones con más variables: Lluvia (si/no), rango antes y después, velocidad viento, humedad relativa.
+
+#+BEGIN_LaTeX
+\[
+  G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0) \cdot \left(1 +
+    \sum_1^n p_j \cdot v_j \right) + p_{n+1}
+\]
+#+END_LaTeX
+
+\nocite{Antonanzas-Torres.Sanz-Garcia.ea2013}
+
+** Imágenes de Satélite
+
+*** Fundamentos
+
+- Los satélites meteorológicos están equipados con *radiómetros*
+  (sensores de radiación electromagnética a diferentes frecuencias)
+  que captan *radiación emitida por la Tierra*.
+
+- La radiación emitida por la Tierra depende de la *reflexión del
+  suelo*, y la *geometría y composición de la atmósfera*.
+
+- Diferentes fenómenos físicos se detectan en *bandas de frecuencias*
+  distintas (canales).
+
+- Existen diversos procedimientos para *estimar radiación solar* en
+  superficie a partir de la información de los diferentes canales del
+  radiómetro.
+
+*** Satelites Geoestacionarios Europeos: Meteosat
+
+- *MFG*: Meteosat First Generation (7 satélites)
+  - Equipados con el radiómetro MVIRI (Meteosat Visible and Infrared Imager).
+  - Tres canales: visible, infrarrojo, vapor de agua.
+- *MSG*: Meteosat Second Generation (3 satélites)
+  - Equipados con dos radiómetros:
+    - *SEVIRI* (Spinning Enhanced Visible and InfraRed Imager): 12 canales
+    - GERB (Geostationary Earth Radiation Budget): infrarrojo visible.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.3\textwidth
+[[../figs/Tierra_MSG.jpg]]
+#+END_CENTER
+
+
+*** Procedimientos: Heliosat-2
+
+**** Pasos
+- Establecer *albedo de referencia* (/suelo/).
+- Estimar *índice de cobertura nubosa*.
+- Estimar radiación en superficie a partir de cobertura nubosa y *modelo de cielo claro*.
+
+**** 
+- Empleado para base HelioClim
+- Usan datos de MVIRI
+- Accesible via SoDa: http://www.soda-is.com/heliosat/index.html
+
+\nocite{Rigollier.Lefevre.ea2004}
+
+*** Procedimientos: CM SAF
+
+
+- *Fundamento*:
+  - Se emplea un *Radiative Transfer Model (RTM)*, libRadtran, para
+    generar una matriz de estados (*Look-up table, LUT*) relaciona la
+    transmitancia atmosférica y el albedo de la atmósfera para
+    variedad de estados.
+  - La irradiancia en superficie se estima multiplicando la
+    irradiancia extra-atmosférica por la *transmitancia atmosférica
+    determinada interpolando en la LUT*.
+
+\pause
+
+- *Dos LUTs*: cielo nuboso, cielo claro.
+  - *Cielo nuboso*:
+    - Estimación de albedo y estado atmosférico a partir de imágenes.
+    - Estimación de transmitancia interpolando en LUT para cielo nuboso.
+  - *Cielo claro*:
+    - Estimación de transmitancia interpolando en LUT para cielo claro *sin estimación previa* de albedo.
+
+\pause
+
+- Emplean datos del *radiómetro MSG/SEVIRI*
+
+\nocite{Mueller.Matsoukas.ea2009}
+
+
+
+*** Procedimientos: LSA SAF
+
+- Generación de *máscara de nubes* a partir de imagen usando algoritmo de [[http://www.nwcsaf.org/][NWC-SAF]].
+- Para *zonas sin nubes*: modelo de cielo claro sin usar datos de imagen.
+- Para *zonas cubiertas*: modelo de transmitancia atmosférica a partir de imágenes.
+- Emplean datos del *radiómetro MSG/SEVIRI*
+  
+\nocite{Geiger.Meurey.ea2008}
+
+** Fuentes de Datos: Estaciones Terrestres
+
+*** Baseline Surface Radiation Network
+
+**** http://www.bsrn.awi.de/
+
+- BSRN provides near-continuous, long-term, in situ-observed,
+  Earth-surface, broadband irradiances (solar and thermal infrared)
+  and certain related parameters from a network of more than 50
+  globally diverse sites.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/BSRN.png]]
+#+END_CENTER
+
+*** Baseline Surface Radiation Network
+- Validation and confirmation of satellite and computer model
+  estimates.
+
+- Datos desde:  http://www.bsrn.awi.de/en/data/data_retrieval_via_pangaea/
+
+
+*** Measurement and Instrumentation Data Center NREL
+**** http://www.nrel.gov/midc/
+Radiación global, directa y difusa (y otras variables) con muestreo de
+  1 min en diversas localidades de EEUU.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/NRELStation.jpg]]
+#+END_CENTER
+
+
+# ** Surfrad NOAA
+# *** http://www.esrl.noaa.gov/gmd/grad/surfrad/
+# - Support climate research with accurate, continuous, long-term measurements of the surface radiation budget over the United States.
+# - Currently seven SURFRAD stations are operating in climatologically
+#   diverse regions: Montana, Colorado, Illinois, Mississippi,
+#   Pennsylvania, Nevada and South Dakota.
+
+*** MAGRAMA-SIAR
+**** [[http://eportal.magrama.gob.es/websiar/Inicio.aspx]]
+- El Sistema de Información Agroclimática para el Regadío (SiAR)
+  registra datos agroclimáticos relacionados con demanda hídrica de
+  las zonas de riego.
+
+- Más de 400 estaciones. 
+
+- Valores diarios y horarios
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.35\textheight
+[[../figs/EstacionesSIAR.jpeg]]
+#+END_CENTER
+
+*** MAGRAMA-SIAR
+**** Sensores
+- Temperatura y Humedad
+- Piranómetro
+- Anemoveleta
+- Pluviómetro
+- Temperatura del suelo  (algunas)
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.4\textheight
+[[../figs/EstacionSIAR.png]]
+#+END_CENTER
+
+
+*** AEMET
+**** [[http://www.aemet.es/es/eltiempo/observacion/radiacion][Radiación]]
+- Alrededor de 30 estaciones en todo el territorio.
+- Medidas de global, difusa y directa.
+- Sólo gráficas.
+
+**** [[http://www.aemet.es/es/eltiempo/observacion/ultimosdatos][Estaciones "convencionales"]]
+- Presión, temperatura, viento, humedad, lluvia.
+- Permite descarga de datos horarios por día.
+
+*** Redes de Comunidades Autónomas
+
+- [[http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp][Meteogalicia]]  
+- [[http://meteo.navarra.es/estaciones/mapadeestaciones.cfm][MeteoNavarra]]
+- [[http://www.meteo.cat/xema/AppJava/SeleccioPerComarca.do][Cataluña]]
+
+** Fuentes de Datos: Satélite
+
+*** SSE-NASA
+**** Surface meteorology and Solar Energy (SSE)
+- 200 satellite-derived meteorology and solar energy parameters
+  *monthly averaged* from 22 years of data
+- Resolución 1ºx1º
+
+[[https://eosweb.larc.nasa.gov/cgi-bin/sse/sse.cgi]]
+
+*** EUMETSAT - SAF
+- *[[http://www.eumetsat.int][EUMETSAT]]* is the European operational satellite agency for monitoring
+  weather, climate and the environment.
+- *[[http://www.eumetsat.int/website/home/Satellites/GroundSegment/Safs/index.html][Satellite Application Facilities]] (SAFs)*
+  - Dedicated centres of excellence for processing satellite data.
+  - Generate and disseminate operational EUMETSAT products and
+    services.
+
+*** SAFs
+- [[http://www.cmsaf.eu/bvbw/appmanager/bvbw/cmsafInternet][SAF on Climate Monitoring (CM SAF)]]: provision of satellite-derived geophysical parameter data sets suitable for *climate monitoring*
+
+  - Environmental Data Records (EDR): time-tagged earth-located
+    geophysical parameters produced from sensor data. EDRs are derived
+    in low to medium latency not fulfilling strictest climate
+    requirements.
+
+  - Climate Data Records (CDR): time series of measurements of
+    sufficient length, consistency, and continuity to determine climate
+    variability and change.
+
+- [[http://landsaf.meteo.pt][SAF on Land Surface Analysis]] (LSA SAF): generates, archives and
+  disseminates, on an *operational basis*, a set of parameters involved
+  in the surface radiation budget, evapotranspiration, vegetation
+  cover and and fire-related products.
+
+*** SAFs: Radiación 
+
+- *CM SAF*: Surface incoming shortwave radiation ([[http://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=RAD_MVIRI_V001][SIS]])
+
+  - AEMET ha analizado las estimaciones para España en su [[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas_radiacion_solar][Atlas de Radiación]].
+
+- *LSA SAF*: Down-welling surface short-wave radiation flux ([[http://landsaf.meteo.pt/algorithms.jsp?seltab=1&starttab=1][DSSF]])
+
+# ** INPE (Brasil)
+# http://www.dgi.inpe.br/CDSR/
+
+*** ADRASE - CIEMAT
+**** http://adrase.es
+- Radiación solar media mensual, resolución aproximada de 5x5 km.
+  - Media mensual y anual más probable durante un periodo de largo
+    plazo (imágenes de satélite, modelo aproximadamente Heliosat)
+  - Variabilidad esperada de los valores diarios mensuales: (series
+    largas de datos de estaciones de AEMET y extrapolación espacial
+    con IDW)
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.35\textheight
+[[../figs/adrase.png]]
+#+END_CENTER
+
+** Métodos híbridos
+
+*** Interpolación Espacial
+**** *Objetivo*: mejorar la resolución espacial de medidas dispersas
+
+- *Inverse Distance Weighting (IDW)*: determinista.
+
+- *Ordinary Kriging*: modelo determinista para la media (constante) y estocástico para residuos.
+
+#+BEGIN_LaTeX
+\[
+  \hat{z}(\mathbf{s}) = \mu + \epsilon(\mathbf{s})
+\]
+#+END_LaTeX
+
+- *Kriging with External Drift (KED)*: modelo determinista para la media incorporando información de una variable con alta densidad espacial.
+#+BEGIN_LaTeX
+\[  \hat{z}(\mathbf{s}_\theta) =  \sum_{k=0}^p \hat{\beta}_k q_k(\mathbf{s}_\theta) + 
+  \sum_{i=1}^n \lambda_i \epsilon(\mathbf{s}_i)
+\]
+#+END_LaTeX
+
+\nocite{Journee.Bertrand2010}
+\nocite{Antonanzas-Torres.Canizares.ea2013}
+\nocite{Bojanowski.Vrieling.ea2013}
+
+
+*** Corrección por topografía
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 0.9\textwidth
+[[../figs/downscaling.pdf]]
+#+END_CENTER
+
+- Sky-View Factor (SVF) :: Proporción de cielo visible para un receptor horizontal (afecta a la radiación difusa isotrópica)
+#+BEGIN_LaTeX
+\[
+SVF=1-\int_0^{2\pi}sin^{2} \theta_{hor} d\theta
+\]
+#+END_LaTeX
+
+- Horizon blocking :: Bloqueo de región circunsolar por horizonte: afecta a radiación directa y difusa anisotrópica
+
+
+\nocite{Bosch.Batlles.ea2010}
+\nocite{Tovar-Pescador.Pozo-Vazquez.ea2006}
+\nocite{Antonanzas-Torres.MartinezdePison.ea2013}
+\nocite{Hofierka.Suri2002}
+
+*** PVGIS - =r.sun=
+**** http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php
+PVGIS (Photovoltaic Geographical Information System) is a research,
+demonstration and policy-support instrument for geographical
+assessment of the solar energy resource in the context of integrated
+management of distributed energy generation.
+- Computation of clear-sky global irradiation on a horizontal surface
+- Sky obstruction by local terrain features (hills or mountains)
+  calculated from the digital elevation model.
+- Interpolation of the clear-sky index and computation of global
+  irradiation on a horizontal surface.
+
+* Control de Calidad
+
+** Estadística
+
+
+*** Variable aleatoria y proceso estocástico
+
+- Una *variable aleatoria* es una función que asigna un único numero
+  real a cada resultado de un espacio muestral en un experimento.
+- Un *proceso estocástico* es una variable aleatoria que evoluciona a
+  lo largo del *tiempo* (p.ej. la radiación).
+ 
+
+*** Función de densidad de probabilidad
+
+La función de densidad de probabilidad, $f(X)$, de una variable
+aleatoria *asigna probabilidad* a un suceso:
+
+#+BEGIN_LaTeX
+
+\[
+P(a<X<b)=\int_{a}^{b}f(x)dx
+\]
+
+
+\[
+P(X<b)=\int_{-\infty}^{b}f(x)dx\]
+
+
+\[
+P(X>a)=\int_{a}^{\infty}f(x)dx\]
+
+#+END_LaTeX
+
+
+*** Función de Densidad de Probabilidad
+
+[[../figs/FuncionDensidadProbabilidad.pdf]]
+
+*** Histograma
+
+[[../figs/Histograma.pdf]]
+
+
+
+*** Media, varianza y desviación estándar
+
+- La *media* de una variable aleatoria es el *centro de masas* de su función densidad de probabilidad:
+
+#+BEGIN_LaTeX
+\[
+\mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx
+\]
+#+END_LaTeX
+
+- La *varianza* de una variable aleatoria es la *media del cuadrado de las desviaciones* respecto a la media:
+
+#+BEGIN_LaTeX
+\[
+\sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx
+\]
+#+END_LaTeX
+
+- La *desviación estándar* es la raiz cuadrada de la varianza: $\sigma_{X}=\sqrt{\sigma_{X}^2}$
+
+
+
+*** Combinación lineal de variables aleatorias
+
+- La *media de la suma* de varias variables aleatorias *independientes* es
+  la suma de las medias:
+#+BEGIN_LaTeX
+\[
+\mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}
+\]
+#+END_LaTeX
+
+- La *varianza de la /suma o resta/* de varias variables aleatorias
+  *independientes* es la *suma* de las varianzas:
+
+#+BEGIN_LaTeX
+\[
+\sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}
+\]
+#+END_LaTeX
+
+
+
+*** Media y varianza de la media muestral
+
+- Una *muestra de una población* es un conjunto de variables
+  aleatorias independientes ($X_{1}...X_{n}$).
+
+- Si se toma una muestra de una población cuya media es $\mu$ y su
+  varianza es $\sigma^{2}$, entonces la media de la muestra es otra
+  variable aleatoria (que es una suma de variables aleatorias)
+
+#+BEGIN_LaTeX
+\[
+\overline{X}=\frac{1}{n}\sum_{n}X_{i}
+\]
+#+END_LaTeX
+
+
+
+*** Media y varianza de la media muestral
+
+- Por tanto, la *media de la media muestral* es la media de población:
+#+BEGIN_LaTeX
+\[
+\overline{X}=\frac{1}{n}\sum_{n}X_{i} = \mu
+\]
+#+END_LaTeX
+
+- La *varianza de la media muestral* es la suma de las varianzas:
+#+BEGIN_LaTeX
+
+\[
+\sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}
+\]
+#+END_LaTeX
+
+Por tanto, una forma de *reducir la incertidumbre* es realizar la
+*medida en repetidas ocasiones*.
+
+
+
+*** Mediana y cuartiles
+
+- La *mediana* divide el conjunto de valores de la variable en *dos
+  mitades* iguales (divide el area encerrada por la función densidad
+  de probabilidad en dos partes iguales).
+- Los *cuartiles* dividen este area en *cuatro* partes iguales. 
+- El area encerrada entre cada par de cuartiles es igual al 25\% del total. 
+- La *mediana* es el *segundo cuartil*. 
+- La *distancia intercuartil* (definida entre los cuartiles 1 y 3) es
+  una *medida de la dispersión* de la variable.
+ 
+
+** Gráficos
+
+
+*** Función de Densidad de Probabilidad
+
+[[../figs/FuncionDensidadProbabilidad.pdf]]
+
+*** Histograma
+
+[[../figs/Histograma.pdf]]
+
+
+*** Gráficos boxplot
+
+[[../figs/GraficoBoxplot.pdf]]
+
+
+*** Gráficos de dispersión
+
+[[../figs/GraficoDispersion.pdf]]
+
+
+*** Matrices de gráficos de dispersión
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/Splom.png]]
+
+** Control de Calidad de Medidas
+
+*** Introducción
+
+**** Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erroneos.
+- Límites Físicos
+- Tests de persistencia
+- Tests de rampas (irradiancia)
+- Tests de envolvente (medida de varias componentes)
+- Coherencia espacial
+- Coherencia estadística
+
+
+
+*** Límites físicos
+
+**** Irradiación Diaria
+- La radiación global en el plano horizontal debe ser inferior a la extraterrestre ($K_t \leq 1$)
+#+BEGIN_LaTeX
+  \[
+  G_d(0) \leq B_od(0)
+  \]
+#+END_LaTeX
+
+- El índice de claridad debe ser superior a 0.03
+#+BEGIN_LaTeX
+  \[
+  K_t = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
+  \]
+#+END_LaTeX
+
+- La radiación global en el plano horizontal debe ser inferior a la de un modelo de cielo claro
+
+\nocite{Younes.Claywell.ea2005, Estevez.Gavilan.ea2011, Geiger.Diabate.ea2002}
+
+*** Límites físicos
+
+**** Irradiancia (intradiaria)
+- El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
+#+BEGIN_LaTeX
+  \[
+  k_t < 1  \text{ si } \gamma_s > 2\degree 
+  \]
+#+END_LaTeX
+- Límites inferiores para cielos cubiertos (baja transparencia atmosférica)
+#+BEGIN_LaTeX
+  \[
+  k_t \geq 10^{-4} \cdot (\gamma_s - 10\degree)  \text{ si } \gamma_s > 10\degree
+  \]
+
+  \[
+  G \geq 0  \text{ si } \gamma_s \leq 10\degree
+  \]
+#+END_LaTeX
+
+\nocite{Journee.Bertrand2011}
+
+*** Tests de persistencia
+**** Variabilidad de irradiancia
+- La media y la desviación estándar se calculan con todas las muestras de un día completo.
+#+BEGIN_LaTeX
+  \[
+  \frac{1}{8} \overline{k_t} \leq \sigma_{k_t} \leq 0.35
+  \]
+#+END_LaTeX
+
+*** Tests de rampas
+**** Límites a las variaciones de la irradiancia entre instantes sucesivos
+#+BEGIN_LaTeX
+  \[
+  \left| k_t(t) - k_t(t-1)\right| < 0.75 \text{ si } \gamma_s(t) > 2\degree
+  \]
+#+END_LaTeX
+
+
+*** Tests de envolvente
+- Sólo para estaciones con medida simultánea de global y directa/difusa.
+
+[[../figs/ConsistencyTest.png]]
+
+\nocite{Younes.Claywell.ea2005}
+
+*** Coherencia espacial
+
+- Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
+- Esta comprobación debe realizarse con *datos agregados* (diarios) (la variabilidad espacial intradiaria puede ser alta)
+- Esta comprobación debe realizarse con estaciones que tienen *clima y geografía similar*.
+
+\nocite{Journee.Bertrand2011}
+
+*** Coherencia espacial
+**** Pasos
+  - Estimamos la irradiación en el lugar, $x_0$, con la interpolación espacial de las estaciones cercanas, $x_i$.
+    - Los pesos $w_i$ son una función inversa de la distancia (IDW).
+#+BEGIN_LaTeX
+  \[
+  \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
+  \]
+#+END_LaTeX
+  - Comparamos la irradiación estimada, $\widehat{G}_d(x_0)$, con la medida en la estación, $G_d(x_0)$.
+#+BEGIN_LaTeX
+\[
+\left| \widehat{G}_d(x_0) - G_d(x_0) \right|
+\]
+#+END_LaTeX
+  - La diferencia absoluta debe estar por debajo de un límite (p.ej. 50%)
+
+
+
+*** Coherencia estadística
+**** Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
+**** *Método de Chauvenet*
+Una medida es un /outlier/ si la probabilidad de obtener su desviación
+respecto de la media es inferior al inverso de 2 veces el número de
+elementos en el conjunto.
+
+[[../figs/chauvenet.png]]
+
+*** Método de Chauvenet
+  - Sean $G_d(x_i)$ las medidas de radiación diaria del conjunto formado por N estaciones.
+
+\pause
+
+  - Se calcula la media, $\overline{G}_d$, la desviación estándar, $\sigma_{G_d}$.
+
+\pause
+
+  - Se calcula la distancia estadística de cada estación al conjunto:
+#+BEGIN_LaTeX
+  \[
+  d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+  \]
+#+END_LaTeX
+
+\pause
+
+  - En una distribución gaussiana se calcula la distancia estadística
+    equivalente a la probabilidad límite, $1/2N$, teniendo en cuenta
+    las dos colas.
+    - Por ejemplo, para un conjunto de 10 estaciones cada cola es
+      $1/40 = 0.025$, el límite es $\left| d_{max} \right| = 1.96$.
+\pause
+
+  - Aquellas observaciones que superan la distancia son marcadas como outliers.
+
+\nocite{Perpinan2009}
+
+*** Método de Chauvenet
+
+#+BEGIN_LaTeX
+  \[
+  d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+  \]
+#+END_LaTeX
+
+#+BEGIN_LaTeX
+  \[
+  \left| d_i \right| > \left| d_{max} \right|
+  \]
+#+END_LaTeX
+
+#+BEGIN_CENTER
+[[../figs/chauvenet.png]]
+#+END_CENTER
+
+**** Método de Pierce: más robusto y flexible \nocite{Ross2003}
+
+** Control de Calidad de Modelos
+
+*** Desviación entre modelo y observación
+
+- Sea $O$ el conjunto de observaciones (medidas) de una variable aleatoria.
+
+#+BEGIN_LaTeX
+  \[
+  \mathbf{O} = \left\{ o_1 \dots o_n \right\}
+  \]
+#+END_LaTeX
+- Sea $M$ el conjunto de resultados de un modelo que aproxima el comportamiento de la variable medida.
+
+#+BEGIN_LaTeX
+  \[
+  \mathbf{M} = \left\{ m_1 \dots m_n  \right\}
+  \]
+#+END_LaTeX
+
+- La desviación entre modelo y observación es:
+
+#+BEGIN_LaTeX
+  \[
+  \mathbf{D} = \mathbf{O} - \mathbf{M} =  \left\{ (o_1 - m_1) \dots (o_n - m_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
+  \]
+#+END_LaTeX
+
+*** Estimadores frecuentes: MBD y RMSD
+
+- Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
+#+BEGIN_LaTeX
+  \[
+  MBE = \overline{\mathbf{D}} = \overline{\mathbf{O}} - \overline{\mathbf{M}} = \frac{1}{n} \sum_{i=1}^n (o_i - m_i)
+  \]
+#+END_LaTeX
+\pause
+- Root Mean Square Error (RMSD), diferencia cuadrático media:
+#+BEGIN_LaTeX
+  \[
+  RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (o_i - m_i)^2  \right)^{1/2}
+  \]
+#+END_LaTeX
+
+*** Estimadores frecuentes: MBE y RMSD
+
+- Varianza de la diferencia (unbiased RMSD):
+#+BEGIN_LaTeX
+  \[
+  \sigma^2_{\mathbf{D}} = \frac{1}{n} \sum_{i=1}^n (d_i - \overline{\mathbf{D}})^2
+  \]
+#+END_LaTeX
+\pause
+
+- El RMSD agrega información del promedio y la varianza de la
+  diferencia:
+#+BEGIN_LaTeX
+\[
+RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
+\]
+#+END_LaTeX
+
+*** Otros estimadores: MAD
+
+- Mean Absolute Deviation (MAD):
+
+#+BEGIN_LaTeX
+  \[
+  MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|o_i - m_i\right|
+  \]
+#+END_LaTeX
+- El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
+#+BEGIN_LaTeX
+  \[
+  MAD \leq RMSD \leq n^{1/2} MAD
+  \]
+#+END_LaTeX
+
+\nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
+
+*** Otros estimadores: t y d
+
+- t de Student (valores pequeños indican buen comportamiento del modelo)
+  - Permite añadir intervalos de confianza a las diferencias entre
+    modelo y observación
+
+#+BEGIN_LaTeX
+  \[
+  t = \left ( \frac{(n-1) MBD^2}{RMSD^2 - MBD^2} \right)^{1/2}
+  \]
+#+END_LaTeX
+
+\nocite{Stone1993}
+
+\pause 
+
+- $d_1$: Índice de concordancia de Willmott.
+  - Limitado entre 0 (ausencia de concordancia) y 1 (concordancia total).
+  - Robusto frente a /outliers/.
+#+BEGIN_LaTeX
+  \[
+  d_1 = 1 - \frac{\sum_{i=1}^n \left| m_i - o_i \right|}{\sum_{i=1}^n \left(
+    \left| m_i - \overline{\mathbf{O}}\right| + \left| o_i -
+      \overline{\mathbf{O}} \right| \right)}
+  \]
+#+END_LaTeX
+
+\nocite{Willmott.Robeson.ea2012}
+
+*** Correlación
+
+El coeficiente de correlación entre dos conjuntos de datos es una
+medida numérica de la relación *lineal* entre los dos conjuntos (si la
+relación no es lineal, este coeficiente no sirve):
+
+#+BEGIN_LaTeX
+  \[
+  r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}{\sigma_{\mathbf{O}}}\right) \cdot \left(\frac{m_{i}-\overline{\mathbf{M}}}{\sigma_{\mathbf{M}}}\right)
+  \]
+#+END_LaTeX
+
+*** Diagramas de Taylor
+- Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
+
+#+BEGIN_LaTeX
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
+  \]
+#+END_LaTeX
+- Esta relación es semejante a la ley de los cosenos ($c$, $a$, $b$ son lados de un triángulo y $\phi$ es el ángulo opuesto al lado $c$):
+
+#+BEGIN_LaTeX
+  \[
+  c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
+  \]
+#+END_LaTeX
+\nocite{Taylor2000}
+
+*** Diagramas de Taylor
+
+#+BEGIN_LaTeX
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+  - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
+  \]
+#+END_LaTeX
+
+#+BEGIN_CENTER
+[[../figs/cosenosDiagramaTaylor.png]]
+#+END_CENTER
+
+*** Diagramas de Taylor
+- $\sigma^2_{\mathbf{D}}$: Distancia al origen
+- $\sigma^2_{\mathbf{O}}$: Eje horizontal
+- $\sigma^2_{\mathbf{M}}$: Eje vertical
+- $r$: acimut
+#+BEGIN_CENTER
+#+attr_latex: :height 0.6\textheight
+[[../figs/TaylorDiagrama.png]]
+#+END_CENTER
+
+
+*** Target Diagram
+
+- Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
+#+BEGIN_LaTeX
+  \[
+  RMSD' = RMSD / \sigma_{\mathbf{O}}
+  \]
+#+END_LaTeX
+
+#+BEGIN_LaTeX
+\[
+  \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
+\]
+#+END_LaTeX  
+
+#+BEGIN_LaTeX
+\[
+\overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
+\]
+#+END_LaTeX
+
+#+BEGIN_LaTeX
+\[
+RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
+\]
+#+END_LaTeX
+
+#+BEGIN_LaTeX
+  \[
+  sign_{\sigma} =  \sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
+  \]
+#+END_LaTeX
+
+- Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación: 
+
+\nocite{Jolliff.Kindle.ea2009}
+
+*** Target Diagram
+- $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
+- $\overline{\mathbf{D}}'$: Eje vertical
+- $RMSD'^2$: Distancia al origen
+
+#+BEGIN_CENTER
+#+attr_latex: :height 0.7\textheight
+[[../figs/TargetDiagram.pdf]]
+#+END_CENTER
+
+
+
+# * Bibliografía
+
+# ** Bibliografía
+#    :PROPERTIES:
+#    :BEAMER_OPT: allowframebreaks,label=
+#    :END:
+
+
+# \bibliography{/home/oscar/Dropbox/bibliografia/BibUTF8}
