@@ -1,0 +1,596 @@
+#+TITLE: Radiación Solar
+#+AUTHOR:    Oscar Perpiñán Lamigueiro (UPM)
+#+EMAIL:     oscar.perpinan@upm.es
+#+DATE:      
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  es
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [xcolor={usenames,svgnames,dvipsnames}]
+#+LATEX_HEADER: \usepackage{gensymb}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+#+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
+#+LATEX_HEADER: \lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {º}{{\textordmasculine}}1}
+#+LATEX_HEADER: \usepackage[emulate=units]{siunitx}
+#+LATEX_HEADER: \sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+#+LATEX_HEADER: \newunit{\wattpeak}{Wp}
+#+LATEX_HEADER: \newunit{\watthour}{Wh}
+#+LATEX_HEADER: \newunit{\amperehour}{Ah}
+#+LATEX_HEADER: \usepackage{mathpazo}
+#+LATEX_HEADER: \usefonttheme{serif}
+#+LATEX_HEADER: \usecolortheme{rose}  
+#+LATEX_HEADER: \usetheme{Goettingen}
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue, breaklinks=true}
+#+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+#+LATEX_HEADER: \bibliographystyle{plain}
+
+
+
+# * Estadística
+
+# *** Variable aleatoria y proceso estocástico
+
+# -  Una variable aleatoria es una función que asigna un único numero real
+#    a cada resultado de un espacio muestral en un experimento.
+
+# -  Un proceso estocástico es una variable aleatoria que evoluciona a lo
+#    largo del tiempo (p.ej. la radiación).
+
+# *** Función de densidad de probabilidad
+
+# La función de densidad de probabilidad, $f(X)$, de una variable
+# aleatoria asigna probabilidad a un
+# suceso:$$P(a<X<b)=\int_{a}^{b}f(x)dx$$
+
+# $$P(X<b)=\int_{-\infty}^{b}f(x)dx$$
+
+# $$P(X>a)=\int_{a}^{\infty}f(x)dx$$
+
+# 
+
+# *** Función de Densidad de Probabilidad
+
+# [[../figs/FuncionDensidadProbabilidad.pdf]]
+
+# 
+
+# *** Histograma
+
+# [[../figs/Histograma.pdf]]
+
+# *** Media, varianza y desviación estándar
+
+# La media de una variable aleatoria es el centro de masas de su función
+# densidad de
+# probabilidad:$$\mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx$$
+
+# La varianza de una variable aleatoria es la media del cuadrado de las
+# desviaciones respecto a la
+# media:$$\sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx$$
+
+# La desviación estándar es la raiz cuadrada de la varianza:
+# $\sigma_{X}=\sqrt{\sigma_{X}^2}$
+
+# *** Combinación lineal de variables aleatorias
+
+# La media de la suma de varias variables aleatorias independientes es la
+# suma de las medias:$$\mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}$$
+
+# La varianza de la /suma o resta/ de varias variables aleatorias
+# independientes es la /suma/ de las
+# varianzas:$$\sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}$$
+
+# *** Media y varianza de la media muestral
+
+# Una muestra de una población es un conjunto de variables aleatorias
+# independientes ($X_{1}...X_{n}$). Si se toma una muestra de una
+# población cuya media es $\mu$ y su varianza es $\sigma^{2}$, entonces la
+# media de la muestra es otra variable
+# aleatoria:$$\overline{X}=\frac{1}{n}\sum_{n}X_{i}$$
+
+# que es una suma de variables aleatorias.
+
+# *** Media y varianza de la media muestral
+
+# Por tanto, la media de la media muestral es la suma de las medias:
+# $$\overline{X}=\mu$$
+
+# y la varianza de la media muestral es la suma de las
+# varianzas:$$\sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}$$
+
+# Por tanto, una forma de reducir la incertidumbre es realizar la medida
+# en repetidas ocasiones.
+
+# *** Mediana y cuartiles
+
+# -  La mediana divide el conjunto de valores de la variable en dos
+#    mitades iguales (divide el area encerrada por la función densidad de
+#    probabilidad en dos partes iguales).
+
+# -  Los cuartiles dividen este area en cuatro partes iguales.
+
+# -  El area encerrada entre cada par de cuartiles es igual al 25% del
+#    total.
+
+# -  La mediana es el segundo cuartil.
+
+# -  La distancia intercuartil (definida entre los cuartiles 1 y 3) es una
+#    medida de la dispersión de la variable.
+
+# 
+
+# *** Gráficos boxplot
+
+# [[../figs/GraficoBoxplot.pdf]]
+
+# *** Desviación entre modelo y observación
+
+# Si tenemos un modelo que aproxima el comportamiento de una variable
+# aleatoria, definimos el error cuadrático medio
+# como:$$RMSE^{2}=\int_{-\infty}^{\infty}x^2_{D}\cdot f_{X_{D}}(x)dx=\sigma^2_{X_{D}}+\mu_{X_{D}}^{2}$$
+
+# siendo $X_{D}$ la variable aleatoria que define la desviación entre
+# modelo y observación.
+
+# El coeficiente de correlación entre dos conjuntos de datos es una medida
+# numérica de la relación /lineal /entre los dos conjuntos (si la relación
+# no es lineal, este coeficiente no
+# sirve):$$r=\frac{1}{n-1}\cdot\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{\sigma_{X}}\right)\cdot\left(\frac{y_{i}-\bar{y}}{\sigma_{Y}}\right)$$
+
+# 
+
+# *** Gráficos de dispersión
+
+# [[../figs/GraficoDispersion.pdf]]
+
+* Naturaleza de la radiación solar
+
+*** Irradiancia e Irradiación
+
+- Irradiancia :: es la densidad de /potencia/ de radiacion solar
+  incidente en una superficie.
+
+  - Unidades: $\si{\watt\per\meter\squared},\,\si{\kilo\watt\per\meter\squared}$
+
+- Irradiación :: es la densidad de /energía/ de radiación solar
+  incidente en una superficie.
+
+  - Unidades: $\si{\watthour\per\meter\squared},\,\si{\kilo\watthour\per\meter\squared}$
+
+*** Radiación Extra-atmosférica
+
+-  La radiación que alcanza la superficie de la atmósfera es radiación
+   directa del Sol.
+
+-  *Constante solar* $B_{0}=\SI{1367}{\watt\per\meter\squared}$
+   (irradiancia solar sobre la superficie normal al vector solar en límite superior de la atmósfera terrestre)
+
+-  *Irradiancia extra-atmosférica*
+
+   -  $B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}$
+
+   -  $B_{0d}(0)=-\frac{T}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)$
+      ($\omega_{s}$ en radianes)
+
+*** Radiación Extra-atmosférica
+
+-  Es posible demostrar que el *promedio mensual* de esta irradiación
+   diaria *coincide numericamente* con el valor de irradiación diaria
+   correspondiente a los denominados *días promedios*, días en los que
+   la declinación correspondiente coincide con el promedio mensual
+
+-  Por tanto, podemos calcular el valor medio mensual de la irradiación
+   diaria extra-atmosférica con el valor de la declinación de uno de los
+   doce días promedio.
+
+| Mes   | Ene | Feb | Mar | Abr | May | Jun |
+|-------+-----+-----+-----+-----+-----+-----|
+| $d_n$ |  17 |  45 |  74 | 105 | 135 | 161 |
+|-------+-----+-----+-----+-----+-----+-----|
+| Mes   | Jul | Ago | Sep | Oct | Nov | Dic |
+|-------+-----+-----+-----+-----+-----+-----|
+| $d_n$ | 199 | 230 | 261 | 292 | 322 | 347 |
+
+*** Interacción de la radiación con la atmósfera
+
+-  *Disminución* de la radiación incidente en la superficie terrestre
+   (reflexión en nubes)
+
+-  *Modificación de las características espectrales* de la radiación
+   (absorción por vapor de agua, ozono y CO2)
+
+-  *Modificación de la distribución espacial* (dispersión por
+   partículas)
+
+   -  Difusión de Rayleigh (longitud de onda mucho mayor que tamaño de
+      partícula) - Capas altas - Color Azul
+
+   -  Difusión de Mie (longitud de onda de magnitud similar a tamaño de
+      partícula) - Capas bajas
+
+   -  Difusión no selectiva (longitud de onda mucho menor que tamaño de
+      partícula)
+
+*** Componentes de la radiación solar
+
+-  *Radiación Directa*. (B)
+
+   -  Linea recta con el Sol.
+
+-  *Radiación Difusa*. (D)
+
+   -  Procedente de todo el cielo salvo el Sol
+
+   -  Rayos dispersados por la atmósfera.
+
+   -  Anisotrópica, proceso estocástico.
+
+-  *Radiación del albedo*. (R, AL)
+
+   -  Procedente del suelo (reflejada)
+
+-  *Radiación Global:* $G=B+D+R$
+
+*** Cómo se escribe
+
+**** Forma, tiempo, lugar
+
+-  Forma+Tiempo+Lugar: :: Irradiancia directa (forma) horaria (tiempo)
+   en el plano del generador (lugar)
+
+-  Promedios: :: Media mensual (periodo) de la irradiación global
+   (forma) diaria (tiempo)
+
+-  Lugar: ::
+
+   (Orientación, Inclinación)
+
+   (0=Horizontal)
+
+   (n=Normal)
+
+   (I=Plano del generador)
+
+*** Cómo se escribe
+
+**** Forma, tiempo, lugar
+
+#+BEGIN_LaTeX
+\[Forma_{tiempo,promedio}(lugar)\]
+
+\[G_{d,m}(0)\]
+
+\[D_{h}(\alpha,\beta)\]
+
+\[B_{0d}(n)\]
+
+\[B(\beta)\]
+
+#+END_LaTeX
+
+*** Caracterización de la atmósfera
+
+-  *Masa de aire*:
+
+   -  Relación entre camino recorrido por rayos directos del Sol a
+      través de la atmósfera hasta la superficie receptora y el que
+      recorrerían en caso de incidencia vertical (AM=1)
+
+   -  $AM=1/\cos\theta_{zs}$
+
+-  *Índice de claridad*
+
+   -  Relación entre la radiación global en el plano horizontal y la
+      radiación extra-atmosférica en el plano horizontal
+
+   -  El índice de claridad *no depende de las variaciones debidas al
+      movimiento aparente del sol*.
+
+   -  $K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}$ (mensual)
+
+*** Índice de claridad
+
+-  $K_{T}$: :: índice de claridad instantáneo. $K_{T}=G/B_{0}$
+
+-  $K_{Td}$: :: índice de claridad diario. $K_{Td}=G_{d}/B_{0d}$
+
+-  $K_{Tm}$: :: índice de claridad mensual. $K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}$
+
+-  $K_{Ta}$: :: índice de claridad anual. $K_{Ta} = G_{a}/B_{0a} = \dots$
+
+* Cálculo de componentes de radiación solar
+
+*** Radiación como proceso estocástico
+
+- La *distribución de valores* que presenta la radiación solar durante un periodo está *determinada por el valor promedio de la radiación durante ese periodo*.
+
+  - Por ejemplo, conocer la media mensual de la radiación solar diaria en un determinado lugar permite saber cómo se comportará la radiación diaria durante ese mes
+
+- El índice de claridad para un día concreto *sólo está influido* por el índice de claridad del *día anterior*.
+
+*** Estimación de Directa y Difusa
+
+-  Establecer una *relación entre la fracción difusa* de la radiación horizontal ($F_{D}=\frac{D(0)}{G(0)}$) y *el índice de claridad*.
+
+-  *Correlación negativa* (a mayor índice de claridad, menor componente difusa)
+
+-  *Correlación independiente de la latitud* (validez cuasi-universal)
+
+*** Correlaciones $F_{D}$ y $K_{T}$: Ecuación de Page
+
+[[../figs/FdKtMensual.pdf]]
+
+\[F_{Dm}=1-1.13\cdot K_{Tm}\]
+
+*** Correlaciones $F_{D}$ y $K_{T}$
+
+Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ en un mes con $B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}$  será:
+
+- $K_{Tm}=\frac{3150}{4320}=0.73$
+
+- Según la correlación de Page, $F_{Dm}=1-1.13\cdot0.73=0.175$
+
+- $D_{d,m}(0)=0.175\cdot3150=\SI{551.6}{\watthour\per\meter\squared}$
+
+- $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
+
+*** Correlaciones $F_{D}$ y $K_{T}$: Collares-Pereira y Rabl
+
+[[../figs/FdKtDiario.pdf]]
+#+BEGIN_LaTeX
+{\scriptsize \[
+F_{Dd} = \begin{cases}
+  0.99 & K_{Td} \leq 0.17\\
+  1.188 - 2.272 \cdot K_{Td} + 9.473 \cdot K_{Td}^{2} - 21.856 \cdot K_{Td}^{3} + 14.648 \cdot K_{Td}^{4} & K_{Td} > 0.17
+\end{cases}
+\]
+}
+{\scriptsize \par}
+#+END_LaTeX
+
+*** Estimación de Directa y Difusa
+
+-  Calcular :: las componentes directa y difusa de la radiación solar del:
+
+   -  Mes de Septiembre (día 261) en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal
+      $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+
+* Cálculo de radiación sobre generadores
+
+
+*** Irradiancia sobre superficies arbitrarias
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+
+** Irradiancia a partir de irradiación diaria
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+-  La irradiación durante una hora coincide con el valor medio de la irradiancia durante esa hora.
+
+-  La variación solar durante una hora es baja: valor de irradiancia equivalente a valor de irradiación.
+
+-  Relación entre irradiancia e irradiación extra-terrestre deducible teóricamente:
+
+\[\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\]
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+\[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
+
+\[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
+
+\[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+
+\[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+[[../figs/RgRd.pdf]]
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+-  Calcular :: la irradiancia global y la irradiancia difusa en el plano horizontal
+
+   -  2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+** Transformación al plano del generador
+
+*** Irradiancia Directa
+
+\[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+
+*** Factor de visión para Difusa
+
+[[../figs/AnguloVisionCielo.pdf]]
+
+\[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
+
+*** Irradiancia Difusa isotrópica
+
+\[L(\theta_{z},\psi)=cte.\]
+
+\[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
+
+*** Irradiancia Difusa Anisotrópica
+#+BEGIN_LaTeX
+\[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
+\[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
+\[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+\[k_{1} & = & \frac{B(0)}{B_{0}(0)}\]
+#+END_LaTeX
+
+*** Irradiancia de Albedo
+
+\[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
+
+\[\rho=0.2\]
+
+*** Irradiancia sobre plano inclinado
+
+-  Calcular :: la irradiancia difusa, directa, de albedo y global, en
+
+   -  Un generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del mediodía del día 261 en un lugar con latitud  $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+# ** Incertidumbre
+# *** Variabilidad Interanual
+
+# [[../figs/VariabilidadRadiacionDiario.pdf]]
+
+# *** Incertidumbre
+
+# -  Predicción para un (día, mes, año) /determinado/:
+
+#    -  Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{G}$
+
+# -  Predicción para un (día, mes, año) /promedio (durante N años)/:
+
+#    -  Intervalo de confianza del 95% acotado por
+#       $1.96\cdot\sigma_{\overline{G}}$
+
+# \[\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}\]
+
+
+** Pérdidas angulares y por suciedad
+
+*** Radiación directa
+
+\[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
+
+[[../figs/Suciedad.pdf]]
+
+*** Difusa y Albedo
+#+BEGIN_LaTeX
+\begin{aligned}
+
+D_{ef}^{iso}(\beta,\alpha) & = & D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
+
+D_{ef}^{cir}(\beta,\alpha) & = & D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
+
+R_{ef}(\beta,\alpha) & = & R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
+
+\end{aligned}
+#+END_LaTeX
+
+*** Coeficientes
+
+
+| Grado de Suciedad | $\frac{T_{sucio}(0)}{T_{limpio}(0)}$ | $a_{r}$ | $c_{2}$ |
+|-------------------+--------------------------------------+---------+---------|
+| Limpio            |                                    1 |    0.17 |  -0.069 |
+| Bajo              |                                 0.98 |    0.20 |  -0.054 |
+| Medio             |                                 0.97 |    0.21 |  -0.049 |
+| Alto              |                                 0.92 |    0.27 |  -0.023 |
+
+*** Pérdidas anuales
+
+[[../figs/GefVSG.pdf]]
+
+* Radiación Efectiva según tipologías
+
+
+
+*** Radiación en Sistema estático
+
+[[../figs/FixedKrig.pdf]]
+
+
+
+*** Radiación en Seguimiento Eje Horizontal
+
+[[../figs/HorizKrig.pdf]]
+
+
+
+*** Radiación en Seguimiento Doble Eje
+
+[[../figs/TwoKrig.pdf]]
+
+** Comparación entre tipologías
+
+
+
+*** Comparación Doble Eje-Estática
+
+[[../figs/TwoFixed.pdf]]
+
+
+
+*** Comparación Doble Eje - Horizontal
+
+[[../figs/TwoHoriz.pdf]]
+
+
+
+*** Comparación Eje Horizontal - Estática
+
+[[../figs/HorizFixed.pdf]]
+
+
+
+*** Comparación Eje Horizontal - Estática
+
+[[../figs/compSystems.pdf]]
+
+[[../figs/compSystemsG0.pdf]]
+
+* Aplicación a Sistemas estáticos
+
+** Ángulo de inclinación óptimo
+
+*** Inclinación Optima Estática
+
+\[\left|\phi\right|-\beta\approx10\degree\]
+
+\[\beta_{opt}=3.7+0.69\cdot|\phi|\]
+
+*** Sensibilidad al desapuntamiento
+
+[[../figs/PerdidasInclinacionOptima.pdf]]
+
+*** Radiación para inclinación óptima
+
+\[\frac{G_{d,a}(0)}{G_{d,a}(\beta_{opt})}=1-4.46\cdot10^{-4}\cdot\beta_{opt}-1.19\cdot10^{-4}\cdot\beta_{opt}^{2}\]
+
+*** Cálculo de Radiación Efectiva
+
+#+BEGIN_LaTeX
+\[
+\frac{G_{efd,a}(\beta,\alpha)}{G_{d,a}(\beta_{opt})} = g_{1}\cdot(\beta-\beta_{opt})^{2}+g_{2}\cdot(\beta-\beta_{opt})+g_{3}
+\]
+
+\[
+g_{i} = g_{i1}|\alpha|^{2}+g_{i2}|\alpha|+g_{i3}
+\]
+#+END_LaTeX
+
+| <l>      | <r>                 | <r>                  | <r>                  |
+|          | $i=1$               | $i=2$                | $i=3$                |
+|----------+---------------------+----------------------+----------------------|
+| $g_{1i}$ | $8\cdot10^{-9}$     | $3.8\cdot10^{-7}$    | $-1.218\cdot10^{-4}$ |
+| $g_{2i}$ | $-4.27\cdot10^{-7}$ | $8.2\cdot10^{-6}$    | $2.892\cdot10^{-4}$  |
+| $g_{3i}$ | $-2.5\cdot10^{-5}$  | $-1.034\cdot10^{-4}$ | $0.9314$             |
+
+*** Cálculo para estática
+
+-  Calcular :: la irradiación anual efectiva que incide en
+
+   -  Un generador orientado al Sur e inclinado $\ang{20}$ en un lugar con latitud $\ang{30}\mathrm{N}$ y una media anual de la irradiación global diaria en el plano horizontal de $\SI{5250}{\watthour\per\meter\squared}$, suponiendo una suciedad media.
+
+-  Calcular :: la irradiación anual efectiva que incide en
+
+   -  Un generador desorientado $\ang{20}$ del Sur e inclinado $\ang{40}$ en un lugar con latitud $\ang{50}\mathrm{N}$ y una media anual de la irradiación global diaria en el plano horizontal de $\SI{5250}{\watthour\per\meter\squared}$, suponiendo una suciedad media.
+
+
