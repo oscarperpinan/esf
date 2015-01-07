@@ -1,676 +1,535 @@
-\documentclass[xcolor=dvipsnames]{beamer}
-
-\makeatletter
-
-%HAY QUE ELEGIR EL QUE CORRESPONDA
-
-%\input{FormatoImprimir.tex}
-%\input{FormatoUPM.tex}
-\input{FormatoEOI.tex}
-
-\makeatother
-
-
+% Created 2015-01-07 mié 11:53
+\documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\bibliographystyle{plain}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\usepackage[emulate=units]{siunitx}
+\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\newunit{\wattpeak}{Wp}
+\newunit{\watthour}{Wh}
+\newunit{\amperehour}{Ah}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\usetheme[hideothersubsections]{Goettingen}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
+\date{}
+\title{Geometría Solar}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
 \begin{document}
 
+\maketitle
 
-\title{\textsc{Energía Solar Fotovoltaica:}\\
-  \textsc{Geometría Solar}}
+\section{Geometría Sol y Tierra}
+\label{sec-1}
+\subsection{Movimiento Sol-Tierra}
+\label{sec-1-1}
 
+\begin{frame}[label=sec-1-1-1]{Introducción}
+\begin{itemize}
+\item La Tierra se mueve alrededor del Sol siguiendo una elipse de baja
+excentricidad.
 
-\author{\textsc{Oscar Perpiñán Lamigueiro}}
+\begin{itemize}
+\item Periodo aproximado: 1 año.
 
-\date{}
+\item Este movimiento está contenido en el llamado \emph{plano de la
+eclíptica}
+\end{itemize}
 
+\item La Tierra gira sobre si misma alrededor de su eje polar.
 
-\begin{frame}[plain]
-  \titlepage
+\begin{itemize}
+\item Entre el eje polar y el plano de la eclíptica hay un ángulo
+constante de $23,45\degree$.
+
+\item Entre el plano ecuatorial y la linea que une Tierra-Sol hay un
+ángulo variable: \emph{declinación.}
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\AtBeginSection[]{
-  \begin{frame}[plain]
-    \frametitle{Índice}
-    % \setcounter{tocdepth}{1}
-    \tableofcontents[currentsection]
-  \end{frame}
-
-}
-
-\selectlanguage{spanish}%
-
-
-\section{Movimiento Sol y Tierra}
-
-
-
-\begin{frame}
-  \frametitle{Movimiento Sol-Tierra}
-  \begin{itemize}
-  \item La Tierra se mueve alrededor del Sol siguiendo una elipse de
-    baja excentricidad.
-
-    \begin{itemize}
-    \item Periodo aproximado: 1 año.
-    \item Este movimiento está contenido en el llamado \emph{plano de
-        la eclíptica}
-    \end{itemize}
-  \item La Tierra gira sobre si misma alrededor de su eje polar.
-
-    \begin{itemize}
-    \item Entre el eje polar y el plano de la eclíptica hay un ángulo
-      constante de $23,45\degree$.
-    \item Entre el plano ecuatorial y la linea que une Tierra-Sol hay
-      un ángulo variable: \emph{declinación.}
-    \end{itemize}
-  \end{itemize}
-
+\begin{frame}[label=sec-1-1-2]{Movimiento Sol-Tierra}
+\includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
 \end{frame}
 
+\begin{frame}[label=sec-1-1-3]{Distancia Sol-Tierra}
+\begin{itemize}
+\item Distancia Sol-Tierra
+\end{itemize}
 
-\begin{frame}
-  \frametitle{Movimiento Sol-Tierra}
+\[r=r_{0}\{1+0.017\sin[\frac{2\pi\cdot(d_{n}-93)}{365}]\}\]
 
-  \begin{center}
-    \includegraphics[scale=0.8]{../Figuras/PlanoEcliptica}
-    \par\end{center}
+\begin{itemize}
+\item Distancia promedio
+\end{itemize}
 
+\[r_{0}=\SI{1.496e8}{\kilo\metre}=\SI{1}{UA}\]
 
-\end{frame}
+\begin{itemize}
+\item Excentricidad
+\end{itemize}
 
-\begin{frame}
-  \frametitle{Distancia Sol-Tierra}
-
-  Distancia Sol-Tierra
-
-\[
-r=r_{0}\{1+0.017\sin[\frac{2\pi\cdot(d_{n}-93)}{365}]\}\]
-
-
-Distancia promedio
-
-\[
-r_{0}=\SI{1.496e8}{\kilo\metre}=\SI{1}{UA}\]
-
-
-Excentricidad
-
-\[
-\epsilon_{0}=(\frac{r_{0}}{r})^2=1+0,033\cdot\cos(\frac{2\pi
+\[\epsilon_{0}=(\frac{r_{0}}{r})^2=1+0,033\cdot\cos(\frac{2\pi
   d_{n}}{365})\]
-
-
-
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Declinación}
-
-\[
-\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
 
 
-\begin{center}
-  \includegraphics[scale=0.6]{../Figuras/Declinacion}
-  \par\end{center}
+\begin{frame}[label=sec-1-1-4]{Declinación}
+\[\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
 
-
+\includegraphics[width=.9\linewidth]{../figs/Declinacion.pdf}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Otras ecuaciones}
-  \begin{align*}
-    \label{eq:spencer}
-    X &= 2 \pi \cdot (d_n-1)/365\\
-    \begin{split}
-      \delta &= 0.006918 - 0.399912 \cdot \cos(X) + 0.070257 \cdot \sin(X)\\
-      &-  0.006758 \cdot \cos(2 X) + 0.000907 \cdot \sin(2 X)\\
-      &- 0.002697 \cdot \cos(3 X) + 0.001480 \cdot \sin(3 X)
-    \end{split}\\
-    \begin{split}
-      \epsilon_{0} &= 1.000110 + 0.034221 \cdot \cos(X) + 0.001280
-      \cdot
-      \sin(X)\\
-      &+ 0.000719 \cdot \cos(2 X) + 0.000077 \cdot \sin(2 X)
-    \end{split}
-  \end{align*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Otras ecuaciones}
-  \begin{center}
-    \includegraphics[height=0.85\textheight,keepaspectratio]{../Figuras/DeclinacionDiferencias}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Declinación}
-  \begin{itemize}
-  \item \textbf{Equinoccio de primavera}:
-
-    \begin{itemize}
-    \item 21-22 Marzo (Dia del Año 80-81)
-    \end{itemize}
-  \item \textbf{Equinoccio de otoño:}
-
-    \begin{itemize}
-    \item 22-23 Septiembre (Dia del Año 265-266)
-    \end{itemize}
-  \item \textbf{Solsticio de Verano}:
-
-    \begin{itemize}
-    \item 21-22 Junio (Dia del Año 172-173)
-    \end{itemize}
-  \item \textbf{Solsticio de Invierno:}
-
-    \begin{itemize}
-    \item 21-22 Diciembre (Dia del Año 355-356)
-    \end{itemize}
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Declinación}
-  \begin{itemize}
-  \item Las estaciones se deben al ángulo entre plano ecuatorial y
-    plano de la eclíptica
-  \item \textbf{Solsticio de verano}
-
-    \begin{itemize}
-    \item Declinación máxima.
-    \item Días más largos en hemisferio Norte.
-    \item El Sol amanece por el Noreste y anochece por el Noroeste en
-      el hemisferio Norte.
-    \end{itemize}
-  \item \textbf{Solsticio de invierno}
-
-    \begin{itemize}
-    \item Declinación mínima.
-    \item Días más cortos en hemisferio Norte.
-    \item El Sol amanece por el Sureste y anochece por el Suroeste en
-      el hemisferio Norte.
-    \end{itemize}
-  \item \textbf{Equinoccios}
-
-    \begin{itemize}
-    \item Declinación nula
-    \item La duración de noche y día coincide.
-    \item El Sol amanece por el Este y anochece por el Oeste.
-    \end{itemize}
-  \end{itemize}
-
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ejes terrestres}
-
-  \includegraphics[scale=0.8]{../Figuras/SoldesdeTierra}
-
-\[
-\vec{\mu}_{s}=\left[\cos\left(\delta\right)\cos\left(\omega\right)\right]\cdot\vec{\mu}_{ec}+\left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\sin\left(\delta\right)\cdot\vec{\mu}_{p}\]
-
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ejes terrestres}
-
-\[
-\vec{\mu}_{s}=\left[\cos\left(\delta\right)\cos\left(\omega\right)\right]\cdot\vec{\mu}_{ec}+\left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\sin\left(\delta\right)\cdot\vec{\mu}_{p}\]
-
-
-\includegraphics[scale=0.7]{../Figuras/SistemaCoordenadasTerrestre}
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ejes locales}
-
-  \includegraphics{../Figuras/SoldesdeTierra2}
-
-\[
-\vec{\mu}_{s}=\left[\cos\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{h}+\left[\sin\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{\bot}+\cos\left(\theta_{z}\right)\cdot\vec{\mu}_{c}\]
-
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ejes locales}
-
-  \includegraphics[scale=0.7]{../Figuras/SistemaCoordenadasLocal}
-
-\[
-\vec{\mu}_{s}=\left[\cos\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{h}+\left[\sin\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{\bot}+\cos\left(\theta_{z}\right)\cdot\vec{\mu}_{c}\]
-
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Relación entre sistemas de coordenadas}
-
-  \begin{center}
-    \includegraphics[scale=0.8]{../Figuras/RelacionSistemasCoordenadas}
-    \par\end{center}
-
-
-
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Ejes locales y terrestres}
-
-\begin{align}
-  \vec{\mu}_{s} & =\mathrm{signo}(\phi)\cdot\left[\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)\right]\cdot\vec{\mu}_{h}-\nonumber \\
-  & -\left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\\
-  &
-  +\left[\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\right]\cdot\vec{\mu}_{c}\nonumber \end{align}
-\begin{block}{}
-  \textbf{Latitud ($\phi$) con signo}: Positivo para Hemisferio Norte,
-  Negativo para Hemisferio Sur.
-\end{block}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Ángulos Solares}
-
-\[
-\cos\left(\theta_{z}\right)=\vec{\mu}_{c}\cdot\vec{\mu}_{s}=\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\]
-
+\begin{frame}[label=sec-1-1-5]{Otras ecuaciones}
 \begin{align*}
-  \vec{\mu_{s}}\cdot\vec{\mu}_{\bot} & =-\sin\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
-  \vec{\mu_{s}}\cdot\vec{\mu}_{h} & =\mathrm{signo}(\phi)\cdot\cos\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
-  \cos\left(\psi_{s}\right) & =\mathrm{signo}(\phi)\cdot\frac{\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)}{\sin\left(\theta_{zs}\right)}\\
-  \sin(\psi_{s}) &
-  =\frac{\cos(\delta)\sin(\omega)}{\sin(\theta_{zs})}=\frac{\cos(\delta)\sin(\omega)}{\cos(\gamma_{s})}\end{align*}
-
-
-
+  X &= 2 \pi \cdot (d_n-1)/365\\
+  \delta &= 0.006918 - 0.399912 \cdot \cos(X) + 0.070257 \cdot \sin(X)\\
+    &-  0.006758 \cdot \cos(2 X) + 0.000907 \cdot \sin(2 X)\\
+    &- 0.002697 \cdot \cos(3 X) + 0.001480 \cdot \sin(3 X)\\
+  \epsilon_{0} &= 1.000110 + 0.034221 \cdot \cos(X) + 0.001280 \cdot \sin(X)\\
+    &+ 0.000719 \cdot \cos(2 X) + 0.000077 \cdot \sin(2 X)
+\end{align*}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Altura Solar (hemisferio NORTE)}
-
-  \begin{center}
-    \includegraphics[scale=0.6]{../Figuras/AlturaSolarMediodiaNORTE}
-    \par\end{center}
-
-
+\begin{frame}[label=sec-1-1-6]{Otras ecuaciones}
+\includegraphics[width=.9\linewidth]{../figs/DeclinacionDiferencias.pdf}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Altura Solar (hemisferio SUR)}
+\begin{frame}[label=sec-1-1-7]{Declinación}
+\begin{itemize}
+\item \alert{Equinoccio de primavera}:
 
-  \begin{center}
-    \includegraphics[scale=0.6]{../Figuras/AlturaSolarMediodiaSUR}
-    \par\end{center}
+\begin{itemize}
+\item 21-22 Marzo (Dia del Año 80-81)
+\end{itemize}
 
+\item \alert{Equinoccio de otoño:}
 
+\begin{itemize}
+\item 22-23 Septiembre (Dia del Año 265-266)
+\end{itemize}
+
+\item \alert{Solsticio de Verano}:
+
+\begin{itemize}
+\item 21-22 Junio (Dia del Año 172-173)
+\end{itemize}
+
+\item \alert{Solsticio de Invierno:}
+
+\begin{itemize}
+\item 21-22 Diciembre (Dia del Año 355-356)
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Trayectoria Solar ($60\degree N$)}
+\begin{frame}[label=sec-1-1-8]{Declinación}
+\begin{itemize}
+\item Las estaciones se deben al ángulo entre plano ecuatorial y plano de
+la eclíptica
 
-  \begin{center}
-    \includegraphics[scale=0.6]{../Figuras/TrayectoriaSolar60N}
-    \par\end{center}
+\item \alert{Solsticio de verano}
 
+\begin{itemize}
+\item Declinación máxima.
 
+\item Días más largos en hemisferio Norte.
+
+\item El Sol amanece por el Noreste y anochece por el Noroeste en el
+hemisferio Norte.
+\end{itemize}
+
+\item \alert{Solsticio de invierno}
+
+\begin{itemize}
+\item Declinación mínima.
+
+\item Días más cortos en hemisferio Norte.
+
+\item El Sol amanece por el Sureste y anochece por el Suroeste en el
+hemisferio Norte.
+\end{itemize}
+
+\item \alert{Equinoccios}
+
+\begin{itemize}
+\item Declinación nula
+
+\item La duración de noche y día coincide.
+
+\item El Sol amanece por el Este y anochece por el Oeste.
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Trayectoria Solar ($40\degree S$)}
+\subsection{Sistemas de coordenadas}
+\label{sec-1-2}
 
-  \begin{center}
-    \includegraphics[scale=0.6]{../Figuras/TrayectoriaSolar40S}
-    \par\end{center}
+\begin{frame}[label=sec-1-2-1]{Ejes terrestres}
+\includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra.pdf}
 
-
+\[\vec{\mu}_{s}=\left[\cos\left(\delta\right)\cos\left(\omega\right)\right]\cdot\vec{\mu}_{ec}+\left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\sin\left(\delta\right)\cdot\vec{\mu}_{p}\]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Mediodía, amanecer y anocher}
-  \begin{itemize}
-  \item Mediodía: \[
-    \psi_{s}=0\Rightarrow\sin(\psi_{s})\Rightarrow\omega=0\]
 
-  \item Amanecer / Anochecer: \[
-    \gamma_{s}=0,\,\theta_{z}=\frac{\pi}{2}\Rightarrow\cos(\theta_{z})=0\Rightarrow\cos(\omega_{s})=-\tan(\delta)\tan(\phi)\]
 
-  \end{itemize}
+\begin{frame}[label=sec-1-2-2]{Ejes terrestres}
+\includegraphics[height=0.7\textheight]{../figs/SistemaCoordenadasTerrestre.pdf}
 
+
+\[\vec{\mu}_{s}=\left[\cos\left(\delta\right)\cos\left(\omega\right)\right]\cdot\vec{\mu}_{ec}+\left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\sin\left(\delta\right)\cdot\vec{\mu}_{p}\]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Duración del día}
 
-  \begin{center}
-    \includegraphics[scale=0.6]{../Figuras/DuracionDia}
-    \par\end{center}
+\begin{frame}[label=sec-1-2-3]{Ejes locales}
+\includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra2.pdf}
 
-
+\[\vec{\mu}_{s}=\left[\cos\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{h}+\left[\sin\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{\bot}+\cos\left(\theta_{z}\right)\cdot\vec{\mu}_{c}\]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Hora oficial}
 
-  \begin{itemize}
-  \item \textbf{La hora oficial} es una medida del tiempo
-    \textbf{ligada a un meridiano} que sirve de referencia para una
-    zona determinada.
-  \item La hora oficial de la España peninsular se rija por el huso
-    horario de Centroeuropa. Este huso horario está situado en
-    $15\degree\mathrm{E}$.
-  \end{itemize}
+
+\begin{frame}[label=sec-1-2-4]{Ejes locales}
+\includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasLocal.pdf}
+
+\[\vec{\mu}_{s}=\left[\cos\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{h}+\left[\sin\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{\bot}+\cos\left(\theta_{z}\right)\cdot\vec{\mu}_{c}\]
 \end{frame}
 
-\begin{frame}
-  \frametitle{Hora oficial}
-  \begin{itemize}
-  \item \textbf{Corrección}: $\Delta\lambda=\lambda_{L}-\lambda_{H}$,
-    con $\lambda_{L}$ la longitud local y $\lambda_{H}$ la longitud
-    del huso horario.
-  \item Longitudes \emph{positivas} al \emph{este} del meridiano de
-    Greenwich.  $\Delta\lambda$ es positiva cuando la localidad está
-    situada al este de su huso horario.
-  \item Diferencia adicional: \emph{horario de verano}.
-
-  \end{itemize}
+\begin{frame}[label=sec-1-2-5]{Relación entre sistemas de coordenadas}
+\includegraphics[width=.9\linewidth]{../figs/RelacionSistemasCoordenadas.pdf}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Tiempo solar medio}
-  \begin{itemize}
-  \item \textbf{La duración del día solar real}, definido como el
-    tiempo que transcurre entre dos pasos consecutivos del Sol por el
-    meridiano local, \textbf{varía a lo largo del año}.
-  \item El promedio anual de esta variación es nulo: \emph{día solar
-      medio}, cuya duración es constante a lo largo del año e igual al
-    valor medio de la duración del día solar real.
-  \end{itemize}
+\begin{frame}[label=sec-1-2-6]{Ejes locales y terrestres}
+\begin{align*}
+  \vec{\mu}_{s} &= \mathrm{signo}(\phi)\cdot\left[\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)\right]\cdot\vec{\mu}_{h}-\\
+  &- \left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\\
+  &+ \left[\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\right]\cdot\vec{\mu}_{c} 
+\end{align*}
+
+\alert{Latitud ($\phi$) con signo}: Positivo para Hemisferio Norte, Negativo para Hemisferio Sur.
 \end{frame}
 
-\begin{frame}
-  \frametitle{Ecuación del Tiempo}
-  $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
+\subsection{Ángulos Solares}
+\label{sec-1-3}
+
+\begin{frame}[label=sec-1-3-1]{Ecuaciones}
+\begin{itemize}
+\item Cenit solar
+\end{itemize}
+\[\cos\left(\theta_{z}\right)=\vec{\mu}_{c}\cdot\vec{\mu}_{s}=\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\]
+
+\begin{itemize}
+\item Azimut solar
+\end{itemize}
+\begin{align*}
+  \vec{\mu_{s}}\cdot\vec{\mu}_{\bot} &=-\sin\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
+  \vec{\mu_{s}}\cdot\vec{\mu}_{h} &=\mathrm{signo}(\phi)\cdot\cos\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
+  \cos\left(\psi_{s}\right) &= \mathrm{signo}(\phi)\cdot\frac{\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)}{\sin\left(\theta_{zs}\right)}\\
+  \sin(\psi_{s}) &=\frac{\cos(\delta)\sin(\omega)}{\sin(\theta_{zs})}=\frac{\cos(\delta)\sin(\omega)}{\cos(\gamma_{s})}
+\end{align*}
+\end{frame}
+
+
+\begin{frame}[label=sec-1-3-2]{Trayectoria Solar ($60\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar60N.pdf}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-1-3-3]{Trayectoria Solar ($40\degree S$)}
+\includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar40S.pdf}
+\end{frame}
+
+
+\begin{frame}[label=sec-1-3-4]{Mediodía, amanecer y anocher}
+\begin{itemize}
+\item Mediodía: \[\psi_{s}=0\Rightarrow\sin(\psi_{s})\Rightarrow\omega=0\]
+
+\item Amanecer / Anochecer:
+\[\gamma_{s}=0,\,\theta_{z}=\frac{\pi}{2}\Rightarrow\cos(\theta_{z})=0\]
+\end{itemize}
+\[\cos(\omega_{s})=-\tan(\delta)\tan(\phi)\]
+\end{frame}
+
+\begin{frame}[label=sec-1-3-5]{Duración del día}
+\includegraphics[width=.9\linewidth]{../figs/DuracionDia.pdf}
+\end{frame}
+
+\begin{frame}[label=sec-1-3-6]{Cálculo Ángulos Solares}
+\begin{itemize}
+\item Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para el:
+
+\begin{itemize}
+\item Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N
+
+\item Día del Año: 340, 2 horas después del amanecer, Latitud: 15S
+\end{itemize}
+
+\item Duración del día 261 del año en las latitudes 10N, 40N, 70N, 10S,
+40S, 70S.
+
+\item Altura solar en el mediodía del día 25 del año en las latitudes 10N,
+40N, 10S, 40S.
+\end{itemize}
+\end{frame}
+
+\subsection{Hora solar y oficial}
+\label{sec-1-4}
+\begin{frame}[label=sec-1-4-1]{Hora oficial}
+\begin{itemize}
+\item \alert{La hora oficial} es una medida del tiempo \alert{ligada a un meridiano}
+   que sirve de referencia para una zona determinada.
+
+\item La hora oficial de la España peninsular se rija por el huso horario
+de Centroeuropa. Este huso horario está situado en
+$15\degree\mathrm{E}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-4-2]{Hora oficial}
+\begin{itemize}
+\item \alert{Corrección}: $\Delta\lambda=\lambda_{L}-\lambda_{H}$, con
+$\lambda_{L}$ la longitud local y $\lambda_{H}$ la longitud del huso
+horario.
+
+\item Longitudes \emph{positivas} al \emph{este} del meridiano de Greenwich.
+$\Delta\lambda$ es positiva cuando la localidad está situada al este
+de su huso horario.
+
+\item Diferencia adicional: \emph{horario de verano}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-4-3]{Tiempo solar medio}
+\begin{itemize}
+\item \alert{La duración del día solar real}, definido como el tiempo que
+transcurre entre dos pasos consecutivos del Sol por el meridiano
+local, \alert{varía a lo largo del año}.
+
+\item El promedio anual de esta variación es nulo: \emph{día solar medio}, cuya
+duración es constante a lo largo del año e igual al valor medio de la
+duración del día solar real.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-4-4]{Ecuación del Tiempo}
+$\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
       M+3.5884\right)\right)$
 
-  \begin{centering}
-    \includegraphics[scale=0.65]{../Figuras/EoT}
-    \par\end{centering}
-
+\includegraphics[width=.9\linewidth]{../figs/EoT.pdf}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Ejemplo de cálculo}
-  \begin{block}{}
-    \[
-    \omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
-  \end{block}
-  \begin{itemize}
-  \item<1> Calculemos la hora solar real correspondiente al día 23 de
-    Abril de 2010 a las 12 de la mañana, hora oficial de la ciudad de
-    A Coruña, Galicia.
-  \item<2> Esta localidad está contenida en el meridiano de longitud
-    $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso
-    horario GMT+1.
-  \item<3> Por tanto $\lambda_{L}=-8.38\degree$,
-    $\lambda_{H}=15\degree$ y $\Delta\lambda=-23.38\degree$.
-  \item<4> En España se aplica el horario de verano y este día está
-    incluido en el período afectado, $\mathrm{AO}=1$.
-  \item<5> Por último, para este día
-    $\mathrm{EoT=\SI{1.78}{\minute}}$.
-  \item<6> Así $\omega=-37.94\degree$ (aproximadamente las 9 y media
-    de la mañana). El Sol culminará ($\omega=0$) cuando sean las
-    14:31, hora oficial.
-  \end{itemize}
- 
-\end{frame}
+\begin{frame}[label=sec-1-4-5]{Ejemplo de cálculo}
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
-\begin{frame}
-  \frametitle{Cálculo Ángulos Solares}
-  \begin{itemize}
-  \item Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para
-    el:
-
-    \begin{itemize}
-    \item Día del Año: 120, 2 horas después del mediodía, Latitud:
-      37.2\degree N
-    \item Día del Año: 340, 2 horas después del amanecer, Latitud:
-      15\degree S
-    \end{itemize}
-  \item Duración del día 261 del año en las latitudes 10\degree N,
-    40\degree N, 70\degree N, 10\degree S, 40\degree S, 70\degree S.
-  \item Altura solar en el mediodía del día 25 del año en las
-    latitudes 10\degree N, 40\degree N, 10\degree S, 40\degree S.
-  \end{itemize}
+\begin{itemize}
+\item Calculemos la hora solar real correspondiente al día 23 de Abril
+de 2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña,
+Galicia.
+\end{itemize}
+\pause
+\begin{itemize}
+\item Esta localidad está contenida en el meridiano de longitud
+$8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso
+horario GMT+1.
+\end{itemize}
+\pause
+\begin{itemize}
+\item Por tanto $\lambda_{L}=-8.38\degree$, $\lambda_{H}=15\degree$ y
+$\Delta\lambda=-23.38\degree$.
+\end{itemize}
+\pause
+\begin{itemize}
+\item En España se aplica el horario de verano y este día está incluido
+en el período afectado, $\mathrm{AO}=1$.
+\end{itemize}
+\pause
+\begin{itemize}
+\item Por último, para este día $\mathrm{EoT=\SI{1.78}{\minute}}$.
+\end{itemize}
+\pause
+\begin{itemize}
+\item Así $\omega=-37.94\degree$ (aproximadamente las 9 y media de la
+mañana). El Sol culminará ($\omega=0$) cuando sean las 14:31, hora
+oficial.
+\end{itemize}
 \end{frame}
 
 
 \section{Geometría de los sistemas fotovoltaicos}
+\label{sec-2}
 
+\subsection{Inclinación y Orientación}
+\label{sec-2-1}
 
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia\\
-    Sistema Estático}
-\[
-\vec{\mu}_{\beta}=[\sin(\beta)\cos(\alpha)]\cdot\vec{\mu}_{h}+[\sin(\beta)\sin(\alpha)]\cdot\vec{\mu}_{\bot}+\cos(\beta)\cdot\vec{\mu}_{c}\]
-
-  \begin{columns}%{}
-
-    \column{4cm}
-
-\includegraphics[scale=0.6]{../Figuras/AngulosSistemaEstatico.pdf}
-
-
-\column{4cm}
-
-{\small 
-\begin{align*}
-\cos(\theta_{s}) & =\mathrm{signo}(\phi)\cdot\bigl[\sin(\beta)\cos(\alpha)\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\nonumber \\
- & -\sin(\beta)\cos(\alpha)\cos\left(\phi\right)\sin\left(\delta\right)\bigr]+\nonumber \\
- & +\sin(\beta)\sin(\alpha)\cos\left(\delta\right)\sin\left(\omega\right)+\nonumber \\
- & +\cos(\beta)\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\nonumber \\
- & +\cos(\beta)\sin\left(\delta\right)\sin\left(\phi\right)\label{eq:cosThetaEstatica}\end{align*}
-}{\small \par}
-
-\end{columns}%{}
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia\\
-    Sistema Estático}
-  \begin{columns}%{}
-
-
-    \column{4cm}
-
-    Cuando $\alpha=0$
-
-    \includegraphics[scale=0.5]{../Figuras/AngulosSistemaEstatico.pdf}
-
-
-    \column{6cm}
-    \begin{align*}
-\cos(\theta_{s})& = \cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\beta-|\phi|\right)-\\ 
-& - \mathrm{signo}(\phi)\cdot\sin(\delta)\sin\left(\beta-|\phi|\right)
-          \end{align*}
-  
-
-\end{columns}%{}
-
-\end{frame}
-
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia}
-
-
-  \framesubtitle{Sistema Estático ($40\degree N$)}
-
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/cosThetaEst_40N}
-    \par\end{center}
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia}
-
-
-  \framesubtitle{Eje Horizontal N-S, generador horizontal}
-
-\[
-\vec{\mu}_{ns}=\sin(\psi_{ns})\cdot\vec{\mu}_{\bot}+\cos(\psi_{ns})\cdot\vec{\mu}_{c}\]
-
-
-\[
-\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
-
-
-\begin{center}
-  \includegraphics[scale=0.6]{../Figuras/AngulosSistemaHorizontalNS}
-  \par\end{center}
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Inclinación}
-
-
-  \framesubtitle{Eje Horizontal N-S, generador horizontal, ($40\degree
-    N$)}
-
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/BetaHoriz_40N.pdf}
-    \par\end{center}
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia}
-
-
-  \framesubtitle{Eje Horizontal N-S, generador horizontal, ($40\degree
-    N$)}
-
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/cosThetaHoriz_40N}
-    \par\end{center}
-
-
-\end{frame}
-
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia\\
-    Acimutal y Doble Eje}
-  \begin{columns}%{}
-
-
-    \column{4cm}
-    \begin{block} {Doble Eje}
+\begin{frame}[label=sec-2-1-1]{Acimutal}
+\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 
 \begin{align*}
-  \beta & =\theta_{z}\\
-  \alpha & =\psi_{s}\\
-  \cos(\theta_{s}) & =1\end{align*}
+  \beta &= cte.\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
+\end{align*}
+\end{frame}
 
 
-\end{block} {}
-\begin{block} {Acimutal}
+
+\begin{frame}[label=sec-2-1-2]{Acimutal, ($40\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/AlfaDoble_40N.pdf}
+\end{frame}
+
+\begin{frame}[label=sec-2-1-3]{Doble Eje}
+\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 
 \begin{align*}
-  \beta & =cte.\\
-  \alpha & =\psi_{s}\\
-  \cos(\theta_{s}) & =\cos\left(\beta-\theta_{z}\right)\end{align*}
-
-
-\end{block}
-
-\column{8cm}
-
-\includegraphics[scale=0.6]{../Figuras/Sombra2X.pdf}
-
-\end{columns}%{}
-
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
 \end{frame}
 
 
-\begin{frame}[plain]
-  \frametitle{Ángulo de Inclinación}
-
-
-  \framesubtitle{Doble Eje, ($40\degree N$)}
-
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/BetaDoble_40N.pdf}
-    \par\end{center}
-
-
+\begin{frame}[label=sec-2-1-4]{Doble Eje, ($40\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/BetaDoble_40N.pdf}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Ángulo de Orientación}
 
 
-  \framesubtitle{Acimutal, ($40\degree N$)}
+\subsection{Ángulo de Incidencia}
+\label{sec-2-2}
 
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/AlfaDoble_40N}
-    \par\end{center}
+\begin{frame}[label=sec-2-2-1]{Sistema Estático}
+\begin{itemize}
+\item Vector de posición
+\end{itemize}
+\[\vec{\mu}_{\beta}=[\sin(\beta)\cos(\alpha)]\cdot\vec{\mu}_{h}+[\sin(\beta)\sin(\alpha)]\cdot\vec{\mu}_{\bot}+\cos(\beta)\cdot\vec{\mu}_{c}\]
 
-
+\includegraphics[width=.9\linewidth]{../figs/AngulosSistemaEstatico.pdf}
 \end{frame}
 
-\begin{frame}[plain]
-  \frametitle{Ángulo de Incidencia}
+\begin{frame}[label=sec-2-2-2]{Sistema Estático}
+\begin{itemize}
+\item Ángulo de Incidencia
+\end{itemize}
+\begin{align*}
+\cos(\theta_{s}) &= \mathrm{signo}(\phi)\cdot\bigl[\sin(\beta)\cos(\alpha)\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\\
+ &- \sin(\beta)\cos(\alpha)\cos\left(\phi\right)\sin\left(\delta\right)\bigr]+\\
+ &+ \sin(\beta)\sin(\alpha)\cos\left(\delta\right)\sin\left(\omega\right)+ \\
+ &+ \cos(\beta)\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\\
+ &+ \cos(\beta)\sin\left(\delta\right)\sin\left(\phi\right)
+\end{align*}
 
-
-  \framesubtitle{Acimutal, ($40\degree N$)}
-
-  \begin{center}
-    \includegraphics[scale=0.5]{../Figuras/cosThetaAzimutal_40N}
-    \par\end{center}
-
-
+\includegraphics[height=0.4\textheight]{../figs/AngulosSistemaEstatico.pdf}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Cálculo de ángulo de incidencia}
-  \begin{description}
-  \item [{Para:}]~
 
+\begin{frame}[label=sec-2-2-3]{Sistema Estático}
+Cuando $\alpha=0$
+\begin{align*}
+\cos(\theta_{s}) &= \cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\beta-|\phi|\right)-\\ 
+&- \mathrm{signo}(\phi)\cdot\sin(\delta)\sin\left(\beta-|\phi|\right)
+\end{align*}
 
-    Un sistema estático orientado al Sur y con inclinación de
-    30\degree {};
-
-    Un sistema de seguimiento horizontal N-S;
-
-    Un sistema de seguimiento acimutal con inclinación a 35\degree {};
-
-    Un sistema de seguimiento a doble eje,
-
-  \item [{Calcular}] el ángulo de incidencia para el:
-
-
-    Día del Año: 120, 2 horas después del mediodía, Latitud:
-    37.2\degree {}N;
-
-    Día del Año: 340, 2 horas después del amanecer, Latitud: 15\degree
-    {}S;
-
-  \end{description}
-
+\includegraphics[height=0.6\textheight]{../figs/AngulosSistemaEstatico.pdf}
 \end{frame}
 
+
+\begin{frame}[label=sec-2-2-4]{Sistema Estático}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
+\includegraphics[width=.9\linewidth]{../figs/cosThetaEst_40N.pdf}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-2-2-5]{Eje Horizontal N-S, generador horizontal}
+\begin{itemize}
+\item Vector de posición
+\end{itemize}
+
+\[\vec{\mu}_{ns}=\sin(\psi_{ns})\cdot\vec{\mu}_{\bot}+\cos(\psi_{ns})\cdot\vec{\mu}_{c}\]
+
+\includegraphics[height=0.6\textheight]{../figs/AngulosSistemaHorizontalNS.pdf}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-2-2-6]{Eje Horizontal N-S, generador horizontal}
+\begin{itemize}
+\item Ángulo de Incidencia
+\end{itemize}
+
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+\includegraphics[height=0.6\textheight]{../figs/AngulosSistemaHorizontalNS.pdf}
+\end{frame}
+
+
+\begin{frame}[label=sec-2-2-7]{Eje Horizontal N-S, generador horizontal, ($40\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/BetaHoriz_40N.pdf}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-2-2-8]{Eje Horizontal N-S, generador horizontal, ($40\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/cosThetaHoriz_40N.pdf}
+\end{frame}
+
+
+\begin{frame}[label=sec-2-2-9]{Acimutal, ($40\degree N$)}
+\includegraphics[width=.9\linewidth]{../figs/cosThetaAzimutal_40N.pdf}
+\end{frame}
+
+
+\begin{frame}[label=sec-2-2-10]{Cálculo de ángulo de incidencia}
+\begin{description}
+\item[{Para:}] \begin{itemize}
+\item Un sistema estático orientado al Sur y con inclinación de 30;
+
+\item Un sistema de seguimiento horizontal N-S;
+
+\item Un sistema de seguimiento acimutal con inclinación a 35;
+
+\item Un sistema de seguimiento a doble eje,
+\end{itemize}
+
+\item[{Calcular}] el ángulo de incidencia para el:
+
+\begin{itemize}
+\item Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N;
+
+\item Día del Año: 340, 2 horas después del amanecer, Latitud: 15S;
+\end{itemize}
+\end{description}
+\end{frame}
+% Emacs 24.3.1 (Org mode 8.2.7c)
 \end{document}
