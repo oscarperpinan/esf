@@ -48,95 +48,100 @@ Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Li
    :PROPERTIES:
    :HTML_CONTAINER_CLASS: row
    :END:
-*** Introducción
-    :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
-    :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
-    [[file:ESF.pdf#chapter.1][Capítulo]]
+
 *** Geometría solar
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.2][Capítulo]] 
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:GeometriaSolar.pdf][Presentación]]
+
 *** Radiación solar
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.3][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:RadiacionSolar.pdf][Presentación]]
+
+
 *** La célula solar
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.4][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button    
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button    
     [[file:Celula.pdf][Presentación]]
+
 *** Asociación de dispositivos fotovoltaicos
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.5][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ModuloyGenerador.pdf][Presentación]]
+
 *** Sistemas fotovoltaicos de conexión a red
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.6][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFCR_ConceptosGenerales.pdf][Conceptos Generales]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFCR_Diseno.pdf][Diseño]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFCR_ProductividadSombras.pdf][Productividad y Sombras]]
+
 
 *** Sistemas fotovoltaicos autónomos
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.7][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFA_Componentes.pdf][Componentes]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFA_Diseno.pdf][Diseño]]
+
 *** Sistemas fotovoltaicos de bombeo
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.8][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFB_Componentes.pdf][Componentes]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFB_Diseno.pdf][Diseño]]
+
 
 *** Seguridad eléctrica en sistemas fotovoltaicos
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.9][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:SFCR_Seguridad.pdf][Presentación]]
+
 
 *** Tiempo de retorno energético
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#chapter.10][Capítulo]]
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:EPBT.pdf][Presentación]]
+
 
 ** Ejercicios
    :PROPERTIES:
@@ -144,15 +149,15 @@ Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Li
    :END:
 *** Geometría y radiación solar
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#appendix.Alph2][Capítulo]]
 *** Diseño de sistemas
     :PROPERTIES:
-    :HTML_CONTAINER_CLASS: col-md-4
+    :HTML_CONTAINER_CLASS: col-md-6
     :END:
-    #+ATTR_HTML: :class btn btn-info btn-sm :role button
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
     [[file:ESF.pdf#appendix.Alph3][Capítulo]]
 
 
@@ -161,4 +166,4 @@ Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Li
    :HTML_CONTAINER_CLASS: footer container
    :END:
 
-   2014 Oscar Perpiñán Lamigueiro.
+   2015 [[http://oscarperpinan.github.io][Oscar Perpiñán Lamigueiro]]
