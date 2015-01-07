@@ -1,40 +1,7 @@
 #+TITLE: Radiación Solar
-#+AUTHOR:    Oscar Perpiñán Lamigueiro (UPM)
-#+EMAIL:     oscar.perpinan@upm.es
-#+DATE:      
-#+DESCRIPTION:
-#+KEYWORDS:
-#+LANGUAGE:  es
-#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
-#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
-#+EXPORT_SELECT_TAGS: export
-#+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
-#+XSLT:
-#+startup: beamer
-#+LaTeX_CLASS: beamer
-#+LATEX_CLASS_OPTIONS: [xcolor={usenames,svgnames,dvipsnames}]
-#+LATEX_HEADER: \usepackage{gensymb}
-#+LATEX_HEADER: \usepackage{amsmath}
-#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
-#+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
-#+LATEX_HEADER: \lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {º}{{\textordmasculine}}1}
-#+LATEX_HEADER: \usepackage[emulate=units]{siunitx}
-#+LATEX_HEADER: \sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
-#+LATEX_HEADER: \newunit{\wattpeak}{Wp}
-#+LATEX_HEADER: \newunit{\watthour}{Wh}
-#+LATEX_HEADER: \newunit{\amperehour}{Ah}
-#+LATEX_HEADER: \usepackage{mathpazo}
-#+LATEX_HEADER: \usefonttheme{serif}
-#+LATEX_HEADER: \usecolortheme{rose}  
-#+LATEX_HEADER: \usetheme[hideothersubsections]{Goettingen}
-#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue, breaklinks=true}
-#+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
-#+LATEX_HEADER: \bibliographystyle{plain}
 
-
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
 
 * Naturaleza de la radiación solar
 
@@ -79,7 +46,7 @@
 | Mes   | Ene | Feb | Mar | Abr | May | Jun |
 |-------+-----+-----+-----+-----+-----+-----|
 | $d_n$ |  17 |  45 |  74 | 105 | 135 | 161 |
-|-------+-----+-----+-----+-----+-----+-----|
+
 | Mes   | Jul | Ago | Sep | Oct | Nov | Dic |
 |-------+-----+-----+-----+-----+-----+-----|
 | $d_n$ | 199 | 230 | 261 | 292 | 322 | 347 |
@@ -423,11 +390,13 @@ R_{ef}(\beta,\alpha) & = & R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limp
 
 
 
-*** Comparación Eje Horizontal - Estática
+*** Comparación entre Sistemas
 
 [[../figs/compSystems.pdf]]
 
-[[../figs/compSystemsG0.pdf]]
+*** Comparación entre Sistemas
+
+[[../figs/compSystemsG0.png]]
 
 * Aplicación a Sistemas estáticos
 
@@ -742,6 +711,12 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 
 ** Fuentes de Datos: Estaciones Terrestres
 
+*** Wiki con recursos
+
+**** 
+https://github.com/oscarperpinan/mds/wiki
+
+
 *** Baseline Surface Radiation Network
 
 **** http://www.bsrn.awi.de/
@@ -825,8 +800,16 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 - [[http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp][Meteogalicia]]  
 - [[http://meteo.navarra.es/estaciones/mapadeestaciones.cfm][MeteoNavarra]]
 - [[http://www.meteo.cat/xema/AppJava/SeleccioPerComarca.do][Cataluña]]
+- [[http://www.euskalmet.euskadi.net/s07-5853x/es/meteorologia/lectur.apl?e%3D5][MeteoEuskadi]]
+- [[http://www.juntadeandalucia.es/medioambiente/servtc5/WebClima/?lr%3Dlang_es][Andalucía]]
 
 ** Fuentes de Datos: Satélite
+
+*** Wiki con recursos
+
+**** 
+https://github.com/oscarperpinan/mds/wiki
+
 
 *** SSE-NASA
 **** Surface meteorology and Solar Energy (SSE)
@@ -1068,6 +1051,7 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 \]
 #+END_LaTeX
 
+**** 
 Por tanto, una forma de *reducir la incertidumbre* es realizar la
 *medida en repetidas ocasiones*.
 

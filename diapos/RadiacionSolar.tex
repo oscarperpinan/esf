@@ -1,4 +1,4 @@
-% Created 2015-01-04 dom 11:23
+% Created 2015-01-07 mié 09:07
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,25 +18,23 @@
 \tolerance=1000
 \usepackage{color}
 \usepackage{listings}
+\usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
-\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
-\lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {º}{{\textordmasculine}}1}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
 \sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
-\usepackage{mathpazo}
-\usefonttheme{serif}
-\usecolortheme{rose}
-\usetheme[hideothersubsections]{Goettingen}
-\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue, breaklinks=true}
-\bibliographystyle{plain}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
-\usetheme{default}
-\author{Oscar Perpiñán Lamigueiro (UPM)}
+\usetheme[hideothersubsections]{Goettingen}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
 \date{}
 \title{Radiación Solar}
 \hypersetup{
@@ -46,8 +44,6 @@
 \begin{document}
 
 \maketitle
-
-
 
 \section{Naturaleza de la radiación solar}
 \label{sec-1}
@@ -106,7 +102,11 @@ doce días promedio.
 Mes & Ene & Feb & Mar & Abr & May & Jun\\
 \hline
 $d_n$ & 17 & 45 & 74 & 105 & 135 & 161\\
-\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
 Mes & Jul & Ago & Sep & Oct & Nov & Dic\\
 \hline
 $d_n$ & 199 & 230 & 261 & 292 & 322 & 347\\
@@ -480,10 +480,12 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label=sec-4-1-4]{Comparación Eje Horizontal - Estática}
+\begin{frame}[label=sec-4-1-4]{Comparación entre Sistemas}
 \includegraphics[width=.9\linewidth]{../figs/compSystems.pdf}
+\end{frame}
 
-\includegraphics[width=.9\linewidth]{../figs/compSystemsG0.pdf}
+\begin{frame}[label=sec-4-1-5]{Comparación entre Sistemas}
+\includegraphics[width=.9\linewidth]{../figs/compSystemsG0.png}
 \end{frame}
 
 \section{Aplicación a Sistemas estáticos}
@@ -879,7 +881,14 @@ determinada interpolando en la LUT}.
 \subsection{Fuentes de Datos: Estaciones Terrestres}
 \label{sec-6-5}
 
-\begin{frame}[label=sec-6-5-1]{Baseline Surface Radiation Network}
+\begin{frame}[label=sec-6-5-1]{Wiki con recursos}
+\begin{block}{}
+\url{https://github.com/oscarperpinan/mds/wiki}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[label=sec-6-5-2]{Baseline Surface Radiation Network}
 \begin{block}{\url{http://www.bsrn.awi.de/}}
 \begin{itemize}
 \item BSRN provides near-continuous, long-term, in situ-observed,
@@ -894,7 +903,7 @@ globally diverse sites.
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-6-5-2]{Baseline Surface Radiation Network}
+\begin{frame}[label=sec-6-5-3]{Baseline Surface Radiation Network}
 \begin{itemize}
 \item Validation and confirmation of satellite and computer model
 estimates.
@@ -904,7 +913,7 @@ estimates.
 \end{frame}
 
 
-\begin{frame}[label=sec-6-5-3]{Measurement and Instrumentation Data Center NREL}
+\begin{frame}[label=sec-6-5-4]{Measurement and Instrumentation Data Center NREL}
 \begin{block}{\url{http://www.nrel.gov/midc/}}
 Radiación global, directa y difusa (y otras variables) con muestreo de
   1 min en diversas localidades de EEUU.
@@ -915,7 +924,7 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-6-5-4]{MAGRAMA-SIAR}
+\begin{frame}[label=sec-6-5-5]{MAGRAMA-SIAR}
 \begin{block}{\url{http://eportal.magrama.gob.es/websiar/Inicio.aspx}}
 \begin{itemize}
 \item El Sistema de Información Agroclimática para el Regadío (SiAR)
@@ -933,7 +942,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-6-5-5]{MAGRAMA-SIAR}
+\begin{frame}[label=sec-6-5-6]{MAGRAMA-SIAR}
 \begin{block}{Sensores}
 \begin{itemize}
 \item Temperatura y Humedad
@@ -950,7 +959,7 @@ las zonas de riego.
 \end{frame}
 
 
-\begin{frame}[label=sec-6-5-6]{AEMET}
+\begin{frame}[label=sec-6-5-7]{AEMET}
 \begin{block}{\href{http://www.aemet.es/es/eltiempo/observacion/radiacion}{Radiación}}
 \begin{itemize}
 \item Alrededor de 30 estaciones en todo el territorio.
@@ -967,18 +976,27 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-6-5-7]{Redes de Comunidades Autónomas}
+\begin{frame}[label=sec-6-5-8]{Redes de Comunidades Autónomas}
 \begin{itemize}
 \item \href{http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp}{Meteogalicia}
 \item \href{http://meteo.navarra.es/estaciones/mapadeestaciones.cfm}{MeteoNavarra}
 \item \href{http://www.meteo.cat/xema/AppJava/SeleccioPerComarca.do}{Cataluña}
+\item \href{http://www.euskalmet.euskadi.net/s07-5853x/es/meteorologia/lectur.apl?e\%3D5}{MeteoEuskadi}
+\item \href{http://www.juntadeandalucia.es/medioambiente/servtc5/WebClima/?lr\%3Dlang_es}{Andalucía}
 \end{itemize}
 \end{frame}
 
 \subsection{Fuentes de Datos: Satélite}
 \label{sec-6-6}
 
-\begin{frame}[label=sec-6-6-1]{SSE-NASA}
+\begin{frame}[label=sec-6-6-1]{Wiki con recursos}
+\begin{block}{}
+\url{https://github.com/oscarperpinan/mds/wiki}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[label=sec-6-6-2]{SSE-NASA}
 \begin{block}{Surface meteorology and Solar Energy (SSE)}
 \begin{itemize}
 \item 200 satellite-derived meteorology and solar energy parameters
@@ -990,7 +1008,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-6-6-2]{EUMETSAT - SAF}
+\begin{frame}[label=sec-6-6-3]{EUMETSAT - SAF}
 \begin{itemize}
 \item \alert{\href{http://www.eumetsat.int}{EUMETSAT}} is the European operational satellite agency for monitoring
 weather, climate and the environment.
@@ -1003,7 +1021,7 @@ services.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-6-6-3]{SAFs}
+\begin{frame}[label=sec-6-6-4]{SAFs}
 \begin{itemize}
 \item \href{http://www.cmsaf.eu/bvbw/appmanager/bvbw/cmsafInternet}{SAF on Climate Monitoring (CM SAF)}: provision of satellite-derived geophysical parameter data sets suitable for \alert{climate monitoring}
 
@@ -1025,7 +1043,7 @@ cover and and fire-related products.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-6-6-4]{SAFs: Radiación}
+\begin{frame}[label=sec-6-6-5]{SAFs: Radiación}
 \begin{itemize}
 \item \alert{CM SAF}: Surface incoming shortwave radiation (\href{http://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=RAD_MVIRI_V001}{SIS})
 
@@ -1037,7 +1055,7 @@ cover and and fire-related products.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-6-6-5]{ADRASE - CIEMAT}
+\begin{frame}[label=sec-6-6-6]{ADRASE - CIEMAT}
 \begin{block}{\url{http://adrase.es}}
 \begin{itemize}
 \item Radiación solar media mensual, resolución aproximada de 5x5 km.
@@ -1248,8 +1266,10 @@ variable aleatoria (que es una suma de variables aleatorias)
 \sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}
 \]
 
+\begin{block}{}
 Por tanto, una forma de \alert{reducir la incertidumbre} es realizar la
 \alert{medida en repetidas ocasiones}.
+\end{block}
 \end{frame}
 
 
