@@ -1,0 +1,698 @@
+* Definiciones
+
+*** Contacto Directo e Indirecto
+
+-  Contacto Directo: :: contacto de personas o animales con partes
+   activas de los materiales y equipos
+
+-  Contacto Indirecto: :: contacto de personas o animales con partes que
+   se han puesto bajo tensión como resultado de un fallo de aislamiento.
+
+-  Partes Activas: :: Conductores y piezas conductoras bajo tensión en
+   servicio normal. Incluyen el conductor neutro o compensador y las
+   partes a ellos conectadas.
+
+*** Masa y Tierra
+
+-  Masa: :: Conjunto de las partes metálicas de un aparato que, en
+   condiciones normales, están aisladas de las partes activas.
+
+-  Tierra: :: Masa conductora de la tierra en la que el potencial
+   eléctrico en cada punto se toma, convencionalmente, igual a cero.
+
+-  Toma de tierra: :: Electrodo, o conjunto de electrodos, en contacto
+   con el suelo y que asegura la conexión eléctrica con el mismo.
+
+*** Clases de materiales
+
+-  Material de clase 0: :: Material en el cual la protección contra el
+   choque eléctrico se basa en el aislamiento principal; lo que implica
+   que no existe ninguna disposición prevista para la conexión de las
+   partes activas accesibles, si las hay, a un conductor de protección
+   que forme parte del cableado fijo de la instalación. La protección en
+   caso de defecto en el aislamiento principal depende del entorno.
+
+*** Clases de materiales
+
+-  Material de clase I: :: la protección contra el choque eléctrico no
+   se basa únicamente en el aislamiento principal, sino que comporta una
+   medida de seguridad complementaria en forma de medios de conexión de
+   las partes conductoras accesibles a un conductor de protección puesto
+   a tierra, que forma parte del cableado fijo de la instalación, de
+   forma tal que las partes conductoras accesibles no puedan presentar
+   tensiones peligrosas.
+
+*** Clases de materiales
+
+-  Material de clase II: :: la protección comporta medidas de seguridad
+   complementarias, tales como el doble aislamiento o aislamiento
+   reforzado. Estas medidas no suponen la utilización de puesta a tierra
+   para la protección y no dependen de las condiciones de la
+   instalación. Este material debe estar alimentado por cables con doble
+   aislamiento o con aislamiento reforzado.
+
+-  Material de clase III: :: la protección no se basa en la alimentación
+   a muy baja tensión y en el cual no se producen tensiones superiores a
+   50 V en c.a. ó a 75V en c.c.
+
+*** Tensión de contacto
+
+-  Tensión de contacto: :: Tensión que aparece entre partes accesibles
+   simultáneamente, al ocurrir un fallo de aislamiento. Por convenio
+   este término solo se utiliza en relación con la protección contra
+   contactos indirectos.\\
+   En ciertos casos el valor de la tensión de contacto puede resultar
+   influido notablemente por la impedancia que presenta la persona en
+   contacto con esas partes.
+
+*** Tensión de defecto
+
+-  Tensión de defecto: :: Tensión que aparece a causa de un defecto de
+   aislamiento, entre dos masas, entre una masa y un elemento conductor,
+   o entre una masa y una toma de tierra de referencia, es decir, un
+   punto en el que el potencial no se modifica al quedar la masa en
+   tensión.
+
+*** Esquemas de conexión a tierra
+
+-  Primera letra: :: conexión de alimentación y tierra
+
+   -  T= :: conexión directa de un punto de alimentación a tierra.
+
+   -  I= :: aislamiento de todas las partes activas respecto a tierra
+
+-  Segunda letra: :: conexión de masas con tierra
+
+   -  T= :: masas conectadas directamente a tierra, independientemente
+      de conexión de alimentación
+
+   -  N= :: masas conectadas directamente a punto de alimentación puesto
+      a tierra (en alterna, normalmente el neutro)
+
+*** Esquemas de conexión a tierra
+
+-  TT: :: en alterna, neutro puesto a tierra y masas a tierra, pero de
+   forma independiente.\\
+   Instalaciones receptoras en una red de distribución pública de BT.
+
+-  TN: :: en alterna, neutro puesto a tierra, y masas conectadas al
+   neutro (directamente o a través de un conductor de protección).
+
+-  IT: :: todos los conductores activos aislados de tierra, y masas
+   conectadas a tierra.\\
+   Esquema habitual en zona del generador FV en SFCR europeos.
+
+*** Esquemas de conexión a tierra
+
+En un sistema fotovoltaico es de uso común que el esquema de tierra sea
+*IT en la zona del generador fotovoltaico* y *TT a partir de la salida
+del inversor*.
+
+* Protección de las personas
+
+** Efectos de la corriente eléctrica
+
+*** Intensidad y tiempo de contacto
+
+-  Hasta 10 mA no genera efectos peligrosos (calambres).
+
+-  Por encima de 500 mA puede producir fibrilación muscular.
+
+-  La *intensidad* que circula *depende de la tensión de contacto y la
+   resistencia expuesta*.
+
+   -  Reducir tensión.
+
+   -  Aumentar resistencia (guantes, calzado, aislamiento del suelo)
+
+[plain]
+
+*** Intensidad y tiempo de contacto
+
+[[../Figuras/Figuras_Externas/CurvaIntensidadContactoTiempo]]
+
+*** Trayectoria de la corriente
+
+-  La trayectoria se realiza siguiendo la ruta más corta o la de menor
+   resistencia.
+
+-  Los efectos son más graves si en la trayectoria se encuentran organos
+   vitales.
+
+-  Además, los efectos dependen de la edad, el sexo, el estado físico,
+   la fatiga, el miedo...
+
+*** Resistencia del cuerpo
+
+-  No es homogénea: cada parte del cuerpo presenta valores diferentes.
+
+-  No es estable con el tiempo: depende de la duración del contacto y de
+   la tensión aplicada (disminuye con la tensión!).
+
+-  Depende del estado de la piel, sudoración, estado físico, superficie
+   de contacto, presión.
+
+*** Frecuencia eléctrica
+
+-  Continua:
+
+   -  Umbral de percepción: 2 mA
+
+   -  Umbral control muscular: 75 mA
+
+   -  Menos peligrosa que alterna convencional. Puede producir
+      electrolisis de la sangre.
+
+-  Alterna 50 Hz:
+
+   -  Umbral de percepción: 0.5 mA
+
+   -  Umbral de control muscular: 15 mA
+
+-  Alterna 10 kHz:
+
+   -  Umbral de percepción: 5 mA
+
+   -  Umbral de control muscular: 75 mA
+
+   -  Debido al efecto pelicular, los efectos son menores que la alterna
+      convencional (la corriente circula por la piel, sin atravesar
+      organos internos).
+
+*** Tensión y corriente de seguridad
+
+-  Se establecen dos condiciones: *emplazamientos secos o húmedos*
+   (instalaciones de interior); *emplazamientos mojados* (instalaciones
+   en intemperie).
+
+-  Se define como tensión de seguridad la tensión de contacto máxima
+   admisible durante al menos cinco segundos. Para emplazamientos secos
+   es de 120 Vcc y 50 Vca; para *emplazamientos mojados es de 60 Vcc y
+   24 Vca*.
+
+-  *La corriente máxima admisible se fija en 30 mA para AC y 100 mA para
+   CC*.
+
+** Contacto Directo
+
+*** Contacto Directo TT/TN
+
+[t]
+
+[[../Figuras/ContactoDirectoTT]]
+
+[[../Figuras/ContactoDirectoTN]]
+
+[[../Figuras/ContactoDirectoTT_simple]]
+
+$$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
+
+*** Contacto Directo IT
+
+[[../Figuras/ContactoDirectoIT_Capacidad]]
+
+$$I_{f}\leq100\, mA\Longrightarrow R_{iso}\geq10\cdot V_{ocG}-R_{H}$$
+
+Se necesitan tensiones de generador superiores a los $\SI{1000}{\volt}$
+para producir dolor, y tensiones superiores a los $\SI{3000}{\volt}$
+para que exista riesgo por fibrilación.
+
+*** REBT: Contactos Directos
+
+Según la ITC-BT-24 las protecciones a utilizar para proteger frente a
+contactos directos deben estar *basadas en evitar que una persona pueda
+entrar en contacto con las partes activas* de la instalación, e incluye
+una protección complementaria cuando las anteriores no consiguen su
+objetivo:
+
+-  Protección por *aislamiento de las partes activas*
+
+-  Protección por medio de *barreras o envolventes*
+
+-  Protección por medio de *obstáculos*
+
+-  Protección por puesta *fuera de alcance* por alejamiento
+
+-  Protección complementaria por *dispositivos de corriente
+   diferencial*-residual
+
+** Contacto Indirecto
+
+*** Contacto Indirecto TT
+
+[t]
+
+[[../Figuras/ContactoIndirectoTT]]
+
+[[../Figuras/ContactoIndirectoTT_simple]]
+
+$$V_{c}\simeq I_{scG}\cdot R_{tp}$$
+
+*** Contacto Indirecto TN
+
+[t]
+
+[[../Figuras/ContactoIndirectoTN]]
+
+[[../Figuras/ContactoIndirectoTN_simple]]
+
+$$V_{c}=0$$
+
+$$I_{F,max}=\frac{V_{ocG}}{R_{iso}+R}$$
+
+*** Contacto Indirecto IT
+
+[t]
+
+[[../Figuras/ContactoIndirectoIT]]
+
+[[../Figuras/ContactoIndirectoIT_simple]]
+
+$$\begin{aligned}
+V_{c} & = & 0\\
+I_{F} & = & 0\end{aligned}$$
+
+*** REBT: Contactos Indirectos
+
+Esta misma ITC-BT-24 recoge las formas de protección para contactos
+indirectos:
+
+-  Protección por *corte automático de la alimentación*: cuando se
+   produce el contacto, el objetivo es evitar que la fuente eléctrica
+   siga alimentando la fuga.
+
+-  Protección por empleo de *equipos de clase II o por aislamiento
+   equivalente*, con la misión de alcanzar resistencias de aislamiento
+   de alto valor y estables en el tiempo.
+
+-  *Puesta a tierra*, como camino preferente para conducir la corriente
+   de fuga y para servir de potencial común para todos los elementos que
+   entran en contacto con ella.
+
+* Puesta a tierra
+
+*** Resistencia para cada conexión
+
+TT
+
+$$R_{tp}\leq\frac{V_{max}}{I_{f}}$$
+
+-  Ejemplo: :: Una instalación fotovoltaica se considera local mojado,
+   así que $V_{max}=\SI{60}{\volt}$. Al ser corriente continua
+   $I_{max}=\SI{100}{\milli\ampere}$. Si este generador fotovoltaico
+   utiliza el esquema TT será $R_{tp}\leq\SI{600}{\ohm}$.
+
+*** Resistencia para cada conexión
+
+IT con una falta a tierra
+
+$$R_{tp}\leq\frac{V_{max}}{I_{sc}}$$
+
+-  Ejemplo: :: Suponiendo $I_{sc}=\SI{150}{\ampere}$, la resistencia de
+   la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
+
+*** Práctica común
+
+Este segundo cálculo arroja un *valor difícilmente alcanzable* en un
+terreno con valores de resistividad eléctrica normales *dentro de
+ciertos costes razonables*. En general, se suele adoptar como requisito
+mínimo $$R_{tp}\leq\frac{V_{max}}{I_{f}}$$ aplicado a la zona de
+corriente alterna (por tanto, empleando $V_{max}=\SI{24}{\volt}$ y
+$I_{max}=\SI{30}{\milli\ampere}$).
+
+Con este primer resultado se diseña un sistema de puesta a tierra y se
+intenta mejorar para alcanzar $$R_{tp}\leq\frac{V_{max}}{I_{sc}}$$
+aplicada al generador fotovoltaico.
+
+*** Cálculo de la resistencia de tierra
+
+Resistencia de puesta a tierra
+
+Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la
+resistividad del terreno y $L$ la longitud de la pica.
+
+Resistividad en función del terreno
+
+cc Terrenos cultivables fértiles & $50\,\Omega\cdot m$Terrenos
+cultivables poco fértiles & $500\,\Omega\cdot m$Suelos pedregosos &
+$3\,000\,\Omega\cdot m$
+
+*** Cálculo de la resistencia de tierra
+
+Electrodos en paralelo
+
+Para mejorar la resistencia de toma de tierra, se utilizan varios
+electrodos interconectados, situados a distancias del orden de 10 m. De
+esta forma, *la resistencia equivalente es (aproximadamente) el paralelo
+de las individuales*.
+
+Por ejemplo, para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
+$\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10 picas de
+una longitud de 2 metros (cada una de ellas tendrá una resistencia
+$R_{t,i}=\SI{50}{\ohm}$).
+
+*** Tomas de tierra existentes
+
+A la hora de realizar puestas a tierra en lugares donde ya existen tomas
+a tierra que pertenecen a otras instalaciones eléctricas.
+
+-  Cuando corresponda a la *instalación de Baja Tensión del edificio*
+   *se utilizará la puesta a tierra existente* para conectar las masas
+   del sistema fotovoltaico.
+
+-  Cuando corresponde al *neutro de Media Tensión del transformador de
+   la compañía eléctrica* es necesario *separarse suficientemente* para
+   no interferir en su funcionamiento. Para terrenos de resistividad no
+   elevada ($\rho<\SI{100}{\ohm\meter}$), esta condición se cumple para
+   distancias superiores a $\SI{15}{\meter}$.
+
+* Protección de los equipos
+
+** Tormentas eléctricas
+
+*** Formación de las tormentas
+
+-  Dentro de los núcleos tormentosos, las cargas positivas ascienden a
+   las capas superiores de las nubes. Esta separación de cargas produce
+   un campo eléctrico.
+
+-  Por otra parte, las cargas negativas de las capas inferiores atraen
+   las cargas positivas en superficie terrestre.
+
+-  Cuando el campo eléctrico interno de la nube alcanza la ruptura del
+   aire, se producen descargas eléctricas. Esta descarga comienza en la
+   nube con un trazador descendente hacia la superficie terrestre.
+
+*** Encuentro entre trazadores
+
+-  Cuando el trazador descendente se acerca a una distancia de entre 10
+   a 100 m de la tierra, se generan diversos trazadores ascendentes
+   desde la superficie en busca del trazador descendente.
+
+-  Aquel trazador ascendente que conecta con el descendente cierra la
+   descarga y determina el lugar del impacto.
+
+*** Encuentro entre trazadores
+
+[[../Figuras/Figuras_Externas/FormacionTormenta]]
+
+*** Influencia de las condiciones locales
+
+-  La descarga está determinada principalmente por el campo eléctrico
+   interno de la nube, con una menor influencia debida a las condiciones
+   de la superficie terrestre.
+
+-  Cuando el trazador se encuentra a una distancia de entre 10 a 100
+   metros, las condiciones locales suponen una mayor influencia.
+
+-  Las construcciones metálicas de mayor altura (antenas) o superficie
+   (instalaciones fotovoltaicas) favorecen la formación de trazadores
+   ascendentes que conecten con el descendente.
+
+*** Influencia de los sistemas fotovoltaicos
+
+Por tanto,* las instalaciones fotovoltaicas no aumentan la probabilidad
+de descargas locales* (determinadas por las nubes), pero una vez que se
+producen, son lugares con mayor probabilidad de impacto.
+
+*** Descarga y campo magnético
+
+[c]
+
+Una descarga eléctrica supone una corriente de gran valor en un lapso de
+tiempo muy corto.
+
+Esta corriente produce una inducción magnética a su alrededor, también
+de caracter variable.
+
+Un flujo magnético variable produce una fuerza electromotriz entre los
+extremos del area atravesada.
+
+[[../Figuras/SobretensionInducida]]
+
+** Protecciones
+
+*** Factores de influencia
+
+Esta diferencia de potencial depende de:
+
+-  *Valor de la inducción magnética* (depende de la tormenta).
+
+-  *Distancia* de la descarga al sistema (depende principalmente de la
+   tormenta).
+
+-  *Area efectiva del sistema* (depende del diseñador y del instalador).
+
+*** Area y cableado
+
+[[../Figuras/Figuras_Externas/BucleCableadoOptimo]]
+
+*** Protección externa
+
+Un sistema de protección externa contra el rayo se compone de:
+
+-  Terminal aéreo (punta)
+
+-  Conductor(es) de bajada (interconectados)
+
+-  Puesta a tierra.
+
+*** Protección externa
+
+[[../Figuras/Figuras_Externas/AreaProteccionPararrayos]]
+
+*** Protección externa
+
+-  Se debe calcular una *distancia de seguridad* entre la bajada del
+   pararrayos y las instalaciones metálicas cercanas.
+
+-  Se asume que una distancia mayor a 1 metro es superior a la distancia
+   de seguridad.
+
+-  *Si la distancia es inferior a la de seguridad*, el sistema de puesta
+   a tierra de la protección externa y la estructura metálica deben
+   *interconectarse* para evitar la existencia de descargas entre
+   conductores.
+
+-  *Si la distancia es superior a la de seguridad*, los sistemas de
+   puesta a tierra deben ser *independientes*.
+
+*** Protecciones internas
+
+-  *Todas las masas deben estar conectadas a un sistema de puesta a
+   tierra*. En general, la estructura de soporte se conecta directamente
+   a tierra, pero no el marco de los módulos.
+
+-  En la entrada/salida de cada elemento a proteger se instalan
+   *supresores de tensión (varistores)* entre conductores activos y
+   tierra.
+
+-  Es importante tener en cuenta que cuando un varistor actúa, realiza
+   un cortocircuito entre sus conexiones.
+
+[plain]
+
+*** Protecciones Internas
+
+[c]
+
+[[../Fotos/CajaProteccionesPhotocampa]]
+
+[[../Fotos/CajaForumDestruida]]
+
+* Resumen de protecciones
+
+*** Diagrama Unifilar
+
+[[../Figuras/Figuras_Externas/UnifilarCR1]]
+
+** Circuito DC
+
+*** Tres niveles de protección
+
+Todo el sistema de protección para sistemas IT se puede concebir en tres
+niveles:
+
+-  Nivel 1: Refuerzo del aislamiento de las partes activas.
+
+-  Nivel 2: Sistema de detección de aislamiento.
+
+-  Nivel 3: Puesta a tierra.
+
+*** Nivel 1: Refuerzo del aislamiento de las partes activas.
+
+-  Configuración flotante del generador: :: se imposibilitan los
+   accidentes por la aparición de contactos indirectos de primer
+   contacto.
+
+-  Cableado con aislamiento de protección: :: Estos aislamientos
+   refuerzan la protección contra contactos indirectos.
+
+-  Aislamiento galvánico AC-DC: :: Mediante transformadores de devanados
+   independientes en los inversores se imposibilita el cierre de
+   corriente de fallo a través del inversor.
+
+*** Nivel 2: Sistema de detección de aislamiento.
+
+-  Vigilante de aislamiento: :: Este elemento genera una señal de baja
+   frecuencia (2 a 5 Hz) para evitar las fugas capacitivas del cableado,
+   y que inyecta en un polo activo midiendo la corriente de retorno, y
+   por tanto, la resistencia de aislamiento.
+
+-  En caso de pérdida de aislamiento, :: el vigilante ordena el disparo
+   de los interruptores aislando el campo fotovoltaico afectado. La
+   orden provoca la desconexión del inversor, el cortocircuito del campo
+   y la puesta a tierra del mismo.
+
+*** Nivel 3: Protección en caso de fallo de los niveles 1 y 2:
+
+-  En caso de fallo de los niveles anteriores :: aún queda la protección
+   proporcionada por la puesta a tierra directa de todas las masas de la
+   planta. Gracias a ella se limitara la tensión que con respecto a
+   tierra puedan adquirir las masas en caso de derivación.
+
+*** Cortocircuitos
+
+-  El *cortocircuito* es un punto de trabajo *no peligroso para el
+   generador fotovoltaico*.
+
+-  El cortocircuito puede, sin embargo, ser *perjudicial para el
+   inversor*. Como medio de protección se incluyen fusibles de tipo gG
+   normalizados según EN 60269 en cada polo.
+
+-  Para las personas es *peligrosa la realización o eliminación de un
+   cortocircuito franco en el campo generador*, por la posibilidad de
+   que se establezca un arco eléctrico. Es recomendable la *conducción
+   separada* del positivo y del negativo para evitar cortocircuitos por
+   pérdida de aislamiento.
+
+*** Fusibles
+
+-  El *fusible por rama* sirve principalmente como *elemento de
+   seccionamiento* (facilita las tareas de mantenimiento). Debe elegirse
+   mediante:
+
+   $$\begin{aligned}
+   I_{B} & < & I_{n}<I_{z}\\
+   I_{2} & < & 1.45\cdot I_{z}\end{aligned}$$
+
+   \\
+   siendo $I_{B}$ la intensidad de diseño de la línea, $I_{n}$ la
+   intensidad nominal del dispositivo de protección, e $I_{z}$ es la
+   intensidad admisible por el conductor e $I_{2}$ la intensidad que
+   asegura efectivamente el funcionamiento del dispositivo de
+   protección.
+
+-  Suele utilizarse $I_{n}\geq1.25\cdot I_{scG}$ . Para fusibles,
+   normalmente $I_{2}=1.6\cdot I_{n}$
+
+*** Fusibles
+
+-  En las instalaciones eléctricas convencionales es frecuente el empleo
+   de fusibles (y otros elementos de protección) en cascada con poder de
+   corte creciente en dirección al punto de conexión a red.
+
+-  Esta práctica se basa en que, en la red convencional, la corriente de
+   cortocircuito es sustancialmente superior a la de operación.
+
+*** Fusibles
+
+-  Sin embargo, su traslación directa a los sistemas fotovoltaicos
+   carece de sentido dada la similitud entre ambas corrientes.
+
+-  Aunque puede defenderse su utilidad al permitir el seccionamiento
+   parcial del generador debe tenerse en cuenta que esta funcionalidad
+   la ofrece el portafusibles y no el fusible mismo.
+
+*** Sobretensiones
+
+-  Se protegerá la entrada CC del inversor mediante *varistores*
+   (dispositivos bipolares de protección clase II), válidos para la
+   mayoría de equipos conectados a la red.
+
+-  El dispositivo tendrá una tensión de operación marcada por el diseño
+   del sistema concreto, rango definido entre la tensión de serie para
+   la menor tensión en el punto de máxima potencia y la mayor tensión de
+   circuito abierto.
+
+** Circuito AC
+
+*** Cortocircuitos y sobrecargas
+
+Según el RD 1663-2000 es necesario incluir un* interruptor general
+manual*, que será un interruptor magnetotérmico omnipolar.
+
+Este interruptor, que se ubica en el cuadro de contadores de la
+instalación fotovoltaica, será *accesible sólo a la empresa
+distribuidora*, con objeto de poder realizar la desconexión manual, que
+permita la realización, de forma segura, de labores de mantenimiento en
+la red de la compañía eléctrica.
+
+*** Cortocircuitos y sobrecargas
+
+-  Esta inaccesibilidad obliga a introducir un *segundo magnetotérmico
+   omnipolar* en la instalación, de menor intensidad nominal, que será
+   el que realmente proteja a la instalación AC de las sobrecargas y
+   cortocircuitos.
+
+-  Este segundo magnetotérmico actuará antes que el interruptor general
+   manual, salvo cortocircuitos de cierta importancia provenientes de la
+   red de la compañía.
+
+-  Asimismo, con el fin de dar cierta independencia a las líneas propias
+   de cada inversor, se utilizará un magnetotérmico de menor corriente
+   asignada para cada inversor.
+
+*** Cortocircuitos y sobrecargas
+
+Se utilizarán *magnetotérmicos tipo C*, los utilizados cuando no existen
+corrientes de arranque de consumo elevadas, cumpliendo:
+
+$$\begin{aligned}
+I_{B} & < & I_{n}<I_{z}\\
+I_{2} & < & 1.45\cdot I_{z}\end{aligned}$$
+
+Los interruptores magnetotérmicos normalizados cumplen
+$I_{2}=1.45\cdot I_{n}$.
+
+*** Interruptor diferencial
+
+-  Un interruptor diferencial está basado en un toroide que enlaza a
+   todos los conductores. Si existe una corriente de defecto, la
+   corriente en cada conductor es diferente. Según la sensibilidad del
+   interruptor, cortará el circuito a partir de un umbral de corriente.
+
+-  Al estar basado en la ley de Faraday (fuerza electromotriz creada un
+   por un flujo magnético variable), *no funciona en circuitos DC*.
+
+*** Interruptor diferencial
+
+-  En redes de distribución pública la conexión es TT. La corriente de
+   fallo cerrará el circuito a través de la puesta a tierra del neutro
+   del centro de transformación. Por tanto, el diferencial *no* protege
+   el tramo comprendido entre él y el centro de transformación.
+
+[[../Figuras/InterruptorDiferencial]]
+
+*** Interruptor diferencial
+
+-  La instalación contará con diferencial de 30 mA de sensibilidad en la
+   parte CA, para proteger de derivaciones en este circuito.
+
+-  Con el fin de que sólo actúe por fallos a tierra, será de una
+   corriente asignada superior a la del magnetotérmico de protección.
+
+*** Puesta a tierra
+
+-  Según RD 1663/2000, en que se fijan las condiciones técnicas para la
+   conexión de instalaciones fotovoltaicas a la red, *la puesta a
+   tierra* se realizará de forma que *no altere la de la compañía
+   eléctrica distribuidora*, con el fin de no transmitir defectos a la
+   misma.
+
+-  Asimismo, *las masas de la instalación fotovoltaica estarán
+   conectadas a una tierra independiente de la del neutro* de la empresa
+   distribuidora de acuerdo con el Reglamento Electrotécnico para Baja
+   Tensión.
+
+
