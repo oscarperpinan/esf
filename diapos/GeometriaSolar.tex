@@ -1,4 +1,4 @@
-% Created 2015-01-07 mié 11:53
+% Created 2015-01-14 mié 13:57
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -40,7 +40,7 @@
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
-  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
+  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
 \begin{document}
 
 \maketitle
@@ -386,43 +386,71 @@ oficial.
 \section{Geometría de los sistemas fotovoltaicos}
 \label{sec-2}
 
-\subsection{Inclinación y Orientación}
+\subsection{Sistemas Estáticos y de Seguimiento}
 \label{sec-2-1}
+\begin{frame}[label=sec-2-1-1]{Sistemas estáticos}
+\includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
+\end{frame}
 
-\begin{frame}[label=sec-2-1-1]{Acimutal}
-\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
+\begin{frame}[label=sec-2-1-2]{Sistemas con seguimiento}
+\begin{itemize}
+\item \alert{Fundamento:}
 
-\begin{align*}
-  \beta &= cte.\\
-  \alpha &= \psi_{s}\\
-  \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
-\end{align*}
+\begin{itemize}
+\item Radiación incidente aumenta al seguir al sol
+
+\item Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+\end{itemize}
+
+\item Las diferentes técnicas de seguimiento son un compromiso entre un
+apuntamiento perfecto y sistemas estructurales más económicos y
+mejores aprovechamientos del terreno.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-2-1-3]{Algunos tipos de seguimiento solar}
+\begin{itemize}
+\item \alert{Doble eje}
+
+\begin{itemize}
+\item Apuntamiento \guillemotleft{}perfecto\guillemotright{}
+
+\item Mejor productividad, peor ocupación de terreno.
+\end{itemize}
+
+\item \alert{Seguimento acimutal}
+
+\begin{itemize}
+\item Sacrifica un movimiento (inclinación del generador) para conseguir
+sistemas más económicos.
+\end{itemize}
+
+\item \alert{Seguimiento horizontal con eje Norte-Sur}
+
+\begin{itemize}
+\item Sencillez y estabilidad estructural (el eje es horizontal y
+paralelo al terreno, con tantos puntos de apoyo como se consideren
+necesarios),
+
+\item Facilidad de motorización,
+
+\item Buen aprovechamiento del terreno.
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 
-
-\begin{frame}[label=sec-2-1-2]{Acimutal, ($40\degree N$)}
-\includegraphics[width=.9\linewidth]{../figs/AlfaDoble_40N.pdf}
-\end{frame}
-
-\begin{frame}[label=sec-2-1-3]{Doble Eje}
-\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
-
-\begin{align*}
-  \beta &= \theta_{z}\\
-  \alpha &= \psi_{s}\\
-  \cos(\theta_{s}) &= 1
-\end{align*}
+\begin{frame}[label=sec-2-1-4]{Seguidor de eje horizontal N-S}
+\includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{frame}
 
 
-\begin{frame}[label=sec-2-1-4]{Doble Eje, ($40\degree N$)}
-\includegraphics[width=.9\linewidth]{../figs/BetaDoble_40N.pdf}
+\begin{frame}[label=sec-2-1-5]{Seguidor de doble eje}
+\includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{frame}
 
 
-
-\subsection{Ángulo de Incidencia}
+\subsection{Ángulos}
 \label{sec-2-2}
 
 \begin{frame}[label=sec-2-2-1]{Sistema Estático}
@@ -461,7 +489,7 @@ Cuando $\alpha=0$
 \end{frame}
 
 
-\begin{frame}[label=sec-2-2-4]{Sistema Estático}
+\begin{frame}[label=sec-2-2-4]{Ángulo de Incidencia de Sistema Estático}
 \begin{itemize}
 \item $40\degree N$
 \end{itemize}
@@ -494,23 +522,76 @@ Cuando $\alpha=0$
 \end{frame}
 
 
-\begin{frame}[label=sec-2-2-7]{Eje Horizontal N-S, generador horizontal, ($40\degree N$)}
+\begin{frame}[label=sec-2-2-7]{Inclinación de Eje Horizontal N-S}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
 \includegraphics[width=.9\linewidth]{../figs/BetaHoriz_40N.pdf}
 \end{frame}
 
 
 
-\begin{frame}[label=sec-2-2-8]{Eje Horizontal N-S, generador horizontal, ($40\degree N$)}
+\begin{frame}[label=sec-2-2-8]{Ángulo de Incidencia de Eje Horizontal N-S}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
 \includegraphics[width=.9\linewidth]{../figs/cosThetaHoriz_40N.pdf}
 \end{frame}
 
 
-\begin{frame}[label=sec-2-2-9]{Acimutal, ($40\degree N$)}
+\begin{frame}[label=sec-2-2-9]{Acimutal}
+\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
+
+\begin{align*}
+  \beta &= cte.\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-2-2-10]{Orientación de un seguidor acimutal}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
+\includegraphics[width=.9\linewidth]{../figs/AlfaDoble_40N.pdf}
+\end{frame}
+
+\begin{frame}[label=sec-2-2-11]{Ángulo de Incidencia en Acimutal}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
 \includegraphics[width=.9\linewidth]{../figs/cosThetaAzimutal_40N.pdf}
 \end{frame}
 
 
-\begin{frame}[label=sec-2-2-10]{Cálculo de ángulo de incidencia}
+\begin{frame}[label=sec-2-2-12]{Doble Eje}
+\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
+
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+\end{frame}
+
+
+\begin{frame}[label=sec-2-2-13]{Inclinación de un seguidor de Doble Eje}
+\begin{itemize}
+\item $40\degree N$
+\end{itemize}
+
+\includegraphics[width=.9\linewidth]{../figs/BetaDoble_40N.pdf}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-2-2-14]{Ejercicio: cálculo de ángulo de incidencia}
 \begin{description}
 \item[{Para:}] \begin{itemize}
 \item Un sistema estático orientado al Sur y con inclinación de 30;
@@ -531,5 +612,5 @@ Cuando $\alpha=0$
 \end{itemize}
 \end{description}
 \end{frame}
-% Emacs 24.3.1 (Org mode 8.2.7c)
+% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

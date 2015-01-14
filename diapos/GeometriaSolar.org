@@ -284,44 +284,58 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
 
 * Geometría de los sistemas fotovoltaicos
 
-** Inclinación y Orientación
+** Sistemas Estáticos y de Seguimiento
+*** Sistemas estáticos
 
-*** Acimutal 
-[[../figs/Sombra2X.pdf]]
+[[../figs/EstructuraEstaticaSuelo.jpg]]
 
-#+BEGIN_LaTeX
-\begin{align*}
-  \beta &= cte.\\
-  \alpha &= \psi_{s}\\
-  \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
-\end{align*}
-#+END_LaTeX
+*** Sistemas con seguimiento
+
+-  *Fundamento:*
+
+   -  Radiación incidente aumenta al seguir al sol
+
+   -  Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+
+-  Las diferentes técnicas de seguimiento son un compromiso entre un
+   apuntamiento perfecto y sistemas estructurales más económicos y
+   mejores aprovechamientos del terreno.
+
+*** Algunos tipos de seguimiento solar
+
+-  *Doble eje*
+
+   -  Apuntamiento "perfecto"
+
+   -  Mejor productividad, peor ocupación de terreno.
+
+-  *Seguimento acimutal*
+
+   -  Sacrifica un movimiento (inclinación del generador) para conseguir
+      sistemas más económicos.
+
+-  *Seguimiento horizontal con eje Norte-Sur*
+
+   -  Sencillez y estabilidad estructural (el eje es horizontal y
+      paralelo al terreno, con tantos puntos de apoyo como se consideren
+      necesarios),
+
+   -  Facilidad de motorización,
+
+   -  Buen aprovechamiento del terreno.
 
 
+*** Seguidor de eje horizontal N-S
 
-*** Acimutal, ($40\degree N$)
-
-[[../figs/AlfaDoble_40N.pdf]]
-
-*** Doble Eje
-[[../figs/Sombra2X.pdf]]
-
-#+BEGIN_LaTeX
-\begin{align*}
-  \beta &= \theta_{z}\\
-  \alpha &= \psi_{s}\\
-  \cos(\theta_{s}) &= 1
-\end{align*}
-#+END_LaTeX
+[[../figs/SeguidorEjeHorizontal.jpg]]
 
 
-*** Doble Eje, ($40\degree N$)
+*** Seguidor de doble eje
 
-[[../figs/BetaDoble_40N.pdf]]
+[[../figs/SeguidorReocin.jpg]]
 
 
-
-** Ángulo de Incidencia
+** Ángulos
 
 *** Sistema Estático
 - Vector de posición
@@ -358,7 +372,7 @@ Cuando $\alpha=0$
 [[../figs/AngulosSistemaEstatico.pdf]]
 
 
-*** Sistema Estático 
+*** Ángulo de Incidencia de Sistema Estático 
 
 - $40\degree N$
 
@@ -388,23 +402,66 @@ Cuando $\alpha=0$
 [[../figs/AngulosSistemaHorizontalNS.pdf]]
 
 
-*** Eje Horizontal N-S, generador horizontal, ($40\degree N$)
+*** Inclinación de Eje Horizontal N-S
+- $40\degree N$
 
 [[../figs/BetaHoriz_40N.pdf]]
 
 
 
-*** Eje Horizontal N-S, generador horizontal, ($40\degree N$)
+*** Ángulo de Incidencia de Eje Horizontal N-S
+- $40\degree N$
 
 [[../figs/cosThetaHoriz_40N.pdf]]
 
 
-*** Acimutal, ($40\degree N$)
+*** Acimutal 
+[[../figs/Sombra2X.pdf]]
+
+#+BEGIN_LaTeX
+\begin{align*}
+  \beta &= cte.\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
+\end{align*}
+#+END_LaTeX
+
+
+
+*** Orientación de un seguidor acimutal
+
+- $40\degree N$
+
+[[../figs/AlfaDoble_40N.pdf]]
+
+*** Ángulo de Incidencia en Acimutal
+
+- $40\degree N$
 
 [[../figs/cosThetaAzimutal_40N.pdf]]
 
 
-*** Cálculo de ángulo de incidencia
+*** Doble Eje
+[[../figs/Sombra2X.pdf]]
+
+#+BEGIN_LaTeX
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+#+END_LaTeX
+
+
+*** Inclinación de un seguidor de Doble Eje
+
+- $40\degree N$
+
+[[../figs/BetaDoble_40N.pdf]]
+
+
+
+*** Ejercicio: cálculo de ángulo de incidencia
 
 -  Para: ::
 
