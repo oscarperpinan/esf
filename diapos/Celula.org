@@ -78,6 +78,11 @@ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa e
 -  Para evitar la recombinación *es preciso dirigir el movimiento* de electrones y huecos mediante un campo eléctrico.
 
 ** Dopaje de semiconductores
+*** Bandas de energía
+# http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
+[[../figs/Band_filling_diagram.png]]
+
+
 *** Tipo n
 
 [[../figs/Semiconductor_tipo_n.png]]
@@ -179,20 +184,15 @@ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa e
 
 *** Polarización en directa
 
--  *Para conseguir corriente es necesario romper el equilibrio alcanzado
-   y reducir el valor del potencial termodinámico*.
+-  *Para conseguir corriente es necesario romper el equilibrio alcanzado y reducir el valor del potencial termodinámico*.
 
--  *Diferencia de potencial* con lado p positivo respecto al lado n:
-   unión p-n está *polarizada en directa*.
+-  *Diferencia de potencial* con lado p positivo respecto al lado n: unión p-n está *polarizada en directa*.
 
--  En estas condiciones *se reduce la barrera de potencial* y, en
-   consecuencia el valor del campo eléctrico de la zona de unión.
+-  En estas condiciones *se reduce la barrera de potencial* y, en consecuencia el valor del campo eléctrico de la zona de unión.
 
--  La *corriente de arrastre disminuye* y *no puede compensar la
-   corriente de difusión*.
+-  La *corriente de arrastre disminuye* y *no puede compensar la corriente de difusión*.
 
--  Aparecen dos corrientes en sentidos contrarios pero de partículas de
-   diferente signo: *corriente total aprovechable.*
+-  Aparecen dos corrientes en sentidos contrarios pero de partículas de diferente signo: *corriente total aprovechable.*
 
 -  Convenio: la corriente entra por zona p y sale por zona n.
 
@@ -215,16 +215,14 @@ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa e
 - El dispositivo electrónico basado en una unión p-n se denomina diodo.
 
 - La zona p del diodo es el ánodo y la zona n es el cátodo.
-
+#+ATTR_LATEX: :width 0.5\textwidth
 [[../figs/Diodo.pdf]]
 
 *** Ecuación del Diodo
 
-$$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde $I_{0}$ es la
-corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada
-al diodo y $m$ el factor de idealidad del diodo.
+- $$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde $I_{0}$ es la corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada al diodo y $m$ el factor de idealidad del diodo.
 
-Para una temperatura ambiente de $\SI{300}{\kelvin}$,
+- Para una temperatura ambiente de $\SI{300}{\kelvin}$,
 $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
 $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 (en grados Kelvin), y $\mathrm{e}$ es la carga del electrón.
@@ -232,6 +230,7 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 *** 
 
 [[../figs/EcuacionDiodo.pdf]]
+
 
 * Unión P-N iluminada
 
@@ -268,16 +267,13 @@ $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 
    -  Si $\lambda>1100\, nm$ (infrarrojo) el fotón no interactúa.
 
--  Los* fotones más energéticos *(baja longitud de onda) son *absorbidos
-   en la superficie*.
+-  Los *fotones más energéticos* (baja longitud de onda) son *absorbidos en la superficie*.
 
--  Los *fotones menos energéticos* (alta longitud de onda) penetran en
-   el interior hasta *romper un enlace*.
+-  Los *fotones menos energéticos* (alta longitud de onda) penetran en el interior hasta *romper un enlace*.
 
 *** Absorción de luz y generación de portadores
 
--  Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser
-   absorbidos: *pérdidas de no-absorción*
+-  Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser absorbidos: *pérdidas de no-absorción*
 
 -  Fotones con $E_{f}>E_{g}$:
 
@@ -292,7 +288,13 @@ $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 
 $$I_{L}<e\cdot A\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E$$
 
+
 * Funcionamiento de una célula solar
+
+*** 
+
+[[../figs/CelulaSolar.pdf]]
+
 
 ** Curva IV y Puntos Característicos
 *** Característica I-V de iluminación
@@ -350,71 +352,24 @@ $$P_{mpp}=FF\cdot I_{sc}\cdot V_{oc}$$
 
 - Eficiencia
 
-$$\eta=\frac{I_{mpp}\cdot V_{mpp}}{P_{L}}$$
+$$\eta = \frac{I_{mpp}\cdot V_{mpp}}{P_{L}}$$
+$$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 
-*** Eficiencia de células
-#+ATTR_LATEX: :width 1\textwidth
+*** Eficiencia de células					    
+    :PROPERTIES:
+    :BEAMER_opt: plain
+    :END:
+
+#+ATTR_LATEX: :width 1.2\textwidth
 [[../figs/efficiency_chart_nrel.jpg]]
 
 [[http://www.nrel.gov/ncpv/]]
 
-** Circuito equivalente de la célula
-
-*** Circuito equivalente
-[[../figs/CelulaSolar.pdf]]
-
-$$I=I_{L}-I_{0}\cdot[\exp(\frac{V+I\cdot R_{s}}{m\cdot
-  V_{T}})-1]-\frac{V+I\cdot R_{s}}{R_{p}}$$
-
-- Ecuación simplificada
-
-$$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
-
-*** Resistencia Serie
-
--  Resistencia de contactos metálicos con el semiconductor
-
--  Resistencia de capas semiconductoras
-
--  Resistencia de malla de metalización
-
-[[../figs/InfluenciaRs_IV.pdf]]
-
-*** Resistencia Serie
-
--  Resistencia de contactos metálicos con el semiconductor
-
--  Resistencia de capas semiconductoras
-
--  Resistencia de malla de metalización
-
-[[../figs/InfluenciaRs_Potencia.pdf]]
-
-*** Resistencia paralelo
-
--  Fugas de corriente en bordes de célula
-
--  Cortocircuitos metálicos
-
--  Caminos de difusión en fronteras de grano
-
-[[../figs/InfluenciaRsh_IV.pdf]]
-
-*** Resistencia paralelo
-
--  Fugas de corriente en bordes de célula
-
--  Cortocircuitos metálicos
-
--  Caminos de difusión en fronteras de grano
-
-[[../figs/InfluenciaRsh_Potencia.pdf]]
-
 ** Influencia de Temperatura y Radiación
-
+   
 *** Radiación
 
-   -  Fotocorriente proporcional a intensidad de radiación
+   -  *Fotocorriente proporcional a intensidad de radiación*
 
    -  Relación logarítmica con tensión de circuito abierto:
       $V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)$
@@ -429,11 +384,9 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 
 *** Temperatura 
 
-   -  Se estrecha el salto entre banda de valencia y conducción: aumenta
-      /ligeramente/ la fotocorriente
+   -  Se estrecha el salto entre banda de valencia y conducción: aumenta /ligeramente/ la fotocorriente
 
-   -  Disminuye la tensión de circuito
-      abierto:$dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}$
+   -  *Disminuye linealmente la tensión de circuito abierto*: $dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}$
 
    -  Disminuye el factor de forma y la eficiencia:
       $d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}$
@@ -454,6 +407,62 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 $$P_{mpp}^{*}=I_{mpp}^{*}\cdot V_{mpp}^{*}$$
 
 $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
+
+
+** Circuito equivalente de la célula
+
+*** Circuito equivalente
+[[../figs/ModeloElectricoCelulaSolar.pdf]]
+
+- Ecuación general
+
+\[I=I_{L}-I_{0}\cdot[\exp(\frac{V+I\cdot R_{s}}{m\cdot
+  V_{T}})-1]-\frac{V+I\cdot R_{s}}{R_{p}}\]
+
+- Ecuación simplificada
+
+$$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
+
+*** Resistencia Serie: Curva IV
+
+-  Resistencia de contactos metálicos con el semiconductor
+
+-  Resistencia de capas semiconductoras
+
+-  Resistencia de malla de metalización
+
+[[../figs/InfluenciaRs_IV.pdf]]
+
+*** Resistencia Serie: Curva PV
+
+-  Resistencia de contactos metálicos con el semiconductor
+
+-  Resistencia de capas semiconductoras
+
+-  Resistencia de malla de metalización
+
+[[../figs/InfluenciaRs_Potencia.pdf]]
+
+*** Resistencia paralelo: Curva IV
+
+-  Fugas de corriente en bordes de célula
+
+-  Cortocircuitos metálicos
+
+-  Caminos de difusión en fronteras de grano
+
+[[../figs/InfluenciaRsh_IV.pdf]]
+
+*** Resistencia paralelo: Curva PV
+
+-  Fugas de corriente en bordes de célula
+
+-  Cortocircuitos metálicos
+
+-  Caminos de difusión en fronteras de grano
+
+[[../figs/InfluenciaRsh_Potencia.pdf]]
+
 
 ** Cálculo del MPP
 
@@ -535,49 +544,38 @@ $V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
 
 * Fabricación
 
+*** 
+[[http://youtu.be/fZ1SC-vUe_I?t%3D31s][file:../figs/solar_cell_manufacturing_video.jpg]]
+
 *** Purificación de silicio
 
--  El silicio puede extraerse de la cuarzita obteniendo Silicio de grado
-   metalúrgico (98% pureza).
+-  El silicio puede extraerse de la cuarzita obteniendo Silicio de grado metalúrgico (98% pureza).
 
--  Para la industria de la electrónica se necesita silicio de grado
-   electronico (nivel de impureza por debajo de $10^{-10}$, 9 nueves).
+-  Para la industria de la electrónica se necesita silicio de grado electronico (nivel de impureza por debajo de $10^{-9}$, 9 nueves).
 
--  Para las células solares puede utilizarse silicio de grado solar
-   (nivel de impureza algo mayor).
+-  Para las células solares puede utilizarse silicio de grado solar (nivel de impureza algo mayor, $10^{-5}$, 5 nueves).
 
--  Al mezclar silicio con acido clorhídrico se produce triclorosilano,
-   que es destilado para eliminar impurezas.
+-  Al mezclar silicio con acido clorhídrico se produce triclorosilano, que es destilado para eliminar impurezas.
 
--  Al unir silano de cloro con hidrógeno se obtiene de vuelta silicio,
-   válido para células policristalinas (varios cristales en cada célula)
+-  Al unir silano de cloro con hidrógeno se obtiene de vuelta silicio, válido para células policristalinas (varios cristales en cada célula)
 
 *** Formación de obleas
 
--  Para obtener mayor pureza se emplea el silicio monocristalino (un
-   sólo cristal) obtenido mediante el proceso de Czochralski o similar
-   (se utiliza una semilla de cristal para crecer silicio a muy alta
-   temperatura).
+-  Para obtener mayor pureza se emplea el silicio monocristalino (un sólo cristal) obtenido mediante el proceso de Czochralski o similar (se utiliza una semilla de cristal para crecer silicio a muy alta temperatura).
 
 -  El lingote resultante debe ser cortado en obleas de $200-500\,\mu m$.
 
--  Las obleas son sometidas a limpieza para eliminar impurezas por el
-   cortado.
+-  Las obleas son sometidas a limpieza para eliminar impurezas por el cortado.
 
--  A continuación, son dopadas con Fósforo y Boro para crear la unión
-   p-n.
+-  A continuación, son dopadas con Fósforo y Boro para crear la unión p-n.
 
--  Se limpian los bordes para evitar la formación de cortocircuitos
-   entre las zonas p y n.
+-  Se limpian los bordes para evitar la formación de cortocircuitos entre las zonas p y n.
 
 *** Formación de células
 
--  Se añaden los contactos posterior (alto recubrimiento) y anterior
-   (optimización para obtener baja $R_{s}$ y poco sombreado) empleando
-   aleaciones de plata y aluminio.
+-  Se añaden los contactos posterior (alto recubrimiento) y anterior (optimización para obtener baja $R_{s}$ y poco sombreado) empleando aleaciones de plata y aluminio.
 
--  Para reducir las pérdidas por reflexión se añade una capa
-   antireflectante con (p.ej) óxido de Titanio (color azulado).
+-  Para reducir las pérdidas por reflexión se añade una capa antireflectante con (p.ej) óxido de Titanio (color azulado).
 
 -  Si es posible, se textura la superficie (creación de mini pirámides).
 
