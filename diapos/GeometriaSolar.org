@@ -1,4 +1,4 @@
-#+TITLE: Geometría Solar
+#+TITLE: Energía Solar Fotovoltaica:\\Geometría Solar
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
