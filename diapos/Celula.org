@@ -1,0 +1,584 @@
+#+TITLE: Energía Solar Fotovoltaica:\\Célula Solar
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
+
+* Teoría de Semiconductores
+
+** Modelo de bandas de energía
+
+*** Átomos aislados vs. Átomos en Sólido
+# http://commons.wikimedia.org/w/index.php?title=File%3AMetals_and_insulators%2C_quantum_difference_from_band_structure.ogv
+
+[[http://upload.wikimedia.org/wikipedia/commons/8/81/Metals_and_insulators,_quantum_difference_from_band_structure.ogv][file:../figs/Metals_and_insulators_video.jpg]]
+
+*** Átomos aislados vs. Átomos en Sólido
+
+- Supongamos una red cristalina formada por átomos.
+
+- Los *electrones de un átomo aislado* pueden existir *únicamente en determinados estados de energía*. 
+
+- A medida que disminuye la distancia interatómica comienza a observarse la *interacción mutua entre los átomos* hasta formarse un sistema electrónico único. 
+
+- Las *fuerzas de repulsión y atracción* entre los átomos encontrarán su *equilibrio* cuando los átomos estén separados por la *distancia interatómica típica del cristal* que se trate.
+
+- La separación real entre átomos en el cristal será aquella para la cual la *energía del sólido sea mínima*.
+
+*** Bandas de energía
+[[../figs/simplified_band_diagram.jpg]]
+
+*** Bandas de energía
+
+-  En un *sólido* el número de átomos es tan elevado que los niveles de energía forman *bandas continuas de energía*.
+
+-  Los *electrones* asociados a los átomos del sólido *llenan estas bandas en orden ascendente*.
+
+-  La banda de mayor energía completamente ocupada se denomina *banda de valencia* (/electrones ligados a átomos/). La siguiente banda, parcialmente ocupada o vacía, se denominada *banda de conducción* (/electrones desligados de átomos/).
+
+-  Estas bandas pueden estar separadas por otra banda de energías que corresponde a *estados no permitidos* (*banda prohibida*), o *pueden estar solapadas* permitiendo una transición fácil de una a otra.
+
+*** Bandas de energía
+# http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
+[[../figs/Band_filling_diagram.png]]
+
+*** Conductores, aislantes y semiconductores
+
+Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
+
+-  En un *conductor* la $E_{g}$ es muy baja y los electrones circulan fácilmente por la banda de conducción.
+
+-  En un *aislante* se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   ($E_{g}>\SI{5}{\electronvolt}$)
+
+-  En un *semiconductor* la $E_{g}$ es baja ($E_{g}<\SI{5}{\electronvolt}$): los electrones pueden "saltar" a la banda de conducción con un aporte energético.
+
+   -  Para el silicio $E_{g}=\SI{1.12}{\electronvolt}$.
+
+** Semiconductores
+
+*** Rotura de Enlaces
+
+-  Cuando se rompe un enlace, un electrón y un hueco quedan libres para moverse por el material (conducción intrínseca).
+
+-  La *densidad intrínseca de huecos y electrones es idéntica*. Esta densidad depende de la temperatura y de $E_{g}$.
+
+-  Esta *circulación es aleatoria*, sin una dirección predeterminada.
+
+*** Recombinación de un par electrón-hueco
+
+-  Por tanto, se producen *encuentros electrón-hueco* que restablecen un enlace con liberación de energia ($E_{g}$) en forma de calor.
+
+   -  Las impurezas del cristal favorecen la recombinación.
+
+   -  El tiempo de vida de portadores mide cuánto tarda en producirse el proceso de recombinación.
+
+   -  La longitud de difusión de portadores mide la distancia media que puede recorrer un portador antes de ser recombinado.
+
+-  Esta *conducción intrínseca* *no es aprovechable* en un circuito externo.
+
+-  Para evitar la recombinación *es preciso dirigir el movimiento* de electrones y huecos mediante un campo eléctrico.
+
+** Dopaje de semiconductores
+*** Tipo n
+
+[[../figs/Semiconductor_tipo_n.png]]
+
+*** Tipo n
+
+-  El *dopaje de semiconductores* consiste en introducir de forma
+   controlada impurezas en el cristal.
+
+-  Los átomos de* Fósforo* tienen cinco electrones de valencia (uno más
+   que el silicio).
+
+-  Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto
+   electrón no queda bien integrado en la red.
+
+-  La rotura de este enlace se produce con *baja aportación energética*
+   (menor que $E_{g}$).
+
+-  El *quinto electrón queda libre pero la carga positiva (ión $P^{+}$)
+   está ligada* a la red cristalina.
+
+-  La *densidad de electrones es superior a la de huecos*
+
+   -  Semiconductor *tipo n*.
+
+   -  El *portador mayoritario* es el *electrón*.
+
+*** Tipo p
+
+[[../figs/Semiconductor_tipo_p.png]]
+
+*** Tipo p
+
+-  Los átomos de *Boro* tienen tres electrones de valencia (uno menos
+   que el silicio).
+
+-  Al impurificar un cristal de Silicio con átomos de Boro, hay un
+   enlace sin cubrir (hueco).
+
+-  La rotura de este enlace se produce con *baja aportación energética*
+   (menor que $E_{g}$).
+
+-  El *hueco queda libre* pero la *carga negativa (ión $B^{-}$) está
+   ligada* a la red cristalina.
+
+-  La *densidad de huecos* es *superior a la de electrones*
+
+   -  Semiconductor *tipo p*.
+
+   -  El *portador mayoritario* es el *hueco*.
+
+** Unión p-n
+
+
+*** 
+
+[[../figs/Pn-junction-equilibrium.png]]
+
+*** Fundamentos
+
+-  Al *unir un semiconductor tipo p con otro tipo n, se produce un
+   desequilibrio*
+
+-  *Difusión de portadores mayoritarios*
+
+   -  Hay un movimiento de huecos desde cristal p a cristal n, quedando
+      cargado negativamente.
+
+   -  Hay un movimiento de electrones desde cristal n a cristal p,
+      quedando cargado positivamente.
+
+-  Este proceso de difusión también *desequilibra* las densidades de
+   portadores en los cristales.
+
+-  *Proceso de arrastre*: Este desequilibrio *crea un campo eléctrico*
+   (sentido del cristal n al cristal p) en contra del proceso de
+   difusión.
+
+-  El *equilibrio* se alcanza al *compensarse los movimientos de
+   difusión y de arrastre*.
+
+*** Recombinación en una unión p-n
+
+-  Los *portadores minoritarios que atraviesan la unión se recombinan*:
+
+   -  Electrones de cristal n con huecos en cristal p.
+
+   -  Huecos de cristal p con electrones en cristal n.
+
+-  Esta recombinación deja *iones cargados ligados a la red* (incapaces
+   de conducir)
+
+-  Esta recombinación se produce en *zonas cercanas a la unión* (zona de
+   carga de espacio)
+
+   -  Despoblada de portadores
+
+   -  *Los iones fijos generan un campo eléctrico de arrastre*.
+
+*** Polarización en directa
+
+-  *Para conseguir corriente es necesario romper el equilibrio alcanzado
+   y reducir el valor del potencial termodinámico*.
+
+-  *Diferencia de potencial* con lado p positivo respecto al lado n:
+   unión p-n está *polarizada en directa*.
+
+-  En estas condiciones *se reduce la barrera de potencial* y, en
+   consecuencia el valor del campo eléctrico de la zona de unión.
+
+-  La *corriente de arrastre disminuye* y *no puede compensar la
+   corriente de difusión*.
+
+-  Aparecen dos corrientes en sentidos contrarios pero de partículas de
+   diferente signo: *corriente total aprovechable.*
+
+-  Convenio: la corriente entra por zona p y sale por zona n.
+
+*** Polarización en inversa
+
+-  Si la diferencia de potencial aplicada consigue que la zona p esté a
+   menor tensión que la zona n, la unión queda *polarizada en inversa*.
+
+-  En estas condiciones *la barrera de potencial en la unión queda
+   reforzada* y el paso de portadores de una a otra zona queda aún más
+   debilitado.
+
+-  La *corriente *que atraviesa la unión en polarización inversa es de
+   *muy bajo valor*.
+
+** Diodo
+
+*** Definición
+
+- El dispositivo electrónico basado en una unión p-n se denomina diodo.
+
+- La zona p del diodo es el ánodo y la zona n es el cátodo.
+
+[[../figs/Diodo.pdf]]
+
+*** Ecuación del Diodo
+
+$$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde $I_{0}$ es la
+corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada
+al diodo y $m$ el factor de idealidad del diodo.
+
+Para una temperatura ambiente de $\SI{300}{\kelvin}$,
+$$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
+$\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
+(en grados Kelvin), y $\mathrm{e}$ es la carga del electrón.
+
+*** 
+
+[[../figs/EcuacionDiodo.pdf]]
+
+* Unión P-N iluminada
+
+*** 
+
+[[../figs/CelulaSolar.pdf]]
+
+*** Efecto fotoeléctrico
+
+-  Efecto fotoeléctrico: *los electrones se desplazan a la banda de
+   conducción por el aporte energético de fotones*
+   ($E_{f}=\frac{h\cdot c}{\lambda}$).
+
+-  Al *iluminar una unión p-n*, el *campo eléctrico* de la unión conduce
+   los portadores y *dificulta la recombinación*.
+
+-  La *fotocorriente* es ahora *aprovechable* por un circuito externo
+   (/corriente de iluminación, corriente de generación/)
+
+-  La presencia de *tensión en los terminales* de la unión (por ejemplo,
+   caída de tensión en una resistencia alimentada por la fotocorriente)*
+   favorece la recombinación* (/corriente de oscuridad o corriente de
+   diodo/).
+
+$$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
+
+*** Absorción de luz y generación de portadores
+
+-  Si el *fotón es poco energético* ($E_{f}<E_{g}$) *no interactúa con
+   el semiconductor* (como si fuese transparente)
+
+   -  Fotones en el espectro visible ($400\, nm<\lambda<700\, nm$) y
+      ultravioleta ($\lambda<400\, nm$) rompen enlaces.
+
+   -  Si $\lambda>1100\, nm$ (infrarrojo) el fotón no interactúa.
+
+-  Los* fotones más energéticos *(baja longitud de onda) son *absorbidos
+   en la superficie*.
+
+-  Los *fotones menos energéticos* (alta longitud de onda) penetran en
+   el interior hasta *romper un enlace*.
+
+*** Absorción de luz y generación de portadores
+
+-  Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser
+   absorbidos: *pérdidas de no-absorción*
+
+-  Fotones con $E_{f}>E_{g}$:
+
+   -  Debido a anchura del semiconductor y coeficiente de absorción del
+      material parte no son absorbidos: *pérdidas de transmisión*
+
+   -  Debido a diferencia de índices de refracción: *pérdidas de
+      reflexión*
+
+   -  Parte de los portadores generadores se recombinan dentro del
+      dispositivo: *pérdidas por recombinación*
+
+$$I_{L}<e\cdot A\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E$$
+
+* Funcionamiento de una célula solar
+
+** Curva IV y Puntos Característicos
+*** Característica I-V de iluminación
+
+$$I=I_{L}-I_{D}$$
+
+$$I_{D}=I_{0}\cdot\left[\exp\left(\frac{e\cdot V}{m\cdot k\cdot
+      T_{c}}\right)-1\right]$$
+
+[[../figs/CurvaIV_Ta20_G800.pdf]]
+
+*** Isc y Voc
+
+- Corriente de Cortocircuito
+
+$$I_{sc}=I(V=0)\Rightarrow I_{D}=0\Rightarrow I=I_{L}$$
+
+- Tensión de Circuito Abierto
+
+$$V_{oc}=V(I=0)\Rightarrow I_{L}=I_{D}\Rightarrow
+V_{oc}=m\cdot\frac{k\cdot
+  T_{c}}{e}\cdot\ln\left(\frac{I_{L}}{I_{0}}+1\right)$$
+
+- Ecuación general
+
+$$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
+      T_{c}}\right)\right]$$
+
+*** Punto de máxima potencia
+
+$$\frac{dP}{dV}=0$$
+
+$$\frac{d(I\cdot
+  V)}{dV}=V\cdot\frac{dI(V)}{dV}+I\cdot\frac{dV}{dV}\Rightarrow
+dP=V\cdot dI+I\cdot dV$$
+
+
+
+*** Punto de máxima potencia
+
+[[../figs/CurvaIV_Ta20_G800.pdf]]
+
+$V=V_{mpp}:\,\frac{dI}{dV}=-\frac{I}{V}$
+
+$0<V<V_{mpp}$:  $\frac{dP}{dV}>0\Rightarrow\frac{dI}{dV}>-\frac{I}{V}$
+
+$V_{mpp}<V<V_{oc}$: 
+$\frac{dP}{dV}<0\Rightarrow\frac{dI}{dV}<-\frac{I}{V}$
+
+*** Factor de forma y Eficiencia
+- Factor de Forma
+$$FF=\frac{I_{mpp}\cdot V_{mpp}}{I_{sc}\cdot V_{oc}}$$
+
+$$P_{mpp}=FF\cdot I_{sc}\cdot V_{oc}$$
+
+- Eficiencia
+
+$$\eta=\frac{I_{mpp}\cdot V_{mpp}}{P_{L}}$$
+
+*** Eficiencia de células
+#+ATTR_LATEX: :width 1\textwidth
+[[../figs/efficiency_chart_nrel.jpg]]
+
+[[http://www.nrel.gov/ncpv/]]
+
+** Circuito equivalente de la célula
+
+*** Circuito equivalente
+[[../figs/CelulaSolar.pdf]]
+
+$$I=I_{L}-I_{0}\cdot[\exp(\frac{V+I\cdot R_{s}}{m\cdot
+  V_{T}})-1]-\frac{V+I\cdot R_{s}}{R_{p}}$$
+
+- Ecuación simplificada
+
+$$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
+
+*** Resistencia Serie
+
+-  Resistencia de contactos metálicos con el semiconductor
+
+-  Resistencia de capas semiconductoras
+
+-  Resistencia de malla de metalización
+
+[[../figs/InfluenciaRs_IV.pdf]]
+
+*** Resistencia Serie
+
+-  Resistencia de contactos metálicos con el semiconductor
+
+-  Resistencia de capas semiconductoras
+
+-  Resistencia de malla de metalización
+
+[[../figs/InfluenciaRs_Potencia.pdf]]
+
+*** Resistencia paralelo
+
+-  Fugas de corriente en bordes de célula
+
+-  Cortocircuitos metálicos
+
+-  Caminos de difusión en fronteras de grano
+
+[[../figs/InfluenciaRsh_IV.pdf]]
+
+*** Resistencia paralelo
+
+-  Fugas de corriente en bordes de célula
+
+-  Cortocircuitos metálicos
+
+-  Caminos de difusión en fronteras de grano
+
+[[../figs/InfluenciaRsh_Potencia.pdf]]
+
+** Influencia de Temperatura y Radiación
+
+*** Radiación
+
+   -  Fotocorriente proporcional a intensidad de radiación
+
+   -  Relación logarítmica con tensión de circuito abierto:
+      $V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)$
+
+   -  El factor de forma aumenta ligeramente
+
+   -  La eficiencia crece de forma logarítmica hasta determinado nivel.
+
+*** Influencia de la Radiación
+
+[[../figs/CurvaIV_Ta20.pdf]]
+
+*** Temperatura 
+
+   -  Se estrecha el salto entre banda de valencia y conducción: aumenta
+      /ligeramente/ la fotocorriente
+
+   -  Disminuye la tensión de circuito
+      abierto:$dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}$
+
+   -  Disminuye el factor de forma y la eficiencia:
+      $d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}$
+
+*** Influencia de Temperatura
+
+[[../figs/CurvaIV_G800.pdf]]
+
+*** Condiciones Estándar de Medida
+
+-  Irradiancia: $G^{*}=\SI{1000}{\watt\per\meter\squared}$ con
+   incidencia normal.
+
+-  Temperatura de célula: $T_{c}^{*}=\SI{25}{\celsius}$.
+
+-  Masa de aire: $AM=1.5$
+
+$$P_{mpp}^{*}=I_{mpp}^{*}\cdot V_{mpp}^{*}$$
+
+$$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
+
+** Cálculo del MPP
+
+*** Método de J.M. Ruiz
+
+- Normalización
+
+$$\begin{aligned}
+  v & = & \frac{V}{V_{oc}}\\
+  i & = & \frac{I}{I_{sc}}\end{aligned}$$
+
+- MPP
+
+$$\begin{aligned}
+  v_{mpp} & = & \frac{V_{mpp}}{V_{oc}}\\
+  i_{mpp} & = & \frac{I_{mpp}}{I_{sc}}\\
+  p_{mpp} & = & FF\end{aligned}$$
+
+*** Método de J.M. Ruiz
+
+- Resistencia Serie y FF
+
+$$\begin{aligned}
+  r_{s} & = & \frac{R_{s}}{(V_{oc}/I_{sc})}\\
+  ff & = & v_{mpp}\cdot i_{mpp}=FF\end{aligned}$$
+
+- Tensión térmica
+
+$$\begin{aligned}
+  k_{oc} & = & \frac{V_{oc}}{V_{t}}\end{aligned}$$
+
+*** Método de J.M. Ruiz
+
+- Aproximación para MPP
+
+$$\begin{aligned}
+  i_{mpp} & = & 1-\frac{D_{M}}{k_{oc}}\\
+  v_{mpp} & = & 1-\frac{\ln(k_{oc}/D_{M})}{k_{oc}}-r_{s}\cdot i_{mpp}\end{aligned}$$
+
+$$\begin{aligned}
+  D_{M} & = & D_{M0}+2\cdot r_{s}\cdot D_{M0}^{2}\\
+  D_{M0} & = & \frac{k_{oc}-1}{k_{oc}-\ln k_{oc}}\end{aligned}$$
+
+*** Método de J.M. Ruiz
+
+- Itinerario
+
+  - Obtener los valores de $I_{sc}$ y $V_{oc}$ en las condiciones de
+    temperatura y radiación deseadas
+
+  - Obtener resistencia serie (supondremos $R_{s}=R_{s}^{*}$)
+    $$R_{s}^{*}=\frac{V_{oc}^{*}-V_{mpp}^{*}+m\cdot
+            V_{t}\cdot\ln(1-\frac{I_{mpp}^{*}}{I_{sc}^{*}})}{I_{mpp}^{*}}$$
+    donde se debe emplear el valor de $V_{t}$ para
+    $T_{c}=\SI{25}{\celsius}$.
+
+  - Calcular $r_{s}$ y $k_{oc}$, y con ellos $D_{M0}$ y $D_{M}$.
+
+  - Calcular $i_{mpp}$ y a continuación $v_{mpp}$.
+
+  - Deshacer la normalización para obtener $I_{mpp}$ y $V_{mpp}$.
+
+*** Simplificado: Factor de Forma Constante
+
+$$FF=FF^{*}$$
+
+$$\begin{aligned}
+  \frac{I_{mpp}}{I_{sc}} & = & \frac{I_{mpp}^{*}}{I_{sc}^{*}}\\
+  \frac{V_{mpp}}{V_{oc}} & = & \frac{V_{mpp}^{*}}{V_{oc}^{*}}\end{aligned}$$
+
+*** Ejercicio de Cálculo
+
+De una célula de $\SI{100}{\centi\meter\squared}$ y $I_{sc}^{*}=3\, A$, $I_{mpp}^{*}=2.7\, A$ , $V_{oc}^{*}=0.6\, V$,
+$V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
+
+-  $P_{mpp}^{*}$, $FF^{*}$, $\eta^{*}$
+
+-  $I_{mpp}$, $V_{mpp}$ cuando $T_{c}=60\celsius$ y $G=800\, W/m^{2}$.
+
+* Fabricación
+
+*** Purificación de silicio
+
+-  El silicio puede extraerse de la cuarzita obteniendo Silicio de grado
+   metalúrgico (98% pureza).
+
+-  Para la industria de la electrónica se necesita silicio de grado
+   electronico (nivel de impureza por debajo de $10^{-10}$, 9 nueves).
+
+-  Para las células solares puede utilizarse silicio de grado solar
+   (nivel de impureza algo mayor).
+
+-  Al mezclar silicio con acido clorhídrico se produce triclorosilano,
+   que es destilado para eliminar impurezas.
+
+-  Al unir silano de cloro con hidrógeno se obtiene de vuelta silicio,
+   válido para células policristalinas (varios cristales en cada célula)
+
+*** Formación de obleas
+
+-  Para obtener mayor pureza se emplea el silicio monocristalino (un
+   sólo cristal) obtenido mediante el proceso de Czochralski o similar
+   (se utiliza una semilla de cristal para crecer silicio a muy alta
+   temperatura).
+
+-  El lingote resultante debe ser cortado en obleas de $200-500\,\mu m$.
+
+-  Las obleas son sometidas a limpieza para eliminar impurezas por el
+   cortado.
+
+-  A continuación, son dopadas con Fósforo y Boro para crear la unión
+   p-n.
+
+-  Se limpian los bordes para evitar la formación de cortocircuitos
+   entre las zonas p y n.
+
+*** Formación de células
+
+-  Se añaden los contactos posterior (alto recubrimiento) y anterior
+   (optimización para obtener baja $R_{s}$ y poco sombreado) empleando
+   aleaciones de plata y aluminio.
+
+-  Para reducir las pérdidas por reflexión se añade una capa
+   antireflectante con (p.ej) óxido de Titanio (color azulado).
+
+-  Si es posible, se textura la superficie (creación de mini pirámides).
+
+
