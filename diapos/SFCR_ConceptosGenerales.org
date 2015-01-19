@@ -142,32 +142,24 @@ poder ser inyectada en la red convencional.
 
 - El diseñador debe tomar las decisiones oportunas para *aprovechar las sinergias entre edificio y sistema fotovoltaico*, reduciendo las posibles interferencias entre uno y otro.
 
+*** Integración arquitectónica
+
+- Cubierta Inclinada
+- Cubierta Plana
+- Parasol
+- Fachada Acristalada
+- Muro Cortina
+- Aparcamiento
+- ...
+
+**** 
 [[http://www.pvdatabase.org/]]
-
-*** Integración arquitectónica
-
-[[../figs/CubiertaInclinada.pdf]]
-
-[[../figs/CubiertaPlana.pdf]]
-
-*** Integración arquitectónica
-
-[[../figs/Aparcamiento.pdf]]
-
-[[../figs/Parasol.pdf]]
-
-*** Integración arquitectónica
-
-[[../figs/FachadaAcristalada.pdf]]
-
-[[../figs/MuroCortina.pdf]]
 
 *** SFCR en edificación: CTE-HE5
 
 - El CTE-HTE5 divide España en cinco zonas climáticas de acuerdo al valor medio anual de la radiación global diaria en el plano horizontal.
 
-- Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I (radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que
-Canarias y parte de Andalucía pertenecen a la zona V (radiación superior a $\SI{5}{\kWh\per\meter\squared}$) .
+- Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I (radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que Canarias y parte de Andalucía pertenecen a la zona V (radiación superior a $\SI{5}{\kWh\per\meter\squared}$) .
 
 - Este Código aboga por instalar mayor potencia en las zonas con mayor radiación.
 
@@ -187,7 +179,9 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 *** SFCR en Edificación: sistemas eléctricos
 
-- En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio. Por facilidad de instalación y mantenimiento, y por seguridad de los sistemas, es recomendable el uso de canalizaciones separadas del resto de sistemas del edificio.
+- En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio. 
+
+- Por facilidad de instalación y mantenimiento, y por seguridad de los sistemas, es recomendable el uso de canalizaciones separadas del resto de sistemas del edificio.
 
 - Sin embargo, los criterios de seguridad eléctrica aconsejan utilizar una *red de tierras común* para el edificio y el sistema fotovoltaico.
 
@@ -336,14 +330,14 @@ A grandes rasgos, los inversores pueden agruparse en tres categorías:
 
 [[../figs/InversorPV.pdf]]
 
--  *Puente inversor*:/ /realiza el troceado de la señal continua para
+-  *Puente inversor*: realiza el troceado de la señal continua para
    convertirla en alterna
 
 -  *Filtro de salida*: elimina o atenúa los armónicos no deseados
 
 -  *Transformador*: adecua el valor de tensión de salida del puente al
    de la red y proporciona aislamiento galvánico entre la parte DC y
-   AC/. /
+   AC.
 
 *** Control
 

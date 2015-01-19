@@ -1,4 +1,4 @@
-% Created 2015-01-19 lun 17:18
+% Created 2015-01-19 lun 20:27
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -218,42 +218,35 @@ necesarios),
 
 \item El diseñador debe tomar las decisiones oportunas para \alert{aprovechar las sinergias entre edificio y sistema fotovoltaico}, reduciendo las posibles interferencias entre uno y otro.
 \end{itemize}
-
-\url{http://www.pvdatabase.org/}
 \end{frame}
 
 \begin{frame}[label=sec-1-3-9]{Integración arquitectónica}
-\includegraphics[width=.9\linewidth]{../figs/CubiertaInclinada.pdf}
+\begin{itemize}
+\item Cubierta Inclinada
+\item Cubierta Plana
+\item Parasol
+\item Fachada Acristalada
+\item Muro Cortina
+\item Aparcamiento
+\item \ldots{}
+\end{itemize}
 
-\includegraphics[width=.9\linewidth]{../figs/CubiertaPlana.pdf}
+\begin{block}{}
+\url{http://www.pvdatabase.org/}
+\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-10]{Integración arquitectónica}
-\includegraphics[width=.9\linewidth]{../figs/Aparcamiento.pdf}
-
-\includegraphics[width=.9\linewidth]{../figs/Parasol.pdf}
-\end{frame}
-
-\begin{frame}[label=sec-1-3-11]{Integración arquitectónica}
-\includegraphics[width=.9\linewidth]{../figs/FachadaAcristalada.pdf}
-
-\includegraphics[width=.9\linewidth]{../figs/MuroCortina.pdf}
-\end{frame}
-
-\begin{frame}[label=sec-1-3-12]{SFCR en edificación: CTE-HE5}
+\begin{frame}[label=sec-1-3-10]{SFCR en edificación: CTE-HE5}
 \begin{itemize}
 \item El CTE-HTE5 divide España en cinco zonas climáticas de acuerdo al valor medio anual de la radiación global diaria en el plano horizontal.
 
-\item Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I (radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que
-\end{itemize}
-Canarias y parte de Andalucía pertenecen a la zona V (radiación superior a $\SI{5}{\kWh\per\meter\squared}$) .
+\item Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I (radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que Canarias y parte de Andalucía pertenecen a la zona V (radiación superior a $\SI{5}{\kWh\per\meter\squared}$) .
 
-\begin{itemize}
 \item Este Código aboga por instalar mayor potencia en las zonas con mayor radiación.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-13]{SFCR en edificación: CTE-HE5}
+\begin{frame}[label=sec-1-3-11]{SFCR en edificación: CTE-HE5}
 \begin{itemize}
 \item Potencia \alert{nominal} a instalar
 \end{itemize}
@@ -274,7 +267,9 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 \begin{frame}[label=sec-1-4-1]{SFCR en Edificación: sistemas eléctricos}
 \begin{itemize}
-\item En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio. Por facilidad de instalación y mantenimiento, y por seguridad de los sistemas, es recomendable el uso de canalizaciones separadas del resto de sistemas del edificio.
+\item En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio.
+
+\item Por facilidad de instalación y mantenimiento, y por seguridad de los sistemas, es recomendable el uso de canalizaciones separadas del resto de sistemas del edificio.
 
 \item Sin embargo, los criterios de seguridad eléctrica aconsejan utilizar una \alert{red de tierras común} para el edificio y el sistema fotovoltaico.
 \end{itemize}
@@ -462,14 +457,14 @@ realizar las funciones de búsqueda del punto de máxima potencia.
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 
 \begin{itemize}
-\item \alert{Puente inversor}:/ /realiza el troceado de la señal continua para
+\item \alert{Puente inversor}: realiza el troceado de la señal continua para
 convertirla en alterna
 
 \item \alert{Filtro de salida}: elimina o atenúa los armónicos no deseados
 
 \item \alert{Transformador}: adecua el valor de tensión de salida del puente al
 de la red y proporciona aislamiento galvánico entre la parte DC y
-AC/. /
+AC.
 \end{itemize}
 \end{frame}
 
