@@ -1,61 +1,48 @@
-* Generador Fotovoltaico
+#+TITLE: SFCR: Diseño
 
-[plain]
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
+
+* Generador Fotovoltaico
 
 *** Inclinación y Orientacion
 
 $$\beta_{opt}=3.7+0.69 \cdot \left|\phi\right|$$
 
-[[../Figuras/PorcentajeProduccionEdificios]]
-
-*** Pérdidas angulares según CTE
-
-$$\mathrm{
-  \begin{cases}
-    100\cdot[1,2\cdot10^{-4}\cdot(\beta-\phi+10)^{2}+3,5\cdot10^{-5}\cdot\alpha^{2}]
-    & 15\degree<\beta<90\degree\\
-    100\cdot[1,2\cdot10^{-4}\cdot(\beta-\phi+10)^{2}] &
-    \beta<15\degree
-  \end{cases}}$$
-
->m3cm>m3cmcc & & & & & & & & & 30 & 40 & 20 & 50
+[[../figs/PorcentajeProduccionEdificios.pdf]]
 
 *** Modulos en serie
 
 -  El inversor está diseñado para soportar una *tensión máxima en la
    entrada*. Superarla puede conllevar la avería del equipo.
 
+$$N_{s,max}:\, V_{ocG}(G=\SI{200}{\watt\per\meter\squared},\,
+T_{a}=\SI{-10}{\celsius})<V_{max,inv}$$
+
 -  Por otra parte, el algoritmo de *búsqueda del MPP* se realiza en un
    rango de tensiones limitado. Para evitar pérdidas por trabajar en un
    punto alejado del MPP, la tensión del generador debe estar dentro de
    este rango.
 
-$$N_{s,max}:\, V_{ocG}(G=\SI{200}{\watt\per\meter\squared},\,
-T_{a}=\SI{-10}{\celsius})<V_{max,inv}$$
 $$N_{s,mpp}:\, V_{mppG}(G_{stc},\,
 T_{a}=\SI{25}{\celsius})\in\left[V_{mppMIN},\,
   V_{mppMAX}\right]_{INV}$$
 
 *** Ramas en paralelo
 
-El fabricante del inversor elige los componentes para soportar una
-*corriente máxima admisible*.
+- El fabricante del inversor elige los componentes para soportar una *corriente máxima admisible*.
 
-En general, el inversor es capaz de autoprotegerse ante valores
-superiores a este umbral desplazando el punto de funcionamiento del
-generador fuera del MPP.
+- En general, el inversor es capaz de autoprotegerse ante valores superiores a este umbral desplazando el punto de funcionamiento del generador fuera del MPP.
 
-No obstante, el diseñador del sistema debe elegir el número de ramas en
-paralelo de forma que no se supere este umbral.
+- No obstante, el diseñador del sistema debe elegir el número de ramas en paralelo de forma que no se supere este umbral.
 
 $$N_{p,max}:\, I_{scG}(\SI{1000}{\watt\per\meter\squared})<I_{max,INV}$$
 
 *** Configuración del generador
 
-De los cálculos anteriores se obtiene una ventana de configuraciones del
-generador que permiten un buen acoplamiento entre inversor y generador.
-Para elegir una configuración deben tenerse en cuenta diferentes
-aspectos:
+De los cálculos anteriores se obtiene un conjunto de configuraciones del generador que permiten un buen acoplamiento entre inversor y generador. 
+
+Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
 
 -  Configuración eléctrica y ubicación física de los módulos en la
    estructura.
@@ -99,34 +86,20 @@ aspectos:
 
 *** Potencia del generador
 
--  La potencia del generador es proporcional al área del generador y al
-   *terreno ocupado *(que también influye, aunque en menor grado, en el
-   cálculo económico). Por tanto, debe tenerse en cuenta el espacio
-   disponible (o el coste que se pretende asumir por el uso de terreno).
+-  La potencia del generador es proporcional al área del generador y al *terreno ocupado* (que también influye, aunque en menor grado, en el    cálculo económico). Por tanto, debe tenerse en cuenta el espacio disponible (o el coste que se pretende asumir por el uso de terreno).
 
--  Según el *tipo de sistema* (estático, seguimiento) se debe elegir una
-   relación de potencias de generador e inversor.
+-  Según el *tipo de sistema* (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
 
 * Inversor
 
 *** Curva de eficiencia
 
-Para calcular la potencia entregada por el inversor a partir de la
-potencia suministrada por el generador fotovoltaico se empleará la curva
-de eficiencia del inversor, $\eta_{inv}$, definida como la relación
-entre la potencia suministrada a la red eléctrica, $P_{ac}$, y la
-potencia de entrada, $P_{dc}$. Esta relación puede describirse con una
-función basada en tres coeficientes y la normalización de la potencia de
-salida:
+- Eficiencia del inversor, $\eta_{inv} = P_{ac} / P_{dc}$ 
 
-$$\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}$$
-donde $p_{o}=P_{ac}/P_{inv}$, y $k_{0}^{o}$, $k_{1}^{o}$ y $k_{2}^{o}$
-son parámetros adimensionales que definen el comportamiento eléctrico
-del inversor.
+- Esta relación puede describirse con una función basada en tres coeficientes y la normalización de la potencia de salida, $p_{o}=P_{ac}/P_{inv}$: $$\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}$$
+
 
 *** Curva de eficiencia
-
-[c]
 
 $k_{0}^{o}=0.01$
 
@@ -134,46 +107,33 @@ $k_{1}^{o}=0.025$
 
 $k_{2}^{o}=0.05$
 
-[[../Figuras/CurvaInversor]]
+[[../figs/CurvaInversor.pdf]]
 
 *** Relación de potencias
 
--  Dado que la potencia entregada por el generador varía con las
-   condiciones meteorológicas, el inversor trabajará en diferentes zonas
-   de su curva de eficiencia.
+-  Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
--  Por tanto, una de las preguntas a responder es qué relación debe
-   existir entre la potencia del generador FV y el inversor.
+-  Por tanto, una de las preguntas a responder es *que relación debe existir entre la potencia del generador FV y el inversor*.
 
--  Si esta relación es alta, el inversor trabajará con frecuencia en la
-   región de alta eficiencia, pero a cambio es posible que deba limitar
-   la potencia del generador para evitar superar su umbral de corriente
-   admisible.
+ \[F_{DI} = P_{g}^{*}/P_{inv}\]
+
+-  Si esta relación es alta, el inversor trabajará con frecuencia en la región de alta eficiencia, pero a cambio es posible que deba limitar la potencia del generador para evitar superar su umbral de corriente admisible.
 
 *** Relación de potencias
 
--  En *sistemas de integración arquitectónica*, donde la orientación e
-   inclinación no son óptimas, esta probabilidad puede ser baja. Así,
-   puede considerarse necesario sobredimensionar el generador FV
-   respecto al inversor ($P_{g}^{*}/P_{inv}\in\left[1;1.4\right]$).
+-  En *sistemas de integración arquitectónica*, donde la orientación e inclinación no son óptimas, esta probabilidad puede ser baja. Así, puede considerarse necesario sobredimensionar el generador FV respecto al inversor ($P_{g}^{*}/P_{inv}\in\left[1;1.4\right]$).
 
-   -  CTE-HE5-3.2.3.2: "la potencia del inversor será como mínimo el 80%
-      de la potencia pico real del generador fotovoltaico"
+   -  CTE-HE5-3.2.3.2: "la potencia del inversor será como mínimo el 80% de la potencia pico real del generador fotovoltaico"
 
--  En *sistemas de seguimiento* esta probabilidad suele ser alta. Se
-   recomiendan inversores de potencia similar a la del generador
-   ($P_{g}^{*}/P_{inv}\in\left[1;1.2\right]$)
+-  En *sistemas de seguimiento* esta probabilidad suele ser alta. Se recomiendan inversores de potencia similar a la del generador  ($P_{g}^{*}/P_{inv}\in\left[1;1.2\right]$)
 
 *** Relación de potencias
 
-No obstante, es posible demostrar que el valor de esta relación no es
-tan crítico como *elegir un inversor con buena curva de eficiencia*.
+No obstante, es posible demostrar que el valor de esta relación no es tan crítico como *elegir un inversor con buena curva de eficiencia*.
 
 * Cableado
 
 *** Características básicas
-
-[c]
 
 -  Diseño del cableado
 
@@ -189,13 +149,12 @@ tan crítico como *elegir un inversor con buena curva de eficiencia*.
    -  Doble aislamiento
 
    -  Poliolefínas
-
-[[../Fotos/PhotocampaCableado]]
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/PhotocampaCableado.jpg]]
 
 *** Cálculo
 
-Habitualmente se descarta el criterio termico y se emplea el criterio de
-caida de tensión (RBT ITC-BT-07):
+- Habitualmente se descarta el criterio termico y se emplea el criterio de caida de tensión (RBT ITC-BT-07):
 
 $$\begin{aligned}
     S_{dc} & = & \frac{2\cdot L_{dc}\cdot I_{dc}}{56\cdot\Delta V_{dc}}\\
@@ -203,36 +162,25 @@ $$\begin{aligned}
     S_{3ac} & = & \frac{\sqrt{3}\cdot L_{3ac}\cdot
       I_{3ac}}{56\cdot\Delta V_{3ac}}\end{aligned}$$
 
-En general, se suele aceptar una caída máxima de tensión
-$\SI{1.5}{\percent}$ de la tensión nominal. Para aplicar correctamente
-este porcentaje es importante caer en la cuenta de que cada zona (DC y
-AC) tiene su propia tensión nominal.
+- En general, se suele aceptar una caída máxima de tensión $\SI{1.5}{\percent}$ de la tensión nominal. 
+
+- Para aplicar correctamente este porcentaje es importante caer en la cuenta de que *cada zona (DC y AC) tiene su propia tensión nominal*.
 
 *** Cálculo
 
-Ejemplo
+**** Ejemplo
+En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de la
+conexión a red, se deberá utilizar un cable de sección $S=\frac{\sqrt{3}\cdot100\cdot75}{56\cdot\SI{1.5}{\percent}\cdot400}=\SI{38.66}{\milli\meter\squared}$.
 
-Por ejemplo, en una instalación que conduce $\SI{75}{\ampere}$ a la
-salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de la
-conexión a red, se deberá utilizar un cable de sección
-$S=\frac{\sqrt{3}\cdot100\cdot75}{56\cdot\SI{1.5}{\percent}\cdot400}=\SI{38.66}{\milli\meter\squared}$.
+Dado que la sección de los cables está normalizada, se deberá optar por la sección inmediatamente superior, y por tanto la conexión del inversor a la red se realizará con tres cables de sección $S=\SI{50}{\milli\meter\squared}$.
 
-Dado que la sección de los cables está normalizada, se deberá optar por
-la sección inmediatamente superior, y por tanto la conexión del inversor
-a la red se realizará con tres cables de sección
-$S=\SI{50}{\milli\meter\squared}$.
+*** Intensidad máxima admisible
 
-*** Cálculo
+- Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
-Con este resultado, es necesario comprobar que la intensidad de diseño
-es inferior a la intensidad máxima admisible del cable para sus
-condiciones de servicio, según las tablas de la ITC-BT-07.
+- No obstante, las secciones que resultan del criterio de caída de tensión aplicado a los sistemas fotovoltaicos habitualmente son sobradamente capaces de conducir la corriente del sistema.
 
-No obstante, las secciones que resultan del criterio de caída de tensión
-aplicado a los sistemas fotovoltaicos habitualmente son sobradamente
-capaces de conducir la corriente del sistema.
-
-*** Cálculo
+*** Continua vs. Alterna
 
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
