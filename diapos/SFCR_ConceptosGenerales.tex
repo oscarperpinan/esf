@@ -1,4 +1,4 @@
-% Created 2015-01-19 lun 20:27
+% Created 2015-01-20 mar 00:02
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -52,11 +52,13 @@
 \label{sec-1-1}
 
 \begin{frame}[label=sec-1-1-1]{Definición de un SFCR}
+\begin{exampleblock}{}
 Un Sistema Fotovoltaico Conectado a la Red (SFCR) es un sistema cuya
 función es producir energía eléctrica en condiciones adecuadas para
 poder ser inyectada en la red convencional.
 
 \includegraphics[width=.9\linewidth]{../figs/EsquemaSFCR.pdf}
+\end{exampleblock}
 \end{frame}
 
 \subsection{Mecanismos de Retribución}
@@ -231,9 +233,9 @@ necesarios),
 \item \ldots{}
 \end{itemize}
 
-\begin{block}{}
+\begin{exampleblock}{}
 \url{http://www.pvdatabase.org/}
-\end{block}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}[label=sec-1-3-10]{SFCR en edificación: CTE-HE5}
@@ -277,8 +279,6 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 \begin{frame}[label=sec-1-4-2]{Separación entre comercialización y generación}
 \begin{itemize}
-\item El propietario de un generador fotovoltaico puede vender a una compañia eléctrica toda la energía que produce su sistema, no sólo la que le sobra (diferencia entre la producción de su sistema y el consumo de, por ejemplo, su domicilio).
-
 \item La reglamentación eléctrica española establece la separación administrativa entre la comercialización y la distribución de la energía (así, la empresa que nos vende energía eléctrica en nuestro hogar es distinta a la que compra la energía que produce el sistema que podamos tener en nuestro tejado).
 \end{itemize}
 \end{frame}
@@ -299,7 +299,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 \item Es decir, no pueden utilizarse las lecturas de dos contadores distintos (uno de venta y otro de compra) para componer una única factura.
 
-\item Este hecho, unido a la necesidad legal de conectar el sistema fotovoltaico en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc) tiene como consecuencia que en ciertos casos la legalización de un sistema fotovoltaico sea extremadamente complicada.
+\item El sistema fotovoltaico debe conectarse en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc).
 \end{itemize}
 \end{frame}
 
@@ -335,23 +335,20 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \subsection{Conceptos Generales}
 \label{sec-2-1}
 \begin{frame}[label=sec-2-1-1]{Acoplamiento a la red}
+\begin{exampleblock}{}
 La potencia suministrada por un generador fotovoltaico iluminado es de
 tensión continua, que debe ser adecuadamente acondicionada para permitir
 el funcionamiento correcto de las cargas conectadas en un sistema
 autónomo o el acoplamiento a la red eléctrica en el caso de sistemas de
 conexión a red.
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}[label=sec-2-1-2]{Definición}
 \begin{itemize}
-\item El equipo de acondicionamiento de potencia, denominado inversor
-DC/AC, realiza la conversión de continua a alterna cumpliendo con
-determinados requisitos de tensión eficaz, frecuencia, distorsión
-armónica de las ondas de tensión y corriente, rendimiento instantáneo
-y medio, seguridad eléctrica, etc.
+\item El equipo de acondicionamiento de potencia, denominado inversor DC/AC, realiza la \alert{conversión de continua a alterna cumpliendo con  determinados requisitos} de tensión eficaz, frecuencia, distorsión armónica de las ondas de tensión y corriente, rendimiento instantáneo y medio, seguridad eléctrica, etc.
 
-\item Funciona como fuente de corriente autoconmutada y sincronizada con la
-red.
+\item Funciona como fuente de corriente autoconmutada y sincronizada con la red.
 \end{itemize}
 \end{frame}
 
@@ -487,7 +484,7 @@ salida del inversor.
 \end{frame}
 
 \begin{frame}[label=sec-2-5-2]{Busqueda del Punto de Máxima Potencia}
-\includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
+\includegraphics[height=0.6\textheight]{../figs/CurvaIV_Ta20_G800.pdf}
 
 $$\begin{cases}
       \frac{dP}{dV}>0 & 0<V<V_{mpp}\\
@@ -496,7 +493,7 @@ $$\begin{cases}
 \end{frame}
 
 \begin{frame}[label=sec-2-5-3]{Busqueda del Punto de Máxima Potencia}
-\includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
+\includegraphics[height=0.6\textheight]{../figs/CurvaIV_Ta20_G800.pdf}
 
 $$\begin{cases}
       \frac{dI}{dV}>-\frac{I}{V} & 0<V<V_{mpp}\\
@@ -594,7 +591,9 @@ reactiva debe tender a cero, y por tanto disminuye la frecuencia.
 Cuando las condiciones de trabajo del generador y el consumo antes de la
 desconexión son muy cercanas, existe una ventana de no-detección.
 
-\includegraphics[width=.9\linewidth]{../figs/NDZ.pdf}
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/NDZ.pdf}
+\end{center}
 \end{frame}
 
 \begin{frame}[label=sec-2-6-5]{Estudio experimental IEA-PVPS}

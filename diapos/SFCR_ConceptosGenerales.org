@@ -9,6 +9,10 @@
 
 *** Definición de un SFCR
 
+**** 							     :B_exampleblock:
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
 Un Sistema Fotovoltaico Conectado a la Red (SFCR) es un sistema cuya
 función es producir energía eléctrica en condiciones adecuadas para
 poder ser inyectada en la red convencional.
@@ -152,7 +156,10 @@ poder ser inyectada en la red convencional.
 - Aparcamiento
 - ...
 
-**** 
+**** 							     :B_exampleblock:
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
 [[http://www.pvdatabase.org/]]
 
 *** SFCR en edificación: CTE-HE5
@@ -186,8 +193,6 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 - Sin embargo, los criterios de seguridad eléctrica aconsejan utilizar una *red de tierras común* para el edificio y el sistema fotovoltaico.
 
 *** Separación entre comercialización y generación
--  El propietario de un generador fotovoltaico puede vender a una compañia eléctrica toda la energía que produce su sistema, no sólo la que le sobra (diferencia entre la producción de su sistema y el consumo de, por ejemplo, su domicilio).
-
 -  La reglamentación eléctrica española establece la separación administrativa entre la comercialización y la distribución de la energía (así, la empresa que nos vende energía eléctrica en nuestro hogar es distinta a la que compra la energía que produce el sistema que podamos tener en nuestro tejado).
 
 *** Generación distribuida
@@ -204,7 +209,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 -  Es decir, no pueden utilizarse las lecturas de dos contadores distintos (uno de venta y otro de compra) para componer una única factura.
 
--  Este hecho, unido a la necesidad legal de conectar el sistema fotovoltaico en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc) tiene como consecuencia que en ciertos casos la legalización de un sistema fotovoltaico sea extremadamente complicada.
+-  El sistema fotovoltaico debe conectarse en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc).
 
 *** Ejemplo: suministro en MT
 
@@ -229,6 +234,10 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 ** Conceptos Generales
 *** Acoplamiento a la red
 
+**** 							     :B_exampleblock:
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
 La potencia suministrada por un generador fotovoltaico iluminado es de
 tensión continua, que debe ser adecuadamente acondicionada para permitir
 el funcionamiento correcto de las cargas conectadas en un sistema
@@ -237,14 +246,9 @@ conexión a red.
 
 *** Definición
 
--  El equipo de acondicionamiento de potencia, denominado inversor
-   DC/AC, realiza la conversión de continua a alterna cumpliendo con
-   determinados requisitos de tensión eficaz, frecuencia, distorsión
-   armónica de las ondas de tensión y corriente, rendimiento instantáneo
-   y medio, seguridad eléctrica, etc.
+-  El equipo de acondicionamiento de potencia, denominado inversor DC/AC, realiza la *conversión de continua a alterna cumpliendo con  determinados requisitos* de tensión eficaz, frecuencia, distorsión armónica de las ondas de tensión y corriente, rendimiento instantáneo y medio, seguridad eléctrica, etc.
 
--  Funciona como fuente de corriente autoconmutada y sincronizada con la
-   red.
+-  Funciona como fuente de corriente autoconmutada y sincronizada con la red.
 
 ** Tipos de Inversores
 *** Tipos de inversores
@@ -355,7 +359,7 @@ A grandes rasgos, los inversores pueden agruparse en tres categorías:
 [[../figs/SPWMMonofasico.pdf]]
 
 *** Busqueda del Punto de Máxima Potencia
-
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/CurvaIV_Ta20_G800.pdf]]
 
 $$\begin{cases}
@@ -364,7 +368,7 @@ $$\begin{cases}
       \frac{dP}{dV}<0 & V_{mpp}<V<V_{oc}\end{cases}$$
 
 *** Busqueda del Punto de Máxima Potencia
-
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/CurvaIV_Ta20_G800.pdf]]
 
 $$\begin{cases}
@@ -452,7 +456,10 @@ $$Q_{carga}=\frac{V^{2}}{\omega L}-V^{2}\omega C$$
 Cuando las condiciones de trabajo del generador y el consumo antes de la
 desconexión son muy cercanas, existe una ventana de no-detección.
 
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/NDZ.pdf]]
+#+END_CENTER
 
 *** Estudio experimental IEA-PVPS
 
