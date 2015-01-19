@@ -1,4 +1,4 @@
-% Created 2015-01-14 mié 13:51
+% Created 2015-01-19 lun 17:18
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -45,10 +45,13 @@
 
 \maketitle
 
-\section{Conceptos Generales}
+\section{Sistemas Fotovoltaicos de Conexión a Red}
 \label{sec-1}
 
-\begin{frame}[label=sec-1-0-1]{Definición de un SFCR}
+\subsection{Definición}
+\label{sec-1-1}
+
+\begin{frame}[label=sec-1-1-1]{Definición de un SFCR}
 Un Sistema Fotovoltaico Conectado a la Red (SFCR) es un sistema cuya
 función es producir energía eléctrica en condiciones adecuadas para
 poder ser inyectada en la red convencional.
@@ -56,50 +59,50 @@ poder ser inyectada en la red convencional.
 \includegraphics[width=.9\linewidth]{../figs/EsquemaSFCR.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-2]{Mecanismos de retribución}
-La energía producida por este sistema será consumida parcial o
-totalmente en las cercanías, y la energía sobrante será inyectada en la
-red para su distribución a otros puntos de consumo.
+\subsection{Mecanismos de Retribución}
+\label{sec-1-2}
+\begin{frame}[label=sec-1-2-1]{Mecanismos de retribución}
+\begin{itemize}
+\item La energía producida por este sistema será consumida parcial o totalmente en las cercanías, y la energía sobrante será inyectada en la red para su distribución a otros puntos de consumo.
 
-Mecanismos de retribución
+\item Mecanismos de retribución
 
 \begin{itemize}
 \item Prima (\emph{Feed-in tariff})
 
 \item Balance neto (\emph{Net-metering})
 \end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-3]{Retribución con prima}
+\begin{frame}[label=sec-1-2-2]{Retribución con prima}
 \begin{itemize}
-\item Ingresos por la energía total producida (independientemente de la que
+\item \alert{Ingresos} por la \alert{energía total producida} (independientemente de la que
 haya sido consumida en las cercanías del SFCR).
 
-\item El diseño no necesita considerar un consumo a satisfacer.
+\item El diseño \alert{no necesita considerar un consumo} a satisfacer.
 
-\item Objetivo: producción anual del sistema sea la máxima posible sin
+\item \alert{Objetivo}: producción anual del sistema sea la máxima posible sin
 tomar en consideración los consumos cercanos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-4]{Balance neto}
+\begin{frame}[label=sec-1-2-3]{Balance neto}
 \begin{itemize}
-\item Compensa los saldos de energía eléctrica entre el SFCR y un sistema
-de consumo asociado.
+\item \alert{Compensa los saldos de energía eléctrica} entre el SFCR y un sistema de consumo asociado.
 
-\item Cuando la producción del SFCR supera al consumo, la red eléctrica
-absorbe el excedente puntual, generándose derechos de consumo
-diferido.
+\item Cuando la producción del SFCR supera al consumo, la red eléctrica absorbe el excedente puntual, generándose derechos de consumo diferido.
 
-\item Estos derechos de consumo se pueden ejercer cuando la producción del
-SFCR no es suficiente para satisfacer el consumo asociado.
+\item Estos derechos de consumo se pueden ejercer cuando la producción del SFCR no es suficiente para satisfacer el consumo asociado.
 
-\item El diseño debe incluir el consumo asociado como una variable
-adicional que condicionará el tamaño del generador fotovoltaico.
+\item El \alert{diseño debe incluir el consumo asociado} como una \emph{variable adicional} que condicionará el tamaño del generador fotovoltaico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-5]{Características distintivas sobre suelo y en edificación}
+
+\subsection{SFCR en suelo y en edificación}
+\label{sec-1-3}
+\begin{frame}[label=sec-1-3-1]{Características distintivas sobre suelo y en edificación}
 \begin{itemize}
 \item \alert{Sobre suelo}
 
@@ -125,7 +128,8 @@ o son elementos constituyentes de la composición arquitectónica
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-6]{SFCR sobre suelo}
+
+\begin{frame}[label=sec-1-3-2]{SFCR sobre suelo}
 \begin{itemize}
 \item \alert{Objetivo}: maximizar la producción energética anual del sistema con
 el menor coste y la menor ocupación de terreno posibles
@@ -147,11 +151,11 @@ empleado).
 \end{frame}
 
 
-\begin{frame}[label=sec-1-0-7]{Estructuras sobre suelo}
+\begin{frame}[label=sec-1-3-3]{Estructuras sobre suelo}
 \includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-8]{SFCR sobre suelo: seguimiento}
+\begin{frame}[label=sec-1-3-4]{SFCR sobre suelo: seguimiento}
 \begin{itemize}
 \item \alert{Fundamento:}
 
@@ -167,7 +171,7 @@ mejores aprovechamientos del terreno.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-9]{SFCR sobre suelo: seguimiento}
+\begin{frame}[label=sec-1-3-5]{SFCR sobre suelo: seguimiento}
 \begin{itemize}
 \item \alert{Doble eje}
 
@@ -199,68 +203,65 @@ necesarios),
 \end{frame}
 
 
-\begin{frame}[label=sec-1-0-10]{Seguidor de eje horizontal N-S}
+\begin{frame}[label=sec-1-3-6]{Seguidor de eje horizontal N-S}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{frame}
 
 
-\begin{frame}[label=sec-1-0-11]{Seguidor de doble eje}
+\begin{frame}[label=sec-1-3-7]{Seguidor de doble eje}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-12]{SFCR en edificación}
-La integración del sistema fotovoltaico con el edificio exige tener en
-cuenta muchos factores que condicionan la ubicación y la configuración
-del generador.
+\begin{frame}[label=sec-1-3-8]{SFCR en edificación}
+\begin{itemize}
+\item La integración del sistema fotovoltaico con el edificio exige tener en cuenta muchos factores que condicionan la ubicación y la configuración del generador.
 
-El diseñador debe tomar las decisiones oportunas para \alert{aprovechar las
-sinergias entre edificio y sistema fotovoltaico}, reduciendo las
-posibles interferencias entre uno y otro.
+\item El diseñador debe tomar las decisiones oportunas para \alert{aprovechar las sinergias entre edificio y sistema fotovoltaico}, reduciendo las posibles interferencias entre uno y otro.
+\end{itemize}
 
 \url{http://www.pvdatabase.org/}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-13]{Integración arquitectónica}
+\begin{frame}[label=sec-1-3-9]{Integración arquitectónica}
 \includegraphics[width=.9\linewidth]{../figs/CubiertaInclinada.pdf}
 
 \includegraphics[width=.9\linewidth]{../figs/CubiertaPlana.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-14]{Integración arquitectónica}
+\begin{frame}[label=sec-1-3-10]{Integración arquitectónica}
 \includegraphics[width=.9\linewidth]{../figs/Aparcamiento.pdf}
 
 \includegraphics[width=.9\linewidth]{../figs/Parasol.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-15]{Integración arquitectónica}
+\begin{frame}[label=sec-1-3-11]{Integración arquitectónica}
 \includegraphics[width=.9\linewidth]{../figs/FachadaAcristalada.pdf}
 
 \includegraphics[width=.9\linewidth]{../figs/MuroCortina.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-16]{SFCR en edificación: CTE-HE5}
-Zonas climáticas
+\begin{frame}[label=sec-1-3-12]{SFCR en edificación: CTE-HE5}
+\begin{itemize}
+\item El CTE-HTE5 divide España en cinco zonas climáticas de acuerdo al valor medio anual de la radiación global diaria en el plano horizontal.
 
-Este documento divide España en cinco zonas climáticas de acuerdo al
-valor medio anual de la radiación global diaria en el plano horizontal.
+\item Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I (radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que
+\end{itemize}
+Canarias y parte de Andalucía pertenecen a la zona V (radiación superior a $\SI{5}{\kWh\per\meter\squared}$) .
 
-Por ejemplo, toda la cornisa cantábrica está encuadrada en la zona I
-(radiación inferior a $\SI{3.8}{\kWh\per\meter\squared}$) mientras que
-Canarias y parte de Andalucía pertenecen a la zona V (radiación superior
-a $\SI{5}{\kWh\per\meter\squared}$) .
-
-Este Código aboga por instalar mayor potencia en las zonas con mayor
-radiación.
+\begin{itemize}
+\item Este Código aboga por instalar mayor potencia en las zonas con mayor radiación.
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-17]{SFCR en edificación: CTE}
-Potencia \alert{nominal} a instalar
+\begin{frame}[label=sec-1-3-13]{SFCR en edificación: CTE-HE5}
+\begin{itemize}
+\item Potencia \alert{nominal} a instalar
+\end{itemize}
 
 $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
 \begin{itemize}
-\item Esta potencia debe ser superior a $\SI{5}{\kilo\watt}$ e inferior a
-$\SI{100}{\kilo\watt}$.
+\item Esta potencia debe ser superior a $\SI{5}{\kilo\watt}$ e inferior a $\SI{100}{\kilo\watt}$.
 
 \item $C=1$ para zona climática I, $C=1.4$ para zona climática V.
 
@@ -268,103 +269,67 @@ $\SI{100}{\kilo\watt}$.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-18]{SFCR en edificación}
-Sistemas Eléctricos
+\subsection{Condiciones técnicas de la conexión}
+\label{sec-1-4}
 
-En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en
-cuenta las canalizaciones previstas o existentes en el edificio. Por
-facilidad de instalación y mantenimiento, y por seguridad de los
-sistemas, es recomendable el uso de canalizaciones separadas del resto
-de sistemas del edificio.
-
-Sin embargo, los criterios de seguridad eléctrica aconsejan utilizar una
-\alert{red de tierras común} para el edificio y el sistema fotovoltaico.
-\end{frame}
-
-\begin{frame}[label=sec-1-0-19]{Condiciones técnicas de la conexión}
+\begin{frame}[label=sec-1-4-1]{SFCR en Edificación: sistemas eléctricos}
 \begin{itemize}
-\item El propietario de un generador fotovoltaico puede vender a una
-compañia eléctrica toda la energía que produce su sistema, no sólo la
-que le sobra (diferencia entre la producción de su sistema y el
-consumo de, por ejemplo, su domicilio).
+\item En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio. Por facilidad de instalación y mantenimiento, y por seguridad de los sistemas, es recomendable el uso de canalizaciones separadas del resto de sistemas del edificio.
 
-\item La reglamentación eléctrica española establece la separación
-administrativa entre la comercialización y la distribución de la
-energía (así, la empresa que nos vende energía eléctrica en nuestro
-hogar es distinta a la que compra la energía que produce el sistema
-que podamos tener en nuestro tejado).
+\item Sin embargo, los criterios de seguridad eléctrica aconsejan utilizar una \alert{red de tierras común} para el edificio y el sistema fotovoltaico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-20]{Condiciones técnicas de la conexión}
+\begin{frame}[label=sec-1-4-2]{Separación entre comercialización y generación}
 \begin{itemize}
-\item Por tanto, al menos administrativamente, la generación fotovoltaica y
-el consumo cercano son dos elementos independientes.
+\item El propietario de un generador fotovoltaico puede vender a una compañia eléctrica toda la energía que produce su sistema, no sólo la que le sobra (diferencia entre la producción de su sistema y el consumo de, por ejemplo, su domicilio).
 
-\item No obstante, es claro que la corriente eléctrica no entiende de leyes
-ni contratos, sino que fluye según las leyes de Kirchhoff.
-
-\item Así, la energía producida por un SFCR será consumida parcial o
-totalmente en el propio edificio (generación distribuida).
+\item La reglamentación eléctrica española establece la separación administrativa entre la comercialización y la distribución de la energía (así, la empresa que nos vende energía eléctrica en nuestro hogar es distinta a la que compra la energía que produce el sistema que podamos tener en nuestro tejado).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-21]{Condiciones técnicas de la conexión}
+\begin{frame}[label=sec-1-4-3]{Generación distribuida}
 \begin{itemize}
-\item La separación existente entre empresa comercializadora y empresa
-distribuidora se refleja en la separación de contratos y facturas, y
-por tanto, también de elementos y puntos de medida.
+\item Por tanto, al menos administrativamente, la generación fotovoltaica y el consumo cercano son dos elementos independientes.
 
-\item Es decir, no pueden utilizarse las lecturas de dos contadores
-distintos (uno de venta y otro de compra) para componer una única
-factura.
+\item No obstante, es claro que la corriente eléctrica no entiende de leyes ni contratos, sino que fluye según las leyes de Kirchhoff.
 
-\item Este hecho, unido a la necesidad legal de conectar el sistema
-fotovoltaico en un punto propiedad de la compañía eléctrica (por
-tanto, externo a las instalaciones eléctricas propias del domicilio,
-empresa, etc) tiene como consecuencia que en ciertos casos la
-legalización de un sistema fotovoltaico sea extremadamente
-complicada.
+\item Así, la energía producida por un SFCR será consumida parcial o totalmente en el propio edificio (generación distribuida).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-22]{Condiciones técnicas de la conexión}
+\begin{frame}[label=sec-1-4-4]{El problema de la medida}
 \begin{itemize}
-\item *Titulares con contrato de suministro en Media Tensión con
-instalaciones fotovoltaicas de potencia menor a 100 kW. *
+\item La separación existente entre empresa comercializadora y empresa distribuidora se refleja en la separación de contratos y facturas, y por tanto, también de elementos y puntos de medida.
+
+\item Es decir, no pueden utilizarse las lecturas de dos contadores distintos (uno de venta y otro de compra) para componer una única factura.
+
+\item Este hecho, unido a la necesidad legal de conectar el sistema fotovoltaico en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc) tiene como consecuencia que en ciertos casos la legalización de un sistema fotovoltaico sea extremadamente complicada.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-1-4-5]{Ejemplo: suministro en MT}
+\begin{itemize}
+\item \alert{Titulares con contrato de suministro en Media Tensión con instalaciones fotovoltaicas de potencia menor a 100 kW}
 
 \begin{itemize}
-\item A pesar de que la potencia fotovoltaica es menor que el valor que
-obliga a la conexión en MT, la otra obligación de conexión en
-punto propiedad de la compañía eléctrica implica el uso de un
-transformador BT-MT distinto al usado para consumo.
+\item A pesar de que la potencia fotovoltaica es menor que el valor que obliga a la conexión en MT, la otra obligación de conexión en punto propiedad de la compañía eléctrica implica el uso de un transformador BT-MT distinto al usado para consumo.
 
-\item Sin embargo, esta solución conlleva pérdidas energéticas e
-incremento de inversión de la instalación que la pueden hacer
-inviable.
+\item Sin embargo, esta solución conlleva pérdidas energéticas e incremento de inversión de la instalación que la pueden hacer inviable.
 
-\item La posibilidad de inyectar aguas abajo del transformador de
-consumo y hacer los balances necesarios en las facturas de venta y
-consumo, utilizando las medidas de los respectivos contadores es
-posible bajo el RD 1699/2011.
+\item La posibilidad de inyectar aguas abajo del transformador de consumo y hacer los balances necesarios en las facturas de venta y consumo, utilizando las medidas de los respectivos contadores es posible bajo el RD 1699/2011.
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-23]{Condiciones técnicas de la conexión}
+\begin{frame}[label=sec-1-4-6]{Ejemplo: comunidades de vecinos}
 \begin{itemize}
-\item *Titulares en edificios de varias viviendas. *
+\item \alert{Titulares en edificios de varias viviendas}
 
 \begin{itemize}
-\item De nuevo, la necesidad de realizar la conexión aguas arriba al
-contador de consumo, implica en este caso la instalación de
-cableado bajante desde la vivienda en cuestión hasta la sala de
-protecciones del edificio.
+\item De nuevo, la necesidad de realizar la conexión aguas arriba al contador de consumo, implica en este caso la instalación de cableado bajante desde la vivienda en cuestión hasta la sala de protecciones del edificio.
 
-\item Esta solución no es siempre fácil ni técnicamente (no siempre
-existe espacio o canalizaciones disponibles en la bajante del
-edificio) ni administrativamente (es necesario el permiso de la
-comunidad de vecinos).
+\item Esta solución no es siempre fácil ni técnicamente (no siempre existe espacio o canalizaciones disponibles en la bajante del edificio) ni administrativamente (es necesario el permiso de la comunidad de vecinos).
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -372,7 +337,9 @@ comunidad de vecinos).
 \section{Inversor de CR}
 \label{sec-2}
 
-\begin{frame}[label=sec-2-0-1]{Conceptos generales}
+\subsection{Conceptos Generales}
+\label{sec-2-1}
+\begin{frame}[label=sec-2-1-1]{Acoplamiento a la red}
 La potencia suministrada por un generador fotovoltaico iluminado es de
 tensión continua, que debe ser adecuadamente acondicionada para permitir
 el funcionamiento correcto de las cargas conectadas en un sistema
@@ -380,7 +347,7 @@ autónomo o el acoplamiento a la red eléctrica en el caso de sistemas de
 conexión a red.
 \end{frame}
 
-\begin{frame}[label=sec-2-0-2]{Conceptos generales}
+\begin{frame}[label=sec-2-1-2]{Definición}
 \begin{itemize}
 \item El equipo de acondicionamiento de potencia, denominado inversor
 DC/AC, realiza la conversión de continua a alterna cumpliendo con
@@ -393,7 +360,9 @@ red.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-3]{Tipos de inversores}
+\subsection{Tipos de Inversores}
+\label{sec-2-2}
+\begin{frame}[label=sec-2-2-1]{Tipos de inversores}
 A grandes rasgos, los inversores pueden agruparse en tres categorías:
 
 \begin{itemize}
@@ -403,11 +372,11 @@ a un conjunto de ramas)
 \item \alert{Inversor orientado a rama} (\emph{string-inverter}): un inversor dedicado
 a una rama del generador.
 
-\item *``Módulo-AC*”: un inversor dedicado a un módulo del generador.
+\item \alert{Módulo-AC}: un inversor dedicado a un módulo del generador.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-4]{Tipos de inversores}
+\begin{frame}[label=sec-2-2-2]{Inversores de Rama}
 \begin{itemize}
 \item Los \alert{inversores orientados a rama} son particularmente útiles en
 algunos sistemas de integración arquitectónica, al poder adaptarse
@@ -419,7 +388,7 @@ pequeños sistemas demostrativos).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-5]{Tipos de inversores}
+\begin{frame}[label=sec-2-2-3]{Inversores Centrales}
 \begin{itemize}
 \item Los \alert{inversores centrales} son recomendables para instalaciones de
 medio o gran tamaño. Permiten reducir costes (de adquisición,
@@ -431,7 +400,9 @@ de 100 kW o 4 de 250 kW, pero no con 200 de 5 kW).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-6]{Características de un inversor comercial}
+\subsection{Características básicas}
+\label{sec-2-3}
+\begin{frame}[label=sec-2-3-1]{Potencia y ventana MPP}
 \begin{itemize}
 \item \alert{Potencia nominal y máxima}, siendo ésta un porcentaje de sobrecarga
 que el equipo es capaz de soportar durante un determinado período de
@@ -443,7 +414,7 @@ algoritmo de búsqueda del MPP del generador fotovoltaico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-7]{Características de un inversor comercial}
+\begin{frame}[label=sec-2-3-2]{Tensiones}
 \begin{itemize}
 \item \alert{Tensión máxima de entrada}: es la máxima tensión que el inversor
 puede aguantar sin sufrir una avería.
@@ -459,7 +430,7 @@ necesaria para que el inversor comience el proceso de conversión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-8]{Características de un inversor comercial}
+\begin{frame}[label=sec-2-3-3]{Eficiencia y Rendimiento}
 \begin{itemize}
 \item \alert{Eficiencia máxima}: máximo valor que toma la relación entre potencia
 de salida y potencia de entrada. En inversores de calidad la
@@ -472,8 +443,9 @@ fotovoltaico funcionando en unas condiciones de radiación
 características de la zona centroeuropea.
 \end{itemize}
 \end{frame}
-
-\begin{frame}[label=sec-2-0-9]{Composición}
+\subsection{Composición}
+\label{sec-2-4}
+\begin{frame}[label=sec-2-4-1]{Entrada}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 
 \begin{itemize}
@@ -486,7 +458,7 @@ realizar las funciones de búsqueda del punto de máxima potencia.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-10]{Composición}
+\begin{frame}[label=sec-2-4-2]{Puente y salida}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 
 \begin{itemize}
@@ -501,7 +473,7 @@ AC/. /
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-11]{Composición}
+\begin{frame}[label=sec-2-4-3]{Control}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 
 \begin{itemize}
@@ -513,13 +485,13 @@ salida del inversor.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-12]{Funcionamiento: modulación SPWM}
+\subsection{Funcionamiento}
+\label{sec-2-5}
+\begin{frame}[label=sec-2-5-1]{Modulación SPWM}
 \includegraphics[width=.9\linewidth]{../figs/SPWMMonofasico.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-13]{Busqueda del Punto de Máxima Potencia}
-[c]
-
+\begin{frame}[label=sec-2-5-2]{Busqueda del Punto de Máxima Potencia}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
 
 $$\begin{cases}
@@ -528,7 +500,7 @@ $$\begin{cases}
       \frac{dP}{dV}<0 & V_{mpp}<V<V_{oc}\end{cases}$$
 \end{frame}
 
-\begin{frame}[label=sec-2-0-14]{Busqueda del Punto de Máxima Potencia}
+\begin{frame}[label=sec-2-5-3]{Busqueda del Punto de Máxima Potencia}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
 
 $$\begin{cases}
@@ -537,7 +509,7 @@ $$\begin{cases}
       \frac{dI}{dV}<-\frac{I}{V} & V_{mpp}<V<V_{oc}\end{cases}$$
 \end{frame}
 
-\begin{frame}[label=sec-2-0-15]{Uso del transformador}
+\begin{frame}[label=sec-2-5-4]{Transformador de salida}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 
 \begin{itemize}
@@ -553,9 +525,7 @@ y la salida (AC).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-16]{Uso del transformador}
-Opciones comerciales
-
+\begin{frame}[label=sec-2-5-5]{Opciones comerciales}
 Existen tres opciones en el mercado de inversores de conexión a red:
 
 \begin{itemize}
@@ -567,15 +537,11 @@ Existen tres opciones en el mercado de inversores de conexión a red:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-17]{Uso del transformador}
-Normativa
-
-La normativa vigente en España obliga al uso de un transformador de
-aislamiento o elemento equivalente para cumplir tres objetivos:
+\begin{frame}[label=sec-2-5-6]{Normativa relativa al transformador}
+La normativa vigente en España obliga al uso de un transformador de aislamiento o elemento equivalente para cumplir tres objetivos:
 
 \begin{enumerate}
-\item Aislar la instalación generadora para evitar la transferencia de
-defectos entre la red y la instalación
+\item Aislar la instalación generadora para evitar la transferencia de defectos entre la red y la instalación
 
 \item Proporcionar seguridad personal
 
@@ -583,29 +549,21 @@ defectos entre la red y la instalación
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-18]{Uso del transformador}
-Nota de Interpretación Tecnica
-
+\begin{frame}[label=sec-2-5-7]{Normativa: Nota de Interpretación Tecnica}
 \begin{itemize}
-\item Objetivos 1 y 2 se consiguen mediante la adecuada conexión de masas y
-tierras en el sistema.
+\item Objetivos 1 y 2 se consiguen mediante la adecuada conexión de masas y tierras en el sistema.
 
-\item Objetivo 3: \guillemotleft{}*la corriente continua inyectada en la red de
-distribución por una instalación generadora no será superior al 0,5\%
-de la corriente nominal de la misma*\guillemotright{}, cumplido \guillemotleft{}*cuando se disponga
-en la instalación de un transformador separador entre el inversor y
-el punto de conexión de la red de distribución*\guillemotright{}. /Los inversores con
-transformador de alta frecuencia o sin transformador deben demostrar
-el cumplimiento de este requisito mediante un ensayo descrito en esta
-nota/.
+\item Objetivo 3: \guillemotleft{}\alert{la corriente continua inyectada en la red de distribución por una instalación generadora no será superior al 0,5\% de la corriente nominal de la misma}\guillemotright{}, cumplido \guillemotleft{}\alert{cuando se disponga en la instalación de un transformador separador entre el inversor y el punto de conexión de la red de distribución}\guillemotright{}. \emph{Los inversores con transformador de alta frecuencia o sin transformador deben demostrar el cumplimiento de este requisito mediante un ensayo descrito en esta nota}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-19]{``Islanding''}
+\subsection{Islanding}
+\label{sec-2-6}
+\begin{frame}[label=sec-2-6-1]{Definición del problema}
 \includegraphics[width=.9\linewidth]{../figs/Isla.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-20]{``Islanding''}
+\begin{frame}[label=sec-2-6-2]{Ecuaciones básicas}
 Antes de la desconexión:$$\Delta P=P_{carga}-P_{PV}$$
 
 $$\Delta Q=Q_{carga}-Q_{PV}\simeq Q_{carga}$$
@@ -617,7 +575,7 @@ $$P_{carga}=\frac{V^{2}}{R_{carga}}$$
 $$Q_{carga}=\frac{V^{2}}{\omega L}-V^{2}\omega C$$
 \end{frame}
 
-\begin{frame}[label=sec-2-0-21]{``Islanding''}
+\begin{frame}[label=sec-2-6-3]{Casos posibles}
 \begin{itemize}
 \item $\Delta P^{-}>0\rightarrow P_{carga}>P_{PV}$. Al producirse la
 desconexión, dado que $P_{PV}$ no cambia, disminuye la potencia
@@ -637,16 +595,14 @@ reactiva debe tender a cero, y por tanto disminuye la frecuencia.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-22]{``Islanding''}
+\begin{frame}[label=sec-2-6-4]{Ventana de no-detección}
 Cuando las condiciones de trabajo del generador y el consumo antes de la
 desconexión son muy cercanas, existe una ventana de no-detección.
 
 \includegraphics[width=.9\linewidth]{../figs/NDZ.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-23]{``Islanding''}
-Estudio experimental IEA-PVPS
-
+\begin{frame}[label=sec-2-6-5]{Estudio experimental IEA-PVPS}
 \begin{itemize}
 \item La probabilidad de que se de una situación de balance entre consumo y
 generación en una red de Baja Tensión está entre $\num{1e-5}$ y
@@ -658,9 +614,7 @@ de estos dos sucesos es virtualmente nula.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-24]{``Islanding''}
-Estudio experimental IEA-PVPS
-
+\begin{frame}[label=sec-2-6-6]{Estudio experimental IEA-PVPS}
 \begin{itemize}
 \item El riesgo eléctrico existente en cualquier red eléctrica es del orden
 de $\num{1e-6}$.
