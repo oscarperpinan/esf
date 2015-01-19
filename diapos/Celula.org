@@ -92,7 +92,7 @@ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa e
 -  El *dopaje de semiconductores* consiste en introducir de forma
    controlada impurezas en el cristal.
 
--  Los átomos de* Fósforo* tienen cinco electrones de valencia (uno más
+-  Los átomos de *Fósforo* tienen cinco electrones de valencia (uno más
    que el silicio).
 
 -  Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto
@@ -205,8 +205,7 @@ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa e
    reforzada* y el paso de portadores de una a otra zona queda aún más
    debilitado.
 
--  La *corriente *que atraviesa la unión en polarización inversa es de
-   *muy bajo valor*.
+-  La *corriente que atraviesa la unión en polarización inversa es de muy bajo valor*.
 
 ** Diodo
 
@@ -240,20 +239,13 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 
 *** Efecto fotoeléctrico
 
--  Efecto fotoeléctrico: *los electrones se desplazan a la banda de
-   conducción por el aporte energético de fotones*
-   ($E_{f}=\frac{h\cdot c}{\lambda}$).
+-  Efecto fotoeléctrico: *los electrones se desplazan a la banda de conducción por el aporte energético de fotones* ($E_{f}=\frac{h\cdot c}{\lambda}$).
 
--  Al *iluminar una unión p-n*, el *campo eléctrico* de la unión conduce
-   los portadores y *dificulta la recombinación*.
+-  Al *iluminar una unión p-n*, el *campo eléctrico* de la unión conduce los portadores y *dificulta la recombinación*.
 
--  La *fotocorriente* es ahora *aprovechable* por un circuito externo
-   (/corriente de iluminación, corriente de generación/)
+-  La *fotocorriente* es ahora *aprovechable* por un circuito externo (/corriente de iluminación, corriente de generación/)
 
--  La presencia de *tensión en los terminales* de la unión (por ejemplo,
-   caída de tensión en una resistencia alimentada por la fotocorriente)*
-   favorece la recombinación* (/corriente de oscuridad o corriente de
-   diodo/).
+-  La presencia de *tensión en los terminales* de la unión (por ejemplo, caída de tensión en una resistencia alimentada por la fotocorriente) *favorece la recombinación* (/corriente de oscuridad o corriente de diodo/).
 
 $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 
