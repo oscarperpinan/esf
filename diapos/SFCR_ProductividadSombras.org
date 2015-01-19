@@ -1,19 +1,24 @@
+#+TITLE: SFCR: Productividad y Sombras
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
+
 * Energía Producida por un SFCR
 
 ** Procedimiento de cálculo
 
 *** Potencia en un SFCR
 
-Potencia a la Salida del Generador FV
+- Potencia a la Salida del Generador FV
 
 $$P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
       \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*$$
 
-Potencia a la Salida del Inversor
+- Potencia a la Salida del Inversor
 
 $$P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)$$
 
-Energía Producida por un SFCR
+- Energía Producida por un SFCR
 
 $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
       \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^* \mathrm{dt}$$
@@ -22,7 +27,7 @@ $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
 
 $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
 
--  $E_{ac}$ es la *energía producida *en un periodo ()
+-  $E_{ac}$ es la *energía producida* en un periodo.
 
 -  $G^*$ es la *irradiancia* en condiciones estándar de medida (STC,
    $G_{stc}=\SI{1}{\kilo\watt\per\meter\squared}$,
@@ -32,7 +37,7 @@ $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
    ($\si{\kilo\wattpeak}$) en STC
 
 -  $G_{ef}$ es la *irradiación efectiva incidente* en el plano del
-   generador ()
+   generador
 
 -  $PR$ es el *rendimiento del sistema* o /performance ratio/
 
@@ -62,7 +67,7 @@ $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 
 *** Performance Ratio
 
-Desglose de pérdidas
+**** Desglose de pérdidas
 
 -  *Dispersión de parámetros* entre los módulos que componen el
    generador (2-4%)
@@ -82,7 +87,7 @@ Desglose de pérdidas
 
 *** Performance Ratio
 
-Valores reales
+**** Valores reales
 
 -  El análisis de funcionamiento de diversos sistemas FV europeos ha
    mostrado que el rango de valores que toma el /performance ratio/ es
@@ -104,96 +109,70 @@ Valores reales
 
 ** Sombras Lejanas
 
-[plain]
-
 *** Método CTE
 
-[[../Figuras/Figuras_Externas/SombraIES]]
+[[../figs/SombraIES.pdf]]
 
 ** Sombras Cercanas: sistemas estáticos
 
 *** Sombras entre filas
 
-[[../Figuras/Figuras_Externas/SombraEstaticaInclinado2]]
+[[../figs/SombraEstaticaInclinado2.pdf]]
 
 *** Sombras entre filas
 
-Suele establecerse un objetivo de *4 horas de sol en torno al mediodía
-del solsticio de invierno libres de sombra*.
+- Suele establecerse un objetivo de *4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra*.
 
-La longitud de la sombra de un obstáculo se mide
-con:$$d=\frac{h}{\tan\gamma_{s}}$$
+- La longitud de la sombra de un obstáculo se mide con:$$d=\frac{h}{\tan\gamma_{s}}$$
 
-En el mediodía del solsticio de invierno
-$$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$ Para 2 horas antes y después:
+- En el mediodía del solsticio de invierno 
+$$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$ 
 
+- Para 2 horas antes y después:
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
 ** Sombras Cercanas: sistemas de seguimiento
 
 *** Separación de seguidores Doble Eje
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/Sombras2X.pdf]]
 
-[[../Figuras/Sombras2X]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 6cm
+     :END:
 
-[[../Figuras/DimensionesSeguidorSombra]]
+[[../figs/DimensionesSeguidorSombra.pdf]]
 
-$$b=\frac{L}{W}$$ $$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 4cm
+     :END:
+$$b=\frac{L}{W}$$ 
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
 
 $$E_{ac}=f(ROT)??$$
 
-[plain]
-
 *** Separación de Seguidores Doble Eje
 
-[t]
-
 $$b=\frac{L}{W}=0.475$$
 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
 
-[[../Figuras/AbacoSeguidor2X_Ene10]]
+[[../figs/AbacoSeguidor2X_Ene10.pdf]]
 
-[plain]
-
-*** Ocupación de Terreno
-
-**** ROT para diferentes valores de Leo
-
-[t]
-
-$$b=\frac{L}{W}=0.475$$
-
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
-
-[[../Figuras/AbacoSeguidor2X_Leo_Ene10]]
-
-[plain]
-
-*** Ocupación de Terreno
-
-**** ROT para diferentes valores de Lns
-
-[t]
-
-$$b=\frac{L}{W}=0.475$$
-
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
-
-[[../Figuras/AbacoSeguidor2X_Lns_Ene10]]
 
 ** Seguidores de eje horizontal NS
 
 *** Separación de Seguidores Eje Horizontal
 
-[[../Figuras/SombrasHoriz]]
+[[../figs/SombrasHoriz.pdf]]
 
 $$W=\infty$$ $$ROT=L_{eo}/L$$
 
 *** Separación de Seguidores Horizontal N-S
-
-**** Sombra
-
-[[../Figuras/AbacoSeguidorHorizSombra_Ene10]]
+#+ATTR_LATEX: :options angle=90
+[[../figs/AbacoSeguidorHorizSombra_Ene10.pdf]]
 
 *** Backtracking
 
@@ -216,19 +195,16 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
 
 *** Backtracking
 
-[[../Figuras/BackTracking]]
+[[../figs/BackTracking.pdf]]
 
-*** Separación de Seguidores Horizontal N-S
+*** Separación con backtracking
 
-**** Backtracking
-
-[[../Figuras/AbacoHorizBT_Ene10]]
+#+ATTR_LATEX: :options angle=90
+[[../figs/AbacoHorizBT_Ene10.pdf]]
 
 ** Elección de separaciones
 
 *** Elección de separaciones
-
-Elección de separaciones
 
 La *separación óptima* entre elementos (seguidores o estructuras
 estáticas) es aquella que conduce al *mínimo valor del coste de la
@@ -252,25 +228,32 @@ energía* producida por el sistema:
 -  La separación finalmente elegida debe *tomar en consideración las
    condiciones del terreno* (fronteras, irregularidades, vaguadas, etc.)
 
-[plain]
-
 *** Radiación promedio
 
-$$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A}
-      + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
+$$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
 
-4cm
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+[[../figs/plantConfiguration.pdf]]
 
-[[../Figuras/plantConfiguration]]
-
-6cm [[../Figuras/6trackers]]
-
-[plain]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 7cm
+     :END:
+[[../figs/6trackers.pdf]]
 
 *** Cableado
-
-[[../Figuras/wiring]]
-
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+[[../figs/wiring.pdf]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 6cm
+     :END:
 $$\begin{aligned}
     \Delta U_{inv} &= \frac{\Delta U}{1+\sqrt{\frac{\sum_{i=1}^n
           L_{i}^2 \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}} \\
@@ -280,38 +263,33 @@ $$\begin{aligned}
     S_{i} &= 2 \cdot \rho \cdot \frac{L_{i} \cdot I_i}{\Delta U_i}
   \end{aligned}$$
 
-[plain]
 
 *** Coste de la energía producida
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+- Coste Energía
+    $$C_E &= \frac{C_P}{E_{AC}}$$
+- Coste Sistema
+    $$C_p &= C_c + C_A + C_{PV}$$
 
-$$\begin{aligned}
-    C_E &= \frac{C_P}{E_{AC}}\\
-    C_p &= C_c + C_A + C_{PV}
-  \end{aligned}$$
+- $C_{PV}$ entre $\SI{2.5}{\text{\texteuro}\per\watt}$ y $\SI{5}{\text{\texteuro}\per\watt}$
 
-5cm
+- $C_A$ entre $\SI{1.5}{\text{\texteuro}\per\meter\squared}$ y $\SI{4}{\text{\texteuro}\per\meter\squared}$
 
-[[../Figuras/WiringCosts.pdf]]
-
-5cm $C_{PV}$ entre $\SI{2.5}{\text{\texteuro}\per\watt}$ y
-$\SI{5}{\text{\texteuro}\per\watt}$
-
-$C_A$ entre $\SI{1.5}{\text{\texteuro}\per\meter\squared}$ y
-$\SI{4}{\text{\texteuro}\per\meter\squared}$
-
-[plain]
-
-[[../Figuras/matrix-300dpi]]
-
-[plain]
-
-*** Resultados
-
-[[../Figuras/GRRoptim]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 7cm
+     :END:
+[[../figs/GRRoptim.pdf]]
 
 * Resumen
 
 *** Ocupación de terreno y productividad
 
-ccc SFCR & ROT & ProductividadEstático & 2 & 1Eje Horizontal NS & 4 &
-1,05-1,2Doble Eje & 6 & 1,3-1,5
+| SFCR              | ROT | Productividad |
+|-------------------+-----+---------------|
+| Estático          |   2 | 1             |
+| Eje Horizontal NS |   4 | 1,05-1,2      |
+| Doble Eje         |   6 | 1,3-1,5       |
