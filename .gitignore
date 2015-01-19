@@ -87,3 +87,13 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+# History files
+.Rhistory
+
+# Example code in package build process
+*-Ex.R
+
+# Emacs
+*~
+.projectile
