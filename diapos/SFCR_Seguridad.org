@@ -1,14 +1,20 @@
+#+TITLE: SFCR: Seguridad Eléctrica
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
+
+
 * Definiciones
 
 *** Contacto Directo e Indirecto
 
--  Contacto Directo: :: contacto de personas o animales con partes
+-  Contacto Directo: :: contacto de personas o animales con partes
    activas de los materiales y equipos
 
--  Contacto Indirecto: :: contacto de personas o animales con partes que
+-  Contacto Indirecto: :: contacto de personas o animales con partes que
    se han puesto bajo tensión como resultado de un fallo de aislamiento.
 
--  Partes Activas: :: Conductores y piezas conductoras bajo tensión en
+-  Partes Activas: :: Conductores y piezas conductoras bajo tensión en
    servicio normal. Incluyen el conductor neutro o compensador y las
    partes a ellos conectadas.
 
@@ -20,12 +26,12 @@
 -  Tierra: :: Masa conductora de la tierra en la que el potencial
    eléctrico en cada punto se toma, convencionalmente, igual a cero.
 
--  Toma de tierra: :: Electrodo, o conjunto de electrodos, en contacto
+-  Toma de tierra: :: Electrodo, o conjunto de electrodos, en contacto
    con el suelo y que asegura la conexión eléctrica con el mismo.
 
 *** Clases de materiales
 
--  Material de clase 0: :: Material en el cual la protección contra el
+-  Material de clase 0: :: Material en el cual la protección contra el
    choque eléctrico se basa en el aislamiento principal; lo que implica
    que no existe ninguna disposición prevista para la conexión de las
    partes activas accesibles, si las hay, a un conductor de protección
@@ -34,7 +40,7 @@
 
 *** Clases de materiales
 
--  Material de clase I: :: la protección contra el choque eléctrico no
+-  Material de clase I: :: la protección contra el choque eléctrico no
    se basa únicamente en el aislamiento principal, sino que comporta una
    medida de seguridad complementaria en forma de medios de conexión de
    las partes conductoras accesibles a un conductor de protección puesto
@@ -44,20 +50,20 @@
 
 *** Clases de materiales
 
--  Material de clase II: :: la protección comporta medidas de seguridad
+-  Material de clase II: :: la protección comporta medidas de seguridad
    complementarias, tales como el doble aislamiento o aislamiento
    reforzado. Estas medidas no suponen la utilización de puesta a tierra
    para la protección y no dependen de las condiciones de la
    instalación. Este material debe estar alimentado por cables con doble
    aislamiento o con aislamiento reforzado.
 
--  Material de clase III: :: la protección no se basa en la alimentación
+-  Material de clase III: :: la protección no se basa en la alimentación
    a muy baja tensión y en el cual no se producen tensiones superiores a
    50 V en c.a. ó a 75V en c.c.
 
 *** Tensión de contacto
 
--  Tensión de contacto: :: Tensión que aparece entre partes accesibles
+-  Tensión de contacto: :: Tensión que aparece entre partes accesibles
    simultáneamente, al ocurrir un fallo de aislamiento. Por convenio
    este término solo se utiliza en relación con la protección contra
    contactos indirectos.\\
@@ -67,7 +73,7 @@
 
 *** Tensión de defecto
 
--  Tensión de defecto: :: Tensión que aparece a causa de un defecto de
+-  Tensión de defecto: :: Tensión que aparece a causa de un defecto de
    aislamiento, entre dos masas, entre una masa y un elemento conductor,
    o entre una masa y una toma de tierra de referencia, es decir, un
    punto en el que el potencial no se modifica al quedar la masa en
@@ -75,13 +81,13 @@
 
 *** Esquemas de conexión a tierra
 
--  Primera letra: :: conexión de alimentación y tierra
+-  Primera letra: :: conexión de alimentación y tierra
 
    -  T= :: conexión directa de un punto de alimentación a tierra.
 
    -  I= :: aislamiento de todas las partes activas respecto a tierra
 
--  Segunda letra: :: conexión de masas con tierra
+-  Segunda letra: :: conexión de masas con tierra
 
    -  T= :: masas conectadas directamente a tierra, independientemente
       de conexión de alimentación
@@ -125,11 +131,9 @@ del inversor*.
 
    -  Aumentar resistencia (guantes, calzado, aislamiento del suelo)
 
-[plain]
-
 *** Intensidad y tiempo de contacto
 
-[[../Figuras/Figuras_Externas/CurvaIntensidadContactoTiempo]]
+[[../figs/CurvaIntensidadContactoTiempo.pdf]]
 
 *** Trayectoria de la corriente
 
@@ -195,21 +199,48 @@ del inversor*.
 
 ** Contacto Directo
 
-*** Contacto Directo TT/TN
-
-[t]
-
-[[../Figuras/ContactoDirectoTT]]
-
-[[../Figuras/ContactoDirectoTN]]
-
-[[../Figuras/ContactoDirectoTT_simple]]
+*** Contacto Directo TT
 
 $$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
 
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/ContactoDirectoTT.pdf]]
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/ContactoDirectoTT_simple.pdf]]
+
+
+
+
+*** Contacto Directo TN
+$$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/ContactoDirectoTN.pdf]]
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/ContactoDirectoTT_simple.pdf]]
+
+
 *** Contacto Directo IT
 
-[[../Figuras/ContactoDirectoIT_Capacidad]]
+[[../figs/ContactoDirectoIT_Capacidad.pdf]]
 
 $$I_{f}\leq100\, mA\Longrightarrow R_{iso}\geq10\cdot V_{ocG}-R_{H}$$
 
@@ -239,22 +270,37 @@ objetivo:
 ** Contacto Indirecto
 
 *** Contacto Indirecto TT
-
-[t]
-
-[[../Figuras/ContactoIndirectoTT]]
-
-[[../Figuras/ContactoIndirectoTT_simple]]
-
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoTT.pdf]]
 $$V_{c}\simeq I_{scG}\cdot R_{tp}$$
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoTT_simple.pdf]]
+
 
 *** Contacto Indirecto TN
 
-[t]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoTN.pdf]]
 
-[[../Figuras/ContactoIndirectoTN]]
-
-[[../Figuras/ContactoIndirectoTN_simple]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoTN_simple.pdf]]
 
 $$V_{c}=0$$
 
@@ -262,15 +308,25 @@ $$I_{F,max}=\frac{V_{ocG}}{R_{iso}+R}$$
 
 *** Contacto Indirecto IT
 
-[t]
 
-[[../Figuras/ContactoIndirectoIT]]
-
-[[../Figuras/ContactoIndirectoIT_simple]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoIT.pdf]]
 
 $$\begin{aligned}
 V_{c} & = & 0\\
 I_{F} & = & 0\end{aligned}$$
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 5cm
+     :END:
+#+ATTR_LATEX: :width \textwidth
+[[../figs/ContactoIndirectoIT_simple.pdf]]
+
 
 *** REBT: Contactos Indirectos
 
@@ -291,25 +347,23 @@ indirectos:
 
 * Puesta a tierra
 
-*** Resistencia para cada conexión
-
-TT
+*** Resistencia para conexión TT
 
 $$R_{tp}\leq\frac{V_{max}}{I_{f}}$$
 
--  Ejemplo: :: Una instalación fotovoltaica se considera local mojado,
-   así que $V_{max}=\SI{60}{\volt}$. Al ser corriente continua
-   $I_{max}=\SI{100}{\milli\ampere}$. Si este generador fotovoltaico
-   utiliza el esquema TT será $R_{tp}\leq\SI{600}{\ohm}$.
+**** Ejemplo
+Una instalación fotovoltaica se considera local mojado,
+así que $V_{max}=\SI{60}{\volt}$. Al ser corriente continua
+$I_{max}=\SI{100}{\milli\ampere}$. Si este generador fotovoltaico
+utiliza el esquema TT será $R_{tp}\leq\SI{600}{\ohm}$.
 
-*** Resistencia para cada conexión
-
-IT con una falta a tierra
+*** Resistencia para IT con una falta a tierra
 
 $$R_{tp}\leq\frac{V_{max}}{I_{sc}}$$
 
--  Ejemplo: :: Suponiendo $I_{sc}=\SI{150}{\ampere}$, la resistencia de
-   la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
+**** Ejemplo
+Suponiendo $I_{sc}=\SI{150}{\ampere}$, la resistencia de
+la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
 
 *** Práctica común
 
@@ -326,27 +380,20 @@ aplicada al generador fotovoltaico.
 
 *** Cálculo de la resistencia de tierra
 
-Resistencia de puesta a tierra
+- Resistencia de puesta a tierra: Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y $L$ la longitud de la pica.
 
-Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la
-resistividad del terreno y $L$ la longitud de la pica.
+- Resistividad en función del terreno
 
-Resistividad en función del terreno
-
-cc Terrenos cultivables fértiles & $50\,\Omega\cdot m$Terrenos
-cultivables poco fértiles & $500\,\Omega\cdot m$Suelos pedregosos &
-$3\,000\,\Omega\cdot m$
+| Terrenos cultivables fértiles      | $50\,\Omega\cdot m$     |
+| Terrenos cultivables poco fértiles | $500\,\Omega\cdot m$    |
+| Suelos pedregosos                  | $3\,000\,\Omega\cdot m$ |
 
 *** Cálculo de la resistencia de tierra
 
-Electrodos en paralelo
+- Electrodos en paralelo: Para mejorar la resistencia de toma de tierra, se utilizan varios electrodos interconectados, situados a distancias del orden de 10 m. De esta forma, *la resistencia equivalente es (aproximadamente) el paralelo de las individuales*.
 
-Para mejorar la resistencia de toma de tierra, se utilizan varios
-electrodos interconectados, situados a distancias del orden de 10 m. De
-esta forma, *la resistencia equivalente es (aproximadamente) el paralelo
-de las individuales*.
-
-Por ejemplo, para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
+**** Por ejemplo
+Para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
 $\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10 picas de
 una longitud de 2 metros (cada una de ellas tendrá una resistencia
 $R_{t,i}=\SI{50}{\ohm}$).
@@ -372,6 +419,10 @@ a tierra que pertenecen a otras instalaciones eléctricas.
 
 *** Formación de las tormentas
 
+[[../figs/FormacionTormenta.pdf]]
+
+*** Formación de las tormentas
+
 -  Dentro de los núcleos tormentosos, las cargas positivas ascienden a
    las capas superiores de las nubes. Esta separación de cargas produce
    un campo eléctrico.
@@ -392,10 +443,6 @@ a tierra que pertenecen a otras instalaciones eléctricas.
 -  Aquel trazador ascendente que conecta con el descendente cierra la
    descarga y determina el lugar del impacto.
 
-*** Encuentro entre trazadores
-
-[[../Figuras/Figuras_Externas/FormacionTormenta]]
-
 *** Influencia de las condiciones locales
 
 -  La descarga está determinada principalmente por el campo eléctrico
@@ -411,30 +458,33 @@ a tierra que pertenecen a otras instalaciones eléctricas.
 
 *** Influencia de los sistemas fotovoltaicos
 
-Por tanto,* las instalaciones fotovoltaicas no aumentan la probabilidad
+Por tanto, *las instalaciones fotovoltaicas no aumentan la probabilidad
 de descargas locales* (determinadas por las nubes), pero una vez que se
 producen, son lugares con mayor probabilidad de impacto.
 
 *** Descarga y campo magnético
 
-[c]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 6cm
+     :END:
+- Una descarga eléctrica supone una corriente de gran valor en un lapso de tiempo muy corto.
 
-Una descarga eléctrica supone una corriente de gran valor en un lapso de
-tiempo muy corto.
+- Esta corriente produce una inducción magnética a su alrededor, también de caracter variable.
 
-Esta corriente produce una inducción magnética a su alrededor, también
-de caracter variable.
-
-Un flujo magnético variable produce una fuerza electromotriz entre los
-extremos del area atravesada.
-
-[[../Figuras/SobretensionInducida]]
+- Un flujo magnético variable produce una fuerza electromotriz entre los extremos del area atravesada.
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 4cm
+     :END:
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SobretensionInducida.pdf]]
 
 ** Protecciones
 
 *** Factores de influencia
 
-Esta diferencia de potencial depende de:
+La fuerza electromotriz inducida depende de:
 
 -  *Valor de la inducción magnética* (depende de la tormenta).
 
@@ -445,7 +495,7 @@ Esta diferencia de potencial depende de:
 
 *** Area y cableado
 
-[[../Figuras/Figuras_Externas/BucleCableadoOptimo]]
+[[../figs/BucleCableadoOptimo.pdf]]
 
 *** Protección externa
 
@@ -459,7 +509,7 @@ Un sistema de protección externa contra el rayo se compone de:
 
 *** Protección externa
 
-[[../Figuras/Figuras_Externas/AreaProteccionPararrayos]]
+[[../figs/AreaProteccionPararrayos.pdf]]
 
 *** Protección externa
 
@@ -490,21 +540,20 @@ Un sistema de protección externa contra el rayo se compone de:
 -  Es importante tener en cuenta que cuando un varistor actúa, realiza
    un cortocircuito entre sus conexiones.
 
-[plain]
+
+*** Protecciones Internas
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/CajaProteccionesPhotocampa.pdf]]
 
 *** Protecciones Internas
 
-[c]
-
-[[../Fotos/CajaProteccionesPhotocampa]]
-
-[[../Fotos/CajaForumDestruida]]
+[[../figs/CajaForumDestruida.pdf]]
 
 * Resumen de protecciones
 
 *** Diagrama Unifilar
 
-[[../Figuras/Figuras_Externas/UnifilarCR1]]
+[[../figs/UnifilarCR1.pdf]]
 
 ** Circuito DC
 
@@ -521,32 +570,32 @@ niveles:
 
 *** Nivel 1: Refuerzo del aislamiento de las partes activas.
 
--  Configuración flotante del generador: :: se imposibilitan los
+-  Configuración flotante del generador: :: se imposibilitan los
    accidentes por la aparición de contactos indirectos de primer
    contacto.
 
--  Cableado con aislamiento de protección: :: Estos aislamientos
+-  Cableado con aislamiento de protección: :: Estos aislamientos
    refuerzan la protección contra contactos indirectos.
 
--  Aislamiento galvánico AC-DC: :: Mediante transformadores de devanados
+-  Aislamiento galvánico AC-DC: :: Mediante transformadores de devanados
    independientes en los inversores se imposibilita el cierre de
    corriente de fallo a través del inversor.
 
 *** Nivel 2: Sistema de detección de aislamiento.
 
--  Vigilante de aislamiento: :: Este elemento genera una señal de baja
+-  Vigilante de aislamiento: :: Este elemento genera una señal de baja
    frecuencia (2 a 5 Hz) para evitar las fugas capacitivas del cableado,
    y que inyecta en un polo activo midiendo la corriente de retorno, y
    por tanto, la resistencia de aislamiento.
 
--  En caso de pérdida de aislamiento, :: el vigilante ordena el disparo
+-  En caso de pérdida de aislamiento, :: el vigilante ordena el disparo
    de los interruptores aislando el campo fotovoltaico afectado. La
    orden provoca la desconexión del inversor, el cortocircuito del campo
    y la puesta a tierra del mismo.
 
 *** Nivel 3: Protección en caso de fallo de los niveles 1 y 2:
 
--  En caso de fallo de los niveles anteriores :: aún queda la protección
+-  En caso de fallo de los niveles anteriores :: aún queda la protección
    proporcionada por la puesta a tierra directa de todas las masas de la
    planta. Gracias a ella se limitara la tensión que con respecto a
    tierra puedan adquirir las masas en caso de derivación.
@@ -576,7 +625,6 @@ niveles:
    I_{B} & < & I_{n}<I_{z}\\
    I_{2} & < & 1.45\cdot I_{z}\end{aligned}$$
 
-   \\
    siendo $I_{B}$ la intensidad de diseño de la línea, $I_{n}$ la
    intensidad nominal del dispositivo de protección, e $I_{z}$ es la
    intensidad admisible por el conductor e $I_{2}$ la intensidad que
@@ -619,7 +667,7 @@ niveles:
 
 *** Cortocircuitos y sobrecargas
 
-Según el RD 1663-2000 es necesario incluir un* interruptor general
+Según el RD 1663-2000 es necesario incluir un *interruptor general
 manual*, que será un interruptor magnetotérmico omnipolar.
 
 Este interruptor, que se ubica en el cuadro de contadores de la
@@ -672,7 +720,7 @@ $I_{2}=1.45\cdot I_{n}$.
    del centro de transformación. Por tanto, el diferencial *no* protege
    el tramo comprendido entre él y el centro de transformación.
 
-[[../Figuras/InterruptorDiferencial]]
+[[../figs/InterruptorDiferencial.pdf]]
 
 *** Interruptor diferencial
 
