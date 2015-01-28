@@ -1,4 +1,4 @@
-% Created 2015-01-27 Tue 15:51
+% Created 2015-01-28 mié 22:18
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -40,7 +40,7 @@
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
-  pdfcreator={Emacs 24.3.1 (Org mode 8.2.7c)}}
+  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
 \begin{document}
 
 \maketitle
@@ -455,28 +455,28 @@ aplicada al generador fotovoltaico.
 
 \begin{frame}[label=sec-3-0-4]{Cálculo de la resistencia de tierra}
 \begin{itemize}
-\item Resistencia de puesta a tierra: Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y $L$ la longitud de la pica.
+\item \alert{Resistencia de puesta a tierra}: Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y $L$ la longitud de la pica.
 
-\item Resistividad en función del terreno
+\item \alert{Resistividad en función del terreno}
 \end{itemize}
 
 \begin{center}
 \begin{tabular}{ll}
-Terrenos cultivables fértiles & $50\,\Omega\cdot m$\\
-Terrenos cultivables poco fértiles & $500\,\Omega\cdot m$\\
-Suelos pedregosos & $3\,000\,\Omega\cdot m$\\
+Terrenos cultivables fértiles & $\SI{50}{\ohm\meter}$\\
+Terrenos cultivables poco fértiles & $\SI{500}{\ohm\meter}$\\
+Suelos pedregosos & $\SI{3000}{\ohm\meter}$\\
 \end{tabular}
 \end{center}
 \end{frame}
 
 \begin{frame}[label=sec-3-0-5]{Cálculo de la resistencia de tierra}
 \begin{itemize}
-\item Electrodos en paralelo: Para mejorar la resistencia de toma de tierra, se utilizan varios electrodos interconectados, situados a distancias del orden de 10 m. De esta forma, \alert{la resistencia equivalente es (aproximadamente) el paralelo de las individuales}.
+\item \alert{Electrodos en paralelo}: Para mejorar la resistencia de toma de tierra, se utilizan varios electrodos interconectados, situados a distancias del orden de 10 m. De esta forma, \alert{la resistencia equivalente es (aproximadamente) el paralelo de las individuales}.
 \end{itemize}
 
 \begin{block}{Por ejemplo}
 Para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
-$\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10 picas de
+$\rho=\SI{100}{\ohm\meter}$ se deberán utilizar aproximadamente 10 picas de
 una longitud de 2 metros (cada una de ellas tendrá una resistencia
 $R_{t,i}=\SI{50}{\ohm}$).
 \end{block}
@@ -556,8 +556,12 @@ de descargas locales} (determinadas por las nubes), pero una vez que se
 producen, son lugares con mayor probabilidad de impacto.
 \end{frame}
 
-\begin{frame}[label=sec-4-1-6]{Descarga y campo magnético}
+\begin{frame}[plain,label=sec-4-1-6]{Descarga y campo magnético}
+
 \begin{columns}
+\begin{column}{6cm\textwidth}
+\includegraphics[height=0.8\textheight]{../figs/SobretensionInducida.pdf}
+\end{column}
 \begin{column}{6cm\textwidth}
 \begin{itemize}
 \item Una descarga eléctrica supone una corriente de gran valor en un lapso de tiempo muy corto.
@@ -567,16 +571,10 @@ producen, son lugares con mayor probabilidad de impacto.
 \item Un flujo magnético variable produce una fuerza electromotriz entre los extremos del area atravesada.
 \end{itemize}
 \end{column}
-\begin{column}{4cm\textwidth}
-\includegraphics[height=0.9\textheight]{../figs/SobretensionInducida.pdf}
-\end{column}
 \end{columns}
 \end{frame}
 
-\subsection{Protecciones}
-\label{sec-4-2}
-
-\begin{frame}[label=sec-4-2-1]{Factores de influencia}
+\begin{frame}[label=sec-4-1-7]{Factores de influencia}
 La fuerza electromotriz inducida depende de:
 
 \begin{itemize}
@@ -589,11 +587,15 @@ tormenta).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-2]{Area y cableado}
+\subsection{Protecciones}
+\label{sec-4-2}
+
+
+\begin{frame}[label=sec-4-2-1]{Area y cableado}
 \includegraphics[width=.9\linewidth]{../figs/BucleCableadoOptimo.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-3]{Protección externa}
+\begin{frame}[label=sec-4-2-2]{Protección externa}
 Un sistema de protección externa contra el rayo se compone de:
 
 \begin{itemize}
@@ -605,11 +607,11 @@ Un sistema de protección externa contra el rayo se compone de:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-4]{Protección externa}
+\begin{frame}[label=sec-4-2-3]{Protección externa}
 \includegraphics[width=.9\linewidth]{../figs/AreaProteccionPararrayos.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-5]{Protección externa}
+\begin{frame}[label=sec-4-2-4]{Protección externa}
 \begin{itemize}
 \item Se debe calcular una \alert{distancia de seguridad} entre la bajada del
 pararrayos y las instalaciones metálicas cercanas.
@@ -627,7 +629,7 @@ puesta a tierra deben ser \alert{independientes}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-6]{Protecciones internas}
+\begin{frame}[label=sec-4-2-5]{Protecciones internas}
 \begin{itemize}
 \item \alert{Todas las masas deben estar conectadas a un sistema de puesta a
 tierra}. En general, la estructura de soporte se conecta directamente
@@ -643,19 +645,19 @@ un cortocircuito entre sus conexiones.
 \end{frame}
 
 
-\begin{frame}[label=sec-4-2-7]{Protecciones Internas}
+\begin{frame}[label=sec-4-2-6]{Protecciones Internas}
 \includegraphics[height=0.8\textheight]{../figs/CajaProteccionesPhotocampa.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-4-2-8]{Protecciones Internas}
+\begin{frame}[label=sec-4-2-7]{Protecciones Internas}
 \includegraphics[width=.9\linewidth]{../figs/CajaForumDestruida.pdf}
 \end{frame}
 
 \section{Resumen de protecciones}
 \label{sec-5}
 
-\begin{frame}[label=sec-5-0-1]{Diagrama Unifilar}
-\includegraphics[width=.9\linewidth]{../figs/UnifilarCR1.pdf}
+\begin{frame}[plain,label=sec-5-0-1]{Diagrama Unifilar}
+\includegraphics[width=1.2\textwidth]{../figs/UnifilarCR1.pdf}
 \end{frame}
 
 \subsection{Circuito DC}
@@ -875,5 +877,5 @@ distribuidora de acuerdo con el Reglamento Electrotécnico para Baja
 Tensión.
 \end{itemize}
 \end{frame}
-% Emacs 24.3.1 (Org mode 8.2.7c)
+% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

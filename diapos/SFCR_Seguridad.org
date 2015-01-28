@@ -380,21 +380,21 @@ aplicada al generador fotovoltaico.
 
 *** Cálculo de la resistencia de tierra
 
-- Resistencia de puesta a tierra: Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y $L$ la longitud de la pica.
+- *Resistencia de puesta a tierra*: Para una pica vertical $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y $L$ la longitud de la pica.
 
-- Resistividad en función del terreno
+- *Resistividad en función del terreno*
 
-| Terrenos cultivables fértiles      | $50\,\Omega\cdot m$     |
-| Terrenos cultivables poco fértiles | $500\,\Omega\cdot m$    |
-| Suelos pedregosos                  | $3\,000\,\Omega\cdot m$ |
+| Terrenos cultivables fértiles      | $\SI{50}{\ohm\meter}$   |
+| Terrenos cultivables poco fértiles | $\SI{500}{\ohm\meter}$  |
+| Suelos pedregosos                  | $\SI{3000}{\ohm\meter}$ |
 
 *** Cálculo de la resistencia de tierra
 
-- Electrodos en paralelo: Para mejorar la resistencia de toma de tierra, se utilizan varios electrodos interconectados, situados a distancias del orden de 10 m. De esta forma, *la resistencia equivalente es (aproximadamente) el paralelo de las individuales*.
+- *Electrodos en paralelo*: Para mejorar la resistencia de toma de tierra, se utilizan varios electrodos interconectados, situados a distancias del orden de 10 m. De esta forma, *la resistencia equivalente es (aproximadamente) el paralelo de las individuales*.
 
 **** Por ejemplo
 Para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
-$\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10 picas de
+$\rho=\SI{100}{\ohm\meter}$ se deberán utilizar aproximadamente 10 picas de
 una longitud de 2 metros (cada una de ellas tendrá una resistencia
 $R_{t,i}=\SI{50}{\ohm}$).
 
@@ -463,7 +463,16 @@ de descargas locales* (determinadas por las nubes), pero una vez que se
 producen, son lugares con mayor probabilidad de impacto.
 
 *** Descarga y campo magnético
+    :PROPERTIES:
+    :BEAMER_opt: plain
+    :END:
 
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 6cm
+     :END:
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/SobretensionInducida.pdf]]
 **** 								      :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 6cm
@@ -473,14 +482,6 @@ producen, son lugares con mayor probabilidad de impacto.
 - Esta corriente produce una inducción magnética a su alrededor, también de caracter variable.
 
 - Un flujo magnético variable produce una fuerza electromotriz entre los extremos del area atravesada.
-**** 								      :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 4cm
-     :END:
-#+ATTR_LATEX: :height 0.9\textheight
-[[../figs/SobretensionInducida.pdf]]
-
-** Protecciones
 
 *** Factores de influencia
 
@@ -492,6 +493,9 @@ La fuerza electromotriz inducida depende de:
    tormenta).
 
 -  *Area efectiva del sistema* (depende del diseñador y del instalador).
+
+** Protecciones
+
 
 *** Area y cableado
 
@@ -552,7 +556,10 @@ Un sistema de protección externa contra el rayo se compone de:
 * Resumen de protecciones
 
 *** Diagrama Unifilar
-
+    :PROPERTIES:
+    :BEAMER_opt: plain
+    :END:
+#+ATTR_LATEX: :width 1.2\textwidth
 [[../figs/UnifilarCR1.pdf]]
 
 ** Circuito DC
