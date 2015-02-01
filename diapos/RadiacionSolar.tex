@@ -1,4 +1,4 @@
-% Created 2015-01-18 dom 09:27
+% Created 2015-02-01 dom 02:04
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -1538,7 +1538,7 @@ d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
 \end{itemize}
 
 \[
-\mathbf{D} = \mathbf{O} - \mathbf{M} =  \left\{ (o_1 - m_1) \dots (o_n - m_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
+\mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
 \]
 \end{frame}
 
@@ -1547,14 +1547,14 @@ d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
 \item Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
 \end{itemize}
 \[
-MBE = \overline{\mathbf{D}} = \overline{\mathbf{O}} - \overline{\mathbf{M}} = \frac{1}{n} \sum_{i=1}^n (o_i - m_i)
+MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
 \]
 \pause
 \begin{itemize}
 \item Root Mean Square Error (RMSD), diferencia cuadrático media:
 \end{itemize}
 \[
-RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (o_i - m_i)^2  \right)^{1/2}
+RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
 \]
 \end{frame}
 
@@ -1582,7 +1582,7 @@ RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
 \end{itemize}
 
 \[
-MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|o_i - m_i\right|
+MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
 \]
 \begin{itemize}
 \item El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
