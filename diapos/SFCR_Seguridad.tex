@@ -1,4 +1,4 @@
-% Created 2015-01-28 mié 22:18
+% Created 2015-02-07 sáb 15:58
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -663,6 +663,7 @@ un cortocircuito entre sus conexiones.
 \subsection{Circuito DC}
 \label{sec-5-1}
 
+
 \begin{frame}[label=sec-5-1-1]{Tres niveles de protección}
 Todo el sistema de protección para sistemas IT se puede concebir en tres
 niveles:
@@ -714,7 +715,11 @@ tierra puedan adquirir las masas en caso de derivación.
 \end{description}
 \end{frame}
 
-\begin{frame}[label=sec-5-1-5]{Cortocircuitos}
+\begin{frame}[label=sec-5-1-5]{}
+\includegraphics[height=0.8\textheight]{../figs/CajaDC.jpg}
+\end{frame}
+
+\begin{frame}[label=sec-5-1-6]{Cortocircuitos}
 \begin{itemize}
 \item El \alert{cortocircuito} es un punto de trabajo \alert{no peligroso para el
 generador fotovoltaico}.
@@ -731,7 +736,7 @@ pérdida de aislamiento.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-5-1-6]{Fusibles}
+\begin{frame}[label=sec-5-1-7]{Fusibles}
 \begin{itemize}
 \item El \alert{fusible por rama} sirve principalmente como \alert{elemento de
 seccionamiento} (facilita las tareas de mantenimiento). Debe elegirse
@@ -752,7 +757,7 @@ normalmente $I_{2}=1.6\cdot I_{n}$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-5-1-7]{Fusibles}
+\begin{frame}[label=sec-5-1-8]{Fusibles}
 \begin{itemize}
 \item En las instalaciones eléctricas convencionales es frecuente el empleo
 de fusibles (y otros elementos de protección) en cascada con poder de
@@ -763,7 +768,7 @@ cortocircuito es sustancialmente superior a la de operación.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-5-1-8]{Fusibles}
+\begin{frame}[label=sec-5-1-9]{Fusibles}
 \begin{itemize}
 \item Sin embargo, su traslación directa a los sistemas fotovoltaicos
 carece de sentido dada la similitud entre ambas corrientes.
@@ -774,7 +779,7 @@ la ofrece el portafusibles y no el fusible mismo.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-5-1-9]{Sobretensiones}
+\begin{frame}[label=sec-5-1-10]{Sobretensiones}
 \begin{itemize}
 \item Se protegerá la entrada CC del inversor mediante \alert{varistores}
 (dispositivos bipolares de protección clase II), válidos para la
@@ -790,91 +795,65 @@ circuito abierto.
 \subsection{Circuito AC}
 \label{sec-5-2}
 
-\begin{frame}[label=sec-5-2-1]{Cortocircuitos y sobrecargas}
-Según el RD 1663-2000 es necesario incluir un \alert{interruptor general
-manual}, que será un interruptor magnetotérmico omnipolar.
-
-Este interruptor, que se ubica en el cuadro de contadores de la
-instalación fotovoltaica, será \alert{accesible sólo a la empresa
-distribuidora}, con objeto de poder realizar la desconexión manual, que
-permita la realización, de forma segura, de labores de mantenimiento en
-la red de la compañía eléctrica.
+\begin{frame}[label=sec-5-2-1]{}
+\includegraphics[width=.9\linewidth]{../figs/CajaAC.jpg}
 \end{frame}
 
 \begin{frame}[label=sec-5-2-2]{Cortocircuitos y sobrecargas}
-\begin{itemize}
-\item Esta inaccesibilidad obliga a introducir un \alert{segundo magnetotérmico
-omnipolar} en la instalación, de menor intensidad nominal, que será
-el que realmente proteja a la instalación AC de las sobrecargas y
-cortocircuitos.
+Según el RD 1663-2000 es necesario incluir un \alert{interruptor general manual}, que será un interruptor magnetotérmico omnipolar.
 
-\item Este segundo magnetotérmico actuará antes que el interruptor general
-manual, salvo cortocircuitos de cierta importancia provenientes de la
-red de la compañía.
-
-\item Asimismo, con el fin de dar cierta independencia a las líneas propias
-de cada inversor, se utilizará un magnetotérmico de menor corriente
-asignada para cada inversor.
-\end{itemize}
+Este interruptor, que se ubica en el cuadro de contadores de la instalación fotovoltaica, será \alert{accesible sólo a la empresa distribuidora}, con objeto de poder realizar la desconexión manual, que permita la realización, de forma segura, de labores de mantenimiento en la red de la compañía eléctrica.
 \end{frame}
 
 \begin{frame}[label=sec-5-2-3]{Cortocircuitos y sobrecargas}
-Se utilizarán \alert{magnetotérmicos tipo C}, los utilizados cuando no existen
-corrientes de arranque de consumo elevadas, cumpliendo:
+\begin{itemize}
+\item Esta inaccesibilidad obliga a introducir un \alert{segundo magnetotérmico omnipolar} en la instalación, de menor intensidad nominal, que será el que realmente proteja a la instalación AC de las sobrecargas y cortocircuitos.
+
+\item Este segundo magnetotérmico actuará antes que el interruptor general manual, salvo cortocircuitos de cierta importancia provenientes de la red de la compañía.
+
+\item Asimismo, con el fin de dar cierta independencia a las líneas propias de cada inversor, se utilizará un magnetotérmico de menor corriente asignada para cada inversor.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-5-2-4]{Cortocircuitos y sobrecargas}
+Se utilizarán \alert{magnetotérmicos tipo C}, los utilizados cuando no existen corrientes de arranque de consumo elevadas, cumpliendo:
 
 $$\begin{aligned}
 I_{B} & < & I_{n}<I_{z}\\
 I_{2} & < & 1.45\cdot I_{z}\end{aligned}$$
 
-Los interruptores magnetotérmicos normalizados cumplen
-$I_{2}=1.45\cdot I_{n}$.
-\end{frame}
-
-\begin{frame}[label=sec-5-2-4]{Interruptor diferencial}
-\begin{itemize}
-\item Un interruptor diferencial está basado en un toroide que enlaza a
-todos los conductores. Si existe una corriente de defecto, la
-corriente en cada conductor es diferente. Según la sensibilidad del
-interruptor, cortará el circuito a partir de un umbral de corriente.
-
-\item Al estar basado en la ley de Faraday (fuerza electromotriz creada un
-por un flujo magnético variable), \alert{no funciona en circuitos DC}.
-\end{itemize}
+Los interruptores magnetotérmicos normalizados cumplen $I_{2}=1.45\cdot I_{n}$.
 \end{frame}
 
 \begin{frame}[label=sec-5-2-5]{Interruptor diferencial}
 \begin{itemize}
-\item En redes de distribución pública la conexión es TT. La corriente de
-fallo cerrará el circuito a través de la puesta a tierra del neutro
-del centro de transformación. Por tanto, el diferencial \alert{no} protege
-el tramo comprendido entre él y el centro de transformación.
+\item Un interruptor diferencial está basado en un toroide que enlaza a todos los conductores. Si existe una corriente de defecto, la corriente en cada conductor es diferente. Según la sensibilidad del interruptor, cortará el circuito a partir de un umbral de corriente.
+
+\item Al estar basado en la ley de Faraday (fuerza electromotriz creada un por un flujo magnético variable), \alert{no funciona en circuitos DC}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-5-2-6]{Interruptor diferencial}
+\begin{itemize}
+\item En redes de distribución pública la conexión es TT. La corriente de fallo cerrará el circuito a través de la puesta a tierra del neutro del centro de transformación. Por tanto, el diferencial \alert{no} protege el tramo comprendido entre él y el centro de transformación.
 \end{itemize}
 
 \includegraphics[width=.9\linewidth]{../figs/InterruptorDiferencial.pdf}
 \end{frame}
 
-\begin{frame}[label=sec-5-2-6]{Interruptor diferencial}
+\begin{frame}[label=sec-5-2-7]{Interruptor diferencial}
 \begin{itemize}
-\item La instalación contará con diferencial de 30 mA de sensibilidad en la
-parte CA, para proteger de derivaciones en este circuito.
+\item La instalación contará con diferencial de 30 mA de sensibilidad en la parte CA, para proteger de derivaciones en este circuito.
 
-\item Con el fin de que sólo actúe por fallos a tierra, será de una
-corriente asignada superior a la del magnetotérmico de protección.
+\item Con el fin de que sólo actúe por fallos a tierra, será de una corriente asignada superior a la del magnetotérmico de protección.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-5-2-7]{Puesta a tierra}
+\begin{frame}[label=sec-5-2-8]{Puesta a tierra}
 \begin{itemize}
-\item Según RD 1663/2000, en que se fijan las condiciones técnicas para la
-conexión de instalaciones fotovoltaicas a la red, \alert{la puesta a
-tierra} se realizará de forma que \alert{no altere la de la compañía
-eléctrica distribuidora}, con el fin de no transmitir defectos a la
-misma.
+\item Según RD 1663/2000, en que se fijan las condiciones técnicas para la conexión de instalaciones fotovoltaicas a la red, \alert{la puesta a tierra} se realizará de forma que \alert{no altere la de la compañía eléctrica distribuidora}, con el fin de no transmitir defectos a la misma.
 
-\item Asimismo, \alert{las masas de la instalación fotovoltaica estarán
-conectadas a una tierra independiente de la del neutro} de la empresa
-distribuidora de acuerdo con el Reglamento Electrotécnico para Baja
-Tensión.
+\item Asimismo, \alert{las masas de la instalación fotovoltaica estarán conectadas a una tierra independiente de la del neutro} de la empresa distribuidora de acuerdo con el Reglamento Electrotécnico para Baja Tensión.
 \end{itemize}
 \end{frame}
 % Emacs 24.4.1 (Org mode 8.2.7c)

@@ -564,6 +564,7 @@ Un sistema de protección externa contra el rayo se compone de:
 
 ** Circuito DC
 
+
 *** Tres niveles de protección
 
 Todo el sistema de protección para sistemas IT se puede concebir en tres
@@ -606,6 +607,10 @@ niveles:
    proporcionada por la puesta a tierra directa de todas las masas de la
    planta. Gracias a ella se limitara la tensión que con respecto a
    tierra puedan adquirir las masas en caso de derivación.
+
+*** 
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/CajaDC.jpg]]
 
 *** Cortocircuitos
 
@@ -672,82 +677,56 @@ niveles:
 
 ** Circuito AC
 
-*** Cortocircuitos y sobrecargas
+*** 
 
-Según el RD 1663-2000 es necesario incluir un *interruptor general
-manual*, que será un interruptor magnetotérmico omnipolar.
-
-Este interruptor, que se ubica en el cuadro de contadores de la
-instalación fotovoltaica, será *accesible sólo a la empresa
-distribuidora*, con objeto de poder realizar la desconexión manual, que
-permita la realización, de forma segura, de labores de mantenimiento en
-la red de la compañía eléctrica.
+[[../figs/CajaAC.jpg]]
 
 *** Cortocircuitos y sobrecargas
 
--  Esta inaccesibilidad obliga a introducir un *segundo magnetotérmico
-   omnipolar* en la instalación, de menor intensidad nominal, que será
-   el que realmente proteja a la instalación AC de las sobrecargas y
-   cortocircuitos.
+Según el RD 1663-2000 es necesario incluir un *interruptor general manual*, que será un interruptor magnetotérmico omnipolar.
 
--  Este segundo magnetotérmico actuará antes que el interruptor general
-   manual, salvo cortocircuitos de cierta importancia provenientes de la
-   red de la compañía.
-
--  Asimismo, con el fin de dar cierta independencia a las líneas propias
-   de cada inversor, se utilizará un magnetotérmico de menor corriente
-   asignada para cada inversor.
+Este interruptor, que se ubica en el cuadro de contadores de la instalación fotovoltaica, será *accesible sólo a la empresa distribuidora*, con objeto de poder realizar la desconexión manual, que permita la realización, de forma segura, de labores de mantenimiento en la red de la compañía eléctrica.
 
 *** Cortocircuitos y sobrecargas
 
-Se utilizarán *magnetotérmicos tipo C*, los utilizados cuando no existen
-corrientes de arranque de consumo elevadas, cumpliendo:
+-  Esta inaccesibilidad obliga a introducir un *segundo magnetotérmico omnipolar* en la instalación, de menor intensidad nominal, que será el que realmente proteja a la instalación AC de las sobrecargas y cortocircuitos.
+
+-  Este segundo magnetotérmico actuará antes que el interruptor general manual, salvo cortocircuitos de cierta importancia provenientes de la red de la compañía.
+
+-  Asimismo, con el fin de dar cierta independencia a las líneas propias de cada inversor, se utilizará un magnetotérmico de menor corriente asignada para cada inversor.
+
+*** Cortocircuitos y sobrecargas
+
+Se utilizarán *magnetotérmicos tipo C*, los utilizados cuando no existen corrientes de arranque de consumo elevadas, cumpliendo:
 
 $$\begin{aligned}
 I_{B} & < & I_{n}<I_{z}\\
 I_{2} & < & 1.45\cdot I_{z}\end{aligned}$$
 
-Los interruptores magnetotérmicos normalizados cumplen
-$I_{2}=1.45\cdot I_{n}$.
+Los interruptores magnetotérmicos normalizados cumplen $I_{2}=1.45\cdot I_{n}$.
 
 *** Interruptor diferencial
 
--  Un interruptor diferencial está basado en un toroide que enlaza a
-   todos los conductores. Si existe una corriente de defecto, la
-   corriente en cada conductor es diferente. Según la sensibilidad del
-   interruptor, cortará el circuito a partir de un umbral de corriente.
+-  Un interruptor diferencial está basado en un toroide que enlaza a todos los conductores. Si existe una corriente de defecto, la corriente en cada conductor es diferente. Según la sensibilidad del interruptor, cortará el circuito a partir de un umbral de corriente.
 
--  Al estar basado en la ley de Faraday (fuerza electromotriz creada un
-   por un flujo magnético variable), *no funciona en circuitos DC*.
+-  Al estar basado en la ley de Faraday (fuerza electromotriz creada un por un flujo magnético variable), *no funciona en circuitos DC*.
 
 *** Interruptor diferencial
 
--  En redes de distribución pública la conexión es TT. La corriente de
-   fallo cerrará el circuito a través de la puesta a tierra del neutro
-   del centro de transformación. Por tanto, el diferencial *no* protege
-   el tramo comprendido entre él y el centro de transformación.
+-  En redes de distribución pública la conexión es TT. La corriente de fallo cerrará el circuito a través de la puesta a tierra del neutro del centro de transformación. Por tanto, el diferencial *no* protege el tramo comprendido entre él y el centro de transformación.
 
 [[../figs/InterruptorDiferencial.pdf]]
 
 *** Interruptor diferencial
 
--  La instalación contará con diferencial de 30 mA de sensibilidad en la
-   parte CA, para proteger de derivaciones en este circuito.
+-  La instalación contará con diferencial de 30 mA de sensibilidad en la parte CA, para proteger de derivaciones en este circuito.
 
--  Con el fin de que sólo actúe por fallos a tierra, será de una
-   corriente asignada superior a la del magnetotérmico de protección.
+-  Con el fin de que sólo actúe por fallos a tierra, será de una corriente asignada superior a la del magnetotérmico de protección.
 
 *** Puesta a tierra
 
--  Según RD 1663/2000, en que se fijan las condiciones técnicas para la
-   conexión de instalaciones fotovoltaicas a la red, *la puesta a
-   tierra* se realizará de forma que *no altere la de la compañía
-   eléctrica distribuidora*, con el fin de no transmitir defectos a la
-   misma.
+-  Según RD 1663/2000, en que se fijan las condiciones técnicas para la conexión de instalaciones fotovoltaicas a la red, *la puesta a tierra* se realizará de forma que *no altere la de la compañía eléctrica distribuidora*, con el fin de no transmitir defectos a la misma.
 
--  Asimismo, *las masas de la instalación fotovoltaica estarán
-   conectadas a una tierra independiente de la del neutro* de la empresa
-   distribuidora de acuerdo con el Reglamento Electrotécnico para Baja
-   Tensión.
+-  Asimismo, *las masas de la instalación fotovoltaica estarán conectadas a una tierra independiente de la del neutro* de la empresa distribuidora de acuerdo con el Reglamento Electrotécnico para Baja Tensión.
 
 
