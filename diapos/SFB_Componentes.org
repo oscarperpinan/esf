@@ -7,141 +7,106 @@
 
 *** Agua y ESF
 
--  Las *curvas de generación fotovoltaica y de consumo de agua están
-   bien adaptadas*: las épocas de mayor calor y radiación solar son de
-   mayor consumo de agua.
+-  Las *curvas de generación fotovoltaica y de consumo de agua están bien adaptadas*: las épocas de mayor calor y radiación solar son de mayor consumo de agua.
 
--  Se puede utilizar el *agua como medio de acumulación de energía*,
-   evitando baterías con el consiguiente ahorro de costes, a la vez que
-   aumenta la seguridad, eficiencia y fiabilidad.
+-  Se puede utilizar el *agua como medio de acumulación de energía*, evitando baterías con el consiguiente ahorro de costes, a la vez que aumenta la seguridad, eficiencia y fiabilidad.
 
--  El bombeo de agua directo fotovoltaico es limpio: *no presenta los
-   riesgos de una contaminación del pozo a causa de posibles derrames de
-   combustible*. Asimismo, se evitan los problemas logísticos de
-   suministro y transporte de carburante.
+-  El bombeo de agua directo fotovoltaico es limpio: *no presenta los riesgos de una contaminación del pozo a causa de posibles derrames de combustible*. Asimismo, se evitan los problemas logísticos de suministro y transporte de carburante.
 
 
 *** Composición
-
+#+ATTR_LATEX: :height \textheight
 [[../figs/EsquemaBombeo_oscar.pdf]]
 
 * Motobombas
 
 *** Definición
 
--  Un *motor eléctrico* es una máquina eléctrica que *transforma energía
-   eléctrica en energía mecánica* por medio de interacciones
-   electromagnéticas.
+-  Un *motor eléctrico* es una máquina eléctrica que *transforma energía eléctrica en energía mecánica* por medio de interacciones electromagnéticas.
 
--  Una *bomba* es una *máquina hidráulica* generadora que* transforma la
-   energía mecánica* con la que es accionada *en energía hidráulica del
-   fluido* (agua). Al incrementar la energía del fluido, se aumenta su
-   presión, su velocidad o su altura, todas ellas relacionadas según el
-   principio de Bernoulli.
+-  Una *bomba* es una *máquina hidráulica* generadora que *transforma la energía mecánica* con la que es accionada *en energía hidráulica del fluido* (agua). Al incrementar la energía del fluido, se aumenta su presión, su velocidad o su altura, todas ellas relacionadas según el principio de Bernoulli.
 
 ** Motores eléctricos
 
 *** Electromagnetismo
 
--  Un *campo magnético* ejerce una *fuerza* sobre una *carga en
-   movimiento*.
+-  Un *campo magnético* ejerce una *fuerza* sobre una *carga en movimiento*.
 
--  Una *corriente eléctrica crea un campo magnético* en torno al
-   conductor.
+-  Una *corriente eléctrica crea un campo magnético* en torno al conductor.
 
--  Un *conductor por el que circula corriente*, situado *en el seno de
-   un campo magnético*, altera este campo magnético, y *experimenta una
-   fuerza* que lo expulsa para *disminuir la alteración*.
+-  Un *conductor por el que circula corriente*, situado *en el seno de un campo magnético*, altera este campo magnético, y *experimenta una fuerza* que lo expulsa para *disminuir la alteración*.
 
 *** Electromagnetismo
 
--  Entre los puntos extremos de una *espira* estática atravesada por
-   *campo magnético variable*, aparece una *tensión inducida*.
+-  Entre los puntos extremos de una *espira* estática atravesada por *campo magnético variable*, aparece una *tensión inducida*.
 
--  Esta tensión es igual a la *variación* (con signo contrario) *del
-   flujo magnético* que atraviesa la espira.
+-  Esta tensión es igual a la *variación* (con signo contrario) *del flujo magnético* que atraviesa la espira.
 
--  Si la espira se cierra, *circulará una corriente* que, a su vez,
-   creará un campo magnético que contrarrestará la variación de flujo.
+-  Si la espira se cierra, *circulará una corriente* que, a su vez, creará un campo magnético que contrarrestará la variación de flujo.
 
 -  Al circular corriente, la espira experimentará un *par de giro*.
 
    -  *Resultado aprovechable* del motor en forma de potencia mecánica.
 
-   -  Restablecer el equilibrio existente antes, intentando *alinear los
-      ejes magnéticos de inductor e inducido*.
+   -  Restablecer el equilibrio existente antes, intentando *alinear los ejes magnéticos de inductor e inducido*.
 
 
 
-*** Motores
+*** Estator, rotor, inducido e inductor
 
-Estator, rotor, inducido e inductor
+-  El elemento que permanece fijo es el estator y el que realiza el giro es el rotor.
 
--  El elemento que permanece fijo es el estator y el que realiza el giro
-   es el rotor.
+-  Según el tipo de motor, el rotor puede ser el inducido y el estator el inductor o viceversa.
 
--  Según el tipo de motor, el rotor puede ser el inducido y el estator
-   el inductor o viceversa.
 
-Frecuencia eléctrica y velocidad
+*** Frecuencia eléctrica y velocidad
 
 $$\begin{aligned}
 f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
 
--  $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en
-   el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
+-  $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
 
--  Al utilizar colector de delgas (escobillas) en el inducido, la
-   frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
+-  Al utilizar colector de delgas (escobillas) en el inducido, la frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
 
 *** Tipos de motores en ESF
 
-Motor DC
+**** Motor DC
 
 -  $f_{1}=0$; $f_{L}=0$;
 
--  *Estator-Inductor* alimentado por *corriente DC* (o imanes
-   permanentes).
+-  *Estator-Inductor* alimentado por *corriente DC* (o imanes permanentes).
 
--  El *colector de delgas* transforma la frecuencia de alimentación (DC)
-   en alterna.
+-  El *colector de delgas* transforma la frecuencia de alimentación (DC) en alterna.
 
 -  *Rotor-Inducido gira sincronizado* con la frecuencia "transformada".
 
 *** Tipos de motores en ESF
 
-Motor DC
+**** Motor DC
 
--  Los *motores DC con escobillas están sometidos a desgaste*. Necesitan
-   mantenimiento y por tanto deben evitarse con bombas sumergidas.
+-  Los *motores DC con escobillas están sometidos a desgaste*. Necesitan mantenimiento y por tanto deben evitarse con bombas sumergidas.
 
--  Existen *motores DC sin escobillas*, donde la conmutación se realiza
-   mediante un *circuito electrónico*.
+-  Existen *motores DC sin escobillas*, donde la conmutación se realiza mediante un *circuito electrónico*.
 
--  No necesitan inversor, tienen buen rendimiento, pero están indicados
-   para *potencias bajas*.
+-  No necesitan inversor, tienen buen rendimiento, pero están indicados para *potencias bajas*.
 
 *** Tipos de motores en ESF
 
-Motor asíncrono o de inducción
+**** Motor asíncrono o de inducción
 
 -  $f_{1}\neq0$;
 
--  *Estator-inductor* alimentado por una *corriente trifásica alterna*.
-   Produce un campo giratorio.
+-  *Estator-inductor* alimentado por una *corriente trifásica alterna*.  Produce un campo giratorio.
 
--  *Rotor-inducido* constituido por *espiras cortocircuitadas* (jaula de
-   ardilla).
+-  *Rotor-inducido* constituido por *espiras cortocircuitadas* (jaula de ardilla).
 
--  Se produce un par que busca alinear el eje de las espiras con el
-   campo inducido. El rotor se mueve siguiendo al campo giratorio.
+-  Se produce un par que busca alinear el eje de las espiras con el campo inducido. El rotor se mueve siguiendo al campo giratorio.
 
--  La v*elocidad de giro es inferior a la frecuencia de alimentación*
-   (asíncrono).
+-  La *velocidad de giro es inferior a la frecuencia de alimentación* (asíncrono).
 
 *** Tipos de motores en ESF
 
-Motor asíncrono o de inducción
+**** Motor asíncrono o de inducción
 
 -  $f_{2}=f_{1}-n\cdot p$
 
@@ -149,44 +114,25 @@ Motor asíncrono o de inducción
 
 -  Son los más comunes, y más baratos que los DC.
 
--  Tienen *pares de arranque muy bajos*, adecuados para bombas que
-   requieren bajo par de arranque, como las *centrífugas*.
+-  Tienen *pares de arranque muy bajos*, adecuados para bombas que requieren bajo par de arranque, como las *centrífugas*.
 
 ** Bombas
 
 *** Ecuación de Bernouilli
 
-Conservación de energía
+- Conservación de energía
 
 $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 *** Bombas de desplazamiento positivo
 
-Principio: cambio de presión
+- *Principio*: cambio de presión
 
-El aumento de presión se realiza por el empuje de las paredes de las
-cámaras que varían su volumen.
+- El aumento de presión se realiza por el empuje de las paredes de las cámaras que varían su volumen.
 
--  *Bombas de émbolo alternativo*, en las que existe uno o varios
-   compartimentos fijos, pero de volumen variable, por la acción de un
-   émbolo o de una membrana (bombas de pistones)
+  - *Bombas de émbolo alternativo*, en las que existe uno o varios compartimentos fijos, pero de volumen variable, por la acción de un émbolo o de una membrana (bombas de pistones)
 
--  *Bombas volumétricas*, en las que una masa fluida es confinada en uno
-   o varios compartimentos que se desplazan desde la zona de entrada (de
-   baja presión) hasta la zona de salida (de alta presión) de la
-   máquina. (p.ej. bomba de tornillo).
-
-*** Bombas helicoidales y de membrana
-
--  Formadas por un *contorno móvil* que obliga al fluido a avanzar por
-   la máquina por *cambios de volumen*.
-
--  Son apropiadas para *altos incrementos de presión y bajos caudales*.
-   Necesitan un *elevado par de arranque* (por tanto no pueden ser
-   acopladas directamente al generador).
-
--  Las bombas de diafragma, más económicas, requieren el *reemplazo de
-   los diafragmas* cada dos o tres años, dependiendo del fabricante.
+  - *Bombas volumétricas*, en las que una masa fluida es confinada en uno o varios compartimentos que se desplazan desde la zona de entrada (de baja presión) hasta la zona de salida (de alta presión) de la máquina. (p.ej. bomba de tornillo).
 
 *** Bombas de membrana
 
@@ -198,19 +144,21 @@ cámaras que varían su volumen.
 
 [[../figs/bombatornillo.pdf]]
 
+*** Bombas helicoidales y de membrana
+
+-  Formadas por un *contorno móvil* que obliga al fluido a avanzar por la máquina por *cambios de volumen*.
+
+-  Son apropiadas para *altos incrementos de presión y bajos caudales*.  Necesitan un *elevado par de arranque* (por tanto no pueden ser acopladas directamente al generador).
+
+-  Las bombas de diafragma, más económicas, requieren el *reemplazo de los diafragmas* cada dos o tres años, dependiendo del fabricante.
+
 *** Bombas rotodinámicas
 
-Principio: añadir cantidad de movimiento
+- *Principio*: añadir cantidad de movimiento
 
-En este tipo de bombas hay uno o varios rodetes con álabes que giran
-generando un campo de presiones en el fluido.
+- En este tipo de bombas hay uno o varios rodetes con álabes que giran generando un campo de presiones en el fluido.
 
--  *Radiales o centrífugas*, el fluido entra por el centro del rodete,
-   que dispone de unos álabes para conducir el fluido, y por efecto de
-   la fuerza centrífuga es impulsado hacia el exterior, donde es
-   recogido por la carcasa o cuerpo de la bomba, que por el contorno su
-   forma lo conduce hacia las tubuladuras de salida o hacia el siguiente
-   rodete (siguiente etapa)
+  - *Radiales o centrífugas*, el fluido entra por el centro del rodete, que dispone de unos álabes para conducir el fluido, y por efecto de la fuerza centrífuga es impulsado hacia el exterior, donde es recogido por la carcasa o cuerpo de la bomba, que por el contorno su forma lo conduce hacia las tubuladuras de salida o hacia el siguiente rodete (siguiente etapa)
 
 *** Bombas centrífugas
 
@@ -218,27 +166,14 @@ generando un campo de presiones en el fluido.
 
 *** Bombas centrífugas
 
--  Están diseñadas para vencer una *presión más o menos constante*,
-   proporcionando *elevados caudales para bajas alturas manométricas*.
+-  Están diseñadas para vencer una *presión más o menos constante*, proporcionando *elevados caudales para bajas alturas manométricas*.
 
--  Se puede aumentar la altura que son capaces de vencer añadiendo
-   etapas en serie en la misma bomba.
+-  Se puede aumentar la altura que son capaces de vencer añadiendo etapas en serie en la misma bomba.
 
 -  Son *bombas simples y robustas, de bajo coste*.
 
 -  Funcionan bien con pequeños pares de arranque.
-
-*** Leyes de la semejanza
-
-**** Bombas centrífugas
-
-Rendimiento constante
-
-$$\begin{aligned}
-Q & \propto & n\\
-H & \propto & n^{2}\\
-P_{mec} & \propto & n^{3}\\
-T & \propto & n^{2}\end{aligned}$$
+   
 
 *** Según la disposición
 
@@ -260,195 +195,134 @@ T & \propto & n^{2}\end{aligned}$$
 
    -  Tienen un límite en el nivel de succión (8 metros).
 
-   -  Si utilizan agua como lubricante, no deben operar en seco para
-      evitar el sobrecalentamiento.
-
-** Acoplamiento motor-bomba
-
-*** Motobombas típicas
-
--  Motobomba sumergible, motor AC y bomba centrífuga multietapa.
-
--  Bomba sumergible, con motor en superficie.
-
--  Motobomba flotante, con bomba centrífuga.
-
--  Motor DC y bomba centrífuga flotante.
+   -  Si utilizan agua como lubricante, no deben operar en seco para evitar el sobrecalentamiento.
 
 *** Configuraciones típicas
 
--  *Sistemas de baja potencia (50 a 400 Wp)*
+- *Sistemas de baja potencia (50 a 400 Wp)*
 
-   -  Motor DC accionando una bomba de membrana
+  - Motor DC accionando una bomba de membrana
 
-   -  Convertidor DC/DC entre generador y motobomba
+- *Sistemas de media potencia (400-1500 Wp)*
 
--  *Sistemas de media potencia (400-1500 Wp)*
+  - Bomba sumergible centrífuga multietapa con motor asíncrono
 
-   -  Bomba sumergible centrífuga multietapa con motor asíncrono;
-      variador de frecuencia.
+  - Motor DC sin escobillas accionando una bomba helicoidal
 
-   -  Motor DC sin escobillas accionando una bomba helicoidal;
-      controlador externo DC.
+- *Potencia superior a 1 kWp*
 
--  *Potencia superior a 1 kWp*
-
-   -  Bomba sumergible centrífuga multietapa con motor asíncrono;
-      variador de frecuencia.
-
-   -  Motobomba sumergible
-
-
-
+  - Bomba sumergible centrífuga multietapa con motor asíncrono
 *** 
 
-[[../figs/Marruecos4.pdf]]
+[[../figs/Marruecos4.png]]
 
 * Acoplamiento generador-motobomba
 
 *** Motivo
 
--  La *potencia y tensión suministrada por un generador FV varían* con
-   la radiación y la temperatura.
+-  La *potencia y tensión suministrada por un generador FV varían* con la radiación y la temperatura.
 
--  Las condiciones de funcionamiento *no se adaptan siempre a todos los
-   requerimientos de la motobomba*.
+-  Las condiciones de funcionamiento *no se adaptan siempre a todos los requerimientos de la motobomba*.
 
--  Es necesario adaptar las condiciones de funcionamiento de la
-   motobomba al punto de trabajo del generador FV.
+-  Es necesario adaptar las condiciones de funcionamiento de la motobomba al punto de trabajo del generador FV.
 
    -  *Motor AC: variador de frecuencia*
 
-   -  *Motor DC: convertidor DC-DC.*
+   -  *Motor DC: convertidor DC-DC*
 
 *** Convertidor DC-DC
 
--  Dispositivo que *transforma corriente continua de una tensión a
-   otra*. Suelen ser reguladores de conmutación, dando a su salida una
-   tensión regulada.
+-  Dispositivo que *transforma corriente continua de una tensión a otra*. Suelen ser reguladores de conmutación, dando a su salida una tensión regulada.
 
 -  Se utiliza para alimentar *motores DC con generador FV*.
 
 -  Normalmente no incorporan buscador de MPP.
-
+   
 *** Variador de frecuencia
 
--  El variador de frecuencia* transforma una señal alterna de una
-   frecuencia en otra señal alterna de otra frecuencia*.
+- El variador de frecuencia *transforma una señal alterna de una frecuencia en otra señal alterna de otra frecuencia*.
 
--  Está compuesto por un rectificador y un inversor en serie. El
-   rectificador convierte la señal de entrada en continua, y el inversor
-   transforma de nuevo en alterna a la frecuencia deseada.
+- Está compuesto por un rectificador y un inversor con frecuencia variable.
 
--  En sistemas FV puede evitarse la pérdida debida al rectificador
-   entrando directamente al inversor, o bien puede asumirse esta pérdida
-   y entrar al rectificador, lo que sirve como protección contra
-   inversión de polaridad.
+- Realiza *continuas variaciones en la tensión de generador para alcanzar un valor de referencia*.
 
--  El rendimiento de un variador a una tensión cercana a la nominal
-   oscila entre el 94 y el 95%.
+- Para conseguir igualar la tensión de generador y referencia, varía la frecuencia.
 
-*** Variador de frecuencia
+- El rendimiento de un variador a una tensión cercana a la nominal oscila entre el 94 y el 95%.
 
--  Realiza *continuas variaciones en la tensión de generador para
-   alcanzar un valor de referencia*.
-
--  Para conseguir igualar la tensión de generador y referencia, varía la
-   frecuencia.
-
--  No suele realizarse seguimiento del punto de máxima potencia (MPP),
-   ni por temperatura ni por radiación.
-
-*** Variador de frecuencia
-
-$$T_{max}=k_{T}\left(\frac{V_{1}}{f_{1}}\right)^{2}$$
-
-$$\phi\simeq k_{\phi}\frac{V_{1}}{f_{1}}$$
-
--  Par constante: $\frac{V_{1}}{f_{1}}=\mathrm{cte.}$
-
--  Par cuadrático: $V_{1}=k_{V}\cdot f_{1}^{2}$
-
+- No suele realizarse seguimiento del punto de máxima potencia (MPP), ni por temperatura ni por radiación.
+   
 *** Protecciones
 
-Pozo vacío
+**** Pozo vacío
 
 -  *Control de frecuencia de salida del variador*.
 
--  Cuando el motor trabaja en vacío, la corriente consumida baja. Por
-   tanto, el variador debe subir la frecuencia para alcanzar la tensión
-   de referencia.
+-  Cuando el motor trabaja en vacío, la corriente consumida baja. Por tanto, el variador debe subir la frecuencia para alcanzar la tensión de referencia.
 
--  Si se supera la frecuencia de 55 Hz se para el sistema y se marca un
-   intervalo de espera para permitir que el pozo vuelva a llenarse.
+-  Si se supera la frecuencia de 55 Hz se para el sistema y se marca un intervalo de espera para permitir que el pozo vuelva a llenarse.
 
 *** Protecciones
 
-Deposito lleno
+**** Deposito lleno
 
--  *Presostáto en la tubería combinado con una boya en el depósito*.
+- *Presostáto en la tubería combinado con una boya en el depósito*.
 
--  Cuando en el depósito se alcanza un nivel determinado, la boya
-   acciona el cierre de la entrada al depósito.
+- Cuando en el depósito se alcanza un nivel determinado, la boya acciona el cierre de la entrada al depósito.
 
--  Sin embargo, la bomba sigue elevando agua. De esta forma, la presión
-   dentro de la tubería aumenta hasta accionar el Presostáto.
+- Sin embargo, la bomba sigue elevando agua. De esta forma, la presión dentro de la tubería aumenta hasta accionar el presostato.
 
--  Se pone en marcha un temporizador para permitir que baje el nivel del
-   depósito.
+- Se pone en marcha un temporizador para permitir que baje el nivel del depósito.
 
 
 
 *** 
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/VariadorFrecuencia.jpg]]
 
 * Circuito Hidráulico
 
 *** Circuito hidráulico
 
-Es el conjunto de accesorios hidráulicos que completan la instalación
-desde la salida del pozo/sondeo hasta el punto de suministro, pasando
-por el almacenaje en depósito elevado en caso necesario (reserva para
-días de baja o escasa radiación, ya que generalmente se bombea más agua
-de la necesaria)
+  - Tubería de impulsión
 
--  Tubería de impulsión
+  - Boca de pozo
 
--  Boca de pozo
+  - Tubería de distribución y valvulería
 
--  Tubería de distribución y valvulería
-
--  Depósito
+  - Depósito
    
 *** 
 
-[[../figs/CircuitoHidraulico.pdf]]
+[[../figs/CircuitoHidraulico.jpg]]
+
 
 *** Tubería de Impulsión
 
--  Es la tubería instalada a la salida de la bomba.
+- Es la tubería instalada a la salida de la bomba.
 
--  Podrá ser de polietileno de alta densidad calidad alimentaria, de
-   coste menor pero con ciertos problemas a la hora de la instalación
-   por su tendencia a enrollarse.
+- Polietileno de alta densidad y calidad alimentaria
 
--  Como alternativa están las tuberías autoportantes flexibles que
-   evitan los problemas anteriores, aunque su coste es mayor, además de
-   requerir terminales específicos fabricados en acero inoxidable que
-   encarecen la instalación.
+  - Coste menor
+
+  - Tendencia a enrollarse.
+
+- Tuberías autoportantes flexibles
+
+  - Coste mayor
+
+  - Requiere terminales específicos fabricados en acero inoxidable
+
+*** 
+
+[[../figs/Marruecos4.png]]
+
 
 *** Depósito elevado
 
--  Para depósitos pequeños, de 20 a 1.000 l, para agua potable, debe
-   elegirse un depósito plástico de color negro, ya que los colores que
-   transparentan la luz favorecen la aparición de algas y otros
-   contaminantes.
-
--  El plástico puede ser polietileno de alta densidad para uso
-   alimentario.
-
-
+- *Tamaño adecuado para 1 o 2 días de consumo*
+- Para depósitos pequeños (20 a 1.000 l) debe elegirse un *depósito plástico de color negro*  para evitar aparición de algas y otros contaminantes.
+- El plástico puede ser polietileno de alta densidad para uso alimentario.
 
 *** 
 
