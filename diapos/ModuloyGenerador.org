@@ -231,6 +231,14 @@ de las corrientes del grupo de módulos.
 
 *** 
 
+[[../figs/er.jpg]]
+
+*** 
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/TelefoniaRural.jpg]]
+
+*** 
+
 [[../figs/clasificacion2.jpg]]
 
 *** 
@@ -245,6 +253,9 @@ de las corrientes del grupo de módulos.
 
 [[../figs/p1010007.jpg]]
 
+*** 
+
+[[../figs/BarreraRuido.jpg]]
 *** 
 
 [[../figs/TorreguilInterior2.jpg]]
