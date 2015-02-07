@@ -162,6 +162,28 @@ poder ser inyectada en la red convencional.
      :END:
 [[http://www.pvdatabase.org/]]
 
+*** Cubierta Inclinada
+[[../figs/CubiertaInclinada.png]]
+
+*** Cubierta Plana
+[[file:~/github/esf/figs/CubiertaPlana.png]]
+
+*** Parasol
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:~/github/esf/figs/Parasol.png]]
+
+*** Fachada Acristalada
+[[file:~/github/esf/figs/FachadaAcristalada.png]]
+
+*** Muro Cortina
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:~/github/esf/figs/MuroCortina.png]]
+
+*** Aparcamiento
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:~/github/esf/figs/Aparcamiento.png]]
+
+
 *** SFCR en edificación: CTE-HE5
 
 - El CTE-HTE5 divide España en cinco zonas climáticas de acuerdo al valor medio anual de la radiación global diaria en el plano horizontal.
