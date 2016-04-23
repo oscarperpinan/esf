@@ -1,12 +1,9 @@
 Energía Solar Fotovoltaica
 ===
 
-<img src="figs/portadaESF.png"
-alt="portadaESF" height="180" align="left"/>Este repositorio contiene
-los ficheros fuente del libro
-["Energía Solar Fotovoltaica"](http://procomun.wordpress.com/documentos/libroesf/)
-y sus
-[presentaciones asociadas](http://www.slideshare.net/oscarperpinan). Este
+<img src="figs/portadaESF.png" alt="portadaESF" height="180"
+align="left"/>Este repositorio contiene los ficheros fuente del libro
+"Energía Solar Fotovoltaica" y sus presentaciones asociadas. Este
 libro consta de 9 capítulos que cubren los aspectos más importantes de
 esta tecnología desde el punto de visto de la ingeniería de sistemas:
 geometría y radiación solar, dispositivos, módulos y generadores
@@ -24,6 +21,20 @@ src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br
 href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia
 Creative Commons Atribución-NoComercial-CompartirIgual 4.0
 Internacional</a>.
+
+Puedes citar este libro como:
+
+> Perpiñán, O. 2015. Energía Solar Fotovoltaica. http://oscarperpinan.github.io/esf/.
+
+Y si usas bibtex: 
+
+    @book{Perpinan2015,
+    author = {Perpi{\~{n}}{\'{a}}n, O.},
+    title = {{Energ{\'{i}}a Solar Fotovoltaica}},
+    url = {http://oscarperpinan.github.io/esf/},
+    year = {2015}
+    }
+
 
 La maduración de este libro se ha realizado en el contexto del Máster
 de Energías Renovables y Mercado Energético de la EOI y en los cursos
