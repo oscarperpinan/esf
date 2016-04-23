@@ -33,16 +33,35 @@ Creative Commons.
 [[http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png]]
 Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional]].
 
+Puedes citar este libro como:
+
+#+BEGIN_QUOTE
+Perpiñán, O. 2015. Energía Solar Fotovoltaica. http://oscarperpinan.github.io/esf/.
+#+END_QUOTE
+
+Y si usas bibtex: 
+
+#+BEGIN_EXAMPLE
+@book{Perpinan2015,
+author = {Perpi{\~{n}}{\'{a}}n, O.},
+title = {{Energ{\'{i}}a Solar Fotovoltaica}},
+url = {http://oscarperpinan.github.io/esf/},
+year = {2015}
+}
+#+END_EXAMPLE
+
 * Libro
   :PROPERTIES:
   :HTML_CONTAINER_CLASS: container center-block
+  :CUSTOM_ID: libro
   :END:
-  #+ATTR_HTML: :class btn btn-info btn-lg :role button
+  #+ATTR_HTML: :class btn btn-info btn-xs :role button
   [[file:ESF.pdf][PDF]]
 
 * Capítulos y Presentaciones
   :PROPERTIES:
   :HTML_CONTAINER_CLASS: container
+  :CUSTOM_ID: presentaciones
   :END:
 ** 
    :PROPERTIES:
