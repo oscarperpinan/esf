@@ -1,0 +1,188 @@
+#+AUTHOR:    Oscar Perpiñán Lamigueiro
+#+EMAIL:     oscar.perpinan@gmail.com
+#+TITLE:     Energía Solar Fotovoltaica
+#+LANGUAGE:  es
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t TeX:t LaTeX:nil skip:nil d:t tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+LINK_UP:
+#+LINK_HOME:
+#+OPTIONS: html-style:nil
+#+HTML_HEAD: <link rel="icon" type="image/ico" href="favicon.ico">
+#+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+#+HTML_HEAD:    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/readable/bootstrap.min.css">
+#+HTML_HEAD:    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+#+BIND: org-html-postamble nil
+
+
+* 
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container jumbotron
+  :END:
+En esta página puedes acceder al libro *Energía Solar Fotovoltaica* y
+a las presentaciones de cada capítulo. En [[https://github.com/oscarperpinan/esf][el repositorio asociado]]
+puedes encontrar los ficheros fuente.
+
+La maduración de este libro se ha realizado en el contexto del [[http://www.eoi.es/portal/guest/curso/42/medio-ambiente/master-en-energias-renovables-y-mercado-energetico-merme-madrid?EOI_tipoPagina%3D1][Máster
+de Energías Renovables y Mercado Energético de la EOI]] y en los [[http://volta.ieec.uned.es/][cursos
+de experto profesional]] impartidos por el [[http://www.ieec.uned.es/][Departamento de Ingeniería
+Eléctrica, Electrónica y de Control]] de la ETSII-UNED. Una versión
+adaptada de este libro fue publicada en 2012 por la editorial [[http://www.progensa.es][Progensa]]
+con el título “[[http://www.censolar.org/pubdisfv.pdf][Diseño de Sistemas Fotovoltaicos]]” y con licencia
+Creative Commons.
+
+[[http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png]]
+Esta obra está bajo una [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional]].
+
+Puedes citar este libro como:
+
+#+BEGIN_QUOTE
+Perpiñán, O. 2015. Energía Solar Fotovoltaica. http://oscarperpinan.github.io/esf/.
+#+END_QUOTE
+
+Y si usas bibtex: 
+
+#+BEGIN_EXAMPLE
+@book{Perpinan2015,
+author = {Perpi{\~{n}}{\'{a}}n, O.},
+title = {{Energ{\'{i}}a Solar Fotovoltaica}},
+url = {http://oscarperpinan.github.io/esf/},
+year = {2015}
+}
+#+END_EXAMPLE
+
+* Libro
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container center-block
+  :CUSTOM_ID: libro
+  :END:
+  #+ATTR_HTML: :class btn btn-info btn-xs :role button
+  [[file:ESF.pdf][PDF]]
+
+* Capítulos y Presentaciones
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: container
+  :CUSTOM_ID: presentaciones
+  :END:
+** 
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: row
+   :END:
+
+*** Geometría solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.2][Capítulo]] 
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:GeometriaSolar.pdf][Presentación]]
+
+*** Radiación solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.3][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:RadiacionSolar.pdf][Presentación]]
+
+
+*** La célula solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.4][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button    
+    [[file:Celula.pdf][Presentación]]
+
+*** Asociación de dispositivos fotovoltaicos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.5][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ModuloyGenerador.pdf][Presentación]]
+
+*** Sistemas fotovoltaicos de conexión a red
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.6][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFCR_ConceptosGenerales.pdf][Conceptos Generales]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFCR_Diseno.pdf][Diseño]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFCR_ProductividadSombras.pdf][Productividad y Sombras]]
+
+
+*** Sistemas fotovoltaicos autónomos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.7][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFA_Componentes.pdf][Componentes]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFA_Diseno.pdf][Diseño]]
+
+*** Sistemas fotovoltaicos de bombeo
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.8][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFB_Componentes.pdf][Componentes]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFB_Diseno.pdf][Diseño]]
+
+
+*** Seguridad eléctrica en sistemas fotovoltaicos
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.9][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:SFCR_Seguridad.pdf][Presentación]]
+
+
+*** Tiempo de retorno energético
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#chapter.10][Capítulo]]
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:EPBT.pdf][Presentación]]
+
+
+** Ejercicios
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: row
+   :END:
+*** Geometría y radiación solar
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#appendix.Alph2][Capítulo]]
+*** Diseño de sistemas
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS: col-md-6
+    :END:
+    #+ATTR_HTML: :class btn btn-info btn-xs :role button
+    [[file:ESF.pdf#appendix.Alph3][Capítulo]]
+
+
+* 
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: footer container
+   :END:
+
+   2015 [[http://oscarperpinan.github.io][Oscar Perpiñán Lamigueiro]]
