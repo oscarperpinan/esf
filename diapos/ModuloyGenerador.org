@@ -1,4 +1,5 @@
-#+TITLE: Energía Solar Fotovoltaica:\\Módulo y Generador
+#+TITLE: Módulo y Generador
+#+SUBTITLE: Energía Solar Fotovoltaica
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
@@ -8,7 +9,7 @@
 ** Introducción
 
 *** Módulo Fotovoltaico
-
+ #+ATTR_BEAMER: :overlay <+->
 -  Las características eléctricas de una célula no son suficientes para alimentar las cargas convencionales.
 
 -  Es necesario realizar *agrupaciones en serie y paralelo para entregar tensión y corriente adecuadas*.
@@ -26,7 +27,7 @@
 -  Este conjunto es enmarcado en una *estructura de aluminio anodizado* con el objetivo de aumentar la resistencia mecánica del conjunto y facilitar el anclaje del módulo a las estructuras de soporte.
 
 *** El vidrio frontal
-
+ #+ATTR_BEAMER: :overlay <+->
 -  Debe tener y mantener una *alta transmisividad* en la banda espectral en la que trabajan las células solares.
 
 -  Debe tener buena *resistencia al impacto y a la abrasión*.
@@ -65,22 +66,28 @@
 ** Modelado de un módulo
 
 *** Suposiciones del modelo
-
+ #+ATTR_BEAMER: :overlay <+->
 -  Los efectos de la resistencia paralelo son despreciables
 
 -  La corriente fotogenerada ($I_{L}$) es igual a la corriente de cortocircuito
 
 -  En cualquier condición de operación $\exp(\frac{V+I\cdot R_{s}}{V_{t}})\gg1$
 
-$$I=I_{sc}\cdot(1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{V_{t}})$$
+\[
+I=I_{sc}\cdot(1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{V_{t}})
+\]
 
 *** Efecto de la radiación y la temperatura
-
+ #+ATTR_BEAMER: :overlay <+->
 -  La *corriente de cortocircuito* depende exclusivamente y de forma lineal de la *irradiancia*.
-$$I_{sc}=G_{ef}\cdot\frac{I_{sc}^{*}}{G^{*}}$$
+\[
+I_{sc}=G_{ef}\cdot\frac{I_{sc}^{*}}{G^{*}}
+\]
 
--  La* tensión de circuito abierto* depende exclusivamente de la *temperatura de /célula/*, y decrece linealmente con ella.
-$$V_{oc}(T_{c})=V_{oc}^{*}+(T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}}$$
+-  La *tensión de circuito abierto* depende exclusivamente de la *temperatura de /célula/*, y decrece linealmente con ella.
+\[
+V_{oc}(T_{c})=V_{oc}^{*}+(T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}}
+\]
 
 *** Temperatura de operación de célula
 
@@ -105,15 +112,6 @@ $$T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}$$
 
   - Velocidad de viento: $v_{v}=\SI{1}{\meter\per\second}$.
 
-*** Ejemplo de cálculo
-
-Calcular el comportamiento eléctrico de un generador fotovoltaico constituido por 40 módulos, asociados en 4 ramas, bajo la suposición de factor de forma constante.
-
-- Las condiciones de operación de este generador son:  $G_{ef}=700\, W/m^{2}$ y $T_{a}=34\celsius$.
-
-- De las fichas técnicas del módulo se extrae la siguiente información: $I_{sc}^{*}=3\, A$, $V_{oc}^{*}=19,8\, V$, $I_{mpp}^{*}=2,8\, A$ y $V_{mpp}^{*}=15.7\, V$.
-
-- Cada módulo está constituido por 33 células asociadas en serie. La TONC del módulo es de $43\celsius$.
 
 ** Punto Caliente
 
@@ -160,22 +158,57 @@ Calcular el comportamiento eléctrico de un generador fotovoltaico constituido p
 *** Generador Fotovoltaico
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 7cm
+     :BEAMER_col: 0.7
      :END:
+#+ATTR_BEAMER: :overlay <+->
+-  Un generador fotovoltaico es una *asociación eléctrica de módulos fotovoltaicos* para adaptarse a las condiciones de funcionamiento de una aplicación determinada.
 
--  Un generador fotovoltaico es una asociación eléctrica de módulos fotovoltaicos para adaptarse a las condiciones de funcionamiento de una aplicación determinada.
-
--  Se compone de un total de $N_{p}\cdot N_{s}$ módulos, siendo $N_{p}$ el número de ramas y $N_{s}$ el número de módulos en cada serie.
-
--  El número de ramas define la corriente total del generador y el número de modulos por serie define la tensión del generador.
+-  Se compone de un total de $N_T = N_{p}\cdot N_{s}$ módulos, siendo $N_{p}$ el número de ramas (módulos en paralelo), y $N_{s}$ el número de módulos en cada serie.
 
 
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 5cm
+     :BEAMER_col: 0.3
      :END:
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/AsociacionModulos.pdf]]
+
+*** Ramas y series
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+- El número de ramas, $N_p$, define la corriente total del generador
+\[
+I_{sc,g} = N_p \cdot I_{sc,m}
+\]
+- El número de modulos en serie, $N_s$, define la tensión del generador.
+\[
+V_{oc,g} = N_s \cdot V_{oc,m}
+\]
+- La potencia del generador es (idealmente):
+\[
+P_g = N_T \cdot P_m = (N_s \cdot V_{mpp, m}) (N_p \cdot I_{mpp, m})
+\]
+
+
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.3
+     :END:
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/AsociacionModulos.pdf]]
+
+*** Ejemplo de cálculo
+
+Calcular el comportamiento eléctrico de un generador fotovoltaico constituido por 40 módulos, asociados en 4 ramas, bajo la suposición de factor de forma constante.
+
+- Las condiciones de operación de este generador son:  $G_{ef}=700\, W/m^{2}$ y $T_{a}=34\celsius$.
+
+- De las fichas técnicas del módulo se extrae la siguiente información: $I_{sc}^{*}=3\, A$, $V_{oc}^{*}=19,8\, V$, $I_{mpp}^{*}=2,8\, A$ y $V_{mpp}^{*}=15.7\, V$.
+
+- Cada módulo está constituido por 33 células asociadas en serie. La TONC del módulo es de $43\celsius$.
 
 ** Pérdidas por dispersión
 
