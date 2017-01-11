@@ -1,4 +1,4 @@
-% Created 2017-01-11 mié 11:55
+% Created 2017-01-11 mié 12:20
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,7 @@
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -48,11 +49,11 @@
 \maketitle
 
 \section{Teoría de Semiconductores}
-\label{sec:org76ee2af}
+\label{sec:org28e69af}
 \subsection{Conducción eléctrica}
-\label{sec:orgc3e106e}
+\label{sec:org6e5a870}
 
-\begin{frame}[label={sec:org55f8a04}]{Bandas de energía}
+\begin{frame}[label={sec:org8d2f358}]{Bandas de energía}
 \begin{itemize}[<+->]
 \item En un \alert{sólido} el número de átomos es tan elevado que los niveles de energía forman \alert{bandas continuas de energía}.
 
@@ -66,7 +67,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org18e9541}]{Bandas de energía}
+\begin{frame}[label={sec:org97b3f4e}]{Bandas de energía}
 \begin{center}
 
 
@@ -74,9 +75,10 @@
 \includegraphics[width=.9\linewidth]{../figs/simplified_band_diagram.jpg}
 \end{center}
 \end{center}
+\footnotetext[2]{http://commons.wikimedia.org/}
 \end{frame}
 
-\begin{frame}[label={sec:org94afd95}]{Conductores, aislantes y semiconductores}
+\begin{frame}[label={sec:org2ebdbc0}]{Conductores, aislantes y semiconductores}
 Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posición relativa entre bandas}.
 \begin{itemize}[<+->]
 \item En un \alert{conductor} la \(E_{g}\) es muy baja y los electrones circulan fácilmente por la banda de conducción.
@@ -93,7 +95,7 @@ Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posició
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8a38d2b}]{Conductores, aislantes y semiconductores}
+\begin{frame}[label={sec:org8017e58}]{Conductores, aislantes y semiconductores}
 \begin{block}{La conductividad de los materiales depende de la \alert{concentración de electrones libres} (n) presentes en la banda de conducción}
 \end{block}
 
@@ -107,24 +109,25 @@ Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posició
 \end{frame}
 
 \subsection{Semiconductores}
-\label{sec:orgd0ec0a4}
+\label{sec:org7463614}
 
-\begin{frame}[label={sec:orgfa51d53}]{Red cristalina de Si (T = \SI{0}{\kelvin})}
+\begin{frame}[label={sec:org77c944e}]{Red cristalina de Si (T = \SI{0}{\kelvin})}
 \begin{center}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/silicio_T0K.jpg}
 \end{center}
 \end{center}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 \end{frame}
-\begin{frame}[label={sec:org6637be4}]{Generación de electrón-hueco (T > \SI{0}{\kelvin})}
+\begin{frame}[label={sec:org08f7393}]{Generación de electrón-hueco (T > \SI{0}{\kelvin})}
 \begin{center}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/silicio_T300K.jpg}
 \end{center}
 \end{center}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 \end{frame}
-
-\begin{frame}[plain,label={sec:org02950b2}]{Generación de electrón-hueco}
+\begin{frame}[plain,label={sec:org435b2e7}]{Generación de electrón-hueco}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -143,7 +146,7 @@ Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posició
 \end{columns}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org0f9c8b1}]{Recombinación de un par electrón-hueco}
+\begin{frame}[plain,label={sec:org1792e62}]{Recombinación de un par electrón-hueco}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -163,8 +166,8 @@ Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posició
 
 
 \subsection{Dopaje de semiconductores}
-\label{sec:org618b9c8}
-\begin{frame}[label={sec:org1be4ba7}]{Definición}
+\label{sec:orgbfb4d7b}
+\begin{frame}[label={sec:orgd86f439}]{Definición}
 El \alert{dopaje de semiconductores} consiste en introducir de forma controlada impurezas en el cristal para alterar las bandas de energía.
 
 \begin{center}
@@ -172,14 +175,14 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{center}
 \end{frame}
 
-
-\begin{frame}[label={sec:org160dff1}]{Tipo n}
+\begin{frame}[label={sec:org392fe09}]{Tipo n}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/DopajeN.jpg}
 \end{center}
-\end{frame}
 
-\begin{frame}[plain,label={sec:org20a4a65}]{Tipo n}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
+\end{frame}
+\begin{frame}[plain,label={sec:orge8dcca6}]{Tipo n}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -203,14 +206,14 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{columns}
 \end{frame}
 
-
-\begin{frame}[label={sec:org8ba7297}]{Tipo p}
+\begin{frame}[label={sec:org8bdfbe6}]{Tipo p}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/DopajeP.jpg}
 \end{center}
-\end{frame}
 
-\begin{frame}[plain,label={sec:org91599ba}]{Tipo p}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
+\end{frame}
+\begin{frame}[plain,label={sec:org40faa4d}]{Tipo p}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -235,17 +238,18 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 
 
 \subsection{Unión p-n}
-\label{sec:org314113a}
-\begin{frame}[label={sec:org79d6200}]{Unión p-n}
+\label{sec:org794eadf}
+\begin{frame}[label={sec:orgfac25a4}]{Unión p-n}
 \begin{center}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Union_PN.jpg}
 \end{center}
 \end{center}
+
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 \end{frame}
 
-
-\begin{frame}[label={sec:org006e716}]{Conducción en una unión p-n}
+\begin{frame}[label={sec:org38e0a22}]{Conducción en una unión p-n}
 \begin{itemize}
 \item Al \alert{unir un semiconductor tipo p con otro tipo n, se produce un desequilibrio}:
 \begin{itemize}
@@ -259,9 +263,9 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \includegraphics[width=.9\linewidth]{../figs/Pn-junction-equilibrium.png}
 \end{center}
 \end{center}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 \end{frame}
-
-\begin{frame}[label={sec:orge9bfd58}]{Corriente de Difusión}
+\begin{frame}[label={sec:org46365eb}]{Corriente de Difusión}
 \begin{itemize}
 \item \alert{Difusión de portadores mayoritarios}
 \begin{itemize}[<+->]
@@ -278,7 +282,7 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org80ddeca}]{Corriente de Arrastre}
+\begin{frame}[label={sec:org7efdf50}]{Corriente de Arrastre}
 \begin{itemize}[<+->]
 \item \alert{Los iones fijos} cercanos a la unión generan un \alert{campo eléctrico de arrastre} en sentido opuesto a la difusión: \alert{barrera de potencial}
 
@@ -293,7 +297,7 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{frame}
 
 
-\begin{frame}[label={sec:orga673bbc}]{Equilibrio en una unión p-n}
+\begin{frame}[label={sec:orgb635d61}]{Equilibrio en una unión p-n}
 \begin{itemize}
 \item El \alert{equilibrio} se alcanza al \alert{compensarse los movimientos de  difusión y de arrastre}.
 \end{itemize}
@@ -303,9 +307,10 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \includegraphics[height=0.5\textheight]{../figs/Diodo_CircuitoAbierto.jpg}
 \end{center}
 \end{center}
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 \end{frame}
 
-\begin{frame}[plain,label={sec:orgee814ac}]{Polarización en directa}
+\begin{frame}[plain,label={sec:org25c38d9}]{Polarización en directa}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -328,7 +333,7 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{columns}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org9c349e6}]{Polarización en inversa}
+\begin{frame}[plain,label={sec:org890f6bd}]{Polarización en inversa}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -350,9 +355,9 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 
 
 \subsection{Diodo}
-\label{sec:org032a62f}
+\label{sec:org873cd34}
 
-\begin{frame}[label={sec:orgb52b492}]{Definición}
+\begin{frame}[label={sec:org0505187}]{Definición}
 \begin{itemize}
 \item El dispositivo electrónico basado en una unión p-n se denomina diodo.
 
@@ -363,7 +368,7 @@ El \alert{dopaje de semiconductores} consiste en introducir de forma controlada 
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org710562d}]{Ecuación del Diodo}
+\begin{frame}[label={sec:org37d97a5}]{Ecuación del Diodo}
 \begin{itemize}
 \item $$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde \(I_{0}\) es la corriente de saturación en oscuridad del diodo, \(V\) la tensión aplicada al diodo y \(m\) el factor de idealidad del diodo.
 
@@ -374,7 +379,7 @@ $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
 (en grados Kelvin), y \(\mathrm{e}\) es la carga del electrón.
 \end{frame}
 
-\begin{frame}[label={sec:orgd83a469}]{}
+\begin{frame}[label={sec:org84119df}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EcuacionDiodo.pdf}
 \end{center}
@@ -382,15 +387,15 @@ $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
 
 
 \section{Unión P-N iluminada}
-\label{sec:orgdb03890}
+\label{sec:org02660d9}
 
-\begin{frame}[label={sec:org25a94a8}]{}
+\begin{frame}[label={sec:org118f5e8}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CelulaSolar.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf9aa565}]{Efecto fotoeléctrico}
+\begin{frame}[label={sec:org3488e19}]{Efecto fotoeléctrico}
 \begin{itemize}[<+->]
 \item Efecto fotoeléctrico: \alert{los electrones se desplazan a la banda de conducción por el aporte energético de fotones} (\(E_{f}=\frac{h\cdot c}{\lambda}\)).
 
@@ -403,7 +408,7 @@ $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd8ea4a9}]{Absorción de luz y generación de portadores}
+\begin{frame}[label={sec:org96d49ad}]{Absorción de luz y generación de portadores}
 \begin{itemize}[<+->]
 \item Si el \alert{fotón es poco energético} (\(E_{f}<E_{g}\)) \alert{no interactúa con
 el semiconductor} (como si fuese transparente)
@@ -421,7 +426,7 @@ ultravioleta (\(\lambda<400\, nm\)) rompen enlaces.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfc30358}]{Absorción de luz y generación de portadores}
+\begin{frame}[label={sec:orga214662}]{Absorción de luz y generación de portadores}
 \begin{itemize}[<+->]
 \item Los fotones con \(E_{f}<E_{g}\) atraviesan el cristal sin ser absorbidos: \alert{pérdidas de no-absorción}
 
@@ -441,9 +446,9 @@ dispositivo: \alert{pérdidas por recombinación}
 \end{frame}
 
 \section{Funcionamiento de una célula solar}
-\label{sec:org5e4f6d2}
+\label{sec:org2085be1}
 
-\begin{frame}[label={sec:org565317e}]{}
+\begin{frame}[label={sec:org16cf544}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CelulaSolar.pdf}
 \end{center}
@@ -451,8 +456,8 @@ dispositivo: \alert{pérdidas por recombinación}
 
 
 \subsection{Curva IV y Puntos Característicos}
-\label{sec:orgdebe241}
-\begin{frame}[label={sec:org32b3286}]{Característica I-V de iluminación}
+\label{sec:org5d6c4be}
+\begin{frame}[label={sec:org9c363f1}]{Característica I-V de iluminación}
 $$I=I_{L}-I_{D}$$
 
 $$I_{D}=I_{0}\cdot\left[\exp\left(\frac{e\cdot V}{m\cdot k\cdot
@@ -463,7 +468,7 @@ $$I_{D}=I_{0}\cdot\left[\exp\left(\frac{e\cdot V}{m\cdot k\cdot
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc731ca6}]{Isc y Voc}
+\begin{frame}[label={sec:org736f40d}]{Isc y Voc}
 \begin{block}{Corriente de Cortocircuito}
 $$I_{sc}=I(V=0)\Rightarrow I_{D}=0\Rightarrow I=I_{L}$$
 \end{block}
@@ -481,7 +486,7 @@ $$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd040a97}]{Punto de máxima potencia}
+\begin{frame}[label={sec:org1fd8454}]{Punto de máxima potencia}
 \begin{block}{\(0<V<V_{mpp}\)}
 \[
 \frac{dP}{dV}>0 \Rightarrow \frac{dI}{dV}>-\frac{I}{V}
@@ -493,7 +498,7 @@ $$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3f24651}]{Punto de máxima potencia}
+\begin{frame}[label={sec:org4f014d6}]{Punto de máxima potencia}
 \begin{block}{V=V\(_{\text{mpp}}\)}
 \[
 \frac{dP}{dV}=0 \Rightarrow \frac{dI}{dV}=-\frac{I}{V}
@@ -505,7 +510,7 @@ $$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf86ed77}]{Punto de máxima potencia}
+\begin{frame}[label={sec:org1c5baae}]{Punto de máxima potencia}
 \begin{block}{\(V_{mpp}<V<V_{oc}\)}
 \[
 \frac{dP}{dV}<0 \Rightarrow \frac{dI}{dV}<-\frac{I}{V}
@@ -518,7 +523,7 @@ $$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
 \end{frame}
 
 
-\begin{frame}[label={sec:org009ca3f}]{Factor de forma y Eficiencia}
+\begin{frame}[label={sec:org265aec0}]{Factor de forma y Eficiencia}
 \begin{itemize}
 \item Factor de Forma
 \end{itemize}
@@ -534,7 +539,7 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{P_{L}}$$
 $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 \end{frame}
 
-\begin{frame}[plain,label={sec:orge380b90}]{Eficiencia de células}
+\begin{frame}[plain,label={sec:org8de58e3}]{Eficiencia de células}
 \begin{center}
 \includegraphics[width=1.2\textwidth]{../figs/efficiency_chart_nrel.jpg}
 \end{center}
@@ -543,9 +548,9 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 \end{frame}
 
 \subsection{Influencia de Temperatura y Radiación}
-\label{sec:orgda904f4}
+\label{sec:org1c173c4}
 
-\begin{frame}[label={sec:org615bc99}]{Radiación}
+\begin{frame}[label={sec:orgc2bbfa3}]{Radiación}
 \begin{itemize}
 \item \alert{Fotocorriente proporcional a intensidad de radiación}
 
@@ -558,13 +563,13 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf7c904}]{Influencia de la Radiación}
+\begin{frame}[label={sec:org05f60c9}]{Influencia de la Radiación}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7a9ef5a}]{Temperatura}
+\begin{frame}[label={sec:org1c76da2}]{Temperatura}
 \begin{itemize}
 \item Se estrecha el salto entre banda de valencia y conducción: aumenta \emph{ligeramente} la fotocorriente
 
@@ -575,13 +580,13 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org86c7662}]{Influencia de Temperatura}
+\begin{frame}[label={sec:org2b092d7}]{Influencia de Temperatura}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_G800.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2aa6b1c}]{Condiciones Estándar de Medida}
+\begin{frame}[label={sec:orgcaec375}]{Condiciones Estándar de Medida}
 \begin{itemize}
 \item Irradiancia: \(G^{*}=\SI{1000}{\watt\per\meter\squared}\) con
 incidencia normal.
@@ -598,9 +603,9 @@ $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
 
 
 \subsection{Circuito equivalente de la célula}
-\label{sec:orgc8c44c8}
+\label{sec:org8d9f3ba}
 
-\begin{frame}[label={sec:orge928689}]{Circuito equivalente}
+\begin{frame}[label={sec:orgdb276eb}]{Circuito equivalente}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ModeloElectricoCelulaSolar.pdf}
 \end{center}
@@ -619,7 +624,7 @@ $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
 $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \end{frame}
 
-\begin{frame}[label={sec:orga9b6c4e}]{Resistencia Serie: Curva IV}
+\begin{frame}[label={sec:org75f10e3}]{Resistencia Serie: Curva IV}
 \begin{itemize}
 \item Resistencia de contactos metálicos con el semiconductor
 
@@ -633,7 +638,7 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org6883531}]{Resistencia Serie: Curva PV}
+\begin{frame}[label={sec:orgc6496a5}]{Resistencia Serie: Curva PV}
 \begin{itemize}
 \item Resistencia de contactos metálicos con el semiconductor
 
@@ -647,7 +652,7 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org0298b7c}]{Resistencia paralelo: Curva IV}
+\begin{frame}[label={sec:orgb2e43e2}]{Resistencia paralelo: Curva IV}
 \begin{itemize}
 \item Fugas de corriente en bordes de célula
 
@@ -661,7 +666,7 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3342564}]{Resistencia paralelo: Curva PV}
+\begin{frame}[label={sec:orgabb2385}]{Resistencia paralelo: Curva PV}
 \begin{itemize}
 \item Fugas de corriente en bordes de célula
 
@@ -677,9 +682,9 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 
 
 \subsection{Cálculo del MPP}
-\label{sec:org4704bbe}
+\label{sec:org221c50a}
 
-\begin{frame}[label={sec:orgb773f96}]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org94a9221}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Normalización
 \end{itemize}
@@ -698,7 +703,7 @@ $$\begin{aligned}
   p_{mpp} & = & FF\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:org244b3b8}]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:orgca5bb20}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Resistencia Serie y FF
 \end{itemize}
@@ -715,7 +720,7 @@ $$\begin{aligned}
   k_{oc} & = & \frac{V_{oc}}{V_{t}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:org102a061}]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org0ae2a11}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Aproximación para MPP
 \end{itemize}
@@ -729,7 +734,7 @@ $$\begin{aligned}
   D_{M0} & = & \frac{k_{oc}-1}{k_{oc}-\ln k_{oc}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgb2af6b9}]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org0e8cb13}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Itinerario
 
@@ -752,7 +757,7 @@ donde se debe emplear el valor de \(V_{t}\) para
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3265177}]{Simplificado: Factor de Forma Constante}
+\begin{frame}[label={sec:orgb358e4c}]{Simplificado: Factor de Forma Constante}
 $$FF=FF^{*}$$
 
 $$\begin{aligned}
@@ -760,7 +765,7 @@ $$\begin{aligned}
   \frac{V_{mpp}}{V_{oc}} & = & \frac{V_{mpp}^{*}}{V_{oc}^{*}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:org3c837ca}]{Ejercicio de Cálculo}
+\begin{frame}[label={sec:org093cb2b}]{Ejercicio de Cálculo}
 De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I_{mpp}^{*}=2.7\, A\) , \(V_{oc}^{*}=0.6\, V\),
 \(V_{mpp}^{*}=0.48\, V\), calcular suponiendo factor de forma constante:
 
@@ -772,9 +777,9 @@ De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I
 \end{frame}
 
 \section{Fabricación}
-\label{sec:org7350f9c}
+\label{sec:org318b2c7}
 
-\begin{frame}[label={sec:orgc0b5a71}]{}
+\begin{frame}[label={sec:orgbf28189}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{/home/oscar/github/esf/figs/solar_cell_manufacturing_video.jpg}
 \end{center}
@@ -782,7 +787,7 @@ De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I
 \url{https://www.youtube.com/watch?v=fZ1SC-vUe_I}
 \end{frame}
 
-\begin{frame}[label={sec:org900705a}]{Purificación de silicio}
+\begin{frame}[label={sec:org24e25c1}]{Purificación de silicio}
 \begin{itemize}
 \item El silicio puede extraerse de la cuarzita obteniendo Silicio de grado metalúrgico (98\% pureza).
 
@@ -796,7 +801,7 @@ De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0808da1}]{Formación de obleas}
+\begin{frame}[label={sec:org1241665}]{Formación de obleas}
 \begin{itemize}
 \item Para obtener mayor pureza se emplea el silicio monocristalino (un sólo cristal) obtenido mediante el proceso de Czochralski o similar (se utiliza una semilla de cristal para crecer silicio a muy alta temperatura).
 
@@ -810,7 +815,7 @@ De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf2059b4}]{Formación de células}
+\begin{frame}[label={sec:orge34e47f}]{Formación de células}
 \begin{itemize}
 \item Se añaden los contactos posterior (alto recubrimiento) y anterior (optimización para obtener baja \(R_{s}\) y poco sombreado) empleando aleaciones de plata y aluminio.
 

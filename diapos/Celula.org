@@ -26,6 +26,7 @@
  [[file:../figs/simplified_band_diagram.jpg]]
 
  #+END_CENTER
+\footnotetext[2]{http://commons.wikimedia.org/}
 
 *** Conductores, aislantes y semiconductores
 
@@ -56,11 +57,12 @@
  #+BEGIN_CENTER
  [[file:../figs/silicio_T0K.jpg]]
  #+END_CENTER
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 *** Generación de electrón-hueco (T > \SI{0}{\kelvin})
  #+BEGIN_CENTER
  file:../figs/silicio_T300K.jpg
  #+END_CENTER
-
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 *** Generación de electrón-hueco
     :PROPERTIES:
     :beamer_opt: plain
@@ -108,14 +110,13 @@
 *** Definición
  El *dopaje de semiconductores* consiste en introducir de forma controlada impurezas en el cristal para alterar las bandas de energía.
 
- # http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
  [[file:../figs/Band_filling_diagram.png]]
-
 
 *** Tipo n
 
  [[file:../figs/DopajeN.jpg]]
 
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 *** Tipo n
     :PROPERTIES:
     :beamer_opt: plain
@@ -143,11 +144,11 @@
 
  [[file:../figs/Semiconductor_tipo_n_vertical.png]]
 
-
 *** Tipo p
 
  [[file:../figs/DopajeP.jpg]]
 
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 *** Tipo p
     :PROPERTIES:
     :beamer_opt: plain
@@ -181,6 +182,7 @@
  [[file:../figs/Union_PN.jpg]]
  #+END_CENTER
 
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 
 *** Conducción en una unión p-n
  - Al *unir un semiconductor tipo p con otro tipo n, se produce un desequilibrio*:
@@ -190,7 +192,7 @@
  #+BEGIN_CENTER
  [[file:../figs/Pn-junction-equilibrium.png]]
  #+END_CENTER
-
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 *** Corriente de Difusión
 
  -  *Difusión de portadores mayoritarios*
@@ -224,6 +226,7 @@
  #+ATTR_LATEX: :height 0.5\textheight
  [[file:../figs/Diodo_CircuitoAbierto.jpg]]
  #+END_CENTER
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 
 *** Polarización en directa
     :PROPERTIES:
