@@ -329,7 +329,7 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 [[../figs/CelulaSolar.pdf]]
 
 *** Efecto fotoeléctrico
-
+ #+ATTR_BEAMER: :overlay <+->
 -  Efecto fotoeléctrico: *los electrones se desplazan a la banda de conducción por el aporte energético de fotones* ($E_{f}=\frac{h\cdot c}{\lambda}$).
 
 -  Al *iluminar una unión p-n*, el *campo eléctrico* de la unión conduce los portadores y *dificulta la recombinación*.
@@ -338,10 +338,10 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 
 -  La presencia de *tensión en los terminales* de la unión (por ejemplo, caída de tensión en una resistencia alimentada por la fotocorriente) *favorece la recombinación* (/corriente de oscuridad o corriente de diodo/).
 
-$$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 
 *** Absorción de luz y generación de portadores
 
+ #+ATTR_BEAMER: :overlay <+->
 -  Si el *fotón es poco energético* ($E_{f}<E_{g}$) *no interactúa con
    el semiconductor* (como si fuese transparente)
 
@@ -355,7 +355,7 @@ $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 -  Los *fotones menos energéticos* (alta longitud de onda) penetran en el interior hasta *romper un enlace*.
 
 *** Absorción de luz y generación de portadores
-
+ #+ATTR_BEAMER: :overlay <+->
 -  Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser absorbidos: *pérdidas de no-absorción*
 
 -  Fotones con $E_{f}>E_{g}$:
@@ -368,9 +368,6 @@ $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 
    -  Parte de los portadores generadores se recombinan dentro del
       dispositivo: *pérdidas por recombinación*
-
-$$I_{L}<e\cdot A\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E$$
-
 
 * Funcionamiento de una célula solar
 
