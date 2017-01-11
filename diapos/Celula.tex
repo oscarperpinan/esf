@@ -1,21 +1,19 @@
-% Created 2015-01-19 lun 10:11
+% Created 2017-01-11 mié 11:23
+% Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{longtable}
-\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
 \usepackage{amssymb}
+\usepackage{capt-of}
 \usepackage{hyperref}
-\tolerance=1000
 \usepackage{color}
 \usepackage{listings}
 \usepackage{mathpazo}
@@ -25,310 +23,376 @@
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
 \author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
 \date{}
-\title{Energía Solar Fotovoltaica:\\Célula Solar}
+\title{Célula Solar}
+\subtitle{Energía Solar Fotovoltaica}
 \hypersetup{
-  pdfkeywords={},
-  pdfsubject={},
-  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
+ pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdftitle={Célula Solar},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0)}, 
+ pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Teoría de Semiconductores}
-\label{sec-1}
+\label{sec:org5dfd8b9}
+\subsection{Conducción eléctrica}
+\label{sec:org45e8d77}
 
-\subsection{Modelo de bandas de energía}
-\label{sec-1-1}
-
-\begin{frame}[label=sec-1-1-1]{Átomos aislados vs. Átomos en Sólido}
-
-\href{http://upload.wikimedia.org/wikipedia/commons/8/81/Metals_and_insulators,_quantum_difference_from_band_structure.ogv}{\includegraphics[width=.9\linewidth]{../figs/Metals_and_insulators_video.jpg}}
-\end{frame}
-
-\begin{frame}[label=sec-1-1-2]{Átomos aislados vs. Átomos en Sólido}
-\begin{itemize}
-\item Supongamos una red cristalina formada por átomos.
-
-\item Los \alert{electrones de un átomo aislado} pueden existir \alert{únicamente en determinados estados de energía}.
-
-\item A medida que disminuye la distancia interatómica comienza a observarse la \alert{interacción mutua entre los átomos} hasta formarse un sistema electrónico único.
-
-\item Las \alert{fuerzas de repulsión y atracción} entre los átomos encontrarán su \alert{equilibrio} cuando los átomos estén separados por la \alert{distancia interatómica típica del cristal} que se trate.
-
-\item La separación real entre átomos en el cristal será aquella para la cual la \alert{energía del sólido sea mínima}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-1-1-3]{Bandas de energía}
-\includegraphics[width=.9\linewidth]{../figs/simplified_band_diagram.jpg}
-\end{frame}
-
-\begin{frame}[label=sec-1-1-4]{Bandas de energía}
-\begin{itemize}
+\begin{frame}[label={sec:orgeae91c4}]{Bandas de energía}
+\begin{itemize}[<+->]
 \item En un \alert{sólido} el número de átomos es tan elevado que los niveles de energía forman \alert{bandas continuas de energía}.
 
 \item Los \alert{electrones} asociados a los átomos del sólido \alert{llenan estas bandas en orden ascendente}.
 
-\item La banda de mayor energía completamente ocupada se denomina \alert{banda de valencia} (\emph{electrones ligados a átomos}). La siguiente banda, parcialmente ocupada o vacía, se denominada \alert{banda de conducción} (\emph{electrones desligados de átomos}).
+\item La banda de mayor energía completamente ocupada se denomina \alert{banda de valencia} (\emph{electrones ligados a átomos}).
+
+\item La siguiente banda, parcialmente ocupada o vacía, se denominada \alert{banda de conducción} (\emph{electrones desligados de átomos}).
 
 \item Estas bandas pueden estar separadas por otra banda de energías que corresponde a \alert{estados no permitidos} (\alert{banda prohibida}), o \alert{pueden estar solapadas} permitiendo una transición fácil de una a otra.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-1-5]{Bandas de energía}
-\includegraphics[width=.9\linewidth]{../figs/Band_filling_diagram.png}
+\begin{frame}[label={sec:org2b47c73}]{Bandas de energía}
+\begin{center}
+
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/simplified_band_diagram.jpg}
+\end{center}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-1-6]{Conductores, aislantes y semiconductores}
+\begin{frame}[label={sec:org154773b}]{Conductores, aislantes y semiconductores}
 Las \alert{propiedades eléctricas} del sólido dependen de esta \alert{posición relativa entre bandas}.
+\begin{itemize}[<+->]
+\item En un \alert{conductor} la \(E_{g}\) es muy baja y los electrones circulan fácilmente por la banda de conducción.
+
+\item En un \alert{aislante} se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   (\(E_{g}>\SI{5}{\electronvolt}\))
+
+\item En un \alert{semiconductor} la \(E_{g}\) es baja (\(E_{g}<\SI{5}{\electronvolt}\)): los electrones pueden \guillemotleft{}saltar\guillemotright{} a la banda de conducción con un aporte energético.
 
 \begin{itemize}
-\item En un \alert{conductor} la $E_{g}$ es muy baja y los electrones circulan fácilmente por la banda de conducción.
+\item \(E_{g}(Si)=\SI{1.12}{\electronvolt}\)
 
-\item En un \alert{aislante} se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   ($E_{g}>\SI{5}{\electronvolt}$)
+\item \(E_{g}(AsGa)=\SI{1.4}{\electronvolt}\)
+\end{itemize}
+\end{itemize}
+\end{frame}
 
-\item En un \alert{semiconductor} la $E_{g}$ es baja ($E_{g}<\SI{5}{\electronvolt}$): los electrones pueden \guillemotleft{}saltar\guillemotright{} a la banda de conducción con un aporte energético.
+\begin{frame}[label={sec:org417861b}]{Conductores, aislantes y semiconductores}
+\begin{block}{La conductividad de los materiales depende de la \alert{concentración de electrones libres} (n) presentes en la banda de conducción}
+\end{block}
 
+\begin{block}{Valores típicos de n}
 \begin{itemize}
-\item Para el silicio $E_{g}=\SI{1.12}{\electronvolt}$.
+\item Metal: \SI{1e22}{\per\cm\cubed}
+\item Aislante: \SI{10}{\per\cm\cubed}
+\item Semiconductor: \SI{1e10}{\per\cm\cubed} a T = \SI{300}{\kelvin}
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
 \subsection{Semiconductores}
-\label{sec-1-2}
+\label{sec:org8e59ad8}
 
-\begin{frame}[label=sec-1-2-1]{Rotura de Enlaces}
-\begin{itemize}
-\item Cuando se rompe un enlace, un electrón y un hueco quedan libres para moverse por el material (conducción intrínseca).
-
-\item La \alert{densidad intrínseca de huecos y electrones es idéntica}. Esta densidad depende de la temperatura y de $E_{g}$.
-
-\item Esta \alert{circulación es aleatoria}, sin una dirección predeterminada.
-\end{itemize}
+\begin{frame}[label={sec:orge3bdc91}]{Red cristalina de Si (T = \SI{0}{\kelvin})}
+\begin{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/silicio_T0K.jpg}
+\end{center}
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:org601d7bd}]{Generación de electrón-hueco (T > \SI{0}{\kelvin})}
+\begin{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/silicio_T300K.jpg}
+\end{center}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-2-2]{Recombinación de un par electrón-hueco}
-\begin{itemize}
-\item Por tanto, se producen \alert{encuentros electrón-hueco} que restablecen un enlace con liberación de energia ($E_{g}$) en forma de calor.
+\begin{frame}[plain,label={sec:org291dc57}]{Generación de electrón-hueco}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Cuando se \alert{rompe un enlace}, un electrón y un hueco quedan libres para moverse por el material (conducción intrínseca).
 
-\begin{itemize}
-\item Las impurezas del cristal favorecen la recombinación.
+\item Esta \alert{circulación es aleatoria}, sin una dirección predeterminada: \alert{no es aprovechable} en un circuito externo.
 
-\item El tiempo de vida de portadores mide cuánto tarda en producirse el proceso de recombinación.
-
-\item La longitud de difusión de portadores mide la distancia media que puede recorrer un portador antes de ser recombinado.
+\item La \alert{densidad intrínseca de huecos y electrones es idéntica} (depende de la temperatura y de \(E_{g}\)).
 \end{itemize}
+\end{column}
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/silicio_T300K.jpg}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
 
-\item Esta \alert{conducción intrínseca} \alert{no es aprovechable} en un circuito externo.
+\begin{frame}[plain,label={sec:org7c3b66a}]{Recombinación de un par electrón-hueco}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Se producen \alert{encuentros electrón-hueco} que restablecen un enlace con \alert{liberación de energía} (\(E_{g}\)) en forma de calor.
 
 \item Para evitar la recombinación \alert{es preciso dirigir el movimiento} de electrones y huecos mediante un campo eléctrico.
 \end{itemize}
+\end{column}
+
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/silicio_T300K.jpg}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
+
 
 \subsection{Dopaje de semiconductores}
-\label{sec-1-3}
-\begin{frame}[label=sec-1-3-1]{Bandas de energía}
+\label{sec:org3528658}
+\begin{frame}[label={sec:orgd9347b4}]{Definición}
+El \alert{dopaje de semiconductores} consiste en introducir de forma controlada impurezas en el cristal para alterar las bandas de energía.
+
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Band_filling_diagram.png}
+\end{center}
 \end{frame}
 
 
-\begin{frame}[label=sec-1-3-2]{Tipo n}
-\includegraphics[width=.9\linewidth]{../figs/Semiconductor_tipo_n.png}
+\begin{frame}[label={sec:org017a854}]{Tipo n}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/DopajeN.jpg}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-3]{Tipo n}
-\begin{itemize}
-\item El \alert{dopaje de semiconductores} consiste en introducir de forma
-controlada impurezas en el cristal.
+\begin{frame}[plain,label={sec:orga051f60}]{Tipo n}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Los átomos de \alert{Fósforo} tienen cinco electrones de valencia (uno más que el silicio).
 
-\item Los átomos de \alert{Fósforo} tienen cinco electrones de valencia (uno más
-que el silicio).
+\item Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto electrón no queda bien integrado en la red.
 
-\item Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto
-electrón no queda bien integrado en la red.
+\item La rotura de este enlace se produce con \alert{baja aportación energética} (menor que \(E_{g}\)).
 
-\item La rotura de este enlace se produce con \alert{baja aportación energética}
-   (menor que $E_{g}$).
+\item El \alert{quinto electrón queda libre pero la carga positiva (ión \(P^{+}\)) está ligada} a la red cristalina.
 
-\item El \alert{quinto electrón queda libre pero la carga positiva (ión $P^{+}$)
-está ligada} a la red cristalina.
-
-\item La \alert{densidad de electrones es superior a la de huecos}
-
-\begin{itemize}
-\item Semiconductor \alert{tipo n}.
-
-\item El \alert{portador mayoritario} es el \alert{electrón}.
+\item La \alert{densidad de electrones} (portador mayoritario) es \alert{superior a la de huecos}
 \end{itemize}
-\end{itemize}
+\end{column}
+
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Semiconductor_tipo_n_vertical.png}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-4]{Tipo p}
-\includegraphics[width=.9\linewidth]{../figs/Semiconductor_tipo_p.png}
+
+\begin{frame}[label={sec:org2464533}]{Tipo p}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/DopajeP.jpg}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-5]{Tipo p}
-\begin{itemize}
-\item Los átomos de \alert{Boro} tienen tres electrones de valencia (uno menos
-que el silicio).
+\begin{frame}[plain,label={sec:orgb2e32d6}]{Tipo p}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Los átomos de \alert{Boro} tienen tres electrones de valencia (uno menos que el silicio).
 
-\item Al impurificar un cristal de Silicio con átomos de Boro, hay un
-enlace sin cubrir (hueco).
+\item Al impurificar un cristal de Silicio con átomos de Boro, hay un enlace sin cubrir (hueco).
 
-\item La rotura de este enlace se produce con \alert{baja aportación energética}
-   (menor que $E_{g}$).
+\item La rotura de este enlace se produce con \alert{baja aportación energética} (menor que \(E_{g}\)).
 
-\item El \alert{hueco queda libre} pero la \alert{carga negativa (ión $B^{-}$) está
-ligada} a la red cristalina.
+\item El \alert{hueco queda libre} pero la \alert{carga negativa (ión \(B^{-}\)) está ligada} a la red cristalina.
 
-\item La \alert{densidad de huecos} es \alert{superior a la de electrones}
-
-\begin{itemize}
-\item Semiconductor \alert{tipo p}.
-
-\item El \alert{portador mayoritario} es el \alert{hueco}.
+\item La \alert{densidad de huecos} (portador mayoritario) es \alert{superior a la de electrones}
 \end{itemize}
-\end{itemize}
+\end{column}
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Semiconductor_tipo_p_vertical.png}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
+
 
 \subsection{Unión p-n}
-\label{sec-1-4}
+\label{sec:org6ed4563}
+\begin{frame}[label={sec:org5d91983}]{Unión p-n}
+\begin{center}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Union_PN.jpg}
+\end{center}
+\end{center}
+\end{frame}
 
 
-\begin{frame}[label=sec-1-4-1]{}
+\begin{frame}[label={sec:orgc307f94}]{Conducción en una unión p-n}
+\begin{itemize}
+\item Al \alert{unir un semiconductor tipo p con otro tipo n, se produce un desequilibrio}:
+\begin{itemize}
+\item Corriente de Difusión
+\item Corriente de Arrastre
+\end{itemize}
+\end{itemize}
+
+\begin{center}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Pn-junction-equilibrium.png}
+\end{center}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-2]{Fundamentos}
+\begin{frame}[label={sec:org1896137}]{Corriente de Difusión}
 \begin{itemize}
-\item Al \alert{unir un semiconductor tipo p con otro tipo n, se produce un
-desequilibrio}
-
 \item \alert{Difusión de portadores mayoritarios}
+\begin{itemize}[<+->]
+\item Movimiento de huecos desde cristal p a cristal n, dejando iones con carga negativa.
 
-\begin{itemize}
-\item Hay un movimiento de huecos desde cristal p a cristal n, quedando
-cargado negativamente.
-
-\item Hay un movimiento de electrones desde cristal n a cristal p,
-quedando cargado positivamente.
+\item Movimiento de electrones desde cristal n a cristal p, dejando iones con carga positiva.
+\end{itemize}
 \end{itemize}
 
-\item Este proceso de difusión también \alert{desequilibra} las densidades de
-portadores en los cristales.
-
-\item \alert{Proceso de arrastre}: Este desequilibrio \alert{crea un campo eléctrico}
-(sentido del cristal n al cristal p) en contra del proceso de
-difusión.
-
-\item El \alert{equilibrio} se alcanza al \alert{compensarse los movimientos de
-difusión y de arrastre}.
-\end{itemize}
+\begin{center}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/Pn-junction-equilibrium.png}
+\end{center}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-3]{Recombinación en una unión p-n}
-\begin{itemize}
-\item Los \alert{portadores minoritarios que atraviesan la unión se recombinan}:
+\begin{frame}[label={sec:org2e04df7}]{Corriente de Arrastre}
+\begin{itemize}[<+->]
+\item \alert{Los iones fijos} cercanos a la unión generan un \alert{campo eléctrico de arrastre} en sentido opuesto a la difusión: \alert{barrera de potencial}
 
-\begin{itemize}
-\item Electrones de cristal n con huecos en cristal p.
-
-\item Huecos de cristal p con electrones en cristal n.
+\item Los \alert{portadores minoritarios que atraviesan la unión se recombinan} en la \alert{zona cercana a la unión} despoblada de portadores y con iones cargados ligados a la red.
 \end{itemize}
 
-\item Esta recombinación deja \alert{iones cargados ligados a la red} (incapaces
-de conducir)
-
-\item Esta recombinación se produce en \alert{zonas cercanas a la unión} (zona de
-carga de espacio)
-
-\begin{itemize}
-\item Despoblada de portadores
-
-\item \alert{Los iones fijos generan un campo eléctrico de arrastre}.
-\end{itemize}
-\end{itemize}
+\begin{center}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/Pn-junction-equilibrium.png}
+\end{center}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-4]{Polarización en directa}
-\begin{itemize}
-\item \alert{Para conseguir corriente es necesario romper el equilibrio alcanzado y reducir el valor del potencial termodinámico}.
 
-\item \alert{Diferencia de potencial} con lado p positivo respecto al lado n: unión p-n está \alert{polarizada en directa}.
+\begin{frame}[label={sec:orge5171ba}]{Equilibrio en una unión p-n}
+\begin{itemize}
+\item El \alert{equilibrio} se alcanza al \alert{compensarse los movimientos de  difusión y de arrastre}.
+\end{itemize}
+
+\begin{center}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/Diodo_CircuitoAbierto.jpg}
+\end{center}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain,label={sec:org1cdf241}]{Polarización en directa}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Para \alert{conseguir corriente} es necesario \alert{romper el equilibrio} alcanzado y \alert{reducir la barrera de potencial}.
+
+\item Diferencia de potencial con lado \alert{p positivo respecto al lado n}: unión p-n está polarizada en directa.
 
 \item En estas condiciones \alert{se reduce la barrera de potencial} y, en consecuencia el valor del campo eléctrico de la zona de unión.
 
 \item La \alert{corriente de arrastre disminuye} y \alert{no puede compensar la corriente de difusión}.
 
-\item Aparecen dos corrientes en sentidos contrarios pero de partículas de diferente signo: \alert{corriente total aprovechable.}
-
 \item Convenio: la corriente entra por zona p y sale por zona n.
 \end{itemize}
+\end{column}
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Diodo_Directa.jpg}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-5]{Polarización en inversa}
-\begin{itemize}
-\item Si la diferencia de potencial aplicada consigue que la zona p esté a
-menor tensión que la zona n, la unión queda \alert{polarizada en inversa}.
+\begin{frame}[plain,label={sec:orgc44ded6}]{Polarización en inversa}
+\begin{columns}
+\begin{column}{0.7\columnwidth}
+\begin{itemize}[<+->]
+\item Si la diferencia de potencial aplicada consigue que la \alert{zona p esté a menor tensión que la zona n}, la unión queda polarizada en inversa.
 
-\item En estas condiciones \alert{la barrera de potencial en la unión queda
-reforzada} y el paso de portadores de una a otra zona queda aún más
-debilitado.
+\item En estas condiciones \alert{la barrera de potencial en la unión queda reforzada} y el paso de portadores de una a otra zona queda aún más debilitado.
 
 \item La \alert{corriente que atraviesa la unión en polarización inversa es de muy bajo valor}.
 \end{itemize}
+\end{column}
+
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Diodo_Inversa.jpg}
+\end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{Diodo}
-\label{sec-1-5}
 
-\begin{frame}[label=sec-1-5-1]{Definición}
+\subsection{Diodo}
+\label{sec:org558ef81}
+
+\begin{frame}[label={sec:org8e29bc4}]{Definición}
 \begin{itemize}
 \item El dispositivo electrónico basado en una unión p-n se denomina diodo.
 
 \item La zona p del diodo es el ánodo y la zona n es el cátodo.
 \end{itemize}
+\begin{center}
 \includegraphics[width=0.5\textwidth]{../figs/Diodo.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-5-2]{Ecuación del Diodo}
+\begin{frame}[label={sec:org9b329ef}]{Ecuación del Diodo}
 \begin{itemize}
-\item $$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde $I_{0}$ es la corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada al diodo y $m$ el factor de idealidad del diodo.
+\item $$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde \(I_{0}\) es la corriente de saturación en oscuridad del diodo, \(V\) la tensión aplicada al diodo y \(m\) el factor de idealidad del diodo.
 
-\item Para una temperatura ambiente de $\SI{300}{\kelvin}$,
+\item Para una temperatura ambiente de \(\SI{300}{\kelvin}\),
 \end{itemize}
 $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
-$\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
-(en grados Kelvin), y $\mathrm{e}$ es la carga del electrón.
+\(\mathrm{k}\) es la constante de Boltzmann, \(T\) la temperatura del diodo
+(en grados Kelvin), y \(\mathrm{e}\) es la carga del electrón.
 \end{frame}
 
-\begin{frame}[label=sec-1-5-3]{}
+\begin{frame}[label={sec:org3be41d3}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EcuacionDiodo.pdf}
+\end{center}
 \end{frame}
 
 
 \section{Unión P-N iluminada}
-\label{sec-2}
+\label{sec:org3124570}
 
-\begin{frame}[label=sec-2-0-1]{}
+\begin{frame}[label={sec:orge58ed2b}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CelulaSolar.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-2]{Efecto fotoeléctrico}
+\begin{frame}[label={sec:orge26e80a}]{Efecto fotoeléctrico}
 \begin{itemize}
-\item Efecto fotoeléctrico: \alert{los electrones se desplazan a la banda de conducción por el aporte energético de fotones} ($E_{f}=\frac{h\cdot c}{\lambda}$).
+\item Efecto fotoeléctrico: \alert{los electrones se desplazan a la banda de conducción por el aporte energético de fotones} (\(E_{f}=\frac{h\cdot c}{\lambda}\)).
 
 \item Al \alert{iluminar una unión p-n}, el \alert{campo eléctrico} de la unión conduce los portadores y \alert{dificulta la recombinación}.
 
@@ -340,16 +404,16 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 $$I=I_{L}-I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$
 \end{frame}
 
-\begin{frame}[label=sec-2-0-3]{Absorción de luz y generación de portadores}
+\begin{frame}[label={sec:org8692ade}]{Absorción de luz y generación de portadores}
 \begin{itemize}
-\item Si el \alert{fotón es poco energético} ($E_{f}<E_{g}$) \alert{no interactúa con
+\item Si el \alert{fotón es poco energético} (\(E_{f}<E_{g}\)) \alert{no interactúa con
 el semiconductor} (como si fuese transparente)
 
 \begin{itemize}
-\item Fotones en el espectro visible ($400\, nm<\lambda<700\, nm$) y
-ultravioleta ($\lambda<400\, nm$) rompen enlaces.
+\item Fotones en el espectro visible (\(400\, nm<\lambda<700\, nm\)) y
+ultravioleta (\(\lambda<400\, nm\)) rompen enlaces.
 
-\item Si $\lambda>1100\, nm$ (infrarrojo) el fotón no interactúa.
+\item Si \(\lambda>1100\, nm\) (infrarrojo) el fotón no interactúa.
 \end{itemize}
 
 \item Los \alert{fotones más energéticos} (baja longitud de onda) son \alert{absorbidos en la superficie}.
@@ -358,11 +422,11 @@ ultravioleta ($\lambda<400\, nm$) rompen enlaces.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-4]{Absorción de luz y generación de portadores}
+\begin{frame}[label={sec:org4548f37}]{Absorción de luz y generación de portadores}
 \begin{itemize}
-\item Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser absorbidos: \alert{pérdidas de no-absorción}
+\item Los fotones con \(E_{f}<E_{g}\) atraviesan el cristal sin ser absorbidos: \alert{pérdidas de no-absorción}
 
-\item Fotones con $E_{f}>E_{g}$:
+\item Fotones con \(E_{f}>E_{g}\):
 
 \begin{itemize}
 \item Debido a anchura del semiconductor y coeficiente de absorción del
@@ -381,25 +445,29 @@ $$I_{L}<e\cdot A\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E$$
 
 
 \section{Funcionamiento de una célula solar}
-\label{sec-3}
+\label{sec:org8e72069}
 
-\begin{frame}[label=sec-3-0-1]{}
+\begin{frame}[label={sec:org478fc73}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CelulaSolar.pdf}
+\end{center}
 \end{frame}
 
 
 \subsection{Curva IV y Puntos Característicos}
-\label{sec-3-1}
-\begin{frame}[label=sec-3-1-1]{Característica I-V de iluminación}
+\label{sec:org61b0848}
+\begin{frame}[label={sec:org0093e3f}]{Característica I-V de iluminación}
 $$I=I_{L}-I_{D}$$
 
 $$I_{D}=I_{0}\cdot\left[\exp\left(\frac{e\cdot V}{m\cdot k\cdot
       T_{c}}\right)-1\right]$$
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-1-2]{Isc y Voc}
+\begin{frame}[label={sec:org15e8181}]{Isc y Voc}
 \begin{itemize}
 \item Corriente de Cortocircuito
 \end{itemize}
@@ -422,7 +490,7 @@ $$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
       T_{c}}\right)\right]$$
 \end{frame}
 
-\begin{frame}[label=sec-3-1-3]{Punto de máxima potencia}
+\begin{frame}[label={sec:orge48d0ba}]{Punto de máxima potencia}
 $$\frac{dP}{dV}=0$$
 
 $$\frac{d(I\cdot
@@ -432,18 +500,20 @@ dP=V\cdot dI+I\cdot dV$$
 
 
 
-\begin{frame}[label=sec-3-1-4]{Punto de máxima potencia}
+\begin{frame}[label={sec:org7885a64}]{Punto de máxima potencia}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20_G800.pdf}
+\end{center}
 
-$V=V_{mpp}:\,\frac{dI}{dV}=-\frac{I}{V}$
+\(V=V_{mpp}:\,\frac{dI}{dV}=-\frac{I}{V}\)
 
-$0<V<V_{mpp}$:  $\frac{dP}{dV}>0\Rightarrow\frac{dI}{dV}>-\frac{I}{V}$
+\(0<V<V_{mpp}\):  \(\frac{dP}{dV}>0\Rightarrow\frac{dI}{dV}>-\frac{I}{V}\)
 
-$V_{mpp}<V<V_{oc}$: 
-$\frac{dP}{dV}<0\Rightarrow\frac{dI}{dV}<-\frac{I}{V}$
+\(V_{mpp}<V<V_{oc}\): 
+\(\frac{dP}{dV}<0\Rightarrow\frac{dI}{dV}<-\frac{I}{V}\)
 \end{frame}
 
-\begin{frame}[label=sec-3-1-5]{Factor de forma y Eficiencia}
+\begin{frame}[label={sec:orgc0d3be7}]{Factor de forma y Eficiencia}
 \begin{itemize}
 \item Factor de Forma
 \end{itemize}
@@ -459,22 +529,23 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{P_{L}}$$
 $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 \end{frame}
 
-\begin{frame}[plain,label=sec-3-1-6]{Eficiencia de células}
-
+\begin{frame}[plain,label={sec:orga6e7fa2}]{Eficiencia de células}
+\begin{center}
 \includegraphics[width=1.2\textwidth]{../figs/efficiency_chart_nrel.jpg}
+\end{center}
 
 \url{http://www.nrel.gov/ncpv/}
 \end{frame}
 
 \subsection{Influencia de Temperatura y Radiación}
-\label{sec-3-2}
+\label{sec:orgc52f5b9}
 
-\begin{frame}[label=sec-3-2-1]{Radiación}
+\begin{frame}[label={sec:org40993bf}]{Radiación}
 \begin{itemize}
 \item \alert{Fotocorriente proporcional a intensidad de radiación}
 
 \item Relación logarítmica con tensión de circuito abierto:
-$V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)$
+\(V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)\)
 
 \item El factor de forma aumenta ligeramente
 
@@ -482,33 +553,37 @@ $V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-2-2]{Influencia de la Radiación}
+\begin{frame}[label={sec:org46b5cc6}]{Influencia de la Radiación}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_Ta20.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-2-3]{Temperatura}
+\begin{frame}[label={sec:org86b57e9}]{Temperatura}
 \begin{itemize}
 \item Se estrecha el salto entre banda de valencia y conducción: aumenta \emph{ligeramente} la fotocorriente
 
-\item \alert{Disminuye linealmente la tensión de circuito abierto}: $dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}$
+\item \alert{Disminuye linealmente la tensión de circuito abierto}: \(dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}\)
 
 \item Disminuye el factor de forma y la eficiencia:
-$d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}$
+\(d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-2-4]{Influencia de Temperatura}
+\begin{frame}[label={sec:org9e4ae64}]{Influencia de Temperatura}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_G800.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-2-5]{Condiciones Estándar de Medida}
+\begin{frame}[label={sec:org7edb6ad}]{Condiciones Estándar de Medida}
 \begin{itemize}
-\item Irradiancia: $G^{*}=\SI{1000}{\watt\per\meter\squared}$ con
+\item Irradiancia: \(G^{*}=\SI{1000}{\watt\per\meter\squared}\) con
 incidencia normal.
 
-\item Temperatura de célula: $T_{c}^{*}=\SI{25}{\celsius}$.
+\item Temperatura de célula: \(T_{c}^{*}=\SI{25}{\celsius}\).
 
-\item Masa de aire: $AM=1.5$
+\item Masa de aire: \(AM=1.5\)
 \end{itemize}
 
 $$P_{mpp}^{*}=I_{mpp}^{*}\cdot V_{mpp}^{*}$$
@@ -518,10 +593,12 @@ $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
 
 
 \subsection{Circuito equivalente de la célula}
-\label{sec-3-3}
+\label{sec:org76fd68d}
 
-\begin{frame}[label=sec-3-3-1]{Circuito equivalente}
+\begin{frame}[label={sec:org31dc930}]{Circuito equivalente}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ModeloElectricoCelulaSolar.pdf}
+\end{center}
 
 \begin{itemize}
 \item Ecuación general
@@ -537,7 +614,7 @@ $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
 $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \end{frame}
 
-\begin{frame}[label=sec-3-3-2]{Resistencia Serie: Curva IV}
+\begin{frame}[label={sec:org5621aea}]{Resistencia Serie: Curva IV}
 \begin{itemize}
 \item Resistencia de contactos metálicos con el semiconductor
 
@@ -546,10 +623,12 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \item Resistencia de malla de metalización
 \end{itemize}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InfluenciaRs_IV.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-3-3]{Resistencia Serie: Curva PV}
+\begin{frame}[label={sec:org6b60836}]{Resistencia Serie: Curva PV}
 \begin{itemize}
 \item Resistencia de contactos metálicos con el semiconductor
 
@@ -558,10 +637,12 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \item Resistencia de malla de metalización
 \end{itemize}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InfluenciaRs_Potencia.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-3-4]{Resistencia paralelo: Curva IV}
+\begin{frame}[label={sec:orgb64aaea}]{Resistencia paralelo: Curva IV}
 \begin{itemize}
 \item Fugas de corriente en bordes de célula
 
@@ -570,10 +651,12 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \item Caminos de difusión en fronteras de grano
 \end{itemize}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InfluenciaRsh_IV.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-3-5]{Resistencia paralelo: Curva PV}
+\begin{frame}[label={sec:org7aa892d}]{Resistencia paralelo: Curva PV}
 \begin{itemize}
 \item Fugas de corriente en bordes de célula
 
@@ -582,14 +665,16 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 \item Caminos de difusión en fronteras de grano
 \end{itemize}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InfluenciaRsh_Potencia.pdf}
+\end{center}
 \end{frame}
 
 
 \subsection{Cálculo del MPP}
-\label{sec-3-4}
+\label{sec:org356974e}
 
-\begin{frame}[label=sec-3-4-1]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org289ec87}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Normalización
 \end{itemize}
@@ -608,7 +693,7 @@ $$\begin{aligned}
   p_{mpp} & = & FF\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label=sec-3-4-2]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org54d22e0}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Resistencia Serie y FF
 \end{itemize}
@@ -625,7 +710,7 @@ $$\begin{aligned}
   k_{oc} & = & \frac{V_{oc}}{V_{t}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label=sec-3-4-3]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org94bfa79}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Aproximación para MPP
 \end{itemize}
@@ -639,30 +724,30 @@ $$\begin{aligned}
   D_{M0} & = & \frac{k_{oc}-1}{k_{oc}-\ln k_{oc}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label=sec-3-4-4]{Método de J.M. Ruiz}
+\begin{frame}[label={sec:org10ba45a}]{Método de J.M. Ruiz}
 \begin{itemize}
 \item Itinerario
 
 \begin{itemize}
-\item Obtener los valores de $I_{sc}$ y $V_{oc}$ en las condiciones de
+\item Obtener los valores de \(I_{sc}\) y \(V_{oc}\) en las condiciones de
 temperatura y radiación deseadas
 
-\item Obtener resistencia serie (supondremos $R_{s}=R_{s}^{*}$)
+\item Obtener resistencia serie (supondremos \(R_{s}=R_{s}^{*}\))
 $$R_{s}^{*}=\frac{V_{oc}^{*}-V_{mpp}^{*}+m\cdot
             V_{t}\cdot\ln(1-\frac{I_{mpp}^{*}}{I_{sc}^{*}})}{I_{mpp}^{*}}$$
-donde se debe emplear el valor de $V_{t}$ para
-$T_{c}=\SI{25}{\celsius}$.
+donde se debe emplear el valor de \(V_{t}\) para
+\(T_{c}=\SI{25}{\celsius}\).
 
-\item Calcular $r_{s}$ y $k_{oc}$, y con ellos $D_{M0}$ y $D_{M}$.
+\item Calcular \(r_{s}\) y \(k_{oc}\), y con ellos \(D_{M0}\) y \(D_{M}\).
 
-\item Calcular $i_{mpp}$ y a continuación $v_{mpp}$.
+\item Calcular \(i_{mpp}\) y a continuación \(v_{mpp}\).
 
-\item Deshacer la normalización para obtener $I_{mpp}$ y $V_{mpp}$.
+\item Deshacer la normalización para obtener \(I_{mpp}\) y \(V_{mpp}\).
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-4-5]{Simplificado: Factor de Forma Constante}
+\begin{frame}[label={sec:orga8fd8e1}]{Simplificado: Factor de Forma Constante}
 $$FF=FF^{*}$$
 
 $$\begin{aligned}
@@ -670,31 +755,35 @@ $$\begin{aligned}
   \frac{V_{mpp}}{V_{oc}} & = & \frac{V_{mpp}^{*}}{V_{oc}^{*}}\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label=sec-3-4-6]{Ejercicio de Cálculo}
-De una célula de $\SI{100}{\centi\meter\squared}$ y $I_{sc}^{*}=3\, A$, $I_{mpp}^{*}=2.7\, A$ , $V_{oc}^{*}=0.6\, V$,
-$V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
+\begin{frame}[label={sec:orgc83e2a7}]{Ejercicio de Cálculo}
+De una célula de \(\SI{100}{\centi\meter\squared}\) y \(I_{sc}^{*}=3\, A\), \(I_{mpp}^{*}=2.7\, A\) , \(V_{oc}^{*}=0.6\, V\),
+\(V_{mpp}^{*}=0.48\, V\), calcular suponiendo factor de forma constante:
 
 \begin{itemize}
-\item $P_{mpp}^{*}$, $FF^{*}$, $\eta^{*}$
+\item \(P_{mpp}^{*}\), \(FF^{*}\), \(\eta^{*}\)
 
-\item $I_{mpp}$, $V_{mpp}$ cuando $T_{c}=60\celsius$ y $G=800\, W/m^{2}$.
+\item \(I_{mpp}\), \(V_{mpp}\) cuando \(T_{c}=60\celsius\) y \(G=800\, W/m^{2}\).
 \end{itemize}
 \end{frame}
 
 \section{Fabricación}
-\label{sec-4}
+\label{sec:orgd1b384a}
 
-\begin{frame}[label=sec-4-0-1]{}
-\href{http://youtu.be/fZ1SC-vUe_I?t\%3D31s}{\includegraphics[width=.9\linewidth]{../figs/solar_cell_manufacturing_video.jpg}}
+\begin{frame}[label={sec:org4380828}]{}
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/oscar/github/esf/figs/solar_cell_manufacturing_video.jpg}
+\end{center}
+
+\url{https://www.youtube.com/watch?v=fZ1SC-vUe_I}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-2]{Purificación de silicio}
+\begin{frame}[label={sec:org70e06b5}]{Purificación de silicio}
 \begin{itemize}
 \item El silicio puede extraerse de la cuarzita obteniendo Silicio de grado metalúrgico (98\% pureza).
 
-\item Para la industria de la electrónica se necesita silicio de grado electronico (nivel de impureza por debajo de $10^{-9}$, 9 nueves).
+\item Para la industria de la electrónica se necesita silicio de grado electronico (nivel de impureza por debajo de \(10^{-9}\), 9 nueves).
 
-\item Para las células solares puede utilizarse silicio de grado solar (nivel de impureza algo mayor, $10^{-5}$, 5 nueves).
+\item Para las células solares puede utilizarse silicio de grado solar (nivel de impureza algo mayor, \(10^{-5}\), 5 nueves).
 
 \item Al mezclar silicio con acido clorhídrico se produce triclorosilano, que es destilado para eliminar impurezas.
 
@@ -702,11 +791,11 @@ $V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-3]{Formación de obleas}
+\begin{frame}[label={sec:orgd932ff8}]{Formación de obleas}
 \begin{itemize}
 \item Para obtener mayor pureza se emplea el silicio monocristalino (un sólo cristal) obtenido mediante el proceso de Czochralski o similar (se utiliza una semilla de cristal para crecer silicio a muy alta temperatura).
 
-\item El lingote resultante debe ser cortado en obleas de $200-500\,\mu m$.
+\item El lingote resultante debe ser cortado en obleas de \(200-500\,\mu m\).
 
 \item Las obleas son sometidas a limpieza para eliminar impurezas por el cortado.
 
@@ -716,14 +805,13 @@ $V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-4]{Formación de células}
+\begin{frame}[label={sec:org021b45a}]{Formación de células}
 \begin{itemize}
-\item Se añaden los contactos posterior (alto recubrimiento) y anterior (optimización para obtener baja $R_{s}$ y poco sombreado) empleando aleaciones de plata y aluminio.
+\item Se añaden los contactos posterior (alto recubrimiento) y anterior (optimización para obtener baja \(R_{s}\) y poco sombreado) empleando aleaciones de plata y aluminio.
 
 \item Para reducir las pérdidas por reflexión se añade una capa antireflectante con (p.ej) óxido de Titanio (color azulado).
 
 \item Si es posible, se textura la superficie (creación de mini pirámides).
 \end{itemize}
 \end{frame}
-% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

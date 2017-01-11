@@ -1,211 +1,302 @@
-#+TITLE: Energía Solar Fotovoltaica:\\Célula Solar
+#+TITLE: Célula Solar
+#+SUBTITLE: Energía Solar Fotovoltaica
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
 
 * Teoría de Semiconductores
-
-** Modelo de bandas de energía
-
-*** Átomos aislados vs. Átomos en Sólido
-# http://commons.wikimedia.org/w/index.php?title=File%3AMetals_and_insulators%2C_quantum_difference_from_band_structure.ogv
-
-[[http://upload.wikimedia.org/wikipedia/commons/8/81/Metals_and_insulators,_quantum_difference_from_band_structure.ogv][file:../figs/Metals_and_insulators_video.jpg]]
-
-*** Átomos aislados vs. Átomos en Sólido
-
-- Supongamos una red cristalina formada por átomos.
-
-- Los *electrones de un átomo aislado* pueden existir *únicamente en determinados estados de energía*. 
-
-- A medida que disminuye la distancia interatómica comienza a observarse la *interacción mutua entre los átomos* hasta formarse un sistema electrónico único. 
-
-- Las *fuerzas de repulsión y atracción* entre los átomos encontrarán su *equilibrio* cuando los átomos estén separados por la *distancia interatómica típica del cristal* que se trate.
-
-- La separación real entre átomos en el cristal será aquella para la cual la *energía del sólido sea mínima*.
-
-*** Bandas de energía
-[[../figs/simplified_band_diagram.jpg]]
+** Conducción eléctrica
 
 *** Bandas de energía
 
--  En un *sólido* el número de átomos es tan elevado que los niveles de energía forman *bandas continuas de energía*.
+ #+ATTR_BEAMER: :overlay <+->
+ - En un *sólido* el número de átomos es tan elevado que los niveles de energía forman *bandas continuas de energía*.
 
--  Los *electrones* asociados a los átomos del sólido *llenan estas bandas en orden ascendente*.
+ - Los *electrones* asociados a los átomos del sólido *llenan estas bandas en orden ascendente*.
 
--  La banda de mayor energía completamente ocupada se denomina *banda de valencia* (/electrones ligados a átomos/). La siguiente banda, parcialmente ocupada o vacía, se denominada *banda de conducción* (/electrones desligados de átomos/).
+ - La banda de mayor energía completamente ocupada se denomina *banda de valencia* (/electrones ligados a átomos/).
 
--  Estas bandas pueden estar separadas por otra banda de energías que corresponde a *estados no permitidos* (*banda prohibida*), o *pueden estar solapadas* permitiendo una transición fácil de una a otra.
+ - La siguiente banda, parcialmente ocupada o vacía, se denominada *banda de conducción* (/electrones desligados de átomos/).
+
+ - Estas bandas pueden estar separadas por otra banda de energías que corresponde a *estados no permitidos* (*banda prohibida*), o *pueden estar solapadas* permitiendo una transición fácil de una a otra.
 
 *** Bandas de energía
-# http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
-[[../figs/Band_filling_diagram.png]]
+ #+BEGIN_CENTER
+
+ [[file:../figs/simplified_band_diagram.jpg]]
+
+ #+END_CENTER
 
 *** Conductores, aislantes y semiconductores
 
-Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
+ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
+ #+ATTR_BEAMER: :overlay <+->
+ - En un *conductor* la $E_{g}$ es muy baja y los electrones circulan fácilmente por la banda de conducción.
 
--  En un *conductor* la $E_{g}$ es muy baja y los electrones circulan fácilmente por la banda de conducción.
+ - En un *aislante* se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   ($E_{g}>\SI{5}{\electronvolt}$)
 
--  En un *aislante* se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   ($E_{g}>\SI{5}{\electronvolt}$)
+ - En un *semiconductor* la $E_{g}$ es baja ($E_{g}<\SI{5}{\electronvolt}$): los electrones pueden "saltar" a la banda de conducción con un aporte energético.
 
--  En un *semiconductor* la $E_{g}$ es baja ($E_{g}<\SI{5}{\electronvolt}$): los electrones pueden "saltar" a la banda de conducción con un aporte energético.
+   - $E_{g}(Si)=\SI{1.12}{\electronvolt}$
 
-   -  Para el silicio $E_{g}=\SI{1.12}{\electronvolt}$.
+   - $E_{g}(AsGa)=\SI{1.4}{\electronvolt}$
+
+*** Conductores, aislantes y semiconductores
+
+**** La conductividad de los materiales depende de la *concentración de electrones libres* (n) presentes en la banda de conducción
+
+**** Valores típicos de n
+ - Metal: \SI{1e22}{\per\cm\cubed}
+ - Aislante: \SI{10}{\per\cm\cubed}
+ - Semiconductor: \SI{1e10}{\per\cm\cubed} a T = \SI{300}{\kelvin}
 
 ** Semiconductores
 
-*** Rotura de Enlaces
+*** Red cristalina de Si (T = \SI{0}{\kelvin})
+ #+BEGIN_CENTER
+ [[file:../figs/silicio_T0K.jpg]]
+ #+END_CENTER
+*** Generación de electrón-hueco (T > \SI{0}{\kelvin})
+ #+BEGIN_CENTER
+ file:../figs/silicio_T300K.jpg
+ #+END_CENTER
 
--  Cuando se rompe un enlace, un electrón y un hueco quedan libres para moverse por el material (conducción intrínseca).
+*** Generación de electrón-hueco
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
 
--  La *densidad intrínseca de huecos y electrones es idéntica*. Esta densidad depende de la temperatura y de $E_{g}$.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+ #+ATTR_BEAMER: :overlay <+->
+ - Cuando se *rompe un enlace*, un electrón y un hueco quedan libres para moverse por el material (conducción intrínseca).
 
--  Esta *circulación es aleatoria*, sin una dirección predeterminada.
+ - Esta *circulación es aleatoria*, sin una dirección predeterminada: *no es aprovechable* en un circuito externo.
+
+ - La *densidad intrínseca de huecos y electrones es idéntica* (depende de la temperatura y de $E_{g}$).
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+
+ [[file:../figs/silicio_T300K.jpg]]
 
 *** Recombinación de un par electrón-hueco
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+ #+ATTR_BEAMER: :overlay <+->
+ -  Se producen *encuentros electrón-hueco* que restablecen un enlace con *liberación de energía* ($E_{g}$) en forma de calor.
 
--  Por tanto, se producen *encuentros electrón-hueco* que restablecen un enlace con liberación de energia ($E_{g}$) en forma de calor.
+ -  Para evitar la recombinación *es preciso dirigir el movimiento* de electrones y huecos mediante un campo eléctrico.
 
-   -  Las impurezas del cristal favorecen la recombinación.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
 
-   -  El tiempo de vida de portadores mide cuánto tarda en producirse el proceso de recombinación.
+ [[file:../figs/silicio_T300K.jpg]]
 
-   -  La longitud de difusión de portadores mide la distancia media que puede recorrer un portador antes de ser recombinado.
-
--  Esta *conducción intrínseca* *no es aprovechable* en un circuito externo.
-
--  Para evitar la recombinación *es preciso dirigir el movimiento* de electrones y huecos mediante un campo eléctrico.
 
 ** Dopaje de semiconductores
-*** Bandas de energía
-# http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
-[[../figs/Band_filling_diagram.png]]
+*** Definición
+ El *dopaje de semiconductores* consiste en introducir de forma controlada impurezas en el cristal para alterar las bandas de energía.
+
+ # http://commons.wikimedia.org/wiki/File:Band_filling_diagram.svg
+ [[file:../figs/Band_filling_diagram.png]]
 
 
 *** Tipo n
 
-[[../figs/Semiconductor_tipo_n.png]]
+ [[file:../figs/DopajeN.jpg]]
 
 *** Tipo n
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
 
--  El *dopaje de semiconductores* consiste en introducir de forma
-   controlada impurezas en el cristal.
+ #+ATTR_BEAMER: :overlay <+->
+ -  Los átomos de *Fósforo* tienen cinco electrones de valencia (uno más que el silicio).
 
--  Los átomos de *Fósforo* tienen cinco electrones de valencia (uno más
-   que el silicio).
+ -  Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto electrón no queda bien integrado en la red.
 
--  Al impurificar un cristal de Silicio con átomos de Fósforo, el quinto
-   electrón no queda bien integrado en la red.
+ -  La rotura de este enlace se produce con *baja aportación energética* (menor que $E_{g}$).
 
--  La rotura de este enlace se produce con *baja aportación energética*
-   (menor que $E_{g}$).
+ -  El *quinto electrón queda libre pero la carga positiva (ión $P^{+}$) está ligada* a la red cristalina.
 
--  El *quinto electrón queda libre pero la carga positiva (ión $P^{+}$)
-   está ligada* a la red cristalina.
+ -  La *densidad de electrones* (portador mayoritario) es *superior a la de huecos*
 
--  La *densidad de electrones es superior a la de huecos*
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
 
-   -  Semiconductor *tipo n*.
+ [[file:../figs/Semiconductor_tipo_n_vertical.png]]
 
-   -  El *portador mayoritario* es el *electrón*.
 
 *** Tipo p
 
-[[../figs/Semiconductor_tipo_p.png]]
+ [[file:../figs/DopajeP.jpg]]
 
 *** Tipo p
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+ #+ATTR_BEAMER: :overlay <+->
+ -  Los átomos de *Boro* tienen tres electrones de valencia (uno menos que el silicio).
+ 
+ -  Al impurificar un cristal de Silicio con átomos de Boro, hay un enlace sin cubrir (hueco).
 
--  Los átomos de *Boro* tienen tres electrones de valencia (uno menos
-   que el silicio).
+ -  La rotura de este enlace se produce con *baja aportación energética* (menor que $E_{g}$).
 
--  Al impurificar un cristal de Silicio con átomos de Boro, hay un
-   enlace sin cubrir (hueco).
+ -  El *hueco queda libre* pero la *carga negativa (ión $B^{-}$) está ligada* a la red cristalina.
 
--  La rotura de este enlace se produce con *baja aportación energética*
-   (menor que $E_{g}$).
+ -  La *densidad de huecos* (portador mayoritario) es *superior a la de electrones*
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
 
--  El *hueco queda libre* pero la *carga negativa (ión $B^{-}$) está
-   ligada* a la red cristalina.
+ [[file:../figs/Semiconductor_tipo_p_vertical.png]]
 
--  La *densidad de huecos* es *superior a la de electrones*
-
-   -  Semiconductor *tipo p*.
-
-   -  El *portador mayoritario* es el *hueco*.
 
 ** Unión p-n
+*** Unión p-n
+
+ #+BEGIN_CENTER
+ [[file:../figs/Union_PN.jpg]]
+ #+END_CENTER
 
 
-*** 
+*** Conducción en una unión p-n
+ - Al *unir un semiconductor tipo p con otro tipo n, se produce un desequilibrio*:
+   - Corriente de Difusión
+   - Corriente de Arrastre
 
-[[../figs/Pn-junction-equilibrium.png]]
+ #+BEGIN_CENTER
+ [[file:../figs/Pn-junction-equilibrium.png]]
+ #+END_CENTER
 
-*** Fundamentos
+*** Corriente de Difusión
 
--  Al *unir un semiconductor tipo p con otro tipo n, se produce un
-   desequilibrio*
+ -  *Difusión de portadores mayoritarios*
+    #+ATTR_BEAMER: :overlay <+->
+    -  Movimiento de huecos desde cristal p a cristal n, dejando iones con carga negativa.
+ 
+    -  Movimiento de electrones desde cristal n a cristal p, dejando iones con carga positiva.
 
--  *Difusión de portadores mayoritarios*
+ #+BEGIN_CENTER
+ #+ATTR_LATEX: :height 0.5\textheight
+ [[file:../figs/Pn-junction-equilibrium.png]]
+ #+END_CENTER
 
-   -  Hay un movimiento de huecos desde cristal p a cristal n, quedando
-      cargado negativamente.
+*** Corriente de Arrastre
+ #+ATTR_BEAMER: :overlay <+->
+ - *Los iones fijos* cercanos a la unión generan un *campo eléctrico de arrastre* en sentido opuesto a la difusión: *barrera de potencial*
 
-   -  Hay un movimiento de electrones desde cristal n a cristal p,
-      quedando cargado positivamente.
+ - Los *portadores minoritarios que atraviesan la unión se recombinan* en la *zona cercana a la unión* despoblada de portadores y con iones cargados ligados a la red.
 
--  Este proceso de difusión también *desequilibra* las densidades de
-   portadores en los cristales.
+ #+BEGIN_CENTER
+ #+ATTR_LATEX: :height 0.5\textheight
+ [[file:../figs/Pn-junction-equilibrium.png]]
+ #+END_CENTER
 
--  *Proceso de arrastre*: Este desequilibrio *crea un campo eléctrico*
-   (sentido del cristal n al cristal p) en contra del proceso de
-   difusión.
 
--  El *equilibrio* se alcanza al *compensarse los movimientos de
-   difusión y de arrastre*.
+*** Equilibrio en una unión p-n
 
-*** Recombinación en una unión p-n
+ - El *equilibrio* se alcanza al *compensarse los movimientos de  difusión y de arrastre*.
 
--  Los *portadores minoritarios que atraviesan la unión se recombinan*:
-
-   -  Electrones de cristal n con huecos en cristal p.
-
-   -  Huecos de cristal p con electrones en cristal n.
-
--  Esta recombinación deja *iones cargados ligados a la red* (incapaces
-   de conducir)
-
--  Esta recombinación se produce en *zonas cercanas a la unión* (zona de
-   carga de espacio)
-
-   -  Despoblada de portadores
-
-   -  *Los iones fijos generan un campo eléctrico de arrastre*.
+ #+BEGIN_CENTER
+ #+ATTR_LATEX: :height 0.5\textheight
+ [[file:../figs/Diodo_CircuitoAbierto.jpg]]
+ #+END_CENTER
 
 *** Polarización en directa
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
 
--  *Para conseguir corriente es necesario romper el equilibrio alcanzado y reducir el valor del potencial termodinámico*.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+ #+ATTR_BEAMER: :overlay <+->
+ -  Para *conseguir corriente* es necesario *romper el equilibrio* alcanzado y *reducir la barrera de potencial*.
 
--  *Diferencia de potencial* con lado p positivo respecto al lado n: unión p-n está *polarizada en directa*.
+ -  Diferencia de potencial con lado *p positivo respecto al lado n*: unión p-n está polarizada en directa.
 
--  En estas condiciones *se reduce la barrera de potencial* y, en consecuencia el valor del campo eléctrico de la zona de unión.
+ -  En estas condiciones *se reduce la barrera de potencial* y, en consecuencia el valor del campo eléctrico de la zona de unión.
 
--  La *corriente de arrastre disminuye* y *no puede compensar la corriente de difusión*.
+ -  La *corriente de arrastre disminuye* y *no puede compensar la corriente de difusión*.
 
--  Aparecen dos corrientes en sentidos contrarios pero de partículas de diferente signo: *corriente total aprovechable.*
+ -  Convenio: la corriente entra por zona p y sale por zona n.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
 
--  Convenio: la corriente entra por zona p y sale por zona n.
+ [[file:../figs/Diodo_Directa.jpg]]
 
 *** Polarización en inversa
+    :PROPERTIES:
+    :beamer_opt: plain
+    :END:
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+ #+ATTR_BEAMER: :overlay <+->
+ -  Si la diferencia de potencial aplicada consigue que la *zona p esté a menor tensión que la zona n*, la unión queda polarizada en inversa.
 
--  Si la diferencia de potencial aplicada consigue que la zona p esté a
-   menor tensión que la zona n, la unión queda *polarizada en inversa*.
+ -  En estas condiciones *la barrera de potencial en la unión queda reforzada* y el paso de portadores de una a otra zona queda aún más debilitado.
 
--  En estas condiciones *la barrera de potencial en la unión queda
-   reforzada* y el paso de portadores de una a otra zona queda aún más
-   debilitado.
+ -  La *corriente que atraviesa la unión en polarización inversa es de muy bajo valor*.
 
--  La *corriente que atraviesa la unión en polarización inversa es de muy bajo valor*.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+ [[file:../figs/Diodo_Inversa.jpg]]
+
+
+ # ** Diodo
+
+ # *** Definición
+
+ # - El dispositivo electrónico basado en una unión p-n se denomina diodo.
+
+ # - La zona p del diodo es el ánodo y la zona n es el cátodo.
+
+ # #+BEGIN_CENTER
+ # #+ATTR_LATEX: :width 0.5\textwidth
+ # [[file:figs/Diodo.pdf]]
+ # #+END_CENTER
+
+
+ # *** Ecuación del Diodo
+
+ # - $$I_{D}=I_{0}\cdot[\exp(\frac{V}{n\cdot V_{T}})-1]$$ donde $I_{0}$ es la corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada al diodo y $n$ el factor de idealidad del diodo.
+
+ # - Para una temperatura ambiente de $\SI{300}{\kelvin}$, $$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo (en grados Kelvin), y $\mathrm{e}$ es la carga del electrón.
+
+ # *** 
+
+ # [[file:figs/EcuacionDiodo.pdf]]
+
 
 ** Diodo
 
@@ -537,7 +628,9 @@ $V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
 * Fabricación
 
 *** 
-[[http://youtu.be/fZ1SC-vUe_I?t%3D31s][file:../figs/solar_cell_manufacturing_video.jpg]]
+[[file:~/github/esf/figs/solar_cell_manufacturing_video.jpg]]
+
+[[https://www.youtube.com/watch?v=fZ1SC-vUe_I]]
 
 *** Purificación de silicio
 
