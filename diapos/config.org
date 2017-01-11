@@ -1,6 +1,7 @@
-#+AUTHOR:    Oscar Perpiñán Lamigueiro \\ http://oscarperpinan.github.io
+#+AUTHOR:    Oscar Perpiñán Lamigueiro @@latex:\\@@ http://oscarperpinan.github.io
 #+EMAIL:     oscar.perpinan@upm.es
 #+DATE: 
+#+STARTUP: beamer
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  es
@@ -12,21 +13,19 @@
 #+LINK_UP:   
 #+LINK_HOME: 
 #+XSLT:
-#+STARTUP: beamer
-#+LaTeX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [xcolor={usenames,svgnames,dvipsnames}]
 #+BEAMER_THEME: Goettingen [hideothersubsections]
 #+BEAMER_COLOR_THEME: rose
 #+BEAMER_FONT_THEME: serif
 #+LATEX_HEADER: \usepackage{mathpazo}
-#+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+#+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 #+LATEX_HEADER: \usepackage{gensymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \bibliographystyle{plain}
 #+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 #+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 #+LATEX_HEADER: \usepackage[emulate=units]{siunitx}
-#+LATEX_HEADER: \sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+#+LATEX_HEADER: \sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 #+LATEX_HEADER: \newunit{\wattpeak}{Wp}
 #+LATEX_HEADER: \newunit{\watthour}{Wh}
 #+LATEX_HEADER: \newunit{\amperehour}{Ah}
