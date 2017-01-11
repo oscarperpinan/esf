@@ -1,4 +1,5 @@
-#+TITLE: Energía Solar Fotovoltaica:\\Geometría Solar
+#+TITLE: Geometría Solar
+#+SUBTITLE: Energía Solar Fotovoltaica
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
@@ -6,27 +7,30 @@
 * Geometría Sol y Tierra
 ** Movimiento Sol-Tierra
 
-*** Introducción
-
--  La Tierra se mueve alrededor del Sol siguiendo una elipse de baja
-   excentricidad.
-
-   -  Periodo aproximado: 1 año.
-
-   -  Este movimiento está contenido en el llamado /plano de la
-      eclíptica/
-
--  La Tierra gira sobre si misma alrededor de su eje polar.
-
-   -  Entre el eje polar y el plano de la eclíptica hay un ángulo
-      constante de $23,45\degree$.
-
-   -  Entre el plano ecuatorial y la linea que une Tierra-Sol hay un
-      ángulo variable: /declinación./
-
-*** Movimiento Sol-Tierra
+*** Movimiento terrestre
 
 [[../figs/PlanoEcliptica.pdf]]
+
+#+ATTR_BEAMER: :overlay <+->
+- La Tierra *gira sobre si misma* alrededor de su eje polar.
+  #+ATTR_BEAMER: :overlay <.->
+  - Periodo aproximado: 24 horas.
+
+- La Tierra se mueve *alrededor del Sol* siguiendo una elipse de baja
+  excentricidad.
+  #+ATTR_BEAMER: :overlay <.->
+  - Periodo aproximado: 1 año.
+
+  - Este movimiento está contenido en el llamado /plano de la
+    eclíptica/
+
+*** Movimiento terrestre
+
+[[../figs/PlanoEcliptica.pdf]]
+
+   -  Entre el eje polar y el plano de la eclíptica hay un ángulo constante de $23,45\degree$.
+
+   -  Entre el plano ecuatorial y la linea que une la Tierra y el Sol hay un ángulo variable: /declinación./
 
 *** Distancia Sol-Tierra
 
@@ -44,6 +48,55 @@
   d_{n}}{365})\]
 
 
+*** Estaciones
+#+ATTR_BEAMER: :overlay <+->
+-  Las estaciones se deben al ángulo entre el plano ecuatorial y el plano de
+   la eclíptica
+
+-  *Solsticio de junio*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Declinación máxima.
+
+   -  Días más largos en hemisferio Norte (verano)
+
+   -  El Sol amanece por el Noreste y anochece por el Noroeste en el
+      hemisferio Norte.
+
+-  *Solsticio de diciembre*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Declinación mínima.
+
+   -  Días más cortos en hemisferio Norte (invierno)
+
+   -  El Sol amanece por el Sureste y anochece por el Suroeste en el
+      hemisferio Norte.
+
+-  *Equinoccios*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Declinación nula
+
+   -  La duración de noche y día coincide.
+
+   -  El Sol amanece por el Este y anochece por el Oeste.
+
+*** Solsticios y equinoccios
+
+-  *Equinoccio de marzo*:
+
+   -  21-22 Marzo (Dia del Año 80-81)
+
+-  *Equinoccio de septiembre:*
+
+   -  22-23 Septiembre (Dia del Año 265-266)
+
+-  *Solsticio de junio*:
+
+   -  21-22 Junio (Dia del Año 172-173)
+
+-  *Solsticio de diciembre*
+
+   -  21-22 Diciembre (Dia del Año 355-356)
+
 
 *** Declinación
 
@@ -52,69 +105,8 @@
 [[../figs/Declinacion.pdf]]
 
 *** Otras ecuaciones
-#+BEGIN_LaTeX
-\begin{align*}
-  X &= 2 \pi \cdot (d_n-1)/365\\
-  \delta &= 0.006918 - 0.399912 \cdot \cos(X) + 0.070257 \cdot \sin(X)\\
-    &-  0.006758 \cdot \cos(2 X) + 0.000907 \cdot \sin(2 X)\\
-    &- 0.002697 \cdot \cos(3 X) + 0.001480 \cdot \sin(3 X)\\
-  \epsilon_{0} &= 1.000110 + 0.034221 \cdot \cos(X) + 0.001280 \cdot \sin(X)\\
-    &+ 0.000719 \cdot \cos(2 X) + 0.000077 \cdot \sin(2 X)
-\end{align*}
-#+END_LaTeX
-
-*** Otras ecuaciones
 
 [[../figs/DeclinacionDiferencias.pdf]]
-
-*** Declinación
-
--  *Equinoccio de primavera*:
-
-   -  21-22 Marzo (Dia del Año 80-81)
-
--  *Equinoccio de otoño:*
-
-   -  22-23 Septiembre (Dia del Año 265-266)
-
--  *Solsticio de Verano*:
-
-   -  21-22 Junio (Dia del Año 172-173)
-
--  *Solsticio de Invierno:*
-
-   -  21-22 Diciembre (Dia del Año 355-356)
-
-*** Declinación
-
--  Las estaciones se deben al ángulo entre plano ecuatorial y plano de
-   la eclíptica
-
--  *Solsticio de verano*
-
-   -  Declinación máxima.
-
-   -  Días más largos en hemisferio Norte.
-
-   -  El Sol amanece por el Noreste y anochece por el Noroeste en el
-      hemisferio Norte.
-
--  *Solsticio de invierno*
-
-   -  Declinación mínima.
-
-   -  Días más cortos en hemisferio Norte.
-
-   -  El Sol amanece por el Sureste y anochece por el Suroeste en el
-      hemisferio Norte.
-
--  *Equinoccios*
-
-   -  Declinación nula
-
-   -  La duración de noche y día coincide.
-
-   -  El Sol amanece por el Este y anochece por el Oeste.
 
 ** Sistemas de coordenadas
 
@@ -154,31 +146,31 @@
 [[../figs/RelacionSistemasCoordenadas.pdf]]
 
 *** Ejes locales y terrestres
-#+BEGIN_LaTeX
+
 \begin{align*}
   \vec{\mu}_{s} &= \mathrm{signo}(\phi)\cdot\left[\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)\right]\cdot\vec{\mu}_{h}-\\
   &- \left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\\
   &+ \left[\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\right]\cdot\vec{\mu}_{c} 
 \end{align*}
-#+END_LaTeX
+
 
 *Latitud ($\phi$) con signo*: Positivo para Hemisferio Norte, Negativo para Hemisferio Sur.
 
 ** Ángulos Solares
 
 *** Ecuaciones
-- Cenit solar
+**** Cenit solar
 \[\cos\left(\theta_{z}\right)=\vec{\mu}_{c}\cdot\vec{\mu}_{s}=\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\]
 
-- Azimut solar
-#+BEGIN_LaTeX
+**** Azimut solar
+
 \begin{align*}
   \vec{\mu_{s}}\cdot\vec{\mu}_{\bot} &=-\sin\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
   \vec{\mu_{s}}\cdot\vec{\mu}_{h} &=\mathrm{signo}(\phi)\cdot\cos\left(\psi_{s}\right)\sin\left(\theta_{zs}\right)\\
   \cos\left(\psi_{s}\right) &= \mathrm{signo}(\phi)\cdot\frac{\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)}{\sin\left(\theta_{zs}\right)}\\
   \sin(\psi_{s}) &=\frac{\cos(\delta)\sin(\omega)}{\sin(\theta_{zs})}=\frac{\cos(\delta)\sin(\omega)}{\cos(\gamma_{s})}
 \end{align*}
-#+END_LaTeX
+
 
 
 *** Trayectoria Solar ($60\degree N$)
@@ -219,6 +211,16 @@
    40N, 10S, 40S.
 
 ** Hora solar y oficial
+*** Hora solar
+
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
+
+- $\omega$: hora solar real o aparente[º]
+- $TO$: hora oficial [h]
+- $AO$: adelanto oficial por horario de verano [h]
+- $\Delta\lambda$ corrección por huso horario [º]
+- $EoT$: Ecuación del tiempo (dia solar real y dia solar medio) [min]
+
 *** Hora oficial
 
 -  *La hora oficial* es una medida del tiempo *ligada a un meridiano*
@@ -261,22 +263,25 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
 
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
--  Calculemos la hora solar real correspondiente al día 23 de Abril
-   de 2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña,
-   Galicia.
-\pause
--  Esta localidad está contenida en el meridiano de longitud
-   $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso
-   horario GMT+1.
-\pause
--  Por tanto $\lambda_{L}=-8.38\degree$, $\lambda_{H}=15\degree$ y
+**** 
+Calcule la hora solar real correspondiente al día 23 de Abril de 2010
+  ($\mathrm{EoT=\SI{1.78}{\minute}}$) a las 12 de la mañana, hora
+  oficial de la ciudad de A Coruña, Galicia. Esta localidad está
+  contenida en el meridiano de longitud $8.38\degree\mathrm{W}$ y su
+  hora oficial está regida por el huso horario GMT+1.
+
+*** Solución
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
+
+#+ATTR_BEAMER: :overlay <+->
+-  $\lambda_{L}=-8.38\degree$, $\lambda_{H}=15\degree$ y
    $\Delta\lambda=-23.38\degree$.
-\pause
+
 -  En España se aplica el horario de verano y este día está incluido
    en el período afectado, $\mathrm{AO}=1$.
-\pause
+
 -  Por último, para este día $\mathrm{EoT=\SI{1.78}{\minute}}$.
-\pause
+
 -  Así $\omega=-37.94\degree$ (aproximadamente las 9 y media de la
    mañana). El Sol culminará ($\omega=0$) cuando sean las 14:31, hora
    oficial.
@@ -291,8 +296,9 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
 
 *** Sistemas con seguimiento
 
+#+ATTR_BEAMER: :overlay <+->
 -  *Fundamento:*
-
+   #+ATTR_BEAMER: :overlay <.->
    -  Radiación incidente aumenta al seguir al sol
 
    -  Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
@@ -302,20 +308,20 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
    mejores aprovechamientos del terreno.
 
 *** Algunos tipos de seguimiento solar
-
+#+ATTR_BEAMER: :overlay <+->
 -  *Doble eje*
-
+   #+ATTR_BEAMER: :overlay <.->
    -  Apuntamiento "perfecto"
 
    -  Mejor productividad, peor ocupación de terreno.
 
 -  *Seguimento acimutal*
-
+   #+ATTR_BEAMER: :overlay <.->
    -  Sacrifica un movimiento (inclinación del generador) para conseguir
       sistemas más económicos.
 
 -  *Seguimiento horizontal con eje Norte-Sur*
-
+   #+ATTR_BEAMER: :overlay <.->
    -  Sencillez y estabilidad estructural (el eje es horizontal y
       paralelo al terreno, con tantos puntos de apoyo como se consideren
       necesarios),
@@ -345,7 +351,7 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
 
 *** Sistema Estático
 - Ángulo de Incidencia
-#+BEGIN_LaTeX
+
 \begin{align*}
 \cos(\theta_{s}) &= \mathrm{signo}(\phi)\cdot\bigl[\sin(\beta)\cos(\alpha)\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\\
  &- \sin(\beta)\cos(\alpha)\cos\left(\phi\right)\sin\left(\delta\right)\bigr]+\\
@@ -353,7 +359,7 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
  &+ \cos(\beta)\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\\
  &+ \cos(\beta)\sin\left(\delta\right)\sin\left(\phi\right)
 \end{align*}
-#+END_LaTeX
+
 
 #+ATTR_LATEX: :height 0.4\textheight
 [[../figs/AngulosSistemaEstatico.pdf]]
@@ -361,12 +367,12 @@ $\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
 
 *** Sistema Estático
 Cuando $\alpha=0$
-#+BEGIN_LaTeX
+
 \begin{align*}
 \cos(\theta_{s}) &= \cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\beta-|\phi|\right)-\\ 
 &- \mathrm{signo}(\phi)\cdot\sin(\delta)\sin\left(\beta-|\phi|\right)
 \end{align*}
-#+END_LaTeX
+
 
 #+ATTR_LATEX: :height 0.6\textheight
 [[../figs/AngulosSistemaEstatico.pdf]]
@@ -375,7 +381,7 @@ Cuando $\alpha=0$
 *** Ángulo de Incidencia de Sistema Estático 
 
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/cosThetaEst_40N.pdf]]
 
 
@@ -404,59 +410,59 @@ Cuando $\alpha=0$
 
 *** Inclinación de Eje Horizontal N-S
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/BetaHoriz_40N.pdf]]
 
 
 
 *** Ángulo de Incidencia de Eje Horizontal N-S
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/cosThetaHoriz_40N.pdf]]
 
 
 *** Acimutal 
 [[../figs/Sombra2X.pdf]]
 
-#+BEGIN_LaTeX
+
 \begin{align*}
   \beta &= cte.\\
   \alpha &= \psi_{s}\\
   \cos(\theta_{s}) &= \cos\left(\beta-\theta_{z}\right)
 \end{align*}
-#+END_LaTeX
+
 
 
 
 *** Orientación de un seguidor acimutal
 
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/AlfaDoble_40N.pdf]]
 
 *** Ángulo de Incidencia en Acimutal
 
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/cosThetaAzimutal_40N.pdf]]
 
 
 *** Doble Eje
 [[../figs/Sombra2X.pdf]]
 
-#+BEGIN_LaTeX
+
 \begin{align*}
   \beta &= \theta_{z}\\
   \alpha &= \psi_{s}\\
   \cos(\theta_{s}) &= 1
 \end{align*}
-#+END_LaTeX
+
 
 
 *** Inclinación de un seguidor de Doble Eje
 
 - $40\degree N$
-
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/BetaDoble_40N.pdf]]
 
 
