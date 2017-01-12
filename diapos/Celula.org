@@ -640,7 +640,13 @@ $V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
 *** 
 [[file:~/github/esf/figs/solar_cell_manufacturing_video.jpg]]
 
+#+BEGIN_CENTER
+
+https://www.youtube.com/watch?v=BZKEkwOJ9Nw
+
 [[https://www.youtube.com/watch?v=fZ1SC-vUe_I]]
+
+#+END_CENTER
 
 *** Purificación de silicio
 
