@@ -1,4 +1,5 @@
-#+TITLE: Energía Solar Fotovoltaica:\\Radiación Solar
+#+TITLE: Radiación Solar
+#+SUBTITLE: Energía Solar Fotovoltaica
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
@@ -115,7 +116,7 @@
 
 **** Forma, tiempo, lugar
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[Forma_{tiempo,promedio}(lugar)\]
 
 \[G_{d,m}(0)\]
@@ -126,7 +127,7 @@
 
 \[B(\beta)\]
 
-#+END_LaTeX
+#+END_EXPORT
 
 *** Caracterización de la atmósfera
 
@@ -197,7 +198,7 @@ Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ e
 *** Correlaciones $F_{D}$ y $K_{T}$: Collares-Pereira y Rabl
 
 [[../figs/FdKtDiario.pdf]]
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 {\scriptsize \[
 F_{Dd} = \begin{cases}
   0.99 & K_{Td} \leq 0.17\\
@@ -206,7 +207,7 @@ F_{Dd} = \begin{cases}
 \]
 }
 {\scriptsize \par}
-#+END_LaTeX
+#+END_EXPORT
 
 *** Estimación de Directa y Difusa
 
@@ -275,12 +276,12 @@ F_{Dd} = \begin{cases}
 \[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
 
 *** Irradiancia Difusa Anisotrópica
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
 \[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
 \[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
-\[k_{1} & = & \frac{B(0)}{B_{0}(0)}\]
-#+END_LaTeX
+\[k_{1} = \frac{B(0)}{B_{0}(0)}\]
+#+END_EXPORT
 
 *** Irradiancia de Albedo
 
@@ -322,18 +323,13 @@ F_{Dd} = \begin{cases}
 [[../figs/Suciedad.pdf]]
 
 *** Difusa y Albedo
-#+BEGIN_LaTeX
-\begin{aligned}
-
-D_{ef}^{iso}(\beta,\alpha) & = & D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
-
-D_{ef}^{cir}(\beta,\alpha) & = & D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
-
-R_{ef}(\beta,\alpha) & = & R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
-
-\end{aligned}
-#+END_LaTeX
-
+#+BEGIN_EXPORT latex
+\begin{align*}
+D_{ef}^{iso}(\beta,\alpha) &= D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
+D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
+R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
+\end{align*}
+#+END_EXPORT
 *** Coeficientes
 
 
@@ -418,7 +414,7 @@ R_{ef}(\beta,\alpha) & = & R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limp
 
 *** Cálculo de Radiación Efectiva
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \frac{G_{efd,a}(\beta,\alpha)}{G_{d,a}(\beta_{opt})} = g_{1}\cdot(\beta-\beta_{opt})^{2}+g_{2}\cdot(\beta-\beta_{opt})+g_{3}
 \]
@@ -426,7 +422,7 @@ R_{ef}(\beta,\alpha) & = & R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limp
 \[
 g_{i} = g_{i1}|\alpha|^{2}+g_{i2}|\alpha|+g_{i3}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 | <l>      | <r>                 | <r>                  | <r>                  |
 |          | $i=1$               | $i=2$                | $i=3$                |
@@ -462,11 +458,11 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 \nocite{Perpinan2009}
 
 *** Variabilidad Temporal 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Predicción para un (día, mes, año) *determinado*: 
 
@@ -481,11 +477,11 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 #+ATTR_LATEX: :width 0.9\textwidth
 [[../figs/SpatialVariability.jpg]]
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Gueymard.Wilcox2011a}
 
@@ -499,7 +495,7 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 *** Estimación a partir de Medidas
 
 - Para estimar la radiación incidente es necesario contar con:
-  - *Medidas cercanas** (variabilidad espacial): distancia no superior a 10 km.
+  - *Medidas cercanas* (variabilidad espacial): distancia no superior a 10 km.
   - *Series temporales* largas (variabilidad temporal): 10 años. 
 
 *** Fuentes de datos
@@ -596,30 +592,30 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 
 - Radiación y Horas de Brillo (Angstrom y Prescott)
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \frac{G(0)}{B_o(0)} = a_1 + b_1 \frac{S}{S_o}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Problema: poca disponibilidad de datos
 
 *** Estaciones Meteorológicas: modelos empíricos
 - Radiación y Temperatura (Bristow y Campbell)
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Variaciones con más variables: Lluvia (si/no), rango antes y después, velocidad viento, humedad relativa.
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
   G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0) \cdot \left(1 +
     \sum_1^n p_j \cdot v_j \right) + p_{n+1}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Antonanzas-Torres.Sanz-Garcia.ea2013}
 
@@ -799,7 +795,7 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 
 - [[http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp][Meteogalicia]]  
 - [[http://meteo.navarra.es/estaciones/mapadeestaciones.cfm][MeteoNavarra]]
-- [[http://www.meteo.cat/xema/AppJava/SeleccioPerComarca.do][Cataluña]]
+- [[http://www.meteo.cat/observacions/xema][Cataluña]]
 - [[http://www.euskalmet.euskadi.net/s07-5853x/es/meteorologia/lectur.apl?e%3D5][MeteoEuskadi]]
 - [[http://www.juntadeandalucia.es/medioambiente/servtc5/WebClima/?lr%3Dlang_es][Andalucía]]
 
@@ -828,7 +824,7 @@ https://github.com/oscarperpinan/mds/wiki
     services.
 
 *** SAFs
-- [[http://www.cmsaf.eu/bvbw/appmanager/bvbw/cmsafInternet][SAF on Climate Monitoring (CM SAF)]]: provision of satellite-derived geophysical parameter data sets suitable for *climate monitoring*
+- [[https://wui.cmsaf.eu/safira/action/viewProduktSearch][SAF on Climate Monitoring (CM SAF)]]: provision of satellite-derived geophysical parameter data sets suitable for *climate monitoring*
 
   - Environmental Data Records (EDR): time-tagged earth-located
     geophysical parameters produced from sensor data. EDRs are derived
@@ -878,18 +874,18 @@ https://github.com/oscarperpinan/mds/wiki
 
 - *Ordinary Kriging*: modelo determinista para la media (constante) y estocástico para residuos.
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
   \hat{z}(\mathbf{s}) = \mu + \epsilon(\mathbf{s})
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - *Kriging with External Drift (KED)*: modelo determinista para la media incorporando información de una variable con alta densidad espacial.
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[  \hat{z}(\mathbf{s}_\theta) =  \sum_{k=0}^p \hat{\beta}_k q_k(\mathbf{s}_\theta) + 
   \sum_{i=1}^n \lambda_i \epsilon(\mathbf{s}_i)
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Journee.Bertrand2010}
 \nocite{Antonanzas-Torres.Canizares.ea2013}
@@ -903,11 +899,11 @@ https://github.com/oscarperpinan/mds/wiki
 #+END_CENTER
 
 - Sky-View Factor (SVF) :: Proporción de cielo visible para un receptor horizontal (afecta a la radiación difusa isotrópica)
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 SVF=1-\int_0^{2\pi}sin^{2} \theta_{hor} d\theta
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Horizon blocking :: Bloqueo de región circunsolar por horizonte: afecta a radiación directa y difusa anisotrópica
 
@@ -947,7 +943,7 @@ management of distributed energy generation.
 La función de densidad de probabilidad, $f(X)$, de una variable
 aleatoria *asigna probabilidad* a un suceso:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 
 \[
 P(a<X<b)=\int_{a}^{b}f(x)dx
@@ -961,7 +957,7 @@ P(X<b)=\int_{-\infty}^{b}f(x)dx\]
 \[
 P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
-#+END_LaTeX
+#+END_EXPORT
 
 
 *** Función de Densidad de Probabilidad
@@ -978,19 +974,19 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 - La *media* de una variable aleatoria es el *centro de masas* de su función densidad de probabilidad:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La *varianza* de una variable aleatoria es la *media del cuadrado de las desviaciones* respecto a la media:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La *desviación estándar* es la raiz cuadrada de la varianza: $\sigma_{X}=\sqrt{\sigma_{X}^2}$
 
@@ -1000,20 +996,20 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 - La *media de la suma* de varias variables aleatorias *independientes* es
   la suma de las medias:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La *varianza de la /suma o resta/* de varias variables aleatorias
   *independientes* es la *suma* de las varianzas:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 
 
@@ -1026,30 +1022,30 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
   varianza es $\sigma^{2}$, entonces la media de la muestra es otra
   variable aleatoria (que es una suma de variables aleatorias)
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \overline{X}=\frac{1}{n}\sum_{n}X_{i}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 
 
 *** Media y varianza de la media muestral
 
 - Por tanto, la *media de la media muestral* es la media de población:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \overline{X}=\frac{1}{n}\sum_{n}X_{i} = \mu
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La *varianza de la media muestral* es la suma de las varianzas:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 
 \[
 \sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 **** 
 Por tanto, una forma de *reducir la incertidumbre* es realizar la
@@ -1113,18 +1109,18 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 **** Irradiación Diaria
 - La radiación global en el plano horizontal debe ser inferior a la extraterrestre ($K_t \leq 1$)
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   G_d(0) \leq B_od(0)
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - El índice de claridad debe ser superior a 0.03
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   K_t = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La radiación global en el plano horizontal debe ser inferior a la de un modelo de cielo claro
 
@@ -1134,13 +1130,13 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 **** Irradiancia (intradiaria)
 - El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   k_t < 1  \text{ si } \gamma_s > 2\degree 
   \]
-#+END_LaTeX
+#+END_EXPORT
 - Límites inferiores para cielos cubiertos (baja transparencia atmosférica)
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   k_t \geq 10^{-4} \cdot (\gamma_s - 10\degree)  \text{ si } \gamma_s > 10\degree
   \]
@@ -1148,26 +1144,26 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
   \[
   G \geq 0  \text{ si } \gamma_s \leq 10\degree
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Journee.Bertrand2011}
 
 *** Tests de persistencia
 **** Variabilidad de irradiancia
 - La media y la desviación estándar se calculan con todas las muestras de un día completo.
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \frac{1}{8} \overline{k_t} \leq \sigma_{k_t} \leq 0.35
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Tests de rampas
 **** Límites a las variaciones de la irradiancia entre instantes sucesivos
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \left| k_t(t) - k_t(t-1)\right| < 0.75 \text{ si } \gamma_s(t) > 2\degree
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 
 *** Tests de envolvente
@@ -1189,17 +1185,17 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 **** Pasos
   - Estimamos la irradiación en el lugar, $x_0$, con la interpolación espacial de las estaciones cercanas, $x_i$.
     - Los pesos $w_i$ son una función inversa de la distancia (IDW).
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
   \]
-#+END_LaTeX
+#+END_EXPORT
   - Comparamos la irradiación estimada, $\widehat{G}_d(x_0)$, con la medida en la estación, $G_d(x_0)$.
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \left| \widehat{G}_d(x_0) - G_d(x_0) \right|
 \]
-#+END_LaTeX
+#+END_EXPORT
   - La diferencia absoluta debe estar por debajo de un límite (p.ej. 50%)
 
 
@@ -1223,11 +1219,11 @@ elementos en el conjunto.
 \pause
 
   - Se calcula la distancia estadística de cada estación al conjunto:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \pause
 
@@ -1244,17 +1240,17 @@ elementos en el conjunto.
 
 *** Método de Chauvenet
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \left| d_i \right| > \left| d_{max} \right|
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 #+BEGIN_CENTER
 [[../figs/chauvenet.png]]
@@ -1268,76 +1264,76 @@ elementos en el conjunto.
 
 - Sea $O$ el conjunto de observaciones (medidas) de una variable aleatoria.
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \mathbf{O} = \left\{ o_1 \dots o_n \right\}
   \]
-#+END_LaTeX
+#+END_EXPORT
 - Sea $M$ el conjunto de resultados de un modelo que aproxima el comportamiento de la variable medida.
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \mathbf{M} = \left\{ m_1 \dots m_n  \right\}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - La desviación entre modelo y observación es:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Estimadores frecuentes: MBD y RMSD
 
 - Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
   \]
-#+END_LaTeX
+#+END_EXPORT
 \pause
 - Root Mean Square Error (RMSD), diferencia cuadrático media:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Estimadores frecuentes: MBE y RMSD
 
 - Varianza de la diferencia (unbiased RMSD):
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \sigma^2_{\mathbf{D}} = \frac{1}{n} \sum_{i=1}^n (d_i - \overline{\mathbf{D}})^2
   \]
-#+END_LaTeX
+#+END_EXPORT
 \pause
 
 - El RMSD agrega información del promedio y la varianza de la
   diferencia:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Otros estimadores: MAD
 
 - Mean Absolute Deviation (MAD):
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
   \]
-#+END_LaTeX
+#+END_EXPORT
 - El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   MAD \leq RMSD \leq n^{1/2} MAD
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
 
@@ -1347,11 +1343,11 @@ RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
   - Permite añadir intervalos de confianza a las diferencias entre
     modelo y observación
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   t = \left ( \frac{(n-1) MBD^2}{RMSD^2 - MBD^2} \right)^{1/2}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Stone1993}
 
@@ -1360,13 +1356,13 @@ RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
 - $d_1$: Índice de concordancia de Willmott.
   - Limitado entre 0 (ausencia de concordancia) y 1 (concordancia total).
   - Robusto frente a /outliers/.
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   d_1 = 1 - \frac{\sum_{i=1}^n \left| m_i - o_i \right|}{\sum_{i=1}^n \left(
     \left| m_i - \overline{\mathbf{O}}\right| + \left| o_i -
       \overline{\mathbf{O}} \right| \right)}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 \nocite{Willmott.Robeson.ea2012}
 
@@ -1376,38 +1372,38 @@ El coeficiente de correlación entre dos conjuntos de datos es una
 medida numérica de la relación *lineal* entre los dos conjuntos (si la
 relación no es lineal, este coeficiente no sirve):
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}{\sigma_{\mathbf{O}}}\right) \cdot \left(\frac{m_{i}-\overline{\mathbf{M}}}{\sigma_{\mathbf{M}}}\right)
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Diagramas de Taylor
 - Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
 - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
   \]
-#+END_LaTeX
+#+END_EXPORT
 - Esta relación es semejante a la ley de los cosenos ($c$, $a$, $b$ son lados de un triángulo y $\phi$ es el ángulo opuesto al lado $c$):
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
   \]
-#+END_LaTeX
+#+END_EXPORT
 \nocite{Taylor2000}
 
 *** Diagramas de Taylor
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
   - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 #+BEGIN_CENTER
 [[../figs/cosenosDiagramaTaylor.png]]
@@ -1427,35 +1423,35 @@ relación no es lineal, este coeficiente no sirve):
 *** Target Diagram
 
 - Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
   RMSD' = RMSD / \sigma_{\mathbf{O}}
   \]
-#+END_LaTeX
+#+END_EXPORT
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
   \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
 \]
-#+END_LaTeX  
+#+END_EXPORT  
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 \overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 \]
-#+END_LaTeX
+#+END_EXPORT
 
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
   \[
-  sign_{\sigma} =  \sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
+  sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
   \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación: 
 
@@ -1481,4 +1477,4 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 #    :END:
 
 
-# \bibliography{/home/oscar/Dropbox/bibliografia/BibUTF8}
+#    \bibliography{/home/oscar/Investigacion/bibtex/Radiacion.bib
