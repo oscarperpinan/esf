@@ -1,0 +1,1260 @@
+#+TITLE: Electrotecnia
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:3
+
+* Conceptos preliminares
+  :PROPERTIES:
+  :CUSTOM_ID: conceptos-preliminares
+  :END:
+
+** Definiciones
+   :PROPERTIES:
+   :CUSTOM_ID: definiciones
+   :END:
+
+*** Sistema de suministro eléctrico
+    :PROPERTIES:
+    :CUSTOM_ID: sistema-de-suministro-eléctrico
+    :END:
+
+Un *sistema de suministro eléctrico* tiene como objetivo *producir,
+transportar y distribuir energía eléctrica* a los lugares de consumo,
+con el mínimo coste posible en condiciones de *fiabilidad, calidad y
+seguridad*.
+
+Se pueden identificar diferentes componentes del sistema:
+
+-  Generadores
+
+-  Redes de transporte
+
+-  Redes de distribución
+
+-  Equipos de acondicionamiento, transformación y protección (y en
+   algunos casos, almacenamiento)
+
+-  Puntos de consumo
+
+*** Sistema de suministro eléctrico
+    :PROPERTIES:
+    :CUSTOM_ID: sistema-de-suministro-eléctrico-1
+    :END:
+
+[[../figs/Redelectrica2.png]]
+
+*** Electricidad
+    :PROPERTIES:
+    :CUSTOM_ID: electricidad
+    :END:
+
+-  La electricidad es un fenómeno físico asociado al *movimiento de las
+   cargas eléctricas*.
+
+-  El aprovechamiento de la electricidad consiste en generar y canalizar
+   el movimiento de las cargas eléctricas.
+
+-  El movimiento de las cargas eléctricas es la *corriente eléctrica*.
+   Este movimiento se realiza mediante un trabajo, cuantificado por el
+   *potencial*.
+
+*** Intensidad de Corriente eléctrica
+    :PROPERTIES:
+    :CUSTOM_ID: intensidad-de-corriente-eléctrica
+    :END:
+
+-  *Variación de la carga con el tiempo en la sección transversal de un
+   conductor* $$i(t)=\frac{dq(t)}{dt}$$
+
+-  Movimiento de electrones libres. Sin embargo, por convenio su sentido
+   es positivo para el movimiento de las cargas positivas.
+
+-  *Principio de conservación de la carga*: las lineas de corriente son
+   cerradas (o solenoidales)
+
+   -  Primera ley de Kirchhoff : la suma de las corrientes que llegan a
+      un nudo es igual a la suma de las que salen.
+
+*** Tensión. Diferencia de potencial
+    :PROPERTIES:
+    :CUSTOM_ID: tensión.-diferencia-de-potencial
+    :END:
+
+-  *Trabajo realizado al mover una carga unidad entre dos puntos*.
+
+$$v=\frac{dW_{e}}{dq}$$
+
+-  Si entre dos puntos A y B existe una diferencia de potencial, podemos
+   escribir: $$\begin{aligned}
+         v_{AB} & = & v_{A}-v_{B}\\
+         v_{AB} & = & -v_{BA}
+       \end{aligned}$$
+
+*** Potencia eléctrica
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-eléctrica
+    :END:
+
+-  Trabajo realizado por unidad de tiempo
+   $$p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)$$
+
+-  Un elemento del circuito absorbe (/receptor/) o entrega (/generador/)
+   potencia según el sentido de tensión y corriente en sus terminales
+
+-  *Principio de conservación de la energía*: la energía producida por
+   un generador se consume por los receptores del circuito para producir
+   trabajo (mecánico, químico, etc.) o calor.
+
+   -  Segunda ley de Kirchhoff: la suma (con signo) de las tensiones a
+      lo largo de un camino cerrado (circuito) es cero
+
+*** Potencia eléctrica
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-eléctrica-1
+    :END:
+
+-  Ejemplo: :: en el dipolo de la figura se absorbe potencia ($p(t)>0$)
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/ReceptorPasivo.pdf]]
+
+*** Potencia y Energía
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-y-energía
+    :END:
+
+-  Energía :: es la capacidad para realizar un trabajo.
+
+   Unidades Wh, kWh
+
+   1 kWh = 3.6 MJ
+
+-  Potencia :: es la cantidad de trabajo efectuado /por unidad de
+   tiempo/.
+
+   Unidades W, kW
+
+*** Eficiencia y Rendimiento
+    :PROPERTIES:
+    :CUSTOM_ID: eficiencia-y-rendimiento
+    :END:
+
+-  Eficiencia :: de un proceso es la relación entre la /potencia/ de
+   salida y la /potencia/ de entrada a ese proceso.
+
+-  Rendimiento :: de un proceso es la relación entre la /energía/ de
+   salida y la /energía/ de entrada a ese proceso.
+
+** Elementos Lineales
+   :PROPERTIES:
+   :CUSTOM_ID: elementos-lineales
+   :END:
+
+*** Generadores
+    :PROPERTIES:
+    :CUSTOM_ID: generadores
+    :END:
+
+-  *Generador de tensión*: su tensión es independiente de la corriente
+   (la corriente la fija el circuito)
+
+   -  Batería electroquímica
+
+   -  Inversor de electrificación rural a su salida
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/GeneradorTension.pdf]]
+
+-  *Generador de corriente*: su corriente es independiente de la tensión
+   (la tensión la fija el circuito)
+
+   -  Inversor de conexión a red a su salida
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/GeneradorCorriente.pdf]]
+
+*** Resistencia
+    :PROPERTIES:
+    :CUSTOM_ID: resistencia
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Resistencia.pdf]]
+
+
+-  *Produce una caída de tensión entre sus terminales directamente
+   proporcional a la corriente que lo atraviesa*.
+
+-  La constante de proporcionalidad es el valor de la resistencia:
+   $V=R\cdot I$
+
+-  Su valor depende de resistividad del material, de la sección y de la
+   longitud: $R=\rho\cdot\frac{L}{S}$
+
+*** Resistencia
+    :PROPERTIES:
+    :CUSTOM_ID: resistencia
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Resistencia.pdf]]
+
+
+- Disipa energía eléctrica produciendo *calor*: $p(t)=R\cdot i^{2}(t)$
+
+- Cortocircuito: resistencia nula (tensión nula)
+
+- Circuito abierto: resistencia infinita (corriente nula).
+
+
+*** Bobina o inductancia
+    :PROPERTIES:
+    :CUSTOM_ID: bobina-o-inductancia
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Bobina.pdf]]
+
+
+-  Cuando una corriente oscilante atraviesa un conductor arrollado se
+   produce una *tensión inducida que se opone a esta corriente* (ley de
+   Faraday y Lenz)
+
+-  La constante que liga la tensión en sus terminales con el cambio de
+   la corriente es el valor de la inductancia
+   $$v(t)=L\cdot\frac{di(t)}{dt}$$
+
+*** Bobina o inductancia
+    :PROPERTIES:
+    :CUSTOM_ID: bobina-o-inductancia
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Bobina.pdf]]
+
+
+-  Almacena *energía magnética*.
+
+-  La bobina *retrasa los cambios de la corriente* respecto de la
+   tensión.
+
+-  En circuitos de corriente continua es un cortocircuito.
+
+*** Condensador
+    :PROPERTIES:
+    :CUSTOM_ID: condensador
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Condensador.pdf]]
+
+-  Cuando se establece una tensión entre dos placas metálicas separadas
+   por una capa dieléctrica, se produce una *separación de cargas que se
+   acumulan en cada placa*, con signos contrarios.
+
+-  La constante de proporcionalidad entre la carga acumulada y la
+   tensión entre las placas es la capacidad $$C=\frac{Q}{V_{AB}}$$
+
+
+*** Condensador
+    :PROPERTIES:
+    :CUSTOM_ID: condensador-1
+    :END:
+
+#+ATTR_LATEX: :height 0.2\textheight
+[[../figs/Condensador.pdf]]
+
+-  En el proceso de carga se produce una corriente eléctrica entre las
+   dos placas $$i(t)=\frac{dq(t)}{d(t)}=C\frac{dv(t)}{dt}$$
+
+-  Almacena *energía eléctrica*
+
+-  *Retrasa las variaciones de la tensión respecto de la corriente*
+
+-  En un circuito de corriente continua cuando el condensador está
+   cargado se comporta como un circuito abierto.
+
+** Elementos No Lineales
+   :PROPERTIES:
+   :CUSTOM_ID: elementos-no-lineales
+   :END:
+
+*** Diodo
+    :PROPERTIES:
+    :CUSTOM_ID: diodo
+    :END:
+
+#+ATTR_LATEX: :height 0.15\textheight
+[[../figs/Diodo.pdf]]
+
+-  Un diodo es un dispositivo electrónico que permite el paso de
+   corriente a través de él a partir de una tensión de polarización.
+
+-  Cuando no conduce se comporta (idealmente) como un circuito abierto.
+   Cuando conduce se comporta (idealmente) como un cortocircuito.
+
+*** Diodo
+    :PROPERTIES:
+    :CUSTOM_ID: diodo
+    :END:
+
+#+ATTR_LATEX: :height 0.15\textheight
+[[../figs/Diodo.pdf]]
+
+-  Por tanto, puede ser utilizado como
+
+   -  *Elemento de bloqueo* (evitar que circule corriente por una parte
+      del circuito en ciertas condiciones)
+
+   -  *Elemento de protección* (obligar a que la corriente circule por
+      él, evitando que circule por otra rama paralela).
+
+*** Transistor
+    :PROPERTIES:
+    :CUSTOM_ID: transistor
+    :END:
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/Transistor.pdf]]
+
+- Un transistor es un dispositivo electrónico con tres terminales que
+  permite el paso de corriente entre dos de sus terminales cuando en el
+  tercer terminal está polarizado adecuadamente.
+
+- Cuando no conduce se comporta (idealmente) como un circuito abierto.
+
+- Cuando conduce se comporta (idealmente) como un cortocircuito.
+
+
+*** Transistor
+    :PROPERTIES:
+    :CUSTOM_ID: transistor
+    :END:
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/Transistor.pdf]]
+
+Por tanto, puede ser utilizado como:
+
+-  *Elemento de conmutación* (dirigir la circulación de corriente entre
+   dos terminales controlando la señal en el tercer terminal)
+
+-  *Elemento de amplificación* (la señal entregada en el terminal de
+   control es reproducida en la salida con mayor amplitud)
+
+** Asociación de elementos pasivos
+   :PROPERTIES:
+   :CUSTOM_ID: asociación-de-elementos-pasivos
+   :END:
+
+*** Conexión en serie
+    :PROPERTIES:
+    :CUSTOM_ID: conexión-en-serie
+    :END:
+
+**** Misma corriente por todos los elementos: la tensión se reparte
+     :PROPERTIES:
+     :CUSTOM_ID: misma-corriente-por-todos-los-elementos-la-tensión-se-reparte
+     :END:
+
+$R_{s}=\sum_{i}R_{i}$
+
+$L_{s}=\sum_{i}L_{i}$
+
+$\frac{1}{C_{s}}=\sum_{i}\frac{1}{C_{i}}$
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/AsociacionSerie.pdf]]
+
+*** Conexión en paralelo
+    :PROPERTIES:
+    :CUSTOM_ID: conexión-en-paralelo
+    :END:
+
+**** Misma tensión aplicada a todos los elementos: la corriente se reparte
+     :PROPERTIES:
+     :CUSTOM_ID: misma-tensión-aplicada-a-todos-los-elementos-la-corriente-se-reparte
+     :END:
+
+$\frac{1}{R_{p}}=\sum_{i}\frac{1}{R_{i}}$
+
+$\frac{1}{L_{p}}=\sum_{i}\frac{1}{L_{i}}$
+
+$C_{p}=\sum_{i}C_{i}$
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/AsociacionParalelo.pdf]]
+
+* Corriente alterna sinusoidal
+  :PROPERTIES:
+  :CUSTOM_ID: corriente-alterna-sinusoidal
+  :END:
+
+** Conceptos Fundamentales
+   :PROPERTIES:
+   :CUSTOM_ID: conceptos-fundamentales
+   :END:
+
+*** Pulsación - Frecuencia - Fase
+    :PROPERTIES:
+    :CUSTOM_ID: pulsación---frecuencia---fase
+    :END:
+
+$$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
+
+-  T: periodo de la onda (segundos)
+
+-  $\omega=\frac{2\cdot\pi}{T}$: pulsación (radianes/segundo)
+
+-  $f=\frac{\omega}{2\cdot\pi}=\frac{1}{T}$: frecuencia (Hz)
+
+-  $\varphi$: fase (radianes o grados)
+
+   -  Es el argumento de la onda para t=0
+
+   -  Tomando una onda como referencia, si la fase es 0º, se dice que
+      están en fase con la onda de referencia.
+
+   -  Ídem, si la fase es 90º, se dice que están en cuadratura.
+
+   -  Ídem, si la fase es positiva, se dice que la onda adelanta
+      respecto a la referencia.
+
+-  $Y_{o}$ valor máximo de la onda.
+
+*** Pulsación - Frecuencia - Fase
+    :PROPERTIES:
+    :CUSTOM_ID: pulsación---frecuencia---fase-1
+    :END:
+
+$$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
+
+[[../figs/Sin.pdf]]
+
+*** Valor medio y valor eficaz
+    :PROPERTIES:
+    :CUSTOM_ID: valor-medio-y-valor-eficaz
+    :END:
+
+-  *Valor medio*: $$Y_m=\frac{1}{T}\int_{0}^{T}y(t)$$
+
+   -  Para señal sinusoidal:
+      $$Y_m=\frac{1}{T}\int_{0}^{T}Y_{o}\cdot\cos(\omega\cdot
+            t+\phi)\, dt=0$$
+
+-  *Valor eficaz*:
+   $$Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}$$
+
+   -  Para señal sinusoidal:
+
+$$Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\cos(\omega\cdot
+      t+\phi)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}$$
+
+*** Representación fasorial
+    :PROPERTIES:
+    :CUSTOM_ID: representación-fasorial
+    :END:
+
+$$\overline{Y}=Y\cdot e^{j\phi}=Y\cdot(\cos(\phi)+\mathrm{j}\cdot\sin(\phi))$$
+
+[[../figs/Fasor.pdf]]
+
+** Impedancia
+   :PROPERTIES:
+   :CUSTOM_ID: impedancia
+   :END:
+
+*** Impedancia
+    :PROPERTIES:
+    :CUSTOM_ID: impedancia-1
+    :END:
+
+$$\begin{aligned}
+  \overline{R} & = & R\\
+  \overline{X}_{c} & = & \frac{1}{j\omega C}\\
+  \overline{X}_{L} & = & j\omega L
+\end{aligned}$$
+
+$$\begin{aligned}
+  \overline{Z} & = & R+jX\\
+  \overline{Z} & = & Z\cdot e^{j\phi_{Z}}\\
+  Z & = & \sqrt{R^{2}+X^{2}}\\
+  \tan(\phi_{Z}) & = & \frac{X}{R}
+\end{aligned}$$
+
+*** Impedancia
+    :PROPERTIES:
+    :CUSTOM_ID: impedancia-2
+    :END:
+
+$$\overline{I}=\frac{\overline{V}}{\overline{Z}}=\frac{V}{Z}\cdot
+e^{j(\phi_{V}-\phi_{Z})}=I\cdot e^{j\phi_{I}}$$
+#+ATTR_LATEX: :height 0.4\textheight
+[[../figs/Impedancia.pdf]]
+
+*** Convenio de signos para Desfase
+    :PROPERTIES:
+    :CUSTOM_ID: convenio-de-signos-para-desfase
+    :END:
+
+-  La tensión es origen de fases ($\phi_{V}=0$).
+
+-  La corriente está retrasada de la tensión un ángulo $\phi$ positivo:
+   $$\begin{aligned}
+         \phi_{I} & = & -\phi=\phi_{V}-\phi_{Z}\\
+         \phi & = & \phi_{z}\\
+         i(t) & = & I_{o}\cdot\cos(\omega\cdot t-\phi)
+       \end{aligned}$$
+
+-  Por tanto, *si el circuito es inductivo (retrasa fase de corriente
+   respecto de tensión) $\phi$ es positivo*.
+
+*** Circuito Capacitivo puro
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-capacitivo-puro
+    :END:
+
+[[../figs/PlotCircuitoCapacitivoPuro.pdf]]
+
+*** Circuito Inductivo puro
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-inductivo-puro
+    :END:
+
+[[../figs/PlotCircuitoInductivoPuro.pdf]]
+
+*** Circuito Capacitivo
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-capacitivo
+    :END:
+
+[[../figs/PlotCircuitoCapacitivo.pdf]]
+
+*** Circuito Inductivo
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-inductivo
+    :END:
+
+[[../figs/PlotCircuitoInductivo.pdf]]
+
+** Potencia
+   :PROPERTIES:
+   :CUSTOM_ID: potencia
+   :END:
+
+*** Circuito Capacitivo puro
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-capacitivo-puro-1
+    :END:
+
+**** Potencia
+     :PROPERTIES:
+     :CUSTOM_ID: potencia-1
+     :END:
+
+[[../figs/PlotCircuitoCapacitivoPuro_Potencia.pdf]]
+
+*** Circuito Inductivo puro
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-inductivo-puro-1
+    :END:
+
+**** Potencia
+     :PROPERTIES:
+     :CUSTOM_ID: potencia-2
+     :END:
+
+[[../figs/PlotCircuitoInductivoPuro_Potencia.pdf]]
+
+*** Circuito Capacitivo
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-capacitivo-1
+    :END:
+
+**** Potencia
+     :PROPERTIES:
+     :CUSTOM_ID: potencia-3
+     :END:
+
+[[../figs/PlotCircuitoCapacitivo_Potencia.pdf]]
+
+*** Circuito Inductivo
+    :PROPERTIES:
+    :CUSTOM_ID: circuito-inductivo-1
+    :END:
+
+**** Potencia
+     :PROPERTIES:
+     :CUSTOM_ID: potencia-4
+     :END:
+
+[[../figs/PlotCircuitoInductivo_Potencia.pdf]]
+
+*** Potencia Activa, Reactiva y Aparente
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-activa-reactiva-y-aparente
+    :END:
+
+$$\begin{aligned}
+  P & = & V\cdot I\cdot\cos(\phi)\\
+  Q & = & V\cdot I\cdot\sin(\phi)\\
+  S & = & P+jQ\end{aligned}$$
+
+*** Potencia de elementos
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-de-elementos
+    :END:
+
+-  Una *resistencia sólo consume potencia activa* ($\cos(\phi)=1$).
+
+-  Un *condensador no consume potencia activa* ($\cos(\phi)=0$), y
+   *entrega potencia reactiva* ($\sin(\phi)=-1$)
+
+-  Una *bobina no consume potencia activa* ($\cos(\phi)=0$) y *absorbe
+   potencia reactiva* ($\sin(\phi)=1$)
+
+*** Compensación de reactiva
+    :PROPERTIES:
+    :CUSTOM_ID: compensación-de-reactiva
+    :END:
+
+-  El factor de potencia ($\cos(\phi)$) representa el desfase entre
+   tensión y corriente.
+
+-  Es la fracción de potencia activa dentro de la potencia aparente.
+
+-  Suponiendo tensión constante, la corriente que debe circular es
+   $I=\frac{S}{V}=\frac{P}{V\cdot\cos(\phi)}$.
+
+-  Para alimentar una potencia activa determinada, *la corriente es
+   tanto más alta cuanto menor el factor de potencia*.
+
+-  *Factores de potencia bajos* obligan a
+
+   -  Utilizar *grandes secciones* de cable para transportar la misma
+      potencia activa
+
+   -  Generar *mayor potencia aparente* para alimentar la misma potencia
+      activa
+
+*** Compensación de reactiva
+    :PROPERTIES:
+    :CUSTOM_ID: compensación-de-reactiva-1
+    :END:
+
+-  Comúnmente, el factor de potencia es *inductivo* (máquinas eléctricas
+   industriales).
+
+-  La red debe suministrar potencia reactiva inductiva (problemas
+   derivados de bajo factor de potencia)
+
+-  Es necesario alterar localmente el factor de potencia:
+
+   -  Solución común: utilizar *bancos de condensadores* como
+      suministradores de potencia reactiva.
+
+*** Resonancia
+    :PROPERTIES:
+    :CUSTOM_ID: resonancia
+    :END:
+
+Para un circuito serie R-L-C:
+
+$$Z=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}$$
+
+Si $\omega L=\frac{1}{\omega C}$ el circuito tiene carácter resistivo
+(Z=R).
+
+$$f_{r}=\frac{1}{2\pi\sqrt{LC}}$$
+
+y por tanto el $\cos(\phi)=1$ (la potencia aparente coincide con la
+activa).
+
+** Trifásica
+   :PROPERTIES:
+   :CUSTOM_ID: trifásica
+   :END:
+
+*** Motivación de los sistemas trifásicos
+    :PROPERTIES:
+    :CUSTOM_ID: motivación-de-los-sistemas-trifásicos
+    :END:
+
+-  La potencia instantánea de un sistema monofásico es pulsante. En un
+   sistema trifásico la potencia instantánea es constante, evitando
+   vibraciones y esfuerzos en las máquinas.
+
+-  Para transportar una determinada potencia la masa de conductor
+   necesaria es un 25% en un trifásico que en un monofásico.
+
+*** Generación de un sistema trifásico
+    :PROPERTIES:
+    :CUSTOM_ID: generación-de-un-sistema-trifásico
+    :END:
+
+[[../figs/TensionesTrifasica.pdf]]
+
+*** Fase y línea
+    :PROPERTIES:
+    :CUSTOM_ID: fase-y-línea
+    :END:
+
+**** Receptor en Estrella (cuatro hilos, 3F+1N)
+     :PROPERTIES:
+     :CUSTOM_ID: receptor-en-estrella-cuatro-hilos-3f1n
+     :END:
+
+$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
+$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+[[../figs/RedTrifasicaEstrella.pdf]]
+
+*** Fase y línea
+    :PROPERTIES:
+    :CUSTOM_ID: fase-y-línea-1
+    :END:
+
+**** Receptor en Estrella (cuatro hilos, 3F+1N)
+     :PROPERTIES:
+     :CUSTOM_ID: receptor-en-estrella-cuatro-hilos-3f1n-1
+     :END:
+
+$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
+$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+[[../figs/RedTrifasicaEstrella_CargaMonofasica.pdf]]
+
+*** Fase y línea
+    :PROPERTIES:
+    :CUSTOM_ID: fase-y-línea-2
+    :END:
+
+**** Receptor en Triangulo (tres hilos, 3F)
+     :PROPERTIES:
+     :CUSTOM_ID: receptor-en-triangulo-tres-hilos-3f
+     :END:
+
+$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
+$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+[[../figs/RedTrifasicaEstrella_CargaTriangulo.pdf]]
+
+*** Fase y línea
+    :PROPERTIES:
+    :CUSTOM_ID: fase-y-línea-3
+    :END:
+
+**** Receptor en Triangulo (tres hilos, 3F)
+     :PROPERTIES:
+     :CUSTOM_ID: receptor-en-triangulo-tres-hilos-3f-1
+     :END:
+
+$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
+$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+[[../figs/RedTrifasicaTriangulo.pdf]]
+
+* Máquinas Eléctricas
+  :PROPERTIES:
+  :CUSTOM_ID: máquinas-eléctricas
+  :END:
+
+** Fundamentos de Electromagnetismo
+   :PROPERTIES:
+   :CUSTOM_ID: fundamentos-de-electromagnetismo
+   :END:
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo
+    :END:
+
+-  Un campo magnético ejerce una fuerza sobre una carga en movimiento.
+   (Fuerza de Lorentz)
+
+[[../figs/Magnet0873.png]]
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-1
+    :END:
+
+-  Una corriente eléctrica crea un campo magnético en torno al
+   conductor. (Oersted, Biot-Savart)
+
+[[../figs/Solenoide.jpg]]
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-2
+    :END:
+
+-  Un conductor por el que circula corriente, situado en el seno de un
+   campo magnético, altera este campo magnético, y experimenta una
+   fuerza que lo expulsa para disminuir la alteración (Fuerza de Ampere)
+
+[[../figs/FuerzasRepulsion.png]]
+
+#+BEGIN_CENTER
+Vídeo: [[http://www.youtube.com/watch?v=2j8D_N1v0tU][Repulsión entre barras de Alta Tensión]]
+#+END_CENTER
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-3
+    :END:
+
+-  Entre los puntos extremos de una espira estática atravesada por un
+   campo magnético, aparece una *tensión inducida siempre que el flujo
+   magnético sea variable*. (Ley de Faraday).
+
+-  Esta condición se cumple cuando la *espira está en movimiento,*
+   cuando el *campo magnético es variable*, o cuando ambas situaciones
+   coinciden.
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-4
+    :END:
+
+-  La tensión inducida es directamente proporcional a la rapidez con que
+   cambia en el tiempo el flujo magnético que atraviesa la superficie
+   encerrada por la espira. $$e=-\frac{\mathrm{d}\phi}{\mathrm{d}t}$$
+
+-  Al elemento que emite el campo magnético se le denomina *inductor* y
+   aquel que es atravesado por este flujo es el *inducido*.
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-5
+    :END:
+
+[[../figs/Electric_motor_cycle_3.pdf]]
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-6
+    :END:
+
+**** Tensión, frecuencia y flujo
+
+$$\begin{aligned}
+  E & = & 4.44\cdot N\cdot\phi\cdot f\end{aligned}$$
+
+-  $E$ es la tensión inducida; $N$ número de espiras; $\phi$ es el flujo
+   interceptado; $f$ frecuencia eléctrica
+
+-  El flujo depende proporcionalmente de la tensión e inversamente de la
+   frecuencia.
+
+*** Electromagnetismo
+    :PROPERTIES:
+    :CUSTOM_ID: electromagnetismo-7
+    :END:
+
+**** Par, potencia y velocidad
+
+$$\begin{aligned}
+  P & = & T\cdot\omega\end{aligned}$$
+
+-  $P$ es potencia mecánica; $T$ par mecánico; $\omega$ es la velocidad
+   angular.
+
+-  El par busca alinear los ejes magnéticos de inductor e inducido, o de
+   estator y rotor. Una vez que están alineados, el par es nulo.
+
+** Tipos de máquinas
+   :PROPERTIES:
+   :CUSTOM_ID: tipos-de-máquinas
+   :END:
+
+*** Relación de Frecuencias
+    :PROPERTIES:
+    :CUSTOM_ID: relación-de-frecuencias
+    :END:
+
+**** Frecuencia eléctrica y velocidad
+
+$$\begin{aligned}
+  f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
+
+-  $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en
+   el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
+
+-  Al utilizar colector de delgas (escobillas) en el inducido, la
+   frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
+
+*** Clasificación de máquinas
+    :PROPERTIES:
+    :CUSTOM_ID: clasificación-de-máquinas
+    :END:
+
+-  Estáticas ($n=0\Rightarrow f_{2}=f_{1}$): Transformadores
+
+-  Rotativas ($n\neq0$):
+
+   -  Flujo inductor constante ($f_{1}=0\Rightarrow f_{2}=n\cdot
+            p$)
+
+      -  Delgas ($f_{L}\neq f_{2}$): Máquinas de corriente continua
+
+      -  Anillos ($f_{L}=f_{2}$): Máquinas síncronas
+
+   -  Flujo inductor variable ($f_{1}>0\Rightarrow
+            f_{2}=f_{1}-n\cdot p$)
+
+      -  Delgas ($f_{L}\neq f_{2}$): Motor universal
+
+      -  Anillos ($f_{L}=f_{2}$): Máquinas asíncronas
+
+*** Transformador
+    :PROPERTIES:
+    :CUSTOM_ID: transformador
+    :END:
+
+-  Un transformador consiste en dos bobinas acopladas magnéticamente.
+
+-  Un transformador ideal tiene las siguientes relaciones entre tensión
+   y corriente de entrada (primario) y salida (secundario):
+
+$$N_{s}\cdot I_{s}=N_{p}\cdot I_{p}$$
+$$\frac{V_{p}}{N_{p}}=\frac{V_{s}}{N_{s}}$$
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/Transformador2.pdf]]
+
+*** Transformador
+    :PROPERTIES:
+    :CUSTOM_ID: transformador-1
+    :END:
+
+-  Un transformador ideal con relación de transformación $N_{p}/N_{s}<1$
+   (más vueltas en el secundario que en el primario), sube tensión
+   ($V_{s}>V_{p}$) y reduce corriente ($I_{s}<I_{p}$).
+
+[[../figs/Transformador.pdf]]
+
+*** Motores
+    :PROPERTIES:
+    :CUSTOM_ID: motores
+    :END:
+
+**** Motor DC
+
+-  $f_{1}=0$; $f_{L}=0$;
+
+-  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
+
+-  El colector de delgas transforma la frecuencia de alimentación (DC)
+   en alterna.
+
+-  Rotor-Inducido gira sincronizado con la frecuencia "transformada".
+
+*** Motores
+    :PROPERTIES:
+    :CUSTOM_ID: motores-1
+    :END:
+
+**** Motor asíncrono o de inducción
+
+-  $f_{1}\neq0$;
+
+-  Estator-inductor alimentado por una corriente trifásica alterna.
+   Produce un campo giratorio.
+
+-  Rotor-inducido constituido por espiras cortocircuitadas (jaula de
+   ardilla).
+
+-  Se produce un par que busca alinear el eje de las espiras con el
+   campo inducido. El rotor se mueve siguiendo al campo giratorio.
+
+-  La velocidad de giro es inferior a la frecuencia de alimentación
+   (asíncrono).
+
+#+BEGIN_CENTER
+Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
+#+END_CENTER
+*** Generadores
+    :PROPERTIES:
+    :CUSTOM_ID: generadores-1
+    :END:
+
+**** Generador Síncrono o Alternador
+
+-  $f_{1}=0$;
+
+-  Rotor-inductor alimentado por corriente continua mediante anillos.
+
+-  Estator-inducido constituido por un devanado trifásico.
+
+-  Al aplicar energía mecánica en el eje del rotor y alimentarlo con
+   corriente continua, se obtiene una fuerza electromotriz en el
+   estator.
+
+-  Empleado en turbinas hidráulicas y térmicas.
+
+*** Generadores
+    :PROPERTIES:
+    :CUSTOM_ID: generadores-2
+    :END:
+
+**** Dinamo
+
+-  $f_{1}=0$; $f_{L}=0$;
+
+-  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
+
+-  El colector de delgas transforma la frecuencia de alimentación (DC)
+   en alterna.
+
+-  Al aplicar energía mecánica en el eje del rotor y alimentar el
+   estator con corriente continua, se obtiene una fuerza electromotriz
+   en el inducido con $f_{2}$.
+
+-  Las delgas rectifican para obtener $f_{L}=0$ en la salida.
+
+* Aparamenta eléctrica
+  :PROPERTIES:
+  :CUSTOM_ID: aparamenta-eléctrica
+  :END:
+
+** Definición y Funciones
+*** Definición
+    :PROPERTIES:
+    :CUSTOM_ID: definición
+    :END:
+
+**** ITC-BT-01
+     :PROPERTIES:
+     :CUSTOM_ID: itc-bt-01
+     :END:
+
+-  Aparamenta: :: Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: *protección*, *control*, *seccionamiento*, *conexión*.
+
+-  Función de la Aparamenta: :: Garantizar la seguridad de las personas,
+   la continuidad en el suministro y la protección de los elemento de la
+   instalación.
+
+*** Funciones de la aparamenta
+    :PROPERTIES:
+    :CUSTOM_ID: funciones-de-la-aparamenta
+    :END:
+
+-  *Protección*:
+
+   -  Protección de los elementos de los circuitos contra las tensiones
+      térmicas y mecánicas de las corrientes de cortocircuito.
+
+   -  Protección de las personas en caso de producirse un defecto de
+      aislamiento.
+
+   -  Protección de los dispositivos y aparatos suministrados.
+
+*** Funciones de la aparamenta
+    :PROPERTIES:
+    :CUSTOM_ID: funciones-de-la-aparamenta
+    :END:
+
+-  *Aislamiento*: separar de forma verificable un circuito, un aparato o
+   un elemento de la planta del resto de un sistema que se encuentra en
+   tensión, con el fin de que el personal pueda realizar con total
+   seguridad trabajos en la parte aislada.
+
+*** Funciones de la aparamenta
+    :PROPERTIES:
+    :CUSTOM_ID: funciones-de-la-aparamenta
+    :END:
+
+-  *Control:* modificar un sistema cargado en cualquier momento
+
+   -  Control funcional (conmutación rutinaria, etc.).
+
+   -  Conmutación de emergencia.
+
+   -  Operaciones de mantenimiento del sistema de alimentación.
+
+*** Arco Eléctrico
+    :PROPERTIES:
+    :CUSTOM_ID: arco-eléctrico
+    :END:
+
+- Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
+- Durante el tiempo de la descarga se produce una luminosidad muy intensa y un gran desprendimiento de calor.
+- Ambos fenómenos, en caso de ser accidentales, pueden ser sumamente destructivos.
+
+#+BEGIN_CENTER
+Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]]
+#+END_CENTER
+
+*** Poder de corte y cierre
+    :PROPERTIES:
+    :CUSTOM_ID: poder-de-corte-y-cierre
+    :END:
+
+-  Poder de corte: :: intensidad de corriente que este dispositivo es
+   capaz de cortar, bajo una tensión de restablecimiento determinada.
+
+-  Poder de cierre: :: intensidad de corriente que este aparato es capaz
+   de establecer, bajo una tensión dada.
+
+** Tipos de Dispositivos
+*** Dispositivos simples
+    :PROPERTIES:
+    :CUSTOM_ID: dispositivos-simples
+    :END:
+
+**** Seccionador
+
+- Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
+
+- Un seccionador no está diseñado para abrir o cerrar el paso de la corriente.
+
+**** Interruptor de carga
+- Dispositivo no automático (accionamiento manual) de dos posiciones (abierto/cerrado).
+- Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos.
+
+*** Dispositivos simples
+    :PROPERTIES:
+    :CUSTOM_ID: dispositivos-simples-1
+    :END:
+
+**** Contactor
+- Dispositivo accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
+
+- Se suelen controlar de forma remota por medio de pulsadores de activación/desactivación.
+
+**** Fusible
+- Un filamento o lámina de un metal o aleación de bajo punto de fusión que se intercala en un punto determinado de una instalación eléctrica
+
+- Se funde por Efecto Joule cuando la intensidad de corriente supere, por un cortocircuito o un exceso de carga.
+
+- Es capaz de abrir un circuito en carga.
+
+***  Interruptor magnetotérmico
+- Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
+
+- El dispositivo consta de dos partes, un electroimán y una lámina bimetálica, conectadas en serie y por las que circula la corriente que va hacia la carga.
+
+- Su funcionamiento se basa en dos de los efectos producidos por la circulación de corriente eléctrica en un circuito: el magnético y el térmico (efecto Joule).
+
+- Se emplea para *proteger contra sobreintensidades y sobrecargas*.
+
+#+BEGIN_CENTER
+Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
+#+END_CENTER
+
+*** Interruptor Magnetotérmico
+    :PROPERTIES:
+    :CUSTOM_ID: interruptor-magnetotérmico
+    :END:
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/SeccionMagnetotermico.png]]
+
+***  Interruptor diferencial
+
+- Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando existe una corriente diferencial residual, indicativa de un defecto de aislamiento.
+- Para la detección emplea un transformador toroidal que abraza a todos los conductores.
+- Cuando existe un defecto, la suma fasorial de las corrientes abarcadas no será nula y, por tanto, aparecerá una intensidad en el secundario del transformador, proporcional al defecto.
+- Se emplea para la *protección de las personas*.
+
+*** Interruptor Diferencial
+    :PROPERTIES:
+    :CUSTOM_ID: interruptor-diferencial
+    :END:
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/InterruptorDiferencial.pdf]]
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/ResidualCurrentCircuitBreak.jpg]]
+
+* Análisis en frecuencia
+  :PROPERTIES:
+  :CUSTOM_ID: análisis-en-frecuencia
+  :END:
+
+*** Análisis de Fourier
+    :PROPERTIES:
+    :CUSTOM_ID: análisis-de-fourier
+    :END:
+
+- Un señal periódica puede ser descompuesta en sus armónicos mediante la serie de Fourier:
+$$x(t)=a_{0}+A_{1}\cdot\sin(\omega t+\phi_{1})+A_{2}\cdot\sin(2\omega
+  t+\phi_{2})+...$$
+
+- $A_{n}\cdot\sin(n\omega t+\phi_{n})$ es el armónico de orden n de la señal $x(t)$ y $a_{0}$ es el valor medio de $x(t)$.
+
+- Por ejemplo, una señal pura de 50 Hz, tendrá $a_{0}=0$ y $A_{n}=0$ salvo $A_{1}$.
+
+- El armónico de primer orden se conoce como armónico fundamental.
+
+*** Armónicos
+    :PROPERTIES:
+    :CUSTOM_ID: armónicos
+    :END:
+
+[[../figs/Armonicos.pdf]]
+
+*** Distorsión armónica
+    :PROPERTIES:
+    :CUSTOM_ID: distorsión-armónica
+    :END:
+
+En general, los armónicos son inevitables pero indeseables. Para
+caracterizar el contenido en armónicos se utiliza:
+
+-  *Distorsión armónica total (THD)*: medida de la similitud entre la
+   forma de la onda y su componente fundamental
+   $$THD=\frac{1}{A_{1}}\cdot\sqrt{\sum_{n=2}^{\infty}A_{n}^{2}}$$
+
+-  *Factor de distorsión (FD)*: cociente entre el valor eficaz del
+   armónico fundamental y el valor eficaz de la señal
+   $$FD=\frac{A_{1}}{\sqrt{\sum_{n=0}^{\infty}A_{n}^{2}}}$$
+
+Cuando $a_{0}=0$ (señal sin componente de continua)
+$$FD_{a_{0}=0}=\frac{1}{\sqrt{1+THD^{2}}}$$
+
+*** Potencia aparente
+    :PROPERTIES:
+    :CUSTOM_ID: potencia-aparente
+    :END:
+
+Al existir distorsión, $$S^{2}\neq P^{2}+Q^{2}$$
+
+Se define una nueva potencia, la potencia de distorsión
+$$D=\sqrt{S^{2}-P^{2}-Q^{2}}$$
+
+Por tanto, el factor de potencia $$FP=\frac{P}{S}\neq\cos(\phi_{1})$$
+
+Para señales sin componente continua, y suponiendo distorsión sólo en la
+onda de corriente:
+$$FP=FD\cdot\cos(\phi_{1})=\frac{\cos(\phi_{1})}{\sqrt{1+THD^{2}}}$$
+
+* Recursos
+  :PROPERTIES:
+  :CUSTOM_ID: recursos
+  :END:
+
+*** Bibliografía
+    :PROPERTIES:
+    :CUSTOM_ID: bibliografía
+    :END:
+
+-  *Fraile Mora, J.*: /Circuitos Eléctricos/. Ed. Prentice Hall.
+
+-  *Fraile Mora, J.*: /Electromagnetismo y circuitos eléctricos/. Ed.
+   Mc. Graw Hill.
+
+-  *Fraile Mora, J.*: /Máquinas Eléctricas/. Ed. Mc. Graw Hill.
+
+-  *Hayt, W. y Kemmerly, J*: /Análisis de circuitos en ingeniería/. Ed.
+   Mc. Graw Hill.
+
+*** Enlaces útiles
+    :PROPERTIES:
+    :CUSTOM_ID: enlaces-útiles
+    :END:
+
+- [[http://www.f2i2.net/legislacionseguridadindustrial/Si_ambito.aspx?id_am=76][Reglamento Electrotécnico de Baja Tensión]]
+
+- [[http://www.schneiderelectric.es/sites/spain/es/productos-servicios/distribucion-electrica/descarga/pdf-guia-diseno-instalaciones-electricas.page][Guía de diseño de instalaciones eléctricas (Schneider Electric)]]
+
+- [[http://tuveras.com/index.html][Tú verás]]
+
+- [[http://www.directindustry.com/][Equipos industriales]]
+
+- [[http://www.preoc.es/][Base de Precios PREOC]]
+
+
