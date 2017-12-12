@@ -14,91 +14,80 @@
   electrónicos que producen energía eléctrica a partir de la radiación
   solar.
 
-- El principal componente de este sistema es el módulo fotovoltaico, a
-  su vez compuesto por células capaces de transformar la energía
-  luminosa incidente en energía eléctrica de corriente continua.
+- El principal componente de este sistema es el módulo fotovoltaico.
 
-- El resto de equipos incluidos en un sistema fotovoltaico depende en
-  gran medida de la aplicación a la que está destinado.
+- El resto de equipos incluidos en un sistema fotovoltaico depende de la aplicación.
 
-- Tipos
-  - Conectados a red (\emph{grid connected}),
+**** Tipos
+  - Conectados a red (\emph{grid connected})
 
-  - autónomos (\emph{off-grid})
+  - Autónomos (\emph{off-grid})
 
-  - y de bombeo.
+  - Bombeo
 
 *** 
+
 [[../figs/ClasificacionSistemas.pdf]]
 
 ** SFCR
 
 *** Definición
 - Los sistemas conectados a red producen energía eléctrica para ser
-  inyectada íntegramente en la red convencional.
+  *inyectada en la red convencional*.
 
 - Dado que no deben satisfacer ninguna demanda de consumo de forma
-  directa ni garantizar el mismo, no necesitan incorporar equipos de
-  acumulación de energía. 
+  directa ni garantizar el mismo, *no necesitan incorporar equipos de
+  acumulación de energía*.
 
 - Para permitir el correcto acoplamiento con la red eléctrica estos
-  sistemas incorporan un equipo inversor que adecúa la potencia
+  sistemas *incorporan un equipo inversor* que adecúa la potencia
   producida por el generador fotovoltaico a las condiciones de la red
   convencional.
 
 *** Tipos de SFCR
 
-- Estos sistemas pueden a su vez ser divididos en sistemas instalados
-  sobre suelo y sistemas en edificación.
+**** Sistemas sobre Suelo
+- Concebidos exclusivamente para producir energía y obtener el
+  rendimiento económico asociado. Suelen superar los
+  $\SI{100}{\kilo\watt}$ de potencia.
 
-- Los sistemas sobre suelo, concebidos exclusivamente para producir
-  energía y obtener el rendimiento económico asociado, suelen superar
-  los $\SI{100}{\kilo\watt}$ de potencia.
-
-- Los sistemas en edificación abarcan funciones adicionales a la
-  producción de energía, tales como sustitución de componentes
-  arquitectónicos, efecto estético, sombreado de acristalamientos,
-  etc.
+**** Sistemas en Edificación
+- Abarcan funciones adicionales a la producción de energía, tales como
+  sustitución de componentes arquitectónicos, efecto estético,
+  sombreado de acristalamientos, etc.
 
 - En general, son sistemas más pequeños que los instalados sobre
   suelo, normalmente de potencias inferiores a los
   $\SI{100}{\kilo\watt}$.
 
-*** Estática sobre suelo
- [[file:../figs/EstructuraEstaticaSuelo.jpg]]
+*** Sistemas sobre Suelo
+    [[file:../figs/Photocampa.jpg]]
 
-*** Integración en edificios
-[[file:../figs/PVUrban.png]]
+*** Sistemas en Edificación
+    [[file:../figs/PVUrban.png]]
 
 ** Sistemas Autónomos
 *** Definición
 
-- Los sistemas autónomos abarcan una variedad muy amplia de
-  aplicaciones. Su denominador común es la necesidad de satisfacer una
-  demanda energética determinada.
+- Objetivo: satisfacer una demanda energética determinada.
 
-- Por esta razón, prácticamente todos los sistemas autónomos
-  incorporan un equipo de acumulación de energía.
+- Incorporan un equipo de acumulación de energía.
 
-- Estos sistemas pueden ser clasificados en tres grupos por razón de
-  su aplicación asociada: profesionales, electrificación rural y
-  pequeño consumo.
+- Tipos: profesionales, electrificación rural y pequeño consumo.
 
 *** Aplicaciones profesionales
-- Las aplicaciones profesionales son variadas y abarcan campos tales
-  como los radioenlaces, la protección catódica de gasoductos,
-  hoteles, señales de tráfico y navegación aérea, refrigeración de
-  vacunas, equipos remotos de adquisición y transmisión de datos, e
-  incluso alimentación equipos espaciales como satélites.
 
-- Todas estas aplicaciones se caracterizan por requerir una fiabilidad
-  muy elevada.
+- Radioenlaces, la protección catódica de gasoductos, hoteles, señales
+  de tráfico y navegación aérea, refrigeración de vacunas, equipos
+  remotos de adquisición y transmisión de datos, e incluso
+  alimentación de equipos espaciales como satélites.
 
-- Dado que el corte de suministro en estas aplicaciones tiene
-  consecuencias de elevado coste, suele optarse por incorporar un
-  generador fotovoltaico y un acumulador electroquímico de tamaño
-  superior al estrictamente necesario y así reducir al mínimo la
-  probabilidad de fallo.
+- Requieren una fiabilidad muy elevada.
+
+- El corte de suministro en estas aplicaciones tiene consecuencias de
+  elevado coste: generador fotovoltaico y un acumulador electroquímico
+  de tamaño superior al estrictamente necesario para reducir al mínimo
+  la probabilidad de fallo.
 
 - En algunos casos se opta por incorporar un grupo electrógeno, ya sea
   para reducir el tamaño del acumulador o para funcionar como equipo
@@ -109,20 +98,20 @@
 [[file:../figs/TelefoniaRural.jpg]]
 
 *** Sistemas de Electrificación Rural
+
 - Los sistemas de electrificación rural suministran energía eléctrica
   a poblaciones rurales alejadas de redes eléctricas convencionales.
+
+- Proporcionan energía para alimentar equipos de iluminación, radio,
+  televisión y pequeñas herramientas eléctricas.
 
 - Son sistemas frecuentemente englobados en programas de cooperación
   al desarrollo, financiados por ONG's u organismos como el Banco
   Mundial o la Unión Europea.
 
 - Dentro de los sistemas de electrificación rural predominan los
-  sistemas domésticos (\emph{solar home systems, SHS}), las centrales
-  híbridas y los sistemas de bombeo.
-
-- Tanto los sistemas domésticos como las centrales híbridas
-  proporcionan energía para alimentar equipos de iluminación, radio,
-  televisión y pequeñas herramientas eléctricas.
+  sistemas domésticos (\emph{solar home systems, SHS}) y las centrales
+  híbridas.
 
 *** SHS
 - Los sistemas domésticos habitualmente con potencias de
@@ -144,10 +133,10 @@
 
 *** Aplicaciones pequeño consumo
 
-Dentro de las aplicaciones de pequeño consumo se emplean pequeños
-módulos fotovoltaicos, frecuentemente de silicio amorfo, alimentando
-equipos electrónicos como calculadoras o relojes, cargadores de
-móviles, pequeñas herramientas eléctricas, balizas domésticas, etc.
+Pequeños módulos fotovoltaicos, frecuentemente de silicio amorfo,
+alimentando equipos electrónicos como calculadoras o relojes,
+cargadores de móviles, pequeñas herramientas eléctricas, balizas
+domésticas, etc.
 
 
 ** Sistemas de Bombeo
@@ -157,14 +146,13 @@ móviles, pequeñas herramientas eléctricas, balizas domésticas, etc.
   transporta agua desde un acuífero hasta un depósito o una red de
   distribución.
 
-- Para reducir costes y aumentar la fiabilidad, en estos sistemas es
-  frecuente acumular la energía en forma de energía potencial del agua
-  almacenada en el depósito elevado.
+- Para reducir costes y aumentar la fiabilidad es frecuente acumular
+  la energía en forma de energía potencial del agua almacenada en el
+  depósito elevado.
 
-- Las aplicaciones de los sistemas de bombeo incluyen el suministro de
-  agua para consumo humano o animal, el riego de plantaciones
-  individuales o comunitarias y la desalinización del agua extraída
-  con sistemas de ósmosis inversa.
+- Suministro de agua para consumo humano o animal, el riego de
+  plantaciones individuales o comunitarias y la desalinización del
+  agua extraída con sistemas de ósmosis inversa.
 *** 
 [[../figs/Bombeo.jpg]]
 
@@ -173,18 +161,23 @@ móviles, pequeñas herramientas eléctricas, balizas domésticas, etc.
 ** Mercado Fotovoltaico
 
 *** Potencia Instalada
-Según el informe preliminar del mercado fotovoltaico publicado por la
-Agencia Internacional de la Energía (IEA-PVPS) en 2014 había una
-potencia fotovoltaica acumulada de \SI{177}{\giga\watt} a nivel
+Según el informe del mercado fotovoltaico publicado por la Agencia
+Internacional de la Energía (IEA-PVPS), a finales de 2016 había una
+potencia fotovoltaica acumulada de \SI{303}{\giga\watt} a nivel
 mundial.
 
 *** Potencia por Países
-Hay 20 países que han superado la cifra de \SI{1}{\giga\watt} de
-potencia instalada, destacando Alemania con \SI{38.2}{\giga\watt},
-China con \SI{28.1}{\giga\watt}, Japón con \SI{23.3}{\giga\watt},
-Italia con \SI{18.5}{\giga\watt}, Estados Unidos
-\SI{18.3}{\giga\watt}, Francia con \SI{5.7}{\giga\watt}, España con
-\SI{5.4}{\giga\watt}, y Reino Unido con \SI{5.1}{\giga\watt}.
+**** 24 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada
+1. China: \SI{78}{\giga\watt}
+2. Japón: \SI{42.8}{\giga\watt}
+3. Alemania: \SI{41.2}{\giga\watt}
+4. Estados Unidos \SI{40.3}{\giga\watt}
+5. Italia: \SI{19.3}{\giga\watt}
+6. Reino Unido: \SI{11.6}{\giga\watt}
+7. India: \SI{9}{\giga\watt}
+8. Francia: \SI{7.1}{\giga\watt}
+9. Australia: \SI{5.9}{\giga\watt}
+10. España: \SI{5.4}{\giga\watt}
 
 *** 
 
@@ -192,19 +185,19 @@ Italia con \SI{18.5}{\giga\watt}, Estados Unidos
 
 
 *** Contribución energética
-Este campo fotovoltaico aporta el 1% de la energía eléctrica mundial,
-destacando los casos particulares de Italia con el 7.9% de su
-electricidad nacional, Grecia con el 7.6%, y Alemania con el 7%.
+**** La ESF aporta el 1.8% de la energía eléctrica mundial
+- Honduras: 12.5%
+- Grecia: 7.4%
+- Italia: 7.3%
+- Alemania: 7%
+- Japón: 4.9%
+- España: 3.2%
+- China: 1.6%
 
 ** Paridad de Red
 
 *** Paridad de Red
-- La situación actual es el resultado de un crecimiento sostenido
-  liderado por Alemania, China, Japón, y Estados Unidos, y la
-  contribución más inestable de otros países como España, Italia y
-  Reino Unido.
-
-- Este crecimiento está fuertemente relacionado con el ritmo de
+- Crecimiento sostenido fuertemente relacionado con el ritmo de
   reducción del precio del módulo, siendo causa y consecuencia del
   mismo.
 
@@ -216,11 +209,13 @@ electricidad nacional, Grecia con el 7.6%, y Alemania con el 7%.
 
 [[file:../figs/CurvaAprendizajeFV_BreyerPiP.png]]
 
-*** Paridad en 2010
-[[file:../figs/GridParity2010.png]]
+*** Paridad en 2010[fn:1]
+[[file:../figs/GridParity2010.png]] 
 
-*** Paridad en 2013
+
+*** Paridad en 2013[fn:2]
 [[file:../figs/GridParity2013.png]]
+
 
 ** Segmentos de mercado
 
@@ -230,24 +225,48 @@ electricidad nacional, Grecia con el 7.6%, y Alemania con el 7%.
   - sistemas en entorno industrial,
   - comercial,
   - y residencial.
-- Es destacable que el mercado fotovoltaico español se ha basado en
-  sistemas sobre terreno (plantas fotovoltaicas), mientras que el
-  mercado alemán ha diversificado las opciones dando mayor
-  preponderancia a sistemas comerciales y residenciales.
 
-*** 
 [[file:../figs/SegmentacionFVEuropa_EPIA.png]]
 
-*** Conexión a Red
-- Esta diferencia entre mercados puede observarse desde la óptica del
-  tamaño medio de las instalaciones y el tipo de conexión.
-- En España el tamaño medio de los sistemas fotovoltaicos instalados
-  es de \SI{107}{\kilo\watt}, con el 64% de los sistemas conectados a
-  redes de Alta o Media Tensión, y el 36% en redes de Baja Tensión.
-- En Alemania el tamaño medio de sistema es un orden de magnitud
-  menor, \SI{17}{\kilo\watt}, con el 38% de los sistemas conectados en
-  redes de AT/MT, y el 62% en BT.
-- Finalmente, en Japón el tamaño medio de los sistemas es aún menor,
-  sin superar los \SI{5}{\kilo\watt}, estando conectados en redes de
-  BT el 80% del total.
+*** Segmentación en Alemania y España
+- El mercado fotovoltaico español se ha basado en sistemas sobre
+  terreno (plantas fotovoltaicas).
+
+- El mercado alemán ha diversificado las opciones dando mayor
+  preponderancia a sistemas comerciales y residenciales.
+
+*** Tamaño de instalación y Conexión
+
+**** España
+
+  - Tamaño medio \SI{107}{\kilo\watt}
+
+  - 64% en redes de AT/MT.
+
+  - 36% en redes de BT.
+
+**** Alemania
+
+  - Tamaño medio \SI{17}{\kilo\watt}
+
+  - 38% en redes de AT/MT
+
+  - 62% en redes de BT
+
+**** Japón
+
+  - Tamaño medio por debajo de \SI{5}{\kilo\watt}
+
+  - 80% del total en BT.
+
+* Footnotes
+
+[fn:2] El color naranja identifica los sistemas residenciales y el azul los
+sistemas industriales. El tamaño de los círculos está relacionado con
+el tamaño del mercado eléctrico de cada país.
+
+[fn:1] El color naranja identifica los sistemas residenciales y el azul los
+sistemas industriales. El tamaño de los círculos está relacionado con
+el tamaño del mercado eléctrico de cada país.
+
 

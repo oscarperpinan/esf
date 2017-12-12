@@ -1,4 +1,4 @@
-% Created 2017-12-11 lun 15:00
+% Created 2017-12-12 mar 00:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -49,125 +49,117 @@
 \maketitle
 
 \section{Aplicaciones de la Energía Solar Fotovoltaica}
-\label{sec:org6c56168}
+\label{sec:org78da776}
 
 \subsection{Clasificación}
-\label{sec:org449f094}
+\label{sec:org159bc1b}
 
-\begin{frame}[label={sec:orgf003049}]{Definición}
+\begin{frame}[label={sec:orgac2f2cb}]{Definición}
 \begin{itemize}
 \item Un sistema fotovoltaico es el conjunto de equipos eléctricos y
 electrónicos que producen energía eléctrica a partir de la radiación
 solar.
 
-\item El principal componente de este sistema es el módulo fotovoltaico, a
-su vez compuesto por células capaces de transformar la energía
-luminosa incidente en energía eléctrica de corriente continua.
+\item El principal componente de este sistema es el módulo fotovoltaico.
 
-\item El resto de equipos incluidos en un sistema fotovoltaico depende en
-gran medida de la aplicación a la que está destinado.
+\item El resto de equipos incluidos en un sistema fotovoltaico depende de la aplicación.
+\end{itemize}
 
-\item Tipos
+\begin{block}{Tipos}
 \begin{itemize}
-\item Conectados a red (\emph{grid connected}),
+\item Conectados a red (\emph{grid connected})
 
-\item autónomos (\emph{off-grid})
+\item Autónomos (\emph{off-grid})
 
-\item y de bombeo.
+\item Bombeo
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd9aac36}]{}
+\begin{frame}[label={sec:orgd552fe1}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ClasificacionSistemas.pdf}
 \end{center}
 \end{frame}
 
 \subsection{SFCR}
-\label{sec:org60f0cab}
+\label{sec:org42c8fe0}
 
-\begin{frame}[label={sec:org3721afa}]{Definición}
+\begin{frame}[label={sec:orgb1e1a7d}]{Definición}
 \begin{itemize}
 \item Los sistemas conectados a red producen energía eléctrica para ser
-inyectada íntegramente en la red convencional.
+\alert{inyectada en la red convencional}.
 
 \item Dado que no deben satisfacer ninguna demanda de consumo de forma
-directa ni garantizar el mismo, no necesitan incorporar equipos de
-acumulación de energía.
+directa ni garantizar el mismo, \alert{no necesitan incorporar equipos de
+acumulación de energía}.
 
 \item Para permitir el correcto acoplamiento con la red eléctrica estos
-sistemas incorporan un equipo inversor que adecúa la potencia
+sistemas \alert{incorporan un equipo inversor} que adecúa la potencia
 producida por el generador fotovoltaico a las condiciones de la red
 convencional.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8deed78}]{Tipos de SFCR}
+\begin{frame}[label={sec:orgf270718}]{Tipos de SFCR}
+\begin{block}{Sistemas sobre Suelo}
 \begin{itemize}
-\item Estos sistemas pueden a su vez ser divididos en sistemas instalados
-sobre suelo y sistemas en edificación.
+\item Concebidos exclusivamente para producir energía y obtener el
+rendimiento económico asociado. Suelen superar los
+\(\SI{100}{\kilo\watt}\) de potencia.
+\end{itemize}
+\end{block}
 
-\item Los sistemas sobre suelo, concebidos exclusivamente para producir
-energía y obtener el rendimiento económico asociado, suelen superar
-los \(\SI{100}{\kilo\watt}\) de potencia.
-
-\item Los sistemas en edificación abarcan funciones adicionales a la
-producción de energía, tales como sustitución de componentes
-arquitectónicos, efecto estético, sombreado de acristalamientos,
-etc.
+\begin{block}{Sistemas en Edificación}
+\begin{itemize}
+\item Abarcan funciones adicionales a la producción de energía, tales como
+sustitución de componentes arquitectónicos, efecto estético,
+sombreado de acristalamientos, etc.
 
 \item En general, son sistemas más pequeños que los instalados sobre
 suelo, normalmente de potencias inferiores a los
 \(\SI{100}{\kilo\watt}\).
 \end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgb4f6646}]{Estática sobre suelo}
+\begin{frame}[label={sec:org30b4b04}]{Sistemas sobre Suelo}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
+\includegraphics[width=.9\linewidth]{../figs/Photocampa.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgaec891f}]{Integración en edificios}
+\begin{frame}[label={sec:orgb768b0f}]{Sistemas en Edificación}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PVUrban.png}
 \end{center}
 \end{frame}
 
 \subsection{Sistemas Autónomos}
-\label{sec:org1120743}
-\begin{frame}[label={sec:orge6f0fe4}]{Definición}
+\label{sec:orgef5b203}
+\begin{frame}[label={sec:orgd89db37}]{Definición}
 \begin{itemize}
-\item Los sistemas autónomos abarcan una variedad muy amplia de
-aplicaciones. Su denominador común es la necesidad de satisfacer una
-demanda energética determinada.
+\item Objetivo: satisfacer una demanda energética determinada.
 
-\item Por esta razón, prácticamente todos los sistemas autónomos
-incorporan un equipo de acumulación de energía.
+\item Incorporan un equipo de acumulación de energía.
 
-\item Estos sistemas pueden ser clasificados en tres grupos por razón de
-su aplicación asociada: profesionales, electrificación rural y
-pequeño consumo.
+\item Tipos: profesionales, electrificación rural y pequeño consumo.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1b96b91}]{Aplicaciones profesionales}
+\begin{frame}[label={sec:org0333b82}]{Aplicaciones profesionales}
 \begin{itemize}
-\item Las aplicaciones profesionales son variadas y abarcan campos tales
-como los radioenlaces, la protección catódica de gasoductos,
-hoteles, señales de tráfico y navegación aérea, refrigeración de
-vacunas, equipos remotos de adquisición y transmisión de datos, e
-incluso alimentación equipos espaciales como satélites.
+\item Radioenlaces, la protección catódica de gasoductos, hoteles, señales
+de tráfico y navegación aérea, refrigeración de vacunas, equipos
+remotos de adquisición y transmisión de datos, e incluso
+alimentación de equipos espaciales como satélites.
 
-\item Todas estas aplicaciones se caracterizan por requerir una fiabilidad
-muy elevada.
+\item Requieren una fiabilidad muy elevada.
 
-\item Dado que el corte de suministro en estas aplicaciones tiene
-consecuencias de elevado coste, suele optarse por incorporar un
-generador fotovoltaico y un acumulador electroquímico de tamaño
-superior al estrictamente necesario y así reducir al mínimo la
-probabilidad de fallo.
+\item El corte de suministro en estas aplicaciones tiene consecuencias de
+elevado coste: generador fotovoltaico y un acumulador electroquímico
+de tamaño superior al estrictamente necesario para reducir al mínimo
+la probabilidad de fallo.
 
 \item En algunos casos se opta por incorporar un grupo electrógeno, ya sea
 para reducir el tamaño del acumulador o para funcionar como equipo
@@ -175,32 +167,31 @@ de socorro.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org70190fb}]{}
+\begin{frame}[label={sec:org82f8fcb}]{}
 \begin{center}
 \includegraphics[height=0.95\textheight]{../figs/TelefoniaRural.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9a746c9}]{Sistemas de Electrificación Rural}
+\begin{frame}[label={sec:org4e568d4}]{Sistemas de Electrificación Rural}
 \begin{itemize}
 \item Los sistemas de electrificación rural suministran energía eléctrica
 a poblaciones rurales alejadas de redes eléctricas convencionales.
+
+\item Proporcionan energía para alimentar equipos de iluminación, radio,
+televisión y pequeñas herramientas eléctricas.
 
 \item Son sistemas frecuentemente englobados en programas de cooperación
 al desarrollo, financiados por ONG's u organismos como el Banco
 Mundial o la Unión Europea.
 
 \item Dentro de los sistemas de electrificación rural predominan los
-sistemas domésticos (\emph{solar home systems, SHS}), las centrales
-híbridas y los sistemas de bombeo.
-
-\item Tanto los sistemas domésticos como las centrales híbridas
-proporcionan energía para alimentar equipos de iluminación, radio,
-televisión y pequeñas herramientas eléctricas.
+sistemas domésticos (\emph{solar home systems, SHS}) y las centrales
+híbridas.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org18a997c}]{SHS}
+\begin{frame}[label={sec:org38e0d7a}]{SHS}
 \begin{itemize}
 \item Los sistemas domésticos habitualmente con potencias de
 \(\SI{100}{\watt}\) o \(\SI{200}{\watt}\), están asociados a una
@@ -214,7 +205,7 @@ de salud.
 \end{frame}
 
 
-\begin{frame}[label={sec:org514394f}]{Híbridos}
+\begin{frame}[label={sec:orgb802312}]{Híbridos}
 \begin{itemize}
 \item Las centrales híbridas, compuestas por un generador fotovoltaico, un
 acumulador electroquímico y un grupo electrógeno o turbina eólica,
@@ -226,85 +217,95 @@ hasta los \(\SI{100}{\kilo\watt}\).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0ab7c2a}]{Aplicaciones pequeño consumo}
-Dentro de las aplicaciones de pequeño consumo se emplean pequeños
-módulos fotovoltaicos, frecuentemente de silicio amorfo, alimentando
-equipos electrónicos como calculadoras o relojes, cargadores de
-móviles, pequeñas herramientas eléctricas, balizas domésticas, etc.
+\begin{frame}[label={sec:org2f5ae36}]{Aplicaciones pequeño consumo}
+Pequeños módulos fotovoltaicos, frecuentemente de silicio amorfo,
+alimentando equipos electrónicos como calculadoras o relojes,
+cargadores de móviles, pequeñas herramientas eléctricas, balizas
+domésticas, etc.
 \end{frame}
 
 
 \subsection{Sistemas de Bombeo}
-\label{sec:org94278b8}
-\begin{frame}[label={sec:org36dd43d}]{Definición}
+\label{sec:org149fe87}
+\begin{frame}[label={sec:org372a702}]{Definición}
 \begin{itemize}
 \item Los sistemas de bombeo emplean la energía eléctrica que produce el
 generador fotovoltaico para accionar una motobomba que eleva y
 transporta agua desde un acuífero hasta un depósito o una red de
 distribución.
 
-\item Para reducir costes y aumentar la fiabilidad, en estos sistemas es
-frecuente acumular la energía en forma de energía potencial del agua
-almacenada en el depósito elevado.
+\item Para reducir costes y aumentar la fiabilidad es frecuente acumular
+la energía en forma de energía potencial del agua almacenada en el
+depósito elevado.
 
-\item Las aplicaciones de los sistemas de bombeo incluyen el suministro de
-agua para consumo humano o animal, el riego de plantaciones
-individuales o comunitarias y la desalinización del agua extraída
-con sistemas de ósmosis inversa.
+\item Suministro de agua para consumo humano o animal, el riego de
+plantaciones individuales o comunitarias y la desalinización del
+agua extraída con sistemas de ósmosis inversa.
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org0c45b44}]{}
+\begin{frame}[label={sec:org631cc4c}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bombeo.jpg}
 \end{center}
 \end{frame}
 
 \section{Contexto Mundial}
-\label{sec:orge0820db}
+\label{sec:org8d423c7}
 
 \subsection{Mercado Fotovoltaico}
-\label{sec:orgd17d7fb}
+\label{sec:orgecbf22a}
 
-\begin{frame}[label={sec:org353bb6f}]{Potencia Instalada}
-Según el informe preliminar del mercado fotovoltaico publicado por la
-Agencia Internacional de la Energía (IEA-PVPS) en 2014 había una
-potencia fotovoltaica acumulada de \SI{177}{\giga\watt} a nivel
+\begin{frame}[label={sec:orgbad5154}]{Potencia Instalada}
+Según el informe del mercado fotovoltaico publicado por la Agencia
+Internacional de la Energía (IEA-PVPS), a finales de 2016 había una
+potencia fotovoltaica acumulada de \SI{303}{\giga\watt} a nivel
 mundial.
 \end{frame}
 
-\begin{frame}[label={sec:orgce67e0a}]{Potencia por Países}
-Hay 20 países que han superado la cifra de \SI{1}{\giga\watt} de
-potencia instalada, destacando Alemania con \SI{38.2}{\giga\watt},
-China con \SI{28.1}{\giga\watt}, Japón con \SI{23.3}{\giga\watt},
-Italia con \SI{18.5}{\giga\watt}, Estados Unidos
-\SI{18.3}{\giga\watt}, Francia con \SI{5.7}{\giga\watt}, España con
-\SI{5.4}{\giga\watt}, y Reino Unido con \SI{5.1}{\giga\watt}.
+\begin{frame}[label={sec:orgfe33869}]{Potencia por Países}
+\begin{block}{24 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada}
+\begin{enumerate}
+\item China: \SI{78}{\giga\watt}
+\item Japón: \SI{42.8}{\giga\watt}
+\item Alemania: \SI{41.2}{\giga\watt}
+\item Estados Unidos \SI{40.3}{\giga\watt}
+\item Italia: \SI{19.3}{\giga\watt}
+\item Reino Unido: \SI{11.6}{\giga\watt}
+\item India: \SI{9}{\giga\watt}
+\item Francia: \SI{7.1}{\giga\watt}
+\item Australia: \SI{5.9}{\giga\watt}
+\item España: \SI{5.4}{\giga\watt}
+\end{enumerate}
+\end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org8426cbc}]{}
+\begin{frame}[label={sec:orgae5abfc}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PVWorld.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org2891ce1}]{Contribución energética}
-Este campo fotovoltaico aporta el 1\% de la energía eléctrica mundial,
-destacando los casos particulares de Italia con el 7.9\% de su
-electricidad nacional, Grecia con el 7.6\%, y Alemania con el 7\%.
+\begin{frame}[label={sec:orgc83bde6}]{Contribución energética}
+\begin{block}{La ESF aporta el 1.8\% de la energía eléctrica mundial}
+\begin{itemize}
+\item Honduras: 12.5\%
+\item Grecia: 7.4\%
+\item Italia: 7.3\%
+\item Alemania: 7\%
+\item Japón: 4.9\%
+\item España: 3.2\%
+\item China: 1.6\%
+\end{itemize}
+\end{block}
 \end{frame}
 
 \subsection{Paridad de Red}
-\label{sec:org52b267e}
+\label{sec:orgb6f61c9}
 
-\begin{frame}[label={sec:orgeb78aee}]{Paridad de Red}
+\begin{frame}[label={sec:org7158506}]{Paridad de Red}
 \begin{itemize}
-\item La situación actual es el resultado de un crecimiento sostenido
-liderado por Alemania, China, Japón, y Estados Unidos, y la
-contribución más inestable de otros países como España, Italia y
-Reino Unido.
-
-\item Este crecimiento está fuertemente relacionado con el ritmo de
+\item Crecimiento sostenido fuertemente relacionado con el ritmo de
 reducción del precio del módulo, siendo causa y consecuencia del
 mismo.
 
@@ -314,28 +315,34 @@ la paridad de red en muchas partes del mundo.
 \end{frame}
 
 
-\begin{frame}[label={sec:org5b3a6f5}]{}
+\begin{frame}[label={sec:org9575a56}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaAprendizajeFV_BreyerPiP.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga15f6cb}]{Paridad en 2010}
+\begin{frame}[label={sec:org1a65e40}]{Paridad en 2010\footnote{El color naranja identifica los sistemas residenciales y el azul los
+sistemas industriales. El tamaño de los círculos está relacionado con
+el tamaño del mercado eléctrico de cada país.}}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GridParity2010.png}
-\end{center}
+\end{center} 
 \end{frame}
 
-\begin{frame}[label={sec:org6a4d931}]{Paridad en 2013}
+
+\begin{frame}[label={sec:org46eef24}]{Paridad en 2013\footnote{El color naranja identifica los sistemas residenciales y el azul los
+sistemas industriales. El tamaño de los círculos está relacionado con
+el tamaño del mercado eléctrico de cada país.}}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GridParity2013.png}
 \end{center}
 \end{frame}
 
-\subsection{Segmentos de mercado}
-\label{sec:org4f6e2f0}
 
-\begin{frame}[label={sec:orgbd54e7c}]{Segmentos de Mercado}
+\subsection{Segmentos de mercado}
+\label{sec:org5850f63}
+
+\begin{frame}[label={sec:org5e860d2}]{Segmentos de Mercado}
 \begin{itemize}
 \item La European Photovoltaics Industry Association diferencia entre:
 \begin{itemize}
@@ -344,32 +351,50 @@ la paridad de red en muchas partes del mundo.
 \item comercial,
 \item y residencial.
 \end{itemize}
-\item Es destacable que el mercado fotovoltaico español se ha basado en
-sistemas sobre terreno (plantas fotovoltaicas), mientras que el
-mercado alemán ha diversificado las opciones dando mayor
-preponderancia a sistemas comerciales y residenciales.
 \end{itemize}
-\end{frame}
 
-\begin{frame}[label={sec:org65620aa}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SegmentacionFVEuropa_EPIA.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf36cae}]{Conexión a Red}
+\begin{frame}[label={sec:org846ae71}]{Segmentación en Alemania y España}
 \begin{itemize}
-\item Esta diferencia entre mercados puede observarse desde la óptica del
-tamaño medio de las instalaciones y el tipo de conexión.
-\item En España el tamaño medio de los sistemas fotovoltaicos instalados
-es de \SI{107}{\kilo\watt}, con el 64\% de los sistemas conectados a
-redes de Alta o Media Tensión, y el 36\% en redes de Baja Tensión.
-\item En Alemania el tamaño medio de sistema es un orden de magnitud
-menor, \SI{17}{\kilo\watt}, con el 38\% de los sistemas conectados en
-redes de AT/MT, y el 62\% en BT.
-\item Finalmente, en Japón el tamaño medio de los sistemas es aún menor,
-sin superar los \SI{5}{\kilo\watt}, estando conectados en redes de
-BT el 80\% del total.
+\item El mercado fotovoltaico español se ha basado en sistemas sobre
+terreno (plantas fotovoltaicas).
+
+\item El mercado alemán ha diversificado las opciones dando mayor
+preponderancia a sistemas comerciales y residenciales.
 \end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org00d3e2f}]{Tamaño de instalación y Conexión}
+\begin{block}{España}
+\begin{itemize}
+\item Tamaño medio \SI{107}{\kilo\watt}
+
+\item 64\% en redes de AT/MT.
+
+\item 36\% en redes de BT.
+\end{itemize}
+\end{block}
+
+\begin{block}{Alemania}
+\begin{itemize}
+\item Tamaño medio \SI{17}{\kilo\watt}
+
+\item 38\% en redes de AT/MT
+
+\item 62\% en redes de BT
+\end{itemize}
+\end{block}
+
+\begin{block}{Japón}
+\begin{itemize}
+\item Tamaño medio por debajo de \SI{5}{\kilo\watt}
+
+\item 80\% del total en BT.
+\end{itemize}
+\end{block}
 \end{frame}
 \end{document}
