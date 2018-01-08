@@ -109,7 +109,7 @@ $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 
 ** Sombras Lejanas
 
-*** Método CTE
+*** Sombras en el horizonte
 
 [[../figs/SombraIES.pdf]]
 

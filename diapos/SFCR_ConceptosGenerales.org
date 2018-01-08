@@ -9,10 +9,7 @@
 
 *** Definición de un SFCR
 
-**** 							     :B_exampleblock:
-     :PROPERTIES:
-     :BEAMER_env: exampleblock
-     :END:
+**** 
 Un Sistema Fotovoltaico Conectado a la Red (SFCR) es un sistema cuya
 función es producir energía eléctrica en condiciones adecuadas para
 poder ser inyectada en la red convencional.
@@ -156,10 +153,7 @@ poder ser inyectada en la red convencional.
 - Aparcamiento
 - ...
 
-**** 							     :B_exampleblock:
-     :PROPERTIES:
-     :BEAMER_env: exampleblock
-     :END:
+**** 
 [[http://www.pvdatabase.org/]]
 
 *** Cubierta Inclinada
@@ -198,7 +192,7 @@ poder ser inyectada en la red convencional.
 
 $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 
--  Esta potencia debe ser superior a $\SI{5}{\kilo\watt}$ e inferior a $\SI{100}{\kilo\watt}$.
+-  Esta potencia debe ser inferior a $\SI{100}{\kilo\watt}$.
 
 -  $C=1$ para zona climática I, $C=1.4$ para zona climática V.
 
@@ -256,10 +250,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 ** Conceptos Generales
 *** Acoplamiento a la red
 
-**** 							     :B_exampleblock:
-     :PROPERTIES:
-     :BEAMER_env: exampleblock
-     :END:
+**** 
 La potencia suministrada por un generador fotovoltaico iluminado es de
 tensión continua, que debe ser adecuadamente acondicionada para permitir
 el funcionamiento correcto de las cargas conectadas en un sistema

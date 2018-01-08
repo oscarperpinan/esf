@@ -80,101 +80,6 @@ Salvo afirmación expresa en contra, a lo largo de este capítulo se
 supondrá que el SFCR se enmarca en un mecanismo de retribución con
 prima y, por tanto, se obviará el consumo asociado.
 
-% \subsection{Normativa aplicable en España}
-
-% En el momento de escritura de este documento, la legislación aplicable
-% a un SFCR en España es la siguiente:
-
-% \begin{itemize}
-
-
-% \item RD. 1578/2008 \cite{RealDecreto2008}:
-
-%   \begin{itemize}
-
-%   \item Marca las primas por la venta de la energía producida.
-
-%   \item Establece un procedimiento de convocatorias con cupos de
-%     potencia y preasignación.
-
-%   \item Establece dos tipos de SFCR (dos tipos de prima y cupos de
-%     potencia).
-
-%     \begin{itemize}
-%     \item Tipo I. Instalaciones que estén ubicadas en cubiertas o
-%       fachadas de construcciones fijas, cerradas, hechas de materiales
-%       resistentes, dedicadas a usos residencial, de servicios,
-%       comercial o industrial, incluidas las de carácter agropecuario;
-%       o bien, instalaciones que estén ubicadas sobre estructuras fijas
-%       de soporte que tengan por objeto un uso de cubierta de
-%       aparcamiento o de sombreamiento, en ambos casos de áreas
-%       dedicadas a alguno de los usos anteriores, y se encuentren
-%       ubicadas en una parcela con referencia catastral urbana.
-%     \item Tipo II. Instalaciones no incluidas en el tipo I anterior.
-%     \end{itemize}
-
-%     Recientemente este Real Decreto ha sido modificado en algunos
-%     aspectos por el RD 1565/2010 \cite{RD1565-2010}, por el RD 14/2010
-%     \cite{RD-14-2010} (cuya disposición adicional primera tiene el
-%     título "Limitación de las horas equivalentes de funcionamiento de
-%     las instalaciones fotovoltaicas") y por el RD. 1699/2011.
-
-%   \end{itemize}
-
-% \item RD. 1699/2011 \cite{RealDecreto2011}
-%   \begin{itemize}
-%   \item Establece las condiciones administrativas, contractuales,
-%     económicas y técnicas básicas para la conexión a las redes de
-%     distribución de energía eléctrica de las instalaciones
-%     fotovoltaicas (además de otras tecnologías) de potencia no
-%     superior a $\SI{100}{\kW}$\footnote{Este Real Decreto define
-%       la potencia nominal del SFCR como la suma de la potencia de los
-%       inversores que intervienen en las tres fases de la instalación
-%       en condiciones nominales de funcionamiento. Será esta definición
-%       la empleada en todo el documento al referirnos a la potencia
-%       nominal del SFCR, y se utilizará la expresión {}``potencia
-%       nominal del generador'' para designar la potencia del generador
-%       fotovoltaico.%
-%     }, siendo 5 kW la potencia máxima admisible de un inversor
-%     monofásico.
-%   \item Describe los requisitos técnicos de conexión a red que un SFCR
-%     debe cumplir\footnote{Hasta la publicación de este Real Decreto,
-%       estos requisitos estaban recogidos en el derogado
-%       RD. 1663/2000.}, dedicando especial atención a los sistemas de
-%     seguridad eléctrica.
-%   \item Simplifica las tramitaciones para la conexión de pequeñas
-%     instalaciones de generación eléctrica.
-%   \item Contempla la posibilidad de conexión en la red interior de un
-%     consumidor y establece un plazo de cuatro meses para la publicación
-%     de una propuesta de Real Decreto que regule las condiciones
-%     administrativas, técnicas y económicas del consumo de la energía
-%     eléctrica producida para consumo propio (previsiblemente mediante
-%     un mecanismo de balance neto).
-%   \item Fija el contrato-tipo que debe ser firmado por el usuario del
-%     SFCR y la compañía eléctrica a la que se conecta el sistema.
-%   \item Deroga el RD. 1663/2000 y modifica algunos aspectos del
-%     RD. 1578/2008.
-%   \end{itemize}
-
-
-%   \nomenclature[BT]{BT}{Baja Tensión}\nomenclature[MT]{MT}{Media
-%     Tensión}
-
-% \item RD. 436/2004 \cite{RealDecreto2004}: establece los
-%   procedimientos de legalización de un SFCR. Algunos de estos
-%   procedimientos han sido actualizados por el RD 661/2007
-%   \cite{RD-661-2007} y por el RD 1578/2008.
-
-% \item Reglamento Electrotécnico de Baja Tensión (2002)
-%   \cite{RD_842_2002}\nomenclature[REBT]{REBT}{Reglamento
-%     Electrotécnico de Baja Tensión}.  Debe destacarse que no hay un
-%   capítulo específico dedicado a los SFCR.
-
-% \item Documento HE5 del Codigo Técnico de la Edificación
-%   \cite{CodigoTecnico2006}.
-
-% \end{itemize}
-
 \subsection{Características distintivas de SFCR sobre suelo y en edificación}
 
 Tradicionalmente se distingue entre SFCRs instalados sobre suelo y
@@ -312,7 +217,8 @@ a sombrear.
 % en edificios.
 
 Para las instalaciones fotovoltaicas en edificación es de particular
-importancia el documento HE5 del Código Técnico de la Edificación.
+importancia el documento HE5 del Código Técnico de la
+Edificación \cite{CTE2017}.
 Esta normativa obliga a incorporar sistemas fotovoltaicos cuando se
 superan los $\SI{5000}{\meter\squared}$ construidos. La potencia
 nominal de estos sistemas (potencia de inversor) queda determinada por
@@ -322,12 +228,14 @@ la ecuación \ref{eq:PotenciaCodEdificacion}:
 P_{min}=C\cdot(0.002\cdot S - 5)
 \label{eq:PotenciaCodEdificacion}
 \end{equation}
-siendo $P_{min}$ la potencia nominal a instalar ($\si{\kilo\W}$), $S$
-la superficie construida en metros cuadrados y $C$ un coeficiente
-relacionado con la zona climática en la que se ubica el edificio.  En
-todo caso, la potencia de generador debe ser superior a
-$\SI{6.25}{\kilo\Wp}$, y el inversor tendrá una potencia mínima de
-$\SI{5}{\kilo\watt}$ y máxima de $\SI{100}{\kilo\watt}$.
+siendo $P_{min}$ la potencia nominal\footnote{Definida como la ``suma
+  de la potencia nominal de los inversores (la especificada por el
+  fabricante) que intervienen en las tres fases de la instalación en
+  condiciones nominales de funcionamiento.''} a instalar
+($\si{\kilo\W}$), $S$ la superficie construida en metros cuadrados y
+$C$ un coeficiente relacionado con la zona climática en la que se
+ubica el edificio.  En todo caso, la potencia nominal máxima
+obligatoria será de $\SI{100}{\kilo\watt}$.
 
 Este documento divide España en cinco zonas climáticas de acuerdo al
 valor medio anual de la radiación global diaria en el plano
@@ -346,19 +254,20 @@ este documento exige para la disposición de módulos y sombras en el
 generador.
 
 Los sistemas instalados en edificación no suelen superar la potencia
-de $\SI{100}{\kilo\watt}$. Su interconexión con la red eléctrica
-se realiza frecuentemente en Baja Tensión, aunque esta opción no siempre
-es posible, tal y como se describe en el apartado \ref{sub:Condiciones-tecnicas-Conexion}.
-En este tipo de SFCR el diseño de los sistemas eléctricos debe tener
-en cuenta las canalizaciones previstas o existentes en el edificio.
-Por facilidad de instalación y mantenimiento, y por seguridad de los
-sistemas, es recomendable el uso de canalizaciones separadas del resto
-de sistemas del edificio. Sin embargo, los criterios de seguridad
-eléctrica aconsejan utilizar una red de tierras común para el edificio
-y el sistema fotovoltaico. Una proporción importante del trabajo de
-ingeniería se dedica a ubicar correctamente el generador para maximizar
-la producción y minimizar el efecto del sombreado, y a diseñar y elegir
-los elementos de anclaje de los módulos al edificio.
+de $\SI{100}{\kilo\watt}$. Su interconexión con la red eléctrica se
+realiza frecuentemente en Baja Tensión, aunque esta opción no siempre
+es posible, tal y como se describe en el apartado
+\ref{sub:Condiciones-tecnicas-Conexion}.  En este tipo de SFCR el
+diseño de los sistemas eléctricos debe tener en cuenta las
+canalizaciones previstas o existentes en el edificio.  Por facilidad
+de instalación y mantenimiento, y por seguridad de los sistemas, es
+recomendable el uso de canalizaciones separadas del resto de sistemas
+del edificio. Sin embargo, los criterios de seguridad eléctrica
+aconsejan utilizar una red de tierras común para el edificio y el
+sistema fotovoltaico. Una proporción importante del trabajo de
+ingeniería se dedica a ubicar correctamente el generador para
+maximizar la producción y minimizar el efecto del sombreado, y a
+diseñar y elegir los elementos de anclaje de los módulos al edificio.
 
 
 \subsubsection{Sistemas de concentración}
@@ -1134,25 +1043,6 @@ Integración arquitectónica & 40 & 20 & 50\tabularnewline
 \end{table}
 
 
-Para calcular las pérdidas propone la ecuación
-\ref{eq:PerdidasCTE}:
-
-\begin{equation} \mathrm{Perdidas=%
-\begin{cases}
-      100\cdot[1,2\cdot10^{-4}\cdot(\text{\ensuremath{\beta}}\text{\textminus}\text{\ensuremath{\phi}}+10)^{2}+3,5\text{·}10^{-5}\cdot\alpha^{2}] & 15\degree<\beta<90\degree\\
-      100\cdot[1,2\cdot10^{-4}\cdot(\text{\ensuremath{\beta}}\text{\textminus}\text{\ensuremath{\phi}}+10)^{2}]
-      &
-      \beta<15\degree
-\end{cases}}
-\label{eq:PerdidasCTE}
-\end{equation}
-siendo $\beta$, $\alpha$ y $\phi$ la inclinación, orientación del
-generador y latitud del lugar, respectivamente, todos en grados
-sexagesimales.  \nomenclature[alfa]{$\alpha$}{Ángulo de orientación de
-  un generador fotovoltaico}\nomenclature[beta]{$\beta$}{Ángulo de
-  inclinación de un generador fotovoltaico}
-
-
 \subsection{Configuración eléctrica del generador}
 \label{sub:ConfiguracionGenerador}
 
@@ -1452,62 +1342,22 @@ adecuado para estudios precisos de funcionamiento del generador en
 unas condiciones concretas, y su aplicación a generadores de gran
 tamaño debe realizarse con precaución. 
 
-Este tratamiento es el adoptado en el Código Técnico de la Edificación
-\cite{CodigoTecnico2006}. El procedimiento consiste en la comparación
-del perfil de obstáculos que afecta a la superficie de estudio con
-el diagrama de trayectorias del sol. Los pasos a seguir son los siguientes: 
+El procedimiento consiste en la comparación del perfil de obstáculos
+que afecta a la superficie de estudio con el diagrama de trayectorias
+del sol. Los pasos a seguir son los siguientes:
 \begin{enumerate}
-\item Localización de los principales obstáculos que afectan a la superficie,
-en términos de sus posiciones acimutales y de elevación. Para ello
-puede utilizarse un teodolito.
-\item Representación del perfil de obstáculos en el diagrama de la figura
-\ref{fig:DiagramaSombraLejana}, en el que se muestra la banda de
-trayectorias del sol a lo largo de todo el año, válido para localidades
-de la Península Ibérica y Baleares (para las Islas Canarias el diagrama
-debe desplazarse $\SI{12}{\degree}$ en sentido vertical ascendente).
-Dicha banda se encuentra dividida en porciones, delimitadas por las
-horas solares (negativas antes del mediodía solar y positivas después
-de éste) e identificadas por una letra y un número (A1, A2, ..., D14).
-\item Cada una de las porciones de la figura \ref{fig:DiagramaSombraLejana}
-representa el recorrido del sol en un cierto periodo de tiempo (una
-hora a lo largo de varios días) y tiene, por tanto, una determinada
-contribución a la irradiación solar global anual que incide sobre
-la superficie de estudio. Así, el hecho de que un obstáculo cubra
-una de las porciones supone una cierta pérdida de irradiación, en
-particular aquélla que resulte interceptada por el obstáculo. Debe
-escogerse como referencia para el cálculo la tabla más adecuada de
-entre las que se incluyen en el apéndice B de tablas de referencia
-del apartado HE5 del Código Técnico de la Edificación. 
-\item Las tablas incluidas en este apéndice se refieren a distintas superficies
-caracterizadas por sus ángulos de inclinación y orientación. Debe
-escogerse aquélla que resulte más parecida a la superficie en estudio.
-Los números que figuran en cada casilla se corresponden con el porcentaje
-de irradiación solar global anual que se perdería si la porción correspondiente
-resultase interceptada por un obstáculo. 
-\item La comparación del perfil de obstáculos con el diagrama de trayectorias
-del sol permite calcular las pérdidas por sombreado de la irradiación
-solar que incide sobre la superficie, a lo largo de todo el año. Para
-ello se han de sumar las contribuciones de aquellas porciones que
-resulten total o parcialmente ocultas por el perfil de obstáculos
-representado. En el caso de ocultación parcial se utilizará un valor
-fraccional equivalente.
+\item Localización de los principales obstáculos que afectan a la
+  superficie, en términos de sus posiciones acimutales y de
+  elevación. Para ello puede utilizarse un teodolito.
+\item Representación del perfil de obstáculos en el diagrama de la
+  figura \ref{fig:DiagramaSombraLejana}, en el que se muestra la banda
+  de trayectorias del sol a lo largo de todo el año.
+\item La comparación del perfil de obstáculos con el diagrama de
+  trayectorias del sol permite calcular las pérdidas por sombreado de
+  la irradiación solar que incide sobre la superficie, a lo largo de
+  todo el año. 
 \end{enumerate}
-Suponiendo que el diagrama de la figura \ref{fig:DiagramaSombraLejana}
-corresponde a un generador ubicado en Madrid, inclinada $30\degree$
-y orientado $10\degree$ al sudeste, será necesario emplear la tabla
-correspondiente a $\beta=35\degree$ y $\alpha=0\degree$ del \href{http://www.codigotecnico.org/web/recursos/documentos/documentos/dbhe/4/tablab1b2.jpg}{apéndice
-B del apartado HE5} del Código Técnico de la Edificación. Por ejemplo,
-esta tabla indica que a la celda A5 le corresponde el valor $1.84$.
-Esta celda está cubierta en un 60\% de su superficie. Por tanto, la
-contribución al factor de sombra (en tanto por cien) de esta celda
-es $1.84\cdot0.6=1.104$. Siguiendo este mismo procedimiento para
-el resto de celdas sombreadas escribimos:\begin{eqnarray*}
-FS & = & 0.2\cdot\mathrm{B4}+0.6\cdot\mathrm{A5+0.8\cdot\mathrm{A6}+\mathrm{B6+0.3\cdot\mathrm{C6}+\mathrm{A8}+0.4\cdot\mathrm{B8}+0.2\cdot\mathrm{A10}}}\\
- & = & 0.2\cdot\mathrm{1.89}+0.6\cdot\mathrm{1.84+0.8\cdot\mathrm{1.79}+\mathrm{1.51+0.3\cdot\mathrm{1.65}+\mathrm{0.98}+0.4\cdot\mathrm{0.99}+0.2\cdot\mathrm{0.11}}}\\
-FS & \simeq & 6.3\%\end{eqnarray*}
 
-
-%
 \begin{figure}
 \begin{centering}
 \includegraphics[clip,scale=0.15]{../figs/SombraIES}
@@ -1524,7 +1374,7 @@ FS & \simeq & 6.3\%\end{eqnarray*}
 Suele considerarse aceptable un factor de sombras anual con valores
 comprendidos entre el 2 y el 4\%, tanto en instalaciones estáticas%
 \footnote{Como límite, debe tenerse en cuenta que el Código Técnico de la Edificación
-\cite{CodigoTecnico2006} obliga a que las pérdidas por sombra sean
+\cite{CTE2017} obliga a que las pérdidas por sombra sean
 inferiores al 10\% como caso general, al 15\% en instalaciones de
 superposición y al 20\% en instalaciones de integración arquitectónica.%
 } como de seguimiento. En casos específicos este factor puede ser más
