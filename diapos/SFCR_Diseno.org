@@ -156,23 +156,48 @@ No obstante, es posible demostrar que el valor de esta relación no es tan crít
 
 - Habitualmente se descarta el criterio termico y se emplea el criterio de caida de tensión (RBT ITC-BT-07):
 
-$$\begin{aligned}
-    S_{dc} & = & \frac{2\cdot L_{dc}\cdot I_{dc}}{56\cdot\Delta V_{dc}}\\
-    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{56\cdot\Delta V_{1ac}}\\
-    S_{3ac} & = & \frac{\sqrt{3}\cdot L_{3ac}\cdot
-      I_{3ac}}{56\cdot\Delta V_{3ac}}\end{aligned}$$
+#+BEGIN_EXPORT latex
+\[
+  \begin{aligned}
+    S_{dc} & = & \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
+    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
+    S_{3ac} & = & \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
+  \end{aligned}
+\]
+#+END_EXPORT
 
-- En general, se suele aceptar una caída máxima de tensión $\SI{1.5}{\percent}$ de la tensión nominal. 
+- La conductividad del cable, $\gamma_\theta$, depende del material y de la
+  temperatura de operación. Por ejemplo, el cobre:
+  - $\gamma_{20} =\SI{56}{\meter\per\ohm\per\milli\meter\squared}$
+  - $\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}$.
 
-- Para aplicar correctamente este porcentaje es importante caer en la cuenta de que *cada zona (DC y AC) tiene su propia tensión nominal*.
+*** Cálculo
+
+- En general, se exige una caída máxima de tensión
+  $\SI{1.5}{\percent}$ de la tensión nominal.
+
+- Para aplicar correctamente este porcentaje es importante caer en la
+  cuenta de que *cada zona (DC y AC) tiene su propia tensión nominal*.
 
 *** Cálculo
 
 **** Ejemplo
-En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de la
-conexión a red, se deberá utilizar un cable de sección $S=\frac{\sqrt{3}\cdot100\cdot75}{56\cdot\SI{1.5}{\percent}\cdot400}=\SI{38.66}{\milli\meter\squared}$.
+- En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un
+  inversor trifásico, situado este a $\SI{100}{\meter}$ de la conexión
+  a red, se deberá utilizar un cable de sección (teniendo en cuenta
+  que $\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}$).
 
-Dado que la sección de los cables está normalizada, se deberá optar por la sección inmediatamente superior, y por tanto la conexión del inversor a la red se realizará con tres cables de sección $S=\SI{50}{\milli\meter\squared}$.
+
+#+BEGIN_EXPORT latex
+\[
+  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \SI{1.5}{\percent}\cdot400}=\SI{45.46}{\milli\meter\squared}
+\]
+#+END_EXPORT
+
+- Dado que la sección de los cables está normalizada, se deberá optar
+  por la sección inmediatamente superior, y por tanto la conexión del
+  inversor a la red se realizará con tres cables de sección
+  $S=\SI{50}{\milli\meter\squared}$.
 
 *** Intensidad máxima admisible
 
@@ -182,6 +207,7 @@ Dado que la sección de los cables está normalizada, se deberá optar por la se
 
 *** Continua vs. Alterna
 
+**** 
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (/distribución en alterna/) o en un centro específico junto al punto de

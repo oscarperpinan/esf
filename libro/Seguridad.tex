@@ -1045,46 +1045,56 @@ segundo tiene en cuenta la caída de tensión debida al paso de
 corriente a través de la resistencia equivalente del cable.
 
 Para calcular la sección necesaria según el criterio de caída de
-tensión, es aplicable la ecuación \ref{eq:DeltaVDC} para los tramos de
-corriente continua, la ecuación \ref{eq:DeltaVMono} para el tramo ente
-inversor y punto de conexión a red en sistemas monofásicos, y la
-ecuación \ref{eq:DeltaVTrif} en sistemas trifásicos%
-\footnote{En las ecuaciones se ha despreciado la inductancia de los
+tensión son aplicables las siguientes ecuaciones\footnote{En las ecuaciones se ha despreciado la inductancia de los
   cables, se ha considerado que el inversor trabaja con factor de
   potencia unidad,
   $\cos(\phi)=1$\nomenclature[cosphi]{$\cos(\phi)$}{Factor de potencia
     de una instalación eléctrica}, y se supone que el material
   conductor empleado es el cobre. %
-}.
+} para los tramos de
+corriente continua ($S_{dc}$), para el tramo ente
+inversor y punto de conexión a red en sistemas monofásicos ($S_{1ac}$), y para sistemas trifásicos ($S_{3ac}$).
 
-\begin{eqnarray}
-  S_{dc} & = & \frac{2\cdot l_{dc}\cdot I_{dc}}{56\cdot\Delta V_{dc}}\label{eq:DeltaVDC}\\
-  S_{1ac} & = & \frac{2\cdot l_{1ac}\cdot I_{1ac}}{56\cdot\Delta V_{1ac}}\label{eq:DeltaVMono}\\
-  S_{3ac} & = & \frac{\sqrt{3}\cdot l_{3ac}\cdot
-    I_{3ac}}{56\cdot\Delta V_{3ac}}\label{eq:DeltaVTrif}
-\end{eqnarray}
+\[
+  \begin{aligned}
+    S_{dc} & = & \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
+    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
+    S_{3ac} & = & \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
+  \end{aligned}
+\]
+
 siendo $S_{dc}$ la sección de los conductores de corriente continua,
-$l_{dc}$ la distancia a cubrir con un circuito de corriente continua
+$L_{dc}$ la distancia a cubrir con un circuito de corriente continua
 (el factor 2 tiene en cuenta que se necesitan dos conductores para
-este circuito), $I_{dc}$ la corriente nominal (habitualmente la del
-punto MPP) que circula por el circuito de corriente continua, y
-$\Delta V_{dc}$ la caída de tensión existente entre la entrada y la
-salida del circuito de corriente continua. La nomenclatura es similar
-en las otras dos ecuaciones.  \nomenclature[Sdc]{$S_{dc}$}{Sección de
+este circuito), $\gamma_\theta$ la conductividad del conductor a una temperatura
+de operación determinada\footnote{La conductividad del cobre a 20ºC de
+  temperatura de operación es $\gamma_{20} =\SI{56}{\meter\per\ohm\per\milli\meter\squared}$ mientras que a 70ºC es
+$\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}$.},
+$I_{dc}$ la corriente nominal (habitualmente la del punto MPP) que
+circula por el circuito de corriente continua, y $\Delta V_{dc}$ la
+caída de tensión existente entre la entrada y la salida del circuito
+de corriente continua. La nomenclatura es similar en las otras dos
+ecuaciones.
+
+\nomenclature[Sdc]{$S_{dc}$}{Sección de
   un conductor de corriente continúa}
 \nomenclature[S1ac]{$S_{1ac}$}{Sección de un conductor de corriente
-  alterna monofásica} \nomenclature[S3ac]{$S_{3ac}$}{Sección de un
+  alterna monofásica}
+\nomenclature[S3ac]{$S_{3ac}$}{Sección de un
   conductor de corriente alterna trifásica}
-\nomenclature[ldc]{$l_{dc}$}{Distancia a cubrir con circuito de
-  corriente continúa} \nomenclature[l1ac]{$l_{1ac}$}{Distancia a
+\nomenclature[ldc]{$L_{dc}$}{Distancia a cubrir con circuito de
+  corriente continúa}
+\nomenclature[l1ac]{$L_{1ac}$}{Distancia a
   cubrir con un un circuito de corriente alterna monofásica}
-\nomenclature[l3ac]{$l_{3ac}$}{Distancia a cubrir con un circuito de
-  corriente alterna trifásica} \nomenclature[DeltaVdc]{$\Delta
-  V_{dc}$}{Caida de tensión en un circuito de corriente continua}
+\nomenclature[l3ac]{$L_{3ac}$}{Distancia a cubrir con un circuito de
+  corriente alterna trifásica}
+\nomenclature[DeltaVdc]{$\Delta V_{dc}$}{Caida de tensión en un
+  circuito de corriente continua}
 \nomenclature[DeltaV1ac]{$\Delta V_{1ac}$}{Caida de tensión en un
   circuito de corriente alterna monofásica}
 \nomenclature[DeltaV3ac]{$\Delta V_{3ac}$}{Caida de tensión en un
   circuito de corriente alterna trifásica}
+\nomenclature[gamma_theta]{$\gamma_\theta$}{Conductividad de un conductor a una temperatura de operación determinada}
 
 Según el apartado 5 de la ITC-BT-40, la caída máxima de tensión de la
 tensión nominal entre el generador y el punto de interconexión a la
@@ -1093,8 +1103,7 @@ superior al $\SI{1.5}{\percent}$ para la intensidad nominal.
 Habitualmente se aplica este mismo porcentaje de forma separada para
 los circuitos de continua y de alterna, teniendo en cuenta que cada
 zona (DC y AC) tiene su propia tensión nominal, tal y como se
-especifica en las ecuaciones (\ref{eq:DeltaVDC}),
-(\ref{eq:DeltaVMono}) y (\ref{eq:DeltaVTrif}).
+especifica en las anteriores ecuaciones.
 
 Además, hay que tener en cuenta que éste es un requisito que afecta a la
 totalidad del circuito: cuando un circuito está dividido en varios
@@ -1108,8 +1117,12 @@ volumen total de conductor empleado (vease el ejercicio
 
 Por ejemplo, en una instalación que conduce $\SI{75}{\ampere}$ a la
 salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de
-la conexión a red, se deberá utilizar un cable de sección
-$S=\frac{\sqrt{3}\cdot100\cdot75}{56\cdot\SI{1.5}{\percent}\cdot400}=\SI{38.66}{\milli\meter\squared}$.
+la conexión a red, se deberá utilizar un cable de sección:
+
+\[
+  S=\frac{\sqrt{3} \cdot 0.021 \cdot100\cdot75}{\SI{1.5}{\percent}\cdot400}=\SI{45.46}{\milli\meter\squared}
+\]
+
 Dado que la sección de los cables está normalizada, se deberá optar
 por la sección inmediatamente superior, y por tanto la conexión del
 inversor a la red se realizará con tres cables de sección
@@ -1142,7 +1155,7 @@ la corriente del sistema, salvo en conexiones de corta longitud.
 Para más detalles sobre el proceso de cálculo, se invita al lector a
 repasar el ejercicio \ref{EjercicioCableado} y a la lectura del Anexo
 2 a las Guías de Aplicación del
-REBT\footnote{\url{http://www.ffii.es/puntoinfomcyt/Archivos/rbt/guias/guia_bt_anexo_2_sep03R1.pdf}}.
+REBT\footnote{\url{www.f2i2.net/documentos/lsi/rbt/guias/guia_bt_anexo_2_sep03R1.pdf}}
 
 
 

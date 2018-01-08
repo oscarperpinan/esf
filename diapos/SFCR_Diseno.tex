@@ -1,21 +1,19 @@
-% Created 2015-01-20 mar 00:27
+% Created 2018-01-08 lun 19:55
+% Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{longtable}
-\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
 \usepackage{amssymb}
+\usepackage{capt-of}
 \usepackage{hyperref}
-\tolerance=1000
 \usepackage{color}
 \usepackage{listings}
 \usepackage{mathpazo}
@@ -25,12 +23,13 @@
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
@@ -38,23 +37,28 @@
 \date{}
 \title{SFCR: Diseño}
 \hypersetup{
-  pdfkeywords={},
-  pdfsubject={},
-  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
+ pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdftitle={SFCR: Diseño},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.4)}, 
+ pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Generador Fotovoltaico}
-\label{sec-1}
+\label{sec:orgc72392c}
 
-\begin{frame}[label=sec-1-0-1]{Inclinación y Orientacion}
+\begin{frame}[label={sec:org971adf8}]{Inclinación y Orientacion}
 $$\beta_{opt}=3.7+0.69 \cdot \left|\phi\right|$$
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PorcentajeProduccionEdificios.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-2]{Modulos en serie}
+\begin{frame}[label={sec:orga147f17}]{Modulos en serie}
 \begin{itemize}
 \item El inversor está diseñado para soportar una \alert{tensión máxima en la
 entrada}. Superarla puede conllevar la avería del equipo.
@@ -75,7 +79,7 @@ T_{a}=\SI{25}{\celsius})\in\left[V_{mppMIN},\,
   V_{mppMAX}\right]_{INV}$$
 \end{frame}
 
-\begin{frame}[label=sec-1-0-3]{Ramas en paralelo}
+\begin{frame}[label={sec:orgfe6bc81}]{Ramas en paralelo}
 \begin{itemize}
 \item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}.
 
@@ -87,7 +91,7 @@ T_{a}=\SI{25}{\celsius})\in\left[V_{mppMIN},\,
 $$N_{p,max}:\, I_{scG}(\SI{1000}{\watt\per\meter\squared})<I_{max,INV}$$
 \end{frame}
 
-\begin{frame}[label=sec-1-0-4]{Configuración del generador}
+\begin{frame}[label={sec:org0db9dc2}]{Configuración del generador}
 De los cálculos anteriores se obtiene un conjunto de configuraciones del generador que permiten un buen acoplamiento entre inversor y generador. 
 
 Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
@@ -106,7 +110,7 @@ estructura.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-5]{Configuración eléctrica y estructura}
+\begin{frame}[label={sec:org30769f8}]{Configuración eléctrica y estructura}
 \begin{itemize}
 \item Es recomendable elegir \alert{series} compuestas por un número de módulos
 que puedan ser ubicados en una \alert{única hilera de la estructura}.
@@ -125,7 +129,7 @@ inmediatamente superiores.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-6]{Potencia del generador}
+\begin{frame}[label={sec:org1e4e7ad}]{Potencia del generador}
 \begin{itemize}
 \item La potencia del generador fotovoltaico está relacionada directamente
 con la \alert{inversión económica} a realizar.
@@ -135,13 +139,13 @@ nominal es aproximadamente lineal, y por tanto, los \alert{ingresos
 económicos} dependen casi linealmente de la potencia del generador.
 
 \item Por tanto, para decidir la potencia del generador
-($P_{g}^{*}=N_{s}\cdot N_{p}\cdot P_{m}^{*}$) debe tenerse en cuenta
+(\(P_{g}^{*}=N_{s}\cdot N_{p}\cdot P_{m}^{*}\)) debe tenerse en cuenta
 el capital o financiación disponible, y el rendimiento económico
 deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-0-7]{Potencia del generador}
+\begin{frame}[label={sec:org63260ae}]{Potencia del generador}
 \begin{itemize}
 \item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el    cálculo económico). Por tanto, debe tenerse en cuenta el espacio disponible (o el coste que se pretende asumir por el uso de terreno).
 
@@ -150,28 +154,30 @@ deseado.
 \end{frame}
 
 \section{Inversor}
-\label{sec-2}
+\label{sec:orgd702ba3}
 
-\begin{frame}[label=sec-2-0-1]{Curva de eficiencia}
+\begin{frame}[label={sec:org03abc4b}]{Curva de eficiencia}
 \begin{itemize}
-\item Eficiencia del inversor, $\eta_{inv} = P_{ac} / P_{dc}$
+\item Eficiencia del inversor, \(\eta_{inv} = P_{ac} / P_{dc}\)
 
-\item Esta relación puede describirse con una función basada en tres coeficientes y la normalización de la potencia de salida, $p_{o}=P_{ac}/P_{inv}$: $$\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}$$
+\item Esta relación puede describirse con una función basada en tres coeficientes y la normalización de la potencia de salida, \(p_{o}=P_{ac}/P_{inv}\): $$\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}$$
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}[label=sec-2-0-2]{Curva de eficiencia}
-$k_{0}^{o}=0.01$
+\begin{frame}[label={sec:orge8af27f}]{Curva de eficiencia}
+\(k_{0}^{o}=0.01\)
 
-$k_{1}^{o}=0.025$
+\(k_{1}^{o}=0.025\)
 
-$k_{2}^{o}=0.05$
+\(k_{2}^{o}=0.05\)
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaInversor.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-3]{Relación de potencias}
+\begin{frame}[label={sec:org1a6efd0}]{Relación de potencias}
 \begin{itemize}
 \item Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
@@ -183,26 +189,26 @@ $k_{2}^{o}=0.05$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-4]{Relación de potencias}
+\begin{frame}[label={sec:orgf7a6eef}]{Relación de potencias}
 \begin{itemize}
-\item En \alert{sistemas de integración arquitectónica}, donde la orientación e inclinación no son óptimas, esta probabilidad puede ser baja. Así, puede considerarse necesario sobredimensionar el generador FV respecto al inversor ($P_{g}^{*}/P_{inv}\in\left[1;1.4\right]$).
+\item En \alert{sistemas de integración arquitectónica}, donde la orientación e inclinación no son óptimas, esta probabilidad puede ser baja. Así, puede considerarse necesario sobredimensionar el generador FV respecto al inversor (\(P_{g}^{*}/P_{inv}\in\left[1;1.4\right]\)).
 
 \begin{itemize}
 \item CTE-HE5-3.2.3.2: \guillemotleft{}la potencia del inversor será como mínimo el 80\% de la potencia pico real del generador fotovoltaico\guillemotright{}
 \end{itemize}
 
-\item En \alert{sistemas de seguimiento} esta probabilidad suele ser alta. Se recomiendan inversores de potencia similar a la del generador  ($P_{g}^{*}/P_{inv}\in\left[1;1.2\right]$)
+\item En \alert{sistemas de seguimiento} esta probabilidad suele ser alta. Se recomiendan inversores de potencia similar a la del generador  (\(P_{g}^{*}/P_{inv}\in\left[1;1.2\right]\))
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-0-5]{Relación de potencias}
+\begin{frame}[label={sec:org48492ed}]{Relación de potencias}
 No obstante, es posible demostrar que el valor de esta relación no es tan crítico como \alert{elegir un inversor con buena curva de eficiencia}.
 \end{frame}
 
 \section{Cableado}
-\label{sec-3}
+\label{sec:org46adb9d}
 
-\begin{frame}[label=sec-3-0-1]{Características básicas}
+\begin{frame}[label={sec:org8573d6c}]{Características básicas}
 \begin{itemize}
 \item Diseño del cableado
 
@@ -223,37 +229,68 @@ cableado
 \item Poliolefínas
 \end{itemize}
 \end{itemize}
+\begin{center}
 \includegraphics[height=0.5\textheight]{../figs/PhotocampaCableado.jpg}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-2]{Cálculo}
+\begin{frame}[label={sec:orge708ba9}]{Cálculo}
 \begin{itemize}
 \item Habitualmente se descarta el criterio termico y se emplea el criterio de caida de tensión (RBT ITC-BT-07):
 \end{itemize}
 
-$$\begin{aligned}
-    S_{dc} & = & \frac{2\cdot L_{dc}\cdot I_{dc}}{56\cdot\Delta V_{dc}}\\
-    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{56\cdot\Delta V_{1ac}}\\
-    S_{3ac} & = & \frac{\sqrt{3}\cdot L_{3ac}\cdot
-      I_{3ac}}{56\cdot\Delta V_{3ac}}\end{aligned}$$
+\[
+  \begin{aligned}
+    S_{dc} & = & \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
+    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
+    S_{3ac} & = & \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
+  \end{aligned}
+\]
 
 \begin{itemize}
-\item En general, se suele aceptar una caída máxima de tensión $\SI{1.5}{\percent}$ de la tensión nominal.
-
-\item Para aplicar correctamente este porcentaje es importante caer en la cuenta de que \alert{cada zona (DC y AC) tiene su propia tensión nominal}.
+\item La conductividad del cable, \(\gamma_\theta\), depende del material y de la
+temperatura de operación. Por ejemplo, el cobre:
+\begin{itemize}
+\item \(\gamma_{20} =\SI{56}{\meter\per\ohm\per\milli\meter\squared}\)
+\item \(\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}\).
+\end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-3]{Cálculo}
-\begin{block}{Ejemplo}
-En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de la
-conexión a red, se deberá utilizar un cable de sección $S=\frac{\sqrt{3}\cdot100\cdot75}{56\cdot\SI{1.5}{\percent}\cdot400}=\SI{38.66}{\milli\meter\squared}$.
+\begin{frame}[label={sec:org79eb24b}]{Cálculo}
+\begin{itemize}
+\item En general, se exige una caída máxima de tensión
+\(\SI{1.5}{\percent}\) de la tensión nominal.
 
-Dado que la sección de los cables está normalizada, se deberá optar por la sección inmediatamente superior, y por tanto la conexión del inversor a la red se realizará con tres cables de sección $S=\SI{50}{\milli\meter\squared}$.
+\item Para aplicar correctamente este porcentaje es importante caer en la
+cuenta de que \alert{cada zona (DC y AC) tiene su propia tensión nominal}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org8baa113}]{Cálculo}
+\begin{block}{Ejemplo}
+\begin{itemize}
+\item En una instalación que conduce \(\SI{75}{\ampere}\) a la salida de un
+inversor trifásico, situado este a \(\SI{100}{\meter}\) de la conexión
+a red, se deberá utilizar un cable de sección (teniendo en cuenta
+que \(\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}\)).
+\end{itemize}
+
+
+\[
+  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \SI{1.5}{\percent}\cdot400}=\SI{45.46}{\milli\meter\squared}
+\]
+
+\begin{itemize}
+\item Dado que la sección de los cables está normalizada, se deberá optar
+por la sección inmediatamente superior, y por tanto la conexión del
+inversor a la red se realizará con tres cables de sección
+\(S=\SI{50}{\milli\meter\squared}\).
+\end{itemize}
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-4]{Intensidad máxima admisible}
+\begin{frame}[label={sec:org3cb030d}]{Intensidad máxima admisible}
 \begin{itemize}
 \item Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
@@ -261,12 +298,13 @@ Dado que la sección de los cables está normalizada, se deberá optar por la se
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-5]{Continua vs. Alterna}
+\begin{frame}[label={sec:orge3a50ea}]{Continua vs. Alterna}
+\begin{block}{}
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (\emph{distribución en alterna}) o en un centro específico junto al punto de
 conexión a red (\emph{distribución en continua}), \alert{¿cuál es la tensión de
 trabajo en continua que permite optar por una distribución en continua?}
+\end{block}
 \end{frame}
-% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

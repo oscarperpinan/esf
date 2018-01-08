@@ -9,19 +9,19 @@
 
 *** Potencia en un SFCR
 
-- Potencia a la Salida del Generador FV
+- *Potencia* a la Salida del Generador FV
 
 $$P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
       \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*$$
 
-- Potencia a la Salida del Inversor
+- *Potencia* a la Salida del Inversor
 
 $$P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)$$
 
-- Energía Producida por un SFCR
+- *Energía* Producida por un SFCR
 
 $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
-      \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^* \mathrm{dt}$$
+      \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
 
 *** Energía producida
 
@@ -47,23 +47,23 @@ $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
 
 En algunas ocasiones se habla de *productividad* del sistema, $Y_{f}$,
 que es el cociente entre energía producida y potencia nominal del
-sistema:
+*generador*:
 $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 
 *** Performance Ratio
 
--  Está concebido para incluir todas las pérdidas que no tienen
-   dependencia con las condiciones meteorológicas.
+-  Está concebido para incluir todas las *pérdidas que no tienen
+  dependencia con las condiciones meteorológicas*.
 
--  Este factor "puede" caracterizar el funcionamiento de un sistema
-   independientemente de la localidad.
+-  Este factor /puede/ caracterizar el funcionamiento de un sistema
+   *independientemente de la localidad*.
 
 -  En sentido estricto no es cierto porque sí hay relación con la
    meteorología del lugar.
 
 -  Sin embargo, dado que estos factores son de segundo orden comparados
-   con la relación entre potencia e irradiancia, suele aceptarse que el
-   PR sirve para caracterizar la calidad de un sistema fotovoltaico.
+   con la relación entre potencia e irradiancia, *suele aceptarse* que el
+   *PR* sirve para caracterizar la *calidad de un sistema fotovoltaico*.
 
 *** Performance Ratio
 
@@ -89,12 +89,16 @@ $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 
 **** Valores reales
 
--  El análisis de funcionamiento de diversos sistemas FV europeos ha
-   mostrado que el rango de valores que toma el /performance ratio/ es
-   bastante amplio, con mínimos de 0,4 y máximos de 0,85.
+- El análisis de funcionamiento de diversos sistemas FV europeos ha
+  mostrado que el rango de valores que toma el /performance ratio/ es
+  bastante amplio, con mínimos de 0,4 y máximos de 0,85.
 
--  Para sistemas instalados desde 1996, *el valor promedio ha sido de
-   0,74*.
+- Para sistemas instalados entre 1980 a 1990, *el valor promedio ha sido de
+  0,7*.
+
+- Para sistemas instalados entre 2005 a 2012, *el valor promedio ha
+  sido de 0,8*.
+
 
 *** Factor de sombras
 
@@ -139,19 +143,36 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 6cm
+     :BEAMER_col: 0.6
      :END:
 
 [[../figs/DimensionesSeguidorSombra.pdf]]
 
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 4cm
+     :BEAMER_col: 0.4
      :END:
 $$b=\frac{L}{W}$$ 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
 
 $$E_{ac}=f(ROT)??$$
+
+*** Radiación promedio
+
+$$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+[[../figs/plantConfiguration.pdf]]
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+[[../figs/6trackers.pdf]]
+
 
 *** Separación de Seguidores Doble Eje
 
@@ -202,7 +223,18 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
 #+ATTR_LATEX: :options angle=90
 [[../figs/AbacoHorizBT_Ene10.pdf]]
 
+*** Limitación de ángulo
+
+- Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
+
+- Implica un desvio de los seguidores de su posición óptima.
+
+  - Sombras más cortas que en el caso teórico (red más densa).
+
+  - Reducción en la energía generada por incidencia no perpendicular
+
 ** Elección de separaciones
+
 
 *** Elección de separaciones
 
@@ -228,59 +260,25 @@ energía* producida por el sistema:
 -  La separación finalmente elegida debe *tomar en consideración las
    condiciones del terreno* (fronteras, irregularidades, vaguadas, etc.)
 
-*** Radiación promedio
 
-$$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
 
+*** ROT y Coste de la energía producida
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 5cm
-     :END:
-[[../figs/plantConfiguration.pdf]]
-
-**** 								      :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 7cm
-     :END:
-[[../figs/6trackers.pdf]]
-
-*** Cableado
-**** 								      :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 5cm
-     :END:
-[[../figs/wiring.pdf]]
-**** 								      :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 6cm
-     :END:
-$$\begin{aligned}
-    \Delta U_{inv} &= \frac{\Delta U}{1+\sqrt{\frac{\sum_{i=1}^n
-          L_{i}^2 \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}} \\
-    \Delta U_{inv} &+ \Delta U_i = \Delta U\\
-    S_{inv} &= 2 \cdot \rho \cdot \frac{L_{inv} \cdot
-      I_{inv}}{\Delta U_{inv}} \\
-    S_{i} &= 2 \cdot \rho \cdot \frac{L_{i} \cdot I_i}{\Delta U_i}
-  \end{aligned}$$
-
-
-*** Coste de la energía producida
-**** 								      :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 5cm
+     :BEAMER_col: 0.4
      :END:
 - Coste Energía
-    $$C_E &= \frac{C_P}{E_{AC}}$$
+    $$C_E = \frac{C_P}{E_{AC}}$$
 - Coste Sistema
-    $$C_p &= C_c + C_A + C_{PV}$$
+    $$C_p = C_c + C_A + C_{PV}$$
 
-- $C_{PV}$ entre $\SI{2.5}{\text{\texteuro}\per\watt}$ y $\SI{5}{\text{\texteuro}\per\watt}$
+- $C_{PV}$ entre $\SI{2.5}{\text{\texteuro}\per\watt}$ y $\SI{5}{\text{\texteuro}\per\watt}$ (/antiguo/)
 
 - $C_A$ entre $\SI{1.5}{\text{\texteuro}\per\meter\squared}$ y $\SI{4}{\text{\texteuro}\per\meter\squared}$
 
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 7cm
+     :BEAMER_col: 0.8
      :END:
 [[../figs/GRRoptim.pdf]]
 

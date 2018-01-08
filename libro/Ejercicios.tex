@@ -915,30 +915,30 @@ la longitud de cable a emplear en cuaquiera de las dos opciones. La
 sección de la distribución en continua se calcula con:
 
 \[
-S_{dc}=\frac{2\cdot l\cdot I_{dc}}{56\cdot\Delta V_{dc}}\]
+S_{dc}=\frac{2\cdot l\cdot I_{dc}}{\gamma_\theta\cdot\Delta V_{dc}}\]
 mientras que la correspondiente a una distribución trifásica se calcula
 con:
 
 \[
-S_{3ac}=\frac{\sqrt{3}\cdot l\cdot I_{3ac}}{56\cdot\Delta V_{3ac}}\]
+S_{3ac}=\frac{\sqrt{3}\cdot l\cdot I_{3ac}}{\gamma_\theta\cdot\Delta V_{3ac}}\]
 donde se supone que el factor de potencia del inversor es la unidad.
 
 Estas expresiones pueden reescribirse utilizando la relación entre
 potencia, tensión y corriente:
 
 \[
-S_{dc}=\frac{2\cdot l\cdot P_{dc}}{56\cdot1.5\%\cdot V_{dc}^{2}}\]
+S_{dc}=\frac{2\cdot l\cdot P_{dc}}{\gamma_\theta\cdot1.5\%\cdot V_{dc}^{2}}\]
 
 
 \[
-S_{3ac}=\frac{l\cdot P_{ac}}{56\cdot1.5\%\cdot V_{ac}^{2}}\]
+S_{3ac}=\frac{l\cdot P_{ac}}{\gamma_\theta\cdot1.5\%\cdot V_{ac}^{2}}\]
 
 
 Con estas ecuaciones la condición primera se expresa de la siguiente
 forma:
 
 \[
-2\cdot\frac{2\cdot l\cdot P_{dc}}{56\cdot1.5\%\cdot V_{dc}^{2}}=3\cdot\frac{l\cdot P_{ac}}{56\cdot1.5\%\cdot V_{ac}^{2}}\]
+2\cdot\frac{2\cdot l\cdot P_{dc}}{\gamma_\theta\cdot1.5\%\cdot V_{dc}^{2}}=3\cdot\frac{l\cdot P_{ac}}{\gamma_\theta\cdot1.5\%\cdot V_{ac}^{2}}\]
 y teniendo en cuenta las suposiciones propuestas se puede simplificar
 para obtener la siguiente relación:\[
 \frac{4}{V_{dc}^{2}}=\frac{3\cdot0.95}{400^{2}}\]
@@ -993,7 +993,7 @@ cables unipolares enterrados.
 
 En primer lugar aplicamos el criterio de caída de tensión con la fórmula:
 
-\[S_{dc} =  \frac{2\cdot l_{dc}\cdot I_{dc}}{56\cdot\Delta V_{dc}}\]
+\[S_{dc} =  \frac{2\cdot l_{dc}\cdot I_{dc}}{\gamma_\theta\cdot\Delta V_{dc}}\]
 
 Según el apartado 5 de la ITC-BT-40, la caída de tensión será inferior
 al $1.5\%$ de la tensión nominal. Dado que existen dos tramos (desde el
