@@ -1,0 +1,157 @@
+#+TITLE: Tiempo de Retorno Energético de Sistemas Fotovoltaicos
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:1
+
+* Introducción
+
+A lo largo de su ciclo de vida, además de producir energía y diferentes
+residuos, un sistema generador requerirá el empleo de energía para:
+
+-  Fabricación de componentes
+
+-  Tratamiento del terreno
+
+-  Transporte e instalación de los equipos
+
+-  Combustible necesario para su funcionamiento
+
+-  Reposición de equipos que agotan su ciclo
+
+-  ...
+
+* Ciclo de Vida
+
+[[../figs/LCAFlujo.pdf]]
+
+* Fuentes de Información
+
+-  *Inventarios de Ciclos de Vida* (/Life Cycle Inventory,/ LCI) de los
+   procesos empleados para implementar un SFCR. A partir de estos LCIs
+   es posible estimar el impacto energético asociado.
+
+   -  Incertidumbre alta en módulos FV (40%)
+
+-  *Radiación global* del lugar en el que el SFCR va a desempeñar sus
+   funciones
+
+-  *Características técnicas de los diferentes componentes* del SFCR que
+   permitan estimar la energía producida a lo largo de toda su vida
+   útil.
+
+* Energy PayBack Time
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.8
+     :END:
+
+[[../figs/LCAFlujo.pdf]]
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.25
+     :END:
+
+#+BEGIN_EXPORT latex
+\[
+  EPBT=\frac{E_{LCA}}{E_{ac}}
+\]
+#+END_EXPORT
+
+
+* La cuestión del mix energético
+
+-  *La energía primaria depende de la eficiencia de conversión del
+   sistema energético.*
+
+   -  La eficiencia depende de la composición de fuentes energéticas
+      (mix energético)
+
+   -  Eficiencia para zona UCTE: 0.31
+
+-  *Proceso productivo de módulo FV es principalmente eléctrico* (80% de
+   energía primaria se emplea en electricidad).
+
+   -  Centros de fabricación en zonas con alta eficiencia de conversión.
+
+   -  Menor impacto ambiental con alta penetración de renovables.
+
+-  La *producción de la energía eléctrica* del SFCR se produce
+   normalmente *lejos del centro de fabricación*
+
+   -  Diferente eficiencia de conversión por variación de mix
+      energético.
+
+   -  Menor EPBT inyectando en sistemas poco eficientes.
+
+* Energía de los principales componentes
+
+** Seguimiento a Doble Eje
+
+| Componente                  | ($MJ_{p}/kWp$)   | (%)      |
+|-----------------------------+------------------+----------|
+| Módulo                      | 41819            | 69,54%   |
+| Estructura Soporte          | 9329             | 15,51%   |
+| Mecanismos de seguimiento   | 248              | 0,41%    |
+| Cimientos (acero)           | 3371             | 5,61%    |
+| Cimientos (hormigón)        | 2445             | 4,07%    |
+| Transporte                  | 1339             | 2,23%    |
+| Inversor                    | 1,091            | 1,81%    |
+| Cableado                    | 497              | 0,83%    |
+| Total                       | 60140            | 100%     |
+
+* Energía de los principales componentes
+
+** Seguimiento de Eje Horizontal NS
+
+| Componente                  | ($MJ_{p}/kWp$)   | (%)      |
+|-----------------------------+------------------+----------|
+| Módulo                      | 41819            | 78,67%   |
+| Estructura Soporte          | 6108             | 11,49%   |
+| Mecanismos de seguimiento   | 58               | 0,11%    |
+| Cimientos (acero)           | 1536             | 2,89%    |
+| Cimientos (hormigón)        | 1281             | 2,41%    |
+| Transporte                  | 900              | 1,69%    |
+| Inversor                    | 1091             | 2,05%    |
+| Cableado                    | 364              | 0,68%    |
+| Total                       | 53157            | 100%     |
+
+* Energía de los principales componentes
+
+** Sistemas Estáticos
+
+| Componente                  | ($MJ_{p}/kWp$)   | (%)      |
+|-----------------------------+------------------+----------|
+| Módulo                      | 41819            | 81,99%   |
+| Estructura Soporte          | 4459             | 8,74%    |
+| Mecanismos de seguimiento   | 0                | 0,00%    |
+| Cimientos (acero)           | 0                | 0,00%    |
+| Cimientos (hormigón)        | 2352             | 4,61%    |
+| Transporte                  | 1037             | 2,03%    |
+| Inversor                    | 1091             | 2,14%    |
+| Cableado                    | 248              | 0,49%    |
+| Total                       | 51005            | 100%     |
+
+* Valores de EPBT por sistema
+
+| EPBT          | 1st. Quartile | Median | Mean | 3rd Quartile |
+|---------------+---------------+--------+------+--------------|
+| Doble Eje     | 2,4           | 2,6    | 2,7  | 2,82         |
+| Horizontal-NS | 2,65          | 2,88   | 3    | 3,17         |
+| Estático      | 3             | 3,22   | 3,3  | 3,45         |
+
+* Doble Eje
+
+[[../figs/BoxPlotEPBTEuropa_2x.pdf]]
+
+* Horizontal NS
+
+[[../figs/BoxPlotEPBTEuropa_HorizNS.pdf]]
+
+* Estático
+
+[[../figs/BoxPlotEPBTEuropa_Fixed.pdf]]
+
+* Comparativa
+
+[[../figs/EPBTEuropavsGh2.pdf]]
