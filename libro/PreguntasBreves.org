@@ -1,0 +1,592 @@
+#+TITLE: Preguntas breves
+#+OPTIONS: toc:nil num:nil
+#+LATEX_CLASS: memoir-article
+#+LATEX_HEADER: \input{preambulo.tex} 
+
+* Radiación Solar
+- En las siguientes afirmaciones se resalta en negrita un
+  número. Indique y razone brevemente si esa cantidad resaltada es
+  factible en el contexto de la frase correspondiente.
+
+  - En un lugar con latitud 40ºN, el valor medio de la irradiación
+    extra-atmosférica diaria en Junio es de
+    \SI{11.6}{\kWh\per\meter\squared}. La media de los valores de
+    radiación global diaria registrados durante ese mes en una
+    estación meteorológica cercana es de *25.2 MJ/m^2*.
+    # #+BEGIN_QUOTE
+    # Sí es factible. Convirtiendo unidades, la radiación global medida
+    # es $\SI{7}{\kWh\per\meter\squared}$. Teniendo en cuenta la
+    # irradiación extraterrestre, el índice de claridad correspondiente
+    # será $\frac{7}{11.6} = 0.6$, que es un valor razonable.
+    # #+END_QUOTE
+
+- Se sitúa un módulo fotovoltaico orientado hacia el sur e inclinado
+  un ángulo igual a la latitud en un lugar del hemisferio norte con
+  latitud mayor que cero. Responda si son verdaderas o falsas las
+  siguientes afirmaciones, aportando una breve justificación de la
+  respuesta.
+  - En el instante del mediodía solar, en los solsticios, el coseno
+    del ángulo de incidencia entre el vector sol-tierra y la normal al
+    plano del módulo coincide con el del ángulo que forma el plano de
+    la eclíptica con el plano ecuatorial.
+#     #+BEGIN_QUOTE
+# VERDADERO. Cuando la inclinación es igual a la latitud, el ángulo de incidencia en el mediodía solar es igual a la declinación. En los solsticios la declinación es igual a $23.5^{\circ}$.
+# #+END_QUOTE
+  - En el instante del amanecer, el día del solsticio de invierno, el sol está situado detrás del módulo.
+#     #+BEGIN_QUOTE
+# FALSO. La latitud es positiva, y es solsticio de invierno, luego el sol amanece por el Sureste.
+# #+END_QUOTE
+  - Si utilizamos el modelo isotrópico para calcular la radiación
+    difusa, podemos afirmar que la cantidad de radiación difusa
+    captada por este módulo es siempre inferior a la captada por un
+    plano horizontal.
+  #   #+BEGIN_QUOTE
+  # VERDADERO. En el modelo isotrópico, la radiación difusa depende sólo del factor de visión del cielo. Cuando el módulo está horizontal, ve el cielo completo.
+  # #+END_QUOTE
+
+- El índice de claridad, $K_{T}$, y la fracción de difusa, $F_{D}$,
+  son dos parámetros que caracterizan el estado atmosférico en lo que
+  a radiación solar se refiere. En relación con estos dos parámetros,
+  responda si son verdaderas o falsas las siguientes afirmaciones,
+  aportando una breve justificación de la respuesta.
+
+  - La utilización de modelos anisotrópicos para estimar la radiación
+    difusa sobre una superficie inclinada es particularmente importante
+    cuando el valor de $K_{T}$ es elevado.
+    # #+BEGIN_QUOTE
+    # VERDADERO. Cuando el valor de $K_{T}$ es elevado, el cielo presenta
+    # pocas nubes. De esta forma, la radiación difusa se aleja de la
+    # distribución isotrópica.
+    # #+END_QUOTE
+
+  - $K_{T}$ se define, en un determinado intervalo de tiempo, como la
+    relación entre la radiación global y la radiación directa, ambas
+    sobre superficie horizontal.
+    # #+BEGIN_QUOTE
+    # FALSO. Se define como la relación entre la radiación global y la
+    # radiación extraatmosférica.
+    # #+END_QUOTE
+
+  - Suponga que, para un cierto periodo de tiempo, la relación entre
+    $K_{T}$ y $K_{D}$ puede representarse mediante la ecuación
+    $K_{D}=b-a\cdot K_{T}$.
+    - El valor del coeficiente $b$ es siempre mayor que 1.
+      # #+BEGIN_QUOTE
+      # FALSO. Si b>1, cuando $K_{T}=0$ debe ser $K_{D}>1.$ Es decir, hay
+      # más difusa que global (imposible).
+      # #+END_QUOTE
+    - El coeficiente a es siempre positivo.
+      # #+BEGIN_QUOTE
+      # VERDADERO. La relación entre $K_{T}$ y $K_{D}$ es inversamente
+      # proporcional (si hay más proporción de difusa, baja el índice de
+      # claridad).
+      # #+END_QUOTE
+
+- Un determinado mes de un punto del hemisferio Norte se caracteriza
+  por un promedio mensual de irradiación global diaria en el plano
+  horizontal de $\SI{5}{\kWh\per\meter\squared}$. El calculo del
+  promedio mensual de irradiación diaria extraterrestre en el plano
+  horizontal proporciona un valor de
+  $\SI{7}{\kWh\per\meter\squared}$. Obtenga el valor del
+  correspondiente promedio mensual de irradiación difusa diaria en el
+  plano horizontal. Exprese los cálculos y resultados con nomenclatura
+  y unidades adecuadas. A la luz de estos valores, ¿a qué época del
+  año corresponde este mes?
+
+#   #+BEGIN_QUOTE 
+# El índice de claridad correspondiente a estos valores es
+# $K_{tm}=5/7=0.71$. Dado que son promedios mensuales, la correlacción
+# recomendada es la de Page: \[ F_{dm}=1-1.13 \cdot 0.71 =0.19 \] De
+# esta forma, $D_{dm}(0)=0.19 \cdot
+# 5=\SI{950}{\Wh\per\meter\squared}$. Estos valores, en el
+# hemisferio Norte, corresponden al verano o a la primavera.
+# #+END_QUOTE
+
+- Necesita calcular el coseno del ángulo de incidencia sobre un
+  generador fotovoltaico estático. Dispone de la siguiente
+  información: día del año, hora oficial, latitud y longitud del
+  lugar. ¿Qué información adicional necesita conocer para realizar el
+  cálculo? Describa de forma concisa el procedimiento a seguir
+  contando con la información completa.
+
+#   #+BEGIN_QUOTE
+# Además es necesario conocer la orientación e inclinación del
+# generador. El procedimiento es:
+
+# - Calcular la hora solar en base a la hora oficial y la longitud
+#   del lugar (tomando en cuenta el día del año para aplicar el adelanto
+#   oficial por verano).
+# - Calcular la declinación a partir del día del año.
+# - Calcular el coseno del ángulo de incidencia con la latitud, la
+#   orientación e inclinación del lugar, la hora solar y la declinación.
+
+# #+END_QUOTE
+
+- Una estación meteorológica situada en el centro de la península
+  dispone de sensores de radiación solar que almacena en valores
+  diarios. Del análisis de esta información se estima que la media de
+  la irradiación global anual en el plano horizontal es de
+  $\SI{6460}{\kWh\per\meter\squared}$. ¿Es aceptable este
+  valor? En caso contrario, expliqué por qué e indique un valor
+  orientativo que considere razonable. ¿Cuál puede ser el error
+  cometido al realizar la primera estimación?
+
+#   #+BEGIN_QUOTE
+# Es un valor excesivamente elevado. Para el centro de la península son
+# razonables valores en torno a
+# $\SI{1700}{\kWh\per\meter\squared}$. Una posible causa de
+# este valor erróneo puede ser un uso incorrecto de las unidades: es
+# común que las estaciones publiquen los valores de irradiación en
+# $\si{\mega\joule\per\meter\squared}$. Así, $6460/3.6 \simeq 1795$, que
+# sí es un valor aceptable.
+# #+END_QUOTE
+
+- La inclinación óptima de un sistema fotovoltaico se calcula de forma
+  diferente teniendo en cuenta la aplicación del sistema. Indique la
+  ecuación correspondiente para las tres aplicaciones principales
+  (conexión a red, bombeo de agua, y electrificación rural)
+  =razonando= el motivo de cada una de estas ecuaciones.
+
+  # - En los sistemas de conexión a red se busca maximizar la generación
+  #   anual, de forma que se opta por una inclinación (aproximadamente
+  #   $\SI{10}{\degree}$ menos que la latitud del lugar) que aumente el
+  #   promedio anual.
+
+  # - En los sistemas autónomos de electrificación se pretende
+  #   garantizar el funcionamiento en el mes peor, que suele coincidir
+  #   con el mes de menor radiación. Por tanto, se optar por una
+  #   inclinación $\SI{10}{\degree}$ superior a la latitud.
+
+  # - En los sistemas de bombeo la época de mayor demanda suele
+  #   coincidir con la de mayor radiación, y por tanto se optar por
+  #   inclinaciones similares a la latitud.
+
+
+* Módulos y Generadores
+- En las siguientes afirmaciones se resalta en negrita un
+  número. Indique y razone brevemente si esa cantidad resaltada es
+  factible en el contexto de la frase correspondiente.
+  - Un módulo de silicio monocristalino con dimensiones 1000 x 800 mm
+    tiene una potencia de *275 Wp*.
+    # #+BEGIN_QUOTE
+    # No es factible. Un módulo con estas características tendría una
+    # eficiencia de $\eta_m = \frac{275}{1 \cdot 0.8 \cdot 1000} =
+    # 34.4\%$, que está muy por encima del actual estado del arte.
+    # #+END_QUOTE
+
+  - Un módulo tiene 108 células de silicio monocristalino conectadas
+    en serie. Su tensión de circuito abierto en STC es de *24.2 V*.
+    # #+BEGIN_QUOTE
+    # No es factible.  La tensión de circuito abierto de cada célula de
+    # este módulo sería $\frac{24.2}{108} = \SI{0.22}{\volt}$. Sin
+    # embargo, el valor típico para el silicio monocristalino está
+    # alrededor de $\SI{0.6}{\volt}$.
+    # #+END_QUOTE
+
+- En un momento determinado del día, un módulo de un seguidor a doble
+  eje está afectado por sombras arrojadas por otro
+  seguidor. Comparemos el funcionamiento de este módulo con otro
+  módulo perteneciente al mismo seguidor y no afectado por
+  sombras. Responda si son verdaderas o falsas las siguientes
+  afirmaciones, aportando una breve justificación de la respuesta.
+  - La corriente de cortocircuito del módulo sombreado es inferior a la
+    del módulo no sombreado.
+    # #+BEGIN_QUOTE
+    # VERDADERO. La corriente de cortocircuito depende directamente de la radiación incidente.
+    # #+END_QUOTE
+
+  - La tensión de circuito abierto del módulo sombreado es inferior a la del módulo no sombreado.
+    # #+BEGIN_QUOTE
+    # FALSO. La tensión de circuito abierto depende de la radiación como
+    # factor de segundo orden, y de forma inversamente proporcional. Por
+    # tanto, la tensión del módulo sombreado será algo superior.
+    # #+END_QUOTE
+  - La resistencia serie del módulo sombreado es inferior a la del módulo no sombreado.
+    # #+BEGIN_QUOTE
+    # FALSO. La resistencia serie es prácticamente independiente de las condiciones ambientales. Depende principalmente del material activo. 
+    # #+END_QUOTE
+  - La corriente en el punto de máxima potencia del módulo sombreado disminuye de forma proporcional a la radiación sombreada.
+    # #+BEGIN_QUOTE
+    # FALSO. La relación entre la corriente de máxima potencia y la
+    # radiación incidente no es tan sencilla como la existente con la
+    # corriente de cortocircuito.
+    # #+END_QUOTE
+  - La disminución de radiación incidente debida al sombreado conlleva
+    una reducción en la temperatura del módulo sombreado. Por tanto, la
+    tensión en el punto de máxima potencia del módulo sombreado aumenta
+    a razón de $2.3\,mV/^{\circ}C/celula$ con la diferencia entre la
+    temperatura de trabajo y la correspondiente a condiciones estándar
+    de test (STC).
+    # #+BEGIN_QUOTE
+    # FALSO. Efectivamente, la disminución de radiación conlleva una
+    # reducción en la temperatura, pero la razón de 2.3 mV sólo es válida
+    # para tensión de circuito abierto.
+    # #+END_QUOTE
+
+- Comente la validez de esta afirmación: "El uso de diodos de paso
+  debe ser tenido en cuenta por el diseñador sólo cuando el generador
+  fotovoltaico vaya a estar sometido a condiciones de temperatura
+  ambiente especialmente elevadas. En caso contrario, se puede
+  prescindir del uso de estos elementos para reducir los costes del
+  sistema."
+  # #+BEGIN_QUOTE
+  # El uso de los diodos de paso dentro de los módulos se destina a
+  # proteger a una o más células que, por diferentes motivos, funcionen
+  # en peores condiciones que el resto de las pertenecientes a su
+  # rama. El motivo más común de este comportamiento anómalo es el
+  # impacto de sombras en una parte del módulo. En estas condiciones,
+  # las células sombreadas se comportan como receptores, elevando su
+  # temperatura hasta valores que pueden resultar dañinos para el
+  # módulo. Los diodos de paso permiten un camino alternativo de
+  # corriente y limitan la temperatura alcanzada. Estos diodos están
+  # incluidos en la caja de conexiones del módulo fotovoltaico. No es
+  # necesario añadir más diodos en una caja adicional. Su funcionamiento
+  # no está relacionado con las condiciones de temperatura ambiente.
+  # #+END_QUOTE
+
+- Describa brevemente las causas y consecuencias del fenómeno del
+  punto caliente en los módulos fotovoltaicos. ¿Es razonable el uso de
+  varistores para evitar su aparición?
+
+#   #+BEGIN_QUOTE
+#   Cuando una célula se comporta de forma sensiblemente diferente a la
+#   del resto de células que componen una agrupación serie-paralelo, es
+#   posible que esta célula quede polarizada de forma que deba disipar
+#   la potencia eléctrica del resto. Cuando esto sucede, la temperatura
+#   de la célula puede alcanzar valores muy superiores a las del diseño
+#   del encapsulamiento del módulo, y provocar daños irreversibles.
+
+#   Los varistores no suponen ninguna solución para este fenómeno, dado
+#   que son elementos de protección frente a las sobretensiones, que
+#   nada tienen que ver con el fenómeno de punto caliente. La solución
+#   común para proteger frente al punto caliente es el uso de diodos de
+#   /bypass/ en paralelo con un conjunto de células.
+# #+END_QUOTE
+
+- En la fachada de un edificio existe un generador fotovoltaico. En un
+  momento determinado parte de este generador está afectado por
+  sombras de un arbolado cercano. Tomando en consideración dos módulos
+  de este generador, uno de ellos afectado por sombra y denominado
+  $M_S$, y otro sin sombras y denominado $M_0$, suponiendo que ambos
+  módulos son idénticos, compare las siguientes magnitudes usando
+  afirmaciones del estilo ``La [magnitud] del módulo $M_s$ es mayor
+  que la del módulo $M_0$ porque ...'':
+  - Corriente de cortocircuito
+    # #+BEGIN_QUOTE
+    # Dado que la corriente de cortocircuito es directamente
+    # proporcional a la radiación, la corriente de cortocircuito del
+    # módulo $M_0$ es mayor que la del módulo $M_s$.
+    # #+END_QUOTE
+  - Tensión de circuito abierto
+    # #+BEGIN_QUOTE
+    # La tensión de circuito abierto está determinada principalmente por
+    # la temperatura de célula, que está relacionada de forma inversa
+    # con la radiación incidente. Por tanto, la tensión de circuito
+    # abierto del $M_0$ será ligeramente inferior a la del $M_S$.
+    # #+END_QUOTE
+  - Temperatura de célula
+
+    # #+BEGIN_QUOTE
+    # La temperatura de célula del $M_s$ será inferior a la del $M_0$.
+    # #+END_QUOTE
+  - Potencia eléctrica
+    # #+BEGIN_QUOTE
+    # La potencia del $M_0$ será superior a la del $M_S$.
+    # #+END_QUOTE
+
+
+* SFCR
+- En las siguientes afirmaciones se resalta en negrita un
+  número. Indique y razone brevemente si esa cantidad resaltada es
+  factible en el contexto de la frase correspondiente.
+
+  1. La media anual de la productividad diaria de un SFCR estático en
+    Madrid es de *6.5 kWh/kWp*.
+    # #+BEGIN_QUOTE
+    # No es factible. Implica una productividad anual de $6.5 \cdot 365
+    # = \SI{2372.5}{\kWh\per\Wp}$, cuando los valores
+    # razonables son del orden de
+    # $\SI{1400}{\kWh\per\Wp}$.  Esta productividad
+    # implica una irradiación anual efectiva en el plano del generador
+    # de aproximadamente
+    # $\SI{3230}{\kWh\per\meter\squared}$. Se puede comprobar
+    # en los mapas correspondientes que es un valor excesivo.
+    # #+END_QUOTE
+
+  2. Un generador FV está situado a 100 m de distancia de su
+    inversor. La tensión y corriente de trabajo en el tramo de
+    continua son 400 V y 10 A, respectivamente. Es necesario utilizar
+    una sección de cable de *35mm^2*.
+    # #+BEGIN_QUOTE
+    # No es factible. La sección de cable necesaria es de
+    # \SI{6}{\milli\meter\squared}
+    # #+END_QUOTE
+
+- En relación con un inversor DC/AC, responda si son verdaderas o
+  falsas las siguientes afirmaciones, aportando una breve
+  justificación de la respuesta.
+
+  - Se emplea principalmente la tecnología de conmutación de onda
+    cuadrada, dada la sencillez de la lógica de control, el bajo nivel
+    de armónicos y la facilidad para regular el nivel de tensión de
+    salida.
+    # #+BEGIN_QUOTE
+    # FALSO. La tecnología de onda cuadrada se utiliza sólo en
+    # inversores de baja calidad para aplicaciones muy sencillas, y
+    # nunca en conexión a red.
+    # #+END_QUOTE
+  - Se suele elegir una frecuencia de conmutación superior a 1 MHz,
+    dada la baja influencia de la frecuencia en la distorsión de onda
+    y la relación inversamente proporcional entre la frecuencia y las
+    pérdidas por conmutación.
+    # #+BEGIN_QUOTE
+    # FALSO. La frecuencia de conmutación es directamente proporcional a
+    # las pérdidas por conmutación e influye en la distorsión de
+    # onda. Por tanto se elige como compromiso entre los dos efectos y
+    # con valores bastante más bajos que 1 MHz.
+    # #+END_QUOTE
+  - Para inversores de potencia inferior a 5 kW se emplea tecnología
+    de modulación del ancho de pulso mediante comparación con onda
+    sinusoidal (SPWM). Para potencias superiores, y dadas las
+    limitaciones de los dispositivos de conmutación, se utiliza
+    conmutación por onda cuadrada.
+    # #+BEGIN_QUOTE
+    # FALSO. En potencias superiores también se utiliza SPWM.
+    # #+END_QUOTE
+
+- Un informe sobre una instalación fotovoltaica de conexión a red
+  proyectada en el sur de la península declara una media anual de la
+  productividad diaria de
+  $\SI{4.1}{\kWh\per\kilo\Wp}$. Sabiendo que la
+  irradiación global efectiva anual en el plano del generador
+  correspondiente a esa localidad es de
+  $\SI{1860}{\kWh\per\meter\squared}$, ¿cuál es el
+  \emph{performance ratio} de la instalación propuesta? Suponga que el
+  efecto de las sombras es despreciable.
+
+  # #+BEGIN_QUOTE
+  # $PR = \frac{4.1 \cdot 365}{1860} = 0.804$
+  # #+END_QUOTE
+
+- Como es conocido, en los generadores fotovoltaicos de los SFCR se
+  recomienda la configuración flotante. Responda si son verdaderas o
+  falsas las siguientes afirmaciones, aportando una breve
+  justificación de la respuesta.
+
+  - De esta forma, se garantiza la prevención contra cortocircuitos y
+    sobrecargas debidas a la red eléctrica.
+    # #+BEGIN_QUOTE
+    # FALSO. La configuración flotante no tiene relación con estos efectos en la red eléctrica.
+    # #+END_QUOTE
+
+  - Así, se garantiza mayor protección tanto frente a contactos directos
+    como frente a contactos indirectos. Sin embargo, la protección
+    aumenta con una red de tierras bien diseñada y un vigilante de
+    aislamiento integrado en el inversor.
+    # #+BEGIN_QUOTE
+    # VERDADERO. Esos son los tres niveles de protección en un sistema de conexión a red.
+    # #+END_QUOTE
+
+  - Esta configuración consiste en que todas las partes metálicas
+    accesibles son puestas a tierra junto con al menos un conductor
+    activo en la parte DC. Todos los conductores activos de la parte AC
+    quedan aislados de tierra.
+    # #+BEGIN_QUOTE
+    # FALSO. En una configuración flotante no hay conexión de ningún conductor activo a tierra.
+    # #+END_QUOTE
+
+- Los equipos denominados inversores se emplean en los sistemas
+  autónomos de electrificación, en los sistemas de bombeo y en los
+  sistemas de conexión a red para convertir la corriente continua del
+  generador FV en corriente alterna. Indique las principales
+  diferencias que existen entre los inversores adecuados a cada una de
+  estas tres aplicaciones.
+#   #+BEGIN_QUOTE
+# Los inversores de conexión a red funcionan como fuentes
+# de corriente (entregan toda la corriente que sea necesaria) a una
+# tensión y frecuencia que viene dada por la red eléctrica.  Los
+# inversores de sistemas autónomos de electrificación funcionan como
+# fuentes de tensión, es decir, fijan la tensión y frecuencia de
+# funcionamiento de todo el sistema.  Los inversores de los sistemas de
+# bombeo son variadores de frecuencia, que adaptan su tensión y
+# frecuencia de salida a las condiciones de funcionamiento del generador
+# fotovoltaico y de la bomba de agua.
+# #+END_QUOTE
+
+
+* COMMENT SFA
+
+- Se ha obtenido la línea isofiable para cierto valor de probabilidad
+de pérdida de carga (LLP) en una localidad. Se analizan dos de las
+posibles soluciones para las que la capacidad de almacenamiento
+muestra la siguiente relación: $C_{S2}=2\cdot C_{S1}$. Para realizar
+este análisis se supone que el sistema fotovoltaico no tiene regulador
+de carga y que durante el periodo en el que se estudian nunca se
+produce una descarga completa del acumulador. Responda si son
+verdaderas o falsas las siguientes afirmaciones, aportando una breve
+justificación de la respuesta. 
+- El régimen de carga es más alto en la batería 1 que en la 2.
+- VERDADERO. Al ser $LLP_{1}=LLP_{2}$, dada la relación $C_{S2}=2\cdot C_{S1}$,
+debe ser $C_{A2}<C_{A1}$. Por tanto, el generador 1 entrega más corriente. 
+
+- El tiempo de permanencia en estados de baja carga es más alto en la
+batería 1 que en la 2.
+
+
+- FALSO. Idéntico razonamiento al anterior.
+
+- El consumo de agua es más alto en la batería 1 que en la 2.
+
+
+- VERDADERO. Por el mismo razonamiento, en la batería 1 será más probable
+la sobrecarga y el gaseo.
+
+- La tendencia a la oxidación del ánodo es más alta en la batería 1
+que en la 2.
+
+
+- VERDADERO. Por el mismo razonamiento, en la batería 1 será más probable
+la sobrecarga.
+
+- La tendencia a la sulfatación es más alta en la batería 1 que en la
+2.
+
+
+- FALSO. Por el mismo razonamiento, es menos probable que la batería
+1 se encuentre en estados de baja carga.
+
+- La tendencia a la estratificación es más alta en la batería 1 que
+en la 2. 
+
+
+- FALSO. Por el mismo razonamiento, es menos probable que la batería
+1 se encuentre en estados de baja carga, y además la corriente de
+carga que recibe es mayor.
+
+- En los sistemas domésticos de electrificación rural es común el uso
+  de baterías de automóvil. Sin embargo, es sabido que este tipo de
+  acumuladores no tiene las características óptimas de funcionamiento
+  para su inclusión en los sistemas fotovoltaicos.  Explique
+  brevemente esta contradicción.
+  #+BEGIN_QUOTE
+  Las baterías de automóvil están diseñadas para soportar una elevada
+intensidad en un corto espacio de tiempo, asociado al arranque del
+vehículo. Este funcionamiento no se corresponde con el de un sistema
+fotovoltaico. Estas baterías, cuando son incluidas en sistemas
+fotovoltaicos, presentan una vida corta y deben ser reemplazadas con
+frecuencia. Sin embargo, su uso es muy común dada su elevada
+disponibilidad en los mercados locales, a diferencia de baterías más
+sofisticadas. Además, su bajo precio las hace más accesibles a los
+usuarios de estos sistemas.
+  #+END_QUOTE
+
+- Dentro de las aplicaciones autónomas de los sistemas 
+  fotovoltaicos, es muy poco frecuente el empleo de sistemas de 
+  seguimiento solar en el generador fotovoltaico, a pesar del 
+  incremento de productividad asociado. Aporte los motivos que 
+  considere más relevantes para explicar este hecho.
+
+  #+BEGIN_QUOTE
+En el diseño de los sistemas autónomos es imprescindible tomar 
+las decisiones adecuadas que garanticen el buen funcionamiento 
+del sistema de forma sostenida dado que, en general, estos 
+sistemas están alejados de los núcleos urbanos y, por tanto, las 
+posibles reparaciones implican largos desplazamientos del 
+personal especializado. En este contexto, debe limitarse el uso 
+de elementos móviles que requieren el mantenimiento frecuente y 
+el uso de lubricantes. Además, el uso de sistemas de seguimiento 
+implica un coste adicional que sólo es razonable en sistemas de 
+medio y gran tamaño, poco frecuentes en la electrificación rural.
+#+END_QUOTE
+
+- Un inversor autónomo está conectado a un banco de baterías con una
+  tensión nominal de \SI{24}{\volt}. ¿Cuál es la corriente a la
+  entrada del inversor cuando entrega \SI{3.6}{\kilo\watt} a la salida
+  con una eficiencia de 0.87?
+
+- Explique los problemas de funcionamiento que se observarían en
+  un hipotético sistema autónomo de electrificación rural sin batería.
+
+  #+BEGIN_QUOTE
+Los problemas serían:
+
+- El sistema fotovoltaico sólo podrá hacer frente al consumo cuando la
+  radiación solar sea la necesaria para la potencia requerida por las cargas.
+- La tensión del sistema fluctuará de forma descontrolada,
+  variando en función de las curvas de funcionamiento del generador
+  fotovoltaico y las cargas.
+- El generador fotovoltaico no será capaz de suministrar picos de
+  sobreintensidad a las cargas (por ejemplo, motores en arranque).
+
+#+END_QUOTE
+
+* COMMENT SFB
+- En las siguientes afirmaciones se resalta en negrita un
+  número. Indique y razone brevemente si esa cantidad resaltada es
+  factible en el contexto de la frase correspondiente.
+
+  - Un SFB de potencia nominal 1500 Wp es capaz de suministrar un
+    caudal diario aproximado de =\SI{25}{\cubic\meter}= con una
+    altura total equivalente de 30 metros si la radiación diaria es de
+    \SI{5}{\kWh\per\meter\squared}. 
+
+    Sí es factible. Para suministrar ese caudal a esa altura
+    equivalente con la radiación disponible necesitamos un generador
+    de aproximadamente $\frac{10 \cdot 25 \cdot 30}{5} =
+    \SI{1500}{\Wp}$, precisamente el valor del enunciado.
+
+- Responda si son verdaderas o falsas las siguientes afirmaciones, aportando
+una breve justificación de la respuesta, en relación con la elección
+los componentes de un sistema de bombeo solar directo. 
+
+
+- Es preferible no usar bombas centrífugas con motor de inducción, ya
+que requieren el empleo de un variador de frecuencia, aumentando considerablemente
+la complejidad del sistema.
+
+
+- FALSO. Las bombas centrífugas con motor de inducción combinan robustez
+y estandarización. Son recomendables en sistemas de bombeo solar directo.
+
+- Las bombas con motor de continua son particularmente deseables, ya
+que pueden trabajar en conexión directa con el generador FV.
+
+
+- FALSO. A pesar de trabajar en continua, necesitan un adaptador DC/DC
+para poder conectarse a un generador FV.
+
+- Apostaremos por acumuladores electroquímicos con la mínima capacidad
+necesaria, dada la similitud entre la curva de generación fotovoltaica
+y la curva de demanda hídrica
+
+
+- FALSO. Un sistema solar de bombeo directo no utiliza ningún tipo de
+acumulación electroquímica. La acumulación de energía se realiza a
+través del depósito de agua.
+
+- En poblaciones alejadas de la red eléctrica, el bombeo solar es preferible
+a la extracción de agua con bombas accionadas por grupos electrógenos.
+
+
+- VERDADERO. Los grupos electrógenos necesitan mantenimiento y aportación
+constante de combustible. Además, presentan problemas por contaminación
+de acuiferos. 
+
+-----------------
+
+- ¿Que caudal diario aproximado puede entregar un sistema fotovoltaico
+  de bombeo alimentado por un generador fotovoltaico de $P_g^* =
+  \SI{2400}{\Wp}$ en un lugar con un promedio anual de radiación
+  diaria de $G_d(0) = \SI{4.2}{\kWh\per\meter\squared}$ y
+  con una altura equivalente de $H_{TE} = \SI{80}{\meter}$?
+
+- En un sistema fotovoltaico de bombeo, ¿qué representa la altura
+  total equivalente? ¿Que potencia de generador será necesaria para
+  entregar $\SI{30000}{\litre}$ diarios en unas condiciones de $H_{TE}
+  = \SI{50}{\meter}$ y $G_{ef,d} = \SI{7}{\kWh\per\meter\squared}$?
+  La altura total equivalente es el hipotético valor constante que
+  llevaría al mismo volumen de agua bombeada que la ecuación que toma
+  en consideración la evolución temporal de todos los componentes de
+  un sistema de bombeo. 
+  $P_g^* = \frac{10 \cdot 30 \cdot 50}{7} = \SI{2142}{\Wp}$
+
