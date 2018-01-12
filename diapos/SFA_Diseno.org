@@ -1,9 +1,23 @@
-#+TITLE: SFA: Diseño
+#+TITLE: Sistemas Fotovoltaicos Autónomos
+#+SUBTITLE: Diseño
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
 
 * Dimensionado del SFA
+*** Objetivo
+
+- El dimensionado de un SFA consiste en *decidir el tamaño del
+  generador fotovoltaico y acumulador* que serán capaces de
+  *proporcionar la energía requerida* por una determinada carga a partir
+  de la *radiación disponible* en la zona.
+
+- Debido al comportamiento aleatorio tanto de la radiación como del
+  consumo, la *probabilidad de fallo no es nula*.
+
+- La solución es un compromiso entre el coste y la fiabilidad del
+  sistema.
+
 
 ** Nomenclatura
 *** Carga
@@ -15,7 +29,7 @@
    la carga durante todo el período de
    funcionamiento.$$LLP=\frac{E_{def}}{L}$$
 
-*** Capacidad
+*** Capacidades normalizadas
 
 -  Capacidad del generador: :: relación entre los valores medios de la
    energía que puede producir el generador y la energía consumida por la
@@ -35,33 +49,15 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
    coste.
 
 
-** Ciclado
-*** Ciclado diario y estacional
-
--  El *ciclado diario* es la serie de cargas y descargas de la batería
-   que se producen durante un periodo diario.
-
-   -  $PD_{d}$, está relacionada con el consumo nocturno, $L_{n}$, y por
-      tanto exclusivamente con la capacidad de la batería:
-      $PD_{d}=\frac{L_{n}}{C_{B}}$
-
--  El *ciclado estacional* es la serie de cargas y descargas que se
-   producen durante un periodo prolongado de duración variable
-
-   -  La duración, $D$, $PD_{e}$, están ligados al tamaño del generador,
-      al consumo diario (diurno y nocturno) y a la radiación disponible.
-
-   -  La batería debe proporcionar la energía necesaria pero
-      $PD_{e}<PD_{max}$.
-
+** Ejemplos
 *** Generador grande, acumulador pequeño
 
 -  La *combinación de $C_{A}$ alta y $C_{S}$ baja* conduce a ciclados
-   diarios con valores altos de $PD_{d}$ con ciclados estacionales
+   diarios con descargas profundas y ciclados estacionales
    cortos.
 
-   -  Las descargas profundas y frecuentes asociadas al valor alto de
-      $PD_{d}$ son perjudiciales para la batería,
+   -  Las descargas profundas y frecuentes son perjudiciales para la
+     batería,
 
    -  La corta longitud de los ciclados estacionales es beneficiosa.
 
@@ -71,9 +67,9 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
 *** Generador pequeño, acumulador grande
 
 -  La *combinación de $C_{A}$ baja y $C_{S}$ alta* conduce a ciclados
-   diarios con baja $PD_{d}$ y ciclados estacionales largos.
+   diarios con descargas moderadas y ciclados estacionales largos.
 
-   -  La baja $PD_{d}$ es beneficiosa para la batería,
+   -  La baja profundidad de descarga es beneficiosa para la batería,
 
    -  La longitud de los ciclados estacionales puede favorecer la
       sulfatación y la estratificación.
@@ -82,59 +78,56 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
       frecuencia de sobrecargas será baja y la estratificación no será
       tan fácilmente compensada.
 
+*** Sistemas Híbridos
+- Cuando $LLP$ es muy alta (p.e. radioenlaces) o la demanda es muy
+  elevada (poblados) el generador y acumulador serán excesivamente
+  grandes.
+
+- Es habitual incluir un grupo electrógeno que suministra la energía
+  deficitaria y permite reducir el tamaño del SFA.
+
+- Sinergia:
+
+  - El grupo electrógeno reduce el tamaño del generador FV y el
+    acumulador sin reducir fiabilidad.
+
+  - El generador fotovoltaico reduce horas de funcionamiento del
+    grupo: gasto en combustible y mantenimiento.
+
 ** Métodos de dimensionado
 *** Métodos de dimensionado
 
--  Método del LLP: :: a partir de simulaciones o de curvas de
-   isofiabilidad, establece los valores de $C_{A}$ y $C_{S}$ para un
-   consumo determinado.
+**** Método del LLP
 
--  Método del mes peor: :: selecciona el tamaño de batería y generador
-   para abastecer el consumo durante el mes con peor relación entre
-   radiación y consumo (en los casos de consumo constante, el mes peor
-   es aquel de menor radiación). El tamaño de batería y generador se
-   selecciona en base a la experiencia acumulada según la zona
-   geográfica y la aplicación a abastecer.
+A partir de simulaciones o de curvas de isofiabilidad, establece los
+valores de $C_{A}$ y $C_{S}$ para un consumo determinado.
+
+**** Método del mes peor
+- Determina el tamaño de batería y generador para abastecer el consumo durante el mes con peor relación entre radiación y consumo.
+- Si el consumo es constante, el mes peor es aquel de menor radiación.
+- Recomendaciones de expertos según zona geográfica y aplicación (tipología de consumo).
 
 *** Método del LLP
 
-**** Suposiciones
-
--  El consumo es constante a lo largo del año
-
--  Todo el consumo ocurre por la noche
-
--  Los componentes del sistema FV no tienen pérdidas (incluidas dentro
-   de $C_{A}$ y $C_{S}$) y lineales.
-
-*** Método de LLP
-
 [[../figs/CurvasLLP.pdf]]
 
-*** Relación entre $C_{A}^{'}$ y LLP
+*** Relación entre tamaño de generador y LLP
 
 - $C_{s}=3$
 
 [[../figs/CurvasLLP_Cs3.pdf]]
 
-*** Método del LLP
-
-- Es posible ajustar las curvas isofiables a una ecuación analítica:
-
-\[
-C_{A}^{'} = f\cdot C_{s}^{-u}
-\]
-
-- $f$ y $u$ son dos parámetros sin significado físico, dependientes del lugar y del LLP deseado. 
-- Para su determinación es necesario realizar varias simulaciones previas.
-
 *** Método de LLP
 
--  Este proceso de cálculo se apoya en series de valores de radiación solar que reproducen el comportamiento estadístico de la irradiación.
+-  Este proceso de cálculo se apoya en series de valores de radiación
+  solar que reproducen el comportamiento estadístico de la
+  irradiación.
 
--  Predicción del comportamiento del sistema limitada por la incertidumbre asociada.
+-  La predicción del comportamiento del sistema limitada por la
+  incertidumbre asociada.
 
--  Los ejercicios de cálculo para probabilidades de pérdida de carga inferiores a $LLP=\num{1e-2}$ carecen de utilidad.
+-  Los ejercicios de cálculo para probabilidades de pérdida de carga
+  inferiores a $LLP=\num{1e-2}$ carecen de utilidad.
 
 **** Recordatorio
 "[...] los modelos de simulación muy exactos pueden proporcionar números también muy exactos, pero ello no significa que se traduzcan automáticamente en predicciones también muy exactas."
@@ -158,44 +151,49 @@ C_{A}^{'} = f\cdot C_{s}^{-u}
 ** Configuración de generador y batería
 *** Configuración de generador y batería
 
-- Una vez elegidos los valores de $C_{A}$ y $C_{S}$, se deben configurar el generador y batería de acuerdo a las tensiones de trabajo. 
+- Una vez elegidos los valores de $C_{A}$ y $C_{S}$, se deben
+  configurar el generador y batería de acuerdo a las tensiones de
+  trabajo.
 
-- En general, la batería impone la tensión de trabajo (no hay buscador de MPP). Supondremos $V_{mpp}\simeq V_{b}$
+- En general, la batería impone la tensión de trabajo (no hay buscador
+  de MPP). Supondremos $V_{mpp} \simeq V_{b}$
 
 - Carga en Ah
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 Q_L = L / V_b
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 *** Batería
 
 - Capacidad en Ah (es recomendable no usar baterías en paralelo)
-#+BEGIN_LaTeX
+#+BEGIN_EXPORT latex
 \[
 Q_B = \frac{C_S \cdot Q_L}{PD}
 \]
-#+END_LaTeX
+#+END_EXPORT
 
 - Hay que elegir el número de vasos en serie adecuados a $V_b$
 
 
 *** Generador
 - Capacidad del generador
-#+BEGIN_LaTeX
-\begin{align*}
-C_{A} &= \frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{Q_L \cdot V_b}\\
-I_{g}^{*}\cdot V_{b} &= \eta_{G}\cdot A_{G}\cdot G_{stc} 
-\end{align*}
-#+END_LaTeX
+#+BEGIN_EXPORT latex
+\[
+C_{A} = \frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{Q_L \cdot V_b}
+\]
+#+END_EXPORT
+
 
 - Corriente de funcionamiento (determina número de ramas)
-#+BEGIN_LaTeX
-\[
+
+#+BEGIN_EXPORT latex
+\begin{align*}
+I_{g}^{*}\cdot V_{b} &= \eta_{G}\cdot A_{G}\cdot G_{stc}\\
 I_{g}^{*} &=  \frac{C_{A}\cdot Q_{L}\cdot G_{stc}}{\overline{G_{d}}(\beta,\alpha)}
-\]
-#+END_LaTeX
+\end{align*}
+#+END_EXPORT
 
 - Hay que elegir el número de módulos en serie adecuados a $V_b$
 
@@ -213,9 +211,10 @@ I_{g}^{*} &=  \frac{C_{A}\cdot Q_{L}\cdot G_{stc}}{\overline{G_{d}}(\beta,\alpha
 
 ** Estimación del consumo
 *** Cálculo del consumo
-
+- Energía total requerida por las cargas
 $$L_{T}=\frac{L_{dc}}{\eta_{r}}+\frac{L_{ac}}{\eta_{inv}}$$
 
+- Energía producida por el generador
 $$L=\frac{L_{T}}{\eta_{bat}\cdot\eta_{c}}$$
 
 Como valores orientativos pueden utilizarse
@@ -227,10 +226,12 @@ $\eta_{inv}=0.9$, $\eta_{r}=0.95$, $\eta_{bat}=0.85$ y $\eta_{c}=0.98$.
 [[../figs/ConsumoGamma.pdf]]
 
 *** Relación entre el consumo y la fiabilidad
-
+- La variación en el consumo se amplifica en la variación de la LLP.
+- Diseño robusto: funcionamiento en amplio abanico de condiciones (ambientales y humanas).
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/ConsumoLLP.pdf]]
 
-** Escenarios
+** Escenarios de Consumo
 *** SHS 1
 **** 120 Wh/dia
 -  Iluminación

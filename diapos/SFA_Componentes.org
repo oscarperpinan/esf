@@ -1,4 +1,5 @@
-#+TITLE: Sistemas Fotovoltaicos Autónomos \\ Componentes
+#+TITLE: Sistemas Fotovoltaicos Autónomos
+#+SUBTITLE: Conceptos Generales y Componentes
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
@@ -61,11 +62,7 @@ Un acumulador electroquímico es una bateria secundaria o recargable, capaz de a
 
 ** Principios de funcionamiento
 
-*** 
-
-[[../figs/AcumuladorBN.pdf]]
-
-*** Principios de funcionamiento
+*** Composición
 
 Una batería de ácido-plomo se compone de:
 
@@ -75,35 +72,67 @@ Una batería de ácido-plomo se compone de:
 
 -  *Electrolito* a base de $H_{2}SO_{4}$ diluido en agua.
 
+[[../figs/AcumuladorBN.pdf]]
 
-*** Principio de funcionamiento
 
-- Ánodo (+)
-$$\mathrm{PbO_{2}+SO_{4}^{2-}+H^{+}+2e^{-}\rightleftarrows PbSO_{4}+2H_{2}O}$$
 
-- Cátodo (-)
-$$\mathrm{Pb+SO_{4}^{2-}\rightleftarrows PbSO_{4}+2e^{-}}$$
+*** Reacción Química REDOX
+- Ánodo (+):
 
-- Global
-$$\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}\rightleftarrows2PbSO_{4}+2H_{2}O}$$
+#+BEGIN_EXPORT latex
+\[
+\mathrm{PbO_{2}+SO_{4}^{2-}+H^{+}+2e^{-}
+\xrightleftharpoons[\text{carga}]{\text{descarga}}
+  PbSO_{4}+2H_{2}O}
+\]
+#+END_EXPORT
 
-*** Evolución de la tensión en un proceso de carga
+- Cátodo (-):
+#+BEGIN_EXPORT latex
+\[
+\mathrm{Pb+SO_{4}^{2-}
+\xrightleftharpoons[\text{carga}]{\text{descarga}}
+PbSO_{4}+2e^{-}}
+\]
+#+END_EXPORT
 
-[[../figs/Bateria_CorrYTemp.pdf]]
+- Global:
+#+BEGIN_EXPORT latex
+\[
+\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}
+\xrightleftharpoons[\text{carga}]{\text{descarga}}
+2PbSO_{4}+2H_{2}O}
+\]
+#+END_EXPORT
 
-*** Evolución de la tensión durante un proceso de descarga
 
-[[../figs/Bateria_SOCyDescarga.pdf]]
+*** Descarga
+#+BEGIN_EXPORT latex
+\[
+\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}} \rightarrow \mathrm{2PbSO_{4}+2H_{2}O}
+\]
+#+END_EXPORT
+
+- *Consumo de electrolito* (disminuye su densidad)
+
+- *Cambios de volumen* de los materiales activos.
+
+- *Descargas repetidas* producen *pérdida de material activo* y degradación de las placas. 
+
+- Si la descarga es muy rápida y la bateria permanece descarga largo tiempo, el sulfato cristaliza y no es recuperable (*sulfatación*).
 
 *** Carga
-
-- El sulfato de plomo se transforma en oxido de plomo, plomo y acido.
+#+BEGIN_EXPORT latex
+\[
+\mathrm{2PbSO_{4}+2H_{2}O} \rightarrow \mathrm{Pb+PbO_{2}+2H_{2}SO_{4}} 
+\]
+#+END_EXPORT
 
 - Con largos períodos en estados parciales de carga, el ácido se concentra en el fondo por gravedad (*estratificación*)
 
   - Las reacciones no se producen de igual forma en toda la extensión de las placas, lo que realimenta el proceso.
 
-  - Puede reducirse mediante un gaseo controlado.
+  - Puede reducirse mediante un *gaseo controlado*.
 
 - Al terminar el proceso de carga se produce la electrolisis del agua, con liberación de oxigeno e hidrógeno (*gaseo*):
 
@@ -111,15 +140,31 @@ $$\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}\rightleftarrows2PbSO_{4}+2H_{2}O}$$
 
   - Homogeneización del electrolito por agitación (reduce la estratificación)
 
+** Modelo eléctrico
+*** Fuente de tensión
+- Una batería de ácido-plomo puede ser modelada como una fuente de tensión, $V_{BI}$, en serie con una resistencia, $R_{BI}$.
 
-*** Descarga
-- Ambos electrodos transforman la materia activa en sulfato de plomo en ambos y agua en el ánodo.
+[[file:../figs/Bateria.pdf]]
 
-- *Consumo de electrolito* (disminuye su densidad) y *cambios de volumen* de los materiales activos.
+*** Densidad del electrolito y Tensión en Abierto
 
-- *Descargas repetidas* producen *pérdida de material activo* y degradación de las placas. 
+**** La medida de la tensión en circuito abierto de la batería es un método común para estimar el estado de carga de una batería.
 
-- Si la descarga es muy rápida y la bateria permanece descarga largo tiempo, el sulfato cristaliza y no es recuperable (*sulfatación*).
+- $V_{BI}=\rho_{e}+0.84$
+
+- Baterías cargadas:
+
+  - $\SI{1.2}{\gram\per\cm\cubed} \leq \rho_{e}  \leq \SI{1.28}{\gram\per\cm\cubed}$.
+  - $\SI{2.04}{\volt} \leq V_{BI} \leq \SI{2.12}{\volt}$.
+- *Hay que corregir con la temperatura*
+
+*** Evolución de la tensión durante un proceso de descarga
+
+[[../figs/Bateria_SOCyDescarga.pdf]]
+
+*** Evolución de la tensión en un proceso de carga
+
+[[../figs/Bateria_CorrYTemp.pdf]]
 
 
 ** Efecto de la temperatura
@@ -149,12 +194,13 @@ $$\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}\rightleftarrows2PbSO_{4}+2H_{2}O}$$
 ** Ciclado 
 *** Definición
 
-- *El ciclado es el proceso por el que un acumulador es continuamente cargado y descargado durante su vida.*
+- El ciclado es el *proceso* por el que un acumulador es *continuamente cargado y descargado durante su vida.*
 
-- El ciclado y los agentes externos contribuyen a degradar el acumulador hasta que alcanza el fin de su vida útil, momento que puede ser definido como un valor mínimo en su capacidad útil.
+- Produce *degradación* de la batería por *perdida de material activo* (descargas repetidas) y *estratificación*.
 
 *** Resistencia al ciclado
 
+Los factores que influyen sobre la resistencia del acumulador al ciclado son: 
 -  *La profundidad de descarga*: las descargas profundas disminuyen los ciclos de vida de una batería.
 
 -  *El régimen de carga*: cuanto mayor es el régimen de carga y el porcentaje de sobrecarga, menor será la vida alcanzada.
@@ -170,39 +216,52 @@ $$\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}\rightleftarrows2PbSO_{4}+2H_{2}O}$$
 
 *** Rejillas
 
--  Las rejillas dan *soporte estructural a los materiales activos* (oxido de plomo en ánodo, plomo en cátodo) y *conducen la corriente
-   eléctrica* hacia el circuito externo.
+- Dan *soporte estructural a los materiales activos*
 
--  Están fabricadas en *aleaciones de Plomo*.
+- *Conducen la corriente eléctrica* hacia el circuito externo.
 
-   -  La *aleación de plomo-calcio* proporciona alta resistencia a la corrosión por sobrecarga pero presenta elevada corrosión en bajos
-      estados de carga.
+- Están fabricadas en *aleaciones de Plomo*.
 
-   -  La *aleación de plomo-antimonio* presenta buen comportamiento en ciclado y en descarga profunda.
+  - La *aleación de plomo-antimonio* presenta buen comportamiento en
+   ciclado y en descarga profunda.
 
--  *La rejilla negativa es plana*, mientras que la *rejilla positiva puede ser plana* (operación en flotación) *o tubular* (operación en
-   ciclado).
+- La *rejilla negativa* es *plana*
 
-*** Materiales activos y electrolito
+- La *rejilla positiva* puede ser *plana* (operación en flotación) o
+  *tubular* (operación en ciclado).
 
--  Los materiales activos participan en las reacciones químicas. Están *adheridos a las rejillas*. Deben ser *porosos* para permitir la
-   penetración del electrolito
+*** Materiales activos
 
--  El *electrolito* participa en la reacción y *realiza el transporte iónico* para cerrar el ciclo de corriente de las reacciones.
-
--  La *elección del electrolito* debe tener en cuenta su *densidad, conductividad, punto de congelación, poder de corrosión e impurezas*.
+- Los materiales activos participan en las reacciones químicas.
+- Están *adheridos a las rejillas*.
+- Deben ser *porosos* para permitir la penetración del electrolito
 
 *** Electrolito
+- El *electrolito* participa en la reacción y *realiza el transporte
+ iónico* para cerrar el ciclo de corriente de las reacciones.
 
--  *Para reducir la resistencia eléctrica del electrolito, su densidad debe ser alta*, pero *un electrolito de alta densidad es muy agresivo* (produce corrosión en la rejilla positiva).
+- Para *reducir la resistencia eléctrica* del electrolito, su *densidad
+ debe ser alta*,
 
--  Altos regímenes de descarga requieren mayor densidad para facilitar el transporte iónico. Los acumuladores estacionarios utilizan densidades más bajas que los de arranque.
+- Pero *un electrolito de alta densidad es muy agresivo* (produce
+  corrosión en la rejilla positiva).
 
--  El electrolito *puede ser líquido* (aireadas) *o inmovilizado* (selladas).
+- Los acumuladores estacionarios utilizan densidades más bajas que
+ los de arranque (altos regímenes de descarga).
+
+- El electrolito *puede ser líquido* (aireadas) *o inmovilizado*
+ (selladas).
 
 *** Separadores
 
--  Los separadores *aislan las placas de diferente polaridad pero permiten el movimiento iónico a través suyo*. Deben tener resistencia mecánica, ser permeables y porosas, resistentes a la oxidación, sin contaminantes y electricamente no conductores.
+- Los separadores *aislan las placas de diferente polaridad pero
+  permiten el movimiento iónico a través suyo*.
+- Requisitos:
+  - Resistencia mecánica
+  - Permeables y porosos.
+  - Resistentes a la oxidación
+  - Aislantes eléctricos
+  - Sin contaminantes
 
 ** Tipos de acumuladores
 
@@ -250,23 +309,33 @@ $$\mathrm{Pb+PbO_{2}+2H_{2}SO_{4}\rightleftarrows2PbSO_{4}+2H_{2}O}$$
 
 -  Opción muy interesante para SFA. Precio más elevado frente a las anteriores opciones.
 
-*** Baterías "fotovoltaicas"
-
--  Baterías SLI modificadas (baratas)
-
--  Baterías estacionarias modificadas (caras)
-
 *** Elección de batería
 
-- La elección entre uno u otro tipo es un ejercicio que debe tener en consideración no sólo *criterios puramente técnicos* sino también aspectos como el *coste del sistema*, recursos de *mantenimiento* disponibles durante la vida del sistema, *disponibilidad de reemplazo* en el mercado local o capacidad de intervención del usuario.
+- Criterios a tener en cuenta:
 
-- No obstante, *para aplicaciones fotovoltaicas se recomienda usar baterías estacionarias aireadas de placa positiva tubular, o al menos baterías SLI modificadas* (placas más gruesas, mayor cantidad de electrolito por encima de las placas, más baratas que las estacionarias), con aleación de Pb-Sb en la rejilla y vaso transparente
+  - *Requisitos técnicos* (capacidad, tipo de ciclado, etc.)
+
+  - *Coste del sistema*
+
+  - Recursos de *mantenimiento* disponibles durante la vida del sistema,
+
+  - *Disponibilidad de reemplazo* en el mercado local
+
+  - Capacidad de intervención del usuario.
+
+- *Para aplicaciones fotovoltaicas* se recomienda:
+
+  - *Baterías estacionarias aireadas de placa positiva tubular*
+
+  - *Baterías SLI modificadas*: placas más gruesas, mayor cantidad de
+    electrolito por encima de las placas, con aleación de Pb-Sb en la
+    rejilla y vaso transparente.
 
 * Regulador de carga
 
 *** Definición
 
-Un regulador de carga es un equipo electronico capaz de *evitar la sobrecarga y la descarga excesiva de un acumulador* desconectando al acumulador del generador o del consumo *cuando se alcanzan determinados estados umbral, generalmente determinados por la tensión en bornes*.
+Un regulador de carga es un equipo electrónico capaz de *evitar la sobrecarga y la descarga excesiva de un acumulador* desconectando al acumulador del generador o del consumo *cuando se alcanzan determinados estados umbral, generalmente determinados por la tensión en bornes*.
 
 *** Regulador Serie y paralelo
 
@@ -307,6 +376,11 @@ Los umbrales deben adaptarse a cada tipo de batería (mediante ensayos, o recome
 
   - *Regula la corriente* que circula por el tubo una vez que se ha producido el encendido para evitar su destrucción.
 
+*** Degradación
+
+- *El proceso de encendido es el que más contribuye a la degradación* de los tubos fluorescentes.
+- Un método alternativo consiste en *precalentar los electrodos* (con un circuito basado en un condensador y en una resistencia) facilitando el paso a la etapa de emisión termoiónica, y acortando el período de encencedido.
+
 *** Fotometría
 
 -  Flujo :: radiante es la potencia emitida por la fuente luminosa (Unidad: Watio)
@@ -316,10 +390,6 @@ Los umbrales deben adaptarse a cada tipo de batería (mediante ensayos, o recome
 -  Iluminación :: de una superficie sobre la que incide un flujo luminoso es el ratio entre flujo y superficie (Unidad: lux, $\si{\lumen\per\watt\squared}$).
 
 -  Eficiencia :: de la luminaria (tubo y balasto) es la relación entre potencia eléctrica consumida por el conjunto y la potencia luminosa producida (Unidad: $\si{\lumen\per\watt}$). 
-*** Degradación
-
-- *El proceso de encendido es el que más contribuye a la degradación* de los tubos fluorescentes.
-- Un método alternativo consiste en *precalentar los electrodos* (con un circuito basado en un condensador y en una resistencia) facilitando el paso a la etapa de emisión termoiónica, y acortando el período de encencedido.
 
 *** Requisitos
 - Recomendable eficiencia superior a 50 $\si{\lumen\per\watt}$

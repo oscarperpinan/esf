@@ -1,58 +1,77 @@
-% Created 2015-02-01 dom 01:55
+% Created 2018-01-12 vie 01:00
+% Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{longtable}
-\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
 \usepackage{amssymb}
+\usepackage{capt-of}
 \usepackage{hyperref}
-\tolerance=1000
 \usepackage{color}
 \usepackage{listings}
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
 \author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
 \date{}
-\title{SFA: Diseño}
+\title{Sistemas Fotovoltaicos Autónomos}
+\subtitle{Diseño}
 \hypersetup{
-  pdfkeywords={},
-  pdfsubject={},
-  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
+ pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdftitle={Sistemas Fotovoltaicos Autónomos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
+ pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Dimensionado del SFA}
-\label{sec-1}
+\label{sec:orgfec6fe2}
+\begin{frame}[label={sec:org71b7e0d}]{Objetivo}
+\begin{itemize}
+\item El dimensionado de un SFA consiste en \alert{decidir el tamaño del
+generador fotovoltaico y acumulador} que serán capaces de
+\alert{proporcionar la energía requerida} por una determinada carga a partir
+de la \alert{radiación disponible} en la zona.
+
+\item Debido al comportamiento aleatorio tanto de la radiación como del
+consumo, la \alert{probabilidad de fallo no es nula}.
+
+\item La solución es un compromiso entre el coste y la fiabilidad del
+sistema.
+\end{itemize}
+\end{frame}
+
 
 \subsection{Nomenclatura}
-\label{sec-1-1}
-\begin{frame}[label=sec-1-1-1]{Carga}
+\label{sec:orgf3d6205}
+\begin{frame}[label={sec:orgc126118}]{Carga}
 \begin{description}
-\item[{Consumo:}] $L$
+\item[{Consumo:}] \(L\)
 
 \item[{Probabilidad de pérdida de carga:}] relación entre la energía que no
 puede suministrar el sistema fotovoltaico y la energía solicitada por
@@ -61,7 +80,7 @@ funcionamiento.$$LLP=\frac{E_{def}}{L}$$
 \end{description}
 \end{frame}
 
-\begin{frame}[label=sec-1-1-2]{Capacidad}
+\begin{frame}[label={sec:orga924e4a}]{Capacidades normalizadas}
 \begin{description}
 \item[{Capacidad del generador:}] relación entre los valores medios de la
 energía que puede producir el generador y la energía consumida por la
@@ -74,12 +93,12 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
 \end{frame}
 
 \subsection{Objetivo}
-\label{sec-1-2}
-\begin{frame}[label=sec-1-2-1]{Dimensionado}
+\label{sec:orgdc36600}
+\begin{frame}[label={sec:org0ae340d}]{Dimensionado}
 \begin{block}{La tarea de dimensionar un sistema fotovoltaico consiste en encontrar la mejor solución de compromiso entre coste y fiabilidad.}
 \begin{itemize}
-\item Diferentes valores de $(C_{A},\, C_{S})$ pueden conducir al mismo
-valor de $LLP$.
+\item Diferentes valores de \((C_{A},\, C_{S})\) pueden conducir al mismo
+valor de \(LLP\).
 
 \item Cuanto mayor es el sistema, mayor es la fiabilidad, pero mayor es el
 coste.
@@ -88,41 +107,17 @@ coste.
 \end{frame}
 
 
-\subsection{Ciclado}
-\label{sec-1-3}
-\begin{frame}[label=sec-1-3-1]{Ciclado diario y estacional}
+\subsection{Ejemplos}
+\label{sec:orge307d34}
+\begin{frame}[label={sec:orgb07567a}]{Generador grande, acumulador pequeño}
 \begin{itemize}
-\item El \alert{ciclado diario} es la serie de cargas y descargas de la batería
-que se producen durante un periodo diario.
-
-\begin{itemize}
-\item $PD_{d}$, está relacionada con el consumo nocturno, $L_{n}$, y por
-tanto exclusivamente con la capacidad de la batería:
-$PD_{d}=\frac{L_{n}}{C_{B}}$
-\end{itemize}
-
-\item El \alert{ciclado estacional} es la serie de cargas y descargas que se
-producen durante un periodo prolongado de duración variable
-
-\begin{itemize}
-\item La duración, $D$, $PD_{e}$, están ligados al tamaño del generador,
-al consumo diario (diurno y nocturno) y a la radiación disponible.
-
-\item La batería debe proporcionar la energía necesaria pero
-$PD_{e}<PD_{max}$.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-1-3-2]{Generador grande, acumulador pequeño}
-\begin{itemize}
-\item La \alert{combinación de $C_{A}$ alta y $C_{S}$ baja} conduce a ciclados
-diarios con valores altos de $PD_{d}$ con ciclados estacionales
+\item La \alert{combinación de \(C_{A}\) alta y \(C_{S}\) baja} conduce a ciclados
+diarios con descargas profundas y ciclados estacionales
 cortos.
 
 \begin{itemize}
-\item Las descargas profundas y frecuentes asociadas al valor alto de
-$PD_{d}$ son perjudiciales para la batería,
+\item Las descargas profundas y frecuentes son perjudiciales para la
+batería,
 
 \item La corta longitud de los ciclados estacionales es beneficiosa.
 
@@ -132,13 +127,13 @@ controladas aplicando el mantenimiento adecuado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-3-3]{Generador pequeño, acumulador grande}
+\begin{frame}[label={sec:org74e0fb0}]{Generador pequeño, acumulador grande}
 \begin{itemize}
-\item La \alert{combinación de $C_{A}$ baja y $C_{S}$ alta} conduce a ciclados
-diarios con baja $PD_{d}$ y ciclados estacionales largos.
+\item La \alert{combinación de \(C_{A}\) baja y \(C_{S}\) alta} conduce a ciclados
+diarios con descargas moderadas y ciclados estacionales largos.
 
 \begin{itemize}
-\item La baja $PD_{d}$ es beneficiosa para la batería,
+\item La baja profundidad de descarga es beneficiosa para la batería,
 
 \item La longitud de los ciclados estacionales puede favorecer la
 sulfatación y la estratificación.
@@ -150,70 +145,71 @@ tan fácilmente compensada.
 \end{itemize}
 \end{frame}
 
-\subsection{Métodos de dimensionado}
-\label{sec-1-4}
-\begin{frame}[label=sec-1-4-1]{Métodos de dimensionado}
-\begin{description}
-\item[{Método del LLP:}] a partir de simulaciones o de curvas de
-isofiabilidad, establece los valores de $C_{A}$ y $C_{S}$ para un
-consumo determinado.
+\begin{frame}[label={sec:orgad455d6}]{Sistemas Híbridos}
+\begin{itemize}
+\item Cuando \(LLP\) es muy alta (p.e. radioenlaces) o la demanda es muy
+elevada (poblados) el generador y acumulador serán excesivamente
+grandes.
 
-\item[{Método del mes peor:}] selecciona el tamaño de batería y generador
-para abastecer el consumo durante el mes con peor relación entre
-radiación y consumo (en los casos de consumo constante, el mes peor
-es aquel de menor radiación). El tamaño de batería y generador se
-selecciona en base a la experiencia acumulada según la zona
-geográfica y la aplicación a abastecer.
-\end{description}
+\item Es habitual incluir un grupo electrógeno que suministra la energía
+deficitaria y permite reducir el tamaño del SFA.
+
+\item Sinergia:
+
+\begin{itemize}
+\item El grupo electrógeno reduce el tamaño del generador FV y el
+acumulador sin reducir fiabilidad.
+
+\item El generador fotovoltaico reduce horas de funcionamiento del
+grupo: gasto en combustible y mantenimiento.
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-2]{Método del LLP}
-\begin{block}{Suposiciones}
+\subsection{Métodos de dimensionado}
+\label{sec:org8f18734}
+\begin{frame}[label={sec:org4eab097}]{Métodos de dimensionado}
+\begin{block}{Método del LLP}
+A partir de simulaciones o de curvas de isofiabilidad, establece los
+valores de \(C_{A}\) y \(C_{S}\) para un consumo determinado.
+\end{block}
+
+\begin{block}{Método del mes peor}
 \begin{itemize}
-\item El consumo es constante a lo largo del año
-
-\item Todo el consumo ocurre por la noche
-
-\item Los componentes del sistema FV no tienen pérdidas (incluidas dentro
-de $C_{A}$ y $C_{S}$) y lineales.
+\item Determina el tamaño de batería y generador para abastecer el consumo durante el mes con peor relación entre radiación y consumo.
+\item Si el consumo es constante, el mes peor es aquel de menor radiación.
+\item Recomendaciones de expertos según zona geográfica y aplicación (tipología de consumo).
 \end{itemize}
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-3]{Método de LLP}
+\begin{frame}[label={sec:org510fc10}]{Método del LLP}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvasLLP.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-4]{Relación entre $C_{A}^{'}$ y LLP}
+\begin{frame}[label={sec:orgf3c6b1d}]{Relación entre tamaño de generador y LLP}
 \begin{itemize}
-\item $C_{s}=3$
+\item \(C_{s}=3\)
 \end{itemize}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvasLLP_Cs3.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-5]{Método del LLP}
+\begin{frame}[label={sec:orgaebd85e}]{Método de LLP}
 \begin{itemize}
-\item Es posible ajustar las curvas isofiables a una ecuación analítica:
-\end{itemize}
+\item Este proceso de cálculo se apoya en series de valores de radiación
+solar que reproducen el comportamiento estadístico de la
+irradiación.
 
-\[
-C_{A}^{'} = f\cdot C_{s}^{-u}
-\]
+\item La predicción del comportamiento del sistema limitada por la
+incertidumbre asociada.
 
-\begin{itemize}
-\item $f$ y $u$ son dos parámetros sin significado físico, dependientes del lugar y del LLP deseado.
-\item Para su determinación es necesario realizar varias simulaciones previas.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-1-4-6]{Método de LLP}
-\begin{itemize}
-\item Este proceso de cálculo se apoya en series de valores de radiación solar que reproducen el comportamiento estadístico de la irradiación.
-
-\item Predicción del comportamiento del sistema limitada por la incertidumbre asociada.
-
-\item Los ejercicios de cálculo para probabilidades de pérdida de carga inferiores a $LLP=\num{1e-2}$ carecen de utilidad.
+\item Los ejercicios de cálculo para probabilidades de pérdida de carga
+inferiores a \(LLP=\num{1e-2}\) carecen de utilidad.
 \end{itemize}
 
 \begin{block}{Recordatorio}
@@ -221,35 +217,38 @@ C_{A}^{'} = f\cdot C_{s}^{-u}
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-1-4-7]{Método del mes peor}
+\begin{frame}[label={sec:org7f87dd6}]{Método del mes peor}
 \begin{block}{Valores según el UTS for SHS}
 \begin{itemize}
 \item Electrificación rural:
 
 \begin{itemize}
-\item $C_{A}=1.1$
+\item \(C_{A}=1.1\)
 
-\item $3\leq C_{S}\leq5$
+\item \(3\leq C_{S}\leq5\)
 \end{itemize}
 
 \item Aplicaciones profesionales:
 
 \begin{itemize}
-\item $1.2\leq C_{A}\leq1.3$
+\item \(1.2\leq C_{A}\leq1.3\)
 
-\item $5\leq C_{S}\leq8$
+\item \(5\leq C_{S}\leq8\)
 \end{itemize}
 \end{itemize}
 \end{block}
 \end{frame}
 
 \subsection{Configuración de generador y batería}
-\label{sec-1-5}
-\begin{frame}[label=sec-1-5-1]{Configuración de generador y batería}
+\label{sec:org6793318}
+\begin{frame}[label={sec:orgef32084}]{Configuración de generador y batería}
 \begin{itemize}
-\item Una vez elegidos los valores de $C_{A}$ y $C_{S}$, se deben configurar el generador y batería de acuerdo a las tensiones de trabajo.
+\item Una vez elegidos los valores de \(C_{A}\) y \(C_{S}\), se deben
+configurar el generador y batería de acuerdo a las tensiones de
+trabajo.
 
-\item En general, la batería impone la tensión de trabajo (no hay buscador de MPP). Supondremos $V_{mpp}\simeq V_{b}$
+\item En general, la batería impone la tensión de trabajo (no hay buscador
+de MPP). Supondremos \(V_{mpp} \simeq V_{b}\)
 
 \item Carga en Ah
 \end{itemize}
@@ -258,7 +257,7 @@ Q_L = L / V_b
 \]
 \end{frame}
 
-\begin{frame}[label=sec-1-5-2]{Batería}
+\begin{frame}[label={sec:orgab57d68}]{Batería}
 \begin{itemize}
 \item Capacidad en Ah (es recomendable no usar baterías en paralelo)
 \end{itemize}
@@ -267,33 +266,35 @@ Q_B = \frac{C_S \cdot Q_L}{PD}
 \]
 
 \begin{itemize}
-\item Hay que elegir el número de vasos en serie adecuados a $V_b$
+\item Hay que elegir el número de vasos en serie adecuados a \(V_b\)
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}[label=sec-1-5-3]{Generador}
+\begin{frame}[label={sec:orgb7aff2a}]{Generador}
 \begin{itemize}
 \item Capacidad del generador
 \end{itemize}
-\begin{align*}
-C_{A} &= \frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{Q_L \cdot V_b}\\
-I_{g}^{*}\cdot V_{b} &= \eta_{G}\cdot A_{G}\cdot G_{stc} 
-\end{align*}
+\[
+C_{A} = \frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{Q_L \cdot V_b}
+\]
+
 
 \begin{itemize}
 \item Corriente de funcionamiento (determina número de ramas)
 \end{itemize}
-\[
+
+\begin{align*}
+I_{g}^{*}\cdot V_{b} &= \eta_{G}\cdot A_{G}\cdot G_{stc}\\
 I_{g}^{*} &=  \frac{C_{A}\cdot Q_{L}\cdot G_{stc}}{\overline{G_{d}}(\beta,\alpha)}
-\]
+\end{align*}
 
 \begin{itemize}
-\item Hay que elegir el número de módulos en serie adecuados a $V_b$
+\item Hay que elegir el número de módulos en serie adecuados a \(V_b\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-1-5-4]{Inclinación del generador}
+\begin{frame}[label={sec:org967fca2}]{Inclinación del generador}
 \begin{itemize}
 \item Para instalaciones con \alert{consumos constantes o similares a lo largo del año}, se busca maximizar la radiación en los meses de menor insolación $$\beta=|\phi|+10^{\circ}$$
 
@@ -301,36 +302,50 @@ I_{g}^{*} &=  \frac{C_{A}\cdot Q_{L}\cdot G_{stc}}{\overline{G_{d}}(\beta,\alpha
 
 \item Para instalaciones con \alert{uso predominante en verano} (hemisferio Norte) conviene emplear un ángulo inferior a la latitud. $$\beta=|\phi|-10^{\circ}$$
 
-\item En general, la inclinación \alert{debe superar} los $15^{\circ}$.
+\item En general, la inclinación \alert{debe superar} los \(15^{\circ}\).
 \end{itemize}
 \end{frame}
 
 \section{Consumo}
-\label{sec-2}
+\label{sec:orga267e17}
 
 \subsection{Estimación del consumo}
-\label{sec-2-1}
-\begin{frame}[label=sec-2-1-1]{Cálculo del consumo}
+\label{sec:org86737df}
+\begin{frame}[label={sec:org93bb2cb}]{Cálculo del consumo}
+\begin{itemize}
+\item Energía total requerida por las cargas
+\end{itemize}
 $$L_{T}=\frac{L_{dc}}{\eta_{r}}+\frac{L_{ac}}{\eta_{inv}}$$
 
+\begin{itemize}
+\item Energía producida por el generador
+\end{itemize}
 $$L=\frac{L_{T}}{\eta_{bat}\cdot\eta_{c}}$$
 
 Como valores orientativos pueden utilizarse
 
-$\eta_{inv}=0.9$, $\eta_{r}=0.95$, $\eta_{bat}=0.85$ y $\eta_{c}=0.98$.
+\(\eta_{inv}=0.9\), \(\eta_{r}=0.95\), \(\eta_{bat}=0.85\) y \(\eta_{c}=0.98\).
 \end{frame}
 
-\begin{frame}[label=sec-2-1-2]{Distribución del consumo}
+\begin{frame}[label={sec:org4362b42}]{Distribución del consumo}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ConsumoGamma.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-1-3]{Relación entre el consumo y la fiabilidad}
-\includegraphics[width=.9\linewidth]{../figs/ConsumoLLP.pdf}
+\begin{frame}[label={sec:orgc55f03b}]{Relación entre el consumo y la fiabilidad}
+\begin{itemize}
+\item La variación en el consumo se amplifica en la variación de la LLP.
+\item Diseño robusto: funcionamiento en amplio abanico de condiciones (ambientales y humanas).
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.7\textheight]{../figs/ConsumoLLP.pdf}
+\end{center}
 \end{frame}
 
-\subsection{Escenarios}
-\label{sec-2-2}
-\begin{frame}[label=sec-2-2-1]{SHS 1}
+\subsection{Escenarios de Consumo}
+\label{sec:orgd90c915}
+\begin{frame}[label={sec:orgcf9d282}]{SHS 1}
 \begin{block}{120 Wh/dia}
 \begin{itemize}
 \item Iluminación
@@ -351,7 +366,7 @@ C_{A} & = & 1.1\\
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-2]{SHS 2}
+\begin{frame}[label={sec:orgb76fcf2}]{SHS 2}
 \begin{block}{250 Wh/dia}
 \begin{itemize}
 \item Iluminación
@@ -372,7 +387,7 @@ C_{A} & = & 1.1\\
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-3]{SHS 3}
+\begin{frame}[label={sec:org81dfb64}]{SHS 3}
 \begin{block}{1000 Wh/dia}
 \begin{itemize}
 \item Iluminación
@@ -393,7 +408,7 @@ C_{S} & = & 5
 \end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-4]{Centrales}
+\begin{frame}[label={sec:orgd852b41}]{Centrales}
 \begin{block}{}
 \begin{itemize}
 \item Todo AC
@@ -408,5 +423,4 @@ C_{A} & = & 1.1\\
 C_{S} & = & 5\end{aligned}$$
 \end{block}
 \end{frame}
-% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

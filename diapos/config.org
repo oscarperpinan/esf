@@ -21,6 +21,7 @@
 #+LATEX_HEADER_EXTRA: \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 #+LATEX_HEADER: \usepackage{gensymb}
 #+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 #+LATEX_HEADER: \bibliographystyle{plain}
 #+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 #+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
