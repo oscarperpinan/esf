@@ -1,54 +1,58 @@
-% Created 2015-02-07 sáb 16:05
+% Created 2018-01-17 mié 22:32
+% Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{longtable}
-\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
-\usepackage{marvosym}
-\usepackage{wasysym}
 \usepackage{amssymb}
+\usepackage{capt-of}
 \usepackage{hyperref}
-\tolerance=1000
 \usepackage{color}
 \usepackage{listings}
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\setbeamercolor{alerted text}{fg=red!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
 \author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
 \date{}
-\title{SFB: Componentes}
+\title{Sistemas Fotovoltaicos de Bombeo}
+\subtitle{Conceptos Generales y Componentes}
 \hypersetup{
-  pdfkeywords={},
-  pdfsubject={},
-  pdfcreator={Emacs 24.4.1 (Org mode 8.2.7c)}}
+ pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdftitle={Sistemas Fotovoltaicos de Bombeo},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
+ pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Introducción}
-\label{sec-1}
+\label{sec:orgcf3e586}
 
-\begin{frame}[label=sec-1-0-1]{Agua y ESF}
+\begin{frame}[label={sec:orgec892bf}]{Agua y ESF}
 \begin{itemize}
 \item Las \alert{curvas de generación fotovoltaica y de consumo de agua están bien adaptadas}: las épocas de mayor calor y radiación solar son de mayor consumo de agua.
 
@@ -59,196 +63,138 @@
 \end{frame}
 
 
-\begin{frame}[label=sec-1-0-2]{Composición}
+\begin{frame}[label={sec:org75e20f5}]{Composición}
+\begin{center}
 \includegraphics[height=\textheight]{../figs/EsquemaBombeo_oscar.pdf}
+\end{center}
 \end{frame}
 
 \section{Motobombas}
-\label{sec-2}
+\label{sec:org7341896}
 
-\begin{frame}[label=sec-2-0-1]{Definición}
+\begin{frame}[label={sec:org6d5f8a1}]{Definición}
 \begin{itemize}
 \item Un \alert{motor eléctrico} es una máquina eléctrica que \alert{transforma energía eléctrica en energía mecánica} por medio de interacciones electromagnéticas.
 
-\item Una \alert{bomba} es una \alert{máquina hidráulica} generadora que \alert{transforma la energía mecánica} con la que es accionada \alert{en energía hidráulica del fluido} (agua). Al incrementar la energía del fluido, se aumenta su presión, su velocidad o su altura, todas ellas relacionadas según el principio de Bernoulli.
+\item Una \alert{bomba} es una \alert{máquina hidráulica} generadora que \alert{transforma la energía mecánica} con la que es accionada \alert{en energía hidráulica del fluido} (agua).
 \end{itemize}
 \end{frame}
 
-\subsection{Motores eléctricos}
-\label{sec-2-1}
+\subsection{Motores eléctricos en ESF}
+\label{sec:org56a4ebb}
 
-\begin{frame}[label=sec-2-1-1]{Electromagnetismo}
+\begin{frame}[label={sec:org31802d0}]{Motor DC}
 \begin{itemize}
-\item Un \alert{campo magnético} ejerce una \alert{fuerza} sobre una \alert{carga en movimiento}.
-
-\item Una \alert{corriente eléctrica crea un campo magnético} en torno al conductor.
-
-\item Un \alert{conductor por el que circula corriente}, situado \alert{en el seno de un campo magnético}, altera este campo magnético, y \alert{experimenta una fuerza} que lo expulsa para \alert{disminuir la alteración}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-2-1-2]{Electromagnetismo}
-\begin{itemize}
-\item Entre los puntos extremos de una \alert{espira} estática atravesada por \alert{campo magnético variable}, aparece una \alert{tensión inducida}.
-
-\item Esta tensión es igual a la \alert{variación} (con signo contrario) \alert{del flujo magnético} que atraviesa la espira.
-
-\item Si la espira se cierra, \alert{circulará una corriente} que, a su vez, creará un campo magnético que contrarrestará la variación de flujo.
-
-\item Al circular corriente, la espira experimentará un \alert{par de giro}.
-
-\begin{itemize}
-\item \alert{Resultado aprovechable} del motor en forma de potencia mecánica.
-
-\item Restablecer el equilibrio existente antes, intentando \alert{alinear los ejes magnéticos de inductor e inducido}.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}[label=sec-2-1-3]{Estator, rotor, inducido e inductor}
-\begin{itemize}
-\item El elemento que permanece fijo es el estator y el que realiza el giro es el rotor.
-
-\item Según el tipo de motor, el rotor puede ser el inducido y el estator el inductor o viceversa.
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}[label=sec-2-1-4]{Frecuencia eléctrica y velocidad}
-$$\begin{aligned}
-f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
-
-\begin{itemize}
-\item $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
-
-\item Al utilizar colector de delgas (escobillas) en el inducido, la frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=sec-2-1-5]{Tipos de motores en ESF}
-\begin{block}{Motor DC}
-\begin{itemize}
-\item $f_{1}=0$; $f_{L}=0$;
-
 \item \alert{Estator-Inductor} alimentado por \alert{corriente DC} (o imanes permanentes).
 
 \item El \alert{colector de delgas} transforma la frecuencia de alimentación (DC) en alterna.
 
 \item \alert{Rotor-Inducido gira sincronizado} con la frecuencia \guillemotleft{}transformada\guillemotright{}.
-\end{itemize}
-\end{block}
-\end{frame}
 
-\begin{frame}[label=sec-2-1-6]{Tipos de motores en ESF}
-\begin{block}{Motor DC}
-\begin{itemize}
 \item Los \alert{motores DC con escobillas están sometidos a desgaste}. Necesitan mantenimiento y por tanto deben evitarse con bombas sumergidas.
 
 \item Existen \alert{motores DC sin escobillas}, donde la conmutación se realiza mediante un \alert{circuito electrónico}.
 
-\item No necesitan inversor, tienen buen rendimiento, pero están indicados para \alert{potencias bajas}.
+\item No necesitan inversor (pero si \alert{adaptador}), tienen buen rendimiento, pero están indicados para \alert{potencias bajas}.
 \end{itemize}
-\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-1-7]{Tipos de motores en ESF}
-\begin{block}{Motor asíncrono o de inducción}
+\begin{frame}[label={sec:org37fe0cf}]{Motor asíncrono o de inducción}
 \begin{itemize}
-\item $f_{1}\neq0$;
-
 \item \alert{Estator-inductor} alimentado por una \alert{corriente trifásica alterna}.  Produce un campo giratorio.
 
 \item \alert{Rotor-inducido} constituido por \alert{espiras cortocircuitadas} (jaula de ardilla).
-
-\item Se produce un par que busca alinear el eje de las espiras con el campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
-\item La \alert{velocidad de giro es inferior a la frecuencia de alimentación} (asíncrono).
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label=sec-2-1-8]{Tipos de motores en ESF}
-\begin{block}{Motor asíncrono o de inducción}
-\begin{itemize}
-\item $f_{2}=f_{1}-n\cdot p$
-
-\item $T\propto\left(\frac{V}{f}\right)^{2}$, $\phi\propto\frac{V}{f}$
 
 \item Son los más comunes, y más baratos que los DC.
 
 \item Tienen \alert{pares de arranque muy bajos}, adecuados para bombas que requieren bajo par de arranque, como las \alert{centrífugas}.
 \end{itemize}
-\end{block}
 \end{frame}
 
 \subsection{Bombas}
-\label{sec-2-2}
+\label{sec:orge99c95c}
 
-\begin{frame}[label=sec-2-2-1]{Ecuación de Bernouilli}
-\begin{itemize}
-\item Conservación de energía
-\end{itemize}
-
+\begin{frame}[label={sec:org5df48e8}]{Ecuación de Bernouilli}
+\begin{block}{Conservación de energía}
 $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
+\begin{itemize}
+\item \(\Delta p\): presión (bombas de desplazamiento positivo)
+\item \(\Delta v^2\): velocidad (bombas rotodinámicas)
+\item \(\Delta h\): altura (objetivo)
+\end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-2]{Bombas de desplazamiento positivo}
-\begin{itemize}
-\item \alert{Principio}: cambio de presión
 
+\begin{frame}[label={sec:org153d4b6}]{Bombas de desplazamiento positivo}
+\begin{block}{\alert{Principio}: cambio de presión}
+\begin{itemize}
 \item El aumento de presión se realiza por el empuje de las paredes de las cámaras que varían su volumen.
 
-\begin{itemize}
-\item \alert{Bombas de émbolo alternativo}, en las que existe uno o varios compartimentos fijos, pero de volumen variable, por la acción de un émbolo o de una membrana (bombas de pistones)
+\item \alert{Bombas oscilantes}, compartimentos fijos de volumen variable por el movimiento de un pistón o por la deformación de un diafragma.
 
-\item \alert{Bombas volumétricas}, en las que una masa fluida es confinada en uno o varios compartimentos que se desplazan desde la zona de entrada (de baja presión) hasta la zona de salida (de alta presión) de la máquina. (p.ej. bomba de tornillo).
+\item \alert{Bombas rotatorias}, compartimentos que se desplazan desde la zona de entrada (de baja presión) hasta la zona de salida (de alta presión) de la máquina. (p.ej. bomba de tornillo o helicoidal).
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-3]{Bombas de membrana}
+\begin{frame}[label={sec:org33d300d}]{Bombas de membrana}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/800px-Bomba_diafragma_impulsando.pdf}
+\end{center}
 
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bomba_diafragma_aspirando.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-4]{Bombas helicoidales}
+\begin{frame}[label={sec:orgd5e2cd8}]{Bombas helicoidales}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/bombatornillo.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-5]{Bombas helicoidales y de membrana}
+\begin{frame}[label={sec:org17048ce}]{Bombas helicoidales y de membrana}
 \begin{itemize}
-\item Formadas por un \alert{contorno móvil} que obliga al fluido a avanzar por la máquina por \alert{cambios de volumen}.
+\item Son apropiadas para \alert{altos incrementos de presión y bajos caudales}.
 
-\item Son apropiadas para \alert{altos incrementos de presión y bajos caudales}.  Necesitan un \alert{elevado par de arranque} (por tanto no pueden ser acopladas directamente al generador).
+\item Necesitan un \alert{elevado par de arranque} (por tanto no pueden ser acopladas directamente al generador).
 
 \item Las bombas de diafragma, más económicas, requieren el \alert{reemplazo de los diafragmas} cada dos o tres años, dependiendo del fabricante.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-6]{Bombas rotodinámicas}
+\begin{frame}[label={sec:org26ea24d}]{Bombas rotodinámicas}
+\begin{block}{\alert{Principio}: añadir cantidad de movimiento}
 \begin{itemize}
-\item \alert{Principio}: añadir cantidad de movimiento
-
 \item En este tipo de bombas hay uno o varios rodetes con álabes que giran generando un campo de presiones en el fluido.
 
+\item \alert{Radiales o centrífugas}
+
 \begin{itemize}
-\item \alert{Radiales o centrífugas}, el fluido entra por el centro del rodete, que dispone de unos álabes para conducir el fluido, y por efecto de la fuerza centrífuga es impulsado hacia el exterior, donde es recogido por la carcasa o cuerpo de la bomba, que por el contorno su forma lo conduce hacia las tubuladuras de salida o hacia el siguiente rodete (siguiente etapa)
+\item El fluido entra por el centro del rodete cuyos álabes conducen el fluido
+
+\item Por la fuerza centrífuga es impulsado hacia el exterior y es recogido por la carcasa
+
+\item Es conducido hacia la salida o hacia el siguiente rodete (bombas multietapa)
 \end{itemize}
 \end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-7]{Bombas centrífugas}
+\begin{frame}[label={sec:org72c5f7a}]{Bombas centrífugas}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/BombaCentrifuga.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-8]{Bombas centrífugas}
+\begin{frame}[label={sec:org079fd15}]{Bombas centrífugas}
 \begin{itemize}
-\item Están diseñadas para vencer una \alert{presión más o menos constante}, proporcionando \alert{elevados caudales para bajas alturas manométricas}.
+\item Están diseñadas para vencer una \alert{presión más o menos constante},
 
-\item Se puede aumentar la altura que son capaces de vencer añadiendo etapas en serie en la misma bomba.
+\item Proporcionan \alert{elevados caudales para bajas alturas manométricas}.
+
+\item Se puede aumentar la altura añadiendo etapas en serie en la misma bomba (bomba multietapa)
 
 \item Son \alert{bombas simples y robustas, de bajo coste}.
 
@@ -257,7 +203,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{frame}
 
 
-\begin{frame}[label=sec-2-2-9]{Según la disposición}
+\begin{frame}[label={sec:orgf3cd433}]{Según la disposición}
 \begin{itemize}
 \item \alert{Bombas sumergibles}
 
@@ -287,7 +233,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-2-2-10]{Configuraciones típicas}
+\begin{frame}[label={sec:org32d0ebb}]{Configuraciones típicas}
 \begin{itemize}
 \item \alert{Sistemas de baja potencia (50 a 400 Wp)}
 
@@ -310,14 +256,23 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label=sec-2-2-11]{}
+\begin{frame}[label={sec:org9a1b907}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Marruecos4.png}
+\end{center}
 \end{frame}
 
 \section{Acoplamiento generador-motobomba}
-\label{sec-3}
+\label{sec:org052be2c}
 
-\begin{frame}[label=sec-3-0-1]{Motivo}
+\begin{frame}[label={sec:orgcb1f0f2}]{}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/VariadorFrecuencia.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org72d6883}]{Motivo}
 \begin{itemize}
 \item La \alert{potencia y tensión suministrada por un generador FV varían} con la radiación y la temperatura.
 
@@ -333,9 +288,15 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-2]{Convertidor DC-DC}
+\subsection{Convertidores}
+\label{sec:org8749f2e}
+\begin{frame}[label={sec:orgb78fae9}]{Convertidor DC-DC}
 \begin{itemize}
-\item Dispositivo que \alert{transforma corriente continua de una tensión a otra}. Suelen ser reguladores de conmutación, dando a su salida una tensión regulada.
+\item Dispositivo que \alert{transforma corriente continua de una tensión a otra}.
+
+\begin{itemize}
+\item Suelen ser reguladores de conmutación, dando a su salida una tensión regulada.
+\end{itemize}
 
 \item Se utiliza para alimentar \alert{motores DC con generador FV}.
 
@@ -343,36 +304,39 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-3]{Variador de frecuencia}
+\begin{frame}[label={sec:org4528af7}]{Variador de frecuencia}
+\end{frame}
+\begin{frame}[label={sec:org11c7b11}]{Variador de frecuencia}
 \begin{itemize}
 \item El variador de frecuencia \alert{transforma una señal alterna de una frecuencia en otra señal alterna de otra frecuencia}.
 
 \item Está compuesto por un rectificador y un inversor con frecuencia variable.
 
-\item Realiza \alert{continuas variaciones en la tensión de generador para alcanzar un valor de referencia}.
+\item Eficiencia cercana al 95\%.
 
-\item Para conseguir igualar la tensión de generador y referencia, varía la frecuencia.
-
-\item El rendimiento de un variador a una tensión cercana a la nominal oscila entre el 94 y el 95\%.
-
-\item No suele realizarse seguimiento del punto de máxima potencia (MPP), ni por temperatura ni por radiación.
+\item Habitualmente sin seguidor de MPP.
 \end{itemize}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/VariadorFrecuencia_esquema.png}
+\end{center}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-4]{Protecciones}
-\begin{block}{Pozo vacío}
+
+\subsection{Protecciones}
+\label{sec:org7ea4167}
+
+\begin{frame}[label={sec:org877300d}]{Pozo vacío}
 \begin{itemize}
 \item \alert{Control de frecuencia de salida del variador}.
 
-\item Cuando el motor trabaja en vacío, la corriente consumida baja. Por tanto, el variador debe subir la frecuencia para alcanzar la tensión de referencia.
+\item Cuando el motor trabaja en vacío, la corriente consumida baja y el variador debe subir la frecuencia para alcanzar la tensión de referencia.
 
 \item Si se supera la frecuencia de 55 Hz se para el sistema y se marca un intervalo de espera para permitir que el pozo vuelva a llenarse.
 \end{itemize}
-\end{block}
 \end{frame}
 
-\begin{frame}[label=sec-3-0-5]{Protecciones}
-\begin{block}{Deposito lleno}
+\begin{frame}[label={sec:orgb288967}]{Deposito lleno}
 \begin{itemize}
 \item \alert{Presostáto en la tubería combinado con una boya en el depósito}.
 
@@ -382,19 +346,13 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 \item Se pone en marcha un temporizador para permitir que baje el nivel del depósito.
 \end{itemize}
-\end{block}
 \end{frame}
 
-
-
-\begin{frame}[label=sec-3-0-6]{}
-\includegraphics[height=0.9\textheight]{../figs/VariadorFrecuencia.jpg}
-\end{frame}
 
 \section{Circuito Hidráulico}
-\label{sec-4}
+\label{sec:org17ce85f}
 
-\begin{frame}[label=sec-4-0-1]{Circuito hidráulico}
+\begin{frame}[label={sec:org9d3aa54}]{Circuito hidráulico}
 \begin{itemize}
 \item Tubería de impulsión
 
@@ -406,12 +364,14 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-2]{}
+\begin{frame}[label={sec:org44c5d92}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CircuitoHidraulico.jpg}
+\end{center}
 \end{frame}
 
 
-\begin{frame}[label=sec-4-0-3]{Tubería de Impulsión}
+\begin{frame}[label={sec:org77022a2}]{Tubería de Impulsión}
 \begin{itemize}
 \item Es la tubería instalada a la salida de la bomba.
 
@@ -433,12 +393,14 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-4]{}
+\begin{frame}[label={sec:org31128bc}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Marruecos4.png}
+\end{center}
 \end{frame}
 
 
-\begin{frame}[label=sec-4-0-5]{Depósito elevado}
+\begin{frame}[label={sec:orga66110c}]{Depósito elevado}
 \begin{itemize}
 \item \alert{Tamaño adecuado para 1 o 2 días de consumo}
 \item Para depósitos pequeños (20 a 1.000 l) debe elegirse un \alert{depósito plástico de color negro}  para evitar aparición de algas y otros contaminantes.
@@ -446,8 +408,9 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label=sec-4-0-6]{}
+\begin{frame}[label={sec:orgd68b236}]{}
+\begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bombeo.jpg}
+\end{center}
 \end{frame}
-% Emacs 24.4.1 (Org mode 8.2.7c)
 \end{document}

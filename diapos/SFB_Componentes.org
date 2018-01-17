@@ -1,4 +1,5 @@
-#+TITLE: SFB: Componentes
+#+TITLE: Sistemas Fotovoltaicos de Bombeo
+#+SUBTITLE: Conceptos Generales y Componentes
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
@@ -24,55 +25,11 @@
 
 -  Un *motor eléctrico* es una máquina eléctrica que *transforma energía eléctrica en energía mecánica* por medio de interacciones electromagnéticas.
 
--  Una *bomba* es una *máquina hidráulica* generadora que *transforma la energía mecánica* con la que es accionada *en energía hidráulica del fluido* (agua). Al incrementar la energía del fluido, se aumenta su presión, su velocidad o su altura, todas ellas relacionadas según el principio de Bernoulli.
+-  Una *bomba* es una *máquina hidráulica* generadora que *transforma la energía mecánica* con la que es accionada *en energía hidráulica del fluido* (agua). 
 
-** Motores eléctricos
+** Motores eléctricos en ESF
 
-*** Electromagnetismo
-
--  Un *campo magnético* ejerce una *fuerza* sobre una *carga en movimiento*.
-
--  Una *corriente eléctrica crea un campo magnético* en torno al conductor.
-
--  Un *conductor por el que circula corriente*, situado *en el seno de un campo magnético*, altera este campo magnético, y *experimenta una fuerza* que lo expulsa para *disminuir la alteración*.
-
-*** Electromagnetismo
-
--  Entre los puntos extremos de una *espira* estática atravesada por *campo magnético variable*, aparece una *tensión inducida*.
-
--  Esta tensión es igual a la *variación* (con signo contrario) *del flujo magnético* que atraviesa la espira.
-
--  Si la espira se cierra, *circulará una corriente* que, a su vez, creará un campo magnético que contrarrestará la variación de flujo.
-
--  Al circular corriente, la espira experimentará un *par de giro*.
-
-   -  *Resultado aprovechable* del motor en forma de potencia mecánica.
-
-   -  Restablecer el equilibrio existente antes, intentando *alinear los ejes magnéticos de inductor e inducido*.
-
-
-
-*** Estator, rotor, inducido e inductor
-
--  El elemento que permanece fijo es el estator y el que realiza el giro es el rotor.
-
--  Según el tipo de motor, el rotor puede ser el inducido y el estator el inductor o viceversa.
-
-
-*** Frecuencia eléctrica y velocidad
-
-$$\begin{aligned}
-f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
-
--  $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
-
--  Al utilizar colector de delgas (escobillas) en el inducido, la frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
-
-*** Tipos de motores en ESF
-
-**** Motor DC
-
--  $f_{1}=0$; $f_{L}=0$;
+*** Motor DC
 
 -  *Estator-Inductor* alimentado por *corriente DC* (o imanes permanentes).
 
@@ -80,37 +37,17 @@ f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
 
 -  *Rotor-Inducido gira sincronizado* con la frecuencia "transformada".
 
-*** Tipos de motores en ESF
-
-**** Motor DC
-
 -  Los *motores DC con escobillas están sometidos a desgaste*. Necesitan mantenimiento y por tanto deben evitarse con bombas sumergidas.
 
 -  Existen *motores DC sin escobillas*, donde la conmutación se realiza mediante un *circuito electrónico*.
 
--  No necesitan inversor, tienen buen rendimiento, pero están indicados para *potencias bajas*.
+-  No necesitan inversor (pero si *adaptador*), tienen buen rendimiento, pero están indicados para *potencias bajas*.
 
-*** Tipos de motores en ESF
-
-**** Motor asíncrono o de inducción
-
--  $f_{1}\neq0$;
+*** Motor asíncrono o de inducción
 
 -  *Estator-inductor* alimentado por una *corriente trifásica alterna*.  Produce un campo giratorio.
 
 -  *Rotor-inducido* constituido por *espiras cortocircuitadas* (jaula de ardilla).
-
--  Se produce un par que busca alinear el eje de las espiras con el campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
--  La *velocidad de giro es inferior a la frecuencia de alimentación* (asíncrono).
-
-*** Tipos de motores en ESF
-
-**** Motor asíncrono o de inducción
-
--  $f_{2}=f_{1}-n\cdot p$
-
--  $T\propto\left(\frac{V}{f}\right)^{2}$, $\phi\propto\frac{V}{f}$
 
 -  Son los más comunes, y más baratos que los DC.
 
@@ -120,19 +57,23 @@ f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
 
 *** Ecuación de Bernouilli
 
-- Conservación de energía
+**** Conservación de energía
 
 $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
+- $\Delta p$: presión (bombas de desplazamiento positivo)
+- $\Delta v^2$: velocidad (bombas rotodinámicas)
+- $\Delta h$: altura (objetivo)
+
 
 *** Bombas de desplazamiento positivo
 
-- *Principio*: cambio de presión
+**** *Principio*: cambio de presión
 
 - El aumento de presión se realiza por el empuje de las paredes de las cámaras que varían su volumen.
 
-  - *Bombas de émbolo alternativo*, en las que existe uno o varios compartimentos fijos, pero de volumen variable, por la acción de un émbolo o de una membrana (bombas de pistones)
+- *Bombas oscilantes*, compartimentos fijos de volumen variable por el movimiento de un pistón o por la deformación de un diafragma.
 
-  - *Bombas volumétricas*, en las que una masa fluida es confinada en uno o varios compartimentos que se desplazan desde la zona de entrada (de baja presión) hasta la zona de salida (de alta presión) de la máquina. (p.ej. bomba de tornillo).
+- *Bombas rotatorias*, compartimentos que se desplazan desde la zona de entrada (de baja presión) hasta la zona de salida (de alta presión) de la máquina. (p.ej. bomba de tornillo o helicoidal).
 
 *** Bombas de membrana
 
@@ -146,19 +87,25 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 *** Bombas helicoidales y de membrana
 
--  Formadas por un *contorno móvil* que obliga al fluido a avanzar por la máquina por *cambios de volumen*.
+- Son apropiadas para *altos incrementos de presión y bajos caudales*.
 
--  Son apropiadas para *altos incrementos de presión y bajos caudales*.  Necesitan un *elevado par de arranque* (por tanto no pueden ser acopladas directamente al generador).
+- Necesitan un *elevado par de arranque* (por tanto no pueden ser acopladas directamente al generador).
 
--  Las bombas de diafragma, más económicas, requieren el *reemplazo de los diafragmas* cada dos o tres años, dependiendo del fabricante.
+- Las bombas de diafragma, más económicas, requieren el *reemplazo de los diafragmas* cada dos o tres años, dependiendo del fabricante.
 
 *** Bombas rotodinámicas
 
-- *Principio*: añadir cantidad de movimiento
+**** *Principio*: añadir cantidad de movimiento
 
 - En este tipo de bombas hay uno o varios rodetes con álabes que giran generando un campo de presiones en el fluido.
 
-  - *Radiales o centrífugas*, el fluido entra por el centro del rodete, que dispone de unos álabes para conducir el fluido, y por efecto de la fuerza centrífuga es impulsado hacia el exterior, donde es recogido por la carcasa o cuerpo de la bomba, que por el contorno su forma lo conduce hacia las tubuladuras de salida o hacia el siguiente rodete (siguiente etapa)
+- *Radiales o centrífugas*
+
+  - El fluido entra por el centro del rodete cuyos álabes conducen el fluido
+
+  - Por la fuerza centrífuga es impulsado hacia el exterior y es recogido por la carcasa
+
+  - Es conducido hacia la salida o hacia el siguiente rodete (bombas multietapa)
 
 *** Bombas centrífugas
 
@@ -166,13 +113,15 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 *** Bombas centrífugas
 
--  Están diseñadas para vencer una *presión más o menos constante*, proporcionando *elevados caudales para bajas alturas manométricas*.
+- Están diseñadas para vencer una *presión más o menos constante*,
 
--  Se puede aumentar la altura que son capaces de vencer añadiendo etapas en serie en la misma bomba.
+- Proporcionan *elevados caudales para bajas alturas manométricas*.
 
--  Son *bombas simples y robustas, de bajo coste*.
+- Se puede aumentar la altura añadiendo etapas en serie en la misma bomba (bomba multietapa)
 
--  Funcionan bien con pequeños pares de arranque.
+- Son *bombas simples y robustas, de bajo coste*.
+
+- Funcionan bien con pequeños pares de arranque.
    
 
 *** Según la disposición
@@ -218,6 +167,11 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 * Acoplamiento generador-motobomba
 
+*** 
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/VariadorFrecuencia.jpg]]
+
+
 *** Motivo
 
 -  La *potencia y tensión suministrada por un generador FV varían* con la radiación y la temperatura.
@@ -230,41 +184,41 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
    -  *Motor DC: convertidor DC-DC*
 
+** Convertidores
 *** Convertidor DC-DC
 
--  Dispositivo que *transforma corriente continua de una tensión a otra*. Suelen ser reguladores de conmutación, dando a su salida una tensión regulada.
+- Dispositivo que *transforma corriente continua de una tensión a otra*.
 
--  Se utiliza para alimentar *motores DC con generador FV*.
+  - Suelen ser reguladores de conmutación, dando a su salida una tensión regulada.
 
--  Normalmente no incorporan buscador de MPP.
+- Se utiliza para alimentar *motores DC con generador FV*.
+
+- Normalmente no incorporan buscador de MPP.
    
 *** Variador de frecuencia
-
+*** Variador de frecuencia
 - El variador de frecuencia *transforma una señal alterna de una frecuencia en otra señal alterna de otra frecuencia*.
 
 - Está compuesto por un rectificador y un inversor con frecuencia variable.
 
-- Realiza *continuas variaciones en la tensión de generador para alcanzar un valor de referencia*.
+- Eficiencia cercana al 95%.
 
-- Para conseguir igualar la tensión de generador y referencia, varía la frecuencia.
+- Habitualmente sin seguidor de MPP.
 
-- El rendimiento de un variador a una tensión cercana a la nominal oscila entre el 94 y el 95%.
+[[../figs/VariadorFrecuencia_esquema.png]]
 
-- No suele realizarse seguimiento del punto de máxima potencia (MPP), ni por temperatura ni por radiación.
    
-*** Protecciones
+** Protecciones
 
-**** Pozo vacío
+*** Pozo vacío
 
 -  *Control de frecuencia de salida del variador*.
 
--  Cuando el motor trabaja en vacío, la corriente consumida baja. Por tanto, el variador debe subir la frecuencia para alcanzar la tensión de referencia.
+-  Cuando el motor trabaja en vacío, la corriente consumida baja y el variador debe subir la frecuencia para alcanzar la tensión de referencia.
 
 -  Si se supera la frecuencia de 55 Hz se para el sistema y se marca un intervalo de espera para permitir que el pozo vuelva a llenarse.
 
-*** Protecciones
-
-**** Deposito lleno
+*** Deposito lleno
 
 - *Presostáto en la tubería combinado con una boya en el depósito*.
 
@@ -274,11 +228,6 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 - Se pone en marcha un temporizador para permitir que baje el nivel del depósito.
 
-
-
-*** 
-#+ATTR_LATEX: :height 0.9\textheight
-[[../figs/VariadorFrecuencia.jpg]]
 
 * Circuito Hidráulico
 

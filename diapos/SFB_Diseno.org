@@ -1,4 +1,5 @@
-#+TITLE: SFB: Diseño
+#+TITLE: Sistemas Fotovoltaicos de Bombeo
+#+SUBTITLE: Diseño
 
 #+SETUPFILE: config.org
 #+OPTIONS: H:2
@@ -15,25 +16,34 @@
 
 ** Potencia hidráulica
 
-- La *potencia hidráulica*, $P_{H}$, necesaria para bombear agua es una función de, la *altura vertical aparente*, $H_{v}$ y del *caudal de agua*, $Q$:$$P_{H}=g\cdot\rho\cdot Q\cdot H_{v}$$ donde g es la aceleración de la gravedad, y $\rho$ es la densidad del agua.
+- La *potencia hidráulica*, $P_{H}$, necesaria para bombear agua es una función de,
 
-- Cambiando las unidades ($P_{H}$ en watios, $H_{v}$ en metros y $Q$ en $\si{\meter\cubed\per\hour}$)
+  - La *altura vertical aparente*, $H_{v}$
+
+  - El *caudal de agua*, $Q$
+
+$$P_{H}=g\cdot\rho\cdot Q\cdot H_{v}$$
+
+- Cambiando las unidades ($P_{H}$ en watios, $H_{v}$ en metros y $Q$ en $\si{\meter\cubed\per\hour}$:
 $$P_{H}=2.725\cdot Q\cdot H_{V}$$
 
 ** Potencia eléctrica de la motobomba
 
-- Asumiendo que el agua bombeada sale por el conducto a una velocidad insignificante, la potencia de salida de la bomba necesita satisfacer $P_{H}$ más las *perdidas de fricción en la tubería*, $P_{f}$.  
-- La *potencia eléctrica a la entrada de la motobomba* es ($\eta_{MP}$ es la *eficiencia de la motobomba*)
-$$P_{el}=\frac{P_{H}+P_{f}}{\eta_{mp}}$$ 
-
+- La potencia de salida de la bomba necesita satisfacer $P_{H}$ más las *perdidas de fricción en la tubería*, $P_{f}$.  
 
 - El valor de $P_{H}+P_{f}$ es la *potencia mecánica a la salida de la bomba*. Este valor se asimila a una altura equivalente $H_{T}$ asociado a un caudal determinado:$$H_{T}=H_{v}+H_{f}$$
 
+- La *potencia eléctrica a la entrada de la motobomba* es: $$P_{el}=\frac{P_{H}+P_{f}}{\eta_{mp}}$$ 
+
 ** Potencia eléctrica del generador
 
-La potencia eléctrica requerida por la motobomba es entregada por un generador FV y un acondicionador de potencia:$$P_{el}=P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}$$
+La potencia eléctrica requerida por la motobomba es entregada por un generador FV y un acondicionador de potencia
 
-siendo $\eta_{inv}$ la eficiencia del equipo de acondicionamiento de potencia.
+$$P_{el}=P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}$$
+
+Por tanto,
+
+$$ \frac{2.725\cdot Q\cdot H_{V}}{\eta_{mp}} \simeq P_{g}^{*}\cdot\frac{G}{G^{*}}\cdot\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}$$ 
 
 
 
@@ -56,30 +66,29 @@ siendo $\eta_{inv}$ la eficiencia del equipo de acondicionamiento de potencia.
 -  Para *sistemas fotovoltaicos*, se recomienda 25 litros diarios por habitante (fuentes comunitarias) o 45 litros (con grifo en cada domicilio).
 
 -  *Contexto*: en grandes ciudades 250 litros diarios por habitante.
+
 * Altura
 
 ** Altura total equivalente
 
-- Se puede definir una *altura total equivalente*, $H_{TE}$, como el hipotético valor constante que llevaría al mismo volumen de agua bombeada:
+$$Q_{d}=\intop_{d}\frac{P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}\cdot\eta_{mp}}{2.725\cdot H_{T}}\mathrm{dt}$$
+
+- *Altura total equivalente*, $H_{TE}$:
 
 $$Q_{d}=\frac{P_{g}^{*}}{2.725\cdot G^{*}\cdot H_{TE}}\cdot\intop_{dia}G\cdot\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}\cdot\eta_{mp}\mathrm{dt}$$
 
-- Dada una $H_{TE}$, *la ecuación depende exclusivamente de las condiciones meteorológicas y de las características de la bomba fotovoltaica*. 
-- $H_{OT}$ representa la altura desde la salida de agua hasta el suelo.
+- Ahora el cálculo sólo *depende de la radiación, temperatura, y equipos*.
 
-** Altura constante
+- Suposiciones:
 
-- El supuesto de *altura total de bombeo constante* sólo ocurre cuando:
-
-  - Las *pérdidas de fricción en la tubería son despreciables*: diámetros de tubería suficientemente grandes, pérdidas de fricción por debajo del 5% de la altura total son un requisito de optimización (es decir, $H_{f}<0.05\cdot H_{T}$).
+  - Las *pérdidas de fricción en tubería son despreciables* ($H_{f}<0.05\cdot H_{T}$).
 
   - El *nivel del agua dentro del pozo se mantiene constante*
 
+
 ** Caracterización de pozos
 
-- Normalmente se realiza un *ensayo de bombeo para caracterizar los pozos*:
-  - Extraer agua con una bomba portátil
-  - Medir la caída del nivel del agua en el pozo a un cierto caudal de bombeo y cuando dicha caída se ha estabilizado.
+- Deseable realizar *ensayo de bombeo para caracterizar los pozos* con bomba portátil empleando el *caudal máximo del pozo*, $Q_{max}$.
 
 - Tres parámetros:
 
@@ -87,28 +96,17 @@ $$Q_{d}=\frac{P_{g}^{*}}{2.725\cdot G^{*}\cdot H_{TE}}\cdot\intop_{dia}G\cdot\fr
 
   - *Nivel dinámico*, $H_{dt}$
 
-  - *Caudal de ensayo*, $Q_{t}$
-
-** Caracterización de pozos
-
-- La excesiva velocidad de extracción de agua de un pozo puede dañar su superficie interna y provocar agujeros que pueden llevar a un eventual colapso del pozo
-  - Existe un *caudal máximo para cada pozo*, $Q_{max}$
-
-- *Normalmente los ensayos están referidos a este caudal máximo* 
-\[
-Q_{t}=Q_{max}
-\]
+  - *Caudal de ensayo*, $Q_{t}$ (habitualmente $Q_t = Q_{max}$)
 
 ** Altura total equivalente
-
-Es posible calcular $H_{TE}$ mediante:
 
 \[
 H_{TE}=H_{OT}+H_{ST}+(\frac{H_{DT}-H_{ST}}{Q_{T}})\cdot Q_{AP}+H_{f}(Q_{AP})
 \]
 
-siendo $Q_{AP}$ el caudal aparente, calculado mediante $Q_{AP}=\alpha\cdot Q_{d}$, y $\alpha=0.047\, h^{-1}$.
+- $Q_{AP}$, caudal aparente, $Q_{AP}=\alpha\cdot Q_{d}$, $\alpha= 1/24 = 0.0416\, h^{-1}$.
 
+- $H_{OT}$,  altura desde la salida de agua hasta el suelo.
 
 * Potencia del generador
 ** Formula aproximada
@@ -145,14 +143,14 @@ P_{g}^{*}=\frac{10\cdot40\cdot30}{5}=\SI{2400}{\wattpeak}
 
 *** 								      :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 5cm
+    :BEAMER_col: 0.5
     :END:
 #+ATTR_LATEX: :height 0.8\textheight
 [[../figs/CurvaSP11.jpg]]
 
 *** 								      :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 5cm
+    :BEAMER_col: 0.5
     :END:
 - Los catálogos recogen información del funcionamiento instantáneo a frecuencia nominal.
 - Las curvas H-Q no son de uso inmediato para el dimensionado de un SFB.
@@ -160,11 +158,14 @@ P_{g}^{*}=\frac{10\cdot40\cdot30}{5}=\SI{2400}{\wattpeak}
 
 ** Curvas HQ a frecuencia variable
 - Leyes de la semejanza (rendimiento constante)
+
+#+BEGIN_EXPORT latex
 \begin{align*}
 Q &\propto n &H &\propto n^{2}\\
 P_{mec} &\propto n^{3} &T &\propto n^{2}
 \end{align*}
- 
+#+END_EXPORT 
+
 [[file:~/github/esf/figs/CurvaHQ.png]]
 
 - Para aproximar el funcionamiento en frecuencia variable, es recomendable *multiplicar el valor de $H_{TE}$ por un factor de $1.4$*.
@@ -176,15 +177,15 @@ P_{mec} &\propto n^{3} &T &\propto n^{2}
 
 ** Configuración eléctrica
 
-- La tensión de entrada al variador debe ser:$$V_{DC}=\frac{\sqrt{2}V_{AC}}{1.1}$$
+- La *tensión de entrada al variador* debe ser:$$V_{DC}=\frac{\sqrt{2}V_{AC}}{1.1}$$
 
-- Para una bomba de tensión de $230\, V_{ac}$ se necesita una tensión en la entrada que no sea inferior a $V_{dc}\simeq300\, V_{dc}$.
+- Para una bomba de tensión de $230\, V_{ac}$ se necesita una tensión en la entrada que no sea inferior a $\simeq300\, V_{dc}$.
 
-- A partir de esta tensión se configura el número de módulos por serie y el número de ramas del generador.
+- A partir de esta tensión se configura el *número de módulos por serie* y el *número de ramas* del generador.
 
 ** Pozo, Depósito y Tubería
 - Como seguridad, cuando la potencia entregada por el generador es igual al 80% de su potencia nominal, el caudal bombeado correspondiente no debe exceder el máximo admisible por el pozo.
-- El tamaño del depósito será el suficiente para 1 o 2 días de consumo.
-- A partir del caudal $Q_{AP}$ y de la longitud de tubería necesaria, se elige el diámetro de la misma (en curvas del fabricante) de forma que las pérdidas sean inferiores a un porcentaje prefijado de $H_{te}$.
+- El *tamaño del depósito* será el suficiente para *1 o 2 días de consumo*.
+- A partir del caudal $Q_{AP}$ y de la longitud de tubería necesaria, se elige el *diámetro* de la misma (en curvas del fabricante) de forma que las pérdidas sean inferiores a un porcentaje prefijado de $H_{te}$.
 
 
