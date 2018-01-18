@@ -1,4 +1,4 @@
-% Created 2018-01-08 lun 20:02
+% Created 2018-01-18 jue 22:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -41,19 +42,19 @@
  pdftitle={SFCR: Productividad y Sombras},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.4)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Energía Producida por un SFCR}
-\label{sec:org8bff63b}
+\label{sec:org4be0343}
 
 \subsection{Procedimiento de cálculo}
-\label{sec:orge42b5de}
+\label{sec:org451dc4b}
 
-\begin{frame}[label={sec:org3986dce}]{Potencia en un SFCR}
+\begin{frame}[label={sec:orgd18269c}]{Potencia en un SFCR}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Generador FV
 \end{itemize}
@@ -75,7 +76,7 @@ $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
       \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
 \end{frame}
 
-\begin{frame}[label={sec:orge3c641e}]{Energía producida}
+\begin{frame}[label={sec:org01fb441}]{Energía producida}
 $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
 
 \begin{itemize}
@@ -97,14 +98,14 @@ generador
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgce93aa1}]{Productividad}
+\begin{frame}[label={sec:org2ce3765}]{Productividad}
 En algunas ocasiones se habla de \alert{productividad} del sistema, \(Y_{f}\),
 que es el cociente entre energía producida y potencia nominal del
 \alert{generador}:
 $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 \end{frame}
 
-\begin{frame}[label={sec:orge4c36a0}]{Performance Ratio}
+\begin{frame}[label={sec:orgf24fa52}]{Performance Ratio}
 \begin{itemize}
 \item Está concebido para incluir todas las \alert{pérdidas que no tienen
 dependencia con las condiciones meteorológicas}.
@@ -121,7 +122,7 @@ con la relación entre potencia e irradiancia, \alert{suele aceptarse} que el
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga49c0ae}]{Performance Ratio}
+\begin{frame}[label={sec:org9d729b9}]{Performance Ratio}
 \begin{block}{Desglose de pérdidas}
 \begin{itemize}
 \item \alert{Dispersión de parámetros} entre los módulos que componen el
@@ -143,7 +144,7 @@ características nominales (3\%)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org9441995}]{Performance Ratio}
+\begin{frame}[label={sec:org3be08b0}]{Performance Ratio}
 \begin{block}{Valores reales}
 \begin{itemize}
 \item El análisis de funcionamiento de diversos sistemas FV europeos ha
@@ -160,7 +161,7 @@ sido de 0,8}.
 \end{frame}
 
 
-\begin{frame}[label={sec:org0f210f0}]{Factor de sombras}
+\begin{frame}[label={sec:orgb7f5800}]{Factor de sombras}
 \begin{itemize}
 \item \alert{El factor de sombras suele tomar valores alrededor del 2 al 4\%},
 tanto en instalaciones estáticas como de seguimiento.
@@ -172,27 +173,27 @@ con un nivel de ocupación de terreno superior al óptimo).
 \end{frame}
 
 \section{Sombras y ocupación de terreno}
-\label{sec:org034ca68}
+\label{sec:orge3f7608}
 
 \subsection{Sombras Lejanas}
-\label{sec:orgc5a95dc}
+\label{sec:org2441c91}
 
-\begin{frame}[label={sec:org3114dca}]{Sombras en el horizonte}
+\begin{frame}[label={sec:org30af572}]{Sombras en el horizonte}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SombraIES.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Sombras Cercanas: sistemas estáticos}
-\label{sec:orgcd6f3b7}
+\label{sec:org07362e6}
 
-\begin{frame}[label={sec:org31ca642}]{Sombras entre filas}
+\begin{frame}[label={sec:orgd60268b}]{Sombras entre filas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SombraEstaticaInclinado2.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3be7dcf}]{Sombras entre filas}
+\begin{frame}[label={sec:org16848bd}]{Sombras entre filas}
 \begin{itemize}
 \item Suele establecerse un objetivo de \alert{4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra}.
 
@@ -208,10 +209,11 @@ $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 \end{frame}
 
-\subsection{Sombras Cercanas: sistemas de seguimiento}
-\label{sec:org5338d40}
+\subsection{Sombras Cercanas: sistemas de seguimiento 2X}
+\label{sec:orgd19c199}
 
-\begin{frame}[label={sec:org2604323}]{Separación de seguidores Doble Eje}
+
+\begin{frame}[label={sec:org3d10ae9}]{Separación de seguidores Doble Eje}
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/Sombras2X.pdf}
 \end{center}
@@ -224,15 +226,13 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 \end{column}
 
 \begin{column}{0.4\columnwidth}
-$$b=\frac{L}{W}$$ 
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
-
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 $$E_{ac}=f(ROT)??$$
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orge2ef074}]{Radiación promedio}
+\begin{frame}[label={sec:orge275e0e}]{Radiación promedio}
 $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
 
 \begin{columns}
@@ -251,10 +251,10 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 \end{frame}
 
 
-\begin{frame}[label={sec:org04fd5c5}]{Separación de Seguidores Doble Eje}
+\begin{frame}[label={sec:org3bee000}]{Separación de Seguidores Doble Eje}
 $$b=\frac{L}{W}=0.475$$
 
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AbacoSeguidor2X_Ene10.pdf}
@@ -262,10 +262,10 @@ $$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
 \end{frame}
 
 
-\subsection{Seguidores de eje horizontal NS}
-\label{sec:orgca15f7f}
+\subsection{Sombras Cercanas: Seguidores de eje horizontal NS}
+\label{sec:orgfa8c97a}
 
-\begin{frame}[label={sec:org0c03306}]{Separación de Seguidores Eje Horizontal}
+\begin{frame}[label={sec:org2d6347a}]{Separación de Seguidores Eje Horizontal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SombrasHoriz.pdf}
 \end{center}
@@ -273,13 +273,13 @@ $$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
 $$W=\infty$$ $$ROT=L_{eo}/L$$
 \end{frame}
 
-\begin{frame}[label={sec:orgd375aca}]{Separación de Seguidores Horizontal N-S}
+\begin{frame}[label={sec:orgd31c119}]{Separación de Seguidores Horizontal N-S}
 \begin{center}
 \includegraphics[angle=90,width=.9\linewidth]{../figs/AbacoSeguidorHorizSombra_Ene10.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd142f38}]{Backtracking}
+\begin{frame}[label={sec:orgfc88e35}]{Backtracking}
 \begin{itemize}
 \item El \alert{sombreado} en un generador puede producir problemas por el efecto
 de \alert{punto caliente}.
@@ -302,19 +302,19 @@ la \alert{horizontal en la noche}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgaebb680}]{Backtracking}
+\begin{frame}[label={sec:org0fa8655}]{Backtracking}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/BackTracking.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3ea4ac6}]{Separación con backtracking}
+\begin{frame}[label={sec:org4419369}]{Separación con backtracking}
 \begin{center}
 \includegraphics[angle=90,width=.9\linewidth]{../figs/AbacoHorizBT_Ene10.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc6bab87}]{Limitación de ángulo}
+\begin{frame}[label={sec:org66137b8}]{Limitación de ángulo}
 \begin{itemize}
 \item Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
 
@@ -329,10 +329,10 @@ la \alert{horizontal en la noche}.
 \end{frame}
 
 \subsection{Elección de separaciones}
-\label{sec:org7d67e35}
+\label{sec:orgda7da7d}
 
 
-\begin{frame}[label={sec:org7f86b5d}]{Elección de separaciones}
+\begin{frame}[label={sec:org11ebc42}]{Elección de separaciones}
 La \alert{separación óptima} entre elementos (seguidores o estructuras
 estáticas) es aquella que conduce al \alert{mínimo valor del coste de la
 energía} producida por el sistema:
@@ -350,7 +350,7 @@ zanjas).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3b5127b}]{Elección de separaciones}
+\begin{frame}[label={sec:org4eb8606}]{Elección de separaciones}
 \begin{itemize}
 \item Esta separación óptima \alert{depende} de las \alert{estructuras elegidas} y de
 las \alert{condiciones económicas} de los elementos.
@@ -362,7 +362,7 @@ condiciones del terreno} (fronteras, irregularidades, vaguadas, etc.)
 
 
 
-\begin{frame}[label={sec:org721b78f}]{ROT y Coste de la energía producida}
+\begin{frame}[label={sec:org69f4049}]{ROT y Coste de la energía producida}
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{itemize}
@@ -386,9 +386,9 @@ $$C_p = C_c + C_A + C_{PV}$$
 \end{frame}
 
 \section{Resumen}
-\label{sec:org23a1775}
+\label{sec:org851e327}
 
-\begin{frame}[label={sec:org05d99a8}]{Ocupación de terreno y productividad}
+\begin{frame}[label={sec:org040a69d}]{Ocupación de terreno y productividad}
 \begin{center}
 \begin{tabular}{lrl}
 SFCR & ROT & Productividad\\

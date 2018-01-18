@@ -135,7 +135,8 @@ $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$
 - Para 2 horas antes y después:
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
-** Sombras Cercanas: sistemas de seguimiento
+** Sombras Cercanas: sistemas de seguimiento 2X
+
 
 *** Separación de seguidores Doble Eje
 #+ATTR_LATEX: :height 0.5\textheight
@@ -152,9 +153,7 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
      :PROPERTIES:
      :BEAMER_col: 0.4
      :END:
-$$b=\frac{L}{W}$$ 
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
-
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 $$E_{ac}=f(ROT)??$$
 
 *** Radiación promedio
@@ -178,12 +177,12 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 
 $$b=\frac{L}{W}=0.475$$
 
-$$ROT=\frac{L_{ns}\cdot L_{eo}}{b}$$
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 
 [[../figs/AbacoSeguidor2X_Ene10.pdf]]
 
 
-** Seguidores de eje horizontal NS
+** Sombras Cercanas: Seguidores de eje horizontal NS
 
 *** Separación de Seguidores Eje Horizontal
 
