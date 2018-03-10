@@ -462,10 +462,11 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
    
 *** Radiación
 
-   -  *Fotocorriente proporcional a intensidad de radiación*
+   -  *Corriente de cortocircuito proporcional a intensidad de radiación*
+      $I_{sc} = I^*_{sc}\cdot\frac{G_{ef}}{G^{*}}$
 
    -  Relación logarítmica con tensión de circuito abierto:
-      $V_{oc}=V_{oc1}+\frac{mkT}{e}\cdot\ln(X)$
+      $V_{oc2}=V_{oc1}+\frac{mkT}{e}\cdot\ln(G_2/G_1)$
 
    -  El factor de forma aumenta ligeramente
 
@@ -484,7 +485,7 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
    -  Disminuye el factor de forma y la eficiencia:
       $d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}$
 
-*** Influencia de Temperatura
+*** Influencia de la Temperatura
 
 [[../figs/CurvaIV_G800.pdf]]
 
@@ -500,6 +501,52 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 $$P_{mpp}^{*}=I_{mpp}^{*}\cdot V_{mpp}^{*}$$
 
 $$\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G^{*}}$$
+
+
+** Cálculo del MPP
+
+*** Método Simplificado: Factor de Forma Constante
+
+$$FF=FF^{*}$$
+
+$$\begin{aligned}
+  \frac{I_{mpp}}{I_{sc}} & = & \frac{I_{mpp}^{*}}{I_{sc}^{*}}\\
+  \frac{V_{mpp}}{V_{oc}} & = & \frac{V_{mpp}^{*}}{V_{oc}^{*}}\end{aligned}$$
+
+*** Procedimiento
+
+- Calcular $V_{oc}$ a la temperatura $T_c$:
+
+\[
+V_{oc} = V_{oc}^* + \frac{dV_{oc}}{dT_{c}} \cdot (T_c - T^*_c)
+\]
+
+- Calcular $V_{mpp}$ a la temperatura $T_c$:
+
+\[
+V_{mpp} = V_{oc} \cdot \frac{V_{mpp}^*}{V_{oc}^{*}}
+\]
+
+- Calcular $I_{sc}$ a la radiación $G_{ef}$.
+
+\[
+I_{sc} = I_{sc}^* \cdot \frac{G_{ef}}{G^*}
+\]
+
+- Calcular $I_{mpp}$ a la radiación $G_{ef}$  
+
+\[
+I_{mpp} = I_{sc} \cdot \frac{I_{mpp}^{*}}{I_{sc}^{*}}
+\]
+
+*** Ejercicio de Cálculo
+
+De una célula de $\SI{100}{\centi\meter\squared}$ y $I_{sc}^{*}=3\, A$, $I_{mpp}^{*}=2.7\, A$ , $V_{oc}^{*}=0.6\, V$,
+$V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
+
+-  $P_{mpp}^{*}$, $FF^{*}$, $\eta^{*}$
+
+-  $I_{mpp}$, $V_{mpp}$ cuando $T_{c}=60\celsius$ y $G=800\, W/m^{2}$.
 
 
 ** Circuito equivalente de la célula
@@ -555,85 +602,6 @@ $$I=I_{sc}[1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{m\cdot V_{t}})]$$
 -  Caminos de difusión en fronteras de grano
 
 [[../figs/InfluenciaRsh_Potencia.pdf]]
-
-
-** Cálculo del MPP
-
-*** Método de J.M. Ruiz
-
-- Normalización
-
-$$\begin{aligned}
-  v & = & \frac{V}{V_{oc}}\\
-  i & = & \frac{I}{I_{sc}}\end{aligned}$$
-
-- MPP
-
-$$\begin{aligned}
-  v_{mpp} & = & \frac{V_{mpp}}{V_{oc}}\\
-  i_{mpp} & = & \frac{I_{mpp}}{I_{sc}}\\
-  p_{mpp} & = & FF\end{aligned}$$
-
-*** Método de J.M. Ruiz
-
-- Resistencia Serie y FF
-
-$$\begin{aligned}
-  r_{s} & = & \frac{R_{s}}{(V_{oc}/I_{sc})}\\
-  ff & = & v_{mpp}\cdot i_{mpp}=FF\end{aligned}$$
-
-- Tensión térmica
-
-$$\begin{aligned}
-  k_{oc} & = & \frac{V_{oc}}{V_{t}}\end{aligned}$$
-
-*** Método de J.M. Ruiz
-
-- Aproximación para MPP
-
-$$\begin{aligned}
-  i_{mpp} & = & 1-\frac{D_{M}}{k_{oc}}\\
-  v_{mpp} & = & 1-\frac{\ln(k_{oc}/D_{M})}{k_{oc}}-r_{s}\cdot i_{mpp}\end{aligned}$$
-
-$$\begin{aligned}
-  D_{M} & = & D_{M0}+2\cdot r_{s}\cdot D_{M0}^{2}\\
-  D_{M0} & = & \frac{k_{oc}-1}{k_{oc}-\ln k_{oc}}\end{aligned}$$
-
-*** Método de J.M. Ruiz
-
-- Itinerario
-
-  - Obtener los valores de $I_{sc}$ y $V_{oc}$ en las condiciones de
-    temperatura y radiación deseadas
-
-  - Obtener resistencia serie (supondremos $R_{s}=R_{s}^{*}$)
-    $$R_{s}^{*}=\frac{V_{oc}^{*}-V_{mpp}^{*}+m\cdot
-            V_{t}\cdot\ln(1-\frac{I_{mpp}^{*}}{I_{sc}^{*}})}{I_{mpp}^{*}}$$
-    donde se debe emplear el valor de $V_{t}$ para
-    $T_{c}=\SI{25}{\celsius}$.
-
-  - Calcular $r_{s}$ y $k_{oc}$, y con ellos $D_{M0}$ y $D_{M}$.
-
-  - Calcular $i_{mpp}$ y a continuación $v_{mpp}$.
-
-  - Deshacer la normalización para obtener $I_{mpp}$ y $V_{mpp}$.
-
-*** Simplificado: Factor de Forma Constante
-
-$$FF=FF^{*}$$
-
-$$\begin{aligned}
-  \frac{I_{mpp}}{I_{sc}} & = & \frac{I_{mpp}^{*}}{I_{sc}^{*}}\\
-  \frac{V_{mpp}}{V_{oc}} & = & \frac{V_{mpp}^{*}}{V_{oc}^{*}}\end{aligned}$$
-
-*** Ejercicio de Cálculo
-
-De una célula de $\SI{100}{\centi\meter\squared}$ y $I_{sc}^{*}=3\, A$, $I_{mpp}^{*}=2.7\, A$ , $V_{oc}^{*}=0.6\, V$,
-$V_{mpp}^{*}=0.48\, V$, calcular suponiendo factor de forma constante:
-
--  $P_{mpp}^{*}$, $FF^{*}$, $\eta^{*}$
-
--  $I_{mpp}$, $V_{mpp}$ cuando $T_{c}=60\celsius$ y $G=800\, W/m^{2}$.
 
 * Fabricación
 
