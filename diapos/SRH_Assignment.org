@@ -15,6 +15,6 @@
 6. Compare the values at the three locations with the monthly averages of the measurements provided by the stations using statistical metrics.
 7. Combine the satellite estimations at the location defined in step 4 with the result of that step, using spatial interpolation (IDW). 
 
-*The result of step 6 will be used in Session #2*.
+*The result of the last step will be used in Session #2*.
 
 
