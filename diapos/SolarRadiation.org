@@ -1,0 +1,90 @@
+#+TITLE: Introduction to Solar Radiation
+#+SUBTITLE: Fundamentals of PV Engineering
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+* Motivation
+
+** Radiation and PV Systems
+
+- The energy produced by a PV system depends mainly on the solar radiation incident on the PV generator.
+
+- Consequently, the estimation of performance of a PV system in a location during a time period requires the knowledge of the available solar radiation.
+
+[[../figs/GCPVScheme.pdf]]
+
+* Key concepts
+** Solar Radiation cannot be computed
+- Solar radiation reaching the earth surface is the result of *complex interactions with the atmosphere*.
+- On-site measurements or satellite images are required for solar radiation estimation.
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/SolarRadiationComponents_NREL.png]]
+
+** Inclination Angle
+- PV generators have an *inclination angle higher than zero* to maximize the performance.
+- The generator inclination angle depends on the latitude of the location and on the application[fn:1].
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/PVUrban.png]]
+
+** Solar Radiation Databases
+- Therefore, it is unfeasible to maintain a database of incident solar radiation.
+- Databases register solar radiation on the horizontal plane.
+- Estimation of the solar irradiation *incident on the inclined plane* requires a transposition procedure. 
+
+
+** From Horizontal to Inclined
+
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+
+* Definitions
+
+** Irradiance and Irradiation
+- Irradiance :: solar radiation *power* received by a surface per unit area.
+  - Units: $\si{\watt\per\meter\squared},\,\si{\kilo\watt\per\meter\squared}$
+- Irradiation :: solar radiation *energy* received by a surface per unit area.
+  - Units: $\si{\watthour\per\meter\squared},\,\si{\kilo\watthour\per\meter\squared}$
+  - Hourly irradiation, Daily irradiation, Monthly irradiation ...
+
+** Extraterrestrial Solar Radiation
+
+- $B_0$: Solar radiation energy/power at the top of the Earth's atmosphere on a surface perpendicular to the solar rays.
+- $B_0 \simeq \SI{1367}{\watt\per\meter\squared}$ (Solar Constant) 
+- $B_0(0)$, extraterrestrial irradiance on a horizontal plane, can be computed by analytical means.
+  - Depends on the latitude, day of the year, hour of the day. 
+
+** Interaction with the Atmosphere
+
+Due to the interaction with the atmosphere, the extraterrestrial radiation is absorbed, reflected and scattered.
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/SolarRadiationComponents_NREL.png]]
+
+** Diffuse, Beam, and Global
+
+- Solar radiation reaching the Earth surface is named *global solar radiation*.
+- It is the result of three components:
+  - *Beam Radiation*: solar radiation traveling on a straight line from the sun to the receiving surface.
+  - *Diffuse Radiation*: solar radiation scattered by the atmosphere. It is emitted from all directions of the sky.
+  - *Albedo or Reflected Radiation*: solar radiation reflected by the ground. 
+
+#+BEGIN_CENTER
+ $G = B + D + R$
+#+END_CENTER
+
+** Horizontal, Incident, Effective
+
+- $G(0)$ *Radiation on a Horizontal Plane* 
+  - Measurements from ground stations, or satellite images.
+- $G(\alpha, \beta)$ *Radiation incident on an Inclined Plane*
+  - Transposition from radiation on the horizontal plane.
+- $G_{ef}(\alpha, \beta)$ *Effective Radiation incident on a PV module*
+  - Reflectance and transmittance of the PV module depend on the angle of incidence.
+  - Dirt losses.
+
+
+* Footnotes
+
+[fn:1] Rule of thumb: latitude minus 10º for a Grid Connected PV System; latitude plus 10º for a Standalone PV System.

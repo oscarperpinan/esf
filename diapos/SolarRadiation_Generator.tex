@@ -1,0 +1,100 @@
+% Created 2018-04-01 dom 22:37
+% Intended LaTeX compiler: pdflatex
+\documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
+\bibliographystyle{plain}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\usepackage[emulate=units]{siunitx}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
+\newunit{\wattpeak}{Wp}
+\newunit{\watthour}{Wh}
+\newunit{\amperehour}{Ah}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\usetheme[hideothersubsections]{Goettingen}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
+\date{}
+\title{Solar Radiation on a PV Generator}
+\subtitle{Fundamentals of PV Engineering}
+\hypersetup{
+ pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdftitle={Solar Radiation on a PV Generator},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+
+
+\section{Extraterrestrial Irradiation}
+\label{sec:org4727159}
+\begin{frame}[label={sec:org9c27fcb}]{}
+\begin{itemize}
+\item \(B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}\)
+
+\item \(B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)\)
+(\(\omega_{s}\) en radianes)
+\end{itemize}
+\end{frame}
+
+\section{Caracterización de la atmósfera}
+\label{sec:org62b3ac3}
+
+\begin{frame}[label={sec:orgdaf22f0}]{Masa de aire}
+\begin{itemize}
+\item Relación entre camino recorrido por rayos directos del Sol a
+través de la atmósfera hasta la superficie receptora y el que
+recorrerían en caso de incidencia vertical (AM=1)
+
+\item \(AM=1/\cos\theta_{zs}\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org65b315b}]{Índice de claridad}
+\begin{itemize}
+\item Relación entre la radiación global en el plano horizontal y la
+radiación extra-atmosférica en el plano horizontal
+
+\item El índice de claridad \alert{no depende de las variaciones debidas al
+movimiento aparente del sol}.
+
+\item \(K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}\) (mensual)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orge1a6e53}]{Índice de claridad}
+\begin{description}
+\item[{\(K_{T}\):}] índice de claridad instantáneo. \(K_{T}=G/B_{0}\)
+
+\item[{\(K_{Td}\):}] índice de claridad diario. \(K_{Td}=G_{d}/B_{0d}\)
+
+\item[{\(K_{Tm}\):}] índice de claridad mensual. \(K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}\)
+
+\item[{\(K_{Ta}\):}] índice de claridad anual. \(K_{Ta} = G_{a}/B_{0a} = \dots\)
+\end{description}
+\end{frame}
+\end{document}

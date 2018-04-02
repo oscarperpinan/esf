@@ -1,0 +1,20 @@
+#+TITLE: Session #2 Assignment
+#+SUBTITLE: Fundamentals of Photovoltaic Engineering
+#+AUTHOR:    Oscar Perpiñán Lamigueiro
+#+EMAIL:     oscar.perpinan@upm.es
+#+DATE: 
+#+LANGUAGE:  en
+#+OPTIONS:   num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+LATEX_HEADER: \usepackage{mathpazo}
+
+# 1. Retrieve daily measurements from three nearby meteorological stations (time series length 10 years).
+# 2. /(Session #2) Filter each time series using physical limits/.
+# 3. Compute a daily time series representative of the region with the average of the three time series. Compare this time series with each station using statistical metrics (MBD, RMSD, MAD).
+# 4. Choose a location inside the perimeter defined by the three stations, and estimate the daily solar radiation using spatial interpolation (IDW).
+# 5. Retrieve monthly averages of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.
+# 6. Compare the values at the three locations with the monthly averages of the measurements provided by the stations using statistical metrics.
+# 7. Combine the satellite estimations at the location defined in step 4 with the result of that step, using spatial interpolation (IDW). 
+
+# *The result of step 6 will be used in Session #2*.
+
+

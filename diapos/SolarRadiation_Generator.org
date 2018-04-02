@@ -1,0 +1,231 @@
+#+TITLE: Solar Radiation on a PV Generator
+#+SUBTITLE: Fundamentals of PV Engineering
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+
+* Extraterrestrial Irradiation
+** 
+  -  $B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}$
+
+  -  $B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)$
+     ($\omega_{s}$ en radianes)
+
+* COMMENT Caracterización de la atmósfera
+
+** Masa de aire
+
+   -  Relación entre camino recorrido por rayos directos del Sol a
+      través de la atmósfera hasta la superficie receptora y el que
+      recorrerían en caso de incidencia vertical (AM=1)
+
+   -  $AM=1/\cos\theta_{zs}$
+
+** Índice de claridad
+
+   -  Relación entre la radiación global en el plano horizontal y la
+      radiación extra-atmosférica en el plano horizontal
+
+   -  El índice de claridad *no depende de las variaciones debidas al
+      movimiento aparente del sol*.
+
+   -  $K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}$ (mensual)
+
+** Índice de claridad
+
+-  $K_{T}$: :: índice de claridad instantáneo. $K_{T}=G/B_{0}$
+
+-  $K_{Td}$: :: índice de claridad diario. $K_{Td}=G_{d}/B_{0d}$
+
+-  $K_{Tm}$: :: índice de claridad mensual. $K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}$
+
+-  $K_{Ta}$: :: índice de claridad anual. $K_{Ta} = G_{a}/B_{0a} = \dots$
+
+* COMMENT Cálculo de componentes de radiación solar
+
+** Radiación como proceso estocástico
+
+- La *distribución de valores* que presenta la radiación solar durante un periodo está *determinada por el valor promedio de la radiación durante ese periodo*.
+
+  - Por ejemplo, conocer la media mensual de la radiación solar diaria en un determinado lugar permite saber cómo se comportará la radiación diaria durante ese mes
+
+- El índice de claridad para un día concreto *sólo está influido* por el índice de claridad del *día anterior*.
+
+** Estimación de Directa y Difusa
+
+-  Establecer una *relación entre la fracción difusa* de la radiación horizontal ($F_{D}=\frac{D(0)}{G(0)}$) y *el índice de claridad*.
+
+-  *Correlación negativa* (a mayor índice de claridad, menor componente difusa)
+
+-  *Correlación independiente de la latitud* (validez cuasi-universal)
+
+** Correlaciones $F_{D}$ y $K_{T}$: Ecuación de Page
+
+[[../figs/FdKtMensual.pdf]]
+
+\[F_{Dm}=1-1.13\cdot K_{Tm}\]
+
+** Correlaciones $F_{D}$ y $K_{T}$
+
+Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ en un mes con $B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}$  será:
+
+- $K_{Tm}=\frac{3150}{4320}=0.73$
+
+- Según la correlación de Page, $F_{Dm}=1-1.13\cdot0.73=0.175$
+
+- $D_{d,m}(0)=0.175\cdot3150=\SI{551.6}{\watthour\per\meter\squared}$
+
+- $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
+
+** Correlaciones $F_{D}$ y $K_{T}$: Collares-Pereira y Rabl
+
+[[../figs/FdKtDiario.pdf]]
+#+BEGIN_EXPORT latex
+{\scriptsize \[
+F_{Dd} = \begin{cases}
+  0.99 & K_{Td} \leq 0.17\\
+  1.188 - 2.272 \cdot K_{Td} + 9.473 \cdot K_{Td}^{2} - 21.856 \cdot K_{Td}^{3} + 14.648 \cdot K_{Td}^{4} & K_{Td} > 0.17
+\end{cases}
+\]
+}
+{\scriptsize \par}
+#+END_EXPORT
+
+** Estimación de Directa y Difusa
+
+-  Calcular :: las componentes directa y difusa de la radiación solar del:
+
+   -  Mes de Septiembre (día 261) en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal
+      $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+
+* COMMENT Cálculo de radiación sobre generadores
+
+
+** Irradiancia sobre superficies arbitrarias
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+
+** Irradiancia a partir de irradiación diaria
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+-  La irradiación durante una hora coincide con el valor medio de la irradiancia durante esa hora.
+
+-  La variación solar durante una hora es baja: valor de irradiancia equivalente a valor de irradiación.
+
+-  Relación entre irradiancia e irradiación extra-terrestre deducible teóricamente:
+
+\[\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\]
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+\[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
+
+\[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
+
+\[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+
+\[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+[[../figs/RgRd.pdf]]
+
+*** Estimación de Irradiancia a partir de Irradiación diaria
+
+-  Calcular :: la irradiancia global y la irradiancia difusa en el plano horizontal
+
+   -  2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+** Transformación al plano del generador
+
+*** Irradiancia Directa
+
+\[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+
+*** Factor de visión para Difusa
+
+[[../figs/AnguloVisionCielo.pdf]]
+
+\[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
+
+*** Irradiancia Difusa isotrópica
+
+\[L(\theta_{z},\psi)=cte.\]
+
+\[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
+
+*** Irradiancia Difusa Anisotrópica
+#+BEGIN_EXPORT latex
+\[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
+\[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
+\[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+\[k_{1} = \frac{B(0)}{B_{0}(0)}\]
+#+END_EXPORT
+
+*** Irradiancia de Albedo
+
+\[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
+
+\[\rho=0.2\]
+
+*** Irradiancia sobre plano inclinado
+
+-  Calcular :: la irradiancia difusa, directa, de albedo y global, en
+
+   -  Un generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del mediodía del día 261 en un lugar con latitud  $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+
+# ** Incertidumbre
+# *** Variabilidad Interanual
+
+# [[../figs/VariabilidadRadiacionDiario.pdf]]
+
+# *** Incertidumbre
+
+# -  Predicción para un (día, mes, año) /determinado/:
+
+#    -  Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{G}$
+
+# -  Predicción para un (día, mes, año) /promedio (durante N años)/:
+
+#    -  Intervalo de confianza del 95% acotado por
+#       $1.96\cdot\sigma_{\overline{G}}$
+
+# \[\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}\]
+
+
+** Pérdidas angulares y por suciedad
+
+*** Radiación directa
+
+\[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
+
+[[../figs/Suciedad.pdf]]
+
+*** Difusa y Albedo
+#+BEGIN_EXPORT latex
+\begin{align*}
+D_{ef}^{iso}(\beta,\alpha) &= D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
+D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
+R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
+\end{align*}
+#+END_EXPORT
+*** Coeficientes
+
+
+| Grado de Suciedad | $\frac{T_{sucio}(0)}{T_{limpio}(0)}$ | $a_{r}$ | $c_{2}$ |
+|-------------------+--------------------------------------+---------+---------|
+| Limpio            |                                    1 |    0.17 |  -0.069 |
+| Bajo              |                                 0.98 |    0.20 |  -0.054 |
+| Medio             |                                 0.97 |    0.21 |  -0.049 |
+| Alto              |                                 0.92 |    0.27 |  -0.023 |
+
+*** Pérdidas anuales
+
+[[../figs/GefVSG.pdf]]
+
+
+
