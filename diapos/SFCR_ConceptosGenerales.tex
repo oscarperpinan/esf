@@ -1,4 +1,4 @@
-% Created 2018-01-08 lun 19:59
+% Created 2018-04-09 lun 18:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -29,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -41,19 +44,19 @@
  pdftitle={SFCR: Conceptos Generales},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.4)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Sistemas Fotovoltaicos de Conexión a Red}
-\label{sec:orgb5860a7}
+\label{sec:orgfb9050f}
 
 \subsection{Definición}
-\label{sec:orgcc353d2}
+\label{sec:org6ce806d}
 
-\begin{frame}[label={sec:org1360eb8}]{Definición de un SFCR}
+\begin{frame}[label={sec:org144e737}]{Definición de un SFCR}
 \begin{block}{}
 Un Sistema Fotovoltaico Conectado a la Red (SFCR) es un sistema cuya
 función es producir energía eléctrica en condiciones adecuadas para
@@ -66,8 +69,8 @@ poder ser inyectada en la red convencional.
 \end{frame}
 
 \subsection{Mecanismos de Retribución}
-\label{sec:org62ca59b}
-\begin{frame}[label={sec:orgfc15e9e}]{Mecanismos de retribución}
+\label{sec:orgac98b44}
+\begin{frame}[label={sec:orgacf90fa}]{Mecanismos de retribución}
 \begin{itemize}
 \item La energía producida por este sistema será consumida parcial o totalmente en las cercanías, y la energía sobrante será inyectada en la red para su distribución a otros puntos de consumo.
 
@@ -81,7 +84,7 @@ poder ser inyectada en la red convencional.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9185de7}]{Retribución con prima}
+\begin{frame}[label={sec:orge2c9fc7}]{Retribución con prima}
 \begin{itemize}
 \item \alert{Ingresos} por la \alert{energía total producida} (independientemente de la que
 haya sido consumida en las cercanías del SFCR).
@@ -93,7 +96,7 @@ tomar en consideración los consumos cercanos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org82498e0}]{Balance neto}
+\begin{frame}[label={sec:org35681ed}]{Balance neto}
 \begin{itemize}
 \item \alert{Compensa los saldos de energía eléctrica} entre el SFCR y un sistema de consumo asociado.
 
@@ -107,8 +110,8 @@ tomar en consideración los consumos cercanos.
 
 
 \subsection{SFCR en suelo y en edificación}
-\label{sec:org9e78e8c}
-\begin{frame}[label={sec:orgec2c33a}]{Características distintivas sobre suelo y en edificación}
+\label{sec:org9764daf}
+\begin{frame}[label={sec:orgc64209a}]{Características distintivas sobre suelo y en edificación}
 \begin{itemize}
 \item \alert{Sobre suelo}
 
@@ -135,7 +138,7 @@ o son elementos constituyentes de la composición arquitectónica
 \end{frame}
 
 
-\begin{frame}[label={sec:org5693e37}]{SFCR sobre suelo}
+\begin{frame}[label={sec:orgafb6edb}]{SFCR sobre suelo}
 \begin{itemize}
 \item \alert{Objetivo}: maximizar la producción energética anual del sistema con
 el menor coste y la menor ocupación de terreno posibles
@@ -157,13 +160,13 @@ empleado).
 \end{frame}
 
 
-\begin{frame}[label={sec:orge002655}]{Estructuras sobre suelo}
+\begin{frame}[label={sec:org3c8a5a1}]{Estructuras sobre suelo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org6e714d7}]{SFCR sobre suelo: seguimiento}
+\begin{frame}[label={sec:orga7166db}]{SFCR sobre suelo: seguimiento}
 \begin{itemize}
 \item \alert{Fundamento:}
 
@@ -179,7 +182,7 @@ mejores aprovechamientos del terreno.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9f5e324}]{SFCR sobre suelo: seguimiento}
+\begin{frame}[label={sec:org78a8b12}]{SFCR sobre suelo: seguimiento}
 \begin{itemize}
 \item \alert{Doble eje}
 
@@ -211,20 +214,20 @@ necesarios),
 \end{frame}
 
 
-\begin{frame}[label={sec:orge4093f3}]{Seguidor de eje horizontal N-S}
+\begin{frame}[label={sec:orgb2d9b7f}]{Seguidor de eje horizontal N-S}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgcdc2ce5}]{Seguidor de doble eje}
+\begin{frame}[label={sec:org883c5cf}]{Seguidor de doble eje}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb590880}]{SFCR en edificación}
+\begin{frame}[label={sec:org28d2153}]{SFCR en edificación}
 \begin{itemize}
 \item La integración del sistema fotovoltaico con el edificio exige tener en cuenta muchos factores que condicionan la ubicación y la configuración del generador.
 
@@ -232,7 +235,7 @@ necesarios),
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0b8739d}]{Integración arquitectónica}
+\begin{frame}[label={sec:org6d0e996}]{Integración arquitectónica}
 \begin{itemize}
 \item Cubierta Inclinada
 \item Cubierta Plana
@@ -248,44 +251,44 @@ necesarios),
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org23c1286}]{Cubierta Inclinada}
+\begin{frame}[label={sec:org26febb7}]{Cubierta Inclinada}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CubiertaInclinada.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3c86fec}]{Cubierta Plana}
+\begin{frame}[label={sec:org582bf95}]{Cubierta Plana}
 \begin{center}
 \includegraphics[width=.9\linewidth]{/home/oscar/github/esf/figs/CubiertaPlana.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org11cf1cd}]{Parasol}
+\begin{frame}[label={sec:orga4c1d15}]{Parasol}
 \begin{center}
 \includegraphics[height=0.9\textheight]{/home/oscar/github/esf/figs/Parasol.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge230a5b}]{Fachada Acristalada}
+\begin{frame}[label={sec:org63f5ef8}]{Fachada Acristalada}
 \begin{center}
 \includegraphics[width=.9\linewidth]{/home/oscar/github/esf/figs/FachadaAcristalada.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc006d50}]{Muro Cortina}
+\begin{frame}[label={sec:org331f5a4}]{Muro Cortina}
 \begin{center}
 \includegraphics[height=0.9\textheight]{/home/oscar/github/esf/figs/MuroCortina.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgadd42b6}]{Aparcamiento}
+\begin{frame}[label={sec:org94630ec}]{Aparcamiento}
 \begin{center}
 \includegraphics[height=0.8\textheight]{/home/oscar/github/esf/figs/Aparcamiento.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgf228bb5}]{SFCR en edificación: CTE-HE5}
+\begin{frame}[label={sec:org0cbcf7e}]{SFCR en edificación: CTE-HE5}
 \begin{itemize}
 \item El CTE-HTE5 divide España en cinco zonas climáticas de acuerdo al valor medio anual de la radiación global diaria en el plano horizontal.
 
@@ -295,7 +298,7 @@ necesarios),
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org633e962}]{SFCR en edificación: CTE-HE5}
+\begin{frame}[label={sec:org6f9ddba}]{SFCR en edificación: CTE-HE5}
 \begin{itemize}
 \item Potencia \alert{nominal} a instalar
 \end{itemize}
@@ -312,9 +315,9 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{frame}
 
 \subsection{Condiciones técnicas de la conexión}
-\label{sec:orgd1f473e}
+\label{sec:org80c69c2}
 
-\begin{frame}[label={sec:org923335b}]{SFCR en Edificación: sistemas eléctricos}
+\begin{frame}[label={sec:org4bfa46c}]{SFCR en Edificación: sistemas eléctricos}
 \begin{itemize}
 \item En este tipo de SFCR el diseño de los sistemas eléctricos debe tener en cuenta las canalizaciones previstas o existentes en el edificio.
 
@@ -324,13 +327,13 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0ee3ee6}]{Separación entre comercialización y generación}
+\begin{frame}[label={sec:orgd0387da}]{Separación entre comercialización y generación}
 \begin{itemize}
 \item La reglamentación eléctrica española establece la separación administrativa entre la comercialización y la distribución de la energía (así, la empresa que nos vende energía eléctrica en nuestro hogar es distinta a la que compra la energía que produce el sistema que podamos tener en nuestro tejado).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org480fe2e}]{Generación distribuida}
+\begin{frame}[label={sec:orgb5cb45d}]{Generación distribuida}
 \begin{itemize}
 \item Por tanto, al menos administrativamente, la generación fotovoltaica y el consumo cercano son dos elementos independientes.
 
@@ -340,7 +343,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5a1ee1c}]{El problema de la medida}
+\begin{frame}[label={sec:org5290b25}]{El problema de la medida}
 \begin{itemize}
 \item La separación existente entre empresa comercializadora y empresa distribuidora se refleja en la separación de contratos y facturas, y por tanto, también de elementos y puntos de medida.
 
@@ -350,7 +353,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf425727}]{Ejemplo: suministro en MT}
+\begin{frame}[label={sec:org36ae751}]{Ejemplo: suministro en MT}
 \begin{itemize}
 \item \alert{Titulares con contrato de suministro en Media Tensión con instalaciones fotovoltaicas de potencia menor a 100 kW}
 
@@ -364,7 +367,7 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc28c98e}]{Ejemplo: comunidades de vecinos}
+\begin{frame}[label={sec:org738d4d2}]{Ejemplo: comunidades de vecinos}
 \begin{itemize}
 \item \alert{Titulares en edificios de varias viviendas}
 
@@ -377,11 +380,11 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 \end{frame}
 
 \section{Inversor de CR}
-\label{sec:org73843dd}
+\label{sec:org4735b99}
 
 \subsection{Conceptos Generales}
-\label{sec:orgc7b9945}
-\begin{frame}[label={sec:org4924b5f}]{Acoplamiento a la red}
+\label{sec:org8147fea}
+\begin{frame}[label={sec:org123852d}]{Acoplamiento a la red}
 \begin{block}{}
 La potencia suministrada por un generador fotovoltaico iluminado es de
 tensión continua, que debe ser adecuadamente acondicionada para permitir
@@ -391,7 +394,7 @@ conexión a red.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orga6426f3}]{Definición}
+\begin{frame}[label={sec:orgb43ae30}]{Definición}
 \begin{itemize}
 \item El equipo de acondicionamiento de potencia, denominado inversor DC/AC, realiza la \alert{conversión de continua a alterna cumpliendo con  determinados requisitos} de tensión eficaz, frecuencia, distorsión armónica de las ondas de tensión y corriente, rendimiento instantáneo y medio, seguridad eléctrica, etc.
 
@@ -400,8 +403,8 @@ conexión a red.
 \end{frame}
 
 \subsection{Tipos de Inversores}
-\label{sec:orgef7adb3}
-\begin{frame}[label={sec:orgb2b9ae5}]{Tipos de inversores}
+\label{sec:org4f146fa}
+\begin{frame}[label={sec:org458a11b}]{Tipos de inversores}
 A grandes rasgos, los inversores pueden agruparse en tres categorías:
 
 \begin{itemize}
@@ -415,7 +418,7 @@ a una rama del generador.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org00b8d3a}]{Inversores de Rama}
+\begin{frame}[label={sec:org6a94194}]{Inversores de Rama}
 \begin{itemize}
 \item Los \alert{inversores orientados a rama} son particularmente útiles en
 algunos sistemas de integración arquitectónica, al poder adaptarse
@@ -427,7 +430,7 @@ pequeños sistemas demostrativos).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4f43712}]{Inversores Centrales}
+\begin{frame}[label={sec:org74c940a}]{Inversores Centrales}
 \begin{itemize}
 \item Los \alert{inversores centrales} son recomendables para instalaciones de
 medio o gran tamaño. Permiten reducir costes (de adquisición,
@@ -440,8 +443,8 @@ de 100 kW o 4 de 250 kW, pero no con 200 de 5 kW).
 \end{frame}
 
 \subsection{Características básicas}
-\label{sec:org1f9a302}
-\begin{frame}[label={sec:orge7478f7}]{Potencia y ventana MPP}
+\label{sec:org96a9ef1}
+\begin{frame}[label={sec:org84f7241}]{Potencia y ventana MPP}
 \begin{itemize}
 \item \alert{Potencia nominal y máxima}, siendo ésta un porcentaje de sobrecarga
 que el equipo es capaz de soportar durante un determinado período de
@@ -453,7 +456,7 @@ algoritmo de búsqueda del MPP del generador fotovoltaico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1c23bdd}]{Tensiones}
+\begin{frame}[label={sec:org5bfc68e}]{Tensiones}
 \begin{itemize}
 \item \alert{Tensión máxima de entrada}: es la máxima tensión que el inversor
 puede aguantar sin sufrir una avería.
@@ -469,7 +472,7 @@ necesaria para que el inversor comience el proceso de conversión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7276242}]{Eficiencia y Rendimiento}
+\begin{frame}[label={sec:org5421473}]{Eficiencia y Rendimiento}
 \begin{itemize}
 \item \alert{Eficiencia máxima}: máximo valor que toma la relación entre potencia
 de salida y potencia de entrada. En inversores de calidad la
@@ -483,8 +486,8 @@ características de la zona centroeuropea.
 \end{itemize}
 \end{frame}
 \subsection{Composición}
-\label{sec:org3f7a49b}
-\begin{frame}[label={sec:org5994a1e}]{Entrada}
+\label{sec:orged3c062}
+\begin{frame}[label={sec:org382301e}]{Entrada}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 \end{center}
@@ -499,7 +502,7 @@ realizar las funciones de búsqueda del punto de máxima potencia.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org72aabfb}]{Puente y salida}
+\begin{frame}[label={sec:org8871d65}]{Puente y salida}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 \end{center}
@@ -516,7 +519,7 @@ AC.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7ed8eed}]{Control}
+\begin{frame}[label={sec:orgc0d220e}]{Control}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 \end{center}
@@ -531,14 +534,14 @@ salida del inversor.
 \end{frame}
 
 \subsection{Funcionamiento}
-\label{sec:org301913a}
-\begin{frame}[label={sec:org8dc736a}]{Modulación SPWM}
+\label{sec:orgd070f36}
+\begin{frame}[label={sec:org714b432}]{Modulación SPWM}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SPWMMonofasico.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd1173a0}]{Busqueda del Punto de Máxima Potencia}
+\begin{frame}[label={sec:org7350519}]{Busqueda del Punto de Máxima Potencia}
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/CurvaIV_Ta20_G800.pdf}
 \end{center}
@@ -549,7 +552,7 @@ $$\begin{cases}
       \frac{dP}{dV}<0 & V_{mpp}<V<V_{oc}\end{cases}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgbf3f932}]{Busqueda del Punto de Máxima Potencia}
+\begin{frame}[label={sec:org723158f}]{Busqueda del Punto de Máxima Potencia}
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/CurvaIV_Ta20_G800.pdf}
 \end{center}
@@ -560,7 +563,7 @@ $$\begin{cases}
       \frac{dI}{dV}<-\frac{I}{V} & V_{mpp}<V<V_{oc}\end{cases}$$
 \end{frame}
 
-\begin{frame}[label={sec:org92c151f}]{Transformador de salida}
+\begin{frame}[label={sec:org669def3}]{Transformador de salida}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/InversorPV.pdf}
 \end{center}
@@ -578,7 +581,7 @@ y la salida (AC).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgcfb4449}]{Opciones comerciales}
+\begin{frame}[label={sec:org876b5a0}]{Opciones comerciales}
 Existen tres opciones en el mercado de inversores de conexión a red:
 
 \begin{itemize}
@@ -590,7 +593,7 @@ Existen tres opciones en el mercado de inversores de conexión a red:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb80b605}]{Normativa relativa al transformador}
+\begin{frame}[label={sec:orgfa99796}]{Normativa relativa al transformador}
 La normativa vigente en España obliga al uso de un transformador de aislamiento o elemento equivalente para cumplir tres objetivos:
 
 \begin{enumerate}
@@ -602,7 +605,7 @@ La normativa vigente en España obliga al uso de un transformador de aislamiento
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[label={sec:org75dd020}]{Normativa: Nota de Interpretación Tecnica}
+\begin{frame}[label={sec:org9c52953}]{Normativa: Nota de Interpretación Tecnica}
 \begin{itemize}
 \item Objetivos 1 y 2 se consiguen mediante la adecuada conexión de masas y tierras en el sistema.
 
@@ -611,14 +614,14 @@ La normativa vigente en España obliga al uso de un transformador de aislamiento
 \end{frame}
 
 \subsection{Islanding}
-\label{sec:orgd85591a}
-\begin{frame}[label={sec:org441f797}]{Definición del problema}
+\label{sec:orge11ffb6}
+\begin{frame}[label={sec:org5836dd2}]{Definición del problema}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Isla.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge145cb9}]{Ecuaciones básicas}
+\begin{frame}[label={sec:orge5f9602}]{Ecuaciones básicas}
 Antes de la desconexión:$$\Delta P=P_{carga}-P_{PV}$$
 
 $$\Delta Q=Q_{carga}-Q_{PV}\simeq Q_{carga}$$
@@ -630,7 +633,7 @@ $$P_{carga}=\frac{V^{2}}{R_{carga}}$$
 $$Q_{carga}=\frac{V^{2}}{\omega L}-V^{2}\omega C$$
 \end{frame}
 
-\begin{frame}[label={sec:orgf060fc5}]{Casos posibles}
+\begin{frame}[label={sec:org5b83677}]{Casos posibles}
 \begin{itemize}
 \item \(\Delta P^{-}>0\rightarrow P_{carga}>P_{PV}\). Al producirse la
 desconexión, dado que \(P_{PV}\) no cambia, disminuye la potencia
@@ -650,7 +653,7 @@ reactiva debe tender a cero, y por tanto disminuye la frecuencia.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfaf4f0f}]{Ventana de no-detección}
+\begin{frame}[label={sec:org9224e14}]{Ventana de no-detección}
 Cuando las condiciones de trabajo del generador y el consumo antes de la
 desconexión son muy cercanas, existe una ventana de no-detección.
 
@@ -661,7 +664,7 @@ desconexión son muy cercanas, existe una ventana de no-detección.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3ff395f}]{Estudio experimental IEA-PVPS}
+\begin{frame}[label={sec:orgea0b096}]{Estudio experimental IEA-PVPS}
 \begin{itemize}
 \item La probabilidad de que se de una situación de balance entre consumo y
 generación en una red de Baja Tensión está entre \(\num{1e-5}\) y
@@ -673,7 +676,7 @@ de estos dos sucesos es virtualmente nula.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4f5cad7}]{Estudio experimental IEA-PVPS}
+\begin{frame}[label={sec:org5d42e58}]{Estudio experimental IEA-PVPS}
 \begin{itemize}
 \item El riesgo eléctrico existente en cualquier red eléctrica es del orden
 de \(\num{1e-6}\).

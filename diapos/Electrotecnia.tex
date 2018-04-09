@@ -1,4 +1,4 @@
-% Created 2017-10-12 jue 14:25
+% Created 2018-04-09 lun 18:24
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -29,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -41,17 +44,17 @@
  pdftitle={Electrotecnia},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Conceptos preliminares}
-\label{sec:orgcfd3182}
+\label{sec:org0450334}
 \subsection{Definiciones}
-\label{sec:org134c22f}
-\begin{frame}[label={sec:org7349db4}]{Sistema de suministro eléctrico}
+\label{sec:orgcd65bd6}
+\begin{frame}[label={sec:org1750916}]{Sistema de suministro eléctrico}
 Un \alert{sistema de suministro eléctrico} tiene como objetivo \alert{producir,
 transportar y distribuir energía eléctrica} a los lugares de consumo,
 con el mínimo coste posible en condiciones de \alert{fiabilidad, calidad y
@@ -73,13 +76,13 @@ algunos casos, almacenamiento)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8a9a9a0}]{Sistema de suministro eléctrico}
+\begin{frame}[label={sec:orgdd32162}]{Sistema de suministro eléctrico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Redelectrica2.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org07e7d56}]{Electricidad}
+\begin{frame}[label={sec:org76ce2c0}]{Electricidad}
 \begin{itemize}
 \item La electricidad es un fenómeno físico asociado al \alert{movimiento de las
 cargas eléctricas}.
@@ -93,7 +96,7 @@ Este movimiento se realiza mediante un trabajo, cuantificado por el
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4167732}]{Intensidad de Corriente eléctrica}
+\begin{frame}[label={sec:orge79a529}]{Intensidad de Corriente eléctrica}
 \begin{itemize}
 \item \alert{Variación de la carga con el tiempo en la sección transversal de un
 conductor} $$i(t)=\frac{dq(t)}{dt}$$
@@ -111,7 +114,7 @@ un nudo es igual a la suma de las que salen.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6349c76}]{Tensión. Diferencia de potencial}
+\begin{frame}[label={sec:orgedfdbd0}]{Tensión. Diferencia de potencial}
 \begin{itemize}
 \item \alert{Trabajo realizado al mover una carga unidad entre dos puntos}.
 \end{itemize}
@@ -127,7 +130,7 @@ escribir: $$\begin{aligned}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org33f1860}]{Potencia eléctrica}
+\begin{frame}[label={sec:org0a071b0}]{Potencia eléctrica}
 \begin{itemize}
 \item Trabajo realizado por unidad de tiempo
 $$p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)$$
@@ -146,7 +149,7 @@ lo largo de un camino cerrado (circuito) es cero
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge346591}]{Potencia eléctrica}
+\begin{frame}[label={sec:org797c6e6}]{Potencia eléctrica}
 \begin{description}
 \item[{Ejemplo:}] en el dipolo de la figura se absorbe potencia (\(p(t)>0\))
 \end{description}
@@ -155,7 +158,7 @@ lo largo de un camino cerrado (circuito) es cero
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2c1a7d9}]{Potencia y Energía}
+\begin{frame}[label={sec:orgb25a21b}]{Potencia y Energía}
 \begin{description}
 \item[{Energía}] es la capacidad para realizar un trabajo.
 
@@ -170,7 +173,7 @@ Unidades W, kW
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org1fd2769}]{Eficiencia y Rendimiento}
+\begin{frame}[label={sec:org3640855}]{Eficiencia y Rendimiento}
 \begin{description}
 \item[{Eficiencia}] de un proceso es la relación entre la \emph{potencia} de
 salida y la \emph{potencia} de entrada a ese proceso.
@@ -181,8 +184,8 @@ salida y la \emph{energía} de entrada a ese proceso.
 \end{frame}
 
 \subsection{Elementos Lineales}
-\label{sec:org727f66a}
-\begin{frame}[label={sec:org2e51f56}]{Generadores}
+\label{sec:org01e620f}
+\begin{frame}[label={sec:org9f7f2f5}]{Generadores}
 \begin{itemize}
 \item \alert{Generador de tensión}: su tensión es independiente de la corriente
 (la corriente la fija el circuito)
@@ -210,7 +213,7 @@ salida y la \emph{energía} de entrada a ese proceso.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2e9976c}]{Resistencia}
+\begin{frame}[label={sec:org17b3482}]{Resistencia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Resistencia.pdf}
 \end{center}
@@ -228,7 +231,7 @@ longitud: \(R=\rho\cdot\frac{L}{S}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgdb158fb}]{Resistencia}
+\begin{frame}[label={sec:org3f0a89b}]{Resistencia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Resistencia.pdf}
 \end{center}
@@ -244,7 +247,7 @@ longitud: \(R=\rho\cdot\frac{L}{S}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org8e19608}]{Bobina o inductancia}
+\begin{frame}[label={sec:org27c32bb}]{Bobina o inductancia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Bobina.pdf}
 \end{center}
@@ -261,7 +264,7 @@ $$v(t)=L\cdot\frac{di(t)}{dt}$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org602983f}]{Bobina o inductancia}
+\begin{frame}[label={sec:org18ebbd9}]{Bobina o inductancia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Bobina.pdf}
 \end{center}
@@ -277,7 +280,7 @@ tensión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6681675}]{Condensador}
+\begin{frame}[label={sec:orge614361}]{Condensador}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Condensador.pdf}
 \end{center}
@@ -293,7 +296,7 @@ tensión entre las placas es la capacidad $$C=\frac{Q}{V_{AB}}$$
 \end{frame}
 
 
-\begin{frame}[label={sec:orge92a8b6}]{Condensador}
+\begin{frame}[label={sec:org6fcca7b}]{Condensador}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Condensador.pdf}
 \end{center}
@@ -312,8 +315,8 @@ cargado se comporta como un circuito abierto.
 \end{frame}
 
 \subsection{Elementos No Lineales}
-\label{sec:org3b41124}
-\begin{frame}[label={sec:org0eb727e}]{Diodo}
+\label{sec:org4535e75}
+\begin{frame}[label={sec:orgee0a00d}]{Diodo}
 \begin{center}
 \includegraphics[height=0.15\textheight]{../figs/Diodo.pdf}
 \end{center}
@@ -327,7 +330,7 @@ Cuando conduce se comporta (idealmente) como un cortocircuito.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org64e284e}]{Diodo}
+\begin{frame}[label={sec:orga160e9c}]{Diodo}
 \begin{center}
 \includegraphics[height=0.15\textheight]{../figs/Diodo.pdf}
 \end{center}
@@ -345,7 +348,7 @@ del circuito en ciertas condiciones)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgebf009f}]{Transistor}
+\begin{frame}[label={sec:org9f4d09e}]{Transistor}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/Transistor.pdf}
 \end{center}
@@ -362,7 +365,7 @@ tercer terminal está polarizado adecuadamente.
 \end{frame}
 
 
-\begin{frame}[label={sec:org4294951}]{Transistor}
+\begin{frame}[label={sec:orgd373d81}]{Transistor}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/Transistor.pdf}
 \end{center}
@@ -379,8 +382,8 @@ control es reproducida en la salida con mayor amplitud)
 \end{frame}
 
 \subsection{Asociación de elementos pasivos}
-\label{sec:orgefd85c5}
-\begin{frame}[label={sec:org3aea700}]{Conexión en serie}
+\label{sec:org7716892}
+\begin{frame}[label={sec:orged023fb}]{Conexión en serie}
 \begin{block}{Misma corriente por todos los elementos: la tensión se reparte}
 \(R_{s}=\sum_{i}R_{i}\)
 
@@ -393,7 +396,7 @@ control es reproducida en la salida con mayor amplitud)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org36b554f}]{Conexión en paralelo}
+\begin{frame}[label={sec:orgbbf0a41}]{Conexión en paralelo}
 \begin{block}{Misma tensión aplicada a todos los elementos: la corriente se reparte}
 \(\frac{1}{R_{p}}=\sum_{i}\frac{1}{R_{i}}\)
 
@@ -407,10 +410,10 @@ control es reproducida en la salida con mayor amplitud)
 \end{frame}
 
 \section{Corriente alterna sinusoidal}
-\label{sec:org1d1176b}
+\label{sec:orga8dd77d}
 \subsection{Conceptos Fundamentales}
-\label{sec:orgd3ab48b}
-\begin{frame}[label={sec:org1051934}]{Pulsación - Frecuencia - Fase}
+\label{sec:org2d2ec31}
+\begin{frame}[label={sec:orge669f78}]{Pulsación - Frecuencia - Fase}
 $$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
 
 \begin{itemize}
@@ -438,7 +441,7 @@ respecto a la referencia.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge0ae1bf}]{Pulsación - Frecuencia - Fase}
+\begin{frame}[label={sec:orgb3a6797}]{Pulsación - Frecuencia - Fase}
 $$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
 
 \begin{center}
@@ -446,7 +449,7 @@ $$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org6c5e235}]{Valor medio y valor eficaz}
+\begin{frame}[label={sec:orgccd74bf}]{Valor medio y valor eficaz}
 \begin{itemize}
 \item \alert{Valor medio}: $$Y_m=\frac{1}{T}\int_{0}^{T}y(t)$$
 
@@ -468,7 +471,7 @@ $$Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\cos(\omega\cdot
       t+\phi)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgc484455}]{Representación fasorial}
+\begin{frame}[label={sec:orgd01500f}]{Representación fasorial}
 $$\overline{Y}=Y\cdot e^{j\phi}=Y\cdot(\cos(\phi)+\mathrm{j}\cdot\sin(\phi))$$
 
 \begin{center}
@@ -477,8 +480,8 @@ $$\overline{Y}=Y\cdot e^{j\phi}=Y\cdot(\cos(\phi)+\mathrm{j}\cdot\sin(\phi))$$
 \end{frame}
 
 \subsection{Impedancia}
-\label{sec:orgacff3e8}
-\begin{frame}[label={sec:orgb5f347c}]{Impedancia}
+\label{sec:org3cc1ff8}
+\begin{frame}[label={sec:org76e9e8b}]{Impedancia}
 $$\begin{aligned}
   \overline{R} & = & R\\
   \overline{X}_{c} & = & \frac{1}{j\omega C}\\
@@ -493,7 +496,7 @@ $$\begin{aligned}
 \end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:org143106d}]{Impedancia}
+\begin{frame}[label={sec:org9672d76}]{Impedancia}
 $$\overline{I}=\frac{\overline{V}}{\overline{Z}}=\frac{V}{Z}\cdot
 e^{j(\phi_{V}-\phi_{Z})}=I\cdot e^{j\phi_{I}}$$
 \begin{center}
@@ -501,7 +504,7 @@ e^{j(\phi_{V}-\phi_{Z})}=I\cdot e^{j\phi_{I}}$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org76e60a9}]{Convenio de signos para Desfase}
+\begin{frame}[label={sec:org963cd3d}]{Convenio de signos para Desfase}
 \begin{itemize}
 \item La tensión es origen de fases (\(\phi_{V}=0\)).
 
@@ -517,33 +520,33 @@ respecto de tensión) \(\phi\) es positivo}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org50dbcf7}]{Circuito Capacitivo puro}
+\begin{frame}[label={sec:org0657023}]{Circuito Capacitivo puro}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivoPuro.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org18609c9}]{Circuito Inductivo puro}
+\begin{frame}[label={sec:orgedb814b}]{Circuito Inductivo puro}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivoPuro.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3a59c0a}]{Circuito Capacitivo}
+\begin{frame}[label={sec:orgd1daae6}]{Circuito Capacitivo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivo.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org42e978e}]{Circuito Inductivo}
+\begin{frame}[label={sec:org3a2390d}]{Circuito Inductivo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivo.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Potencia}
-\label{sec:orgc6ee297}
-\begin{frame}[label={sec:orgebd8822}]{Circuito Capacitivo puro}
+\label{sec:orgf642837}
+\begin{frame}[label={sec:org10f0727}]{Circuito Capacitivo puro}
 \begin{block}{Potencia}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivoPuro_Potencia.pdf}
@@ -551,7 +554,7 @@ respecto de tensión) \(\phi\) es positivo}.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf1d5dc6}]{Circuito Inductivo puro}
+\begin{frame}[label={sec:org6b65c60}]{Circuito Inductivo puro}
 \begin{block}{Potencia}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivoPuro_Potencia.pdf}
@@ -559,7 +562,7 @@ respecto de tensión) \(\phi\) es positivo}.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgff5de3a}]{Circuito Capacitivo}
+\begin{frame}[label={sec:org13bbe24}]{Circuito Capacitivo}
 \begin{block}{Potencia}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivo_Potencia.pdf}
@@ -567,7 +570,7 @@ respecto de tensión) \(\phi\) es positivo}.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org107c249}]{Circuito Inductivo}
+\begin{frame}[label={sec:org1759831}]{Circuito Inductivo}
 \begin{block}{Potencia}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivo_Potencia.pdf}
@@ -575,14 +578,14 @@ respecto de tensión) \(\phi\) es positivo}.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf7ab076}]{Potencia Activa, Reactiva y Aparente}
+\begin{frame}[label={sec:org9eaef88}]{Potencia Activa, Reactiva y Aparente}
 $$\begin{aligned}
   P & = & V\cdot I\cdot\cos(\phi)\\
   Q & = & V\cdot I\cdot\sin(\phi)\\
   S & = & P+jQ\end{aligned}$$
 \end{frame}
 
-\begin{frame}[label={sec:org1cc257b}]{Potencia de elementos}
+\begin{frame}[label={sec:org85f358f}]{Potencia de elementos}
 \begin{itemize}
 \item Una \alert{resistencia sólo consume potencia activa} (\(\cos(\phi)=1\)).
 
@@ -594,7 +597,7 @@ potencia reactiva} (\(\sin(\phi)=1\))
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfdb946a}]{Compensación de reactiva}
+\begin{frame}[label={sec:orgc8f856d}]{Compensación de reactiva}
 \begin{itemize}
 \item El factor de potencia (\(\cos(\phi)\)) representa el desfase entre
 tensión y corriente.
@@ -619,7 +622,7 @@ activa
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd78906b}]{Compensación de reactiva}
+\begin{frame}[label={sec:orgc950355}]{Compensación de reactiva}
 \begin{itemize}
 \item Comúnmente, el factor de potencia es \alert{inductivo} (máquinas eléctricas
 industriales).
@@ -636,7 +639,7 @@ suministradores de potencia reactiva.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge4c3cfe}]{Resonancia}
+\begin{frame}[label={sec:org6b1d8cd}]{Resonancia}
 Para un circuito serie R-L-C:
 
 $$Z=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}$$
@@ -651,8 +654,8 @@ activa).
 \end{frame}
 
 \subsection{Trifásica}
-\label{sec:org00ebd1f}
-\begin{frame}[label={sec:org8f098ff}]{Motivación de los sistemas trifásicos}
+\label{sec:org901d1c1}
+\begin{frame}[label={sec:org9414ce2}]{Motivación de los sistemas trifásicos}
 \begin{itemize}
 \item La potencia instantánea de un sistema monofásico es pulsante. En un
 sistema trifásico la potencia instantánea es constante, evitando
@@ -663,13 +666,13 @@ necesaria es un 25\% en un trifásico que en un monofásico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge307ebd}]{Generación de un sistema trifásico}
+\begin{frame}[label={sec:org3c1a3c6}]{Generación de un sistema trifásico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TensionesTrifasica.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge3ce18f}]{Fase y línea}
+\begin{frame}[label={sec:org76b7350}]{Fase y línea}
 \begin{block}{Receptor en Estrella (cuatro hilos, 3F+1N)}
 $$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
 $$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
@@ -679,7 +682,7 @@ $$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3c89a1e}]{Fase y línea}
+\begin{frame}[label={sec:orgedb80c1}]{Fase y línea}
 \begin{block}{Receptor en Estrella (cuatro hilos, 3F+1N)}
 $$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
 $$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
@@ -689,7 +692,7 @@ $$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgb4d10ff}]{Fase y línea}
+\begin{frame}[label={sec:org4c8d5a7}]{Fase y línea}
 \begin{block}{Receptor en Triangulo (tres hilos, 3F)}
 $$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
 $$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
@@ -699,7 +702,7 @@ $$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org947853d}]{Fase y línea}
+\begin{frame}[label={sec:org838aaea}]{Fase y línea}
 \begin{block}{Receptor en Triangulo (tres hilos, 3F)}
 $$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
 $$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
@@ -710,10 +713,10 @@ $$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 \end{frame}
 
 \section{Máquinas Eléctricas}
-\label{sec:org766fdd5}
+\label{sec:org27e2305}
 \subsection{Fundamentos de Electromagnetismo}
-\label{sec:org350aed1}
-\begin{frame}[label={sec:org0784476}]{Electromagnetismo}
+\label{sec:orgef07472}
+\begin{frame}[label={sec:org332ba23}]{Electromagnetismo}
 \begin{itemize}
 \item Un campo magnético ejerce una fuerza sobre una carga en movimiento.
 (Fuerza de Lorentz)
@@ -724,7 +727,7 @@ $$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org8a77a96}]{Electromagnetismo}
+\begin{frame}[label={sec:orgc354619}]{Electromagnetismo}
 \begin{itemize}
 \item Una corriente eléctrica crea un campo magnético en torno al
 conductor. (Oersted, Biot-Savart)
@@ -735,7 +738,7 @@ conductor. (Oersted, Biot-Savart)
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org88f3308}]{Electromagnetismo}
+\begin{frame}[label={sec:org4979ed0}]{Electromagnetismo}
 \begin{itemize}
 \item Un conductor por el que circula corriente, situado en el seno de un
 campo magnético, altera este campo magnético, y experimenta una
@@ -751,7 +754,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=2j8D\_N1v0tU}{Repulsión entre barr
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org22ca8d0}]{Electromagnetismo}
+\begin{frame}[label={sec:org465bf10}]{Electromagnetismo}
 \begin{itemize}
 \item Entre los puntos extremos de una espira estática atravesada por un
 campo magnético, aparece una \alert{tensión inducida siempre que el flujo
@@ -763,7 +766,7 @@ coinciden.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6534dda}]{Electromagnetismo}
+\begin{frame}[label={sec:orgf16c7cb}]{Electromagnetismo}
 \begin{itemize}
 \item La tensión inducida es directamente proporcional a la rapidez con que
 cambia en el tiempo el flujo magnético que atraviesa la superficie
@@ -774,13 +777,13 @@ aquel que es atravesado por este flujo es el \alert{inducido}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc17031f}]{Electromagnetismo}
+\begin{frame}[label={sec:orgba775b3}]{Electromagnetismo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Electric_motor_cycle_3.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc94fad1}]{Electromagnetismo}
+\begin{frame}[label={sec:org4f6f46f}]{Electromagnetismo}
 \begin{block}{Tensión, frecuencia y flujo}
 $$\begin{aligned}
   E & = & 4.44\cdot N\cdot\phi\cdot f\end{aligned}$$
@@ -795,7 +798,7 @@ frecuencia.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org0988c88}]{Electromagnetismo}
+\begin{frame}[label={sec:orgf4847d1}]{Electromagnetismo}
 \begin{block}{Par, potencia y velocidad}
 $$\begin{aligned}
   P & = & T\cdot\omega\end{aligned}$$
@@ -811,8 +814,8 @@ estator y rotor. Una vez que están alineados, el par es nulo.
 \end{frame}
 
 \subsection{Tipos de máquinas}
-\label{sec:org6a6b70d}
-\begin{frame}[label={sec:org7d7c35a}]{Relación de Frecuencias}
+\label{sec:org19742d9}
+\begin{frame}[label={sec:org141acb4}]{Relación de Frecuencias}
 \begin{block}{Frecuencia eléctrica y velocidad}
 $$\begin{aligned}
   f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
@@ -827,7 +830,7 @@ frecuencia en el circuito exterior (\(f_{L}\)) es diferente a \(f_{2}\).
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf95b4af}]{Clasificación de máquinas}
+\begin{frame}[label={sec:orga6d20a2}]{Clasificación de máquinas}
 \begin{itemize}
 \item Estáticas (\(n=0\Rightarrow f_{2}=f_{1}\)): Transformadores
 
@@ -855,7 +858,7 @@ frecuencia en el circuito exterior (\(f_{L}\)) es diferente a \(f_{2}\).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgaeda8c7}]{Transformador}
+\begin{frame}[label={sec:org623a1ed}]{Transformador}
 \begin{itemize}
 \item Un transformador consiste en dos bobinas acopladas magnéticamente.
 
@@ -871,7 +874,7 @@ $$\frac{V_{p}}{N_{p}}=\frac{V_{s}}{N_{s}}$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org00c7e0e}]{Transformador}
+\begin{frame}[label={sec:orgf0a88a3}]{Transformador}
 \begin{itemize}
 \item Un transformador ideal con relación de transformación \(N_{p}/N_{s}<1\)
 (más vueltas en el secundario que en el primario), sube tensión
@@ -883,7 +886,7 @@ $$\frac{V_{p}}{N_{p}}=\frac{V_{s}}{N_{s}}$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga82357b}]{Motores}
+\begin{frame}[label={sec:org3d08cc0}]{Motores}
 \begin{block}{Motor DC}
 \begin{itemize}
 \item \(f_{1}=0\); \(f_{L}=0\);
@@ -898,7 +901,7 @@ en alterna.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org6e0aa5c}]{Motores}
+\begin{frame}[label={sec:org8495609}]{Motores}
 \begin{block}{Motor asíncrono o de inducción}
 \begin{itemize}
 \item \(f_{1}\neq0\);
@@ -921,7 +924,7 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 \end{center}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orgfe4c62b}]{Generadores}
+\begin{frame}[label={sec:org275ecdc}]{Generadores}
 \begin{block}{Generador Síncrono o Alternador}
 \begin{itemize}
 \item \(f_{1}=0\);
@@ -939,7 +942,7 @@ estator.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org818f1b4}]{Generadores}
+\begin{frame}[label={sec:orgf3dd78a}]{Generadores}
 \begin{block}{Dinamo}
 \begin{itemize}
 \item \(f_{1}=0\); \(f_{L}=0\);
@@ -959,10 +962,10 @@ en el inducido con \(f_{2}\).
 \end{frame}
 
 \section{Aparamenta eléctrica}
-\label{sec:orgff04b7d}
+\label{sec:org758afee}
 \subsection{Definición y Funciones}
-\label{sec:org0c44572}
-\begin{frame}[label={sec:org15c45ad}]{Definición}
+\label{sec:orgbaa756e}
+\begin{frame}[label={sec:org582be05}]{Definición}
 \begin{block}{ITC-BT-01}
 \begin{description}
 \item[{Aparamenta:}] Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: \alert{protección}, \alert{control}, \alert{seccionamiento}, \alert{conexión}.
@@ -974,7 +977,7 @@ instalación.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org27a708a}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:orgff13f0d}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Protección}:
 
@@ -990,7 +993,7 @@ aislamiento.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org50cd8ec}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:org3f70e39}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Aislamiento}: separar de forma verificable un circuito, un aparato o
 un elemento de la planta del resto de un sistema que se encuentra en
@@ -999,7 +1002,7 @@ seguridad trabajos en la parte aislada.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd59e5f5}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:org134f910}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Control:} modificar un sistema cargado en cualquier momento
 
@@ -1013,7 +1016,7 @@ seguridad trabajos en la parte aislada.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3a2cc72}]{Arco Eléctrico}
+\begin{frame}[label={sec:org74c9e95}]{Arco Eléctrico}
 \begin{itemize}
 \item Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
 \item Durante el tiempo de la descarga se produce una luminosidad muy intensa y un gran desprendimiento de calor.
@@ -1025,7 +1028,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org42737d2}]{Poder de corte y cierre}
+\begin{frame}[label={sec:orgede7857}]{Poder de corte y cierre}
 \begin{description}
 \item[{Poder de corte:}] intensidad de corriente que este dispositivo es
 capaz de cortar, bajo una tensión de restablecimiento determinada.
@@ -1036,8 +1039,8 @@ de establecer, bajo una tensión dada.
 \end{frame}
 
 \subsection{Tipos de Dispositivos}
-\label{sec:org8b35504}
-\begin{frame}[label={sec:orgfce47d7}]{Dispositivos simples}
+\label{sec:org0b603fa}
+\begin{frame}[label={sec:orgb887b9a}]{Dispositivos simples}
 \begin{block}{Seccionador}
 \begin{itemize}
 \item Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
@@ -1054,7 +1057,7 @@ de establecer, bajo una tensión dada.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org8551e7f}]{Dispositivos simples}
+\begin{frame}[label={sec:orgebbea76}]{Dispositivos simples}
 \begin{block}{Contactor}
 \begin{itemize}
 \item Dispositivo accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
@@ -1074,7 +1077,7 @@ de establecer, bajo una tensión dada.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org7f8b092}]{Interruptor magnetotérmico}
+\begin{frame}[label={sec:org9f01e81}]{Interruptor magnetotérmico}
 \begin{itemize}
 \item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
 
@@ -1090,13 +1093,13 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfddf3e8}]{Interruptor Magnetotérmico}
+\begin{frame}[label={sec:org89a1716}]{Interruptor Magnetotérmico}
 \begin{center}
 \includegraphics[height=0.8\textheight]{../figs/SeccionMagnetotermico.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb2831dd}]{Interruptor diferencial}
+\begin{frame}[label={sec:orgdcc9e89}]{Interruptor diferencial}
 \begin{itemize}
 \item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando existe una corriente diferencial residual, indicativa de un defecto de aislamiento.
 \item Para la detección emplea un transformador toroidal que abraza a todos los conductores.
@@ -1105,7 +1108,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9b18b49}]{Interruptor Diferencial}
+\begin{frame}[label={sec:org95537ba}]{Interruptor Diferencial}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/InterruptorDiferencial.pdf}
 \end{center}
@@ -1116,8 +1119,8 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{frame}
 
 \section{Análisis en frecuencia}
-\label{sec:orge54cdac}
-\begin{frame}[label={sec:orgaae7030}]{Análisis de Fourier}
+\label{sec:orgbd64d56}
+\begin{frame}[label={sec:org4c37dee}]{Análisis de Fourier}
 \begin{itemize}
 \item Un señal periódica puede ser descompuesta en sus armónicos mediante la serie de Fourier:
 \end{itemize}
@@ -1133,13 +1136,13 @@ $$x(t)=a_{0}+A_{1}\cdot\sin(\omega t+\phi_{1})+A_{2}\cdot\sin(2\omega
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9edd8cf}]{Armónicos}
+\begin{frame}[label={sec:orgb5c81fb}]{Armónicos}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Armonicos.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org38cd57d}]{Distorsión armónica}
+\begin{frame}[label={sec:org13636f7}]{Distorsión armónica}
 En general, los armónicos son inevitables pero indeseables. Para
 caracterizar el contenido en armónicos se utiliza:
 
@@ -1157,7 +1160,7 @@ Cuando \(a_{0}=0\) (señal sin componente de continua)
 $$FD_{a_{0}=0}=\frac{1}{\sqrt{1+THD^{2}}}$$
 \end{frame}
 
-\begin{frame}[label={sec:org091861c}]{Potencia aparente}
+\begin{frame}[label={sec:orgb9a05a5}]{Potencia aparente}
 Al existir distorsión, $$S^{2}\neq P^{2}+Q^{2}$$
 
 Se define una nueva potencia, la potencia de distorsión
@@ -1171,8 +1174,8 @@ $$FP=FD\cdot\cos(\phi_{1})=\frac{\cos(\phi_{1})}{\sqrt{1+THD^{2}}}$$
 \end{frame}
 
 \section{Recursos}
-\label{sec:orgc8db4bf}
-\begin{frame}[label={sec:orgb2fb06f}]{Bibliografía}
+\label{sec:org9ab4c0b}
+\begin{frame}[label={sec:org09cd03f}]{Bibliografía}
 \begin{itemize}
 \item \alert{Fraile Mora, J.}: \emph{Circuitos Eléctricos}. Ed. Prentice Hall.
 
@@ -1186,7 +1189,7 @@ Mc. Graw Hill.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf83ddc0}]{Enlaces útiles}
+\begin{frame}[label={sec:org970c617}]{Enlaces útiles}
 \begin{itemize}
 \item \href{http://www.f2i2.net/legislacionseguridadindustrial/Si\_ambito.aspx?id\_am=76}{Reglamento Electrotécnico de Baja Tensión}
 

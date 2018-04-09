@@ -1,4 +1,4 @@
-% Created 2018-04-02 lun 17:39
+% Created 2018-04-09 lun 18:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -30,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -50,9 +52,9 @@
 \maketitle
 
 \section{Motivation}
-\label{sec:org9c78e8f}
+\label{sec:org01fddca}
 
-\begin{frame}[label={sec:org8edacdc}]{Radiation and PV Systems}
+\begin{frame}[label={sec:org209381e}]{Radiation and PV Systems}
 \begin{itemize}
 \item The energy produced by a PV system depends mainly on the solar radiation incident on the PV generator.
 
@@ -65,8 +67,8 @@
 \end{frame}
 
 \section{Key concepts}
-\label{sec:orgf7faae9}
-\begin{frame}[label={sec:org255c1f3}]{Solar Radiation cannot be computed}
+\label{sec:org2115a3d}
+\begin{frame}[label={sec:org30e2aaa}]{Solar Radiation cannot be computed}
 \begin{itemize}
 \item Solar radiation reaching the earth surface is the result of \alert{complex interactions with the atmosphere}.
 \item On-site measurements or satellite images are required for solar radiation estimation.
@@ -76,7 +78,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org46f3af5}]{Inclination Angle}
+\begin{frame}[label={sec:org54eefe6}]{Inclination Angle}
 \begin{itemize}
 \item PV generators have an \alert{inclination angle higher than zero} to maximize the performance.
 \item The generator inclination angle depends on the latitude of the location and on the application\footnote{Rule of thumb: latitude minus 10º for a Grid Connected PV System; latitude plus 10º for a Standalone PV System.}.
@@ -87,7 +89,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org13a8db6}]{Solar Radiation Databases}
+\begin{frame}[label={sec:org353cb63}]{Solar Radiation Databases}
 \begin{itemize}
 \item Therefore, it is unfeasible to maintain a database of incident solar radiation.
 \item Databases register solar radiation on the horizontal plane.
@@ -96,16 +98,16 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org27dc8d3}]{From Horizontal to Inclined}
+\begin{frame}[label={sec:org39e65f1}]{From Horizontal to Inclined}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
 \end{center}
 \end{frame}
 
 \section{Definitions}
-\label{sec:orgc3ae743}
+\label{sec:org74e88c2}
 
-\begin{frame}[label={sec:orge703812}]{Irradiance and Irradiation}
+\begin{frame}[label={sec:org890aeb6}]{Irradiance and Irradiation}
 \begin{description}
 \item[{Irradiance}] solar radiation \alert{power} received by a surface per unit area.
 \begin{itemize}
@@ -119,7 +121,7 @@
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org5ccda1a}]{Extraterrestrial Solar Radiation}
+\begin{frame}[label={sec:orgdb4af03}]{Extraterrestrial Solar Radiation}
 \begin{itemize}
 \item \(B_0\): Solar radiation energy/power at the top of the Earth's atmosphere on a surface perpendicular to the solar rays.
 \item \(B_0 \simeq \SI{1367}{\watt\per\meter\squared}\) (Solar Constant)
@@ -130,7 +132,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org56c8d69}]{Interaction with the Atmosphere}
+\begin{frame}[label={sec:orgfeac762}]{Interaction with the Atmosphere}
 Due to the interaction with the atmosphere, the extraterrestrial radiation is absorbed, reflected and scattered.
 
 \begin{center}
@@ -138,7 +140,7 @@ Due to the interaction with the atmosphere, the extraterrestrial radiation is ab
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgeee90ac}]{Diffuse, Beam, and Global}
+\begin{frame}[label={sec:org022c949}]{Diffuse, Beam, and Global}
 \begin{itemize}
 \item Solar radiation reaching the Earth surface is named \alert{global solar radiation}.
 \item It is the result of three components:
@@ -154,7 +156,7 @@ Due to the interaction with the atmosphere, the extraterrestrial radiation is ab
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org98e8507}]{Horizontal, Incident, Effective}
+\begin{frame}[label={sec:org785f71c}]{Horizontal, Incident, Effective}
 \begin{itemize}
 \item \(G(0)\) \alert{Radiation on a Horizontal Plane} 
 \begin{itemize}

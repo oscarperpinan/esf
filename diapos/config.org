@@ -32,3 +32,5 @@
 #+LATEX_HEADER: \newunit{\amperehour}{Ah}
 #+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 #+LATEX_HEADER: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+#+LATEX_HEADER: \beamertemplatenavigationsymbolsempty
+#+LATEX_HEADER: \setbeamertemplate{footline}[frame number]

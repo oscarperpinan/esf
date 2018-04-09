@@ -1,4 +1,4 @@
-% Created 2018-01-17 mié 22:32
+% Created 2018-04-09 lun 18:26
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -30,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -43,16 +45,16 @@
  pdftitle={Sistemas Fotovoltaicos de Bombeo},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Introducción}
-\label{sec:orgcf3e586}
+\label{sec:org5a4dd07}
 
-\begin{frame}[label={sec:orgec892bf}]{Agua y ESF}
+\begin{frame}[label={sec:orge924322}]{Agua y ESF}
 \begin{itemize}
 \item Las \alert{curvas de generación fotovoltaica y de consumo de agua están bien adaptadas}: las épocas de mayor calor y radiación solar son de mayor consumo de agua.
 
@@ -63,16 +65,16 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org75e20f5}]{Composición}
+\begin{frame}[label={sec:orgf0cd28d}]{Composición}
 \begin{center}
 \includegraphics[height=\textheight]{../figs/EsquemaBombeo_oscar.pdf}
 \end{center}
 \end{frame}
 
 \section{Motobombas}
-\label{sec:org7341896}
+\label{sec:org8196a21}
 
-\begin{frame}[label={sec:org6d5f8a1}]{Definición}
+\begin{frame}[label={sec:org079e982}]{Definición}
 \begin{itemize}
 \item Un \alert{motor eléctrico} es una máquina eléctrica que \alert{transforma energía eléctrica en energía mecánica} por medio de interacciones electromagnéticas.
 
@@ -81,9 +83,9 @@
 \end{frame}
 
 \subsection{Motores eléctricos en ESF}
-\label{sec:org56a4ebb}
+\label{sec:org6493eb2}
 
-\begin{frame}[label={sec:org31802d0}]{Motor DC}
+\begin{frame}[label={sec:org89a8615}]{Motor DC}
 \begin{itemize}
 \item \alert{Estator-Inductor} alimentado por \alert{corriente DC} (o imanes permanentes).
 
@@ -99,7 +101,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org37fe0cf}]{Motor asíncrono o de inducción}
+\begin{frame}[label={sec:org1749cd9}]{Motor asíncrono o de inducción}
 \begin{itemize}
 \item \alert{Estator-inductor} alimentado por una \alert{corriente trifásica alterna}.  Produce un campo giratorio.
 
@@ -112,9 +114,9 @@
 \end{frame}
 
 \subsection{Bombas}
-\label{sec:orge99c95c}
+\label{sec:org58748f9}
 
-\begin{frame}[label={sec:org5df48e8}]{Ecuación de Bernouilli}
+\begin{frame}[label={sec:orgd09b707}]{Ecuación de Bernouilli}
 \begin{block}{Conservación de energía}
 $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \begin{itemize}
@@ -126,7 +128,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{frame}
 
 
-\begin{frame}[label={sec:org153d4b6}]{Bombas de desplazamiento positivo}
+\begin{frame}[label={sec:orge68a092}]{Bombas de desplazamiento positivo}
 \begin{block}{\alert{Principio}: cambio de presión}
 \begin{itemize}
 \item El aumento de presión se realiza por el empuje de las paredes de las cámaras que varían su volumen.
@@ -138,7 +140,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org33d300d}]{Bombas de membrana}
+\begin{frame}[label={sec:org1198a2b}]{Bombas de membrana}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/800px-Bomba_diafragma_impulsando.pdf}
 \end{center}
@@ -148,13 +150,13 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd5e2cd8}]{Bombas helicoidales}
+\begin{frame}[label={sec:orgca205e9}]{Bombas helicoidales}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/bombatornillo.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org17048ce}]{Bombas helicoidales y de membrana}
+\begin{frame}[label={sec:orga7cb841}]{Bombas helicoidales y de membrana}
 \begin{itemize}
 \item Son apropiadas para \alert{altos incrementos de presión y bajos caudales}.
 
@@ -164,7 +166,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org26ea24d}]{Bombas rotodinámicas}
+\begin{frame}[label={sec:orgd0802a5}]{Bombas rotodinámicas}
 \begin{block}{\alert{Principio}: añadir cantidad de movimiento}
 \begin{itemize}
 \item En este tipo de bombas hay uno o varios rodetes con álabes que giran generando un campo de presiones en el fluido.
@@ -182,13 +184,13 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org72c5f7a}]{Bombas centrífugas}
+\begin{frame}[label={sec:org6211c97}]{Bombas centrífugas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/BombaCentrifuga.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org079fd15}]{Bombas centrífugas}
+\begin{frame}[label={sec:org186ccb0}]{Bombas centrífugas}
 \begin{itemize}
 \item Están diseñadas para vencer una \alert{presión más o menos constante},
 
@@ -203,7 +205,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{frame}
 
 
-\begin{frame}[label={sec:orgf3cd433}]{Según la disposición}
+\begin{frame}[label={sec:orga5c592e}]{Según la disposición}
 \begin{itemize}
 \item \alert{Bombas sumergibles}
 
@@ -233,7 +235,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org32d0ebb}]{Configuraciones típicas}
+\begin{frame}[label={sec:org14661b8}]{Configuraciones típicas}
 \begin{itemize}
 \item \alert{Sistemas de baja potencia (50 a 400 Wp)}
 
@@ -256,23 +258,23 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org9a1b907}]{}
+\begin{frame}[label={sec:org337c201}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Marruecos4.png}
 \end{center}
 \end{frame}
 
 \section{Acoplamiento generador-motobomba}
-\label{sec:org052be2c}
+\label{sec:orgb762edd}
 
-\begin{frame}[label={sec:orgcb1f0f2}]{}
+\begin{frame}[label={sec:org6f7cb67}]{}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/VariadorFrecuencia.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org72d6883}]{Motivo}
+\begin{frame}[label={sec:org2621532}]{Motivo}
 \begin{itemize}
 \item La \alert{potencia y tensión suministrada por un generador FV varían} con la radiación y la temperatura.
 
@@ -289,8 +291,8 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{frame}
 
 \subsection{Convertidores}
-\label{sec:org8749f2e}
-\begin{frame}[label={sec:orgb78fae9}]{Convertidor DC-DC}
+\label{sec:org54c13e8}
+\begin{frame}[label={sec:orge6b1dce}]{Convertidor DC-DC}
 \begin{itemize}
 \item Dispositivo que \alert{transforma corriente continua de una tensión a otra}.
 
@@ -304,9 +306,9 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4528af7}]{Variador de frecuencia}
+\begin{frame}[label={sec:orgb8e41e6}]{Variador de frecuencia}
 \end{frame}
-\begin{frame}[label={sec:org11c7b11}]{Variador de frecuencia}
+\begin{frame}[label={sec:org7a55c94}]{Variador de frecuencia}
 \begin{itemize}
 \item El variador de frecuencia \alert{transforma una señal alterna de una frecuencia en otra señal alterna de otra frecuencia}.
 
@@ -324,9 +326,9 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 
 \subsection{Protecciones}
-\label{sec:org7ea4167}
+\label{sec:org4e8fe5f}
 
-\begin{frame}[label={sec:org877300d}]{Pozo vacío}
+\begin{frame}[label={sec:org4418ebe}]{Pozo vacío}
 \begin{itemize}
 \item \alert{Control de frecuencia de salida del variador}.
 
@@ -336,7 +338,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb288967}]{Deposito lleno}
+\begin{frame}[label={sec:orgd55e49c}]{Deposito lleno}
 \begin{itemize}
 \item \alert{Presostáto en la tubería combinado con una boya en el depósito}.
 
@@ -350,9 +352,9 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 
 
 \section{Circuito Hidráulico}
-\label{sec:org17ce85f}
+\label{sec:org13c7756}
 
-\begin{frame}[label={sec:org9d3aa54}]{Circuito hidráulico}
+\begin{frame}[label={sec:org59221eb}]{Circuito hidráulico}
 \begin{itemize}
 \item Tubería de impulsión
 
@@ -364,14 +366,14 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org44c5d92}]{}
+\begin{frame}[label={sec:org746ae1b}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CircuitoHidraulico.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org77022a2}]{Tubería de Impulsión}
+\begin{frame}[label={sec:org8c2b391}]{Tubería de Impulsión}
 \begin{itemize}
 \item Es la tubería instalada a la salida de la bomba.
 
@@ -393,14 +395,14 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org31128bc}]{}
+\begin{frame}[label={sec:org2ea2bf9}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Marruecos4.png}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orga66110c}]{Depósito elevado}
+\begin{frame}[label={sec:org50649f3}]{Depósito elevado}
 \begin{itemize}
 \item \alert{Tamaño adecuado para 1 o 2 días de consumo}
 \item Para depósitos pequeños (20 a 1.000 l) debe elegirse un \alert{depósito plástico de color negro}  para evitar aparición de algas y otros contaminantes.
@@ -408,7 +410,7 @@ $$\frac{\Delta p}{\rho}+\frac{\Delta v^2}{2}+g\cdot\Delta h=cte.$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd68b236}]{}
+\begin{frame}[label={sec:orgee6cff7}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bombeo.jpg}
 \end{center}

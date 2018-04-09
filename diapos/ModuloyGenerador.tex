@@ -1,4 +1,4 @@
-% Created 2017-01-11 mié 12:38
+% Created 2018-04-09 lun 18:25
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -29,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -42,19 +45,19 @@
  pdftitle={Módulo y Generador},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.5.1 (Org mode 9.0)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Módulo Fotovoltaico}
-\label{sec:org0c11886}
+\label{sec:org9c8a6de}
 
 \subsection{Introducción}
-\label{sec:org4f21ede}
+\label{sec:orgd1d6720}
 
-\begin{frame}[label={sec:org94cc5fc}]{Módulo Fotovoltaico}
+\begin{frame}[label={sec:orgbf654af}]{Módulo Fotovoltaico}
 \begin{itemize}[<+->]
 \item Las características eléctricas de una célula no son suficientes para alimentar las cargas convencionales.
 
@@ -66,7 +69,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb7995cf}]{Estructura de un módulo fotovoltaico}
+\begin{frame}[label={sec:org5c8955f}]{Estructura de un módulo fotovoltaico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/panel_fv.png}
 \end{center}
@@ -78,7 +81,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd78f164}]{El vidrio frontal}
+\begin{frame}[label={sec:org7b3a3e2}]{El vidrio frontal}
 \begin{itemize}[<+->]
 \item Debe tener y mantener una \alert{alta transmisividad} en la banda espectral en la que trabajan las células solares.
 
@@ -91,7 +94,7 @@ la acumulación de suciedad o dificulten la limpieza de ésta mediante la acció
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2ebf423}]{EVA}
+\begin{frame}[label={sec:org15a70fe}]{EVA}
 \begin{itemize}
 \item El \alert{encapsulante a base de EVA}, combinado con un tratamiento en vacío y las capas frontal y posterior, \alert{evita la entrada de humedad}
 en el módulo, señalada como la causa principal de la degradación a largo plazo de módulos fotovoltaicos.
@@ -100,7 +103,7 @@ en el módulo, señalada como la causa principal de la degradación a largo plaz
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga894ccd}]{Configuración eléctrica}
+\begin{frame}[label={sec:orgbdb9e83}]{Configuración eléctrica}
 \begin{itemize}
 \item Una \alert{configuración eléctrica muy común} hasta hace unos años empleaba \alert{36 células en serie} para obtener módulos con potencias comprendidas
 en el rango \(\SIrange[range-phrase=-]{50}{100}{\wattpeak}\) con tensiones en MPP cercanas a los \(\SI{15}{\volt}\) en funcionamiento.
@@ -112,7 +115,7 @@ electrificación rural.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0a7058e}]{Norma Internacional IEC 61215}
+\begin{frame}[label={sec:orgb663cef}]{Norma Internacional IEC 61215}
 \begin{itemize}
 \item Para los módulos compuestos por \alert{células de silicio cristalino} es de aplicación la \alert{norma internacional IEC-61215} \guillemotleft{}Crystalline Silicon
 Terrestrial Photovoltaic (PV) Modules - Design Qualification and Type Approval\guillemotright{}.
@@ -124,9 +127,9 @@ Terrestrial Photovoltaic (PV) Modules - Design Qualification and Type Approval\g
 \end{frame}
 
 \subsection{Modelado de un módulo}
-\label{sec:org0626169}
+\label{sec:org07aaab1}
 
-\begin{frame}[label={sec:org63cbd6f}]{Suposiciones del modelo}
+\begin{frame}[label={sec:orgb59f72b}]{Suposiciones del modelo}
 \begin{itemize}[<+->]
 \item Los efectos de la resistencia paralelo son despreciables
 
@@ -140,7 +143,7 @@ I=I_{sc}\cdot(1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{V_{t}})
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org1f141f1}]{Efecto de la radiación y la temperatura}
+\begin{frame}[label={sec:org5f7430d}]{Efecto de la radiación y la temperatura}
 \begin{itemize}[<+->]
 \item La \alert{corriente de cortocircuito} depende exclusivamente y de forma lineal de la \alert{irradiancia}.
 \end{itemize}
@@ -156,7 +159,7 @@ V_{oc}(T_{c})=V_{oc}^{*}+(T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}}
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org4c2b8ec}]{Temperatura de operación de célula}
+\begin{frame}[label={sec:org1dde6dc}]{Temperatura de operación de célula}
 \begin{itemize}
 \item La \alert{temperatura de operación de la célula} depende de la \alert{temperatura y la irradiación}
 \end{itemize}
@@ -169,7 +172,7 @@ $$T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org391338c}]{TONC}
+\begin{frame}[label={sec:org8c4287e}]{TONC}
 \begin{itemize}
 \item Temperatura que alcanza una \emph{célula} cuando su \emph{módulo} trabaja en las siguientes condiciones:
 
@@ -189,69 +192,69 @@ $$T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}$$
 
 
 \subsection{Punto Caliente}
-\label{sec:orgc7f7315}
+\label{sec:org19c1da1}
 
-\begin{frame}[label={sec:orgb186fb8}]{Punto caliente}
+\begin{frame}[label={sec:org447374b}]{Punto caliente}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AsociacionSerieCelulas.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3159691}]{Punto caliente}
+\begin{frame}[label={sec:org065c458}]{Punto caliente}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TensionCelula_Sombras.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org98ce028}]{Punto caliente}
+\begin{frame}[label={sec:org41ddbf2}]{Punto caliente}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PotenciaCelula_Sombra.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7449dcf}]{Diodo de paso}
+\begin{frame}[label={sec:orge762278}]{Diodo de paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AsociacionSerieCelulas_DiodosPaso.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org755698f}]{Curvas I-V con diodo de paso}
+\begin{frame}[label={sec:org8afc19f}]{Curvas I-V con diodo de paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIV_DiodoPaso.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org021bcae}]{Tensión con diodo de paso}
+\begin{frame}[label={sec:orge101d04}]{Tensión con diodo de paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TensionesCelulasDiodos_DiodoPaso.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org140fd82}]{Curvas Potencia con diodo de paso}
+\begin{frame}[label={sec:org6a85255}]{Curvas Potencia con diodo de paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PotenciaCelulas_DiodoPaso.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc1bd7d3}]{Curva Módulo con Diodos de Paso}
+\begin{frame}[label={sec:org3a8442b}]{Curva Módulo con Diodos de Paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PotenciaModulo.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org8b3d57d}]{Diodos de paso}
+\begin{frame}[label={sec:org413be79}]{Diodos de paso}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AsociacionSerieCelulas_DiodosPasoAlternos.pdf}
 \end{center}
 \end{frame}
 
 \section{Generador Fotovoltaico}
-\label{sec:org06bf6dd}
+\label{sec:org5e0e9f2}
 
 \subsection{Definición}
-\label{sec:orgf022937}
+\label{sec:orge0be7bf}
 
-\begin{frame}[label={sec:org6e93a53}]{Generador Fotovoltaico}
+\begin{frame}[label={sec:org61664ef}]{Generador Fotovoltaico}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}[<+->]
@@ -270,7 +273,7 @@ $$T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}$$
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgdf31d95}]{Ramas y series}
+\begin{frame}[label={sec:org3c8f600}]{Ramas y series}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}
@@ -303,7 +306,7 @@ P_g = N_T \cdot P_m = (N_s \cdot V_{mpp, m}) (N_p \cdot I_{mpp, m})
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org65b5d24}]{Ejemplo de cálculo}
+\begin{frame}[label={sec:org7c408e7}]{Ejemplo de cálculo}
 Calcular el comportamiento eléctrico de un generador fotovoltaico constituido por 40 módulos, asociados en 4 ramas, bajo la suposición de factor de forma constante.
 
 \begin{itemize}
@@ -316,15 +319,15 @@ Calcular el comportamiento eléctrico de un generador fotovoltaico constituido p
 \end{frame}
 
 \subsection{Pérdidas por dispersión}
-\label{sec:orgdb72401}
+\label{sec:org66b2a15}
 
-\begin{frame}[label={sec:org2036a99}]{Pérdidas por dispersión}
+\begin{frame}[label={sec:org11e5924}]{Pérdidas por dispersión}
 \begin{block}{Definición del problema}
 Los parámetros eléctricos de un módulo FV presentan dispersión: la producción energética será menor que la ideal.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org384c283}]{Distribución de valores de corriente y tensión}
+\begin{frame}[label={sec:org3fef190}]{Distribución de valores de corriente y tensión}
 La corriente de máxima potencia de un conjunto de módulos puede caracterizarse por una distribución tipo
 Weibull$$f(I_{mpp})=\alpha\beta^{-\alpha}I_{mpp}^{\alpha-1}exp\left[-\left(\frac{I_{mpp}}{\beta}\right)^{\alpha}\right]$$
 siendo \(\alpha\) el factor de forma y \(\beta\) el factor de escala de la distribución. La eficiencia de conexión serie
@@ -332,7 +335,7 @@ es:$$\eta_{cs}=\frac{I_{mpp}^{r}}{\overline{I_{mpp}}}$$ siendo \(I_{mpp}^{r}\) l
 de las corrientes del grupo de módulos.
 \end{frame}
 
-\begin{frame}[label={sec:org2b5b8d6}]{Eficiencia de conexión}
+\begin{frame}[label={sec:org239b0d8}]{Eficiencia de conexión}
 \begin{itemize}
 \item A partir de la distribución y la definición de eficiencia de conexión serie puede deducirse que ésta se calcula mediante $$\eta_{cs}=N^{-\frac{1}{\alpha}}$$ siendo N el número de módulos en la serie. Por tanto, \alert{la eficiencia disminuye si aumenta N}. Asimismo, la eficiencia aumenta con \(\alpha\).
 
@@ -340,7 +343,7 @@ de las corrientes del grupo de módulos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgcf2ea58}]{Clasificación de módulos}
+\begin{frame}[label={sec:org05fc55b}]{Clasificación de módulos}
 \begin{itemize}
 \item La dispersión de un conjunto depende inversamente del valor de
 \(\alpha\), así que un \alert{método para reducir las pérdidas por
@@ -356,7 +359,7 @@ globales del sistema.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9cb0b2c}]{Pérdidas por dispersión}
+\begin{frame}[label={sec:org033709a}]{Pérdidas por dispersión}
 \begin{block}{Problema}
 \begin{itemize}
 \item Las clasificaciones se realizan en base a las médidas realizadas por
@@ -370,62 +373,62 @@ a sol real son del mismo rango que la separación entre categorías.}
 
 
 \section{Ejemplos de generadores fotovoltaicos}
-\label{sec:orgcd05f03}
+\label{sec:org049b803}
 
-\begin{frame}[label={sec:orgaa7b303}]{}
+\begin{frame}[label={sec:org7b93a28}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bifacial.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org726a046}]{}
+\begin{frame}[label={sec:orgddce538}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/er.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1bba862}]{}
+\begin{frame}[label={sec:org236bcba}]{}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/TelefoniaRural.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge3562b2}]{}
+\begin{frame}[label={sec:org1975936}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/clasificacion2.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgff74b18}]{}
+\begin{frame}[label={sec:orgf7dded2}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/dscf0997.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org02d6b13}]{}
+\begin{frame}[label={sec:org6d65a0f}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ModulosRotos.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga9d293b}]{}
+\begin{frame}[label={sec:orgf01a37b}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/p1010007.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3c6b794}]{}
+\begin{frame}[label={sec:org3afaa60}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/BarreraRuido.jpg}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org01fc8fc}]{}
+\begin{frame}[label={sec:orgc7583d6}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TorreguilInterior2.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1bf167e}]{}
+\begin{frame}[label={sec:org578c379}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/VistadesdeInterior.jpg}
 \end{center}

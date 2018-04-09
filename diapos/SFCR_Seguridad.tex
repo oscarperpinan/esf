@@ -1,4 +1,4 @@
-% Created 2018-01-09 mar 00:15
+% Created 2018-04-09 lun 18:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -29,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -41,7 +44,7 @@
  pdftitle={SFCR: Seguridad Eléctrica},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.4)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
@@ -49,9 +52,9 @@
 
 
 \section{Definiciones}
-\label{sec:org1c7b8bf}
+\label{sec:orgd1f05f3}
 
-\begin{frame}[label={sec:orgcbf7cd1}]{Contacto Directo e Indirecto}
+\begin{frame}[label={sec:orgf11c48e}]{Contacto Directo e Indirecto}
 \begin{description}
 \item[{Contacto Directo:}] contacto de personas o animales con partes
 activas de los materiales y equipos
@@ -65,7 +68,7 @@ se han puesto bajo tensión como resultado de un fallo de aislamiento.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org765dffb}]{Masa y Tierra}
+\begin{frame}[label={sec:orgbd24bcc}]{Masa y Tierra}
 \begin{description}
 \item[{Masa:}] Conjunto de las partes metálicas de un aparato que, en
 condiciones normales, están aisladas de las partes activas.
@@ -78,7 +81,7 @@ con el suelo y que asegura la conexión eléctrica con el mismo.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org1627d8a}]{Clases de materiales}
+\begin{frame}[label={sec:org77fa39a}]{Clases de materiales}
 \begin{block}{Material de clase 0}
 \begin{itemize}
 \item Material en el cual la protección contra el choque eléctrico se basa
@@ -91,7 +94,7 @@ del entorno.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd24d726}]{Clases de materiales}
+\begin{frame}[label={sec:orgfb0dd61}]{Clases de materiales}
 \begin{block}{Material de clase I}
 \begin{itemize}
 \item La protección contra el choque eléctrico se basa en el
@@ -103,7 +106,7 @@ peligrosas.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgfb17c0f}]{Clases de materiales}
+\begin{frame}[label={sec:orge705960}]{Clases de materiales}
 \begin{block}{Material de clase II}
 \begin{itemize}
 \item La protección incluye doble aislamiento o aislamiento reforzado.
@@ -122,7 +125,7 @@ peligrosas.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd296fa0}]{Tensión de contacto y defecto}
+\begin{frame}[label={sec:orgea6c7ea}]{Tensión de contacto y defecto}
 \begin{block}{Tensión de defecto}
 \begin{itemize}
 \item Tensión que aparece a causa de un defecto de aislamiento, entre dos
@@ -142,7 +145,7 @@ persona.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org934513d}]{Esquemas de conexión a tierra}
+\begin{frame}[label={sec:org351dec8}]{Esquemas de conexión a tierra}
 \begin{description}
 \item[{Primera letra:}] conexión de alimentación y tierra
 
@@ -163,7 +166,7 @@ a tierra (en alterna, normalmente el neutro)
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org4047ca7}]{Esquemas de conexión a tierra}
+\begin{frame}[label={sec:orgeb1b042}]{Esquemas de conexión a tierra}
 \begin{description}
 \item[{TN:}] en alterna, neutro puesto a tierra, y masas conectadas al
 neutro (directamente o a través de un conductor de protección).
@@ -178,19 +181,19 @@ forma independiente.\\
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org0fbedc4}]{Esquemas de conexión a tierra}
+\begin{frame}[label={sec:org8bb9d2d}]{Esquemas de conexión a tierra}
 En un sistema fotovoltaico es de uso común que el esquema de tierra sea
 \alert{IT en la zona del generador fotovoltaico} y \alert{TT a partir de la salida
 del inversor}.
 \end{frame}
 
 \section{Protección de las personas}
-\label{sec:orgeff150a}
+\label{sec:org8a21939}
 
 \subsection{Efectos de la corriente eléctrica}
-\label{sec:org9947032}
+\label{sec:org50be650}
 
-\begin{frame}[label={sec:orgd8ca6b0}]{Intensidad y tiempo de contacto}
+\begin{frame}[label={sec:org9e377b8}]{Intensidad y tiempo de contacto}
 \begin{itemize}
 \item Hasta 10 mA no genera efectos peligrosos (calambres).
 
@@ -207,13 +210,13 @@ resistencia expuesta}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge2b04bd}]{Intensidad y tiempo de contacto}
+\begin{frame}[label={sec:orgce38926}]{Intensidad y tiempo de contacto}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaIntensidadContactoTiempo.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org156bb4a}]{Trayectoria de la corriente}
+\begin{frame}[label={sec:orgabcaf41}]{Trayectoria de la corriente}
 \begin{itemize}
 \item La trayectoria se realiza siguiendo la ruta más corta o la de menor
 resistencia.
@@ -226,7 +229,7 @@ la fatiga, el miedo\ldots{}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org02c65c2}]{Resistencia del cuerpo}
+\begin{frame}[label={sec:org78a97a9}]{Resistencia del cuerpo}
 \begin{itemize}
 \item \alert{No es homogénea}: cada parte del cuerpo presenta valores diferentes.
 
@@ -238,7 +241,7 @@ de contacto, presión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgeb7520e}]{Frecuencia eléctrica}
+\begin{frame}[label={sec:org7685a07}]{Frecuencia eléctrica}
 \begin{itemize}
 \item Continua:
 
@@ -273,7 +276,7 @@ convencional (la corriente circula por la piel, sin atravesar
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org387bcc1}]{Tensión y corriente de seguridad}
+\begin{frame}[label={sec:orgd525e4d}]{Tensión y corriente de seguridad}
 \begin{itemize}
 \item Se establecen dos condiciones: \alert{emplazamientos secos o húmedos}
 (instalaciones de interior); \alert{emplazamientos mojados} (instalaciones
@@ -290,9 +293,9 @@ CC}.
 \end{frame}
 
 \subsection{Contacto Directo}
-\label{sec:orgddb2420}
+\label{sec:org3938a68}
 
-\begin{frame}[label={sec:org3cda756}]{REBT: Contactos Directos}
+\begin{frame}[label={sec:orgc0b7cde}]{REBT: Contactos Directos}
 Según la ITC-BT-24 las protecciones a utilizar para proteger frente a
 contactos directos deben estar \alert{basadas en evitar que una persona pueda
 entrar en contacto con las partes activas} de la instalación, e incluye
@@ -314,7 +317,7 @@ diferencial}-residual
 \end{frame}
 
 
-\begin{frame}[label={sec:org679783f}]{Contacto Directo IT}
+\begin{frame}[label={sec:org69a77cb}]{Contacto Directo IT}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ContactoDirectoIT_Capacidad.pdf}
 \end{center}
@@ -326,7 +329,7 @@ para producir dolor, y tensiones superiores a los \(\SI{3000}{\volt}\)
 para que exista riesgo por fibrilación.
 \end{frame}
 
-\begin{frame}[label={sec:orgc0dcedf}]{Contacto Directo TT}
+\begin{frame}[label={sec:orge6dd398}]{Contacto Directo TT}
 $$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
 
 \begin{columns}
@@ -348,10 +351,10 @@ $$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
 
 
 \subsection{Contacto Indirecto}
-\label{sec:org54cecc5}
+\label{sec:org2dd6939}
 
 
-\begin{frame}[label={sec:org8228506}]{REBT: Contactos Indirectos}
+\begin{frame}[label={sec:orge780617}]{REBT: Contactos Indirectos}
 La ITC-BT-24 recoge las formas de protección para contactos
 indirectos:
 
@@ -370,7 +373,7 @@ entran en contacto con ella.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0a4e888}]{Contacto Indirecto IT}
+\begin{frame}[label={sec:org03291de}]{Contacto Indirecto IT}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{center}
@@ -391,7 +394,7 @@ I_{F} & = & 0\end{aligned}$$
 \end{frame}
 
 
-\begin{frame}[label={sec:org0965e01}]{Contacto Indirecto TT}
+\begin{frame}[label={sec:org8bac7b4}]{Contacto Indirecto TT}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{center}
@@ -410,10 +413,10 @@ $$V_{c}\simeq I_{scG}\cdot R_{tp}$$
 
 
 \subsection{Niveles de Protección en Sistema IT}
-\label{sec:org54e8855}
+\label{sec:org38670cc}
 
 
-\begin{frame}[label={sec:orgc6e8e40}]{Tres niveles de protección}
+\begin{frame}[label={sec:org4084ba8}]{Tres niveles de protección}
 Todo el sistema de protección para sistemas IT se puede concebir en tres
 niveles:
 
@@ -426,7 +429,7 @@ niveles:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3956f90}]{Nivel 1: Refuerzo del aislamiento de las partes activas.}
+\begin{frame}[label={sec:org2b1a7bd}]{Nivel 1: Refuerzo del aislamiento de las partes activas.}
 \begin{description}
 \item[{Configuración flotante del generador:}] se imposibilitan los
 accidentes por la aparición de contactos indirectos de primer
@@ -441,7 +444,7 @@ corriente de fallo a través del inversor.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org2ee93b1}]{Nivel 2: Sistema de detección de aislamiento.}
+\begin{frame}[label={sec:org781e3ba}]{Nivel 2: Sistema de detección de aislamiento.}
 \begin{description}
 \item[{Vigilante de aislamiento:}] Este elemento genera una señal de baja
 frecuencia (2 a 5 Hz) para evitar las fugas capacitivas del cableado,
@@ -455,7 +458,7 @@ y la puesta a tierra del mismo.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org54c48e8}]{Nivel 3: Protección en caso de fallo de los niveles 1 y 2:}
+\begin{frame}[label={sec:org97b1f57}]{Nivel 3: Protección en caso de fallo de los niveles 1 y 2:}
 \begin{description}
 \item[{En caso de fallo de los niveles anteriores}] aún queda la protección
 proporcionada por la puesta a tierra directa de todas las masas de la
@@ -467,18 +470,18 @@ tierra puedan adquirir las masas en caso de derivación.
 
 
 \section{Protección de los equipos}
-\label{sec:org87b1a9f}
+\label{sec:org98e3469}
 
 \subsection{Tormentas eléctricas}
-\label{sec:org3e0f6d8}
+\label{sec:org2a44c15}
 
-\begin{frame}[label={sec:org4d9a916}]{Formación de las tormentas}
+\begin{frame}[label={sec:org1792fe8}]{Formación de las tormentas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FormacionTormenta.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgafb1827}]{Formación de las tormentas}
+\begin{frame}[label={sec:orgabfbb99}]{Formación de las tormentas}
 \begin{itemize}
 \item Dentro de los núcleos tormentosos se producen campos eléctricos.
 
@@ -496,7 +499,7 @@ descarga y determina el lugar del impacto.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org735a191}]{Influencia de las condiciones locales}
+\begin{frame}[label={sec:org5cbe936}]{Influencia de las condiciones locales}
 \begin{itemize}
 \item \alert{La descarga está determinada principalmente por el campo eléctrico
 interno de la nube}, con una menor influencia debida a las
@@ -510,13 +513,13 @@ ascendentes que conecten con el descendente.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge638792}]{Influencia de los sistemas fotovoltaicos}
+\begin{frame}[label={sec:orgdb99734}]{Influencia de los sistemas fotovoltaicos}
 Por tanto, \alert{las instalaciones fotovoltaicas no aumentan la probabilidad
 de descargas locales} (determinadas por las nubes), pero una vez que se
 producen, son lugares con mayor probabilidad de impacto.
 \end{frame}
 
-\begin{frame}[plain,label={sec:orgdba0c37}]{Descarga y campo magnético}
+\begin{frame}[plain,label={sec:org9f98d7a}]{Descarga y campo magnético}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{center}
@@ -535,7 +538,7 @@ producen, son lugares con mayor probabilidad de impacto.
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orge02cf9d}]{Factores de influencia}
+\begin{frame}[label={sec:org46148e4}]{Factores de influencia}
 La fuerza electromotriz inducida depende de:
 
 \begin{itemize}
@@ -549,16 +552,16 @@ tormenta).
 \end{frame}
 
 \subsection{Protecciones}
-\label{sec:org1ce1979}
+\label{sec:orga74b83a}
 
 
-\begin{frame}[label={sec:org72fdfb2}]{Area y cableado}
+\begin{frame}[label={sec:org1c863c7}]{Area y cableado}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/BucleCableadoOptimo.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3acb64f}]{Protección externa}
+\begin{frame}[label={sec:org42d0a4c}]{Protección externa}
 Un sistema de protección externa contra el rayo se compone de:
 
 \begin{itemize}
@@ -570,13 +573,13 @@ Un sistema de protección externa contra el rayo se compone de:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7d3fad2}]{Protección externa}
+\begin{frame}[label={sec:orgbc256f6}]{Protección externa}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AreaProteccionPararrayos.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfe140ff}]{Protección externa}
+\begin{frame}[label={sec:orgdf3c659}]{Protección externa}
 \begin{itemize}
 \item Se debe calcular una \alert{distancia de seguridad} entre la bajada del
 pararrayos y las instalaciones metálicas cercanas.
@@ -594,7 +597,7 @@ puesta a tierra deben ser \alert{independientes}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org141fe5d}]{Protecciones internas}
+\begin{frame}[label={sec:org8080c91}]{Protecciones internas}
 \begin{itemize}
 \item \alert{Todas las masas deben estar conectadas a un sistema de puesta a
 tierra}.
@@ -610,7 +613,7 @@ tierra.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org04d187f}]{Protecciones Internas}
+\begin{frame}[label={sec:org15f39a7}]{Protecciones Internas}
 \begin{itemize}
 \item Cuando un varistor actúa realiza un cortocircuito entre sus
 conexiones.
@@ -622,24 +625,24 @@ conexiones.
 \end{frame}
 
 \section{Resumen de protecciones}
-\label{sec:org9adaba6}
+\label{sec:org5277553}
 
-\begin{frame}[plain,label={sec:orgbc29341}]{Diagrama Unifilar}
+\begin{frame}[plain,label={sec:org6e3330d}]{Diagrama Unifilar}
 \begin{center}
 \includegraphics[width=1.2\textwidth]{../figs/UnifilarCR1.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Circuito DC}
-\label{sec:org17ee774}
-\begin{frame}[label={sec:orgdbd91d8}]{}
+\label{sec:org3256a8a}
+\begin{frame}[label={sec:org9afa06e}]{}
 \begin{center}
 \includegraphics[height=0.8\textheight]{../figs/CajaProteccionesPhotocampa.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org0d54390}]{Cortocircuitos}
+\begin{frame}[label={sec:orgd2d468a}]{Cortocircuitos}
 \begin{itemize}
 \item El \alert{cortocircuito} es un punto de trabajo \alert{no peligroso para el
 generador fotovoltaico}.
@@ -657,7 +660,7 @@ para evitar cortocircuitos por pérdida de aislamiento.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc6a8b85}]{Fusibles}
+\begin{frame}[label={sec:org271d234}]{Fusibles}
 \begin{itemize}
 \item El \alert{fusible por rama} sirve principalmente como \alert{elemento de
 seccionamiento} (facilita las tareas de mantenimiento).
@@ -668,7 +671,7 @@ seccionamiento} (facilita las tareas de mantenimiento).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org33e39ef}]{Varistores}
+\begin{frame}[label={sec:org806af35}]{Varistores}
 \begin{itemize}
 \item Entrada CC del inversor protegida mediante \alert{varistores} para
 proteger contra sobretensiones de origen atmosférico.
@@ -681,14 +684,14 @@ tensión de circuito abierto.
 
 
 \subsection{Circuito AC}
-\label{sec:orga55c20b}
-\begin{frame}[label={sec:org64c113c}]{}
+\label{sec:org957e023}
+\begin{frame}[label={sec:org6faaa54}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CajaAC.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org793eb56}]{Cortocircuitos y sobrecargas}
+\begin{frame}[label={sec:org07b4bf2}]{Cortocircuitos y sobrecargas}
 \begin{itemize}
 \item Es necesario incluir un \alert{interruptor general manual} (interruptor
 magnetotérmico omnipolar)
@@ -708,7 +711,7 @@ inversor.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf1c760c}]{Cortocircuitos y sobrecargas}
+\begin{frame}[label={sec:orgbc2ead4}]{Cortocircuitos y sobrecargas}
 \begin{itemize}
 \item Se utilizarán \alert{magnetotérmicos tipo C} (indicados cuando no existen corrientes de arranque de consumo elevadas).
 
@@ -716,7 +719,7 @@ inversor.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org472d9cc}]{Interruptor diferencial}
+\begin{frame}[label={sec:orgc41d4b3}]{Interruptor diferencial}
 \begin{itemize}
 \item \alert{No funciona en circuitos DC} (alternativa: vigilante de
 aislamiento).
@@ -734,7 +737,7 @@ de conexión a red} (conexión TT).
 
 
 
-\begin{frame}[label={sec:orgdeb03af}]{Puesta a tierra}
+\begin{frame}[label={sec:orgc1514d5}]{Puesta a tierra}
 \begin{itemize}
 \item \alert{La puesta a tierra} se realizará de forma que \alert{no altere la de la
 compañía eléctrica distribuidora}, con el fin de no transmitir
@@ -748,9 +751,9 @@ de acuerdo con el Reglamento Electrotécnico para Baja Tensión.
 
 
 \section{Puesta a tierra}
-\label{sec:orgbc800ea}
+\label{sec:orge7b97a3}
 
-\begin{frame}[label={sec:orgb6b9ca3}]{Tomas de tierra existentes}
+\begin{frame}[label={sec:orgd740fad}]{Tomas de tierra existentes}
 A la hora de realizar puestas a tierra en lugares donde ya existen
 tomas a tierra que pertenecen a otras instalaciones eléctricas.
 
@@ -768,7 +771,7 @@ distancias superiores a \(\SI{15}{\meter}\).
 \end{frame}
 
 
-\begin{frame}[label={sec:org263eea1}]{Resistencia para conexión TT}
+\begin{frame}[label={sec:orgf3e84df}]{Resistencia para conexión TT}
 $$R_{tp}\leq\frac{V_{max}}{I_{f}}$$
 
 \begin{block}{Ejemplo}
@@ -779,7 +782,7 @@ utiliza el esquema TT será \(R_{tp}\leq\SI{600}{\ohm}\).
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf07afc}]{Resistencia para IT}
+\begin{frame}[label={sec:org7247a1c}]{Resistencia para IT}
 \begin{itemize}
 \item Un sistema IT es intrínsecamente seguro.
 \item Si existe un fallo de aislamiento se convierte en un TT. Si aparece
@@ -793,7 +796,7 @@ la puesta a tierra debe ser ahora \(R_{tp}\leq\SI{0.4}{\ohm}\).
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf4101c8}]{Práctica común}
+\begin{frame}[label={sec:orgb5facc2}]{Práctica común}
 \begin{itemize}
 \item Este segundo cálculo arroja un \alert{valor difícilmente alcanzable} en un
 terreno con valores de resistividad eléctrica normales \alert{dentro de
@@ -811,7 +814,7 @@ fotovoltaico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org65dd506}]{Cálculo de la resistencia de tierra}
+\begin{frame}[label={sec:org8e84fd2}]{Cálculo de la resistencia de tierra}
 \begin{itemize}
 \item \alert{Resistencia de puesta a tierra}: Para una pica vertical
 \(R_{t}=\frac{\rho}{L}\), siendo \(\rho\) la resistividad del terreno y
@@ -829,7 +832,7 @@ Suelos pedregosos & \(\SI{3000}{\ohm\meter}\)\\
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1340a4d}]{Cálculo de la resistencia de tierra}
+\begin{frame}[label={sec:orgd2fa445}]{Cálculo de la resistencia de tierra}
 \begin{itemize}
 \item \alert{Electrodos en paralelo}: Para mejorar la resistencia de toma de
 tierra, se utilizan varios electrodos interconectados, situados a

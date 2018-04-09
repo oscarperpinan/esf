@@ -1,4 +1,4 @@
-% Created 2017-01-11 mié 13:31
+% Created 2018-04-09 lun 18:25
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
@@ -29,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -42,18 +45,18 @@
  pdftitle={Geometría Solar},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 24.5.1 (Org mode 9.0)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Geometría Sol y Tierra}
-\label{sec:org570cee7}
+\label{sec:org0bb1b27}
 \subsection{Movimiento Sol-Tierra}
-\label{sec:orgfb4c5bf}
+\label{sec:orgbe7a472}
 
-\begin{frame}[label={sec:orgab925d0}]{Movimiento terrestre}
+\begin{frame}[label={sec:org415b95b}]{Movimiento terrestre}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
 \end{center}
@@ -75,7 +78,7 @@ eclíptica}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5823035}]{Movimiento terrestre}
+\begin{frame}[label={sec:orgf943710}]{Movimiento terrestre}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
 \end{center}
@@ -87,7 +90,7 @@ eclíptica}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7f33db0}]{Distancia Sol-Tierra}
+\begin{frame}[label={sec:orgb6ac2d4}]{Distancia Sol-Tierra}
 \begin{itemize}
 \item Distancia Sol-Tierra
 \end{itemize}
@@ -109,7 +112,7 @@ eclíptica}
 \end{frame}
 
 
-\begin{frame}[label={sec:org74e92b3}]{Estaciones}
+\begin{frame}[label={sec:org767f454}]{Estaciones}
 \begin{itemize}[<+->]
 \item Las estaciones se deben al ángulo entre el plano ecuatorial y el plano de
 la eclíptica
@@ -145,7 +148,7 @@ hemisferio Norte.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org32a5bbf}]{Solsticios y equinoccios}
+\begin{frame}[label={sec:org2d0edb3}]{Solsticios y equinoccios}
 \begin{itemize}
 \item \alert{Equinoccio de marzo}:
 
@@ -174,7 +177,7 @@ hemisferio Norte.
 \end{frame}
 
 
-\begin{frame}[label={sec:org060f27c}]{Declinación}
+\begin{frame}[label={sec:org3a63052}]{Declinación}
 \[\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
 
 \begin{center}
@@ -182,16 +185,16 @@ hemisferio Norte.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgbbf061e}]{Otras ecuaciones}
+\begin{frame}[label={sec:org70460b5}]{Otras ecuaciones}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/DeclinacionDiferencias.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Sistemas de coordenadas}
-\label{sec:org3ec6f39}
+\label{sec:org1b9e484}
 
-\begin{frame}[label={sec:orga4d1574}]{Ejes terrestres}
+\begin{frame}[label={sec:org9386545}]{Ejes terrestres}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra.pdf}
 \end{center}
@@ -201,7 +204,7 @@ hemisferio Norte.
 
 
 
-\begin{frame}[label={sec:org9d77d56}]{Ejes terrestres}
+\begin{frame}[label={sec:org174ea23}]{Ejes terrestres}
 \begin{center}
 \includegraphics[height=0.7\textheight]{../figs/SistemaCoordenadasTerrestre.pdf}
 \end{center}
@@ -211,7 +214,7 @@ hemisferio Norte.
 \end{frame}
 
 
-\begin{frame}[label={sec:org30ebd72}]{Ejes locales}
+\begin{frame}[label={sec:orgc8a26f2}]{Ejes locales}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra2.pdf}
 \end{center}
@@ -221,7 +224,7 @@ hemisferio Norte.
 
 
 
-\begin{frame}[label={sec:org1a71f62}]{Ejes locales}
+\begin{frame}[label={sec:org13e4ccb}]{Ejes locales}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasLocal.pdf}
 \end{center}
@@ -229,13 +232,13 @@ hemisferio Norte.
 \[\vec{\mu}_{s}=\left[\cos\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{h}+\left[\sin\left(\psi_{s}\right)\sin\left(\theta_{z}\right)\right]\cdot\vec{\mu}_{\bot}+\cos\left(\theta_{z}\right)\cdot\vec{\mu}_{c}\]
 \end{frame}
 
-\begin{frame}[label={sec:org0b23c0a}]{Relación entre sistemas de coordenadas}
+\begin{frame}[label={sec:orga122a4f}]{Relación entre sistemas de coordenadas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RelacionSistemasCoordenadas.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3cd0b38}]{Ejes locales y terrestres}
+\begin{frame}[label={sec:orge7e4997}]{Ejes locales y terrestres}
 \begin{align*}
   \vec{\mu}_{s} &= \mathrm{signo}(\phi)\cdot\left[\cos\left(\delta\right)\cos\left(\omega\right)\sin\left(\phi\right)-\cos\left(\phi\right)\sin\left(\delta\right)\right]\cdot\vec{\mu}_{h}-\\
   &- \left[\cos\left(\delta\right)\sin\left(\omega\right)\right]\cdot\vec{\mu}_{\bot}+\\
@@ -247,9 +250,9 @@ hemisferio Norte.
 \end{frame}
 
 \subsection{Ángulos Solares}
-\label{sec:orge25edea}
+\label{sec:org2ac1cc8}
 
-\begin{frame}[label={sec:org5301857}]{Ecuaciones}
+\begin{frame}[label={sec:org6cc83ab}]{Ecuaciones}
 \begin{block}{Cenit solar}
 \[\cos\left(\theta_{z}\right)=\vec{\mu}_{c}\cdot\vec{\mu}_{s}=\cos\left(\delta\right)\cos\left(\omega\right)\cos\left(\phi\right)+\sin\left(\delta\right)\sin\left(\phi\right)\]
 \end{block}
@@ -266,7 +269,7 @@ hemisferio Norte.
 
 
 
-\begin{frame}[label={sec:org4f88343}]{Trayectoria Solar (\(60\degree N\))}
+\begin{frame}[label={sec:orgeb660e6}]{Trayectoria Solar (\(60\degree N\))}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar60N.pdf}
 \end{center}
@@ -274,14 +277,14 @@ hemisferio Norte.
 
 
 
-\begin{frame}[label={sec:orga6ad127}]{Trayectoria Solar (\(40\degree S\))}
+\begin{frame}[label={sec:orgc51f6b9}]{Trayectoria Solar (\(40\degree S\))}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar40S.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org3dd4837}]{Mediodía, amanecer y anocher}
+\begin{frame}[label={sec:orgc877635}]{Mediodía, amanecer y anocher}
 \begin{itemize}
 \item Mediodía: \[\psi_{s}=0\Rightarrow\sin(\psi_{s})\Rightarrow\omega=0\]
 
@@ -291,13 +294,13 @@ hemisferio Norte.
 \[\cos(\omega_{s})=-\tan(\delta)\tan(\phi)\]
 \end{frame}
 
-\begin{frame}[label={sec:orgeff2294}]{Duración del día}
+\begin{frame}[label={sec:org0891361}]{Duración del día}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/DuracionDia.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf7b3257}]{Cálculo Ángulos Solares}
+\begin{frame}[label={sec:org907f66c}]{Cálculo Ángulos Solares}
 \begin{itemize}
 \item Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para el:
 
@@ -316,8 +319,8 @@ hemisferio Norte.
 \end{frame}
 
 \subsection{Hora solar y oficial}
-\label{sec:org9e1efdc}
-\begin{frame}[label={sec:org646e64b}]{Hora solar}
+\label{sec:orgd939151}
+\begin{frame}[label={sec:orgc732321}]{Hora solar}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{itemize}
@@ -329,7 +332,7 @@ hemisferio Norte.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org12c8167}]{Hora oficial}
+\begin{frame}[label={sec:orgdd5d113}]{Hora oficial}
 \begin{itemize}
 \item \alert{La hora oficial} es una medida del tiempo \alert{ligada a un meridiano}
 que sirve de referencia para una zona determinada.
@@ -340,7 +343,7 @@ de Centroeuropa. Este huso horario está situado en
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org14f8f8a}]{Hora oficial}
+\begin{frame}[label={sec:org6c6b9e4}]{Hora oficial}
 \begin{itemize}
 \item \alert{Corrección}: \(\Delta\lambda=\lambda_{L}-\lambda_{H}\), con
 \(\lambda_{L}\) la longitud local y \(\lambda_{H}\) la longitud del huso
@@ -354,7 +357,7 @@ de su huso horario.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgab60ae7}]{Tiempo solar medio}
+\begin{frame}[label={sec:org3206be0}]{Tiempo solar medio}
 \begin{itemize}
 \item \alert{La duración del día solar real}, definido como el tiempo que
 transcurre entre dos pasos consecutivos del Sol por el meridiano
@@ -366,7 +369,7 @@ duración del día solar real.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4a30c84}]{Ecuación del Tiempo}
+\begin{frame}[label={sec:org7d38e25}]{Ecuación del Tiempo}
 \(\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
       M+3.5884\right)\right)\)
 
@@ -375,7 +378,7 @@ duración del día solar real.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org376440d}]{Ejemplo de cálculo}
+\begin{frame}[label={sec:org79083e4}]{Ejemplo de cálculo}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{block}{}
@@ -387,7 +390,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgeffc994}]{Solución}
+\begin{frame}[label={sec:org3849748}]{Solución}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{itemize}[<+->]
@@ -407,17 +410,17 @@ oficial.
 
 
 \section{Geometría de los sistemas fotovoltaicos}
-\label{sec:org9ea76b6}
+\label{sec:orge544bf0}
 
 \subsection{Sistemas Estáticos y de Seguimiento}
-\label{sec:org801acbd}
-\begin{frame}[label={sec:org5c5da44}]{Sistemas estáticos}
+\label{sec:org357a0e4}
+\begin{frame}[label={sec:orge8ef2f6}]{Sistemas estáticos}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org766d551}]{Sistemas con seguimiento}
+\begin{frame}[label={sec:orgf9ecd70}]{Sistemas con seguimiento}
 \begin{itemize}[<+->]
 \item \alert{Fundamento:}
 \begin{itemize}[<.->]
@@ -432,7 +435,7 @@ mejores aprovechamientos del terreno.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8675233}]{Algunos tipos de seguimiento solar}
+\begin{frame}[label={sec:org1e51bf9}]{Algunos tipos de seguimiento solar}
 \begin{itemize}[<+->]
 \item \alert{Doble eje}
 \begin{itemize}[<.->]
@@ -461,14 +464,14 @@ necesarios),
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd072c7b}]{Seguidor de eje horizontal N-S}
+\begin{frame}[label={sec:orgf92e18a}]{Seguidor de eje horizontal N-S}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org2486e4e}]{Seguidor de doble eje}
+\begin{frame}[label={sec:org9268ccf}]{Seguidor de doble eje}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{center}
@@ -476,9 +479,9 @@ necesarios),
 
 
 \subsection{Ángulos}
-\label{sec:orgae38762}
+\label{sec:org834f549}
 
-\begin{frame}[label={sec:orge966623}]{Sistema Estático}
+\begin{frame}[label={sec:org6a9a452}]{Sistema Estático}
 \begin{itemize}
 \item Vector de posición
 \end{itemize}
@@ -489,7 +492,7 @@ necesarios),
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgbfd2750}]{Sistema Estático}
+\begin{frame}[label={sec:orgf64084b}]{Sistema Estático}
 \begin{itemize}
 \item Ángulo de Incidencia
 \end{itemize}
@@ -509,7 +512,7 @@ necesarios),
 \end{frame}
 
 
-\begin{frame}[label={sec:org254b0b1}]{Sistema Estático}
+\begin{frame}[label={sec:orgef183ee}]{Sistema Estático}
 Cuando \(\alpha=0\)
 
 \begin{align*}
@@ -524,7 +527,7 @@ Cuando \(\alpha=0\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org26ff5b5}]{Ángulo de Incidencia de Sistema Estático}
+\begin{frame}[label={sec:org34ae814}]{Ángulo de Incidencia de Sistema Estático}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -535,7 +538,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:org4c3ca21}]{Eje Horizontal N-S, generador horizontal}
+\begin{frame}[label={sec:orgebd8b6d}]{Eje Horizontal N-S, generador horizontal}
 \begin{itemize}
 \item Vector de posición
 \end{itemize}
@@ -549,7 +552,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:org5f38553}]{Eje Horizontal N-S, generador horizontal}
+\begin{frame}[label={sec:orgf3706bb}]{Eje Horizontal N-S, generador horizontal}
 \begin{itemize}
 \item Ángulo de Incidencia
 \end{itemize}
@@ -562,7 +565,7 @@ Cuando \(\alpha=0\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org6534ae9}]{Inclinación de Eje Horizontal N-S}
+\begin{frame}[label={sec:orgfaf061a}]{Inclinación de Eje Horizontal N-S}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -573,7 +576,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:orga9657df}]{Ángulo de Incidencia de Eje Horizontal N-S}
+\begin{frame}[label={sec:orgd1e54d5}]{Ángulo de Incidencia de Eje Horizontal N-S}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -583,7 +586,7 @@ Cuando \(\alpha=0\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org6126a59}]{Acimutal}
+\begin{frame}[label={sec:org9f90fa3}]{Acimutal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 \end{center}
@@ -599,7 +602,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:org2e2d36d}]{Orientación de un seguidor acimutal}
+\begin{frame}[label={sec:org037aee1}]{Orientación de un seguidor acimutal}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -608,7 +611,7 @@ Cuando \(\alpha=0\)
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfe2db8b}]{Ángulo de Incidencia en Acimutal}
+\begin{frame}[label={sec:org26ac210}]{Ángulo de Incidencia en Acimutal}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -618,7 +621,7 @@ Cuando \(\alpha=0\)
 \end{frame}
 
 
-\begin{frame}[label={sec:org077bbb5}]{Doble Eje}
+\begin{frame}[label={sec:org874fe60}]{Doble Eje}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 \end{center}
@@ -633,7 +636,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:org10e1ad0}]{Inclinación de un seguidor de Doble Eje}
+\begin{frame}[label={sec:orgeadb2f7}]{Inclinación de un seguidor de Doble Eje}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -644,7 +647,7 @@ Cuando \(\alpha=0\)
 
 
 
-\begin{frame}[label={sec:orgedd361f}]{Ejercicio: cálculo de ángulo de incidencia}
+\begin{frame}[label={sec:orgf940f80}]{Ejercicio: cálculo de ángulo de incidencia}
 \begin{description}
 \item[{Para:}] \begin{itemize}
 \item Un sistema estático orientado al Sur y con inclinación de 30;

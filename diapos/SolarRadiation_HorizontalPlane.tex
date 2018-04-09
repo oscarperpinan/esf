@@ -1,4 +1,4 @@
-% Created 2018-04-02 lun 17:36
+% Created 2018-04-09 lun 18:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -30,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -50,8 +52,8 @@
 \maketitle
 
 \section{Motivation}
-\label{sec:org8336c0c}
-\begin{frame}[label={sec:org70f65bf}]{Solar Variability}
+\label{sec:orgf902906}
+\begin{frame}[label={sec:org8e4a1f3}]{Solar Variability}
 \begin{itemize}
 \item Extraterrestrial solar radiation is a deterministic process (it depends on latitude, day of year, and time of day).
 \item However, global radiation is a stochastic (random) process because of the interaction with the atmosphere:
@@ -61,14 +63,14 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org8ddb3cd}]{Long-term Estimations}
+\begin{frame}[label={sec:orgbcdbe4d}]{Long-term Estimations}
 \begin{itemize}
 \item We are interested in \alert{long-term estimations} of the performance of PV systems in a definite location.
 \item Solar radiation data sources must \alert{capture the long-term behaviour} (interannual variability) and be \alert{representative of the specified location} (spatial variability).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2c2d0db}]{Time Variability}
+\begin{frame}[label={sec:orgab36181}]{Time Variability}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/VariabilidadRadiacionDiario.pdf}
 \end{center}
@@ -82,7 +84,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgeb6f713}]{Spatial Variability}
+\begin{frame}[label={sec:orga5ea8de}]{Spatial Variability}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/SpatialVariability.jpg}
 \end{center}
@@ -96,7 +98,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgb179055}]{Summary: Measurements requirements}
+\begin{frame}[label={sec:org315e6c8}]{Summary: Measurements requirements}
 \begin{itemize}
 \item Reliable and representative long-term estimations of PV performance require:
 \begin{itemize}
@@ -107,8 +109,8 @@
 \end{frame}
 
 \section{Data Sources}
-\label{sec:org3f7af16}
-\begin{frame}[label={sec:org2a628ea}]{Meteorological stations}
+\label{sec:orgb3c4bc7}
+\begin{frame}[label={sec:org8c08b8a}]{Meteorological stations}
 \begin{itemize}
 \item Long time series.
 \item High time resolution (\(\SI{1}{\min}\))
@@ -130,7 +132,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org81dcadf}]{Satellite imaging}
+\begin{frame}[label={sec:orga35a8dd}]{Satellite imaging}
 \begin{itemize}
 \item Low time resolution (\(\SI{1}{hour}\) or \(\SI{1}{day}\)).
 
@@ -143,7 +145,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:orgdb620e9}]{Hybrid methods}
+\begin{frame}[label={sec:org30a4df4}]{Hybrid methods}
 \begin{itemize}
 \item Ground measurements merged with satellite estimations to increase spatial resolution.
 \item Spatial interpolation
@@ -162,19 +164,19 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb226503}]{Data sources}
+\begin{frame}[label={sec:org3f4b6aa}]{Data sources}
 \begin{block}{Wiki}
 \url{https://github.com/oscarperpinan/mds/wiki}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org5c1718d}]{Data sources}
+\begin{frame}[label={sec:orgeebdc20}]{Data sources}
 \begin{block}{Meteorological Stations}
 \url{https://github.com/oscarperpinan/mds/wiki/stations}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org93845ec}]{Data sources}
+\begin{frame}[label={sec:org045456c}]{Data sources}
 \begin{block}{Satellite Estimations}
 \begin{itemize}
 \item NASA: \url{https://github.com/oscarperpinan/mds/wiki/nasa}
@@ -184,7 +186,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org5fe8ae1}]{Data sources}
+\begin{frame}[label={sec:org04adb32}]{Data sources}
 \begin{block}{Hybrid estimations}
 \begin{itemize}
 \item PVGIS: \url{https://github.com/oscarperpinan/mds/wiki/pvgis}
@@ -194,8 +196,8 @@
 \end{frame}
 
 \section{Quality Control}
-\label{sec:orgb669fde}
-\begin{frame}[label={sec:org20e3531}]{Motivation}
+\label{sec:org20e8c25}
+\begin{frame}[label={sec:org7fb50a5}]{Motivation}
 \begin{itemize}
 \item Measurements must be filtered and corrected to remove erroneous data and outliers.
 \begin{itemize}
@@ -207,7 +209,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org84eb724}]{Physical limits}
+\begin{frame}[label={sec:org4c72342}]{Physical limits}
 \begin{itemize}
 \item Daily clearness index\footnote{Clearness index is defined as the ratio \(K_{dT} = G_d(0) / B_{0d}(0)\).} cannot exceed 1 (daily global irradiation cannot exceed extraterrestrial solar irradiation).
 \end{itemize}
@@ -227,14 +229,14 @@ K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orgf5bd61e}]{Spatial coherence}
+\begin{frame}[label={sec:org3371feb}]{Spatial coherence}
 \begin{itemize}
 \item Measurements from a station should be compared with \alert{nearby stations} (for example, using spatial interpolation)
 \item Comparison must be established with \alert{aggregated values} (daily or monthly averages).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org225bce2}]{Statistical Analysis of Deviations}
+\begin{frame}[label={sec:org511fa6c}]{Statistical Analysis of Deviations}
 \begin{itemize}
 \item Statistical analysis of the deviations, \(\mathbf{D}\), between Observations, \(\mathbf{O}\), and a Model, \(\mathbf{M}\) (or another set of observations):
 \end{itemize}
@@ -252,7 +254,7 @@ K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orga3f804c}]{Metrics}
+\begin{frame}[label={sec:org0c23f45}]{Metrics}
 \begin{itemize}
 \item Mean Bias Difference (MBD):
 \end{itemize}

@@ -1,4 +1,4 @@
-% Created 2018-01-18 jue 00:37
+% Created 2018-04-09 lun 18:26
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -30,6 +30,8 @@
 \newunit{\amperehour}{Ah}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
@@ -43,13 +45,13 @@
  pdftitle={Sistemas Fotovoltaicos de Bombeo},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
-\begin{frame}[label={sec:orgf18df40}]{}
+\begin{frame}[label={sec:org9c11691}]{}
 \begin{center}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/EsquemaBombeo_oscar.pdf}
@@ -59,10 +61,10 @@
 
 
 \section{Caudal}
-\label{sec:org9995f73}
+\label{sec:orgdeee2f0}
 
 
-\begin{frame}[label={sec:orgb912322}]{Potencia hidráulica}
+\begin{frame}[label={sec:org1c88ccb}]{Potencia hidráulica}
 \begin{itemize}
 \item La \alert{potencia hidráulica}, \(P_{H}\), necesaria para bombear agua es una función de,
 
@@ -81,7 +83,7 @@ $$P_{H}=g\cdot\rho\cdot Q\cdot H_{v}$$
 $$P_{H}=2.725\cdot Q\cdot H_{V}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgd9781e8}]{Potencia eléctrica de la motobomba}
+\begin{frame}[label={sec:orgb864f26}]{Potencia eléctrica de la motobomba}
 \begin{itemize}
 \item La potencia de salida de la bomba necesita satisfacer \(P_{H}\) más las \alert{perdidas de fricción en la tubería}, \(P_{f}\).
 
@@ -91,7 +93,7 @@ $$P_{H}=2.725\cdot Q\cdot H_{V}$$
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2dd0c87}]{Potencia eléctrica del generador}
+\begin{frame}[label={sec:orgbd85639}]{Potencia eléctrica del generador}
 La potencia eléctrica requerida por la motobomba es entregada por un generador FV y un acondicionador de potencia
 
 $$P_{el}=P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}$$
@@ -103,7 +105,7 @@ $$ \frac{2.725\cdot Q\cdot H_{V}}{\eta_{mp}} \simeq P_{g}^{*}\cdot\frac{G}{G^{*}
 
 
 
-\begin{frame}[label={sec:org573bde9}]{Caudal diario}
+\begin{frame}[label={sec:org51cd517}]{Caudal diario}
 \begin{itemize}
 \item El \alert{caudal diario} bombeado por este conjunto es: $$Q_{d}=\intop_{d}\frac{P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}\cdot\eta_{mp}}{2.725\cdot H_{T}}\mathrm{dt}$$
 
@@ -113,7 +115,7 @@ $$ \frac{2.725\cdot Q\cdot H_{V}}{\eta_{mp}} \simeq P_{g}^{*}\cdot\frac{G}{G^{*}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6a198a0}]{Necesidades de caudal}
+\begin{frame}[label={sec:org91faa4c}]{Necesidades de caudal}
 \begin{itemize}
 \item \alert{OMS}: 50 litros diarios por habitante.
 
@@ -128,9 +130,9 @@ $$ \frac{2.725\cdot Q\cdot H_{V}}{\eta_{mp}} \simeq P_{g}^{*}\cdot\frac{G}{G^{*}
 \end{frame}
 
 \section{Altura}
-\label{sec:orgc490681}
+\label{sec:orgf7176d1}
 
-\begin{frame}[label={sec:orgcc54ee4}]{Altura total equivalente}
+\begin{frame}[label={sec:org68e19df}]{Altura total equivalente}
 $$Q_{d}=\intop_{d}\frac{P_{g}^{*}\cdot\frac{G}{G^{*}}\frac{\eta_{g}}{\eta_{g}^{*}}\cdot\eta_{inv}\cdot\eta_{mp}}{2.725\cdot H_{T}}\mathrm{dt}$$
 
 \begin{itemize}
@@ -153,7 +155,7 @@ $$Q_{d}=\frac{P_{g}^{*}}{2.725\cdot G^{*}\cdot H_{TE}}\cdot\intop_{dia}G\cdot\fr
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd7aa8dd}]{Caracterización de pozos}
+\begin{frame}[label={sec:org2e0621d}]{Caracterización de pozos}
 \begin{itemize}
 \item Deseable realizar \alert{ensayo de bombeo para caracterizar los pozos} con bomba portátil empleando el \alert{caudal máximo del pozo}, \(Q_{max}\).
 
@@ -169,7 +171,7 @@ $$Q_{d}=\frac{P_{g}^{*}}{2.725\cdot G^{*}\cdot H_{TE}}\cdot\intop_{dia}G\cdot\fr
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgff33c37}]{Altura total equivalente}
+\begin{frame}[label={sec:org32ed347}]{Altura total equivalente}
 \[
 H_{TE}=H_{OT}+H_{ST}+(\frac{H_{DT}-H_{ST}}{Q_{T}})\cdot Q_{AP}+H_{f}(Q_{AP})
 \]
@@ -182,8 +184,8 @@ H_{TE}=H_{OT}+H_{ST}+(\frac{H_{DT}-H_{ST}}{Q_{T}})\cdot Q_{AP}+H_{f}(Q_{AP})
 \end{frame}
 
 \section{Potencia del generador}
-\label{sec:orgc5b2336}
-\begin{frame}[label={sec:org0b5b7cd}]{Formula aproximada}
+\label{sec:org614d9c2}
+\begin{frame}[label={sec:org1cef76f}]{Formula aproximada}
 \begin{itemize}
 \item Punto de partida
 \end{itemize}
@@ -204,7 +206,7 @@ P_{g}^{*}=\frac{10\cdot H_{TE}\cdot Q_{d}}{G_{d}/G^{*}}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org1d5f76c}]{}
+\begin{frame}[label={sec:org1b967a5}]{}
 \begin{block}{Ejemplo}
 Para bombear \(\SI{30}{\meter\cubed\per\Day}\) a \(H_{TE}=\SI{40}{\meter}\) en un lugar de radiación diaria media \(G_{d}=\SI{5}{\kilo\watt\hour\per\meter\squared\per\Day}\) se necesita un generador fotovoltaico de: 
 \[
@@ -214,9 +216,9 @@ P_{g}^{*}=\frac{10\cdot40\cdot30}{5}=\SI{2400}{\wattpeak}
 \end{frame}
 
 \section{Procedimiento de diseño}
-\label{sec:org5f0a8c6}
+\label{sec:org1956347}
 
-\begin{frame}[label={sec:org960be49}]{Elección de la bomba}
+\begin{frame}[label={sec:org4ab0657}]{Elección de la bomba}
 \begin{itemize}
 \item A partir del caudal diario requerido y la altura total equivalente, se calcula la potencia aproximada del generador FV.
 
@@ -226,7 +228,7 @@ P_{g}^{*}=\frac{10\cdot40\cdot30}{5}=\SI{2400}{\wattpeak}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5c0ae8e}]{Curvas HQ}
+\begin{frame}[label={sec:orgbea7fac}]{Curvas HQ}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{center}
@@ -244,7 +246,7 @@ P_{g}^{*}=\frac{10\cdot40\cdot30}{5}=\SI{2400}{\wattpeak}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgdb577fb}]{Curvas HQ a frecuencia variable}
+\begin{frame}[label={sec:orgb215770}]{Curvas HQ a frecuencia variable}
 \begin{itemize}
 \item Leyes de la semejanza (rendimiento constante)
 \end{itemize}
@@ -263,7 +265,7 @@ P_{mec} &\propto n^{3} &T &\propto n^{2}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge43f804}]{Simulación}
+\begin{frame}[label={sec:org131b559}]{Simulación}
 \begin{itemize}
 \item Es recomendable simular el funcionamiento del sistema para afinar el dimensionado.
 \item El resultado es un gráfico de doble entrada para un modelo concreto de bomba
@@ -273,7 +275,7 @@ P_{mec} &\propto n^{3} &T &\propto n^{2}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org4ea60af}]{Configuración eléctrica}
+\begin{frame}[label={sec:org20fa84b}]{Configuración eléctrica}
 \begin{itemize}
 \item La \alert{tensión de entrada al variador} debe ser:$$V_{DC}=\frac{\sqrt{2}V_{AC}}{1.1}$$
 
@@ -283,7 +285,7 @@ P_{mec} &\propto n^{3} &T &\propto n^{2}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org03176db}]{Pozo, Depósito y Tubería}
+\begin{frame}[label={sec:orgbe00eed}]{Pozo, Depósito y Tubería}
 \begin{itemize}
 \item Como seguridad, cuando la potencia entregada por el generador es igual al 80\% de su potencia nominal, el caudal bombeado correspondiente no debe exceder el máximo admisible por el pozo.
 \item El \alert{tamaño del depósito} será el suficiente para \alert{1 o 2 días de consumo}.
