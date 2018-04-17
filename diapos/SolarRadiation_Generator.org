@@ -4,83 +4,208 @@
 #+SETUPFILE: config.org
 #+OPTIONS: H:2
 
+* Motivation
+** Inclination Angle
+- PV generators have an *inclination angle higher than zero* to maximize the performance.
+- The generator inclination angle depends on the latitude of the location and on the application[fn:1].
 
-* Extraterrestrial Irradiation
-** 
-  -  $B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}$
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/PVUrban.png]]
 
-  -  $B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)$
-     ($\omega_{s}$ en radianes)
 
-* COMMENT Caracterización de la atmósfera
+** From Horizontal to Inclined
 
-** Masa de aire
 
-   -  Relación entre camino recorrido por rayos directos del Sol a
-      través de la atmósfera hasta la superficie receptora y el que
-      recorrerían en caso de incidencia vertical (AM=1)
+[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
 
-   -  $AM=1/\cos\theta_{zs}$
 
-** Índice de claridad
 
-   -  Relación entre la radiación global en el plano horizontal y la
-      radiación extra-atmosférica en el plano horizontal
+* Solar Geometry
 
-   -  El índice de claridad *no depende de las variaciones debidas al
-      movimiento aparente del sol*.
+** Apparent Sun movement
 
-   -  $K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}$ (mensual)
+[[../figs/SoldesdeTierra.pdf]]
 
-** Índice de claridad
 
--  $K_{T}$: :: índice de claridad instantáneo. $K_{T}=G/B_{0}$
+*** Declination Angle, $\delta$
+- Angle between the equatorial plane, and the line from the Sun to the center of the Earth.
+\[
+\delta=23.45\degree\cdot\sin(\frac{2\pi\cdot(d_{n}+284)}{365})
+\]
 
--  $K_{Td}$: :: índice de claridad diario. $K_{Td}=G_{d}/B_{0d}$
+** Declination Angle and Seasons
+- June solstice: $\delta_{max}$
+- December solstice: $\delta_{min}$
+- Equinoxes: $\delta = 0$ 
 
--  $K_{Tm}$: :: índice de claridad mensual. $K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}$
+[[../figs/Declinacion.pdf]]
 
--  $K_{Ta}$: :: índice de claridad anual. $K_{Ta} = G_{a}/B_{0a} = \dots$
+** Solar Hour Angle
+- $w$, difference between the current instant and the noon or midday ($w = 0$).
+  - (Hours) $-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12$
+  - 1h = 15º ($24\text{h} = 2\pi \text{ radians} = 360$).
 
-* COMMENT Cálculo de componentes de radiación solar
+- Sunrise ($w_s < 0$): 
+#+BEGIN_EXPORT latex
+\[
+\cos(\omega_{s}) = -\tan(\delta)\tan(\phi)
+\]
 
-** Radiación como proceso estocástico
+#+END_EXPORT
 
-- La *distribución de valores* que presenta la radiación solar durante un periodo está *determinada por el valor promedio de la radiación durante ese periodo*.
+- Day length, $|2 \cdot \omega_s|$, depends on the *latitude*, $\phi$, and on the *day of year*.
 
-  - Por ejemplo, conocer la media mensual de la radiación solar diaria en un determinado lugar permite saber cómo se comportará la radiación diaria durante ese mes
+** Zenith Angle
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
 
-- El índice de claridad para un día concreto *sólo está influido* por el índice de claridad del *día anterior*.
+\[
+\cos(\theta_{z}) = \cos(\delta) \cos(\omega) \cos(\phi) + \sin(\delta) \sin(\phi)
+\]
 
-** Estimación de Directa y Difusa
 
--  Establecer una *relación entre la fracción difusa* de la radiación horizontal ($F_{D}=\frac{D(0)}{G(0)}$) y *el índice de claridad*.
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.55
+    :END:
+- $\theta_z$, angle between the Sun and the zenith (vertical in a particular location).
+- Depends on $d_n$, $\omega$, and $\phi$.
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.8
+    :END:
+[[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
--  *Correlación negativa* (a mayor índice de claridad, menor componente difusa)
+** Azimuth Angle
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+\[
+  \cos(\psi_{s}) = \mathrm{sign}(\phi) \cdot \frac{\cos(\delta) \cos(\omega) \sin(\phi) - \cos(\phi) \sin(\delta)} {\sin(\theta_{z})}
+\]
 
--  *Correlación independiente de la latitud* (validez cuasi-universal)
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.55
+    :END:
+- $\psi_s$, angle between the projection of Sun onto the horizontal plane and the noon.
+- Depends on $d_n$, $\omega$, and $\phi$.
 
-** Correlaciones $F_{D}$ y $K_{T}$: Ecuación de Page
+***                                                                   :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.75
+    :END:
+[[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
-[[../figs/FdKtMensual.pdf]]
+** Sun Trajectory ($40\degree S$)
 
-\[F_{Dm}=1-1.13\cdot K_{Tm}\]
+[[../figs/TrayectoriaSolar40S.pdf]]
 
-** Correlaciones $F_{D}$ y $K_{T}$
 
-Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ en un mes con $B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}$  será:
+** Extraterrestrial Irradiation
 
-- $K_{Tm}=\frac{3150}{4320}=0.73$
+- Solar radiation incident on a horizontal plane at top of the atmosphere.
+- Depends on the latitude and day of the year.
 
-- Según la correlación de Page, $F_{Dm}=1-1.13\cdot0.73=0.175$
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/SolarRadiationComponents_NREL.png]]
 
-- $D_{d,m}(0)=0.175\cdot3150=\SI{551.6}{\watthour\per\meter\squared}$
 
-- $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
+** Extraterrestrial Irradiation
+- $B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s})$
+  - $\omega_{s}$ in radians
+  - $B_0 \simeq \SI{1367}{\watt\per\meter\squared}$ (Solar Constant) 
+  - Eccentricity correction factor, $\epsilon_0 = 1+0,033\cdot\cos(2\pi d_n/365)$
 
-** Correlaciones $F_{D}$ y $K_{T}$: Collares-Pereira y Rabl
+* Angle of Incidence
+** Definitions
+- $\theta_s$, Angle of Incidence (AOI), angle between the solar rays and the line perpendicular to the generator surface
+- $\alpha$: Orientation of the generator (0º when oriented to the noon)
+- $\beta$: Inclination of the generator.
 
-[[../figs/FdKtDiario.pdf]]
+** Fixed System
+
+[[../figs/EstructuraEstaticaSuelo.jpg]]
+
+** Fixed System
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+- If $\alpha=0$
+#+BEGIN_EXPORT latex
+\[
+\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
+\]
+#+END_EXPORT
+
+#+ATTR_LATEX: :height 0.6\textheight
+[[../figs/AngulosSistemaEstatico.pdf]]
+
+- Optimum Inclination $\beta_{opt} \simeq |\phi| - 10º$.
+
+** Tracking System (1x axis, horizontal N-S)
+
+
+[[../figs/SeguidorEjeHorizontal.jpg]]
+
+
+** Tracking System (1x axis, horizontal N-S)
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+#+ATTR_LATEX: :height 0.6\textheight
+[[../figs/AngulosSistemaHorizontalNS.pdf]]
+
+
+
+** Tracking System (2x axis)
+
+
+[[../figs/SeguidorReocin.jpg]]
+
+** Tracking System (2x axis)
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+[[../figs/Sombra2X.pdf]]
+
+
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+
+
+
+
+* Transposition Procedure
+
+** Transposition Procedure
+
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+
+
+** Extract Diffuse and Beam Components
+*** Clearness Index
+-  $K_{Td} = G_{d}(0)/B_{0d}(0)$
+
+*** Diffuse Fraction
+
+-  $F_{Dd}=\frac{D_d(0)}{G_d(0)}$
+
+*** Model
+
+- Monthly values: \[F_{Dm}=1-1.13\cdot K_{Tm}\]
+
+- Daily values: 
 #+BEGIN_EXPORT latex
 {\scriptsize \[
 F_{Dd} = \begin{cases}
@@ -92,140 +217,65 @@ F_{Dd} = \begin{cases}
 {\scriptsize \par}
 #+END_EXPORT
 
-** Estimación de Directa y Difusa
 
--  Calcular :: las componentes directa y difusa de la radiación solar del:
+** Example
 
-   -  Mes de Septiembre (día 261) en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal
-      $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+Let's $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ in a month with $B_{0,dm}(0) = \SI{4320}{\watthour\per\meter\squared}$. Thus:
 
+- $K_{Tm}=\frac{3150}{4320}=0.73$
 
-* COMMENT Cálculo de radiación sobre generadores
+- $F_{Dm}=1-1.13\cdot0.73=0.175$
 
+- $D_{d,m}(0)=0.175\cdot3150=\SI{551.6}{\watthour\per\meter\squared}$
 
-** Irradiancia sobre superficies arbitrarias
+- $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
 
-[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+** Intradaily profile 
 
-** Irradiancia a partir de irradiación diaria
-
-*** Estimación de Irradiancia a partir de Irradiación diaria
-
--  La irradiación durante una hora coincide con el valor medio de la irradiancia durante esa hora.
-
--  La variación solar durante una hora es baja: valor de irradiancia equivalente a valor de irradiación.
-
--  Relación entre irradiancia e irradiación extra-terrestre deducible teóricamente:
-
-\[\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\]
-
-*** Estimación de Irradiancia a partir de Irradiación diaria
-
-\[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
-
-\[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
-
-\[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
-
-\[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
-
-
-*** Estimación de Irradiancia a partir de Irradiación diaria
-
-[[../figs/RgRd.pdf]]
-
-*** Estimación de Irradiancia a partir de Irradiación diaria
-
--  Calcular :: la irradiancia global y la irradiancia difusa en el plano horizontal
-
-   -  2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
-
-** Transformación al plano del generador
-
-*** Irradiancia Directa
-
-\[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
-
-*** Factor de visión para Difusa
-
-[[../figs/AnguloVisionCielo.pdf]]
-
-\[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
-
-*** Irradiancia Difusa isotrópica
-
-\[L(\theta_{z},\psi)=cte.\]
-
-\[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
-
-*** Irradiancia Difusa Anisotrópica
+*** Estimate irradiance from irradiation
 #+BEGIN_EXPORT latex
-\[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
-\[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
-\[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
-\[k_{1} = \frac{B(0)}{B_{0}(0)}\]
+\begin{align*}
+  D(0) &= r_D \cdot D_d(0)\\
+  G(0) &= r_G \cdot G_d(0)\\
+  B(0) &= G(0) - D(0)
+\end{align*}
 #+END_EXPORT
 
-*** Irradiancia de Albedo
+#+BEGIN_EXPORT latex
+\begin{align*}
+  r_{D} &= \frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\\
+  r_{G} &= r_{D}\cdot(a+b\cdot\cos(\omega))\\
+  a &= 0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\\
+  b &=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})
+\end{align*}
+#+END_EXPORT
+** Transposition to the Plane of Generator
+
+- Beam radiation
+
+\[B(\alpha,\beta)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+
+- Diffuse Radiation (isotropic model)
+
+\[D(\alpha,\beta)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
+
+- Albedo
 
 \[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
 
 \[\rho=0.2\]
 
-*** Irradiancia sobre plano inclinado
-
--  Calcular :: la irradiancia difusa, directa, de albedo y global, en
-
-   -  Un generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del mediodía del día 261 en un lugar con latitud  $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
-
-# ** Incertidumbre
-# *** Variabilidad Interanual
-
-# [[../figs/VariabilidadRadiacionDiario.pdf]]
-
-# *** Incertidumbre
-
-# -  Predicción para un (día, mes, año) /determinado/:
-
-#    -  Intervalo de confianza del 95% acotado por $1.96\cdot\sigma_{G}$
-
-# -  Predicción para un (día, mes, año) /promedio (durante N años)/:
-
-#    -  Intervalo de confianza del 95% acotado por
-#       $1.96\cdot\sigma_{\overline{G}}$
-
-# \[\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}\]
-
-
-** Pérdidas angulares y por suciedad
-
-*** Radiación directa
-
-\[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
-
-[[../figs/Suciedad.pdf]]
-
-*** Difusa y Albedo
+- Global 
+\[G(\alpha, \beta) = B(\alpha, \beta) + D(\alpha, \beta) + R(\alpha, \beta)\]
+** Back to daily values
+*** Daily values are the sum of hourly values in a day
 #+BEGIN_EXPORT latex
 \begin{align*}
-D_{ef}^{iso}(\beta,\alpha) &= D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
-D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
-R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
+  G_d(\alpha, \beta) &= \sum_d G(\alpha, \beta)\\
+  D_d(\alpha, \beta) &= \sum_d D(\alpha, \beta)\\
+  B_d(\alpha, \beta) &= \sum_d B(\alpha, \beta)\\
 \end{align*}
 #+END_EXPORT
-*** Coeficientes
+* Footnotes
 
-
-| Grado de Suciedad | $\frac{T_{sucio}(0)}{T_{limpio}(0)}$ | $a_{r}$ | $c_{2}$ |
-|-------------------+--------------------------------------+---------+---------|
-| Limpio            |                                    1 |    0.17 |  -0.069 |
-| Bajo              |                                 0.98 |    0.20 |  -0.054 |
-| Medio             |                                 0.97 |    0.21 |  -0.049 |
-| Alto              |                                 0.92 |    0.27 |  -0.023 |
-
-*** Pérdidas anuales
-
-[[../figs/GefVSG.pdf]]
-
-
-
+[fn:1] Rule of thumb: latitude minus 10º for a Grid Connected PV System; latitude plus 10º for a Standalone PV System.

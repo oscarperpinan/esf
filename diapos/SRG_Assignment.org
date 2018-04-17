@@ -6,15 +6,29 @@
 #+LANGUAGE:  en
 #+OPTIONS:   num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LATEX_HEADER: \usepackage{mathpazo}
+#+LATEX_HEADER: \usepackage[margin=2cm]{geometry}
 
-# 1. Retrieve daily measurements from three nearby meteorological stations (time series length 10 years).
-# 2. /(Session #2) Filter each time series using physical limits/.
-# 3. Compute a daily time series representative of the region with the average of the three time series. Compare this time series with each station using statistical metrics (MBD, RMSD, MAD).
-# 4. Choose a location inside the perimeter defined by the three stations, and estimate the daily solar radiation using spatial interpolation (IDW).
-# 5. Retrieve monthly averages of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.
-# 6. Compare the values at the three locations with the monthly averages of the measurements provided by the stations using statistical metrics.
-# 7. Combine the satellite estimations at the location defined in step 4 with the result of that step, using spatial interpolation (IDW). 
 
-# *The result of step 6 will be used in Session #2*.
+
+In this assignment you are going to estimate the global irradiation incident on a PV generator mounted on a south-oriented fixed structure with an inclination near to the optimum value. You should use the location and the global radiation values of the step #7 (or step #4) of previous assignment.
+
+1. Compute the declination, $\delta$, day length, $w_s$, and daily extraterrestrial irradiation on the horizontal plane, $B_{0d}(0)$ for the "average monthly days" (see table below).
+
+2. Compute the clearness index, $K_{Tm}$, and fraction of diffuse, $F_{Dm}$, with the 12 monthly averages of global irradiation on the horizontal plane (step #7 or #4 of previous assignment). Compute the beam and diffuse components of solar radiation on the horizontal plane.
+
+3. Compute the cosine of the zenith angle, $\cos(\theta_{zs})$, and the cosine of the angle of incidence, $\cos(\theta_s)$ *for each day (month) of the table*. You should obtain 24 values per day (a value for each hour in a day).
+
+4. Compute the intradaily profiles, $r_D$ and $r_G$ *for each day (month) of the table*. You should obtain 24 values per day (a value for each hour in a day).
+
+5. With the results of steps #3 and #4, compute the diffuse, global, and beam hourly irradiation profiles. Therefore, for each day of the table you should obtain 24 values of hourly global radiation (thus, a total of 12·24 = 288 values of hourly global radiation).
+
+6. Transform the hourly beam and diffuse radiation components on the horizontal plane to the plane of the plane of the generator.
+
+7. Sum the results of previous step to obtain the 12 monthly averages of daily global, diffuse, and beam radiation on the plane of the generator.
+
+
+| Month | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec |
+|-------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----|
+| $d_n$ |  17 |  45 |  74 | 105 | 135 | 161 | 199 | 230 | 261 | 292 | 322 | 347 |
 
 
