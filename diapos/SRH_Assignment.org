@@ -12,8 +12,9 @@
 3. Compute a daily time series representative of the region with the average of the three time series. Compare this time series with each station using statistical metrics (MBD, RMSD, MAD).
 4. Choose a location inside the perimeter defined by the three stations, and estimate the daily solar radiation using spatial interpolation (IDW).
 5. Retrieve monthly averages of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.
-6. Compare the values at the three locations with the monthly averages of the measurements provided by the stations using statistical metrics.
-7. Combine the satellite estimations at the location defined in step 4 with the result of that step, using spatial interpolation (IDW). 
+6. Compare the satellite values at the three locations with the monthly averages of the measurements provided by the stations, using statistical metrics.
+7. Combine the satellite estimations at the location defined in step 4 with the monthly averages of the result of that step. Thus, if we denote the monthly averages of daily values of step #4 with $G_{dm,IDW}$ and the satellite estimates with $G_{dm,sat}$, the result of step #7 is (for each month): 
+\[G_{dm} = 1/2 \cdot (G_{dm,IDW} + G_{dm,sat})\]
 
 *The result of the last step will be used in Session #2*.
 
