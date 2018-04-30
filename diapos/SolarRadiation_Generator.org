@@ -243,7 +243,7 @@ Let's $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ in a month with $B_{
 
 #+BEGIN_EXPORT latex
 \begin{align*}
-  r_{D} &= \frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\\
+  r_{D} &= \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\\
   r_{G} &= r_{D}\cdot(a+b\cdot\cos(\omega))\\
   a &= 0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\\
   b &=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})

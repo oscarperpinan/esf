@@ -1,4 +1,4 @@
-% Created 2018-04-17 mar 13:49
+% Created 2018-04-30 lun 10:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -52,8 +52,8 @@
 \maketitle
 
 \section{Motivation}
-\label{sec:orgf4af781}
-\begin{frame}[label={sec:org9c4a0ec}]{Inclination Angle}
+\label{sec:org33f2cf4}
+\begin{frame}[label={sec:orge8e3315}]{Inclination Angle}
 \begin{itemize}
 \item PV generators have an \alert{inclination angle higher than zero} to maximize the performance.
 \item The generator inclination angle depends on the latitude of the location and on the application\footnote{Rule of thumb: latitude minus 10º for a Grid Connected PV System; latitude plus 10º for a Standalone PV System.}.
@@ -65,7 +65,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:orgf7ec604}]{From Horizontal to Inclined}
+\begin{frame}[label={sec:org7fc286b}]{From Horizontal to Inclined}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
 \end{center}
@@ -74,9 +74,9 @@
 
 
 \section{Solar Geometry}
-\label{sec:org4990f96}
+\label{sec:org98d509d}
 
-\begin{frame}[label={sec:orga3e4acf}]{Apparent Sun movement}
+\begin{frame}[label={sec:orgaa0f2f0}]{Apparent Sun movement}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra.pdf}
 \end{center}
@@ -92,7 +92,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org0be8bff}]{Declination Angle and Seasons}
+\begin{frame}[label={sec:orgbaf8737}]{Declination Angle and Seasons}
 \begin{itemize}
 \item June solstice: \(\delta_{max}\)
 \item December solstice: \(\delta_{min}\)
@@ -104,7 +104,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org30ce218}]{Solar Hour Angle}
+\begin{frame}[label={sec:org069c3e9}]{Solar Hour Angle}
 \begin{itemize}
 \item \(w\), difference between the current instant and the noon or midday (\(w = 0\)).
 \begin{itemize}
@@ -123,7 +123,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org153f8e2}]{Zenith Angle}
+\begin{frame}[plain,label={sec:orgd087e00}]{Zenith Angle}
 \[
 \cos(\theta_{z}) = \cos(\delta) \cos(\omega) \cos(\phi) + \sin(\delta) \sin(\phi)
 \]
@@ -144,7 +144,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[plain,label={sec:orgb228172}]{Azimuth Angle}
+\begin{frame}[plain,label={sec:org7bef086}]{Azimuth Angle}
 \[
   \cos(\psi_{s}) = \mathrm{sign}(\phi) \cdot \frac{\cos(\delta) \cos(\omega) \sin(\phi) - \cos(\phi) \sin(\delta)} {\sin(\theta_{z})}
 \]
@@ -165,14 +165,14 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org7c05e06}]{Sun Trajectory (\(40\degree S\))}
+\begin{frame}[label={sec:orgfe5d553}]{Sun Trajectory (\(40\degree S\))}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar40S.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org56c95be}]{Extraterrestrial Irradiation}
+\begin{frame}[label={sec:org1d37a5d}]{Extraterrestrial Irradiation}
 \begin{itemize}
 \item Solar radiation incident on a horizontal plane at top of the atmosphere.
 \item Depends on the latitude and day of the year.
@@ -184,7 +184,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org6a18b3c}]{Extraterrestrial Irradiation}
+\begin{frame}[label={sec:orgc78168c}]{Extraterrestrial Irradiation}
 \begin{itemize}
 \item \(B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s})\)
 \begin{itemize}
@@ -196,8 +196,8 @@
 \end{frame}
 
 \section{Angle of Incidence}
-\label{sec:org31e47b1}
-\begin{frame}[label={sec:orgd83984b}]{Definitions}
+\label{sec:orgb9e333a}
+\begin{frame}[label={sec:orgc1741f8}]{Definitions}
 \begin{itemize}
 \item \(\theta_s\), Angle of Incidence (AOI), angle between the solar rays and the line perpendicular to the generator surface
 \item \(\alpha\): Orientation of the generator (0º when oriented to the noon)
@@ -205,13 +205,13 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org582b081}]{Fixed System}
+\begin{frame}[label={sec:orgd3dcf49}]{Fixed System}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org4e93c11}]{Fixed System}
+\begin{frame}[plain,label={sec:orgba03130}]{Fixed System}
 \begin{itemize}
 \item If \(\alpha=0\)
 \end{itemize}
@@ -228,14 +228,14 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf6e782d}]{Tracking System (1x axis, horizontal N-S)}
+\begin{frame}[label={sec:orgb02d8e0}]{Tracking System (1x axis, horizontal N-S)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[plain,label={sec:orgff3f2e9}]{Tracking System (1x axis, horizontal N-S)}
+\begin{frame}[plain,label={sec:org2ddf43e}]{Tracking System (1x axis, horizontal N-S)}
 \[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
 
 \begin{center}
@@ -245,13 +245,13 @@
 
 
 
-\begin{frame}[label={sec:org4a4893e}]{Tracking System (2x axis)}
+\begin{frame}[label={sec:orge8df75e}]{Tracking System (2x axis)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org8193aea}]{Tracking System (2x axis)}
+\begin{frame}[plain,label={sec:orgcc911c7}]{Tracking System (2x axis)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 \end{center}
@@ -268,16 +268,16 @@
 
 
 \section{Transposition Procedure}
-\label{sec:orgb497e40}
+\label{sec:orgea55d15}
 
-\begin{frame}[label={sec:org17bc151}]{Transposition Procedure}
+\begin{frame}[label={sec:org0984292}]{Transposition Procedure}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org0a42ebf}]{Extract Diffuse and Beam Components}
+\begin{frame}[label={sec:org4cd1e25}]{Extract Diffuse and Beam Components}
 \begin{block}{Clearness Index}
 \begin{itemize}
 \item \(K_{Td} = G_{d}(0)/B_{0d}(0)\)
@@ -308,7 +308,7 @@ F_{Dd} = \begin{cases}
 \end{frame}
 
 
-\begin{frame}[label={sec:orga107656}]{Example}
+\begin{frame}[label={sec:org3933dff}]{Example}
 Let's \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) in a month with \(B_{0,dm}(0) = \SI{4320}{\watthour\per\meter\squared}\). Thus:
 
 \begin{itemize}
@@ -322,7 +322,7 @@ Let's \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) in a month with \(
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1b2f39d}]{Intradaily profile}
+\begin{frame}[label={sec:orga5deea4}]{Intradaily profile}
 \begin{block}{Estimate irradiance from irradiation}
 \begin{align*}
   D(0) &= r_D \cdot D_d(0)\\
@@ -331,14 +331,14 @@ Let's \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) in a month with \(
 \end{align*}
 
 \begin{align*}
-  r_{D} &= \frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\\
+  r_{D} &= \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\\
   r_{G} &= r_{D}\cdot(a+b\cdot\cos(\omega))\\
   a &= 0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\\
   b &=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})
 \end{align*}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orgb8c5c56}]{Transposition to the Plane of Generator}
+\begin{frame}[label={sec:org4324d1e}]{Transposition to the Plane of Generator}
 \begin{itemize}
 \item Beam radiation
 \end{itemize}
@@ -364,7 +364,7 @@ Let's \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) in a month with \(
 \end{itemize}
 \[G(\alpha, \beta) = B(\alpha, \beta) + D(\alpha, \beta) + R(\alpha, \beta)\]
 \end{frame}
-\begin{frame}[label={sec:orgf50692a}]{Back to daily values}
+\begin{frame}[label={sec:org79d14d2}]{Back to daily values}
 \begin{block}{Daily values are the sum of hourly values in a day}
 \begin{align*}
   G_d(\alpha, \beta) &= \sum_d G(\alpha, \beta)\\
