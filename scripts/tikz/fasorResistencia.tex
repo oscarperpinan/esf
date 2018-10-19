@@ -1,0 +1,18 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+  \draw[->, thin, color=gray] (-0.2,0) -- (3,0) node[above] {$\Re$};
+  \draw[->, thin, color=gray] (0,-0.2) -- (0,1) node[left] {$\Im$};
+  \draw (2.5, 0) node[below] {$R = Z$};
+  \draw[->, >=stealth, thick, color = black] (0, 0) -- (2.5, 0) node[above] {$\overline{Z}$};
+
+\end{tikzpicture}
+
+\end{document}
+
+

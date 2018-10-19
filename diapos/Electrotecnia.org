@@ -322,6 +322,7 @@ $C_{p}=\sum_{i}C_{i}$
 #+ATTR_LATEX: :height 0.3\textheight
 [[../figs/AsociacionParalelo.pdf]]
 
+
 * Corriente alterna sinusoidal
 
 ** Conceptos Fundamentales
@@ -402,10 +403,9 @@ Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\r
 ** Cálculo Fasorial
 
 *** Representación fasorial
-- Para evitar el cálculo con funciones sinusoidales se recurre a una transformación: *fasores*.
-- Un fasor es un *número complejo* que representa una señal sinusoidal.
-- El *módulo* del fasor es el *valor eficaz*, y el *argumento* es la *fase*.
-- No se puede emplear cuando hay frecuencias diferentes en un mismo circuito.
+- Un fasor es un *número complejo* que representa una señal sinusoidal para simplificar cálculos.
+- El *módulo* del fasor es el *valor eficaz*. El *argumento* es la *fase*.
+- Descartamos pulsación: No se puede emplear cuando hay frecuencias diferentes en un mismo circuito.
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
@@ -423,13 +423,14 @@ Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\r
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :height 0.3\textheight
-[[../figs/Fasor.pdf]]
+#+ATTR_LATEX: :height 0.45\textheight
+[[../figs/fasor.pdf]]
+
 
 *** Impedancia
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.6
+     :BEAMER_col: 0.4
      :END:
 #+BEGIN_EXPORT latex
 \begin{align*}
@@ -453,42 +454,68 @@ Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\r
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.4
+     :BEAMER_col: 0.6
      :END:
-#+ATTR_LATEX: :height 0.4\textheight
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/Impedancia.pdf]]
 
-*** Impedancia de los Elementos
+*** Impedancia de los Elementos: Resistencia
 
-- Resistencia
 #+BEGIN_EXPORT latex
 \[
 \overline{Z}_R = R = R\phase{0}
 \]
 #+END_EXPORT
 
-- Inductancia
+[[../figs/fasorResistencia.pdf]]
+
+*** Impedancia de los Elementos: Inductancia
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+
 #+BEGIN_EXPORT latex
 \[
 \overline{Z}_L = j\omega L = \omega L \phase{\ang{90}} \Rightarrow X_L = \omega L
 \]
 #+END_EXPORT
 
-- Condensador
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+
+[[../figs/fasorInductancia.pdf]]
+
+*** Impedancia de los Elementos: Condensador
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
 #+BEGIN_EXPORT latex
 \[
 \overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}} \Rightarrow X_C = \frac{1}{\omega C}
 \]
 #+END_EXPORT
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
 
-- Genérica
+[[../figs/fasorCondensador.pdf]]
+
+*** Impedancia Genérica
 #+BEGIN_EXPORT latex
 \[
 \overline{Z} = R + j X
 \]
 #+END_EXPORT
 
+[[../figs/fasorImpedancia.pdf]]
 
+** Desfase Tensión - Corriente
 *** Convenio de signos para Desfase
 
 -  En general, la tensión es origen de fases ($\theta_{V}=0$).
@@ -541,7 +568,7 @@ Un circuito inductivo puro genera *señales en cuadratura* y *retrasa la corrien
 
 Un circuito capacitivo puro genera *señales en cuadratura* y *adelanta la corriente*.
 
-*** Circuito Inductivo
+*** Circuito Inductivo con pérdidas
 #+BEGIN_EXPORT latex
 \[
 \overline{Z} = R + j\omega L \Rightarrow \theta > 0
@@ -552,7 +579,7 @@ Un circuito capacitivo puro genera *señales en cuadratura* y *adelanta la corri
 
 Un circuito inductivo *retrasa la corriente*.
 
-*** Circuito Capacitivo
+*** Circuito Capacitivo con pérdidas
 #+BEGIN_EXPORT latex
 \[
 \overline{Z} = R - \frac{j}{\omega C} \Rightarrow \theta < 0
@@ -595,41 +622,55 @@ Un circuito capacitivo *adelanta la corriente*.
 - Pasa por los ceros de tensión y corriente.
 - Su valor medio es nulo.
 
-*** Circuito Inductivo
+*** Circuito Inductivo con pérdidas
 
 [[../figs/inductivoPotencia.pdf]]
 
 - Su valor medio es positivo, de valor $U I \cos \theta$.
 
-*** Circuito Capacitivo
-
+*** Circuito Capacitivo con pérdidas
 
 [[../figs/capacitivoPotencia.pdf]]
 
 - Su valor medio es positivo, de valor $U I \cos \theta$.
 
 *** Triángulo de Potencias
-
-**** Potencia Activa
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+- Potencia Activa
 #+BEGIN_EXPORT latex
 \[  
 P = U\cdot I\cdot\cos(\theta) = R \cdot I^2
 \]
 #+END_EXPORT
 
-**** Potencia Reactiva
+- Potencia Reactiva
 #+BEGIN_EXPORT latex
 \[
 Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2
 \]
 #+END_EXPORT
 
-**** Potencia Aparente
+- Potencia Aparente
 #+BEGIN_EXPORT latex
 \[
 \overline{S} = P + jQ = \overline{U} \cdot \overline{I}^*
 \]
+\[
+|S| = U \cdot I
+\]
+\[
+\theta_S = \theta_Z = \theta
+\]
 #+END_EXPORT
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+[[file:~/github/esf/figs/trianguloPotencias.pdf]]
 
 *** Potencia de elementos: Resistencia
 
@@ -679,51 +720,80 @@ Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2
 - Genera potencia reactiva ($Q < 0$)
 
 *** Teorema de Boucherot
+- En un circuito con múltiples elementos, la potencia aparente total es la suma de las potencias aparentes individuales.
+#+BEGIN_EXPORT latex
+\begin{align*}
+  \overline{S} &= \sum_{i = 1}^{n} S_i\\
+  P + jQ &= \sum^n_{i = 1} (P_i + jQ_i)
+\end{align*}
+#+END_EXPORT
+
+- La potencia activa (reactiva) total es la suma de las potencias activas (reactivas) individuales.
+
+#+BEGIN_EXPORT latex
+\begin{align*}
+P &= \sum_{i = 1}^n P_i\\
+Q &= \sum_{i = 1}^n Q_i
+\end{align*}
+#+END_EXPORT
 
 *** Compensación de reactiva
 
--  El factor de potencia ($\cos(\theta)$) representa la aportación de potencia activa dentro de la potencia aparente.
+-  El factor de potencia, $\cos(\theta)$, representa la aportación de potencia activa dentro de la potencia aparente.
+#+BEGIN_EXPORT latex
+\[
+P = S \cos \theta
+\]
+#+END_EXPORT
 
--  Suponiendo tensión constante, la corriente que debe circular es
-   $I=\frac{S}{V}=\frac{P}{V\cdot\cos(\theta)}$.
+-  Sean dos sistemas con misma tensión y potencia activa, y factores de potencia $\cos \theta_1 > \cos \theta_2$.
 
--  Para alimentar una potencia activa determinada, *la corriente es
-   tanto más alta cuanto menor el factor de potencia*.
-
--  *Factores de potencia bajos* obligan a
-
-   -  Utilizar *grandes secciones* de cable para transportar la misma
-      potencia activa
-
-   -  Generar *mayor potencia aparente* para alimentar la misma potencia
-      activa
+-  El sistema 2 requiere *mayor sección* de cable para transportar la misma potencia activa.
+#+BEGIN_EXPORT latex
+\[
+  \left(\frac{P}{U \cos \theta_1} = I_1 \right) < \left( I_2 = \frac{P}{U \cos \theta_2}\right) 
+\]
+#+END_EXPORT
+-  El sistema 2 requiere *mayor potencia aparente* (generador mayor) para alimentar la misma potencia activa.
+#+BEGIN_EXPORT latex
+\[
+  \left(\frac{P}{\cos \theta_1} = S_1 \right) < \left( S_2 = \frac{P}{\cos \theta_2}\right) 
+\]
+#+END_EXPORT
 
 *** Compensación de reactiva
 
 -  Comúnmente, el factor de potencia es *inductivo* (máquinas eléctricas
    industriales).
 
--  La red debe suministrar potencia reactiva inductiva (problemas
-   derivados de bajo factor de potencia)
+-  La red debe suministrar potencia reactiva inductiva (influye en secciones de líneas y tamaños de generadores)
 
--  Es necesario alterar localmente el factor de potencia:
+-  Es necesario mejorar *localmente* el factor de potencia. Solución
+  común: utilizar *bancos de condensadores* como suministradores de
+  potencia reactiva.
 
-   -  Solución común: utilizar *bancos de condensadores* como
-      suministradores de potencia reactiva.
+*** Compensación de reactiva
 
-*** COMMENT Resonancia
+- Sea una carga de potencia activa $P$ y potencia reactiva $Q$. Supongamos que se desea mejorar el factor de potencia a $\cos \theta' > \cos \theta$:
 
-Para un circuito serie R-L-C:
+#+BEGIN_EXPORT latex
+\[
+  Q' = P \tan \theta'
+\]
 
-$Z=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}$
+\[
+  Q_c = Q - Q' = P \tan \theta - P \tan \theta'
+\]
 
-Si $\omega L=\frac{1}{\omega C}$ el circuito tiene carácter resistivo
-(Z=R).
+\[
+  Q_c = \omega C U^2
+\]
 
-$f_{r}=\frac{1}{2\pi\sqrt{LC}}$
+\[
+C = \frac{P (\tan \theta - \tan \theta')}{\omega U^2}
+\]
+#+END_EXPORT
 
-y por tanto el $\cos(\theta)=1$ (la potencia aparente coincide con la
-activa).
 
 ** Trifásica
 
@@ -741,12 +811,22 @@ activa).
 
 [[../figs/TensionesTrifasica.pdf]]
 
+*** Receptores
+- *Tensión simple o de fase*: la existente entre una fase y el neutro.
+- *Tensión compuesta o de línea* (por defecto): la existente entre dos fases.
+- Un receptor puede estar conectado en *estrella* (punto común) o en *triángulo*.
+- Un receptor puede ser *equilibrado* (las tres impedancias que lo componen son idénticas) o *desequilibrado*.
+- Cuando el receptor es equilibrado la corriente que circula por el neutro es nula.
+
 *** Fase y línea
 
 **** Receptor en Estrella (cuatro hilos, 3F+1N)
 
 
-$V_{L}=\sqrt{3}\cdot V_{F}$ $I_{F}=I_{L}$
+$V_{L}=\sqrt{3}\cdot V_{F}$ 
+
+$I_{F}=I_{L}$
+
 $P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella.pdf]]
 
@@ -755,7 +835,10 @@ $P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 **** Receptor en Estrella (cuatro hilos, 3F+1N)
 
 
-$V_{L}=\sqrt{3}\cdot V_{F}$ $I_{F}=I_{L}$
+$V_{L}=\sqrt{3}\cdot V_{F}$ 
+
+$I_{F}=I_{L}$
+
 $P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella_CargaMonofasica.pdf]]
 
@@ -763,18 +846,22 @@ $P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 
 **** Receptor en Triangulo (tres hilos, 3F)
 
-$V_{L}=V_{F}$ $I_{F}=\frac{I_{L}}{\sqrt{3}}$
+$V_{L}=V_{F}$ 
+
+$I_{F}=\frac{I_{L}}{\sqrt{3}}$
+
 $P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella_CargaTriangulo.pdf]]
 
-*** Fase y línea
+*** Compensación de Reactiva
 
-**** Receptor en Triangulo (tres hilos, 3F)
+Para mejorar el factor de potencia en un sistema trifásico equilibrado se deben emplear *tres condensadores conectados en triángulo*:
 
-$V_{L}=V_{F}$ $I_{F}=\frac{I_{L}}{\sqrt{3}}$
-$P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
-[[../figs/RedTrifasicaTriangulo.pdf]]
-
+#+BEGIN_EXPORT latex
+\[
+  C_\triangle = \frac{P(\tan \theta - \tan \theta')}{3\omega U^2}
+\]
+#+END_EXPORT
 
 * Recursos
 

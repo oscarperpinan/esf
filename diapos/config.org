@@ -1,6 +1,6 @@
-#+AUTHOR:    Oscar Perpiñán Lamigueiro @@latex:\\@@ http://oscarperpinan.github.io
+#+AUTHOR:    Oscar Perpiñán Lamigueiro
 #+EMAIL:     oscar.perpinan@upm.es
-#+DATE: 
+#+DATE: http://oscarperpinan.github.io
 #+STARTUP: beamer
 #+DESCRIPTION:
 #+KEYWORDS:
