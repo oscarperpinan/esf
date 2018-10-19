@@ -1,0 +1,23 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\begin{tikzpicture}[domain = 0:9, samples = 1000]
+  % \draw[very thin,color=gray] (-0.1,-1.1) grid (10,1.1);
+  \draw[->] (-0.2,0) -- (10.1,0) node[right] {$t$};
+  \draw[->] (0,-1.2) -- (0,1.1);% node[above] {$f(t)$};
+  \draw[thick, color=blue] plot[id=tension] function{2.3*sin(x)}
+  node[right] {$u(t)$};
+  \draw[thick, color=red] plot[id=corriente] function{sin(x + pi/2)}
+    node[above right] {$i(t)$};
+  \draw[thick, color=black] plot[id=potencia] function{2.3*sin(x)*sin(x + pi/2)}
+    node[below right] {$p(t)$};
+\end{tikzpicture}
+
+\end{document}
+
+

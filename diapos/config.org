@@ -30,6 +30,7 @@
 #+LATEX_HEADER: \newunit{\wattpeak}{Wp}
 #+LATEX_HEADER: \newunit{\watthour}{Wh}
 #+LATEX_HEADER: \newunit{\amperehour}{Ah}
+#+LATEX_HEADER: \usepackage{steinmetz}
 #+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 #+LATEX_HEADER: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 #+LATEX_HEADER: \beamertemplatenavigationsymbolsempty

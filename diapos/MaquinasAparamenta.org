@@ -222,6 +222,31 @@ Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0u
 
 * Aparamenta eléctrica
 
+** Sistema de Suministro Eléctrico
+*** Sistema de suministro eléctrico
+
+
+Un *sistema de suministro eléctrico* tiene como objetivo *producir,
+transportar y distribuir energía eléctrica* a los lugares de consumo,
+con el mínimo coste posible en condiciones de *fiabilidad, calidad y
+seguridad*.
+
+*** Componentes del Sistema de Suministro Eléctrico
+
+
+[[../figs/Redelectrica2.png]]
+
+-  Generadores
+
+-  Redes de transporte
+
+-  Redes de distribución
+
+-  Equipos de acondicionamiento, transformación y protección (y en
+   algunos casos, almacenamiento)
+
+-  Puntos de consumo
+
 
 ** Definición y Funciones
 *** Definición

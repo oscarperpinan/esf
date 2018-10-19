@@ -5,33 +5,6 @@
 
 * Conceptos preliminares
 
-
-** Sistema de Suministro Eléctrico
-*** Sistema de suministro eléctrico
-
-
-Un *sistema de suministro eléctrico* tiene como objetivo *producir,
-transportar y distribuir energía eléctrica* a los lugares de consumo,
-con el mínimo coste posible en condiciones de *fiabilidad, calidad y
-seguridad*.
-
-*** Componentes del Sistema de Suministro Eléctrico
-
-
-[[../figs/Redelectrica2.png]]
-
--  Generadores
-
--  Redes de transporte
-
--  Redes de distribución
-
--  Equipos de acondicionamiento, transformación y protección (y en
-   algunos casos, almacenamiento)
-
--  Puntos de consumo
-
-** Definiciones
 *** Electricidad
 
 
@@ -48,38 +21,62 @@ seguridad*.
 *** Intensidad de Corriente eléctrica
 
 -  *Variación de la carga con el tiempo en la sección transversal de un
-   conductor* $$i(t)=\frac{dq(t)}{dt}$$
+   conductor* $i(t)=\frac{dq(t)}{dt}$
 
 -  Movimiento de electrones libres. Sin embargo, por convenio su sentido
    es positivo para el movimiento de las cargas positivas.
 
-*** Intensidad de Corriente Eléctrica
+*** Principio de conservación de la carga
+- Las lineas de corriente son cerradas (o solenoidales)
 
--  *Principio de conservación de la carga*: las lineas de corriente son
-   cerradas (o solenoidales)
+- *Ley de Kirchhoff de las corrientes (LKC)*: la suma de las corrientes
+  que llegan a un nudo es igual a la suma de las que salen.
 
-   -  Primera ley de Kirchhoff : la suma de las corrientes que llegan a
-      un nudo es igual a la suma de las que salen.
+#+ATTR_LATEX: :height 0.5\textheight
+[[file:~/github/esf/figs/LKC_FM.pdf]]
+
+#+BEGIN_EXPORT latex
+\[
+i_1(t) - i_2(t) + i_3(t) - i_4(t) + i_5(t) = 0
+\]
+#+END_EXPORT
 
 *** Tensión. Diferencia de potencial
 
 -  *Trabajo realizado al mover una carga unidad entre dos puntos*.
 
-$$v=\frac{dW_{e}}{dq}$$
+#+BEGIN_EXPORT latex
+\[
+v=\frac{dW_{e}}{dq}
+\]
+#+END_EXPORT
 
 -  Si entre dos puntos A y B existe una diferencia de potencial, podemos
-   escribir: $$\begin{aligned}
-         v_{AB} & = & v_{A}-v_{B}\\
-         v_{AB} & = & -v_{BA}
-       \end{aligned}$$
+   escribir: 
+#+BEGIN_EXPORT latex
+\begin{align*}
+         v_{AB} &=  v_{A}-v_{B}\\
+         v_{AB} &=  -v_{BA}
+\end{align*}
 
-*** Tensión Eléctrica
--  *Principio de conservación de la energía*: la energía producida por
-   un generador se consume por los receptores del circuito para producir
-   trabajo (mecánico, químico, etc.) o calor.
+#+END_EXPORT
 
-   -  Segunda ley de Kirchhoff: la suma (con signo) de las tensiones a
-      lo largo de un camino cerrado (circuito) es cero
+*** Principio de conservación de la energía 
+- La energía producida por un generador se consume por los receptores
+  del circuito para producir trabajo (mecánico, químico, etc.) o
+  calor.
+
+- *Ley de Kirchhoff de los Voltajes (LKV)*: la suma (con signo) de las
+  tensiones a lo largo de un camino cerrado (circuito) es cero.
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[file:~/github/esf/figs/LKV_FM.pdf]]
+
+#+BEGIN_EXPORT latex
+\[
+u_3(t) + u_4 (t) - u_5 (t) - u_1 (t) - u_2 (t)  = 0
+\]
+#+END_EXPORT
 
 *** Potencia eléctrica
 
@@ -147,9 +144,12 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 
 -  *Produce una caída de tensión entre sus terminales directamente
    proporcional a la corriente que lo atraviesa*.
-
--  La constante de proporcionalidad es el valor de la resistencia:
-   $V=R\cdot I$
+#+BEGIN_EXPORT latex
+\[
+V=R\cdot I
+\]
+#+END_EXPORT   
+-  La constante de proporcionalidad es el valor de la resistencia
 
 -  Su valor depende de resistividad del material, de la sección y de la
    longitud: $R=\rho\cdot\frac{L}{S}$
@@ -160,7 +160,12 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 [[../figs/Resistencia.pdf]]
 
 
-- Disipa energía eléctrica produciendo *calor*: $p(t)=R\cdot i^{2}(t)$
+- Disipa energía eléctrica produciendo *calor*: 
+#+BEGIN_EXPORT latex
+\[
+p(t)=R\cdot i^{2}(t)
+\]
+#+END_EXPORT
 
 - Cortocircuito: resistencia nula (tensión nula)
 
@@ -179,7 +184,12 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 
 -  La constante que liga la tensión en sus terminales con el cambio de
    la corriente es el valor de la inductancia
-   $$v(t)=L\cdot\frac{di(t)}{dt}$$
+   
+#+BEGIN_EXPORT latex
+\[
+v(t)=L\cdot\frac{di(t)}{dt}
+\]
+#+END_EXPORT
 
 *** Bobina o inductancia
 
@@ -199,12 +209,25 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 #+ATTR_LATEX: :height 0.2\textheight
 [[../figs/Condensador.pdf]]
 
--  Cuando se establece una tensión entre dos placas metálicas separadas
-   por una capa dieléctrica, se produce una *separación de cargas que se
-   acumulan en cada placa*, con signos contrarios.
+- *Condensador*: dos placas metálicas separadas por una capa dieléctrica.
 
--  La constante de proporcionalidad entre la carga acumulada y la
-   tensión entre las placas es la capacidad $$C=\frac{Q}{V_{AB}}$$
+- Al aplicar tensión se produce una *separación de cargas opuestas que
+  se acumulan en cada placa*.
+
+- *Capacidad*: constante de proporcionalidad entre carga y tensión.
+#+BEGIN_EXPORT latex
+\[
+q(t) = C \cdot u(t)
+\]
+#+END_EXPORT
+
+-  En el proceso de carga se produce una corriente eléctrica entre las
+   dos placas.
+#+BEGIN_EXPORT latex
+\[
+i(t)=\frac{dq(t)}{d(t)}=C\frac{du(t)}{dt}
+\]
+#+END_EXPORT
 
 
 *** Condensador
@@ -212,15 +235,12 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 #+ATTR_LATEX: :height 0.2\textheight
 [[../figs/Condensador.pdf]]
 
--  En el proceso de carga se produce una corriente eléctrica entre las
-   dos placas $$i(t)=\frac{dq(t)}{d(t)}=C\frac{dv(t)}{dt}$$
-
 -  Almacena *energía eléctrica*
 
 -  *Retrasa las variaciones de la tensión respecto de la corriente*
 
--  En un circuito de corriente continua cuando el condensador está
-   cargado se comporta como un circuito abierto.
+-  En un circuito de corriente continua se comporta como un circuito
+  abierto.
 
 ** Elementos No Lineales
 
@@ -229,11 +249,12 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
 #+ATTR_LATEX: :height 0.15\textheight
 [[../figs/Diodo.pdf]]
 
--  Un diodo es un dispositivo electrónico que permite el paso de
-   corriente a través de él a partir de una tensión de polarización.
+- Un diodo es un dispositivo electrónico que permite el paso de
+  corriente a través de él a partir de una tensión de polarización.
 
--  Cuando no conduce se comporta (idealmente) como un circuito abierto.
-   Cuando conduce se comporta (idealmente) como un cortocircuito.
+- Cuando *no conduce* se comporta (idealmente) como un *circuito abierto*.
+
+- Cuando *conduce* se comporta (idealmente) como un *cortocircuito*.
 
 *** Diodo
 
@@ -257,9 +278,9 @@ p(t)=\frac{dW_{e}}{dt}=v(t)\cdot\frac{dq(t)}{dt}=v(t)\cdot i(t)
   permite el paso de corriente entre dos de sus terminales cuando en el
   tercer terminal está polarizado adecuadamente.
 
-- Cuando no conduce se comporta (idealmente) como un circuito abierto.
+- Cuando *no conduce* se comporta (idealmente) como un *circuito abierto*.
 
-- Cuando conduce se comporta (idealmente) como un cortocircuito.
+- Cuando *conduce* se comporta (idealmente) como un *cortocircuito*.
 
 
 *** Transistor
@@ -305,10 +326,13 @@ $C_{p}=\sum_{i}C_{i}$
 
 ** Conceptos Fundamentales
    
-*** Pulsación - Frecuencia - Fase
+*** Onda sinusoidal
+
+[[../figs/sin.pdf]]
+
 
 \[
-y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)
+y(t)=Y_{o}\cdot\sin(\omega\cdot t+\theta)
 \]
 
 - $Y_{o}$ valor máximo de la onda.
@@ -319,158 +343,349 @@ y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)
 
 - $f=\frac{\omega}{2\cdot\pi}=\frac{1}{T}$: frecuencia (Hz)
 
-- $\varphi$: fase (radianes o grados)
+
+*** Fase
+
+[[../figs/desfase.pdf]]
+
+
+\[
+y(t)=Y_{o}\cdot\sin(\omega\cdot t+\theta)
+\]
+
+- $\theta$: fase (radianes o grados)
 
   - Es el argumento de la onda para t=0
 
   - Tomando una onda como referencia, si la fase es 0º, se dice que
     están en fase con la onda de referencia.
 
-  - Ídem, si la fase es 90º, se dice que están en cuadratura.
-
-  - Ídem, si la fase es positiva, se dice que la onda adelanta
+  - Si la fase es positiva, se dice que la onda adelanta
     respecto a la referencia.
 
-*** Pulsación - Frecuencia - Fase
 
-$$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
+*** Señales en Cuadratura
 
-[[../figs/Sin.pdf]]
+[[../figs/cuadratura.pdf]]
+
+- Cuando el desfase entre dos señales es de 90º ($\theta_I - \theta_U = \pi/2$), se dice que están en cuadratura.
+- El paso por cero de una señal coincide con el paso por el máximo/mínimo de la otra señal.
+
 
 *** Valor medio y valor eficaz
 
--  *Valor medio*: $$Y_m=\frac{1}{T}\int_{0}^{T}y(t)$$
+**** Valor medio
+#+BEGIN_EXPORT latex
+\[
+Y_m=\frac{1}{T}\int_{0}^{T}y(t)
+\]
+#+END_EXPORT
 
-   -  Para señal sinusoidal:
-      $$Y_m=\frac{1}{T}\int_{0}^{T}Y_{o}\cdot\cos(\omega\cdot
-            t+\phi)\, dt=0$$
+#+BEGIN_EXPORT latex
+\[
+Y_m=\frac{1}{T}\int_{0}^{T}Y_{o}\cdot\sin(\omega\cdot+\theta)\, dt=0
+\]
+#+END_EXPORT
+**** Valor eficaz
 
--  *Valor eficaz*:
-   $$Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}$$
+#+BEGIN_EXPORT latex
+\[
+Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}
+\]
+#+END_EXPORT
 
-   -  Para señal sinusoidal:
-
-$$Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\cos(\omega\cdot
-      t+\phi)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}$$
+#+BEGIN_EXPORT latex
+\[
+Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}
+\]
+#+END_EXPORT
+** Cálculo Fasorial
 
 *** Representación fasorial
+- Para evitar el cálculo con funciones sinusoidales se recurre a una transformación: *fasores*.
+- Un fasor es un *número complejo* que representa una señal sinusoidal.
+- El *módulo* del fasor es el *valor eficaz*, y el *argumento* es la *fase*.
+- No se puede emplear cuando hay frecuencias diferentes en un mismo circuito.
 
-$$\overline{Y}=Y\cdot e^{j\phi}=Y\cdot(\cos(\phi)+\mathrm{j}\cdot\sin(\phi))$$
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+#+BEGIN_EXPORT latex
+\begin{align*}
+\overline{Y} &= Y\cdot e^{j\theta}\\
+\overline{Y} &= Y\cdot(\cos(\theta)+\mathrm{j}\cdot\sin(\theta))\\
+\overline{Y} &= Y\phase{\theta}
+\end{align*}
+#+END_EXPORT
 
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+#+ATTR_LATEX: :height 0.3\textheight
 [[../figs/Fasor.pdf]]
 
-** Impedancia
-
 *** Impedancia
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+#+BEGIN_EXPORT latex
+\begin{align*}
+  \overline{I} &= I\phase{\theta_I}\\
+  \overline{U} &= U\phase{\theta_U}
+\end{align*}
 
-# $$\begin{aligned}
-#   \overline{R} & = & R\\
-#   \overline{X}_{c} & = & \frac{1}{j\omega C}\\
-#   \overline{X}_{L} & = & j\omega L
-# \end{aligned}$$
+\begin{align*}
+  \overline{U} &= \overline{Z} \cdot \overline{I}\\                 
+  \overline{Z} &= \frac{\overline{U}}{\overline{I}}
+\end{align*}
 
-# $$\begin{aligned}
-#   \overline{Z} & = & R+jX\\
-#   \overline{Z} & = & Z\cdot e^{j\phi_{Z}}\\
-#   Z & = & \sqrt{R^{2}+X^{2}}\\
-#   \tan(\phi_{Z}) & = & \frac{X}{R}
-# \end{aligned}$$
+\[
+\overline{Z} = \frac{U}{I}\phase{\theta_U - \theta_I} = 
+    \begin{cases}
+      Z = \frac{U}{I}\\
+      \theta_Z = \theta_U - \theta_I
+    \end{cases}
+\]
+#+END_EXPORT
 
-*** Impedancia
-
-$$\overline{I}=\frac{\overline{V}}{\overline{Z}}=\frac{V}{Z}\cdot
-e^{j(\phi_{V}-\phi_{Z})}=I\cdot e^{j\phi_{I}}$$
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
 #+ATTR_LATEX: :height 0.4\textheight
 [[../figs/Impedancia.pdf]]
 
+*** Impedancia de los Elementos
+
+- Resistencia
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_R = R = R\phase{0}
+\]
+#+END_EXPORT
+
+- Inductancia
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}} \Rightarrow X_L = \omega L
+\]
+#+END_EXPORT
+
+- Condensador
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}} \Rightarrow X_C = \frac{1}{\omega C}
+\]
+#+END_EXPORT
+
+- Genérica
+#+BEGIN_EXPORT latex
+\[
+\overline{Z} = R + j X
+\]
+#+END_EXPORT
+
+
 *** Convenio de signos para Desfase
 
--  La tensión es origen de fases ($\phi_{V}=0$).
+-  En general, la tensión es origen de fases ($\theta_{V}=0$).
+#+BEGIN_EXPORT latex
+\begin{align*}
+\theta_Z &= \theta_U - \theta_I\\
+\theta_{I} &= \theta_{V}- \theta_{Z} = -\theta
+\end{align*}
+#+END_EXPORT
 
--  La corriente está retrasada de la tensión un ángulo $\phi$ positivo:
-   $$\begin{aligned}
-         \phi_{I} & = & -\phi=\phi_{V}-\phi_{Z}\\
-         \phi & = & \phi_{z}\\
-         i(t) & = & I_{o}\cdot\cos(\omega\cdot t-\phi)
-       \end{aligned}$$
+-  La corriente está retrasada respecto de la tensión un ángulo $\theta = \theta_Z$:
+#+BEGIN_EXPORT latex
+\begin{align*}
+  u(t) &= U_{o}\cdot\sin(\omega \cdot t)\\
+  i(t) &= I_{o}\cdot\sin(\omega \cdot t - \theta)
+\end{align*}
+#+END_EXPORT
 
--  Por tanto, *si el circuito es inductivo (retrasa fase de corriente
-   respecto de tensión) $\phi$ es positivo*.
+*** Circuito Resistivo
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_R = R = R \phase{0}
+\]
+#+END_EXPORT
 
-*** Circuito Capacitivo puro
+[[../figs/resistivo.pdf]]
 
-[[../figs/PlotCircuitoCapacitivoPuro.pdf]]
+Un circuito resistivo no desfasa (*tensión y corriente en fase*).
 
 *** Circuito Inductivo puro
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}}
+\]
+#+END_EXPORT
 
-[[../figs/PlotCircuitoInductivoPuro.pdf]]
+[[../figs/inductivoPuro.pdf]]
 
-*** Circuito Capacitivo
+Un circuito inductivo puro genera *señales en cuadratura* y *retrasa la corriente*.
 
-[[../figs/PlotCircuitoCapacitivo.pdf]]
+*** Circuito Capacitivo puro
+#+BEGIN_EXPORT latex
+\[
+\overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}}
+\]
+#+END_EXPORT
+
+[[../figs/capacitivoPuro.pdf]]
+
+
+Un circuito capacitivo puro genera *señales en cuadratura* y *adelanta la corriente*.
 
 *** Circuito Inductivo
+#+BEGIN_EXPORT latex
+\[
+\overline{Z} = R + j\omega L \Rightarrow \theta > 0
+\]
+#+END_EXPORT
 
-[[../figs/PlotCircuitoInductivo.pdf]]
+[[../figs/inductivo.pdf]]
+
+Un circuito inductivo *retrasa la corriente*.
+
+*** Circuito Capacitivo
+#+BEGIN_EXPORT latex
+\[
+\overline{Z} = R - \frac{j}{\omega C} \Rightarrow \theta < 0
+\]
+#+END_EXPORT
+
+[[../figs/capacitivo.pdf]]
+
+Un circuito capacitivo *adelanta la corriente*.
 
 ** Potencia
 
-*** Circuito Capacitivo puro
+*** Circuito Resistivo
 
 
-**** Potencia
+[[../figs/resistivoPotencia.pdf]]
 
+- Fluctúa al doble de frecuencia.
+- Es siempre positiva.
+#+BEGIN_EXPORT latex
+\[
+  p(t) = R i^2(t) = \frac{u^2(t)}{R}
+\]
 
-[[../figs/PlotCircuitoCapacitivoPuro_Potencia.pdf]]
-
+#+END_EXPORT
 *** Circuito Inductivo puro
 
+[[../figs/inductivoPuroPotencia.pdf]]
 
-**** Potencia
+- Fluctúa al doble de frecuencia.
+- Pasa por los ceros de tensión y corriente.
+- Su valor medio es nulo.
 
 
-[[../figs/PlotCircuitoInductivoPuro_Potencia.pdf]]
+*** Circuito Capacitivo puro
+
+[[../figs/capacitivoPuroPotencia.pdf]]
+
+- Fluctúa al doble de frecuencia.
+- Pasa por los ceros de tensión y corriente.
+- Su valor medio es nulo.
+
+*** Circuito Inductivo
+
+[[../figs/inductivoPotencia.pdf]]
+
+- Su valor medio es positivo, de valor $U I \cos \theta$.
 
 *** Circuito Capacitivo
 
 
-**** Potencia
+[[../figs/capacitivoPotencia.pdf]]
 
-[[../figs/PlotCircuitoCapacitivo_Potencia.pdf]]
+- Su valor medio es positivo, de valor $U I \cos \theta$.
 
-*** Circuito Inductivo
+*** Triángulo de Potencias
 
-**** Potencia
+**** Potencia Activa
+#+BEGIN_EXPORT latex
+\[  
+P = U\cdot I\cdot\cos(\theta) = R \cdot I^2
+\]
+#+END_EXPORT
 
-[[../figs/PlotCircuitoInductivo_Potencia.pdf]]
+**** Potencia Reactiva
+#+BEGIN_EXPORT latex
+\[
+Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2
+\]
+#+END_EXPORT
 
-*** Potencia Activa, Reactiva y Aparente
+**** Potencia Aparente
+#+BEGIN_EXPORT latex
+\[
+\overline{S} = P + jQ = \overline{U} \cdot \overline{I}^*
+\]
+#+END_EXPORT
 
-$$\begin{aligned}
-  P & = & V\cdot I\cdot\cos(\phi)\\
-  Q & = & V\cdot I\cdot\sin(\phi)\\
-  S & = & P+jQ\end{aligned}$$
+*** Potencia de elementos: Resistencia
 
-*** Potencia de elementos
+#+BEGIN_EXPORT latex
+\[
+\theta = 0 \Rightarrow 
+\begin{cases}
+  P_R = R I^2\\
+  Q_R = 0\\
+  S_R = P_R
+\end{cases}
+\]
+#+END_EXPORT
 
--  Una *resistencia sólo consume potencia activa* ($\cos(\phi)=1$).
+- Consume potencia activa
+- No consume potencia reactiva
 
--  Un *condensador no consume potencia activa* ($\cos(\phi)=0$), y
-   *entrega potencia reactiva* ($\sin(\phi)=-1$)
+*** Potencia de elementos: Inductancia
 
--  Una *bobina no consume potencia activa* ($\cos(\phi)=0$) y *absorbe
-   potencia reactiva* ($\sin(\phi)=1$)
+#+BEGIN_EXPORT latex
+\[
+\theta = \pi/2 \Rightarrow 
+\begin{cases}
+  P_L = 0\\
+  Q_L = \omega L I^2\\
+  \overline{S}_L = \omega L I^2 \phase{\pi/2}
+\end{cases}
+\]
+#+END_EXPORT
+
+- No consume potencia activa
+- Consume potencia reactiva ($Q > 0$)
+
+*** Potencia de elementos: Condensador
+#+BEGIN_EXPORT latex
+\[
+\theta = - \pi/2 \Rightarrow 
+\begin{cases}
+  P_L = 0\\
+  Q_C = - \omega C U^2\\
+  \overline{S}_C = \omega C U^2 \phase{-\pi/2}
+\end{cases}
+\]
+#+END_EXPORT
+
+- No consume potencia activa
+- Genera potencia reactiva ($Q < 0$)
 
 *** Teorema de Boucherot
+
 *** Compensación de reactiva
 
--  El factor de potencia ($\cos(\phi)$) representa el desfase entre
-   tensión y corriente.
-
--  Es la fracción de potencia activa dentro de la potencia aparente.
+-  El factor de potencia ($\cos(\theta)$) representa la aportación de potencia activa dentro de la potencia aparente.
 
 -  Suponiendo tensión constante, la corriente que debe circular es
-   $I=\frac{S}{V}=\frac{P}{V\cdot\cos(\phi)}$.
+   $I=\frac{S}{V}=\frac{P}{V\cdot\cos(\theta)}$.
 
 -  Para alimentar una potencia activa determinada, *la corriente es
    tanto más alta cuanto menor el factor de potencia*.
@@ -500,14 +715,14 @@ $$\begin{aligned}
 
 Para un circuito serie R-L-C:
 
-$$Z=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}$$
+$Z=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}$
 
 Si $\omega L=\frac{1}{\omega C}$ el circuito tiene carácter resistivo
 (Z=R).
 
-$$f_{r}=\frac{1}{2\pi\sqrt{LC}}$$
+$f_{r}=\frac{1}{2\pi\sqrt{LC}}$
 
-y por tanto el $\cos(\phi)=1$ (la potencia aparente coincide con la
+y por tanto el $\cos(\theta)=1$ (la potencia aparente coincide con la
 activa).
 
 ** Trifásica
@@ -531,8 +746,8 @@ activa).
 **** Receptor en Estrella (cuatro hilos, 3F+1N)
 
 
-$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
-$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+$V_{L}=\sqrt{3}\cdot V_{F}$ $I_{F}=I_{L}$
+$P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella.pdf]]
 
 *** Fase y línea
@@ -540,29 +755,30 @@ $$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
 **** Receptor en Estrella (cuatro hilos, 3F+1N)
 
 
-$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
-$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+$V_{L}=\sqrt{3}\cdot V_{F}$ $I_{F}=I_{L}$
+$P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella_CargaMonofasica.pdf]]
 
 *** Fase y línea
 
 **** Receptor en Triangulo (tres hilos, 3F)
 
-$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
-$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+$V_{L}=V_{F}$ $I_{F}=\frac{I_{L}}{\sqrt{3}}$
+$P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaEstrella_CargaTriangulo.pdf]]
 
 *** Fase y línea
 
 **** Receptor en Triangulo (tres hilos, 3F)
 
-$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
-$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+$V_{L}=V_{F}$ $I_{F}=\frac{I_{L}}{\sqrt{3}}$
+$P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)$
 [[../figs/RedTrifasicaTriangulo.pdf]]
 
 
 * Recursos
 
+*** Bibliografía
 -  *Fraile Mora, J.*: /Circuitos Eléctricos/. Ed. Prentice Hall.
 
 -  *Hayt, W. y Kemmerly, J*: /Análisis de circuitos en ingeniería/. Ed.

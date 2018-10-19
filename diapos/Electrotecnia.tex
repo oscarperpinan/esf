@@ -1,4 +1,4 @@
-% Created 2018-10-18 jue 15:29
+% Created 2018-10-19 vie 15:00
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,7 @@
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
@@ -51,40 +52,9 @@
 \maketitle
 
 \section{Conceptos preliminares}
-\label{sec:org97a0282}
+\label{sec:org479344b}
 
-
-\subsection{Definiciones}
-\label{sec:orgeb12edf}
-
-
-\begin{frame}[label={sec:orga4c14f4}]{Sistema de suministro eléctrico}
-Un \alert{sistema de suministro eléctrico} tiene como objetivo \alert{producir,
-transportar y distribuir energía eléctrica} a los lugares de consumo,
-con el mínimo coste posible en condiciones de \alert{fiabilidad, calidad y
-seguridad}.
-\end{frame}
-
-\begin{frame}[label={sec:orge23dda1}]{Componentes del Sistema de Suministro Eléctrico}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Redelectrica2.png}
-\end{center}
-
-\begin{itemize}
-\item Generadores
-
-\item Redes de transporte
-
-\item Redes de distribución
-
-\item Equipos de acondicionamiento, transformación y protección (y en
-algunos casos, almacenamiento)
-
-\item Puntos de consumo
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org8a0378b}]{Electricidad}
+\begin{frame}[label={sec:org1c310f8}]{Electricidad}
 \begin{itemize}
 \item La electricidad es un fenómeno físico asociado al \alert{movimiento de las
 cargas eléctricas}.
@@ -98,59 +68,72 @@ Este movimiento se realiza mediante un trabajo, cuantificado por el
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd0188bd}]{Intensidad de Corriente eléctrica}
+\begin{frame}[label={sec:orgea959ed}]{Intensidad de Corriente eléctrica}
 \begin{itemize}
 \item \alert{Variación de la carga con el tiempo en la sección transversal de un
-conductor} $$i(t)=\frac{dq(t)}{dt}$$
+conductor} \(i(t)=\frac{dq(t)}{dt}\)
 
 \item Movimiento de electrones libres. Sin embargo, por convenio su sentido
 es positivo para el movimiento de las cargas positivas.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9c2c4f8}]{Intensidad de Corriente Eléctrica}
+\begin{frame}[label={sec:org260de25}]{Principio de conservación de la carga}
 \begin{itemize}
-\item \alert{Principio de conservación de la carga}: las lineas de corriente son
-cerradas (o solenoidales)
+\item Las lineas de corriente son cerradas (o solenoidales)
 
-\begin{itemize}
-\item Primera ley de Kirchhoff : la suma de las corrientes que llegan a
-un nudo es igual a la suma de las que salen.
+\item \alert{Ley de Kirchhoff de las corrientes (LKC)}: la suma de las corrientes
+que llegan a un nudo es igual a la suma de las que salen.
 \end{itemize}
-\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{/home/oscar/github/esf/figs/LKC_FM.pdf}
+\end{center}
+
+\[
+i_1(t) - i_2(t) + i_3(t) - i_4(t) + i_5(t) = 0
+\]
 \end{frame}
 
-\begin{frame}[label={sec:orgb518658}]{Tensión. Diferencia de potencial}
+\begin{frame}[label={sec:orgf582130}]{Tensión. Diferencia de potencial}
 \begin{itemize}
 \item \alert{Trabajo realizado al mover una carga unidad entre dos puntos}.
 \end{itemize}
 
-$$v=\frac{dW_{e}}{dq}$$
+\[
+v=\frac{dW_{e}}{dq}
+\]
 
 \begin{itemize}
 \item Si entre dos puntos A y B existe una diferencia de potencial, podemos
-escribir: $$\begin{aligned}
-         v_{AB} & = & v_{A}-v_{B}\\
-         v_{AB} & = & -v_{BA}
-       \end{aligned}$$
+escribir:
 \end{itemize}
+\begin{align*}
+         v_{AB} &=  v_{A}-v_{B}\\
+         v_{AB} &=  -v_{BA}
+\end{align*}
 \end{frame}
 
-\begin{frame}[label={sec:orgf6017ec}]{Tensión Eléctrica}
+\begin{frame}[label={sec:org59a9944}]{Principio de conservación de la energía}
 \begin{itemize}
-\item \alert{Principio de conservación de la energía}: la energía producida por
-un generador se consume por los receptores del circuito para producir
-trabajo (mecánico, químico, etc.) o calor.
+\item La energía producida por un generador se consume por los receptores
+del circuito para producir trabajo (mecánico, químico, etc.) o
+calor.
 
-\begin{itemize}
-\item Segunda ley de Kirchhoff: la suma (con signo) de las tensiones a
-lo largo de un camino cerrado (circuito) es cero
+\item \alert{Ley de Kirchhoff de los Voltajes (LKV)}: la suma (con signo) de las
+tensiones a lo largo de un camino cerrado (circuito) es cero.
 \end{itemize}
-\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{/home/oscar/github/esf/figs/LKV_FM.pdf}
+\end{center}
+
+\[
+u_3(t) + u_4 (t) - u_5 (t) - u_1 (t) - u_2 (t)  = 0
+\]
 \end{frame}
 
-
-\begin{frame}[label={sec:org66869f1}]{Potencia eléctrica}
+\begin{frame}[label={sec:orgf752aad}]{Potencia eléctrica}
 \begin{itemize}
 \item Trabajo realizado por unidad de tiempo
 \end{itemize}
@@ -169,7 +152,7 @@ potencia (\(p(t)>0\))
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org14f8314}]{Potencia y Energía}
+\begin{frame}[label={sec:orgc9fefaa}]{Potencia y Energía}
 \begin{description}
 \item[{Energía}] es la capacidad para realizar un trabajo.
 
@@ -184,7 +167,7 @@ Unidades W, kW
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:orgf471142}]{Eficiencia y Rendimiento}
+\begin{frame}[label={sec:orge3ab0a7}]{Eficiencia y Rendimiento}
 \begin{description}
 \item[{Eficiencia}] de un proceso es la relación entre la \emph{potencia} de
 salida y la \emph{potencia} de entrada a ese proceso.
@@ -194,10 +177,12 @@ salida y la \emph{energía} de entrada a ese proceso.
 \end{description}
 \end{frame}
 
+\section{Elementos del Circuito}
+\label{sec:org7d30c6e}
 \subsection{Elementos Lineales}
-\label{sec:org04424e2}
+\label{sec:org3a442c5}
 
-\begin{frame}[label={sec:org871fe8b}]{Generadores}
+\begin{frame}[label={sec:org2595db3}]{Generadores}
 \begin{itemize}
 \item \alert{Generador de tensión}: su tensión es independiente de la corriente
 (la corriente la fija el circuito)
@@ -225,7 +210,7 @@ salida y la \emph{energía} de entrada a ese proceso.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org66f2a67}]{Resistencia}
+\begin{frame}[label={sec:orgf24258a}]{Resistencia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Resistencia.pdf}
 \end{center}
@@ -234,24 +219,32 @@ salida y la \emph{energía} de entrada a ese proceso.
 \begin{itemize}
 \item \alert{Produce una caída de tensión entre sus terminales directamente
 proporcional a la corriente que lo atraviesa}.
-
-\item La constante de proporcionalidad es el valor de la resistencia:
-\(V=R\cdot I\)
+\end{itemize}
+\[
+V=R\cdot I
+\]
+\begin{itemize}
+\item La constante de proporcionalidad es el valor de la resistencia
 
 \item Su valor depende de resistividad del material, de la sección y de la
 longitud: \(R=\rho\cdot\frac{L}{S}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org953ba97}]{Resistencia}
+\begin{frame}[label={sec:org31ad3de}]{Resistencia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Resistencia.pdf}
 \end{center}
 
 
 \begin{itemize}
-\item Disipa energía eléctrica produciendo \alert{calor}: \(p(t)=R\cdot i^{2}(t)\)
+\item Disipa energía eléctrica produciendo \alert{calor}:
+\end{itemize}
+\[
+p(t)=R\cdot i^{2}(t)
+\]
 
+\begin{itemize}
 \item Cortocircuito: resistencia nula (tensión nula)
 
 \item Circuito abierto: resistencia infinita (corriente nula).
@@ -259,7 +252,7 @@ longitud: \(R=\rho\cdot\frac{L}{S}\)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd907ea3}]{Bobina o inductancia}
+\begin{frame}[label={sec:org413047a}]{Bobina o inductancia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Bobina.pdf}
 \end{center}
@@ -272,11 +265,14 @@ Faraday y Lenz)
 
 \item La constante que liga la tensión en sus terminales con el cambio de
 la corriente es el valor de la inductancia
-$$v(t)=L\cdot\frac{di(t)}{dt}$$
 \end{itemize}
+
+\[
+v(t)=L\cdot\frac{di(t)}{dt}
+\]
 \end{frame}
 
-\begin{frame}[label={sec:org94d8991}]{Bobina o inductancia}
+\begin{frame}[label={sec:org5f8c538}]{Bobina o inductancia}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Bobina.pdf}
 \end{center}
@@ -292,44 +288,52 @@ tensión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org990e2b5}]{Condensador}
+\begin{frame}[label={sec:org1ca74ed}]{Condensador}
 \begin{center}
 \includegraphics[height=0.2\textheight]{../figs/Condensador.pdf}
 \end{center}
 
 \begin{itemize}
-\item Cuando se establece una tensión entre dos placas metálicas separadas
-por una capa dieléctrica, se produce una \alert{separación de cargas que se
-acumulan en cada placa}, con signos contrarios.
+\item \alert{Condensador}: dos placas metálicas separadas por una capa dieléctrica.
 
-\item La constante de proporcionalidad entre la carga acumulada y la
-tensión entre las placas es la capacidad $$C=\frac{Q}{V_{AB}}$$
+\item Al aplicar tensión se produce una \alert{separación de cargas opuestas que
+se acumulan en cada placa}.
+
+\item \alert{Capacidad}: constante de proporcionalidad entre carga y tensión.
 \end{itemize}
-\end{frame}
-
-
-\begin{frame}[label={sec:org2f6d459}]{Condensador}
-\begin{center}
-\includegraphics[height=0.2\textheight]{../figs/Condensador.pdf}
-\end{center}
+\[
+q(t) = C \cdot u(t)
+\]
 
 \begin{itemize}
 \item En el proceso de carga se produce una corriente eléctrica entre las
-dos placas $$i(t)=\frac{dq(t)}{d(t)}=C\frac{dv(t)}{dt}$$
+dos placas.
+\end{itemize}
+\[
+i(t)=\frac{dq(t)}{d(t)}=C\frac{du(t)}{dt}
+\]
+\end{frame}
 
+
+\begin{frame}[label={sec:org7479238}]{Condensador}
+\begin{center}
+\includegraphics[height=0.2\textheight]{../figs/Condensador.pdf}
+\end{center}
+
+\begin{itemize}
 \item Almacena \alert{energía eléctrica}
 
 \item \alert{Retrasa las variaciones de la tensión respecto de la corriente}
 
-\item En un circuito de corriente continua cuando el condensador está
-cargado se comporta como un circuito abierto.
+\item En un circuito de corriente continua se comporta como un circuito
+abierto.
 \end{itemize}
 \end{frame}
 
 \subsection{Elementos No Lineales}
-\label{sec:org4044d33}
+\label{sec:org4346416}
 
-\begin{frame}[label={sec:org35b856a}]{Diodo}
+\begin{frame}[label={sec:org9db15fb}]{Diodo}
 \begin{center}
 \includegraphics[height=0.15\textheight]{../figs/Diodo.pdf}
 \end{center}
@@ -338,12 +342,13 @@ cargado se comporta como un circuito abierto.
 \item Un diodo es un dispositivo electrónico que permite el paso de
 corriente a través de él a partir de una tensión de polarización.
 
-\item Cuando no conduce se comporta (idealmente) como un circuito abierto.
-Cuando conduce se comporta (idealmente) como un cortocircuito.
+\item Cuando \alert{no conduce} se comporta (idealmente) como un \alert{circuito abierto}.
+
+\item Cuando \alert{conduce} se comporta (idealmente) como un \alert{cortocircuito}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org81c29e1}]{Diodo}
+\begin{frame}[label={sec:org1c86706}]{Diodo}
 \begin{center}
 \includegraphics[height=0.15\textheight]{../figs/Diodo.pdf}
 \end{center}
@@ -361,7 +366,7 @@ del circuito en ciertas condiciones)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd7978ec}]{Transistor}
+\begin{frame}[label={sec:org76c3191}]{Transistor}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/Transistor.pdf}
 \end{center}
@@ -371,14 +376,14 @@ del circuito en ciertas condiciones)
 permite el paso de corriente entre dos de sus terminales cuando en el
 tercer terminal está polarizado adecuadamente.
 
-\item Cuando no conduce se comporta (idealmente) como un circuito abierto.
+\item Cuando \alert{no conduce} se comporta (idealmente) como un \alert{circuito abierto}.
 
-\item Cuando conduce se comporta (idealmente) como un cortocircuito.
+\item Cuando \alert{conduce} se comporta (idealmente) como un \alert{cortocircuito}.
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}[label={sec:org5d0c28f}]{Transistor}
+\begin{frame}[label={sec:orgfdc0618}]{Transistor}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/Transistor.pdf}
 \end{center}
@@ -395,9 +400,9 @@ control es reproducida en la salida con mayor amplitud)
 \end{frame}
 
 \subsection{Asociación de elementos pasivos}
-\label{sec:orgf39b710}
+\label{sec:orgd01fb60}
 
-\begin{frame}[label={sec:orgdffc688}]{Conexión en serie}
+\begin{frame}[label={sec:org83d4fe7}]{Conexión en serie}
 \begin{block}{Misma corriente por todos los elementos: la tensión se reparte}
 \(R_{s}=\sum_{i}R_{i}\)
 
@@ -410,7 +415,7 @@ control es reproducida en la salida con mayor amplitud)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org523c0e8}]{Conexión en paralelo}
+\begin{frame}[label={sec:org6ae6d25}]{Conexión en paralelo}
 \begin{block}{Misma tensión aplicada a todos los elementos: la corriente se reparte}
 \(\frac{1}{R_{p}}=\sum_{i}\frac{1}{R_{i}}\)
 
@@ -424,14 +429,19 @@ control es reproducida en la salida con mayor amplitud)
 \end{frame}
 
 \section{Corriente alterna sinusoidal}
-\label{sec:org0c07afd}
+\label{sec:orgdc649b5}
 
 \subsection{Conceptos Fundamentales}
-\label{sec:org397ab4d}
+\label{sec:orgea9fc93}
 
-\begin{frame}[label={sec:org681cc76}]{Pulsación - Frecuencia - Fase}
+\begin{frame}[label={sec:org511a571}]{Onda sinusoidal}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/sin.pdf}
+\end{center}
+
+
 \[
-y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)
+y(t)=Y_{o}\cdot\sin(\omega\cdot t+\theta)
 \]
 
 \begin{itemize}
@@ -442,8 +452,22 @@ y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)
 \item T: periodo de la onda (segundos)
 
 \item \(f=\frac{\omega}{2\cdot\pi}=\frac{1}{T}\): frecuencia (Hz)
+\end{itemize}
+\end{frame}
 
-\item \(\varphi\): fase (radianes o grados)
+
+\begin{frame}[label={sec:orgde63a88}]{Fase}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/desfase.pdf}
+\end{center}
+
+
+\[
+y(t)=Y_{o}\cdot\sin(\omega\cdot t+\theta)
+\]
+
+\begin{itemize}
+\item \(\theta\): fase (radianes o grados)
 
 \begin{itemize}
 \item Es el argumento de la onda para t=0
@@ -451,171 +475,351 @@ y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)
 \item Tomando una onda como referencia, si la fase es 0º, se dice que
 están en fase con la onda de referencia.
 
-\item Ídem, si la fase es 90º, se dice que están en cuadratura.
-
-\item Ídem, si la fase es positiva, se dice que la onda adelanta
+\item Si la fase es positiva, se dice que la onda adelanta
 respecto a la referencia.
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org727b55c}]{Pulsación - Frecuencia - Fase}
-$$y(t)=Y_{o}\cdot\cos(\omega\cdot t+\varphi)$$
 
+\begin{frame}[label={sec:orgf58b8f9}]{Señales en Cuadratura}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Sin.pdf}
+\includegraphics[width=.9\linewidth]{../figs/cuadratura.pdf}
 \end{center}
+
+\begin{itemize}
+\item Cuando el desfase entre dos señales es de 90º (\(\theta_I - \theta_U = \pi/2\)), se dice que están en cuadratura.
+\item El paso por cero de una señal coincide con el paso por el máximo/mínimo de la otra señal.
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6535e13}]{Valor medio y valor eficaz}
-\begin{itemize}
-\item \alert{Valor medio}: $$Y_m=\frac{1}{T}\int_{0}^{T}y(t)$$
 
-\begin{itemize}
-\item Para señal sinusoidal:
-$$Y_m=\frac{1}{T}\int_{0}^{T}Y_{o}\cdot\cos(\omega\cdot
-            t+\phi)\, dt=0$$
-\end{itemize}
+\begin{frame}[label={sec:orgdfad6bc}]{Valor medio y valor eficaz}
+\begin{block}{Valor medio}
+\[
+Y_m=\frac{1}{T}\int_{0}^{T}y(t)
+\]
 
-\item \alert{Valor eficaz}:
-$$Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}$$
+\[
+Y_m=\frac{1}{T}\int_{0}^{T}Y_{o}\cdot\sin(\omega\cdot+\theta)\, dt=0
+\]
+\end{block}
+\begin{block}{Valor eficaz}
+\[
+Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}
+\]
 
-\begin{itemize}
-\item Para señal sinusoidal:
-\end{itemize}
-\end{itemize}
-
-$$Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\cos(\omega\cdot
-      t+\phi)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}$$
+\[
+Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}
+\]
+\end{block}
 \end{frame}
+\subsection{Cálculo Fasorial}
+\label{sec:org1ad8285}
 
-\begin{frame}[label={sec:orgdedbcc4}]{Representación fasorial}
-$$\overline{Y}=Y\cdot e^{j\phi}=Y\cdot(\cos(\phi)+\mathrm{j}\cdot\sin(\phi))$$
+\begin{frame}[label={sec:org68db3d8}]{Representación fasorial}
+\begin{itemize}
+\item Para evitar el cálculo con funciones sinusoidales se recurre a una transformación: \alert{fasores}.
+\item Un fasor es un \alert{número complejo} que representa una señal sinusoidal.
+\item El \alert{módulo} del fasor es el \alert{valor eficaz}, y el \alert{argumento} es la \alert{fase}.
+\item No se puede emplear cuando hay frecuencias diferentes en un mismo circuito.
+\end{itemize}
 
+\begin{columns}
+\begin{column}{0.5\columnwidth}
+\begin{align*}
+\overline{Y} &= Y\cdot e^{j\theta}\\
+\overline{Y} &= Y\cdot(\cos(\theta)+\mathrm{j}\cdot\sin(\theta))\\
+\overline{Y} &= Y\phase{\theta}
+\end{align*}
+\end{column}
+
+\begin{column}{0.5\columnwidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Fasor.pdf}
+\includegraphics[height=0.3\textheight]{../figs/Fasor.pdf}
 \end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{Impedancia}
-\label{sec:org2add6b5}
+\begin{frame}[label={sec:orgdeaab81}]{Impedancia}
+\begin{columns}
+\begin{column}{0.6\columnwidth}
+\begin{align*}
+  \overline{I} &= I\phase{\theta_I}\\
+  \overline{U} &= U\phase{\theta_U}
+\end{align*}
 
-\begin{frame}[label={sec:orgd959c53}]{Impedancia}
-\end{frame}
+\begin{align*}
+  \overline{U} &= \overline{Z} \cdot \overline{I}\\                 
+  \overline{Z} &= \frac{\overline{U}}{\overline{I}}
+\end{align*}
 
-\begin{frame}[label={sec:org5019cd3}]{Impedancia}
-$$\overline{I}=\frac{\overline{V}}{\overline{Z}}=\frac{V}{Z}\cdot
-e^{j(\phi_{V}-\phi_{Z})}=I\cdot e^{j\phi_{I}}$$
+\[
+\overline{Z} = \frac{U}{I}\phase{\theta_U - \theta_I} = 
+    \begin{cases}
+      Z = \frac{U}{I}\\
+      \theta_Z = \theta_U - \theta_I
+    \end{cases}
+\]
+\end{column}
+
+\begin{column}{0.4\columnwidth}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/Impedancia.pdf}
 \end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org45d234a}]{Convenio de signos para Desfase}
+\begin{frame}[label={sec:orgab2040d}]{Impedancia de los Elementos}
 \begin{itemize}
-\item La tensión es origen de fases (\(\phi_{V}=0\)).
-
-\item La corriente está retrasada de la tensión un ángulo \(\phi\) positivo:
-$$\begin{aligned}
-         \phi_{I} & = & -\phi=\phi_{V}-\phi_{Z}\\
-         \phi & = & \phi_{z}\\
-         i(t) & = & I_{o}\cdot\cos(\omega\cdot t-\phi)
-       \end{aligned}$$
-
-\item Por tanto, \alert{si el circuito es inductivo (retrasa fase de corriente
-respecto de tensión) \(\phi\) es positivo}.
+\item Resistencia
 \end{itemize}
+\[
+\overline{Z}_R = R = R\phase{0}
+\]
+
+\begin{itemize}
+\item Inductancia
+\end{itemize}
+\[
+\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}} \Rightarrow X_L = \omega L
+\]
+
+\begin{itemize}
+\item Condensador
+\end{itemize}
+\[
+\overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}} \Rightarrow X_C = \frac{1}{\omega C}
+\]
+
+\begin{itemize}
+\item Genérica
+\end{itemize}
+\[
+\overline{Z} = R + j X
+\]
 \end{frame}
 
-\begin{frame}[label={sec:orga5e216d}]{Circuito Capacitivo puro}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivoPuro.pdf}
-\end{center}
+
+\begin{frame}[label={sec:orga4badaa}]{Convenio de signos para Desfase}
+\begin{itemize}
+\item En general, la tensión es origen de fases (\(\theta_{V}=0\)).
+\end{itemize}
+\begin{align*}
+\theta_Z &= \theta_U - \theta_I\\
+\theta_{I} &= \theta_{V}- \theta_{Z} = -\theta
+\end{align*}
+
+\begin{itemize}
+\item La corriente está retrasada respecto de la tensión un ángulo \(\theta = \theta_Z\):
+\end{itemize}
+\begin{align*}
+  u(t) &= U_{o}\cdot\sin(\omega \cdot t)\\
+  i(t) &= I_{o}\cdot\sin(\omega \cdot t - \theta)
+\end{align*}
 \end{frame}
 
-\begin{frame}[label={sec:org5e9ec77}]{Circuito Inductivo puro}
+\begin{frame}[label={sec:org040645f}]{Circuito Resistivo}
+\[
+\overline{Z}_R = R = R \phase{0}
+\]
+
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivoPuro.pdf}
+\includegraphics[width=.9\linewidth]{../figs/resistivo.pdf}
 \end{center}
+
+Un circuito resistivo no desfasa (\alert{tensión y corriente en fase}).
 \end{frame}
 
-\begin{frame}[label={sec:org32798bd}]{Circuito Capacitivo}
+\begin{frame}[label={sec:orgba93d71}]{Circuito Inductivo puro}
+\[
+\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}}
+\]
+
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivo.pdf}
+\includegraphics[width=.9\linewidth]{../figs/inductivoPuro.pdf}
 \end{center}
+
+Un circuito inductivo puro genera \alert{señales en cuadratura} y \alert{retrasa la corriente}.
 \end{frame}
 
-\begin{frame}[label={sec:org7333f72}]{Circuito Inductivo}
+\begin{frame}[label={sec:org2a97233}]{Circuito Capacitivo puro}
+\[
+\overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}}
+\]
+
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivo.pdf}
+\includegraphics[width=.9\linewidth]{../figs/capacitivoPuro.pdf}
 \end{center}
+
+
+Un circuito capacitivo puro genera \alert{señales en cuadratura} y \alert{adelanta la corriente}.
+\end{frame}
+
+\begin{frame}[label={sec:org2171cc1}]{Circuito Inductivo}
+\[
+\overline{Z} = R + j\omega L \Rightarrow \theta > 0
+\]
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/inductivo.pdf}
+\end{center}
+
+Un circuito inductivo \alert{retrasa la corriente}.
+\end{frame}
+
+\begin{frame}[label={sec:org44a91d4}]{Circuito Capacitivo}
+\[
+\overline{Z} = R - \frac{j}{\omega C} \Rightarrow \theta < 0
+\]
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/capacitivo.pdf}
+\end{center}
+
+Un circuito capacitivo \alert{adelanta la corriente}.
 \end{frame}
 
 \subsection{Potencia}
-\label{sec:org3694bb2}
+\label{sec:orgb78f3f1}
 
-\begin{frame}[label={sec:orgc113b49}]{Circuito Capacitivo puro}
-\begin{block}{Potencia}
+\begin{frame}[label={sec:org7742138}]{Circuito Resistivo}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivoPuro_Potencia.pdf}
+\includegraphics[width=.9\linewidth]{../figs/resistivoPotencia.pdf}
 \end{center}
-\end{block}
-\end{frame}
 
-\begin{frame}[label={sec:org5784024}]{Circuito Inductivo puro}
-\begin{block}{Potencia}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivoPuro_Potencia.pdf}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org620722f}]{Circuito Capacitivo}
-\begin{block}{Potencia}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoCapacitivo_Potencia.pdf}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org4dbd734}]{Circuito Inductivo}
-\begin{block}{Potencia}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PlotCircuitoInductivo_Potencia.pdf}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org68917ff}]{Potencia Activa, Reactiva y Aparente}
-$$\begin{aligned}
-  P & = & V\cdot I\cdot\cos(\phi)\\
-  Q & = & V\cdot I\cdot\sin(\phi)\\
-  S & = & P+jQ\end{aligned}$$
-\end{frame}
-
-\begin{frame}[label={sec:orgb725653}]{Potencia de elementos}
 \begin{itemize}
-\item Una \alert{resistencia sólo consume potencia activa} (\(\cos(\phi)=1\)).
+\item Fluctúa al doble de frecuencia.
+\item Es siempre positiva.
+\end{itemize}
+\[
+  p(t) = R i^2(t) = \frac{u^2(t)}{R}
+\]
+\end{frame}
+\begin{frame}[label={sec:org37be867}]{Circuito Inductivo puro}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/inductivoPuroPotencia.pdf}
+\end{center}
 
-\item Un \alert{condensador no consume potencia activa} (\(\cos(\phi)=0\)), y
-\alert{entrega potencia reactiva} (\(\sin(\phi)=-1\))
-
-\item Una \alert{bobina no consume potencia activa} (\(\cos(\phi)=0\)) y \alert{absorbe
-potencia reactiva} (\(\sin(\phi)=1\))
+\begin{itemize}
+\item Fluctúa al doble de frecuencia.
+\item Pasa por los ceros de tensión y corriente.
+\item Su valor medio es nulo.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1ed7caa}]{Teorema de Boucherot}
-\end{frame}
-\begin{frame}[label={sec:orgf01c219}]{Compensación de reactiva}
-\begin{itemize}
-\item El factor de potencia (\(\cos(\phi)\)) representa el desfase entre
-tensión y corriente.
 
-\item Es la fracción de potencia activa dentro de la potencia aparente.
+\begin{frame}[label={sec:org975c75f}]{Circuito Capacitivo puro}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/capacitivoPuroPotencia.pdf}
+\end{center}
+
+\begin{itemize}
+\item Fluctúa al doble de frecuencia.
+\item Pasa por los ceros de tensión y corriente.
+\item Su valor medio es nulo.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org9487363}]{Circuito Inductivo}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/inductivoPotencia.pdf}
+\end{center}
+
+\begin{itemize}
+\item Su valor medio es positivo, de valor \(U I \cos \theta\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgc2d247f}]{Circuito Capacitivo}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/capacitivoPotencia.pdf}
+\end{center}
+
+\begin{itemize}
+\item Su valor medio es positivo, de valor \(U I \cos \theta\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgb1a2c18}]{Triángulo de Potencias}
+\begin{block}{Potencia Activa}
+\[  
+P = U\cdot I\cdot\cos(\theta) = R \cdot I^2
+\]
+\end{block}
+
+\begin{block}{Potencia Reactiva}
+\[
+Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2
+\]
+\end{block}
+
+\begin{block}{Potencia Aparente}
+\[
+\overline{S} = P + jQ = \overline{U} \cdot \overline{I}^*
+\]
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org2efea8a}]{Potencia de elementos: Resistencia}
+\[
+\theta = 0 \Rightarrow 
+\begin{cases}
+  P_R = R I^2\\
+  Q_R = 0\\
+  S_R = P_R
+\end{cases}
+\]
+
+\begin{itemize}
+\item Consume potencia activa
+\item No consume potencia reactiva
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org66d3a3e}]{Potencia de elementos: Inductancia}
+\[
+\theta = \pi/2 \Rightarrow 
+\begin{cases}
+  P_L = 0\\
+  Q_L = \omega L I^2\\
+  \overline{S}_L = \omega L I^2 \phase{\pi/2}
+\end{cases}
+\]
+
+\begin{itemize}
+\item No consume potencia activa
+\item Consume potencia reactiva (\(Q > 0\))
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org4db0234}]{Potencia de elementos: Condensador}
+\[
+\theta = - \pi/2 \Rightarrow 
+\begin{cases}
+  P_L = 0\\
+  Q_C = - \omega C U^2\\
+  \overline{S}_C = \omega C U^2 \phase{-\pi/2}
+\end{cases}
+\]
+
+\begin{itemize}
+\item No consume potencia activa
+\item Genera potencia reactiva (\(Q < 0\))
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgce2c715}]{Teorema de Boucherot}
+\end{frame}
+
+\begin{frame}[label={sec:org3546723}]{Compensación de reactiva}
+\begin{itemize}
+\item El factor de potencia (\(\cos(\theta)\)) representa la aportación de potencia activa dentro de la potencia aparente.
 
 \item Suponiendo tensión constante, la corriente que debe circular es
-\(I=\frac{S}{V}=\frac{P}{V\cdot\cos(\phi)}\).
+\(I=\frac{S}{V}=\frac{P}{V\cdot\cos(\theta)}\).
 
 \item Para alimentar una potencia activa determinada, \alert{la corriente es
 tanto más alta cuanto menor el factor de potencia}.
@@ -632,7 +836,7 @@ activa
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org25bd798}]{Compensación de reactiva}
+\begin{frame}[label={sec:org0c36b9d}]{Compensación de reactiva}
 \begin{itemize}
 \item Comúnmente, el factor de potencia es \alert{inductivo} (máquinas eléctricas
 industriales).
@@ -650,9 +854,9 @@ suministradores de potencia reactiva.
 \end{frame}
 
 \subsection{Trifásica}
-\label{sec:org62ed3be}
+\label{sec:org3f5470d}
 
-\begin{frame}[label={sec:org3028e93}]{Motivación de los sistemas trifásicos}
+\begin{frame}[label={sec:orgcadea66}]{Motivación de los sistemas trifásicos}
 \begin{itemize}
 \item La potencia instantánea de un sistema monofásico es pulsante. En un
 sistema trifásico la potencia instantánea es constante, evitando
@@ -663,490 +867,66 @@ necesaria es un 25\% en un trifásico que en un monofásico.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2ef9120}]{Generación de un sistema trifásico}
+\begin{frame}[label={sec:orgb63a968}]{Generación de un sistema trifásico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TensionesTrifasica.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org8547a56}]{Fase y línea}
+\begin{frame}[label={sec:orgeb7faef}]{Fase y línea}
 \begin{block}{Receptor en Estrella (cuatro hilos, 3F+1N)}
-$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
-$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+\(V_{L}=\sqrt{3}\cdot V_{F}\) \(I_{F}=I_{L}\)
+\(P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)\)
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RedTrifasicaEstrella.pdf}
 \end{center}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgbcce042}]{Fase y línea}
+\begin{frame}[label={sec:orgc221e49}]{Fase y línea}
 \begin{block}{Receptor en Estrella (cuatro hilos, 3F+1N)}
-$$V_{L}=\sqrt{3}\cdot V_{F}$$ $$I_{F}=I_{L}$$
-$$P=3\cdot V_{F}I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+\(V_{L}=\sqrt{3}\cdot V_{F}\) \(I_{F}=I_{L}\)
+\(P=3\cdot V_{F}I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)\)
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RedTrifasicaEstrella_CargaMonofasica.pdf}
 \end{center}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org29ca6c5}]{Fase y línea}
+\begin{frame}[label={sec:org37f5340}]{Fase y línea}
 \begin{block}{Receptor en Triangulo (tres hilos, 3F)}
-$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
-$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+\(V_{L}=V_{F}\) \(I_{F}=\frac{I_{L}}{\sqrt{3}}\)
+\(P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)\)
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RedTrifasicaEstrella_CargaTriangulo.pdf}
 \end{center}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org8c4bb71}]{Fase y línea}
+\begin{frame}[label={sec:org712e125}]{Fase y línea}
 \begin{block}{Receptor en Triangulo (tres hilos, 3F)}
-$$V_{L}=V_{F}$$ $$I_{F}=\frac{I_{L}}{\sqrt{3}}$$
-$$P=3\cdot V_{F}\cdot I_{F}\cos(\phi)=\sqrt{3}V_{L}I_{L}\cos(\phi)$$
+\(V_{L}=V_{F}\) \(I_{F}=\frac{I_{L}}{\sqrt{3}}\)
+\(P=3\cdot V_{F}\cdot I_{F}\cos(\theta)=\sqrt{3}V_{L}I_{L}\cos(\theta)\)
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RedTrifasicaTriangulo.pdf}
 \end{center}
 \end{block}
 \end{frame}
 
-\section{Máquinas Eléctricas}
-\label{sec:orgbbb6615}
-
-\subsection{Fundamentos de Electromagnetismo}
-\label{sec:org51be9d5}
-
-\begin{frame}[label={sec:org8176e6e}]{Electromagnetismo}
-\begin{itemize}
-\item Un campo magnético ejerce una fuerza sobre una carga en movimiento.
-(Fuerza de Lorentz)
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Magnet0873.png}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org98bc87c}]{Electromagnetismo}
-\begin{itemize}
-\item Una corriente eléctrica crea un campo magnético en torno al
-conductor. (Oersted, Biot-Savart)
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Solenoide.jpg}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org2a262fe}]{Electromagnetismo}
-\begin{itemize}
-\item Un conductor por el que circula corriente, situado en el seno de un
-campo magnético, altera este campo magnético, y experimenta una
-fuerza que lo expulsa para disminuir la alteración (Fuerza de Ampere)
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/FuerzasRepulsion.png}
-\end{center}
-
-\begin{center}
-Vídeo: \href{http://www.youtube.com/watch?v=2j8D\_N1v0tU}{Repulsión entre barras de Alta Tensión}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org1b49253}]{Electromagnetismo}
-\begin{itemize}
-\item Entre los puntos extremos de una espira estática atravesada por un
-campo magnético, aparece una \alert{tensión inducida siempre que el flujo
-magnético sea variable}. (Ley de Faraday).
-
-\item Esta condición se cumple cuando la \alert{espira está en movimiento,}
-cuando el \alert{campo magnético es variable}, o cuando ambas situaciones
-coinciden.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org672ca30}]{Electromagnetismo}
-\begin{itemize}
-\item La tensión inducida es directamente proporcional a la rapidez con que
-cambia en el tiempo el flujo magnético que atraviesa la superficie
-encerrada por la espira. $$e=-\frac{\mathrm{d}\phi}{\mathrm{d}t}$$
-
-\item Al elemento que emite el campo magnético se le denomina \alert{inductor} y
-aquel que es atravesado por este flujo es el \alert{inducido}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orgfaada0f}]{Electromagnetismo}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Electric_motor_cycle_3.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org9dc8615}]{Electromagnetismo}
-\begin{block}{Tensión, frecuencia y flujo}
-$$\begin{aligned}
-  E & = & 4.44\cdot N\cdot\phi\cdot f\end{aligned}$$
-
-\begin{itemize}
-\item \(E\) es la tensión inducida; \(N\) número de espiras; \(\phi\) es el flujo
-interceptado; \(f\) frecuencia eléctrica
-
-\item El flujo depende proporcionalmente de la tensión e inversamente de la
-frecuencia.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org9b784be}]{Electromagnetismo}
-\begin{block}{Par, potencia y velocidad}
-$$\begin{aligned}
-  P & = & T\cdot\omega\end{aligned}$$
-
-\begin{itemize}
-\item \(P\) es potencia mecánica; \(T\) par mecánico; \(\omega\) es la velocidad
-angular.
-
-\item El par busca alinear los ejes magnéticos de inductor e inducido, o de
-estator y rotor. Una vez que están alineados, el par es nulo.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\subsection{Tipos de máquinas}
-\label{sec:org55c59e4}
-
-
-\begin{frame}[label={sec:orga0ee3a7}]{Relación de Frecuencias}
-\begin{block}{Frecuencia eléctrica y velocidad}
-$$\begin{aligned}
-  f_{2} & = & f_{1}-n\cdot p\end{aligned}$$
-
-\begin{itemize}
-\item \(f_{2}\) es la frecuencia en el inducido; \(f_{1}\) es la frecuencia en
-el inductor; \(n\) es la velocidad angular; \(p\) es el número de polos.
-
-\item Al utilizar colector de delgas (escobillas) en el inducido, la
-frecuencia en el circuito exterior (\(f_{L}\)) es diferente a \(f_{2}\).
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org7cf3bb1}]{Clasificación de máquinas}
-\begin{itemize}
-\item Estáticas (\(n=0\Rightarrow f_{2}=f_{1}\)): Transformadores
-
-\item Rotativas (\(n\neq0\)):
-
-\begin{itemize}
-\item Flujo inductor constante (\(f_{1}=0\Rightarrow f_{2}=n\cdot
-            p\))
-
-\begin{itemize}
-\item Delgas (\(f_{L}\neq f_{2}\)): Máquinas de corriente continua
-
-\item Anillos (\(f_{L}=f_{2}\)): Máquinas síncronas
-\end{itemize}
-
-\item Flujo inductor variable (\(f_{1}>0\Rightarrow
-            f_{2}=f_{1}-n\cdot p\))
-
-\begin{itemize}
-\item Delgas (\(f_{L}\neq f_{2}\)): Motor universal
-
-\item Anillos (\(f_{L}=f_{2}\)): Máquinas asíncronas
-\end{itemize}
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org6d01de5}]{Transformador}
-\begin{itemize}
-\item Un transformador consiste en dos bobinas acopladas magnéticamente.
-
-\item Un transformador ideal tiene las siguientes relaciones entre tensión
-y corriente de entrada (primario) y salida (secundario):
-\end{itemize}
-
-$$N_{s}\cdot I_{s}=N_{p}\cdot I_{p}$$
-$$\frac{V_{p}}{N_{p}}=\frac{V_{s}}{N_{s}}$$
-
-\begin{center}
-\includegraphics[height=0.3\textheight]{../figs/Transformador2.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orgf08b68b}]{Transformador}
-\begin{itemize}
-\item Un transformador ideal con relación de transformación \(N_{p}/N_{s}<1\)
-(más vueltas en el secundario que en el primario), sube tensión
-(\(V_{s}>V_{p}\)) y reduce corriente (\(I_{s}<I_{p}\)).
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Transformador.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org43ceaf1}]{Motores}
-\begin{block}{Motor DC}
-\begin{itemize}
-\item \(f_{1}=0\); \(f_{L}=0\);
-
-\item Estator-Inductor alimentado por corriente DC (o imanes permanentes).
-
-\item El colector de delgas transforma la frecuencia de alimentación (DC)
-en alterna.
-
-\item Rotor-Inducido gira sincronizado con la frecuencia \guillemotleft{}transformada\guillemotright{}.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org0d30623}]{Motores}
-\begin{block}{Motor asíncrono o de inducción}
-\begin{itemize}
-\item \(f_{1}\neq0\);
-
-\item Estator-inductor alimentado por una corriente trifásica alterna.
-Produce un campo giratorio.
-
-\item Rotor-inducido constituido por espiras cortocircuitadas (jaula de
-ardilla).
-
-\item Se produce un par que busca alinear el eje de las espiras con el
-campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
-\item La velocidad de giro es inferior a la frecuencia de alimentación
-(asíncrono).
-\end{itemize}
-
-\begin{center}
-Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGlAu0uCHY\&feature=related}{(1)} \href{http://www.youtube.com/watch?v=P-eTLmJC2cQ}{(2)}
-\end{center}
-\end{block}
-\end{frame}
-\begin{frame}[label={sec:orgcdfe0c4}]{Generadores}
-\begin{block}{Generador Síncrono o Alternador}
-\begin{itemize}
-\item \(f_{1}=0\);
-
-\item Rotor-inductor alimentado por corriente continua mediante anillos.
-
-\item Estator-inducido constituido por un devanado trifásico.
-
-\item Al aplicar energía mecánica en el eje del rotor y alimentarlo con
-corriente continua, se obtiene una fuerza electromotriz en el
-estator.
-
-\item Empleado en turbinas hidráulicas y térmicas.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org8d19ba9}]{Generadores}
-\begin{block}{Dinamo}
-\begin{itemize}
-\item \(f_{1}=0\); \(f_{L}=0\);
-
-\item Estator-Inductor alimentado por corriente DC (o imanes permanentes).
-
-\item El colector de delgas transforma la frecuencia de alimentación (DC)
-en alterna.
-
-\item Al aplicar energía mecánica en el eje del rotor y alimentar el
-estator con corriente continua, se obtiene una fuerza electromotriz
-en el inducido con \(f_{2}\).
-
-\item Las delgas rectifican para obtener \(f_{L}=0\) en la salida.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\section{Aparamenta eléctrica}
-\label{sec:orgeb05543}
-
-
-\subsection{Definición y Funciones}
-\label{sec:org062987e}
-\begin{frame}[label={sec:org529704d}]{Definición}
-\begin{block}{ITC-BT-01}
-\begin{description}
-\item[{Aparamenta:}] Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: \alert{protección}, \alert{control}, \alert{seccionamiento}, \alert{conexión}.
-
-\item[{Función de la Aparamenta:}] Garantizar la seguridad de las personas,
-la continuidad en el suministro y la protección de los elemento de la
-instalación.
-\end{description}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org5272a08}]{Funciones de la aparamenta}
-\begin{itemize}
-\item \alert{Protección}:
-
-\begin{itemize}
-\item Protección de los elementos de los circuitos contra las tensiones
-térmicas y mecánicas de las corrientes de cortocircuito.
-
-\item Protección de las personas en caso de producirse un defecto de
-aislamiento.
-
-\item Protección de los dispositivos y aparatos suministrados.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org2724986}]{Funciones de la aparamenta}
-\begin{itemize}
-\item \alert{Aislamiento}: separar de forma verificable un circuito, un aparato o
-un elemento de la planta del resto de un sistema que se encuentra en
-tensión, con el fin de que el personal pueda realizar con total
-seguridad trabajos en la parte aislada.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org74ef482}]{Funciones de la aparamenta}
-\begin{itemize}
-\item \alert{Control:} modificar un sistema cargado en cualquier momento
-
-\begin{itemize}
-\item Control funcional (conmutación rutinaria, etc.).
-
-\item Conmutación de emergencia.
-
-\item Operaciones de mantenimiento del sistema de alimentación.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org5958c8b}]{Arco Eléctrico}
-\begin{itemize}
-\item Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
-\item Durante el tiempo de la descarga se produce una luminosidad muy intensa y un gran desprendimiento de calor.
-\item Ambos fenómenos, en caso de ser accidentales, pueden ser sumamente destructivos.
-\end{itemize}
-
-\begin{center}
-Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tensión}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org3e1622d}]{Poder de corte y cierre}
-\begin{description}
-\item[{Poder de corte:}] intensidad de corriente que este dispositivo es
-capaz de cortar, bajo una tensión de restablecimiento determinada.
-
-\item[{Poder de cierre:}] intensidad de corriente que este aparato es capaz
-de establecer, bajo una tensión dada.
-\end{description}
-\end{frame}
-
-\subsection{Tipos de Dispositivos}
-\label{sec:orgb0149db}
-\begin{frame}[label={sec:org3f4b49a}]{Dispositivos simples}
-\begin{block}{Seccionador}
-\begin{itemize}
-\item Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
-
-\item Un seccionador no está diseñado para abrir o cerrar el paso de la corriente.
-\end{itemize}
-\end{block}
-
-\begin{block}{Interruptor de carga}
-\begin{itemize}
-\item Dispositivo no automático (accionamiento manual) de dos posiciones (abierto/cerrado).
-\item Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org65d9b81}]{Dispositivos simples}
-\begin{block}{Contactor}
-\begin{itemize}
-\item Dispositivo accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
-
-\item Se suelen controlar de forma remota por medio de pulsadores de activación/desactivación.
-\end{itemize}
-\end{block}
-
-\begin{block}{Fusible}
-\begin{itemize}
-\item Un filamento o lámina de un metal o aleación de bajo punto de fusión que se intercala en un punto determinado de una instalación eléctrica
-
-\item Se funde por Efecto Joule cuando la intensidad de corriente supere, por un cortocircuito o un exceso de carga.
-
-\item Es capaz de abrir un circuito en carga.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org5031805}]{Interruptor magnetotérmico}
-\begin{itemize}
-\item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
-
-\item El dispositivo consta de dos partes, un electroimán y una lámina bimetálica, conectadas en serie y por las que circula la corriente que va hacia la carga.
-
-\item Su funcionamiento se basa en dos de los efectos producidos por la circulación de corriente eléctrica en un circuito: el magnético y el térmico (efecto Joule).
-
-\item Se emplea para \alert{proteger contra sobreintensidades y sobrecargas}.
-\end{itemize}
-
-\begin{center}
-Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orgd2243ee}]{Interruptor Magnetotérmico}
-\begin{center}
-\includegraphics[height=0.8\textheight]{../figs/SeccionMagnetotermico.png}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orged100d8}]{Interruptor diferencial}
-\begin{itemize}
-\item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando existe una corriente diferencial residual, indicativa de un defecto de aislamiento.
-\item Para la detección emplea un transformador toroidal que abraza a todos los conductores.
-\item Cuando existe un defecto, la suma fasorial de las corrientes abarcadas no será nula y, por tanto, aparecerá una intensidad en el secundario del transformador, proporcional al defecto.
-\item Se emplea para la \alert{protección de las personas}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orgaa617ad}]{Interruptor Diferencial}
-\begin{center}
-\includegraphics[height=0.3\textheight]{../figs/InterruptorDiferencial.pdf}
-\end{center}
-
-\begin{center}
-\includegraphics[height=0.3\textheight]{../figs/ResidualCurrentCircuitBreak.jpg}
-\end{center}
-\end{frame}
 
 \section{Recursos}
-\label{sec:org9dd293f}
+\label{sec:orgf665bd4}
 
-\begin{frame}[label={sec:org65671ed}]{Bibliografía}
+\begin{frame}[label={sec:org2ac7816}]{Bibliografía}
 \begin{itemize}
 \item \alert{Fraile Mora, J.}: \emph{Circuitos Eléctricos}. Ed. Prentice Hall.
 
-\item \alert{Fraile Mora, J.}: \emph{Máquinas Eléctricas}. Ed. Mc. Graw Hill.
-
 \item \alert{Hayt, W. y Kemmerly, J}: \emph{Análisis de circuitos en ingeniería}. Ed.
 Mc. Graw Hill.
+
 \item \alert{C. K. Alexander; M. N. O. Sadiku}, Ed. McGraw-Hill.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org2c0b3cc}]{Enlaces útiles}
-\begin{itemize}
-\item \href{http://www.f2i2.net/legislacionseguridadindustrial/Si\_ambito.aspx?id\_am=76}{Reglamento Electrotécnico de Baja Tensión}
-
-\item \href{http://www.schneiderelectric.es/sites/spain/es/productos-servicios/distribucion-electrica/descarga/pdf-guia-diseno-instalaciones-electricas.page}{Guía de diseño de instalaciones eléctricas (Schneider Electric)}
 
 \item \href{http://tuveras.com/index.html}{Tú verás}
-
-\item \href{http://www.directindustry.com/}{Equipos industriales}
-
-\item \href{http://www.preoc.es/}{Base de Precios PREOC}
 \end{itemize}
 \end{frame}
 \end{document}
