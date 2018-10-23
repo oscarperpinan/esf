@@ -5,35 +5,57 @@
 
 * Fundamentos de Electromagnetismo
 
+*** Fuerza Magnética
 
-*** Fuerza de Lorentz
+Un campo magnético ejerce una fuerza sobre una carga en movimiento (o corriente eléctrica en un conductor) [fn:1].
+#+BEGIN_EXPORT latex
+\[
+\vec{F} = q (\vec{v} \times \vec{B})
+\]
+#+END_EXPORT
 
- -  Un campo magnético ejerce una fuerza sobre una carga en movimiento.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+ #+ATTR_LATEX: :height 0.5\textheight  
+ [[../figs/Fuerza_Lorentz.png]]
 
- [[../figs/Magnet0873.png]]
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+ #+ATTR_LATEX: :height 0.5\textheight  
+ [[../figs/Fuerza_Lorentz_Conductor.png]]
 
-*** Ley de Oersted y Biot-Savart
+*** Campo Magnético creado por un Conductor
 
- -  Una corriente eléctrica crea un campo magnético en torno al
-    conductor. 
+Una corriente eléctrica crea un campo magnético en torno al conductor[fn:2]. 
 
- [[../figs/Solenoide.jpg]]
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[../figs/Electromagnetism.png]]
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[../figs/Solenoide.jpg]]
 
-*** Fuerza de Ampere
+*** Interacción entre Conductores
 
- -  Un conductor por el que circula corriente, situado en el seno de un
-    campo magnético, altera este campo magnético, y experimenta una
-    fuerza que lo expulsa para disminuir la alteración.
+Dos conductores se repelen o atraen según el sentido de sus corrientes.
 
- [[../figs/FuerzasRepulsion.png]]
-
- #+BEGIN_CENTER
- Vídeo: [[http://www.youtube.com/watch?v=2j8D_N1v0tU][Repulsión entre barras de Alta Tensión]]
- #+END_CENTER
-
+[[../figs/FuerzasRepulsion.png]]
+#+BEGIN_CENTER
+Vídeo: [[https://www.youtube.com/watch?v=2j8D_N1v0tU&t=0m15s][Repulsión entre barras de Alta Tensión]]
+#+END_CENTER
 *** Flujo Magnético
 
-El flujo magnético es la cantidad de líneas de fuerza magnética que atraviesan una superficie. Depende de la densidad de campo, $B$, el área de la superficie, $A$, y la posición relativa entre ambos, $\theta$.
+El flujo magnético es la cantidad de líneas de fuerza magnética que atraviesan una superficie. 
+
+Depende de la densidad de campo, $B$, el área de la superficie, $A$, y la posición relativa entre ambos, $\theta$.
 
 #+BEGIN_EXPORT latex
 \[
@@ -50,7 +72,7 @@ El flujo magnético es la cantidad de líneas de fuerza magnética que atraviesa
 
 #+BEGIN_EXPORT latex
 \[
-e=-\frac{\mathrm{d}\phi}{\mathrm{d}t} = -\frac{\mathrm{d}(B \cdot S\cdot \cos \theta)}{\mathrm{d}t} 
+e=- N \frac{\mathrm{d}\phi}{\mathrm{d}t} = - N \frac{\mathrm{d}(B \cdot S\cdot \cos \theta)}{\mathrm{d}t} 
 \]
 #+END_EXPORT
 
@@ -66,159 +88,137 @@ e=-\frac{\mathrm{d}\phi}{\mathrm{d}t} = -\frac{\mathrm{d}(B \cdot S\cdot \cos \t
    variación.
 
 
+* Máquinas Eléctricas
+** Introducción
+
+*** Máquina Eléctrica
+Una máquina eléctrica realiza una conversión entre dos formas de energía, una de ellas eléctrica:
+
+- *Generador*: transforma la energía mecánica en energía eléctrica.
+- *Motor*: transforma la energía eléctrica en energía mecánica.
+- *Transformador*: transforma las condiciones (tensión y corriente) de la energía eléctrica de entrada en otras diferentes de salida.
+
+*** Partes de una Máquina 
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+- *Estátor*: parte fija de forma cilíndrica. 
+- *Rótor*: parte giratoria situada en la cavidad del estátor.
+- *Entrehierro*: espacio de aire que separa el estátor del rótor. 
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[file:../figs/Stator_and_rotor_by_Zureks.jpeg]]
+
+**** 
+La transformación de energía eléctrica y mecánica se produce a través del campo magnético del entrehierro, lugar del acoplamiento energético entre estátor y rótor. 
+
 *** Inductor e Inducido
 
+Al elemento que emite el campo magnético se le denomina *inductor* y aquel que es atravesado por este flujo es el *inducido*.
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/Electric_motor_cycle_3.pdf]]
 
- -  Al elemento que emite el campo magnético se le denomina *inductor* y
-    aquel que es atravesado por este flujo es el *inducido*.
-#+ATTR_LATEX: :height 0.7\textheight
- [[../figs/Electric_motor_cycle_3.pdf]]
+** Tipos de Máquinas
+*** Generador
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+- Existe un campo magnético en el interior de la máquina (p. ej. imanes permanentes)
+- La energía mecánica de entrada aporta movimiento a una bobina en el seno del campo.
+- La interacción entre el campo y las espiras de la bobina producen una tensión inducida.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[file:../figs/InsideWindTurbine.jpg]]
 
-*** Par, potencia y velocidad
-#+BEGIN_EXPORT latex
-\[
-  P =  T \cdot \omega
-\]
-#+END_EXPORT
-
-
--  $P$ es potencia mecánica; $T$ par mecánico; $\omega$ es la velocidad
-   angular.
-
--  El par busca alinear los ejes magnéticos de inductor e inducido, o de
-   estator y rotor. Una vez que están alineados, el par es nulo.
-
-* Máquinas Eléctricas
-
-
-** Tipos de máquinas
-
-
-*** Relación de Frecuencias
-
-
-**** Frecuencia eléctrica y velocidad
-
-$\begin{aligned}
-  f_{2} & = & f_{1}-n\cdot p\end{aligned}$
-
--  $f_{2}$ es la frecuencia en el inducido; $f_{1}$ es la frecuencia en
-   el inductor; $n$ es la velocidad angular; $p$ es el número de polos.
-
--  Al utilizar colector de delgas (escobillas) en el inducido, la
-   frecuencia en el circuito exterior ($f_{L}$) es diferente a $f_{2}$.
-
-*** Clasificación de máquinas
-
--  Estáticas ($n=0\Rightarrow f_{2}=f_{1}$): Transformadores
-
--  Rotativas ($n\neq0$):
-
-   -  Flujo inductor constante ($f_{1}=0\Rightarrow f_{2}=n\cdot
-            p$)
-
-      -  Delgas ($f_{L}\neq f_{2}$): Máquinas de corriente continua
-
-      -  Anillos ($f_{L}=f_{2}$): Máquinas síncronas
-
-   -  Flujo inductor variable ($f_{1}>0\Rightarrow
-            f_{2}=f_{1}-n\cdot p$)
-
-      -  Delgas ($f_{L}\neq f_{2}$): Motor universal
-
-      -  Anillos ($f_{L}=f_{2}$): Máquinas asíncronas
-
-*** Transformador
-
--  Un transformador consiste en dos bobinas acopladas magnéticamente.
-
--  Un transformador ideal tiene las siguientes relaciones entre tensión
-   y corriente de entrada (primario) y salida (secundario):
-
-$N_{s}\cdot I_{s}=N_{p}\cdot I_{p}$
-$\frac{V_{p}}{N_{p}}=\frac{V_{s}}{N_{s}}$
-
-#+ATTR_LATEX: :height 0.3\textheight
-[[../figs/Transformador2.pdf]]
-
-*** Transformador
-
--  Un transformador ideal con relación de transformación $N_{p}/N_{s}<1$
-   (más vueltas en el secundario que en el primario), sube tensión
-   ($V_{s}>V_{p}$) y reduce corriente ($I_{s}<I_{p}$).
-
-[[../figs/Transformador.pdf]]
-
-*** Motores
-
-
-**** Motor DC
-
--  $f_{1}=0$; $f_{L}=0$;
-
--  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
-
--  El colector de delgas transforma la frecuencia de alimentación (DC)
-   en alterna.
-
--  Rotor-Inducido gira sincronizado con la frecuencia "transformada".
-
-*** Motores
-
-
-**** Motor asíncrono o de inducción
-
--  $f_{1}\neq0$;
-
--  Estator-inductor alimentado por una corriente trifásica alterna.
-   Produce un campo giratorio.
-
--  Rotor-inducido constituido por espiras cortocircuitadas (jaula de
-   ardilla).
-
--  Se produce un par que busca alinear el eje de las espiras con el
-   campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
--  La velocidad de giro es inferior a la frecuencia de alimentación
-   (asíncrono).
-
-#+BEGIN_CENTER
-Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
-#+END_CENTER
-*** Generadores
-
-
+*** Tipos de Generadores
 **** Generador Síncrono o Alternador
-
--  $f_{1}=0$;
 
 -  Rotor-inductor alimentado por corriente continua mediante anillos.
 
 -  Estator-inducido constituido por un devanado trifásico.
 
--  Al aplicar energía mecánica en el eje del rotor y alimentarlo con
-   corriente continua, se obtiene una fuerza electromotriz en el
-   estator.
-
 -  Empleado en turbinas hidráulicas y térmicas.
 
-*** Generadores
-
-
 **** Dinamo
-
--  $f_{1}=0$; $f_{L}=0$;
-
 -  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
 
 -  El colector de delgas transforma la frecuencia de alimentación (DC)
    en alterna.
 
--  Al aplicar energía mecánica en el eje del rotor y alimentar el
-   estator con corriente continua, se obtiene una fuerza electromotriz
-   en el inducido con $f_{2}$.
+*** Motor
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+- La energía eléctrica de entrada produce una corriente eléctrica que genera un campo magnético variable.
+- Este campo puede interactuar con otro campo magnético existente o con otro conductor y produce movimiento.
 
--  Las delgas rectifican para obtener $f_{L}=0$ en la salida.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[../figs/Seccion_Motor.jpeg]]
+[[file:../figs/Electric_motor_cycle_3.pdf]]
+
+*** Tipos de Motores
+
+**** Motor DC
+
+-  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
+
+-  Rotor-Inducido alimentado con corriente DC a través de un colector de delgas.
+
+**** Motor asíncrono o de inducción
+
+-  Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
+
+-  Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
+   ardilla).
+
+-  Se produce un par que busca alinear el eje de las espiras con el
+   campo inducido. El rotor se mueve siguiendo al campo giratorio.
+
+-  Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
+
+
+
+*** Transformador
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+- La energía eléctrica de entrada alimenta una bobina con un número de espiras $N_p$.
+- El campo magnético generado por esta bobina circula hasta una bobina de salida, con $N_s$ espiras.
+- El diferente número de espiras provoca valores de tensión y corriente diferente en la entrada y salida.
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+
+[[file:../figs/Transformador2.pdf]]
+[[file:../figs/Transformador.png]]
+
+*** Transformador
+
+#+BEGIN_EXPORT latex
+\begin{align*}
+N_{s}\cdot I_{s} &= N_{p}\cdot I_{p}\\
+\frac{V_{p}}{N_{p}} &= \frac{V_{s}}{N_{s}}
+\end{align*}
+#+END_EXPORT
+
+#+ATTR_LATEX: :height 0.3\textheight
+[[../figs/Transformador2.pdf]]
+
+-  Ejemplo: un transformador elevador sube tensión ($V_{s}>V_{p}$) y reduce corriente ($I_{s}<I_{p}$): $N_{p}/N_{s}<1$, más vueltas en el secundario que en el primario.
+   
 
 * Aparamenta eléctrica
 
@@ -372,6 +372,7 @@ Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
 
 * Recursos
 
+*** Bibliografía
 -  *Fraile Mora, J.*: /Máquinas Eléctricas/. Ed. Mc. Graw Hill.
 
 - [[http://www.f2i2.net/legislacionseguridadindustrial/Si_ambito.aspx?id_am=76][Reglamento Electrotécnico de Baja Tensión]]
@@ -381,5 +382,11 @@ Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
 - [[http://www.directindustry.com/][Equipos industriales]]
 
 - [[http://www.preoc.es/][Base de Precios PREOC]]
+
+* Footnotes
+
+[fn:2] Ley de Biot-Savart (y Oersted). Ley de Ampere.
+
+[fn:1] Fuerza de Lorentz
 
 
