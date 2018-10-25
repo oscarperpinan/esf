@@ -267,126 +267,150 @@ seguridad*.
 
 
 ** Definición y Funciones
-*** Definición
+*** Aparamenta
+
+**** Definición
+Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: 
+
+- *Protección*
+- *Aislamiento*
+- *Control* y *Conexión*.
 
 
-**** ITC-BT-01
+*** Protección
 
--  Aparamenta: :: Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: *protección*, *control*, *seccionamiento*, *conexión*.
+   -  Protección de los *elementos de los circuitos* (cables,
+     aparamenta) contra las tensiones térmicas y mecánicas de las
+     corrientes de cortocircuito.
 
--  Función de la Aparamenta: :: Garantizar la seguridad de las personas,
-   la continuidad en el suministro y la protección de los elemento de la
-   instalación.
-
-*** Funciones de la aparamenta
-
--  *Protección*:
-
-   -  Protección de los elementos de los circuitos contra las tensiones
-      térmicas y mecánicas de las corrientes de cortocircuito.
-
-   -  Protección de las personas en caso de producirse un defecto de
+   -  Protección de las *personas* en caso de producirse un defecto de
       aislamiento.
 
-   -  Protección de los dispositivos y aparatos suministrados.
+   -  Protección de los *dispositivos y aparatos suministrados* (ej. motores).
 
-*** Funciones de la aparamenta
+*** Aislamiento
 
--  *Aislamiento*: separar de forma verificable un circuito, un aparato o
-   un elemento de la planta del resto de un sistema que se encuentra en
-   tensión, con el fin de que el personal pueda realizar con total
-   seguridad trabajos en la parte aislada.
+Separar de forma verificable un circuito, un aparato o un elemento de
+la planta del resto de un sistema que se encuentra en tensión, con el
+fin de que el personal pueda realizar con total seguridad trabajos en
+la parte aislada.
 
-*** Funciones de la aparamenta
+*** Control
 
--  *Control:* modificar un sistema cargado en cualquier momento
+Modificar un sistema cargado para:
 
-   -  Control funcional (conmutación rutinaria, etc.).
+   -  Control funcional (condiciones normales de servicio, conmutación rutinaria).
 
-   -  Conmutación de emergencia.
+   -  Conmutación de emergencia (ej. seta de parada)
 
    -  Operaciones de mantenimiento del sistema de alimentación.
 
 *** Arco Eléctrico
 
-- Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
-- Durante el tiempo de la descarga se produce una luminosidad muy intensa y un gran desprendimiento de calor.
-- Ambos fenómenos, en caso de ser accidentales, pueden ser sumamente destructivos.
+- Descarga eléctrica que se forma entre dos electrodos sometidos a una
+  diferencia de potencial.
+#+ATTR_LATEX: :height 0.35\textheight
+[[file:../figs/arco_electrico.jpg]]
 
+- Luminosidad muy intensa y un gran desprendimiento de calor (fenómeno destructivo)
+
+**** 
 #+BEGIN_CENTER
 Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]]
 #+END_CENTER
 
 *** Poder de corte y cierre
 
--  Poder de corte: :: intensidad de corriente que este dispositivo es
-   capaz de cortar, bajo una tensión de restablecimiento determinada.
+-  Poder de corte: :: intensidad de corriente que un dispositivo es
+   capaz de cortar bajo una tensión de restablecimiento determinada.
 
--  Poder de cierre: :: intensidad de corriente que este aparato es capaz
-   de establecer, bajo una tensión dada.
+-  Poder de cierre: :: intensidad de corriente que un aparato es capaz
+   de establecer bajo una tensión dada.
 
 ** Tipos de Dispositivos
-*** Dispositivos simples
 
-
-**** Seccionador
+*** Seccionador
 
 - Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
 
 - Un seccionador no está diseñado para abrir o cerrar el paso de la corriente.
 
-**** Interruptor de carga
-- Dispositivo no automático (accionamiento manual) de dos posiciones (abierto/cerrado).
-- Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos.
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:../figs/seccionador.jpeg]]
 
-*** Dispositivos simples
+*** Interruptor de carga
+- Dispositivo no automático (*accionamiento manual*) de dos posiciones (abierto/cerrado).
+
+- Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos (no ofrece protección)
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:../figs/interruptor_manual.jpg]]
 
 
-**** Contactor
-- Dispositivo accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
+*** Contactor
+- Dispositivo de conmutación accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
 
 - Se suelen controlar de forma remota por medio de pulsadores de activación/desactivación.
 
-**** Fusible
-- Un filamento o lámina de un metal o aleación de bajo punto de fusión que se intercala en un punto determinado de una instalación eléctrica
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:../figs/Contactor.jpg]]
 
-- Se funde por Efecto Joule cuando la intensidad de corriente supere, por un cortocircuito o un exceso de carga.
+
+*** Fusible
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.7
+     :END:
+- Se funde por Efecto Joule cuando la intensidad de corriente supera un umbral, por un cortocircuito o un exceso de carga.
 
 - Es capaz de abrir un circuito en carga.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.3
+     :END:
+
+[[file:../figs/fusible.jpg]]
+
 
 ***  Interruptor magnetotérmico
-- Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
 
-- El dispositivo consta de dos partes, un electroimán y una lámina bimetálica, conectadas en serie y por las que circula la corriente que va hacia la carga.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+- Dispositivo *automático* capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
 
-- Su funcionamiento se basa en dos de los efectos producidos por la circulación de corriente eléctrica en un circuito: el magnético y el térmico (efecto Joule).
+- Se emplea para *proteger contra sobreintensidades* (/efecto magnético/) y *sobrecargas* (/efecto Joule/).
 
-- Se emplea para *proteger contra sobreintensidades y sobrecargas*.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+[[../figs/interruptor-magnetotermico.jpg]]
 
-#+BEGIN_CENTER
+**** 
 Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
-#+END_CENTER
-
-*** Interruptor Magnetotérmico
-
-
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/SeccionMagnetotermico.png]]
 
 ***  Interruptor diferencial
-
-- Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando existe una corriente diferencial residual, indicativa de un defecto de aislamiento.
-- Para la detección emplea un transformador toroidal que abraza a todos los conductores.
-- Cuando existe un defecto, la suma fasorial de las corrientes abarcadas no será nula y, por tanto, aparecerá una intensidad en el secundario del transformador, proporcional al defecto.
+- Dispositivo *automático* con poder de corte ante una corriente diferencial residual (defecto de aislamiento).
 - Se emplea para la *protección de las personas*.
+- Para la detección emplea un transformador toroidal que abraza a todos los conductores.
 
-*** Interruptor Diferencial
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
 
-#+ATTR_LATEX: :height 0.3\textheight
-[[../figs/InterruptorDiferencial.pdf]]
 
-#+ATTR_LATEX: :height 0.3\textheight
-[[../figs/ResidualCurrentCircuitBreak.jpg]]
+[[../figs/InterruptorDiferencial.JPG]]
+
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
+
+[[../figs/interruptor-diferencial.jpg]]
+
 
 * Recursos
 
@@ -402,6 +426,7 @@ Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
 - [[http://www.preoc.es/][Base de Precios PREOC]]
 
 * Footnotes
+
 
 [fn:2] Ley de Biot-Savart (y Oersted). Ley de Ampere.
 
