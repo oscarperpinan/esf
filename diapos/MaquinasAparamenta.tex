@@ -1,4 +1,4 @@
-% Created 2018-10-23 mar 16:19
+% Created 2018-10-25 jue 16:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -52,9 +52,9 @@
 \maketitle
 
 \section{Fundamentos de Electromagnetismo}
-\label{sec:orgb2766f1}
+\label{sec:orgb470ab8}
 
-\begin{frame}[label={sec:org75e3939}]{Fuerza Magnética}
+\begin{frame}[label={sec:org5135053}]{Fuerza Magnética}
 Un campo magnético ejerce una fuerza sobre una carga en movimiento (o corriente eléctrica en un conductor) \footnote{Fuerza de Lorentz}.
 \[
 \vec{F} = q (\vec{v} \times \vec{B})
@@ -75,7 +75,7 @@ Un campo magnético ejerce una fuerza sobre una carga en movimiento (o corriente
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org8f9e89c}]{Campo Magnético creado por un Conductor}
+\begin{frame}[label={sec:org508b5fa}]{Campo Magnético creado por un Conductor}
 Una corriente eléctrica crea un campo magnético en torno al conductor\footnote{Ley de Biot-Savart (y Oersted). Ley de Ampere.}. 
 
 \begin{columns}
@@ -92,7 +92,7 @@ Una corriente eléctrica crea un campo magnético en torno al conductor\footnote
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org873d8c0}]{Interacción entre Conductores}
+\begin{frame}[label={sec:org9cb6e55}]{Interacción entre Conductores}
 Dos conductores se repelen o atraen según el sentido de sus corrientes.
 
 \begin{center}
@@ -102,7 +102,7 @@ Dos conductores se repelen o atraen según el sentido de sus corrientes.
 Vídeo: \href{https://www.youtube.com/watch?v=2j8D\_N1v0tU\&t=0m15s}{Repulsión entre barras de Alta Tensión}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:orgc6aacd9}]{Flujo Magnético}
+\begin{frame}[label={sec:org06d034e}]{Flujo Magnético}
 El flujo magnético es la cantidad de líneas de fuerza magnética que atraviesan una superficie. 
 
 Depende de la densidad de campo, \(B\), el área de la superficie, \(A\), y la posición relativa entre ambos, \(\theta\).
@@ -116,7 +116,7 @@ Depende de la densidad de campo, \(B\), el área de la superficie, \(A\), y la p
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgcdcae8f}]{Ley de Faraday}
+\begin{frame}[label={sec:org4537cbd}]{Ley de Faraday}
 \begin{itemize}
 \item Cuando el \alert{flujo magnético} que atraviesa una espira es \alert{variable}
 aparece \alert{tensión inducida}.
@@ -144,21 +144,21 @@ variación.
 
 
 \section{Máquinas Eléctricas}
-\label{sec:org94157da}
+\label{sec:org3ae8fb1}
 \subsection{Introducción}
-\label{sec:org142a93a}
+\label{sec:org36d0c13}
 
-\begin{frame}[label={sec:org8ec0ddc}]{Máquina Eléctrica}
+\begin{frame}[label={sec:org1d4eeea}]{Máquina Eléctrica}
 Una máquina eléctrica realiza una conversión entre dos formas de energía, una de ellas eléctrica:
 
 \begin{itemize}
-\item \alert{Generador}: transforma la energía mecánica en energía eléctrica.
 \item \alert{Motor}: transforma la energía eléctrica en energía mecánica.
+\item \alert{Generador}: transforma la energía mecánica en energía eléctrica.
 \item \alert{Transformador}: transforma las condiciones (tensión y corriente) de la energía eléctrica de entrada en otras diferentes de salida.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7a8b9cd}]{Partes de una Máquina}
+\begin{frame}[label={sec:orgf019ade}]{Partes de una Máquina}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{itemize}
@@ -179,7 +179,7 @@ La transformación de energía eléctrica y mecánica se produce a través del c
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd098f85}]{Inductor e Inducido}
+\begin{frame}[label={sec:org613bf83}]{Inductor e Inducido}
 Al elemento que emite el campo magnético se le denomina \alert{inductor} y aquel que es atravesado por este flujo es el \alert{inducido}.
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/Electric_motor_cycle_3.pdf}
@@ -187,14 +187,68 @@ Al elemento que emite el campo magnético se le denomina \alert{inductor} y aque
 \end{frame}
 
 \subsection{Tipos de Máquinas}
-\label{sec:orgdf5b194}
-\begin{frame}[label={sec:org09f037f}]{Generador}
-\begin{columns}
-\begin{column}{0.6\columnwidth}
+\label{sec:org6a30912}
+
+\begin{frame}[label={sec:org03e9873}]{Motor}
+\begin{itemize}
+\item La energía eléctrica de entrada produce una corriente eléctrica que genera un campo magnético variable.
+\item Este campo puede interactuar con otro campo magnético existente o con otro conductor y produce movimiento.
+\item Más habituales: de inducción, y de corriente continua.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org4e8b5a8}]{Motor asíncrono o de inducción}
+\begin{itemize}
+\item Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
+
+\item Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
+ardilla).
+
+\item Rotor gira a menor velocidad que el campo.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/Seccion_Motor.jpeg}
+\end{center}
+
+Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGlAu0uCHY\&feature=related}{(1)} \href{http://www.youtube.com/watch?v=P-eTLmJC2cQ}{(2)}
+\end{frame}
+
+\begin{frame}[label={sec:org9376822}]{Motor DC}
+\begin{itemize}
+\item Estator-Inductor con imanes permanentes o alimentado por corriente DC.
+
+\item Rotor-Inducido alimentado con corriente DC a través de un colector de delgas, o sin escobillas.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/Electric_motor_cycle_3.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0b4752c}]{Generador}
 \begin{itemize}
 \item Existe un campo magnético en el interior de la máquina (p. ej. imanes permanentes)
 \item La energía mecánica de entrada aporta movimiento a una bobina en el seno del campo.
 \item La interacción entre el campo y las espiras de la bobina producen una tensión inducida.
+\item Más habituales: asíncrono, síncrono, y de corriente continua.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org4307221}]{Generador Asíncrono}
+\begin{columns}
+\begin{column}{0.6\columnwidth}
+\begin{itemize}
+\item Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
+
+\item Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
+ardilla).
+
+\item Rotor debe girar a mayor velocidad que la del campo del estator.
+
+\item Empleado en turbinas eólicas
 \end{itemize}
 \end{column}
 \begin{column}{0.5\columnwidth}
@@ -205,74 +259,31 @@ Al elemento que emite el campo magnético se le denomina \alert{inductor} y aque
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org58dcc16}]{Tipos de Generadores}
-\begin{block}{Generador Síncrono o Alternador}
+\begin{frame}[label={sec:org6c62a42}]{Generador Síncrono o Alternador}
 \begin{itemize}
 \item Rotor-inductor alimentado por corriente continua mediante anillos.
 
 \item Estator-inducido constituido por un devanado trifásico.
 
+\item Velocidad de giro constante, sincronizada con la frecuencia de red.
+
 \item Empleado en turbinas hidráulicas y térmicas.
 \end{itemize}
-\end{block}
+\end{frame}
 
-\begin{block}{Dinamo}
+\begin{frame}[label={sec:org0145af6}]{Generador DC}
 \begin{itemize}
 \item Estator-Inductor alimentado por corriente DC (o imanes permanentes).
 
 \item El colector de delgas transforma la frecuencia de alimentación (DC)
 en alterna.
+
+\item Empleado en máquinas eólicas de baja potencia.
 \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org0952f10}]{Motor}
-\begin{columns}
-\begin{column}{0.6\columnwidth}
-\begin{itemize}
-\item La energía eléctrica de entrada produce una corriente eléctrica que genera un campo magnético variable.
-\item Este campo puede interactuar con otro campo magnético existente o con otro conductor y produce movimiento.
-\end{itemize}
-\end{column}
-
-\begin{column}{0.5\columnwidth}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Seccion_Motor.jpeg}
-\end{center}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Electric_motor_cycle_3.pdf}
-\end{center}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[label={sec:org1cf56d7}]{Tipos de Motores}
-\begin{block}{Motor DC}
-\begin{itemize}
-\item Estator-Inductor alimentado por corriente DC (o imanes permanentes).
-
-\item Rotor-Inducido alimentado con corriente DC a través de un colector de delgas.
-\end{itemize}
-\end{block}
-
-\begin{block}{Motor asíncrono o de inducción}
-\begin{itemize}
-\item Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
-
-\item Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
-ardilla).
-
-\item Se produce un par que busca alinear el eje de las espiras con el
-campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
-\item Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGlAu0uCHY\&feature=related}{(1)} \href{http://www.youtube.com/watch?v=P-eTLmJC2cQ}{(2)}
-\end{itemize}
-\end{block}
 \end{frame}
 
 
-
-\begin{frame}[label={sec:org2cecff0}]{Transformador}
+\begin{frame}[label={sec:orgdee8163}]{Transformador}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -293,7 +304,7 @@ campo inducido. El rotor se mueve siguiendo al campo giratorio.
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org71aedc0}]{Transformador}
+\begin{frame}[label={sec:org020d9c4}]{Transformador}
 \begin{align*}
 N_{s}\cdot I_{s} &= N_{p}\cdot I_{p}\\
 \frac{V_{p}}{N_{p}} &= \frac{V_{s}}{N_{s}}
@@ -310,18 +321,18 @@ N_{s}\cdot I_{s} &= N_{p}\cdot I_{p}\\
 
 
 \section{Aparamenta eléctrica}
-\label{sec:orgf20dd4c}
+\label{sec:org51e4688}
 
 \subsection{Sistema de Suministro Eléctrico}
-\label{sec:orgd4165cb}
-\begin{frame}[label={sec:org9714cef}]{Sistema de suministro eléctrico}
+\label{sec:org0e18c9f}
+\begin{frame}[label={sec:org2a45656}]{Sistema de suministro eléctrico}
 Un \alert{sistema de suministro eléctrico} tiene como objetivo \alert{producir,
 transportar y distribuir energía eléctrica} a los lugares de consumo,
 con el mínimo coste posible en condiciones de \alert{fiabilidad, calidad y
 seguridad}.
 \end{frame}
 
-\begin{frame}[label={sec:org5a623a3}]{Componentes del Sistema de Suministro Eléctrico}
+\begin{frame}[label={sec:org0685a36}]{Componentes del Sistema de Suministro Eléctrico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Redelectrica2.png}
 \end{center}
@@ -342,8 +353,8 @@ algunos casos, almacenamiento)
 
 
 \subsection{Definición y Funciones}
-\label{sec:org2eaf0db}
-\begin{frame}[label={sec:org2cffcf7}]{Definición}
+\label{sec:org7f1e26d}
+\begin{frame}[label={sec:org6ae8904}]{Definición}
 \begin{block}{ITC-BT-01}
 \begin{description}
 \item[{Aparamenta:}] Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: \alert{protección}, \alert{control}, \alert{seccionamiento}, \alert{conexión}.
@@ -355,7 +366,7 @@ instalación.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org657a856}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:org13a5ec6}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Protección}:
 
@@ -371,7 +382,7 @@ aislamiento.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0081da3}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:orge64effb}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Aislamiento}: separar de forma verificable un circuito, un aparato o
 un elemento de la planta del resto de un sistema que se encuentra en
@@ -380,7 +391,7 @@ seguridad trabajos en la parte aislada.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3be6deb}]{Funciones de la aparamenta}
+\begin{frame}[label={sec:org2ccda90}]{Funciones de la aparamenta}
 \begin{itemize}
 \item \alert{Control:} modificar un sistema cargado en cualquier momento
 
@@ -394,7 +405,7 @@ seguridad trabajos en la parte aislada.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org10ac26c}]{Arco Eléctrico}
+\begin{frame}[label={sec:org772f630}]{Arco Eléctrico}
 \begin{itemize}
 \item Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
 \item Durante el tiempo de la descarga se produce una luminosidad muy intensa y un gran desprendimiento de calor.
@@ -406,7 +417,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org053a700}]{Poder de corte y cierre}
+\begin{frame}[label={sec:org8a61c30}]{Poder de corte y cierre}
 \begin{description}
 \item[{Poder de corte:}] intensidad de corriente que este dispositivo es
 capaz de cortar, bajo una tensión de restablecimiento determinada.
@@ -417,8 +428,8 @@ de establecer, bajo una tensión dada.
 \end{frame}
 
 \subsection{Tipos de Dispositivos}
-\label{sec:org2fec551}
-\begin{frame}[label={sec:org905f3f3}]{Dispositivos simples}
+\label{sec:org39b1466}
+\begin{frame}[label={sec:orgee14664}]{Dispositivos simples}
 \begin{block}{Seccionador}
 \begin{itemize}
 \item Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
@@ -435,7 +446,7 @@ de establecer, bajo una tensión dada.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd190474}]{Dispositivos simples}
+\begin{frame}[label={sec:org76afdba}]{Dispositivos simples}
 \begin{block}{Contactor}
 \begin{itemize}
 \item Dispositivo accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
@@ -455,7 +466,7 @@ de establecer, bajo una tensión dada.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org6c9b1fa}]{Interruptor magnetotérmico}
+\begin{frame}[label={sec:org507513b}]{Interruptor magnetotérmico}
 \begin{itemize}
 \item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
 
@@ -471,13 +482,13 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc46dd26}]{Interruptor Magnetotérmico}
+\begin{frame}[label={sec:org50147e2}]{Interruptor Magnetotérmico}
 \begin{center}
 \includegraphics[height=0.8\textheight]{../figs/SeccionMagnetotermico.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd048100}]{Interruptor diferencial}
+\begin{frame}[label={sec:orgf5b40e5}]{Interruptor diferencial}
 \begin{itemize}
 \item Dispositivo automático capaz de interrumpir la corriente eléctrica de un circuito cuando existe una corriente diferencial residual, indicativa de un defecto de aislamiento.
 \item Para la detección emplea un transformador toroidal que abraza a todos los conductores.
@@ -486,7 +497,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3455ae1}]{Interruptor Diferencial}
+\begin{frame}[label={sec:org70045b1}]{Interruptor Diferencial}
 \begin{center}
 \includegraphics[height=0.3\textheight]{../figs/InterruptorDiferencial.pdf}
 \end{center}
@@ -497,9 +508,9 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{frame}
 
 \section{Recursos}
-\label{sec:org51f1f9e}
+\label{sec:org4e9072d}
 
-\begin{frame}[label={sec:orgd6f8ab0}]{Bibliografía}
+\begin{frame}[label={sec:org1a0b9c5}]{Bibliografía}
 \begin{itemize}
 \item \alert{Fraile Mora, J.}: \emph{Máquinas Eléctricas}. Ed. Mc. Graw Hill.
 

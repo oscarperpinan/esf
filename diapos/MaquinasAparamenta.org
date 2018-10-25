@@ -94,8 +94,8 @@ e=- N \frac{\mathrm{d}\phi}{\mathrm{d}t} = - N \frac{\mathrm{d}(B \cdot S\cdot \
 *** Máquina Eléctrica
 Una máquina eléctrica realiza una conversión entre dos formas de energía, una de ellas eléctrica:
 
-- *Generador*: transforma la energía mecánica en energía eléctrica.
 - *Motor*: transforma la energía eléctrica en energía mecánica.
+- *Generador*: transforma la energía mecánica en energía eléctrica.
 - *Transformador*: transforma las condiciones (tensión y corriente) de la energía eléctrica de entrada en otras diferentes de salida.
 
 *** Partes de una Máquina 
@@ -122,70 +122,80 @@ Al elemento que emite el campo magnético se le denomina *inductor* y aquel que 
 [[../figs/Electric_motor_cycle_3.pdf]]
 
 ** Tipos de Máquinas
+
+*** Motor
+- La energía eléctrica de entrada produce una corriente eléctrica que genera un campo magnético variable.
+- Este campo puede interactuar con otro campo magnético existente o con otro conductor y produce movimiento.
+- Más habituales: de inducción, y de corriente continua.
+
+
+*** Motor asíncrono o de inducción
+
+- Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
+
+- Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
+  ardilla).
+
+- Rotor gira a menor velocidad que el campo.
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/Seccion_Motor.jpeg]]
+
+Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
+
+*** Motor DC
+
+- Estator-Inductor con imanes permanentes o alimentado por corriente DC.
+
+- Rotor-Inducido alimentado con corriente DC a través de un colector de delgas, o sin escobillas.
+
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:../figs/Electric_motor_cycle_3.pdf]]
+
+
 *** Generador
+- Existe un campo magnético en el interior de la máquina (p. ej. imanes permanentes)
+- La energía mecánica de entrada aporta movimiento a una bobina en el seno del campo.
+- La interacción entre el campo y las espiras de la bobina producen una tensión inducida.
+- Más habituales: asíncrono, síncrono, y de corriente continua.
+
+*** Generador Asíncrono
+
 ****                                                                  :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.6
      :END:
-- Existe un campo magnético en el interior de la máquina (p. ej. imanes permanentes)
-- La energía mecánica de entrada aporta movimiento a una bobina en el seno del campo.
-- La interacción entre el campo y las espiras de la bobina producen una tensión inducida.
+- Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
+
+- Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
+  ardilla).
+
+- Rotor debe girar a mayor velocidad que la del campo del estator.
+
+- Empleado en turbinas eólicas
 ****                                                                  :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
 [[file:../figs/InsideWindTurbine.jpg]]
 
-*** Tipos de Generadores
-**** Generador Síncrono o Alternador
+*** Generador Síncrono o Alternador
 
--  Rotor-inductor alimentado por corriente continua mediante anillos.
+- Rotor-inductor alimentado por corriente continua mediante anillos.
 
--  Estator-inducido constituido por un devanado trifásico.
+- Estator-inducido constituido por un devanado trifásico.
 
--  Empleado en turbinas hidráulicas y térmicas.
+- Velocidad de giro constante, sincronizada con la frecuencia de red.
 
-**** Dinamo
--  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
+- Empleado en turbinas hidráulicas y térmicas.
 
--  El colector de delgas transforma la frecuencia de alimentación (DC)
-   en alterna.
+*** Generador DC
+- Estator-Inductor alimentado por corriente DC (o imanes permanentes).
 
-*** Motor
-****                                                                  :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.6
-     :END:
-- La energía eléctrica de entrada produce una corriente eléctrica que genera un campo magnético variable.
-- Este campo puede interactuar con otro campo magnético existente o con otro conductor y produce movimiento.
+- El colector de delgas transforma la frecuencia de alimentación (DC)
+  en alterna.
 
-****                                                                  :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.5
-     :END:
-[[../figs/Seccion_Motor.jpeg]]
-[[file:../figs/Electric_motor_cycle_3.pdf]]
-
-*** Tipos de Motores
-
-**** Motor DC
-
--  Estator-Inductor alimentado por corriente DC (o imanes permanentes).
-
--  Rotor-Inducido alimentado con corriente DC a través de un colector de delgas.
-
-**** Motor asíncrono o de inducción
-
--  Estator-Inductor alimentado por una corriente trifásica alterna (campo giratorio)
-
--  Rotor-Inducido constituido por espiras cortocircuitadas (jaula de
-   ardilla).
-
--  Se produce un par que busca alinear el eje de las espiras con el
-   campo inducido. El rotor se mueve siguiendo al campo giratorio.
-
--  Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
-
+- Empleado en máquinas eólicas de baja potencia.
 
 
 *** Transformador
