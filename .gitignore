@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -98,6 +97,10 @@ sympy-plots-for-*.tex/
 # Emacs
 *~
 .projectile
-=======
-*~
+diapos/auto/
+libro/auto/
+scripts/tikz/auto/
 
+# gnuplot
+*.table
+*.gnuplot
