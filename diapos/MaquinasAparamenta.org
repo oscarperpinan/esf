@@ -1,5 +1,5 @@
 #+TITLE: Máquinas Eléctricas @@latex:\\@@ Aparamenta Eléctrica
-
+#+STARTUP: indent
 #+SETUPFILE: config.org
 #+OPTIONS: H:3
 
@@ -121,15 +121,7 @@ Al elemento que emite el campo magnético se le denomina *inductor* y aquel que 
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/Electric_motor_cycle_3.pdf]]
 
-** Motor
-*** Fundamento
-- La energía eléctrica de *entrada* produce una *corriente eléctrica* que genera un *campo magnético variable*.
-- Este campo puede *interactuar* con otro *campo magnético existente* o con *otro conductor*, y produce movimiento.
-- Más habituales:
-  - /Inducción/
-  - /Corriente Continua/.
-
-
+** Tipos de Motor
 *** Motor asíncrono o de inducción
 
 - *Estator-Inductor* alimentado por una *corriente trifásica alterna* (/campo giratorio/)
@@ -143,7 +135,7 @@ Al elemento que emite el campo magnético se le denomina *inductor* y aquel que 
 
 Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0uCHY&feature=related][(1)]] [[http://www.youtube.com/watch?v=P-eTLmJC2cQ][(2)]]
 
-*** Motor DC
+*** Motor de corriente continua
 
 - *Estator-Inductor* genera *campo constante* (imanes permanentes o alimentado por corriente DC).
 
@@ -153,17 +145,7 @@ Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0u
 [[file:../figs/Electric_motor_cycle_3.pdf]]
 
 
-** Generador
-
-*** Fundamento
-- Existe un *campo magnético en el interior de la máquina* (p. ej. imanes permanentes)
-- La *energía mecánica de entrada* aporta *movimiento a una bobina* en el seno del campo.
-- La *interacción* entre el campo y las espiras de la bobina producen una *tensión inducida*.
-- Más habituales:
-  - /Síncrono/
-  - /Asíncrono/
-  - /Corriente Continua/.
-
+** Tipos de Generador
 
 *** Generador Síncrono o Alternador
 
@@ -185,7 +167,7 @@ Vídeos: Motor de inducción artesanal [[http://www.youtube.com/watch?v=ZRGlAu0u
 
 - *Rotor* constituido por espiras cortocircuitadas (*jaula de ardilla*).
 
-- Si el rotor gira a mayor velocidad que el campo del estator, se induce corriente "de vuelta" en el estator.
+- El rotor gira a mayor velocidad que el campo del estator: se induce corriente "de vuelta" en el estator.
 
 - Empleado en turbinas eólicas.
 
@@ -281,25 +263,22 @@ Equipo, aparato o material previsto para ser conectado a un circuito eléctrico 
 
    -  Protección de los *elementos de los circuitos* (cables,
      aparamenta) contra las tensiones térmicas y mecánicas de las
-     corrientes de cortocircuito.
+     corrientes de cortocircuito. /Ej. Fusibles/.
 
-   -  Protección de las *personas* en caso de producirse un defecto de
-      aislamiento.
+   -  Protección de las *personas* en caso de producirse un defecto de aislamiento. /Ej. Interruptor Diferencial/.
 
-   -  Protección de los *dispositivos y aparatos suministrados* (ej. motores).
+   -  Protección de los *dispositivos y aparatos receptores*. /Ej. Interruptor Magnetotérmico/. 
 
 *** Aislamiento
 
-Separar de forma verificable un circuito, un aparato o un elemento de
-la planta del resto de un sistema que se encuentra en tensión, con el
-fin de que el personal pueda realizar con total seguridad trabajos en
-la parte aislada.
+Separar de forma verificable un circuito, un aparato o un elemento de la planta del resto de un sistema que se encuentra en tensión, con el fin de que el personal pueda realizar con total seguridad trabajos en la parte aislada. 
+/Ej. Seccionador/.
 
 *** Control
 
-Modificar un sistema cargado para:
+Modificar un sistema en carga para:
 
-   -  Control funcional (condiciones normales de servicio, conmutación rutinaria).
+   -  Control funcional (condiciones normales de servicio, conmutación rutinaria) (/Ej. contactor/)
 
    -  Conmutación de emergencia (ej. seta de parada)
 
@@ -307,8 +286,7 @@ Modificar un sistema cargado para:
 
 *** Arco Eléctrico
 
-- Descarga eléctrica que se forma entre dos electrodos sometidos a una
-  diferencia de potencial.
+- Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
 #+ATTR_LATEX: :height 0.35\textheight
 [[file:../figs/arco_electrico.jpg]]
 
@@ -321,19 +299,17 @@ Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]
 
 *** Poder de corte y cierre
 
--  Poder de corte: :: intensidad de corriente que un dispositivo es
-   capaz de cortar bajo una tensión de restablecimiento determinada.
+-  Poder de corte: :: intensidad de corriente que un dispositivo es capaz de cortar bajo una tensión de restablecimiento determinada.
 
--  Poder de cierre: :: intensidad de corriente que un aparato es capaz
-   de establecer bajo una tensión dada.
+-  Poder de cierre: :: intensidad de corriente que un aparato es capaz de establecer bajo una tensión dada.
 
 ** Tipos de Dispositivos
 
 *** Seccionador
 
-- Dispositivo de dos posiciones (abierto/cerrado) enclavable y accionado manualmente que proporciona un aislamiento seguro de un circuito cuando está enclavado en la posición abierta.
+- Dispositivo de dos posiciones (abierto/cerrado) *enclavable* y accionado *manualmente* que proporciona un *aislamiento seguro* de un circuito cuando está enclavado en la posición abierta.
 
-- Un seccionador no está diseñado para abrir o cerrar el paso de la corriente.
+- Un seccionador *no* está diseñado para abrir o cerrar el paso de la corriente.
 
 #+ATTR_LATEX: :height 0.6\textheight
 [[file:../figs/seccionador.jpeg]]
@@ -341,15 +317,17 @@ Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]
 *** Interruptor de carga
 - Dispositivo no automático (*accionamiento manual*) de dos posiciones (abierto/cerrado).
 
-- Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos (no ofrece protección)
+- Tiene *poder de corte y cierre*.
+
+- Al ser manual *no ofrece protección* (funcionamiento en condiciones normales del circuito).
 #+ATTR_LATEX: :height 0.6\textheight
 [[file:../figs/interruptor_manual.jpg]]
 
 
 *** Contactor
-- Dispositivo de conmutación accionado por solenoide que por lo general se mantiene cerrado mediante una corriente (reducida).
-
-- Se suelen controlar de forma remota por medio de pulsadores de activación/desactivación.
+- Dispositivo de conmutación accionado de forma remota.
+- Tiene poder de corte y poder de cierre.
+- Utilizado para tareas de control.
 
 #+ATTR_LATEX: :height 0.6\textheight
 [[file:../figs/Contactor.jpg]]
@@ -360,9 +338,11 @@ Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]
      :PROPERTIES:
      :BEAMER_col: 0.7
      :END:
-- Se funde por Efecto Joule cuando la intensidad de corriente supera un umbral, por un cortocircuito o un exceso de carga.
+- Dispositivo de protección contra sobrecarga (corrientes superiores a un umbral durante un tiempo prolongado).
 
-- Es capaz de abrir un circuito en carga.
+- Se funde por Efecto Joule y queda destruido.
+
+- Tiene poder de corte.
 ****                                                                  :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.3
@@ -379,7 +359,9 @@ Vídeo: [[http://www.youtube.com/watch?v=WBTvGqRA4_0][Apertura en Alta Tensión]
      :END:
 - Dispositivo *automático* capaz de interrumpir la corriente eléctrica de un circuito cuando ésta sobrepasa ciertos valores máximos.
 
-- Se emplea para *proteger contra sobreintensidades* (/efecto magnético/) y *sobrecargas* (/efecto Joule/).
+- *Protege contra sobreintensidades* (/efecto magnético/), corrientes muy elevadas durante lapsos cortos.
+
+- *Protege contra sobrecargas* (/efecto Joule/), corrientes superiores a un umbral de forma sostenida.
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
@@ -393,7 +375,7 @@ Vídeo: [[http://www.youtube.com/watch?v=c6QqnLgWbCQ][Apertura de un PIA]]
 ***  Interruptor diferencial
 - Dispositivo *automático* con poder de corte ante una corriente diferencial residual (defecto de aislamiento).
 - Se emplea para la *protección de las personas*.
-- Para la detección emplea un transformador toroidal que abraza a todos los conductores.
+- Un transformador toroidal abraza a todos los conductores y detecta diferencia de flujo magnético.
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
