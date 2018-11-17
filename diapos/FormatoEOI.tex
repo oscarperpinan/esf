@@ -1,70 +1,56 @@
-\usepackage{mathpazo}%Letra palatino con fuentes para matemáticas
-\usepackage[T1]{fontenc}
+\documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{url}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
 \usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{textcomp}%%needed for the euro symbol
-
-%\usepackage{epstopdf}
-
-
-\usepackage[spanish]{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-
-
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
 \usepackage{hyperref}
-% \hypersetup{pdfauthor={Oscar Perpi\~n\'an},%
-%     pdftitle={Energ\'ia Solar Fotovoltaica},%
-%     filecolor=blue,%
-%     urlcolor=blue}
-
-\hypersetup{
-    bookmarks=true,         % show bookmarks bar?
-%%    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
-    bookmarksnumbered=false,
-    bookmarksopen=false,
-    breaklinks=true,
-    backref=true,
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=false,     % window fit to page when opened
-    pdfstartview={FitH},    % fits the width of the page to the window
-    pdftitle={Energía Solar Fotovoltaica},    % title
-    pdfauthor={Oscar Perpiñán Lamigueiro},     % author
-    pdfsubject={Electrotecnia},   % subject of the document
-    pdfcreator={AucTeX/Emacs},   % creator of the document
-    pdfproducer={LaTeX}, % producer of the document
-    pdfnewwindow=true,      % links in new window
-    pdfborder={0 0 0},
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=,          % color of internal links
-    citecolor=BrickRed,        % color of links to bibliography
-    filecolor=black,      % color of file links
-    urlcolor=Blue           % color of external links 
-}
-
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
+\bibliographystyle{plain}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{per=fraction, fraction=nice, decimalsymbol=comma}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=OliveGreen, urlcolor=Blue}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
 
+\setbeamercolor{alerted text}{fg=Green!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\usefonttheme{serif}
 \setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
 \usefonttheme{serif} 
-\usefonttheme{structuresmallcapsserif} 
 
+\setbeamercolor{palette primary}{bg=OliveGreen,fg=white}
+\setbeamercolor{palette secondary}{bg=OliveGreen,fg=white}
+\setbeamercolor{palette tertiary}{bg=OliveGreen,fg=white}
+\setbeamercolor{palette quaternary}{bg=OliveGreen,fg=white}
+\setbeamercolor{structure}{fg=OliveGreen} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=OliveGreen} % TOC sections
 
+\usetheme[hideothersubsections]{Goettingen}
 
-\logo{\includegraphics[width=1.5cm]{../figs/logoEOI.jpg}}
+\usepackage{tikz}
 
-\useinnertheme[shadow=true]{rounded}
-\useoutertheme{shadow}
-% \usetheme{Goettingen}
-% \usecolortheme{rose}
-%\usecolortheme[named=BrickRed]{structure} %sirve para cambiar el color genérico
-\usecolortheme[named=LimeGreen]{structure} 
-\usecolortheme{orchid}
-\usecolortheme{whale}
+\titlegraphic{\includegraphics[width=2.5cm]{../figs/logoEOI.jpg}}
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south east,yshift=2pt] at (current page.south east) {\includegraphics[width=1.5cm]{../figs/logoEOI.jpg}};
+\end{tikzpicture}}
