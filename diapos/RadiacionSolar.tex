@@ -1,4 +1,4 @@
-% Created 2018-04-09 lun 18:25
+% Created 2018-11-17 sáb 14:08
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,7 @@
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
@@ -36,25 +37,585 @@
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
-\date{}
+\author{Oscar Perpiñán Lamigueiro}
+\date{\url{http://oscarperpinan.github.io}}
 \title{Radiación Solar}
 \subtitle{Energía Solar Fotovoltaica}
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdfauthor={Oscar Perpiñán Lamigueiro},
  pdftitle={Radiación Solar},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.13)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
-\section{Naturaleza de la radiación solar}
-\label{sec:orgae26053}
+\section{Introducción}
+\label{sec:orgf284eaf}
 
-\begin{frame}[label={sec:org1d7c343}]{Irradiancia e Irradiación}
+\begin{frame}[label={sec:orge883e5b}]{Radiación Solar y Sistemas Fotovoltaicos}
+\begin{itemize}
+\item La \alert{energía producida} por un sistema fotovoltaico depende principalmente de la \alert{radiación incidente} en el generador.
+
+\item Consecuentemente, la \alert{estimación del comportamiento} de un sistema FV en un determinado lugar durante un período temporal exige \alert{conocer la radiación solar disponible en el plano del generador}.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/GCPVScheme.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgd4e076b}]{La radiación solar no se puede calcular analíticamente}
+\begin{itemize}
+\item La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
+\item Para estimar la radiación se requiere medidas terrestres o imágenes de satélite.
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/SolarRadiationComponents_NREL.png}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgba814dd}]{Ángulo de Inclinación}
+\begin{itemize}
+\item Los generadores FV tienen un \alert{ángulo de inclinación positivo} para maximizar el rendimiento.
+\item Este ángulo depende de la \alert{latitud} del lugar y de la \alert{aplicación del sistema}.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/PVUrban.png}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org81005f7}]{Bases de Datos de Radiación Solar}
+\begin{itemize}
+\item Por tanto, es inviable mantener una base de datos de radiación solar \alert{incidente}.
+\item Las \alert{bases de datos} registran radiación en el \alert{plano horizontal}.
+\item La estimación de la radiación incidente en el plano inclinado requiere un \alert{procedimiento de transposición}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org89d9b81}]{Del plano horizontal al plano inclinado}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
+\end{center}
+\end{frame}
+
+\section{Geometría Sol y Tierra}
+\label{sec:org743434a}
+\subsection{Movimiento Sol-Tierra}
+\label{sec:org4a03aef}
+
+\begin{frame}[label={sec:orgeeac35b}]{Movimiento terrestre}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
+\end{center}
+
+\begin{itemize}[<+->]
+\item La Tierra \alert{gira sobre si misma} alrededor de su eje polar.
+\begin{itemize}[<.->]
+\item Periodo aproximado: 24 horas.
+\end{itemize}
+
+\item La Tierra se mueve \alert{alrededor del Sol} siguiendo una elipse de baja
+excentricidad.
+\begin{itemize}[<.->]
+\item Periodo aproximado: 1 año.
+
+\item Este movimiento está contenido en el llamado \emph{plano de la
+eclíptica}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgb23fb8c}]{Movimiento terrestre}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
+\end{center}
+
+\begin{itemize}
+\item Entre el eje polar y el plano de la eclíptica hay un ángulo constante de \(23,45\degree\).
+
+\item Entre el plano ecuatorial y la linea que une la Tierra y el Sol hay un ángulo variable: \emph{declinación.}
+\end{itemize}
+\end{frame}
+
+
+
+\subsection{Ángulos Solares}
+\label{sec:org436d7fb}
+
+\begin{frame}[plain,label={sec:org6a57c29}]{Ejes terrestres}
+\begin{columns}
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra.pdf}
+\end{center}
+\end{column}
+
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasTerrestre-crop.pdf}
+\end{center}
+\end{column}
+\end{columns}
+
+\begin{itemize}
+\item \alert{Declinación}, \(\delta\): ángulo entre el plano ecuatorial y la linea que une la Tierra y el Sol.
+\item \alert{Hora Solar}, \(w\): diferencia entre instante en curso y el mediodía solar (\(w = 0\)).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org3c8db51}]{Declinación}
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/Declinacion.pdf}
+\end{center}
+
+\begin{block}{Ecuación de Cooper (\emph{simple})}
+\[\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
+\end{block}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgcab6533}]{Estaciones}
+\begin{itemize}[<+->]
+\item \alert{Solsticio de junio} 
+\begin{itemize}[<.->]
+\item 21-22 Junio, \(d_n = 172-173\)
+
+\item Declinación máxima.
+
+\item Días más largos en hemisferio Norte (verano)
+
+\item El Sol amanece por el Noreste y anochece por el Noroeste en el
+hemisferio Norte.
+\end{itemize}
+
+\item \alert{Solsticio de diciembre} 
+\begin{itemize}[<.->]
+\item 21-22 Diciembre, \(d_n = 355-356\)
+
+\item Declinación mínima.
+
+\item Días más cortos en hemisferio Norte (invierno)
+
+\item El Sol amanece por el Sureste y anochece por el Suroeste en el
+hemisferio Norte.
+\end{itemize}
+
+\item \alert{Equinoccios} 
+\begin{itemize}[<.->]
+\item 21-22 Marzo (\(d_n = 80-81\))
+
+\item 22-23 Septiembre (\(d_n = 265-266\))
+
+\item Declinación nula
+
+\item La duración de noche y día coinciden.
+
+\item El Sol amanece por el Este y anochece por el Oeste.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org7eacbd5}]{Hora Solar}
+\begin{itemize}
+\item \(w\), diferencia entre instante en curso y el mediodía solar (\(w = 0\), \(\psi_s = 0\)).
+\begin{itemize}
+\item (Horas) \(-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12\)
+\item 1h = 15º (\(24\text{h} = 2\pi \text{ radians} = 360\))
+\item Criterio de signos: \(w < 0\) antes del mediodía.
+\end{itemize}
+\item Amanecer (\(\gamma_{s}=0\)):
+\end{itemize}
+\[
+\cos(\omega_{s}) = -\tan(\delta)\tan(\phi)
+\]
+
+\begin{itemize}
+\item La longitud del día, \(|2 \cdot \omega_s|\), depende de \(\phi\) y \(d_n\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgb2f5ad0}]{Duración del día}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/DuracionDia.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain,label={sec:orgd5ce2cc}]{Ejes locales}
+\begin{columns}
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SoldesdeTierra2.pdf}
+\end{center}
+\end{column}
+
+\begin{column}{0.6\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasLocal-crop.pdf}
+\end{center}
+\end{column}
+\end{columns}
+
+\begin{itemize}
+\item \alert{Cenit Solar}, \(\theta_{zs}\): ángulo entre el Sol y el cenit (vertical en un lugar determinado).
+\item \alert{Azimut Solar}, \(\psi_s\): ángulo entre el mediodía solar y la proyección del sol en el plano horizontal.
+\item Dependen de \(d_n\), \(\omega\), y \(\phi\).
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0e8a110}]{Relación entre sistemas de coordenadas}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/RelacionSistemasCoordenadas.pdf}
+\end{center}
+
+\begin{itemize}
+\item \alert{Latitud (\(\phi\)) con signo}: Positivo para Hemisferio Norte, Negativo para Hemisferio Sur.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[plain,label={sec:org25a1172}]{Cenit Solar}
+\[
+\cos(\theta_{zs}) = \cos(\delta) \cos(\omega) \cos(\phi) + \sin(\delta) \sin(\phi)
+\]
+
+\begin{columns}
+\begin{column}{0.55\columnwidth}
+\begin{itemize}
+\item \(\theta_zs\), ángulo entre el Sol y el cenit (vertical en un lugar determinado).
+\item \(\gamma_s\), altura solar, ángulo complementario de \(\theta_{zs}\).
+\item Depende de \(d_n\), \(\omega\), y \(\phi\).
+\end{itemize}
+\end{column}
+\begin{column}{0.75\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasLocal-crop.pdf}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[plain,label={sec:org100331a}]{Azimut solar}
+\[
+  \cos(\psi_{s}) = \mathrm{sign}(\phi) \cdot \frac{\cos(\delta) \cos(\omega) \sin(\phi) - \cos(\phi) \sin(\delta)} {\sin(\theta_{z})}
+\]
+\begin{columns}
+\begin{column}{0.55\columnwidth}
+\begin{itemize}
+\item \(\psi_s\), ángulo entre el mediodía solar y la proyección del sol en el plano horizontal.
+\item Depende de \(d_n\), \(\omega\), y \(\phi\).
+\item Criterio de Signos: negativo antes del mediodía.
+\end{itemize}
+\end{column}
+
+\begin{column}{0.7\columnwidth}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SistemaCoordenadasLocal-crop.pdf}
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[label={sec:org2f675c5}]{Trayectoria Solar (\(60\degree N\))}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar60N.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org65e098c}]{Trayectoria Solar (\(40\degree S\))}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar40S.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org1f27159}]{Cálculo Ángulos Solares}
+\begin{itemize}
+\item Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para el:
+
+\begin{itemize}
+\item Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N
+
+\item Día del Año: 340, 2 horas después del amanecer, Latitud: 15S
+\end{itemize}
+
+\item Duración del día 261 del año en las latitudes 10N, 40N, 70N, 10S,
+40S, 70S.
+
+\item Altura solar en el mediodía del día 25 del año en las latitudes 10N,
+40N, 10S, 40S.
+\end{itemize}
+\end{frame}
+
+\subsection{Hora solar y oficial}
+\label{sec:orgde98d4b}
+\begin{frame}[label={sec:org93fef90}]{Hora solar}
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
+
+\begin{itemize}
+\item \(\omega\): hora solar real o aparente[º]
+\item \(TO\): hora oficial [h]
+\item \(AO\): adelanto oficial por horario de verano [h]
+\item \(\Delta\lambda\) corrección por huso horario [º]
+\item \(EoT\): Ecuación del tiempo (dia solar real y dia solar medio) [min]
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgbb481d1}]{Hora oficial}
+\begin{itemize}
+\item \alert{La hora oficial} es una medida del tiempo \alert{ligada a un meridiano}
+que sirve de referencia para una zona determinada.
+
+\item La hora oficial de la España peninsular se rige por el huso horario
+de Centroeuropa. Este huso horario está situado en
+\(15\degree\mathrm{E}\).
+
+\item \alert{Corrección}: \(\Delta\lambda=\lambda_{L}-\lambda_{H}\), con
+\(\lambda_{L}\) la longitud local y \(\lambda_{H}\) la longitud del huso
+horario.
+
+\item Longitudes \emph{positivas} al \emph{este} del meridiano de Greenwich.
+\(\Delta\lambda\) es positiva cuando la localidad está situada al este
+de su huso horario.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org51d806d}]{Tiempo solar medio}
+\begin{itemize}
+\item \alert{La duración del día solar real}, definido como el tiempo que
+transcurre entre dos pasos consecutivos del Sol por el meridiano
+local, \alert{varía a lo largo del año}.
+
+\item El promedio anual de esta variación es nulo: \emph{día solar medio}, cuya
+duración es constante a lo largo del año e igual al valor medio de la
+duración del día solar real.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org5605926}]{Ecuación del Tiempo}
+\[\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
+      M+3.5884\right)\right)\]
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/EoT.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org950c594}]{Ejemplo de cálculo}
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
+
+\begin{block}{}
+Calcule la hora solar real correspondiente al día 23 de Abril de 2010
+  (\(\mathrm{EoT=\SI{1.78}{\minute}}\)) a las 12 de la mañana, hora
+  oficial de la ciudad de A Coruña, Galicia. Esta localidad está
+  contenida en el meridiano de longitud \(8.38\degree\mathrm{W}\) y su
+  hora oficial está regida por el huso horario GMT+1.
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org7a61bbc}]{Solución}
+\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
+
+\begin{itemize}[<+->]
+\item \(\lambda_{L}=-8.38\degree\), \(\lambda_{H}=15\degree\) y
+\(\Delta\lambda=-23.38\degree\).
+
+\item En España se aplica el horario de verano y este día está incluido
+en el período afectado, \(\mathrm{AO}=1\).
+
+\item Por último, para este día \(\mathrm{EoT=\SI{1.78}{\minute}}\).
+
+\item Así \(\omega=-37.94\degree\) (aproximadamente las 9 y media de la
+mañana). El Sol culminará (\(\omega=0\)) cuando sean las 14:31, hora
+oficial.
+\end{itemize}
+\end{frame}
+
+\section{Geometría de los sistemas fotovoltaicos}
+\label{sec:org17bfa80}
+\begin{frame}[label={sec:org1f25106}]{Definiciones}
+\begin{itemize}
+\item \(\theta_s\), ángulo de incidencia (AOI), ángulo entre los rayos solares y la perpendicular al plano del generador.
+\item \(\alpha\): orientación del generador (0º cuando está orientado al mediodía solar)
+\item \(\beta\): inclinación del generador.
+\end{itemize}
+\end{frame}
+
+\subsection{Sistema Estático}
+\label{sec:org02981bb}
+
+\begin{frame}[label={sec:orga193a0c}]{Sistema Estático}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain,label={sec:org24a8fc6}]{Ángulo de Incidencia}
+\begin{itemize}
+\item Si \(\alpha=0\)
+\end{itemize}
+\[
+\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
+\]
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/AngulosSistemaEstatico.pdf}
+\end{center}
+
+\begin{itemize}
+\item Inclinación Óptima \(\beta_{opt} \simeq |\phi| - 10º\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgd8ec689}]{Ángulo de Incidencia}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.8\textheight]{../figs/cosThetaEst_40N.pdf}
+\end{center}
+\end{frame}
+
+
+\subsection{Sistemas con seguimiento}
+\label{sec:orgcbd0050}
+
+\begin{frame}[label={sec:orged8177a}]{Introducción}
+\begin{itemize}[<+->]
+\item \alert{Fundamento:}
+\begin{itemize}[<.->]
+\item Radiación incidente aumenta al seguir al sol
+
+\item Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+\end{itemize}
+
+\item Las diferentes técnicas de seguimiento son un compromiso entre un
+apuntamiento perfecto y sistemas estructurales más económicos y
+mejores aprovechamientos del terreno.
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:org9499a7a}]{Algunos tipos de seguimiento solar}
+\begin{itemize}[<+->]
+\item \alert{Doble eje}
+\begin{itemize}[<.->]
+\item Apuntamiento \guillemotleft{}perfecto\guillemotright{}
+
+\item Mejor productividad, peor ocupación de terreno.
+\end{itemize}
+
+\item \alert{Seguimento acimutal}
+\begin{itemize}[<.->]
+\item Sacrifica un movimiento (inclinación del generador) para conseguir
+sistemas más económicos.
+\end{itemize}
+
+\item \alert{Seguimiento horizontal con eje Norte-Sur}
+\begin{itemize}[<.->]
+\item Sencillez y estabilidad estructural (el eje es horizontal y
+paralelo al terreno, con tantos puntos de apoyo como se consideren
+necesarios),
+
+\item Facilidad de motorización,
+
+\item Buen aprovechamiento del terreno.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org9dc625d}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[plain,label={sec:org1b2231c}]{Ángulo de Incidencia (1x eje, horizontal N-S)}
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/AngulosSistemaHorizontalNS.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org1552155}]{Inclinación de Eje Horizontal N-S}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.8\textheight]{../figs/BetaHoriz_40N.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org3f042d6}]{Ángulo de Incidencia de Eje Horizontal N-S}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.8\textheight]{../figs/cosThetaHoriz_40N.pdf}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[label={sec:orgb82942d}]{Sistema de Seguimiento (2x ejes)}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain,label={sec:org2385dae}]{Ángulo de Incidencia (seguidor 2x)}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
+\end{center}
+
+
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+\end{frame}
+\begin{frame}[label={sec:org68c857c}]{Inclinación (seguidor 2x)}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.8\textheight]{../figs/BetaDoble_40N.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgfb8b1e1}]{Ejercicio: cálculo de ángulo de incidencia}
+\begin{description}
+\item[{Para:}] \begin{itemize}
+\item Un sistema estático orientado al Sur y con inclinación de 30;
+
+\item Un sistema de seguimiento horizontal N-S;
+
+\item Un sistema de seguimiento acimutal con inclinación a 35;
+
+\item Un sistema de seguimiento a doble eje,
+\end{itemize}
+
+\item[{Calcular}] el ángulo de incidencia para el:
+
+\begin{itemize}
+\item Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N;
+
+\item Día del Año: 340, 2 horas después del amanecer, Latitud: 15S;
+\end{itemize}
+\end{description}
+\end{frame}
+\section{Radiación Solar en la Superficie Terrestre}
+\label{sec:org344fdd0}
+\begin{frame}[label={sec:orgf22201e}]{Irradiancia e Irradiación}
 \begin{description}
 \item[{Irradiancia}] es la densidad de \emph{potencia} de radiacion solar
 incidente en una superficie.
@@ -72,26 +633,43 @@ incidente en una superficie.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org493163f}]{Radiación Extra-atmosférica}
+\subsection{Radiación Extra-atmosférica}
+\label{sec:org1565185}
+
+
+\begin{frame}[label={sec:org0fa8352}]{Definición}
 \begin{itemize}
 \item La radiación que alcanza la superficie de la atmósfera es radiación
 directa del Sol.
+\end{itemize}
 
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/SolarRadiationComponents_NREL.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgb90ecd9}]{Ecuaciones}
+\begin{itemize}
 \item \alert{Constante solar} \(B_{0}=\SI{1367}{\watt\per\meter\squared}\)
 (irradiancia solar sobre la superficie normal al vector solar en límite superior de la atmósfera terrestre)
 
 \item \alert{Irradiancia extra-atmosférica}
 
-\begin{itemize}
-\item \(B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}\)
+\[B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}\]
 
-\item \(B_{0d}(0)=-\frac{T}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)\)
-(\(\omega_{s}\) en radianes)
-\end{itemize}
+\item \alert{Irradiación extra-atmosférica diaria}  (\(\omega_{s}\) en radianes)
+\[
+  B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)
+\]
+
+\item Factor de corrección por excentricidad
+\[\epsilon_0 = 1+0,033\cdot\cos(2\pi d_n/365)\]
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf6cf847}]{Radiación Extra-atmosférica}
+
+\begin{frame}[label={sec:orga1cdee7}]{Días promedio}
 \begin{itemize}
 \item Es posible demostrar que el \alert{promedio mensual} de esta irradiación
 diaria \alert{coincide numericamente} con el valor de irradiación diaria
@@ -120,7 +698,10 @@ Mes & Jul & Ago & Sep & Oct & Nov & Dic\\
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1c1dc11}]{Interacción de la radiación con la atmósfera}
+\subsection{Radiación solar en la superficie terrestre}
+\label{sec:orgb0ea2cc}
+
+\begin{frame}[label={sec:org5fa1193}]{Interacción de la radiación con la atmósfera}
 \begin{itemize}
 \item \alert{Disminución} de la radiación incidente en la superficie terrestre
 (reflexión en nubes)
@@ -130,21 +711,48 @@ Mes & Jul & Ago & Sep & Oct & Nov & Dic\\
 
 \item \alert{Modificación de la distribución espacial} (dispersión por
 partículas)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org08705cb}]{Caracterización de la atmósfera}
+\begin{itemize}
+\item \alert{Masa de aire}:
 
 \begin{itemize}
-\item Difusión de Rayleigh (longitud de onda mucho mayor que tamaño de
-partícula) - Capas altas - Color Azul
+\item Relación entre camino recorrido por rayos directos del Sol a
+través de la atmósfera hasta la superficie receptora y el que
+recorrerían en caso de incidencia vertical (AM=1)
 
-\item Difusión de Mie (longitud de onda de magnitud similar a tamaño de
-partícula) - Capas bajas
+\item \(AM=1/\cos\theta_{zs}\)
+\end{itemize}
 
-\item Difusión no selectiva (longitud de onda mucho menor que tamaño de
-partícula)
+\item \alert{Índice de claridad}
+
+\begin{itemize}
+\item Relación entre la radiación en la superficie terrestre y la
+radiación extra-atmosférica, ambas en el plano horizontal
+
+\item El índice de claridad \alert{no depende de las variaciones debidas al
+movimiento aparente del sol}.
+
+\item \(K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}\) (mensual)
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org553b779}]{Componentes de la radiación solar}
+\begin{frame}[label={sec:org9e13b6d}]{Índice de claridad}
+\begin{description}
+\item[{\(K_{T}\):}] índice de claridad instantáneo. \(K_{T}=G/B_{0}\)
+
+\item[{\(K_{Td}\):}] índice de claridad diario. \(K_{Td}=G_{d}/B_{0d}\)
+
+\item[{\(K_{Tm}\):}] índice de claridad mensual. \(K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}\)
+
+\item[{\(K_{Ta}\):}] índice de claridad anual. \(K_{Ta} = G_{a}/B_{0a} = \dots\)
+\end{description}
+\end{frame}
+
+\begin{frame}[label={sec:org3ab77ca}]{Componentes de la radiación solar}
 \begin{itemize}
 \item \alert{Radiación Directa}. (B)
 
@@ -172,7 +780,7 @@ partícula)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc0994b3}]{Cómo se escribe}
+\begin{frame}[label={sec:org6037649}]{Cómo se escribe}
 \begin{block}{Forma, tiempo, lugar}
 \begin{description}
 \item[{Forma+Tiempo+Lugar:}] Irradiancia directa (forma) horaria (tiempo)
@@ -192,7 +800,7 @@ en el plano del generador (lugar)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org5b2d540}]{Cómo se escribe}
+\begin{frame}[label={sec:org070f7ef}]{Cómo se escribe}
 \begin{block}{Forma, tiempo, lugar}
 \[Forma_{tiempo,promedio}(lugar)\]
 
@@ -205,63 +813,18 @@ en el plano del generador (lugar)
 \[B(\beta)\]
 \end{block}
 \end{frame}
+\subsection{Cálculo de componentes de radiación solar}
+\label{sec:org6f39b15}
 
-\begin{frame}[label={sec:orgac301ab}]{Caracterización de la atmósfera}
-\begin{itemize}
-\item \alert{Masa de aire}:
-
-\begin{itemize}
-\item Relación entre camino recorrido por rayos directos del Sol a
-través de la atmósfera hasta la superficie receptora y el que
-recorrerían en caso de incidencia vertical (AM=1)
-
-\item \(AM=1/\cos\theta_{zs}\)
-\end{itemize}
-
-\item \alert{Índice de claridad}
-
-\begin{itemize}
-\item Relación entre la radiación global en el plano horizontal y la
-radiación extra-atmosférica en el plano horizontal
-
-\item El índice de claridad \alert{no depende de las variaciones debidas al
-movimiento aparente del sol}.
-
-\item \(K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}\) (mensual)
-\end{itemize}
-\end{itemize}
+\begin{frame}[label={sec:org1b97852}]{}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
+\end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org6ac7071}]{Índice de claridad}
-\begin{description}
-\item[{\(K_{T}\):}] índice de claridad instantáneo. \(K_{T}=G/B_{0}\)
-
-\item[{\(K_{Td}\):}] índice de claridad diario. \(K_{Td}=G_{d}/B_{0d}\)
-
-\item[{\(K_{Tm}\):}] índice de claridad mensual. \(K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}\)
-
-\item[{\(K_{Ta}\):}] índice de claridad anual. \(K_{Ta} = G_{a}/B_{0a} = \dots\)
-\end{description}
-\end{frame}
-
-\section{Cálculo de componentes de radiación solar}
-\label{sec:org266a17f}
-
-\begin{frame}[label={sec:org8320b1f}]{Radiación como proceso estocástico}
+\begin{frame}[label={sec:org409fd9d}]{Estimación de Directa y Difusa}
 \begin{itemize}
-\item La \alert{distribución de valores} que presenta la radiación solar durante un periodo está \alert{determinada por el valor promedio de la radiación durante ese periodo}.
-
-\begin{itemize}
-\item Por ejemplo, conocer la media mensual de la radiación solar diaria en un determinado lugar permite saber cómo se comportará la radiación diaria durante ese mes
-\end{itemize}
-
-\item El índice de claridad para un día concreto \alert{sólo está influido} por el índice de claridad del \alert{día anterior}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orgcd4dda4}]{Estimación de Directa y Difusa}
-\begin{itemize}
-\item Establecer una \alert{relación entre la fracción difusa} de la radiación horizontal (\(F_{D}=\frac{D(0)}{G(0)}\)) y \alert{el índice de claridad}.
+\item Objetivo: Establecer una \alert{relación entre la fracción difusa} de la radiación horizontal (\(F_{D}=\frac{D(0)}{G(0)}\)) y \alert{el índice de claridad}.
 
 \item \alert{Correlación negativa} (a mayor índice de claridad, menor componente difusa)
 
@@ -269,7 +832,7 @@ movimiento aparente del sol}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgba368e0}]{Correlaciones \(F_{D}\) y \(K_{T}\): Ecuación de Page}
+\begin{frame}[label={sec:org0955e90}]{Correlaciones \(F_{D}\) y \(K_{T}\): Ecuación de Page}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FdKtMensual.pdf}
 \end{center}
@@ -277,7 +840,7 @@ movimiento aparente del sol}.
 \[F_{Dm}=1-1.13\cdot K_{Tm}\]
 \end{frame}
 
-\begin{frame}[label={sec:orgcb0d199}]{Correlaciones \(F_{D}\) y \(K_{T}\)}
+\begin{frame}[label={sec:orgfde726b}]{Correlaciones \(F_{D}\) y \(K_{T}\)}
 Ejemplo: en un lugar con \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) en un mes con \(B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}\)  será:
 
 \begin{itemize}
@@ -291,7 +854,7 @@ Ejemplo: en un lugar con \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc5e04cf}]{Correlaciones \(F_{D}\) y \(K_{T}\): Collares-Pereira y Rabl}
+\begin{frame}[label={sec:orgd5e33e9}]{Correlaciones \(F_{D}\) y \(K_{T}\): Collares-Pereira y Rabl}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FdKtDiario.pdf}
 \end{center}
@@ -305,7 +868,7 @@ F_{Dd} = \begin{cases}
 {\scriptsize \par}
 \end{frame}
 
-\begin{frame}[label={sec:org5633eb5}]{Estimación de Directa y Difusa}
+\begin{frame}[label={sec:org34a7045}]{Estimación de Directa y Difusa}
 \begin{description}
 \item[{Calcular}] las componentes directa y difusa de la radiación solar del:
 
@@ -315,34 +878,54 @@ F_{Dd} = \begin{cases}
 \end{itemize}
 \end{description}
 \end{frame}
+\section{Radiación Solar en Generadores FV}
+\label{sec:orgebf3fca}
 
+\subsection{Introducción}
+\label{sec:org9a2fd92}
 
-\section{Cálculo de radiación sobre generadores}
-\label{sec:org7c4d92a}
+\begin{frame}[label={sec:org49a60b0}]{Ángulo de Inclinación}
+\begin{itemize}
+\item Los generadores FV tienen un ángulo de inclinación positivo para maximizar el rendimiento.
+\item Este ángulo depende de la latitud del lugar y de la aplicación del sistema.
+\end{itemize}
 
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/PVUrban.png}
+\end{center}
+\end{frame}
 
-\begin{frame}[label={sec:orgb68a1c3}]{Irradiancia sobre superficies arbitrarias}
+\begin{frame}[label={sec:org4292a56}]{Procedimiento}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Irradiancia a partir de irradiación diaria}
-\label{sec:org0c3dc30}
+\label{sec:org9f52ca4}
 
-\begin{frame}[label={sec:org647d3e9}]{Estimación de Irradiancia a partir de Irradiación diaria}
+\begin{frame}[label={sec:org4a09df7}]{Planteamiento}
 \begin{itemize}
-\item La irradiación durante una hora coincide con el valor medio de la irradiancia durante esa hora.
-
-\item La variación solar durante una hora es baja: valor de irradiancia equivalente a valor de irradiación.
-
+\item \alert{Objetivo}: construir un perfil diario promedio de irradiancia global e irradiancia difusa (\emph{cielo claro})
+\item \alert{Puntos clave}:
+\begin{itemize}
+\item La variación solar durante una hora es baja: irradiación horaria equivale al valor medio de la irradiancia durante esa hora.
 \item Relación entre irradiancia e irradiación extra-terrestre deducible teóricamente:
 \end{itemize}
+\end{itemize}
 
-\[\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{T}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}\]
+\[
+\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}
+\]
 \end{frame}
 
-\begin{frame}[label={sec:org60a6aaf}]{Estimación de Irradiancia a partir de Irradiación diaria}
+\begin{frame}[label={sec:orgb6bc5c7}]{Perfil}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/RgRd.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org1769d05}]{Ecuaciones del perfil}
 \[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
 
 \[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
@@ -352,14 +935,7 @@ F_{Dd} = \begin{cases}
 \[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
 \end{frame}
 
-
-\begin{frame}[label={sec:org20086d1}]{Estimación de Irradiancia a partir de Irradiación diaria}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/RgRd.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org4017cc9}]{Estimación de Irradiancia a partir de Irradiación diaria}
+\begin{frame}[label={sec:org98a32b5}]{Ejercicio}
 \begin{description}
 \item[{Calcular}] la irradiancia global y la irradiancia difusa en el plano horizontal
 
@@ -370,13 +946,22 @@ F_{Dd} = \begin{cases}
 \end{frame}
 
 \subsection{Transformación al plano del generador}
-\label{sec:org250e398}
+\label{sec:orge08a596}
 
-\begin{frame}[label={sec:org286623c}]{Irradiancia Directa}
+\begin{frame}[label={sec:orgb9b697b}]{Planteamiento}
+\begin{itemize}
+\item \alert{Irradiancia Directa}: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
+\item \alert{Irradiancia Difusa}: modelos del estado de cielo, modelo isotrópico o anisotrópico.
+\item \alert{Irradiancia de Albedo}: modelo isotrópico con coeficiente de reflexión típico.
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:org92ae281}]{Irradiancia Directa}
+\alert{Irradiancia Directa}: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
+
 \[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
 \end{frame}
 
-\begin{frame}[label={sec:orgbea83b3}]{Factor de visión para Difusa}
+\begin{frame}[label={sec:org06a86d2}]{Irradiancia Difusa}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
 \end{center}
@@ -384,26 +969,38 @@ F_{Dd} = \begin{cases}
 \[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
 \end{frame}
 
-\begin{frame}[label={sec:org435a1a2}]{Irradiancia Difusa isotrópica}
+\begin{frame}[label={sec:org5aa327f}]{Irradiancia Difusa Isotrópica}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
+\end{center}
+
+
 \[L(\theta_{z},\psi)=cte.\]
 
 \[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
 \end{frame}
-
-\begin{frame}[label={sec:orga2dcd4f}]{Irradiancia Difusa Anisotrópica}
+\begin{frame}[label={sec:org56cdf08}]{Irradiancia Difusa Anisotrópica}
 \[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
+
 \[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
+
 \[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+
 \[k_{1} = \frac{B(0)}{B_{0}(0)}\]
 \end{frame}
 
-\begin{frame}[label={sec:org97be4b1}]{Irradiancia de Albedo}
+\begin{frame}[label={sec:org746404d}]{Irradiancia de Albedo}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
+\end{center}
+
+
 \[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
 
 \[\rho=0.2\]
 \end{frame}
 
-\begin{frame}[label={sec:org49e4fd1}]{Irradiancia sobre plano inclinado}
+\begin{frame}[label={sec:orgf122101}]{Ejercicio}
 \begin{description}
 \item[{Calcular}] la irradiancia difusa, directa, de albedo y global, en
 
@@ -413,11 +1010,10 @@ F_{Dd} = \begin{cases}
 \end{description}
 \end{frame}
 
-
 \subsection{Pérdidas angulares y por suciedad}
-\label{sec:orgd712167}
+\label{sec:org9f618cc}
 
-\begin{frame}[label={sec:org32537b8}]{Radiación directa}
+\begin{frame}[label={sec:org6672a28}]{Radiación directa}
 \[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
 
 \begin{center}
@@ -425,14 +1021,14 @@ F_{Dd} = \begin{cases}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7828d8e}]{Difusa y Albedo}
+\begin{frame}[label={sec:org26ee36b}]{Difusa y Albedo}
 \begin{align*}
 D_{ef}^{iso}(\beta,\alpha) &= D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
 D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
 R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
 \end{align*}
 \end{frame}
-\begin{frame}[label={sec:orgd2f48cc}]{Coeficientes}
+\begin{frame}[label={sec:org3795789}]{Coeficientes}
 \begin{center}
 \begin{tabular}{lrrr}
 Grado de Suciedad & \(\frac{T_{sucio}(0)}{T_{limpio}(0)}\) & \(a_{r}\) & \(c_{2}\)\\
@@ -445,18 +1041,16 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org0bc6d2a}]{Pérdidas anuales}
+\begin{frame}[label={sec:orgf855a8f}]{Pérdidas anuales}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GefVSG.pdf}
 \end{center}
 \end{frame}
 
-\section{Radiación Efectiva según tipologías}
-\label{sec:org6561874}
+\subsection{Radiación Efectiva según tipologías}
+\label{sec:org8112c00}
 
-
-
-\begin{frame}[label={sec:org8610eff}]{Radiación en Sistema estático}
+\begin{frame}[label={sec:orga2983b0}]{Radiación en Sistema estático}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FixedKrig.pdf}
 \end{center}
@@ -464,7 +1058,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org7c2a8c0}]{Radiación en Seguimiento Eje Horizontal}
+\begin{frame}[label={sec:orgf7bc246}]{Radiación en Seguimiento Eje Horizontal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/HorizKrig.pdf}
 \end{center}
@@ -472,18 +1066,14 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:orga8c61c5}]{Radiación en Seguimiento Doble Eje}
+\begin{frame}[label={sec:orgd1ebce1}]{Radiación en Seguimiento Doble Eje}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoKrig.pdf}
 \end{center}
 \end{frame}
 
-\subsection{Comparación entre tipologías}
-\label{sec:orgc7ce942}
 
-
-
-\begin{frame}[label={sec:orga8a9697}]{Comparación Doble Eje-Estática}
+\begin{frame}[label={sec:org2ca2e95}]{Comparación Doble Eje-Estática}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoFixed.pdf}
 \end{center}
@@ -491,7 +1081,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org7688cda}]{Comparación Doble Eje - Horizontal}
+\begin{frame}[label={sec:org2cd264d}]{Comparación Doble Eje - Horizontal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoHoriz.pdf}
 \end{center}
@@ -499,7 +1089,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:orga392058}]{Comparación Eje Horizontal - Estática}
+\begin{frame}[label={sec:org46a4f03}]{Comparación Eje Horizontal - Estática}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/HorizFixed.pdf}
 \end{center}
@@ -507,1301 +1097,227 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org5f4bff5}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:org3553800}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/compSystems.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd7c1ef1}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:orgb6eb646}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/compSystemsG0.png}
 \end{center}
 \end{frame}
-
-\section{Aplicación a Sistemas estáticos}
-\label{sec:org819028f}
-
-\subsection{Ángulo de inclinación óptimo}
-\label{sec:org7fa9b33}
-
-\begin{frame}[label={sec:org278f674}]{Inclinación Optima Estática}
-\[\left|\phi\right|-\beta\approx10\degree\]
-
-\[\beta_{opt}=3.7+0.69\cdot|\phi|\]
-\end{frame}
-
-\begin{frame}[label={sec:orgc4410b9}]{Sensibilidad al desapuntamiento}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/PerdidasInclinacionOptima.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orga97ff04}]{Radiación para inclinación óptima}
-\[\frac{G_{d,a}(0)}{G_{d,a}(\beta_{opt})}=1-4.46\cdot10^{-4}\cdot\beta_{opt}-1.19\cdot10^{-4}\cdot\beta_{opt}^{2}\]
-\end{frame}
-
-\begin{frame}[label={sec:org681b107}]{Cálculo de Radiación Efectiva}
-\[
-\frac{G_{efd,a}(\beta,\alpha)}{G_{d,a}(\beta_{opt})} = g_{1}\cdot(\beta-\beta_{opt})^{2}+g_{2}\cdot(\beta-\beta_{opt})+g_{3}
-\]
-
-\[
-g_{i} = g_{i1}|\alpha|^{2}+g_{i2}|\alpha|+g_{i3}
-\]
-
-\begin{center}
-\begin{tabular}{lrrr}
- & \(i=1\) & \(i=2\) & \(i=3\)\\
-\hline
-\(g_{1i}\) & \(8\cdot10^{-9}\) & \(3.8\cdot10^{-7}\) & \(-1.218\cdot10^{-4}\)\\
-\(g_{2i}\) & \(-4.27\cdot10^{-7}\) & \(8.2\cdot10^{-6}\) & \(2.892\cdot10^{-4}\)\\
-\(g_{3i}\) & \(-2.5\cdot10^{-5}\) & \(-1.034\cdot10^{-4}\) & \(0.9314\)\\
-\end{tabular}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org7220396}]{Cálculo para estática}
-\begin{description}
-\item[{Calcular}] la irradiación anual efectiva que incide en
-
-\begin{itemize}
-\item Un generador orientado al Sur e inclinado \(\ang{20}\) en un lugar con latitud \(\ang{30}\mathrm{N}\) y una media anual de la irradiación global diaria en el plano horizontal de \(\SI{5250}{\watthour\per\meter\squared}\), suponiendo una suciedad media.
-\end{itemize}
-
-\item[{Calcular}] la irradiación anual efectiva que incide en
-
-\begin{itemize}
-\item Un generador desorientado \(\ang{20}\) del Sur e inclinado \(\ang{40}\) en un lugar con latitud \(\ang{50}\mathrm{N}\) y una media anual de la irradiación global diaria en el plano horizontal de \(\SI{5250}{\watthour\per\meter\squared}\), suponiendo una suciedad media.
-\end{itemize}
-\end{description}
-\end{frame}
-
-
-
 \section{Bases de Datos}
-\label{sec:org5a04504}
+\label{sec:org15aba1d}
 \subsection{Introducción}
-\label{sec:org63e3335}
-
-\begin{frame}[label={sec:org42d4196}]{Variabilidad Temporal y Espacial}
+\label{sec:orga41b819}
+\begin{frame}[label={sec:org8505576}]{Variabilidad Solar}
 \begin{itemize}
-\item La irradiancia solar extraterrestre depende de la latitud y el instante temporal (\emph{proceso determinista}).
-\item La irradiancia solar incidente en la superficie terrestre es resultado de la interacción con la atmósfera cambiante: \alert{variabilidad temporal y espacial} (\emph{proceso estocástico}).
+\item La \alert{radiación extra-atmosférica} se puede expresar de forma \alert{analítica} en función del día, hora y latitud.
+\item La \alert{radiación en la superficie terrestre} es un \alert{proceso estocástico} (aleatorio) debido a la interacción con la atmósfera.
+\begin{itemize}
+\item Variabilidad Temporal
+\item Variabilidad Espacial
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:org8497b2b}]{Estimaciones a Largo Plazo}
+\begin{itemize}
+\item Nos interesan \alert{estimaciones a largo plazo} del funcionamiento de los sistemas FV en una localización concreta.
+\item Las fuentes de datos de radiación solar deben:
+\begin{itemize}
+\item \alert{capturar el comportamiento a largo plazo} (variabilidad interanual)
+\item y ser \alert{representativas de la localización} (variabilidad espacial).
+\end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf90afc}]{Variabilidad Temporal}
-Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
+\begin{frame}[label={sec:org1bb6a03}]{Variabilidad Temporal}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/VariabilidadRadiacionDiario.pdf}
+\includegraphics[height=0.45\textheight]{../figs/VariabilidadRadiacionDiario.pdf}
 \end{center}
 
-\nocite{Perpinan2009}
-\end{frame}
-
-\begin{frame}[label={sec:orgba944b7}]{Variabilidad Temporal}
-\[
-\sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
-\]
-
 \begin{itemize}
-\item Predicción para un (día, mes, año) \alert{determinado}: 
-
-\begin{itemize}
-\item Intervalo de confianza del 95\% acotado por \(1.96\cdot\sigma_{G}\)
-\end{itemize}
-
-\item Predicción para un (día, mes, año) \alert{promedio (durante N años)}: 
-
-\begin{itemize}
-\item Intervalo de confianza del 95\% acotado por \(1.96\cdot\sigma_{\overline{G}}\)
-\end{itemize}
+\item La variabilidad temporal \alert{incrementa con la resolución temporal} (ej. mayor para valores diarios que para medias mensuales).
+\item Las fluctuaciones son \alert{más altas en invierno que en verano}.
+\item Reproducir \alert{tendencias a largo plazo} requiere \alert{series temporales largas} (recomendado 10 años).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org522bc5d}]{Variabilidad Espacial}
+\begin{frame}[label={sec:org88da936}]{Variabilidad Espacial}
 \begin{center}
-\includegraphics[width=0.9\textwidth]{../figs/SpatialVariability.jpg}
+\includegraphics[height=0.4\textheight]{../figs/SpatialVariability.jpg}
 \end{center}
 
-\[
-COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
-\]
-
-\nocite{Gueymard.Wilcox2011a}
+\begin{itemize}
+\item La variabilidad espacial depende de la \alert{climatología local}.
+\item La variabilidad espacial es \alert{mayor en invierno que en verano} para una misma localización.
+\item Las medidas son representativas de las localizaciones cercanas en una distancia limitada (aprox. 10 kms.)
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6f5ed55}]{Variabilidad Espacial}
+\begin{frame}[label={sec:orgb10e792}]{Resumen: requerimientos}
+\begin{itemize}
+\item Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
+\begin{itemize}
+\item \alert{Medidas Cercanas}: \(\leq \SI{10}{km}\)
+\item \alert{Series Temporales Largas}: \(\simeq 10 \text{ años}\)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Fuentes de Datos}
+\label{sec:org4d8083f}
+\begin{frame}[label={sec:org7270c1b}]{Estaciones Meteorológicas}
+\begin{itemize}
+\item Series temporales largas
+\item Alta resolución temporal (\(\SI{1}{\min}\))
+\item Baja resolución espacial.
+\item Los errores se deben al medidor (no se emplean modelos).
+\end{itemize}
+
+\begin{block}{Piranómetro}
 \begin{center}
 \begin{center}
-\includegraphics[height=0.9\textheight]{../figs/SpatialVariability_Annual.jpg}
-\end{center}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orga51a0b7}]{Estimación a partir de Medidas}
-\begin{itemize}
-\item Para estimar la radiación incidente es necesario contar con:
-\begin{itemize}
-\item \alert{Medidas cercanas} (variabilidad espacial): distancia no superior a 10 km.
-\item \alert{Series temporales} largas (variabilidad temporal): 10 años.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org67d295b}]{Fuentes de datos}
-\begin{itemize}
-\item \alert{Estaciones meteorológicas}
-\begin{itemize}
-\item Series largas y con tiempos de muestreo altos.
-\item Baja resolución espacial (medidas puntuales)
-\item Precisión en caso de medida directa.
-\item Tipos: 
-\begin{itemize}
-\item Con medidor de radiación
-\item Sin medidor de radiación (modelos empíricos).
-\end{itemize}
-\end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\item \alert{Imágenes de satélite}
-
-\begin{itemize}
-\item Tiempos de muestreo bajos (mejorando)
-
-\item Resolución espacial alta
-
-\item Error debido a la estimación.
-\end{itemize}
-\end{itemize}
-
-\pause 
-
-\begin{itemize}
-\item \alert{Híbrido}
-
-\begin{itemize}
-\item Medidas terrestres combinadas con imágenes de satélite
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\subsection{Estaciones Meteorológicas}
-\label{sec:org8ee8323}
-\begin{frame}[label={sec:org37b437b}]{Estaciones Meteorológicas: medida directa}
-\begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
-\end{block}
-\begin{columns}
-\begin{column}{0.4\columnwidth}
-\begin{center}
-\begin{center}
-\includegraphics[width=0.8\textwidth]{../figs/piranometro.jpg}
-\end{center}
-\end{center}
-\end{column}
-\begin{column}{0.6\columnwidth}
-\begin{itemize}
-\item Pila termoeléctrica (termopares con barniz negro)
-\item Alojamiento con dos hemiesferas de cristal.
-\item Flujo de calor por radiación provoca tensión eléctrica en termopila.
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[label={sec:org250eedd}]{Estaciones Meteorológicas: medida directa}
-\begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
-\end{block}
-\begin{columns}
-\begin{column}{0.4\columnwidth}
-\begin{center}
-\begin{center}
-\includegraphics[width=0.8\textwidth]{../figs/piranometro.jpg}
-\end{center}
-\end{center}
-\end{column}
-\begin{column}{0.6\columnwidth}
-\begin{itemize}
-\item Respuesta espectral plana para radiación visible.
-\item Respuesta perfecta al coseno del ángulo de incidencia (pérdidas por reflexión).
-\end{itemize}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}[label={sec:org1609de7}]{Estaciones Meteorológicas: medida directa}
-\begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
-\begin{itemize}
-\item Requiere mantenimiento y calibración frecuente.
-\end{itemize}
-\end{block}
-
-\begin{block}{La red de estaciones que miden directamente radiación es escasa para estimaciones precisas en regiones grandes}
-\begin{itemize}
-\item La proporción de estaciones con piranómetros es baja respecto a
-las que miden temperatura ambiente y precipitación (1:500).
-\end{itemize}
-\end{block}
-\end{frame}
-
-\subsection{Estaciones Meteorológicas: modelos empíricos}
-\label{sec:org719ed12}
-\begin{frame}[label={sec:orgcecec50}]{Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos}
-\begin{itemize}
-\item Relaciones entre radiación y otras variables
-\begin{itemize}
-\item Horas de brillo (\emph{sunshine duration})
-\item Cobertura nubosa
-\item Temperatura ambiente
-\item Precipitación
-\item Humedad
-\item \ldots{}
-\end{itemize}
-\item Los coeficientes de los modelos sólo se pueden ajustar en estaciones
-con medidas de radiación.
-\item Los coeficientes dependen del lugar de ajuste, pero se pueden
-interpolar para otras localizaciones.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orgbe2f9b3}]{Estaciones Meteorológicas: modelos empíricos}
-\begin{itemize}
-\item Radiación y Horas de Brillo (Angstrom y Prescott)
-\end{itemize}
-
-\[
-\frac{G(0)}{B_o(0)} = a_1 + b_1 \frac{S}{S_o}
-\]
-
-\begin{itemize}
-\item Problema: poca disponibilidad de datos
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orga9182e5}]{Estaciones Meteorológicas: modelos empíricos}
-\begin{itemize}
-\item Radiación y Temperatura (Bristow y Campbell)
-\end{itemize}
-\[
-G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
-\]
-
-\begin{itemize}
-\item Variaciones con más variables: Lluvia (si/no), rango antes y después, velocidad viento, humedad relativa.
-\end{itemize}
-
-\[
-  G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0) \cdot \left(1 +
-    \sum_1^n p_j \cdot v_j \right) + p_{n+1}
-\]
-
-\nocite{Antonanzas-Torres.Sanz-Garcia.ea2013}
-\end{frame}
-
-\subsection{Imágenes de Satélite}
-\label{sec:org5d6762a}
-
-\begin{frame}[label={sec:org3d47462}]{Fundamentos}
-\begin{itemize}
-\item Los satélites meteorológicos están equipados con \alert{radiómetros}
-(sensores de radiación electromagnética a diferentes frecuencias)
-que captan \alert{radiación emitida por la Tierra}.
-
-\item La radiación emitida por la Tierra depende de la \alert{reflexión del
-suelo}, y la \alert{geometría y composición de la atmósfera}.
-
-\item Diferentes fenómenos físicos se detectan en \alert{bandas de frecuencias}
-distintas (canales).
-
-\item Existen diversos procedimientos para \alert{estimar radiación solar} en
-superficie a partir de la información de los diferentes canales del
-radiómetro.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:orgb21961d}]{Satelites Geoestacionarios Europeos: Meteosat}
-\begin{itemize}
-\item \alert{MFG}: Meteosat First Generation (7 satélites)
-\begin{itemize}
-\item Equipados con el radiómetro MVIRI (Meteosat Visible and Infrared Imager).
-\item Tres canales: visible, infrarrojo, vapor de agua.
-\end{itemize}
-\item \alert{MSG}: Meteosat Second Generation (3 satélites)
-\begin{itemize}
-\item Equipados con dos radiómetros:
-\begin{itemize}
-\item \alert{SEVIRI} (Spinning Enhanced Visible and InfraRed Imager): 12 canales
-\item GERB (Geostationary Earth Radiation Budget): infrarrojo visible.
-\end{itemize}
-\end{itemize}
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.3\textwidth]{../figs/Tierra_MSG.jpg}
-\end{center}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:org5107571}]{Procedimientos: Heliosat-2}
-\begin{block}{Pasos}
-\begin{itemize}
-\item Establecer \alert{albedo de referencia} (\emph{suelo}).
-\item Estimar \alert{índice de cobertura nubosa}.
-\item Estimar radiación en superficie a partir de cobertura nubosa y \alert{modelo de cielo claro}.
-\end{itemize}
-\end{block}
-
-\begin{block}{}
-\begin{itemize}
-\item Empleado para base HelioClim
-\item Usan datos de MVIRI
-\item Accesible via SoDa: \url{http://www.soda-is.com/heliosat/index.html}
-\end{itemize}
-
-\nocite{Rigollier.Lefevre.ea2004}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org7919f3e}]{Procedimientos: CM SAF}
-\begin{itemize}
-\item \alert{Fundamento}:
-\begin{itemize}
-\item Se emplea un \alert{Radiative Transfer Model (RTM)}, libRadtran, para
-generar una matriz de estados (\alert{Look-up table, LUT}) relaciona la
-transmitancia atmosférica y el albedo de la atmósfera para
-variedad de estados.
-\item La irradiancia en superficie se estima multiplicando la
-irradiancia extra-atmosférica por la \alert{transmitancia atmosférica
-determinada interpolando en la LUT}.
-\end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\item \alert{Dos LUTs}: cielo nuboso, cielo claro.
-\begin{itemize}
-\item \alert{Cielo nuboso}:
-\begin{itemize}
-\item Estimación de albedo y estado atmosférico a partir de imágenes.
-\item Estimación de transmitancia interpolando en LUT para cielo nuboso.
-\end{itemize}
-\item \alert{Cielo claro}:
-\begin{itemize}
-\item Estimación de transmitancia interpolando en LUT para cielo claro \alert{sin estimación previa} de albedo.
-\end{itemize}
-\end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\item Emplean datos del \alert{radiómetro MSG/SEVIRI}
-\end{itemize}
-
-\nocite{Mueller.Matsoukas.ea2009}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org2db26ab}]{Procedimientos: LSA SAF}
-\begin{itemize}
-\item Generación de \alert{máscara de nubes} a partir de imagen usando algoritmo de \href{http://www.nwcsaf.org/}{NWC-SAF}.
-\item Para \alert{zonas sin nubes}: modelo de cielo claro sin usar datos de imagen.
-\item Para \alert{zonas cubiertas}: modelo de transmitancia atmosférica a partir de imágenes.
-\item Emplean datos del \alert{radiómetro MSG/SEVIRI}
-\end{itemize}
-
-\nocite{Geiger.Meurey.ea2008}
-\end{frame}
-
-\subsection{Fuentes de Datos: Estaciones Terrestres}
-\label{sec:org40cd254}
-
-\begin{frame}[label={sec:org2348af2}]{Wiki con recursos}
-\begin{block}{}
-\url{https://github.com/oscarperpinan/mds/wiki}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[label={sec:org4790464}]{Baseline Surface Radiation Network}
-\begin{block}{\url{http://www.bsrn.awi.de/}}
-\begin{itemize}
-\item BSRN provides near-continuous, long-term, in situ-observed,
-Earth-surface, broadband irradiances (solar and thermal infrared)
-and certain related parameters from a network of more than 50
-globally diverse sites.
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.5\textheight]{../figs/BSRN.png}
-\end{center}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:org286e637}]{Baseline Surface Radiation Network}
-\begin{itemize}
-\item Validation and confirmation of satellite and computer model
-estimates.
-
-\item Datos desde:  \url{http://www.bsrn.awi.de/en/data/data\_retrieval\_via\_pangaea/}
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}[label={sec:org0461287}]{Measurement and Instrumentation Data Center NREL}
-\begin{block}{\url{http://www.nrel.gov/midc/}}
-Radiación global, directa y difusa (y otras variables) con muestreo de
-  1 min en diversas localidades de EEUU.
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.3\textheight]{../figs/NRELStation.jpg}
-\end{center}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orgabf7602}]{MAGRAMA-SIAR}
-\begin{block}{\url{http://eportal.magrama.gob.es/websiar/Inicio.aspx}}
-\begin{itemize}
-\item El Sistema de Información Agroclimática para el Regadío (SiAR)
-registra datos agroclimáticos relacionados con demanda hídrica de
-las zonas de riego.
-
-\item Más de 400 estaciones.
-
-\item Valores diarios y horarios
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.35\textheight]{../figs/EstacionesSIAR.jpeg}
-\end{center}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orgec3c6ae}]{MAGRAMA-SIAR}
-\begin{block}{Sensores}
-\begin{itemize}
-\item Temperatura y Humedad
-\item Piranómetro
-\item Anemoveleta
-\item Pluviómetro
-\item Temperatura del suelo  (algunas)
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.4\textheight]{../figs/EstacionSIAR.png}
+\includegraphics[height=0.5\textheight]{../figs/piranometro.jpg}
 \end{center}
 \end{center}
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:org70f2856}]{AEMET}
-\begin{block}{\href{http://www.aemet.es/es/eltiempo/observacion/radiacion}{Radiación}}
+\begin{frame}[label={sec:org93240b2}]{Imágenes de Satelite}
 \begin{itemize}
-\item Alrededor de 30 estaciones en todo el territorio.
-\item Medidas de global, difusa y directa.
-\item Sólo gráficas.
-\end{itemize}
-\end{block}
+\item Baja resolución temporal (\(\SI{1}{hora}\)).
 
-\begin{block}{\href{http://www.aemet.es/es/eltiempo/observacion/ultimosdatos}{Estaciones \guillemotleft{}convencionales\guillemotright{}}}
-\begin{itemize}
-\item Presión, temperatura, viento, humedad, lluvia.
-\item Permite descarga de datos horarios por día.
-\end{itemize}
-\end{block}
-\end{frame}
+\item Alta resolución espacial (\(\SI{15}{km}\)).
 
-\begin{frame}[label={sec:org49eba90}]{Redes de Comunidades Autónomas}
-\begin{itemize}
-\item \href{http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp}{Meteogalicia}
-\item \href{http://meteo.navarra.es/estaciones/mapadeestaciones.cfm}{MeteoNavarra}
-\item \href{http://www.meteo.cat/observacions/xema}{Cataluña}
-\item \href{http://www.euskalmet.euskadi.net/s07-5853x/es/meteorologia/lectur.apl?e\%3D5}{MeteoEuskadi}
-\item \href{http://www.juntadeandalucia.es/medioambiente/servtc5/WebClima/?lr\%3Dlang\_es}{Andalucía}
-\end{itemize}
-\end{frame}
+\item La radiación global se estima mediante el procesado de las imágenes obtenidas por los radiómetros de los satélites.
 
-\subsection{Fuentes de Datos: Satélite}
-\label{sec:org4db13a7}
-
-\begin{frame}[label={sec:org401662e}]{Wiki con recursos}
-\begin{block}{}
-\url{https://github.com/oscarperpinan/mds/wiki}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[label={sec:org4430ae9}]{SSE-NASA}
-\begin{block}{Surface meteorology and Solar Energy (SSE)}
-\begin{itemize}
-\item 200 satellite-derived meteorology and solar energy parameters
-\alert{monthly averaged} from 22 years of data
-\item Resolución 1ºx1º
-\end{itemize}
-
-\url{https://eosweb.larc.nasa.gov/cgi-bin/sse/sse.cgi}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orgf6c73e2}]{EUMETSAT - SAF}
-\begin{itemize}
-\item \alert{\href{http://www.eumetsat.int}{EUMETSAT}} is the European operational satellite agency for monitoring
-weather, climate and the environment.
-\item \alert{\href{http://www.eumetsat.int/website/home/Satellites/GroundSegment/Safs/index.html}{Satellite Application Facilities} (SAFs)}
-\begin{itemize}
-\item Dedicated centres of excellence for processing satellite data.
-\item Generate and disseminate operational EUMETSAT products and
-services.
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org7e2f649}]{SAFs}
-\begin{itemize}
-\item \href{https://wui.cmsaf.eu/safira/action/viewProduktSearch}{SAF on Climate Monitoring (CM SAF)}: provision of satellite-derived geophysical parameter data sets suitable for \alert{climate monitoring}
-
-\begin{itemize}
-\item Environmental Data Records (EDR): time-tagged earth-located
-geophysical parameters produced from sensor data. EDRs are derived
-in low to medium latency not fulfilling strictest climate
-requirements.
-
-\item Climate Data Records (CDR): time series of measurements of
-sufficient length, consistency, and continuity to determine climate
-variability and change.
-\end{itemize}
-
-\item \href{http://landsaf.meteo.pt}{SAF on Land Surface Analysis} (LSA SAF): generates, archives and
-disseminates, on an \alert{operational basis}, a set of parameters involved
-in the surface radiation budget, evapotranspiration, vegetation
-cover and and fire-related products.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org4148d4a}]{SAFs: Radiación}
-\begin{itemize}
-\item \alert{CM SAF}: Surface incoming shortwave radiation (\href{http://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=RAD\_MVIRI\_V001}{SIS})
-
-\begin{itemize}
-\item AEMET ha analizado las estimaciones para España en su \href{http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas\_radiacion\_solar}{Atlas de Radiación}.
-\end{itemize}
-
-\item \alert{LSA SAF}: Down-welling surface short-wave radiation flux (\href{http://landsaf.meteo.pt/algorithms.jsp?seltab=1\&starttab=1}{DSSF})
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org0efd4d7}]{ADRASE - CIEMAT}
-\begin{block}{\url{http://adrase.es}}
-\begin{itemize}
-\item Radiación solar media mensual, resolución aproximada de 5x5 km.
-\begin{itemize}
-\item Media mensual y anual más probable durante un periodo de largo
-plazo (imágenes de satélite, modelo aproximadamente Heliosat)
-\item Variabilidad esperada de los valores diarios mensuales: (series
-largas de datos de estaciones de AEMET y extrapolación espacial
-con IDW)
-\end{itemize}
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.35\textheight]{../figs/adrase.png}
-\end{center}
-\end{center}
-\end{block}
-\end{frame}
-
-\subsection{Métodos híbridos}
-\label{sec:org5728801}
-
-\begin{frame}[label={sec:org356b815}]{Interpolación Espacial}
-\begin{block}{\alert{Objetivo}: mejorar la resolución espacial de medidas dispersas}
-\begin{itemize}
-\item \alert{Inverse Distance Weighting (IDW)}: determinista.
-
-\item \alert{Ordinary Kriging}: modelo determinista para la media (constante) y estocástico para residuos.
-\end{itemize}
-
-\[
-  \hat{z}(\mathbf{s}) = \mu + \epsilon(\mathbf{s})
-\]
-
-\begin{itemize}
-\item \alert{Kriging with External Drift (KED)}: modelo determinista para la media incorporando información de una variable con alta densidad espacial.
-\end{itemize}
-\[  \hat{z}(\mathbf{s}_\theta) =  \sum_{k=0}^p \hat{\beta}_k q_k(\mathbf{s}_\theta) + 
-  \sum_{i=1}^n \lambda_i \epsilon(\mathbf{s}_i)
-\]
-
-\nocite{Journee.Bertrand2010}
-\nocite{Antonanzas-Torres.Canizares.ea2013}
-\nocite{Bojanowski.Vrieling.ea2013}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[label={sec:orgd199967}]{Corrección por topografía}
-\begin{center}
-\begin{center}
-\includegraphics[width=0.9\textwidth]{../figs/downscaling.pdf}
-\end{center}
-\end{center}
-
-\begin{description}
-\item[{Sky-View Factor (SVF)}] Proporción de cielo visible para un receptor horizontal (afecta a la radiación difusa isotrópica)
-\end{description}
-\[
-SVF=1-\int_0^{2\pi}sin^{2} \theta_{hor} d\theta
-\]
-
-\begin{description}
-\item[{Horizon blocking}] Bloqueo de región circunsolar por horizonte: afecta a radiación directa y difusa anisotrópica
-\end{description}
-
-
-\nocite{Bosch.Batlles.ea2010}
-\nocite{Tovar-Pescador.Pozo-Vazquez.ea2006}
-\nocite{Antonanzas-Torres.MartinezdePison.ea2013}
-\nocite{Hofierka.Suri2002}
-\end{frame}
-
-\begin{frame}[fragile,label={sec:orge7aa9b3}]{PVGIS - \texttt{r.sun}}
- \begin{block}{\url{http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php}}
-PVGIS (Photovoltaic Geographical Information System) is a research,
-demonstration and policy-support instrument for geographical
-assessment of the solar energy resource in the context of integrated
-management of distributed energy generation.
-\begin{itemize}
-\item Computation of clear-sky global irradiation on a horizontal surface
-\item Sky obstruction by local terrain features (hills or mountains)
-calculated from the digital elevation model.
-\item Interpolation of the clear-sky index and computation of global
-irradiation on a horizontal surface.
-\end{itemize}
-\end{block}
-\end{frame}
-
-\section{Control de Calidad}
-\label{sec:orgd87e08c}
-
-\subsection{Estadística}
-\label{sec:org6e84eac}
-
-
-\begin{frame}[label={sec:org7916367}]{Variable aleatoria y proceso estocástico}
-\begin{itemize}
-\item Una \alert{variable aleatoria} es una función que asigna un único numero
-real a cada resultado de un espacio muestral en un experimento.
-\item Un \alert{proceso estocástico} es una variable aleatoria que evoluciona a
-lo largo del \alert{tiempo} (p.ej. la radiación).
+\item Los errores se deben a los modelos.
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}[label={sec:org3b7ff94}]{Función de densidad de probabilidad}
-La función de densidad de probabilidad, \(f(X)\), de una variable
-aleatoria \alert{asigna probabilidad} a un suceso:
-
-
-\[
-P(a<X<b)=\int_{a}^{b}f(x)dx
-\]
-
-
-\[
-P(X<b)=\int_{-\infty}^{b}f(x)dx\]
-
-
-\[
-P(X>a)=\int_{a}^{\infty}f(x)dx\]
-\end{frame}
-
-
-\begin{frame}[label={sec:org059360b}]{Función de Densidad de Probabilidad}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/FuncionDensidadProbabilidad.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orgaa6eff1}]{Histograma}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Histograma.pdf}
-\end{center}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org823a449}]{Media, varianza y desviación estándar}
+\begin{frame}[label={sec:org89dec51}]{Métodos Híbridos}
 \begin{itemize}
-\item La \alert{media} de una variable aleatoria es el \alert{centro de masas} de su función densidad de probabilidad:
-\end{itemize}
-
-\[
-\mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx
-\]
-
+\item Las medidas terrestres se mezclan con las estimaciones de satélite para mejorar la resolución espacial.
+\item Interpolación Espacial.
 \begin{itemize}
-\item La \alert{varianza} de una variable aleatoria es la \alert{media del cuadrado de las desviaciones} respecto a la media:
-\end{itemize}
-
-\[
-\sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx
-\]
-
-\begin{itemize}
-\item La \alert{desviación estándar} es la raiz cuadrada de la varianza: \(\sigma_{X}=\sqrt{\sigma_{X}^2}\)
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org50e7862}]{Combinación lineal de variables aleatorias}
-\begin{itemize}
-\item La \alert{media de la suma} de varias variables aleatorias \alert{independientes} es
-la suma de las medias:
-\end{itemize}
-\[
-\mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}
-\]
-
-\begin{itemize}
-\item La \alert{varianza de la \emph{suma o resta}} de varias variables aleatorias
-\alert{independientes} es la \alert{suma} de las varianzas:
-\end{itemize}
-
-\[
-\sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}
-\]
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org33f2e71}]{Media y varianza de la media muestral}
-\begin{itemize}
-\item Una \alert{muestra de una población} es un conjunto de variables
-aleatorias independientes (\(X_{1}...X_{n}\)).
-
-\item Si se toma una muestra de una población cuya media es \(\mu\) y su
-varianza es \(\sigma^{2}\), entonces la media de la muestra es otra
-variable aleatoria (que es una suma de variables aleatorias)
-\end{itemize}
-
-\[
-\overline{X}=\frac{1}{n}\sum_{n}X_{i}
-\]
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org0fefbab}]{Media y varianza de la media muestral}
-\begin{itemize}
-\item Por tanto, la \alert{media de la media muestral} es la media de población:
-\end{itemize}
-\[
-\overline{X}=\frac{1}{n}\sum_{n}X_{i} = \mu
-\]
-
-\begin{itemize}
-\item La \alert{varianza de la media muestral} es la suma de las varianzas:
-\end{itemize}
-
-\[
-\sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}
-\]
-
-\begin{block}{}
-Por tanto, una forma de \alert{reducir la incertidumbre} es realizar la
-\alert{medida en repetidas ocasiones}.
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:orgd115a2a}]{Mediana y cuartiles}
-\begin{itemize}
-\item La \alert{mediana} divide el conjunto de valores de la variable en \alert{dos
-mitades} iguales (divide el area encerrada por la función densidad
-de probabilidad en dos partes iguales).
-\item Los \alert{cuartiles} dividen este area en \alert{cuatro} partes iguales.
-\item El area encerrada entre cada par de cuartiles es igual al 25$\backslash$% del total.
-\item La \alert{mediana} es el \alert{segundo cuartil}.
-\item La \alert{distancia intercuartil} (definida entre los cuartiles 1 y 3) es
-una \alert{medida de la dispersión} de la variable.
-\end{itemize}
-\end{frame}
-
-
-\subsection{Gráficos}
-\label{sec:org1aa8a43}
-
-
-\begin{frame}[label={sec:org296b6ed}]{Función de Densidad de Probabilidad}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/FuncionDensidadProbabilidad.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org20e488b}]{Histograma}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/Histograma.pdf}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:org18ed869}]{Gráficos boxplot}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/GraficoBoxplot.pdf}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:orgd6a9b19}]{Gráficos de dispersión}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/GraficoDispersion.pdf}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:org066072e}]{Matrices de gráficos de dispersión}
-\begin{center}
-\includegraphics[height=0.9\textheight]{../figs/Splom.png}
-\end{center}
-\end{frame}
-
-\subsection{Control de Calidad de Medidas}
-\label{sec:orgba52e8c}
-
-\begin{frame}[label={sec:orgfa33f25}]{Introducción}
-\begin{block}{Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erroneos.}
-\begin{itemize}
-\item Límites Físicos
-\item Tests de persistencia
-\item Tests de rampas (irradiancia)
-\item Tests de envolvente (medida de varias componentes)
-\item Coherencia espacial
-\item Coherencia estadística
-\end{itemize}
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:orgf79aa2e}]{Límites físicos}
-\begin{block}{Irradiación Diaria}
-\begin{itemize}
-\item La radiación global en el plano horizontal debe ser inferior a la extraterrestre (\(K_t \leq 1\))
-\end{itemize}
-\[
-G_d(0) \leq B_od(0)
-\]
-
-\begin{itemize}
-\item El índice de claridad debe ser superior a 0.03
-\end{itemize}
-\[
-K_t = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
-\]
-
-\begin{itemize}
-\item La radiación global en el plano horizontal debe ser inferior a la de un modelo de cielo claro
-\end{itemize}
-
-\nocite{Younes.Claywell.ea2005, Estevez.Gavilan.ea2011, Geiger.Diabate.ea2002}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orgcd790d8}]{Límites físicos}
-\begin{block}{Irradiancia (intradiaria)}
-\begin{itemize}
-\item El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
-\end{itemize}
-\[
-k_t < 1  \text{ si } \gamma_s > 2\degree 
-\]
-\begin{itemize}
-\item Límites inferiores para cielos cubiertos (baja transparencia atmosférica)
-\end{itemize}
-\[
-k_t \geq 10^{-4} \cdot (\gamma_s - 10\degree)  \text{ si } \gamma_s > 10\degree
-\]
-
-\[
-G \geq 0  \text{ si } \gamma_s \leq 10\degree
-\]
-
-\nocite{Journee.Bertrand2011}
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orgbcea570}]{Tests de persistencia}
-\begin{block}{Variabilidad de irradiancia}
-\begin{itemize}
-\item La media y la desviación estándar se calculan con todas las muestras de un día completo.
-\end{itemize}
-\[
-\frac{1}{8} \overline{k_t} \leq \sigma_{k_t} \leq 0.35
-\]
-\end{block}
-\end{frame}
-
-\begin{frame}[label={sec:orge5fe623}]{Tests de rampas}
-\begin{block}{Límites a las variaciones de la irradiancia entre instantes sucesivos}
-\[
-\left| k_t(t) - k_t(t-1)\right| < 0.75 \text{ si } \gamma_s(t) > 2\degree
-\]
-\end{block}
-\end{frame}
-
-
-\begin{frame}[label={sec:org2af19eb}]{Tests de envolvente}
-\begin{itemize}
-\item Sólo para estaciones con medida simultánea de global y directa/difusa.
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/ConsistencyTest.png}
-\end{center}
-
-\nocite{Younes.Claywell.ea2005}
-\end{frame}
-
-\begin{frame}[label={sec:org168a707}]{Coherencia espacial}
-\begin{itemize}
-\item Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
-\item Esta comprobación debe realizarse con \alert{datos agregados} (diarios) (la variabilidad espacial intradiaria puede ser alta)
-\item Esta comprobación debe realizarse con estaciones que tienen \alert{clima y geografía similar}.
-\end{itemize}
-
-\nocite{Journee.Bertrand2011}
-\end{frame}
-
-\begin{frame}[label={sec:org847e346}]{Coherencia espacial}
-\begin{block}{Pasos}
-\begin{itemize}
-\item Estimamos la irradiación en el lugar, \(x_0\), con la interpolación espacial de las estaciones cercanas, \(x_i\).
-\begin{itemize}
-\item Los pesos \(w_i\) son una función inversa de la distancia (IDW).
-\end{itemize}
-\end{itemize}
+\item \alert{Inverse Distance Weighting (IDW)} (\(d\) es la distancia entre los puntos \(x_0\) y  \(x_i\))
 \[
 \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
 \]
-\begin{itemize}
-\item Comparamos la irradiación estimada, \(\widehat{G}_d(x_0)\), con la medida en la estación, \(G_d(x_0)\).
-\end{itemize}
+
 \[
-\left| \widehat{G}_d(x_0) - G_d(x_0) \right|
+  w_i = 1/d^2(x_0, x_i)
 \]
-\begin{itemize}
-\item La diferencia absoluta debe estar por debajo de un límite (p.ej. 50\%)
+\item \alert{Kriging Ordinario}
+\item \alert{Kriging with External Drift (KED)}
 \end{itemize}
-\end{block}
+\end{itemize}
 \end{frame}
 
+\begin{frame}[label={sec:org65f9b39}]{Fuentes de Datos}
+\url{https://github.com/oscarperpinan/mds/wiki}
 
+\begin{itemize}
+\item Estaciones Meteorológicas: \url{https://github.com/oscarperpinan/mds/wiki/stations}
+\item Satélite
+\begin{itemize}
+\item NASA: \url{https://github.com/oscarperpinan/mds/wiki/nasa}
+\item CM SAF: \url{https://github.com/oscarperpinan/mds/wiki/cmsaf}
+\item LSA SAF: \url{https://github.com/oscarperpinan/mds/wiki/lsasaf}
+\end{itemize}
 
-\begin{frame}[label={sec:org362a16b}]{Coherencia estadística}
-\begin{block}{Una medida puede ser etiquetada como \emph{outlier} si es poco probable que pertenezca a la misma distribución que el conjunto.}
-\end{block}
-\begin{block}{\alert{Método de Chauvenet}}
-Una medida es un \emph{outlier} si la probabilidad de obtener su desviación
-respecto de la media es inferior al inverso de 2 veces el número de
-elementos en el conjunto.
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/chauvenet.png}
-\end{center}
-\end{block}
+\item Métodos Híbridos
+\begin{itemize}
+\item PVGIS: \url{https://github.com/oscarperpinan/mds/wiki/pvgis}
+\item ADRASE: \url{https://github.com/oscarperpinan/mds/wiki/adrase}
+\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org62d0694}]{Método de Chauvenet}
+\subsection{Control de Calidad}
+\label{sec:orgae6dcdd}
+\begin{frame}[label={sec:org58f5391}]{Introducción}
 \begin{itemize}
-\item Sean \(G_d(x_i)\) las medidas de radiación diaria del conjunto formado por N estaciones.
+\item Es necesario filtrar y corregir las medidas para eliminar datos erróneos y valores extremos.
+\begin{itemize}
+\item Límites Físicos
+\item Coherencia Espacial
+\item Análisis Estadístico de las Desviaciones
 \end{itemize}
-
-\pause
-
-\begin{itemize}
-\item Se calcula la media, \(\overline{G}_d\), la desviación estándar, \(\sigma_{G_d}\).
 \end{itemize}
+\end{frame}
 
-\pause
-
+\begin{frame}[label={sec:orgfb4923c}]{Límites Físicos}
 \begin{itemize}
-\item Se calcula la distancia estadística de cada estación al conjunto:
+\item El índice de claridad no puede ser mayor que 1 (la irradiación global diaria no puede superar la extra-atmosférica).
 \end{itemize}
 \[
-d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
-\]
-
-\pause
-
-\begin{itemize}
-\item En una distribución gaussiana se calcula la distancia estadística
-equivalente a la probabilidad límite, \(1/2N\), teniendo en cuenta
-las dos colas.
-\begin{itemize}
-\item Por ejemplo, para un conjunto de 10 estaciones cada cola es
-\(1/40 = 0.025\), el límite es \(\left| d_{max} \right| = 1.96\).
-\end{itemize}
-\end{itemize}
-\pause
-
-\begin{itemize}
-\item Aquellas observaciones que superan la distancia son marcadas como outliers.
-\end{itemize}
-
-\nocite{Perpinan2009}
-\end{frame}
-
-\begin{frame}[label={sec:org74f3a18}]{Método de Chauvenet}
-\[
-d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+  K_{dT} \leq 1
 \]
 
 \[
-\left| d_i \right| > \left| d_{max} \right|
+G_d(0) \leq B_{0d}(0)
 \]
 
-\begin{center}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/chauvenet.png}
-\end{center}
-\end{center}
-
-\begin{block}{Método de Pierce: más robusto y flexible \nocite{Ross2003}}
-\end{block}
+\begin{itemize}
+\item El índice de claridad debe ser al menos 0.03
+\end{itemize}
+\[
+K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
+\]
 \end{frame}
 
-\subsection{Control de Calidad de Modelos}
-\label{sec:orga362cfa}
-
-\begin{frame}[label={sec:orgcee0d35}]{Desviación entre modelo y observación}
+\begin{frame}[label={sec:org8ef8822}]{Coherencia Espacial}
 \begin{itemize}
-\item Sea \(O\) el conjunto de observaciones (medidas) de una variable aleatoria.
+\item Las medidas de una estación se deben comparar con \alert{estaciones cercanas} (por ejemplo, mediante interpolación espacial).
+\item La comparación se debe realizar con \alert{valores agregados} (medias diarias o mensuales).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orge207278}]{Análisis Estadístico de las Desviaciones}
+\begin{itemize}
+\item Desviaciones, \(\mathbf{D}\), entre observaciones, \(\mathbf{O}\), y un modelo, \(\mathbf{M}\) (u otro conjunto de observaciones):
 \end{itemize}
 
 \[
 \mathbf{O} = \left\{ o_1 \dots o_n \right\}
 \]
-\begin{itemize}
-\item Sea \(M\) el conjunto de resultados de un modelo que aproxima el comportamiento de la variable medida.
-\end{itemize}
 
 \[
 \mathbf{M} = \left\{ m_1 \dots m_n  \right\}
 \]
-
-\begin{itemize}
-\item La desviación entre modelo y observación es:
-\end{itemize}
 
 \[
 \mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org1200e6e}]{Estimadores frecuentes: MBD y RMSD}
+\begin{frame}[label={sec:org69e7bd0}]{Métricas}
 \begin{itemize}
 \item Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
 \end{itemize}
 \[
-MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
+MBD = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
 \]
-\pause
+
 \begin{itemize}
 \item Root Mean Square Error (RMSD), diferencia cuadrático media:
 \end{itemize}
 \[
 RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
 \]
-\end{frame}
-
-\begin{frame}[label={sec:org8d07abe}]{Estimadores frecuentes: MBE y RMSD}
-\begin{itemize}
-\item Varianza de la diferencia (unbiased RMSD):
-\end{itemize}
-\[
-\sigma^2_{\mathbf{D}} = \frac{1}{n} \sum_{i=1}^n (d_i - \overline{\mathbf{D}})^2
-\]
-\pause
 
 \begin{itemize}
-\item El RMSD agrega información del promedio y la varianza de la
-diferencia:
-\end{itemize}
-\[
-RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
-\]
-\end{frame}
-
-\begin{frame}[label={sec:orge0de85f}]{Otros estimadores: MAD}
-\begin{itemize}
-\item Mean Absolute Deviation (MAD):
+\item Mean Absolute Deviation (MAD) (El RMSD no es robusto, un error puntual puede distorsionar el estimador, y depende del número de muestras)
 \end{itemize}
 
 \[
 MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
 \]
-\begin{itemize}
-\item El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
-\end{itemize}
-\[
-MAD \leq RMSD \leq n^{1/2} MAD
-\]
-
-\nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
-\end{frame}
-
-\begin{frame}[label={sec:org7a8e6a8}]{Otros estimadores: t y d}
-\begin{itemize}
-\item t de Student (valores pequeños indican buen comportamiento del modelo)
-\begin{itemize}
-\item Permite añadir intervalos de confianza a las diferencias entre
-modelo y observación
-\end{itemize}
-\end{itemize}
-
-\[
-t = \left ( \frac{(n-1) MBD^2}{RMSD^2 - MBD^2} \right)^{1/2}
-\]
-
-\nocite{Stone1993}
-
-\pause 
-
-\begin{itemize}
-\item \(d_1\): Índice de concordancia de Willmott.
-\begin{itemize}
-\item Limitado entre 0 (ausencia de concordancia) y 1 (concordancia total).
-\item Robusto frente a \emph{outliers}.
-\end{itemize}
-\end{itemize}
-\[
-d_1 = 1 - \frac{\sum_{i=1}^n \left| m_i - o_i \right|}{\sum_{i=1}^n \left(
-  \left| m_i - \overline{\mathbf{O}}\right| + \left| o_i -
-    \overline{\mathbf{O}} \right| \right)}
-\]
-
-\nocite{Willmott.Robeson.ea2012}
-\end{frame}
-
-\begin{frame}[label={sec:org7c28b66}]{Correlación}
-El coeficiente de correlación entre dos conjuntos de datos es una
-medida numérica de la relación \alert{lineal} entre los dos conjuntos (si la
-relación no es lineal, este coeficiente no sirve):
-
-\[
-r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}{\sigma_{\mathbf{O}}}\right) \cdot \left(\frac{m_{i}-\overline{\mathbf{M}}}{\sigma_{\mathbf{M}}}\right)
-\]
-\end{frame}
-
-\begin{frame}[label={sec:org70f03f1}]{Diagramas de Taylor}
-\begin{itemize}
-\item Desarrollando \(\sigma^2_{\mathbf{D}}\) y teniendo en cuenta la definición de \(r\):
-\end{itemize}
-
-  \[
-  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
-- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
-  \]
-\begin{itemize}
-\item Esta relación es semejante a la ley de los cosenos (\(c\), \(a\), \(b\) son lados de un triángulo y \(\phi\) es el ángulo opuesto al lado \(c\)):
-\end{itemize}
-
-\[
-c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
-\]
-\nocite{Taylor2000}
-\end{frame}
-
-\begin{frame}[label={sec:org06c7800}]{Diagramas de Taylor}
-\[
-\sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
-- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
-\]
-
-\begin{center}
-\begin{center}
-\includegraphics[width=.9\linewidth]{../figs/cosenosDiagramaTaylor.png}
-\end{center}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:orga7cbbbd}]{Diagramas de Taylor}
-\begin{itemize}
-\item \(\sigma^2_{\mathbf{D}}\): Distancia al origen
-\item \(\sigma^2_{\mathbf{O}}\): Eje horizontal
-\item \(\sigma^2_{\mathbf{M}}\): Eje vertical
-\item \(r\): acimut
-\end{itemize}
-\begin{center}
-\begin{center}
-\includegraphics[height=0.6\textheight]{../figs/TaylorDiagrama.png}
-\end{center}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:org0acaeec}]{Target Diagram}
-\begin{itemize}
-\item Emplea la relación entre \(RMSD\), \(\sigma^2_{\mathbf{D}}\), y \(\overline{\mathbf{D}}\), normalizadas con \(\sigma_{\mathbf{O}}\):
-\end{itemize}
-\[
-RMSD' = RMSD / \sigma_{\mathbf{O}}
-\]
-
-\[
-  \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
-\]
-
-\[
-\overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
-\]
-
-\[
-RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
-\]
-
-\[
-sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
-\]
-
-\begin{itemize}
-\item Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación:
-\end{itemize}
-
-\nocite{Jolliff.Kindle.ea2009}
-\end{frame}
-
-\begin{frame}[label={sec:org5ec31ce}]{Target Diagram}
-\begin{itemize}
-\item \(\sigma'_{\mathbf{D}}\) (con signo): Eje horizontal
-\item \(\overline{\mathbf{D}}'\): Eje vertical
-\item \(RMSD'^2\): Distancia al origen
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.7\textheight]{../figs/TargetDiagram.pdf}
-\end{center}
-\end{center}
 \end{frame}
 \end{document}
