@@ -66,6 +66,10 @@
 ** Modelado de un módulo
 
 *** Suposiciones del modelo
+\[
+I=I_{sc}\cdot(1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{V_{t}})
+\]
+
  #+ATTR_BEAMER: :overlay <+->
 -  Los efectos de la resistencia paralelo son despreciables
 
@@ -73,27 +77,27 @@
 
 -  En cualquier condición de operación $\exp(\frac{V+I\cdot R_{s}}{V_{t}})\gg1$
 
-\[
-I=I_{sc}\cdot(1-\exp(\frac{V-V_{oc}+I\cdot R_{s}}{V_{t}})
-\]
 
 *** Efecto de la radiación y la temperatura
  #+ATTR_BEAMER: :overlay <+->
 -  La *corriente de cortocircuito* depende exclusivamente y de forma lineal de la *irradiancia*.
 \[
-I_{sc}=G_{ef}\cdot\frac{I_{sc}^{*}}{G^{*}}
+\boxed{I_{sc}=G_{ef}\cdot\frac{I_{sc}^{*}}{G^{*}}}
 \]
 
 -  La *tensión de circuito abierto* depende exclusivamente de la *temperatura de /célula/*, y decrece linealmente con ella.
 \[
-V_{oc}(T_{c})=V_{oc}^{*}+(T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}}
+\boxed{V_{oc}(T_{c})=V_{oc}^{*}+(T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}}}
 \]
 
 *** Temperatura de operación de célula
 
 -  La *temperatura de operación de la célula* depende de la *temperatura y la irradiación*
-$$T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}$$
-
+#+BEGIN_EXPORT latex
+\[
+\boxed{T_{c}=T_{a}+G\cdot\frac{NOCT-20}{800}}
+\]
+#+END_EXPORT
 -  Como consecuencia, la *eficiencia decrece* a razón de 0,5% por grado centigrado.
 
 -  La *resistencia serie* es *independiente* de las condiciones de operación.
@@ -217,43 +221,23 @@ Calcular el comportamiento eléctrico de un generador fotovoltaico constituido p
 **** Definición del problema
 Los parámetros eléctricos de un módulo FV presentan dispersión: la producción energética será menor que la ideal.
 
-*** Distribución de valores de corriente y tensión
+**** Eficiencia de conexión
 
-La corriente de máxima potencia de un conjunto de módulos puede caracterizarse por una distribución tipo
-Weibull$$f(I_{mpp})=\alpha\beta^{-\alpha}I_{mpp}^{\alpha-1}exp\left[-\left(\frac{I_{mpp}}{\beta}\right)^{\alpha}\right]$$
-siendo $\alpha$ el factor de forma y $\beta$ el factor de escala de la distribución. La eficiencia de conexión serie
-es:$$\eta_{cs}=\frac{I_{mpp}^{r}}{\overline{I_{mpp}}}$$ siendo $I_{mpp}^{r}$ la corriente de la rama, y $\overline{I_{mpp}}$ la media
-de las corrientes del grupo de módulos.
+ -  Las pérdidas de *dispersión por corriente* (conexión serie en una rama) aumentan con el número de módulos en serie.
 
-*** Eficiencia de conexión
-
--  A partir de la distribución y la definición de eficiencia de conexión serie puede deducirse que ésta se calcula mediante $$\eta_{cs}=N^{-\frac{1}{\alpha}}$$ siendo N el número de módulos en la serie. Por tanto, *la eficiencia disminuye si aumenta N*. Asimismo, la eficiencia aumenta con $\alpha$.
-
--  Por otra parte, puede demostrarse que la *tensión de un grupo de módulos* puede modelarse mediante una función *gaussiana* y que *la dispersión de valores de tensión es suficientemente baja para poder  considerar que la eficiencia de conexión de ramas en paralelo es igual a 1.*
+ -  Las pérdidas de *dispersión por tensión* (conexión paralelo entre ramas) es despreciable.
 
 *** Clasificación de módulos
 
--  La dispersión de un conjunto depende inversamente del valor de
-   $\alpha$, así que un *método para reducir las pérdidas por
-   dispersión* consiste en *realizar clasificaciones* de los módulos
-   atendiendo a sus valores reales de corriente.
+-  Un *método para reducir las pérdidas por dispersión* consiste en *realizar clasificaciones* de los módulos atendiendo a sus valores reales de corriente.
 
--  En sistemas de cierta entidad, puede ser conveniente realizar una
-   clasificación en tres categorías y crear cada rama con módulos de una
-   misma categoría.
+-  Recomendable clasificación en *tres categorías*, conectando en cada rama módulos de una misma categoría.
 
--  Este método puede suponer reducciones del 2-3% en las pérdidas
-   globales del sistema.
-
-*** Pérdidas por dispersión
+-  Reducciones del 2-3% en las pérdidas globales del sistema.
 
 **** Problema
 
--  Las clasificaciones se realizan en base a las médidas realizadas por
-   los fabricantes con"flash".
-
--  *La indeterminación asociada a este método en relación a las medidas
-   a sol real son del mismo rango que la separación entre categorías.*
+*La indeterminación asociada a medidas "flash" son del mismo rango que la separación entre categorías.*
 
 
 * Ejemplos de generadores fotovoltaicos
@@ -272,15 +256,18 @@ de las corrientes del grupo de módulos.
 
 *** 
 
-[[../figs/clasificacion2.jpg]]
-
-*** 
-
 [[../figs/dscf0997.jpg]]
 
 *** 
+#+ATTR_LATEX: :height 0.35\textheight
+[[../figs/carmona.JPG]]
 
-[[../figs/ModulosRotos.jpg]]
+#+ATTR_LATEX: :heigth 0.4\textheight
+[[../figs/carmona_detras.JPG]]
+
+*** 
+#+ATTR_LATEX: :width \textwidth
+[[../figs/Forum.JPG]]
 
 *** 
 
