@@ -1,4 +1,4 @@
-% Created 2018-04-09 lun 18:24
+% Created 2018-11-18 dom 20:30
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,7 @@
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
@@ -36,28 +37,28 @@
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
-\date{}
+\author{Oscar Perpiñán Lamigueiro}
+\date{\url{http://oscarperpinan.github.io}}
 \title{Energía Solar Fotovoltaica}
 \subtitle{Aplicaciones y Contexto Mundial}
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdfauthor={Oscar Perpiñán Lamigueiro},
  pdftitle={Energía Solar Fotovoltaica},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.13)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Aplicaciones de la Energía Solar Fotovoltaica}
-\label{sec:orgdda37ec}
+\label{sec:org05381b2}
 
 \subsection{Clasificación}
-\label{sec:org50b6ca4}
+\label{sec:org7e41953}
 
-\begin{frame}[label={sec:org9c2bd45}]{Definición}
+\begin{frame}[label={sec:orgf1463f2}]{Definición}
 \begin{itemize}
 \item Un sistema fotovoltaico es el conjunto de equipos eléctricos y
 electrónicos que producen energía eléctrica a partir de la radiación
@@ -79,16 +80,16 @@ solar.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org2fe1bf1}]{}
+\begin{frame}[label={sec:org739aeeb}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ClasificacionSistemas.pdf}
 \end{center}
 \end{frame}
 
 \subsection{SFCR}
-\label{sec:org1e61fe1}
+\label{sec:orgb2bb065}
 
-\begin{frame}[label={sec:orgb85f40e}]{Definición}
+\begin{frame}[label={sec:org16858e2}]{Definición}
 \begin{itemize}
 \item Los sistemas conectados a red producen energía eléctrica para ser
 \alert{inyectada en la red convencional}.
@@ -104,7 +105,7 @@ convencional.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgbcb55b2}]{Tipos de SFCR}
+\begin{frame}[label={sec:orgd6d5d5f}]{Tipos de SFCR}
 \begin{block}{Sistemas sobre Suelo}
 \begin{itemize}
 \item Concebidos exclusivamente para producir energía y obtener el
@@ -126,21 +127,21 @@ suelo, normalmente de potencias inferiores a los
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org8696cd0}]{Sistemas sobre Suelo}
+\begin{frame}[label={sec:orgf66ffb1}]{Sistemas sobre Suelo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Photocampa.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org5c48cc6}]{Sistemas en Edificación}
+\begin{frame}[label={sec:org2c41945}]{Sistemas en Edificación}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PVUrban.png}
 \end{center}
 \end{frame}
 
 \subsection{Sistemas Autónomos}
-\label{sec:org83c2572}
-\begin{frame}[label={sec:orgdcbb0d6}]{Definición}
+\label{sec:orgdbc0c75}
+\begin{frame}[label={sec:orgc9ff61a}]{Definición}
 \begin{itemize}
 \item Objetivo: satisfacer una demanda energética determinada.
 
@@ -150,7 +151,7 @@ suelo, normalmente de potencias inferiores a los
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0d4fa1f}]{Aplicaciones profesionales}
+\begin{frame}[label={sec:org0a46d98}]{Aplicaciones profesionales}
 \begin{itemize}
 \item Radioenlaces, la protección catódica de gasoductos, hoteles, señales
 de tráfico y navegación aérea, refrigeración de vacunas, equipos
@@ -170,13 +171,13 @@ de socorro.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org773e4b8}]{}
+\begin{frame}[label={sec:orgf905f06}]{}
 \begin{center}
 \includegraphics[height=0.95\textheight]{../figs/TelefoniaRural.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgbd64994}]{Sistemas de Electrificación Rural}
+\begin{frame}[label={sec:orgfebfb3c}]{Sistemas de Electrificación Rural}
 \begin{itemize}
 \item Los sistemas de electrificación rural suministran energía eléctrica
 a poblaciones rurales alejadas de redes eléctricas convencionales.
@@ -194,7 +195,7 @@ híbridas.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5c093aa}]{SHS}
+\begin{frame}[label={sec:orgd2fee76}]{SHS}
 \begin{itemize}
 \item Los sistemas domésticos habitualmente con potencias de
 \(\SI{100}{\watt}\) o \(\SI{200}{\watt}\), están asociados a una
@@ -208,7 +209,7 @@ de salud.
 \end{frame}
 
 
-\begin{frame}[label={sec:org3f24e5a}]{Híbridos}
+\begin{frame}[label={sec:org22e9f34}]{Híbridos}
 \begin{itemize}
 \item Las centrales híbridas, compuestas por un generador fotovoltaico, un
 acumulador electroquímico y un grupo electrógeno o turbina eólica,
@@ -220,7 +221,7 @@ hasta los \(\SI{100}{\kilo\watt}\).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org735930f}]{Aplicaciones pequeño consumo}
+\begin{frame}[label={sec:org0a9119f}]{Aplicaciones pequeño consumo}
 Pequeños módulos fotovoltaicos, frecuentemente de silicio amorfo,
 alimentando equipos electrónicos como calculadoras o relojes,
 cargadores de móviles, pequeñas herramientas eléctricas, balizas
@@ -229,8 +230,8 @@ domésticas, etc.
 
 
 \subsection{Sistemas de Bombeo}
-\label{sec:org37cd930}
-\begin{frame}[label={sec:orgab8bc71}]{Definición}
+\label{sec:org470f15a}
+\begin{frame}[label={sec:org103b81e}]{Definición}
 \begin{itemize}
 \item Los sistemas de bombeo emplean la energía eléctrica que produce el
 generador fotovoltaico para accionar una motobomba que eleva y
@@ -246,67 +247,65 @@ plantaciones individuales o comunitarias y la desalinización del
 agua extraída con sistemas de ósmosis inversa.
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgc242496}]{}
+\begin{frame}[label={sec:org03323a6}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Bombeo.jpg}
 \end{center}
 \end{frame}
 
 \section{Contexto Mundial}
-\label{sec:orgb59e3c3}
+\label{sec:org006c4e6}
 
 \subsection{Mercado Fotovoltaico}
-\label{sec:org639391f}
+\label{sec:orgfe65e2d}
 
-\begin{frame}[label={sec:orgfe7fbc4}]{Potencia Instalada}
+\begin{frame}[label={sec:org461f095}]{Potencia Instalada}
 Según el informe del mercado fotovoltaico publicado por la Agencia
-Internacional de la Energía (IEA-PVPS), a finales de 2016 había una
-potencia fotovoltaica acumulada de \SI{303}{\giga\watt} a nivel
+Internacional de la Energía (IEA-PVPS)\footnote{\url{http://www.iea-pvps.org/fileadmin/dam/public/report/statistics/IEA-PVPS\_-\_A\_Snapshot\_of\_Global\_PV\_-\_1992-2017.pdf}}, a finales de 2017 había una
+potencia fotovoltaica acumulada de \SI{402.5}{\giga\watt} a nivel
 mundial.
 \end{frame}
 
-\begin{frame}[label={sec:orgfdeaafc}]{Potencia por Países}
-\begin{block}{24 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada}
+\begin{frame}[label={sec:org702a348}]{Potencia por Países}
+\begin{block}{29 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada acumulada}
 \begin{enumerate}
-\item China: \SI{78}{\giga\watt}
-\item Japón: \SI{42.8}{\giga\watt}
-\item Alemania: \SI{41.2}{\giga\watt}
-\item Estados Unidos \SI{40.3}{\giga\watt}
-\item Italia: \SI{19.3}{\giga\watt}
-\item Reino Unido: \SI{11.6}{\giga\watt}
-\item India: \SI{9}{\giga\watt}
-\item Francia: \SI{7.1}{\giga\watt}
-\item Australia: \SI{5.9}{\giga\watt}
-\item España: \SI{5.4}{\giga\watt}
+\item China: \SI{131}{\giga\watt}
+\item Estados Unidos \SI{51}{\giga\watt}
+\item Japón: \SI{49}{\giga\watt}
+\item Alemania: \SI{42}{\giga\watt}
+\item Italia: \SI{19.7}{\giga\watt}
+\item India: \SI{18.3}{\giga\watt}
+\item Reino Unido: \SI{12.7}{\giga\watt}
+\item Francia: \SI{8}{\giga\watt}
+\item Australia: \SI{7.2}{\giga\watt}
+\item España: \SI{5.6}{\giga\watt}
 \end{enumerate}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org908c9e8}]{}
+\begin{frame}[label={sec:org01d15cf}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PVWorld.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org32b60f1}]{Contribución energética}
-\begin{block}{La ESF aporta el 1.8\% de la energía eléctrica mundial}
+\begin{frame}[label={sec:org9d81681}]{Contribución energética}
+\begin{block}{La ESF aporta el 2.14\% de la energía eléctrica mundial}
 \begin{itemize}
-\item Honduras: 12.5\%
-\item Grecia: 7.4\%
-\item Italia: 7.3\%
-\item Alemania: 7\%
-\item Japón: 4.9\%
-\item España: 3.2\%
-\item China: 1.6\%
+\item Honduras: 13.3\%
+\item Alemania: 7.47\%
+\item Grecia: 7.34\%
+\item Italia: 7.11\%
+\item Japón: 5.93\%
 \end{itemize}
 \end{block}
 \end{frame}
 
 \subsection{Paridad de Red}
-\label{sec:orgb48d5f5}
+\label{sec:org209c9cb}
 
-\begin{frame}[label={sec:orgbdf212b}]{Paridad de Red}
+\begin{frame}[label={sec:org312437c}]{Paridad de Red}
 \begin{itemize}
 \item Crecimiento sostenido fuertemente relacionado con el ritmo de
 reducción del precio del módulo, siendo causa y consecuencia del
@@ -318,13 +317,13 @@ la paridad de red en muchas partes del mundo.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgbfcb53d}]{}
+\begin{frame}[label={sec:org29566c4}]{}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/CurvaAprendizajeFV_BreyerPiP.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga6442a2}]{Paridad en 2010\footnote{El color naranja identifica los sistemas residenciales y el azul los
+\begin{frame}[label={sec:orge48c834}]{Paridad en 2010\footnote{El color naranja identifica los sistemas residenciales y el azul los
 sistemas industriales. El tamaño de los círculos está relacionado con
 el tamaño del mercado eléctrico de cada país.}}
 \begin{center}
@@ -333,7 +332,7 @@ el tamaño del mercado eléctrico de cada país.}}
 \end{frame}
 
 
-\begin{frame}[label={sec:org43d011d}]{Paridad en 2013\footnote{El color naranja identifica los sistemas residenciales y el azul los
+\begin{frame}[label={sec:orgb5a86ae}]{Paridad en 2013\footnote{El color naranja identifica los sistemas residenciales y el azul los
 sistemas industriales. El tamaño de los círculos está relacionado con
 el tamaño del mercado eléctrico de cada país.}}
 \begin{center}
@@ -343,9 +342,9 @@ el tamaño del mercado eléctrico de cada país.}}
 
 
 \subsection{Segmentos de mercado}
-\label{sec:orgde7c521}
+\label{sec:org8e484e1}
 
-\begin{frame}[label={sec:org43dd72f}]{Segmentos de Mercado}
+\begin{frame}[label={sec:org9bad7bd}]{Segmentos de Mercado}
 \begin{itemize}
 \item La European Photovoltaics Industry Association diferencia entre:
 \begin{itemize}
@@ -361,7 +360,7 @@ el tamaño del mercado eléctrico de cada país.}}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd8c5ef6}]{Segmentación en Alemania y España}
+\begin{frame}[label={sec:org3d7d912}]{Segmentación en Alemania y España}
 \begin{itemize}
 \item El mercado fotovoltaico español se ha basado en sistemas sobre
 terreno (plantas fotovoltaicas).
@@ -371,7 +370,7 @@ preponderancia a sistemas comerciales y residenciales.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd22b0c2}]{Tamaño de instalación y Conexión}
+\begin{frame}[label={sec:orga28a734}]{Tamaño de instalación y Conexión}
 \begin{block}{España}
 \begin{itemize}
 \item Tamaño medio \SI{107}{\kilo\watt}

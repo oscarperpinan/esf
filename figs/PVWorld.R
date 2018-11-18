@@ -10,6 +10,9 @@ pv <- diff(pvCum)
 pdf('../figs/PVWorld.pdf')
 p <- xyplot(pv, superpose = TRUE, type = 'b',
             ylab = 'Potencia FV (MW)',
-            par.settings = custom.theme.2(cex = 0.3, pch = 21))
+            par.settings = custom.theme.2(cex = 0.3,
+                                          lwd = 2.5,
+                                          pch = 21))
 direct.label(p, "top.points")
 dev.off()
+

@@ -162,22 +162,22 @@ domésticas, etc.
 
 *** Potencia Instalada
 Según el informe del mercado fotovoltaico publicado por la Agencia
-Internacional de la Energía (IEA-PVPS), a finales de 2016 había una
-potencia fotovoltaica acumulada de \SI{303}{\giga\watt} a nivel
+Internacional de la Energía (IEA-PVPS)[fn:3], a finales de 2017 había una
+potencia fotovoltaica acumulada de \SI{402.5}{\giga\watt} a nivel
 mundial.
 
 *** Potencia por Países
-**** 24 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada
-1. China: \SI{78}{\giga\watt}
-2. Japón: \SI{42.8}{\giga\watt}
-3. Alemania: \SI{41.2}{\giga\watt}
-4. Estados Unidos \SI{40.3}{\giga\watt}
-5. Italia: \SI{19.3}{\giga\watt}
-6. Reino Unido: \SI{11.6}{\giga\watt}
-7. India: \SI{9}{\giga\watt}
-8. Francia: \SI{7.1}{\giga\watt}
-9. Australia: \SI{5.9}{\giga\watt}
-10. España: \SI{5.4}{\giga\watt}
+**** 29 países han superado la cifra de \SI{1}{\giga\watt} de potencia instalada acumulada
+1. China: \SI{131}{\giga\watt}
+2. Estados Unidos \SI{51}{\giga\watt}
+3. Japón: \SI{49}{\giga\watt}
+4. Alemania: \SI{42}{\giga\watt}
+5. Italia: \SI{19.7}{\giga\watt}
+6. India: \SI{18.3}{\giga\watt}
+7. Reino Unido: \SI{12.7}{\giga\watt}
+8. Francia: \SI{8}{\giga\watt}
+9. Australia: \SI{7.2}{\giga\watt}
+10. España: \SI{5.6}{\giga\watt}
 
 *** 
 
@@ -185,15 +185,13 @@ mundial.
 
 
 *** Contribución energética
-**** La ESF aporta el 1.8% de la energía eléctrica mundial
-- Honduras: 12.5%
-- Grecia: 7.4%
-- Italia: 7.3%
-- Alemania: 7%
-- Japón: 4.9%
-- España: 3.2%
-- China: 1.6%
-
+**** La ESF aporta el 2.14% de la energía eléctrica mundial
+- Honduras: 13.3%
+- Alemania: 7.47%
+- Grecia: 7.34%
+- Italia: 7.11%
+- Japón: 5.93%
+  
 ** Paridad de Red
 
 *** Paridad de Red
@@ -260,6 +258,8 @@ mundial.
   - 80% del total en BT.
 
 * Footnotes
+
+[fn:3] http://www.iea-pvps.org/fileadmin/dam/public/report/statistics/IEA-PVPS_-_A_Snapshot_of_Global_PV_-_1992-2017.pdf
 
 [fn:2] El color naranja identifica los sistemas residenciales y el azul los
 sistemas industriales. El tamaño de los círculos está relacionado con
