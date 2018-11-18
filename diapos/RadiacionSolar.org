@@ -97,7 +97,7 @@
  #+ATTR_LATEX: :height 0.6\textheight
  [[../figs/Declinacion.pdf]]
 
-**** Ecuación de Cooper (/simple/)
+**** Ecuación de Cooper 
  \[\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
 
 
@@ -139,17 +139,18 @@
 
 *** Hora Solar
 - $w$, diferencia entre instante en curso y el mediodía solar ($w = 0$, $\psi_s = 0$).
-  - (Horas) $-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12$
-  - 1h = 15º ($24\text{h} = 2\pi \text{ radians} = 360$)
-  - Criterio de signos: $w < 0$ antes del mediodía.
-- Amanecer ($\gamma_{s}=0$):
+- Criterio de signos: $w < 0$ antes del mediodía.
+- 1h = 15º ($24\text{h} = 2\pi \text{ radians} = 360$)
+- (Horas) $-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12$
+
+**** Amanecer ($\gamma_{s}=0$)
 #+BEGIN_EXPORT latex
 \[
 \cos(\omega_{s}) = -\tan(\delta)\tan(\phi)
 \]
 #+END_EXPORT
 
-- La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
+La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 
 *** Duración del día
 
@@ -202,7 +203,7 @@
     :PROPERTIES:
     :BEAMER_col: 0.55
     :END:
-- $\theta_zs$, ángulo entre el Sol y el cenit (vertical en un lugar determinado).
+- $\theta_{zs}$, ángulo entre el Sol y el cenit (vertical en un lugar determinado).
 - $\gamma_s$, altura solar, ángulo complementario de $\theta_{zs}$.
 - Depende de $d_n$, $\omega$, y $\phi$.
 ****                                                               :BMCOL:
@@ -298,9 +299,16 @@
 
 *** Ecuación del Tiempo
 
-\[\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
-      M+3.5884\right)\right)\]
+#+BEGIN_EXPORT latex
+\[
+\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
+      M+3.5884\right)\right)
+\]
+\[
+M=\frac{2\pi}{365.24}\cdot d_{n}
+\]
 
+#+END_EXPORT
 [[../figs/EoT.pdf]]
 
 *** Ejemplo de cálculo
@@ -334,7 +342,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 *** Definiciones
 - $\theta_s$, ángulo de incidencia (AOI), ángulo entre los rayos solares y la perpendicular al plano del generador.
 - $\alpha$: orientación del generador (0º cuando está orientado al mediodía solar)
-- $\beta$: inclinación del generador.
+- $\beta$: inclinación del generador (respecto de la superficie horizontal)
 
 ** Sistema Estático
 
@@ -370,15 +378,19 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 *** Introducción
 #+ATTR_BEAMER: :overlay <+->
--  *Fundamento:*
-   #+ATTR_BEAMER: :overlay <.->
-   -  Radiación incidente aumenta al seguir al sol
+- *Fundamento:*
+  #+ATTR_BEAMER: :overlay <.->
+  - Radiación incidente aumenta al seguir al sol
 
-   -  Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+  - Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
 
--  Las diferentes técnicas de seguimiento son un compromiso entre un
-   apuntamiento perfecto y sistemas estructurales más económicos y
-   mejores aprovechamientos del terreno.
+- Las diferentes técnicas de seguimiento son un *compromiso* entre
+  #+ATTR_BEAMER: :overlay <.->
+  - un *apuntamiento perfecto*
+
+  - *sistemas estructurales más económicos*
+
+  - mejores *aprovechamientos del terreno*.
 *** Algunos tipos de seguimiento solar
 #+ATTR_BEAMER: :overlay <+->
 -  *Doble eje*
@@ -560,10 +572,9 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 -  *Masa de aire*:
 
    -  Relación entre camino recorrido por rayos directos del Sol a
-      través de la atmósfera hasta la superficie receptora y el que
-      recorrerían en caso de incidencia vertical (AM=1)
+      través de la atmósfera hasta la superficie receptora y el que recorrerían en caso de incidencia vertical (AM=1)
 
-   -  $AM=1/\cos\theta_{zs}$
+   -  $AM \simeq 1/\cos\theta_{zs}$
 
 -  *Índice de claridad*
 
@@ -644,7 +655,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 ** Cálculo de componentes de radiación solar
 
 *** 
-[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+[[../figs/ProcedimientoCalculoRadiacionInclinada_componentes.pdf]]
 
 *** Estimación de Directa y Difusa
 
@@ -686,7 +697,7 @@ F_{Dd} = \begin{cases}
 {\scriptsize \par}
 #+END_EXPORT
 
-*** Estimación de Directa y Difusa
+*** Ejemplo
 
 -  Calcular :: las componentes directa y difusa de la radiación solar del:
 
@@ -703,9 +714,9 @@ F_{Dd} = \begin{cases}
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/PVUrban.png]]
 
-*** Procedimiento
+*** 
 
-[[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
+[[../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf]]
 
 ** Irradiancia a partir de irradiación diaria
 
@@ -745,6 +756,10 @@ F_{Dd} = \begin{cases}
    -  2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
 
 ** Transformación al plano del generador
+
+*** 
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada_inclinada.pdf]]
 
 *** Planteamiento
 
@@ -806,6 +821,10 @@ F_{Dd} = \begin{cases}
    -  Un generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del mediodía del día 261 en un lugar con latitud  $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
 
 ** Pérdidas angulares y por suciedad
+
+*** 
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada_efectiva.pdf]]
 
 *** Radiación directa
 
@@ -909,9 +928,10 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 - La variabilidad espacial es *mayor en invierno que en verano* para una misma localización.
 - Las medidas son representativas de las localizaciones cercanas en una distancia limitada (aprox. 10 kms.)
 
-*** Resumen: requerimientos
+*** Resumen
 
-- Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
+**** Requerimientos
+Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
   - *Medidas Cercanas*: $\leq \SI{10}{km}$
   - *Series Temporales Largas*: $\simeq 10 \text{ años}$
 

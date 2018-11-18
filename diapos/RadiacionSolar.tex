@@ -1,4 +1,4 @@
-% Created 2018-11-17 sáb 14:08
+% Created 2018-11-18 dom 17:30
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -53,9 +53,9 @@
 \maketitle
 
 \section{Introducción}
-\label{sec:orgf284eaf}
+\label{sec:orgf4b380f}
 
-\begin{frame}[label={sec:orge883e5b}]{Radiación Solar y Sistemas Fotovoltaicos}
+\begin{frame}[label={sec:orgf2ca954}]{Radiación Solar y Sistemas Fotovoltaicos}
 \begin{itemize}
 \item La \alert{energía producida} por un sistema fotovoltaico depende principalmente de la \alert{radiación incidente} en el generador.
 
@@ -67,7 +67,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd4e076b}]{La radiación solar no se puede calcular analíticamente}
+\begin{frame}[label={sec:org5405a20}]{La radiación solar no se puede calcular analíticamente}
 \begin{itemize}
 \item La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
 \item Para estimar la radiación se requiere medidas terrestres o imágenes de satélite.
@@ -77,7 +77,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgba814dd}]{Ángulo de Inclinación}
+\begin{frame}[label={sec:org2f104d1}]{Ángulo de Inclinación}
 \begin{itemize}
 \item Los generadores FV tienen un \alert{ángulo de inclinación positivo} para maximizar el rendimiento.
 \item Este ángulo depende de la \alert{latitud} del lugar y de la \alert{aplicación del sistema}.
@@ -88,7 +88,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org81005f7}]{Bases de Datos de Radiación Solar}
+\begin{frame}[label={sec:orgc085208}]{Bases de Datos de Radiación Solar}
 \begin{itemize}
 \item Por tanto, es inviable mantener una base de datos de radiación solar \alert{incidente}.
 \item Las \alert{bases de datos} registran radiación en el \alert{plano horizontal}.
@@ -97,18 +97,18 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org89d9b81}]{Del plano horizontal al plano inclinado}
+\begin{frame}[label={sec:org01836b7}]{Del plano horizontal al plano inclinado}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
 \end{center}
 \end{frame}
 
 \section{Geometría Sol y Tierra}
-\label{sec:org743434a}
+\label{sec:org5f40095}
 \subsection{Movimiento Sol-Tierra}
-\label{sec:org4a03aef}
+\label{sec:org3f89562}
 
-\begin{frame}[label={sec:orgeeac35b}]{Movimiento terrestre}
+\begin{frame}[label={sec:org5169428}]{Movimiento terrestre}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
 \end{center}
@@ -130,7 +130,7 @@ eclíptica}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb23fb8c}]{Movimiento terrestre}
+\begin{frame}[label={sec:orgd2ebe7f}]{Movimiento terrestre}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/PlanoEcliptica.pdf}
 \end{center}
@@ -145,9 +145,9 @@ eclíptica}
 
 
 \subsection{Ángulos Solares}
-\label{sec:org436d7fb}
+\label{sec:org9c115bc}
 
-\begin{frame}[plain,label={sec:org6a57c29}]{Ejes terrestres}
+\begin{frame}[plain,label={sec:org30c98da}]{Ejes terrestres}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{center}
@@ -168,18 +168,18 @@ eclíptica}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3c8db51}]{Declinación}
+\begin{frame}[label={sec:org9e88886}]{Declinación}
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/Declinacion.pdf}
 \end{center}
 
-\begin{block}{Ecuación de Cooper (\emph{simple})}
+\begin{block}{Ecuación de Cooper}
 \[\delta=23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(d_{n}+284\right)}{365}\right)\]
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgcab6533}]{Estaciones}
+\begin{frame}[label={sec:org85308e8}]{Estaciones}
 \begin{itemize}[<+->]
 \item \alert{Solsticio de junio} 
 \begin{itemize}[<.->]
@@ -220,32 +220,30 @@ hemisferio Norte.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7eacbd5}]{Hora Solar}
+\begin{frame}[label={sec:org12bd358}]{Hora Solar}
 \begin{itemize}
 \item \(w\), diferencia entre instante en curso y el mediodía solar (\(w = 0\), \(\psi_s = 0\)).
-\begin{itemize}
-\item (Horas) \(-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12\)
-\item 1h = 15º (\(24\text{h} = 2\pi \text{ radians} = 360\))
 \item Criterio de signos: \(w < 0\) antes del mediodía.
+\item 1h = 15º (\(24\text{h} = 2\pi \text{ radians} = 360\))
+\item (Horas) \(-12, -11, -10, \dots, -1, \textbf{0}, 1, \dots, 10, 11, 12\)
 \end{itemize}
-\item Amanecer (\(\gamma_{s}=0\)):
-\end{itemize}
+
+\begin{block}{Amanecer (\(\gamma_{s}=0\))}
 \[
 \cos(\omega_{s}) = -\tan(\delta)\tan(\phi)
 \]
 
-\begin{itemize}
-\item La longitud del día, \(|2 \cdot \omega_s|\), depende de \(\phi\) y \(d_n\).
-\end{itemize}
+La longitud del día, \(|2 \cdot \omega_s|\), depende de \(\phi\) y \(d_n\).
+\end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgb2f5ad0}]{Duración del día}
+\begin{frame}[label={sec:org191e29a}]{Duración del día}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/DuracionDia.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[plain,label={sec:orgd5ce2cc}]{Ejes locales}
+\begin{frame}[plain,label={sec:orgbc37073}]{Ejes locales}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{center}
@@ -268,7 +266,7 @@ hemisferio Norte.
 \end{frame}
 
 
-\begin{frame}[label={sec:org0e8a110}]{Relación entre sistemas de coordenadas}
+\begin{frame}[label={sec:orgc734592}]{Relación entre sistemas de coordenadas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RelacionSistemasCoordenadas.pdf}
 \end{center}
@@ -278,7 +276,7 @@ hemisferio Norte.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org25a1172}]{Cenit Solar}
+\begin{frame}[plain,label={sec:org54352f8}]{Cenit Solar}
 \[
 \cos(\theta_{zs}) = \cos(\delta) \cos(\omega) \cos(\phi) + \sin(\delta) \sin(\phi)
 \]
@@ -286,7 +284,7 @@ hemisferio Norte.
 \begin{columns}
 \begin{column}{0.55\columnwidth}
 \begin{itemize}
-\item \(\theta_zs\), ángulo entre el Sol y el cenit (vertical en un lugar determinado).
+\item \(\theta_{zs}\), ángulo entre el Sol y el cenit (vertical en un lugar determinado).
 \item \(\gamma_s\), altura solar, ángulo complementario de \(\theta_{zs}\).
 \item Depende de \(d_n\), \(\omega\), y \(\phi\).
 \end{itemize}
@@ -299,7 +297,7 @@ hemisferio Norte.
 \end{columns}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org100331a}]{Azimut solar}
+\begin{frame}[plain,label={sec:org3f771e3}]{Azimut solar}
 \[
   \cos(\psi_{s}) = \mathrm{sign}(\phi) \cdot \frac{\cos(\delta) \cos(\omega) \sin(\phi) - \cos(\phi) \sin(\delta)} {\sin(\theta_{z})}
 \]
@@ -320,21 +318,21 @@ hemisferio Norte.
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org2f675c5}]{Trayectoria Solar (\(60\degree N\))}
+\begin{frame}[label={sec:org4346218}]{Trayectoria Solar (\(60\degree N\))}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar60N.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org65e098c}]{Trayectoria Solar (\(40\degree S\))}
+\begin{frame}[label={sec:org84ff270}]{Trayectoria Solar (\(40\degree S\))}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TrayectoriaSolar40S.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org1f27159}]{Cálculo Ángulos Solares}
+\begin{frame}[label={sec:orgdea330e}]{Cálculo Ángulos Solares}
 \begin{itemize}
 \item Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para el:
 
@@ -353,8 +351,8 @@ hemisferio Norte.
 \end{frame}
 
 \subsection{Hora solar y oficial}
-\label{sec:orgde98d4b}
-\begin{frame}[label={sec:org93fef90}]{Hora solar}
+\label{sec:orgbca83d9}
+\begin{frame}[label={sec:org983cd08}]{Hora solar}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{itemize}
@@ -366,7 +364,7 @@ hemisferio Norte.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgbb481d1}]{Hora oficial}
+\begin{frame}[label={sec:orga9f8092}]{Hora oficial}
 \begin{itemize}
 \item \alert{La hora oficial} es una medida del tiempo \alert{ligada a un meridiano}
 que sirve de referencia para una zona determinada.
@@ -385,7 +383,7 @@ de su huso horario.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org51d806d}]{Tiempo solar medio}
+\begin{frame}[label={sec:orgfa6d5c7}]{Tiempo solar medio}
 \begin{itemize}
 \item \alert{La duración del día solar real}, definido como el tiempo que
 transcurre entre dos pasos consecutivos del Sol por el meridiano
@@ -397,16 +395,20 @@ duración del día solar real.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5605926}]{Ecuación del Tiempo}
-\[\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
-      M+3.5884\right)\right)\]
-
+\begin{frame}[label={sec:org3c727d0}]{Ecuación del Tiempo}
+\[
+\mathrm{EoT}=229.18\cdot\left(-0.0334\cdot\sin(M)+0.04184\cdot\sin\left(2\cdot
+      M+3.5884\right)\right)
+\]
+\[
+M=\frac{2\pi}{365.24}\cdot d_{n}
+\]
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EoT.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org950c594}]{Ejemplo de cálculo}
+\begin{frame}[label={sec:orga5d79cc}]{Ejemplo de cálculo}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{block}{}
@@ -418,7 +420,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org7a61bbc}]{Solución}
+\begin{frame}[label={sec:org1a676c8}]{Solución}
 \[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
 
 \begin{itemize}[<+->]
@@ -437,25 +439,25 @@ oficial.
 \end{frame}
 
 \section{Geometría de los sistemas fotovoltaicos}
-\label{sec:org17bfa80}
-\begin{frame}[label={sec:org1f25106}]{Definiciones}
+\label{sec:org4bdc34f}
+\begin{frame}[label={sec:orgadd017e}]{Definiciones}
 \begin{itemize}
 \item \(\theta_s\), ángulo de incidencia (AOI), ángulo entre los rayos solares y la perpendicular al plano del generador.
 \item \(\alpha\): orientación del generador (0º cuando está orientado al mediodía solar)
-\item \(\beta\): inclinación del generador.
+\item \(\beta\): inclinación del generador (respecto de la superficie horizontal)
 \end{itemize}
 \end{frame}
 
 \subsection{Sistema Estático}
-\label{sec:org02981bb}
+\label{sec:org0bbe959}
 
-\begin{frame}[label={sec:orga193a0c}]{Sistema Estático}
+\begin{frame}[label={sec:org0b81b8d}]{Sistema Estático}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org24a8fc6}]{Ángulo de Incidencia}
+\begin{frame}[plain,label={sec:org272b0b0}]{Ángulo de Incidencia}
 \begin{itemize}
 \item Si \(\alpha=0\)
 \end{itemize}
@@ -472,7 +474,7 @@ oficial.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd8ec689}]{Ángulo de Incidencia}
+\begin{frame}[label={sec:org747fe0a}]{Ángulo de Incidencia}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -483,9 +485,9 @@ oficial.
 
 
 \subsection{Sistemas con seguimiento}
-\label{sec:orgcbd0050}
+\label{sec:org76d0b0b}
 
-\begin{frame}[label={sec:orged8177a}]{Introducción}
+\begin{frame}[label={sec:orgee12233}]{Introducción}
 \begin{itemize}[<+->]
 \item \alert{Fundamento:}
 \begin{itemize}[<.->]
@@ -494,12 +496,17 @@ oficial.
 \item Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
 \end{itemize}
 
-\item Las diferentes técnicas de seguimiento son un compromiso entre un
-apuntamiento perfecto y sistemas estructurales más económicos y
-mejores aprovechamientos del terreno.
+\item Las diferentes técnicas de seguimiento son un \alert{compromiso} entre
+\begin{itemize}[<.->]
+\item un \alert{apuntamiento perfecto}
+
+\item \alert{sistemas estructurales más económicos}
+
+\item mejores \alert{aprovechamientos del terreno}.
+\end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org9499a7a}]{Algunos tipos de seguimiento solar}
+\begin{frame}[label={sec:orga7ad622}]{Algunos tipos de seguimiento solar}
 \begin{itemize}[<+->]
 \item \alert{Doble eje}
 \begin{itemize}[<.->]
@@ -527,14 +534,14 @@ necesarios),
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9dc625d}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
+\begin{frame}[label={sec:org9f9eb5e}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorEjeHorizontal.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[plain,label={sec:org1b2231c}]{Ángulo de Incidencia (1x eje, horizontal N-S)}
+\begin{frame}[plain,label={sec:org2cd6ec0}]{Ángulo de Incidencia (1x eje, horizontal N-S)}
 \[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
 
 \begin{center}
@@ -542,7 +549,7 @@ necesarios),
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1552155}]{Inclinación de Eje Horizontal N-S}
+\begin{frame}[label={sec:orgae3cd51}]{Inclinación de Eje Horizontal N-S}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -553,7 +560,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:org3f042d6}]{Ángulo de Incidencia de Eje Horizontal N-S}
+\begin{frame}[label={sec:org3b3e1ed}]{Ángulo de Incidencia de Eje Horizontal N-S}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -565,13 +572,13 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:orgb82942d}]{Sistema de Seguimiento (2x ejes)}
+\begin{frame}[label={sec:org0a10378}]{Sistema de Seguimiento (2x ejes)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SeguidorReocin.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[plain,label={sec:org2385dae}]{Ángulo de Incidencia (seguidor 2x)}
+\begin{frame}[plain,label={sec:org32114ca}]{Ángulo de Incidencia (seguidor 2x)}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Sombra2X.pdf}
 \end{center}
@@ -583,7 +590,7 @@ necesarios),
   \cos(\theta_{s}) &= 1
 \end{align*}
 \end{frame}
-\begin{frame}[label={sec:org68c857c}]{Inclinación (seguidor 2x)}
+\begin{frame}[label={sec:org61a811e}]{Inclinación (seguidor 2x)}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -592,7 +599,7 @@ necesarios),
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfb8b1e1}]{Ejercicio: cálculo de ángulo de incidencia}
+\begin{frame}[label={sec:orgf57cfb6}]{Ejercicio: cálculo de ángulo de incidencia}
 \begin{description}
 \item[{Para:}] \begin{itemize}
 \item Un sistema estático orientado al Sur y con inclinación de 30;
@@ -614,8 +621,8 @@ necesarios),
 \end{description}
 \end{frame}
 \section{Radiación Solar en la Superficie Terrestre}
-\label{sec:org344fdd0}
-\begin{frame}[label={sec:orgf22201e}]{Irradiancia e Irradiación}
+\label{sec:org92d06d5}
+\begin{frame}[label={sec:orgbd69fae}]{Irradiancia e Irradiación}
 \begin{description}
 \item[{Irradiancia}] es la densidad de \emph{potencia} de radiacion solar
 incidente en una superficie.
@@ -634,10 +641,10 @@ incidente en una superficie.
 \end{frame}
 
 \subsection{Radiación Extra-atmosférica}
-\label{sec:org1565185}
+\label{sec:org45b060d}
 
 
-\begin{frame}[label={sec:org0fa8352}]{Definición}
+\begin{frame}[label={sec:org1feebc2}]{Definición}
 \begin{itemize}
 \item La radiación que alcanza la superficie de la atmósfera es radiación
 directa del Sol.
@@ -649,7 +656,7 @@ directa del Sol.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgb90ecd9}]{Ecuaciones}
+\begin{frame}[label={sec:orgd6cc47c}]{Ecuaciones}
 \begin{itemize}
 \item \alert{Constante solar} \(B_{0}=\SI{1367}{\watt\per\meter\squared}\)
 (irradiancia solar sobre la superficie normal al vector solar en límite superior de la atmósfera terrestre)
@@ -669,7 +676,7 @@ directa del Sol.
 \end{frame}
 
 
-\begin{frame}[label={sec:orga1cdee7}]{Días promedio}
+\begin{frame}[label={sec:org304e9b6}]{Días promedio}
 \begin{itemize}
 \item Es posible demostrar que el \alert{promedio mensual} de esta irradiación
 diaria \alert{coincide numericamente} con el valor de irradiación diaria
@@ -699,9 +706,9 @@ Mes & Jul & Ago & Sep & Oct & Nov & Dic\\
 \end{frame}
 
 \subsection{Radiación solar en la superficie terrestre}
-\label{sec:orgb0ea2cc}
+\label{sec:org7b96534}
 
-\begin{frame}[label={sec:org5fa1193}]{Interacción de la radiación con la atmósfera}
+\begin{frame}[label={sec:org17495b2}]{Interacción de la radiación con la atmósfera}
 \begin{itemize}
 \item \alert{Disminución} de la radiación incidente en la superficie terrestre
 (reflexión en nubes)
@@ -714,16 +721,15 @@ partículas)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org08705cb}]{Caracterización de la atmósfera}
+\begin{frame}[label={sec:org1b88f72}]{Caracterización de la atmósfera}
 \begin{itemize}
 \item \alert{Masa de aire}:
 
 \begin{itemize}
 \item Relación entre camino recorrido por rayos directos del Sol a
-través de la atmósfera hasta la superficie receptora y el que
-recorrerían en caso de incidencia vertical (AM=1)
+través de la atmósfera hasta la superficie receptora y el que recorrerían en caso de incidencia vertical (AM=1)
 
-\item \(AM=1/\cos\theta_{zs}\)
+\item \(AM \simeq 1/\cos\theta_{zs}\)
 \end{itemize}
 
 \item \alert{Índice de claridad}
@@ -740,7 +746,7 @@ movimiento aparente del sol}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9e13b6d}]{Índice de claridad}
+\begin{frame}[label={sec:org8345c68}]{Índice de claridad}
 \begin{description}
 \item[{\(K_{T}\):}] índice de claridad instantáneo. \(K_{T}=G/B_{0}\)
 
@@ -752,7 +758,7 @@ movimiento aparente del sol}.
 \end{description}
 \end{frame}
 
-\begin{frame}[label={sec:org3ab77ca}]{Componentes de la radiación solar}
+\begin{frame}[label={sec:orgb48f574}]{Componentes de la radiación solar}
 \begin{itemize}
 \item \alert{Radiación Directa}. (B)
 
@@ -780,7 +786,7 @@ movimiento aparente del sol}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6037649}]{Cómo se escribe}
+\begin{frame}[label={sec:org0231ca1}]{Cómo se escribe}
 \begin{block}{Forma, tiempo, lugar}
 \begin{description}
 \item[{Forma+Tiempo+Lugar:}] Irradiancia directa (forma) horaria (tiempo)
@@ -800,7 +806,7 @@ en el plano del generador (lugar)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org070f7ef}]{Cómo se escribe}
+\begin{frame}[label={sec:org1aeec4c}]{Cómo se escribe}
 \begin{block}{Forma, tiempo, lugar}
 \[Forma_{tiempo,promedio}(lugar)\]
 
@@ -814,15 +820,15 @@ en el plano del generador (lugar)
 \end{block}
 \end{frame}
 \subsection{Cálculo de componentes de radiación solar}
-\label{sec:org6f39b15}
+\label{sec:org66d2ff3}
 
-\begin{frame}[label={sec:org1b97852}]{}
+\begin{frame}[label={sec:org026a32d}]{}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada_componentes.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org409fd9d}]{Estimación de Directa y Difusa}
+\begin{frame}[label={sec:org96f36b5}]{Estimación de Directa y Difusa}
 \begin{itemize}
 \item Objetivo: Establecer una \alert{relación entre la fracción difusa} de la radiación horizontal (\(F_{D}=\frac{D(0)}{G(0)}\)) y \alert{el índice de claridad}.
 
@@ -832,7 +838,7 @@ en el plano del generador (lugar)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0955e90}]{Correlaciones \(F_{D}\) y \(K_{T}\): Ecuación de Page}
+\begin{frame}[label={sec:orgbcefb27}]{Correlaciones \(F_{D}\) y \(K_{T}\): Ecuación de Page}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FdKtMensual.pdf}
 \end{center}
@@ -840,7 +846,7 @@ en el plano del generador (lugar)
 \[F_{Dm}=1-1.13\cdot K_{Tm}\]
 \end{frame}
 
-\begin{frame}[label={sec:orgfde726b}]{Correlaciones \(F_{D}\) y \(K_{T}\)}
+\begin{frame}[label={sec:org52c8d85}]{Correlaciones \(F_{D}\) y \(K_{T}\)}
 Ejemplo: en un lugar con \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\) en un mes con \(B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}\)  será:
 
 \begin{itemize}
@@ -854,7 +860,7 @@ Ejemplo: en un lugar con \(G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}\)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd5e33e9}]{Correlaciones \(F_{D}\) y \(K_{T}\): Collares-Pereira y Rabl}
+\begin{frame}[label={sec:org4656096}]{Correlaciones \(F_{D}\) y \(K_{T}\): Collares-Pereira y Rabl}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FdKtDiario.pdf}
 \end{center}
@@ -868,7 +874,7 @@ F_{Dd} = \begin{cases}
 {\scriptsize \par}
 \end{frame}
 
-\begin{frame}[label={sec:org34a7045}]{Estimación de Directa y Difusa}
+\begin{frame}[label={sec:org514be12}]{Ejemplo}
 \begin{description}
 \item[{Calcular}] las componentes directa y difusa de la radiación solar del:
 
@@ -879,12 +885,12 @@ F_{Dd} = \begin{cases}
 \end{description}
 \end{frame}
 \section{Radiación Solar en Generadores FV}
-\label{sec:orgebf3fca}
+\label{sec:org596a568}
 
 \subsection{Introducción}
-\label{sec:org9a2fd92}
+\label{sec:org93b0dda}
 
-\begin{frame}[label={sec:org49a60b0}]{Ángulo de Inclinación}
+\begin{frame}[label={sec:orgf067128}]{Ángulo de Inclinación}
 \begin{itemize}
 \item Los generadores FV tienen un ángulo de inclinación positivo para maximizar el rendimiento.
 \item Este ángulo depende de la latitud del lugar y de la aplicación del sistema.
@@ -895,16 +901,16 @@ F_{Dd} = \begin{cases}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org4292a56}]{Procedimiento}
+\begin{frame}[label={sec:org0d2d0bd}]{}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada.pdf}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Irradiancia a partir de irradiación diaria}
-\label{sec:org9f52ca4}
+\label{sec:orge82f238}
 
-\begin{frame}[label={sec:org4a09df7}]{Planteamiento}
+\begin{frame}[label={sec:org4f3937f}]{Planteamiento}
 \begin{itemize}
 \item \alert{Objetivo}: construir un perfil diario promedio de irradiancia global e irradiancia difusa (\emph{cielo claro})
 \item \alert{Puntos clave}:
@@ -919,13 +925,13 @@ F_{Dd} = \begin{cases}
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orgb6bc5c7}]{Perfil}
+\begin{frame}[label={sec:org165fb82}]{Perfil}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/RgRd.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1769d05}]{Ecuaciones del perfil}
+\begin{frame}[label={sec:orgccd20a9}]{Ecuaciones del perfil}
 \[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
 
 \[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
@@ -935,7 +941,7 @@ F_{Dd} = \begin{cases}
 \[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
 \end{frame}
 
-\begin{frame}[label={sec:org98a32b5}]{Ejercicio}
+\begin{frame}[label={sec:org2918de6}]{Ejercicio}
 \begin{description}
 \item[{Calcular}] la irradiancia global y la irradiancia difusa en el plano horizontal
 
@@ -946,22 +952,28 @@ F_{Dd} = \begin{cases}
 \end{frame}
 
 \subsection{Transformación al plano del generador}
-\label{sec:orge08a596}
+\label{sec:orga25a0ae}
 
-\begin{frame}[label={sec:orgb9b697b}]{Planteamiento}
+\begin{frame}[label={sec:orgeddb0ee}]{}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada_inclinada.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgf2acab5}]{Planteamiento}
 \begin{itemize}
 \item \alert{Irradiancia Directa}: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
 \item \alert{Irradiancia Difusa}: modelos del estado de cielo, modelo isotrópico o anisotrópico.
 \item \alert{Irradiancia de Albedo}: modelo isotrópico con coeficiente de reflexión típico.
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org92ae281}]{Irradiancia Directa}
+\begin{frame}[label={sec:orgcc81ea2}]{Irradiancia Directa}
 \alert{Irradiancia Directa}: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
 
 \[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
 \end{frame}
 
-\begin{frame}[label={sec:org06a86d2}]{Irradiancia Difusa}
+\begin{frame}[label={sec:org51cf50f}]{Irradiancia Difusa}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
 \end{center}
@@ -969,7 +981,7 @@ F_{Dd} = \begin{cases}
 \[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
 \end{frame}
 
-\begin{frame}[label={sec:org5aa327f}]{Irradiancia Difusa Isotrópica}
+\begin{frame}[label={sec:orgb346ba4}]{Irradiancia Difusa Isotrópica}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
 \end{center}
@@ -979,7 +991,7 @@ F_{Dd} = \begin{cases}
 
 \[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
 \end{frame}
-\begin{frame}[label={sec:org56cdf08}]{Irradiancia Difusa Anisotrópica}
+\begin{frame}[label={sec:orgbca189e}]{Irradiancia Difusa Anisotrópica}
 \[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
 
 \[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
@@ -989,7 +1001,7 @@ F_{Dd} = \begin{cases}
 \[k_{1} = \frac{B(0)}{B_{0}(0)}\]
 \end{frame}
 
-\begin{frame}[label={sec:org746404d}]{Irradiancia de Albedo}
+\begin{frame}[label={sec:org0288a6c}]{Irradiancia de Albedo}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/AnguloVisionCielo.pdf}
 \end{center}
@@ -1000,7 +1012,7 @@ F_{Dd} = \begin{cases}
 \[\rho=0.2\]
 \end{frame}
 
-\begin{frame}[label={sec:orgf122101}]{Ejercicio}
+\begin{frame}[label={sec:org089f84e}]{Ejercicio}
 \begin{description}
 \item[{Calcular}] la irradiancia difusa, directa, de albedo y global, en
 
@@ -1011,9 +1023,15 @@ F_{Dd} = \begin{cases}
 \end{frame}
 
 \subsection{Pérdidas angulares y por suciedad}
-\label{sec:org9f618cc}
+\label{sec:org53a3faa}
 
-\begin{frame}[label={sec:org6672a28}]{Radiación directa}
+\begin{frame}[label={sec:orgb9ce75b}]{}
+\begin{center}
+\includegraphics[width=.9\linewidth]{../figs/ProcedimientoCalculoRadiacionInclinada_efectiva.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org9783dbf}]{Radiación directa}
 \[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
 
 \begin{center}
@@ -1021,14 +1039,14 @@ F_{Dd} = \begin{cases}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org26ee36b}]{Difusa y Albedo}
+\begin{frame}[label={sec:org3ebeecf}]{Difusa y Albedo}
 \begin{align*}
 D_{ef}^{iso}(\beta,\alpha) &= D^{iso}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{D}(\beta))\\
 D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{B}(\theta_{s}))\\
 R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
 \end{align*}
 \end{frame}
-\begin{frame}[label={sec:org3795789}]{Coeficientes}
+\begin{frame}[label={sec:org1340bbf}]{Coeficientes}
 \begin{center}
 \begin{tabular}{lrrr}
 Grado de Suciedad & \(\frac{T_{sucio}(0)}{T_{limpio}(0)}\) & \(a_{r}\) & \(c_{2}\)\\
@@ -1041,16 +1059,16 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf855a8f}]{Pérdidas anuales}
+\begin{frame}[label={sec:orgfffaa37}]{Pérdidas anuales}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GefVSG.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Radiación Efectiva según tipologías}
-\label{sec:org8112c00}
+\label{sec:org98fb00b}
 
-\begin{frame}[label={sec:orga2983b0}]{Radiación en Sistema estático}
+\begin{frame}[label={sec:orgdd5b35e}]{Radiación en Sistema estático}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FixedKrig.pdf}
 \end{center}
@@ -1058,7 +1076,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:orgf7bc246}]{Radiación en Seguimiento Eje Horizontal}
+\begin{frame}[label={sec:orgec6f568}]{Radiación en Seguimiento Eje Horizontal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/HorizKrig.pdf}
 \end{center}
@@ -1066,14 +1084,14 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:orgd1ebce1}]{Radiación en Seguimiento Doble Eje}
+\begin{frame}[label={sec:orgbd660ba}]{Radiación en Seguimiento Doble Eje}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoKrig.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org2ca2e95}]{Comparación Doble Eje-Estática}
+\begin{frame}[label={sec:org6acb77c}]{Comparación Doble Eje-Estática}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoFixed.pdf}
 \end{center}
@@ -1081,7 +1099,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org2cd264d}]{Comparación Doble Eje - Horizontal}
+\begin{frame}[label={sec:org98958ea}]{Comparación Doble Eje - Horizontal}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/TwoHoriz.pdf}
 \end{center}
@@ -1089,7 +1107,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org46a4f03}]{Comparación Eje Horizontal - Estática}
+\begin{frame}[label={sec:orgc7e6cb9}]{Comparación Eje Horizontal - Estática}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/HorizFixed.pdf}
 \end{center}
@@ -1097,22 +1115,22 @@ Alto & 0.92 & 0.27 & -0.023\\
 
 
 
-\begin{frame}[label={sec:org3553800}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:org7706ff3}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/compSystems.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb6eb646}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:org3083682}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/compSystemsG0.png}
 \end{center}
 \end{frame}
 \section{Bases de Datos}
-\label{sec:org15aba1d}
+\label{sec:org2e47b83}
 \subsection{Introducción}
-\label{sec:orga41b819}
-\begin{frame}[label={sec:org8505576}]{Variabilidad Solar}
+\label{sec:orgbce8c1b}
+\begin{frame}[label={sec:org1f638bb}]{Variabilidad Solar}
 \begin{itemize}
 \item La \alert{radiación extra-atmosférica} se puede expresar de forma \alert{analítica} en función del día, hora y latitud.
 \item La \alert{radiación en la superficie terrestre} es un \alert{proceso estocástico} (aleatorio) debido a la interacción con la atmósfera.
@@ -1122,7 +1140,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org8497b2b}]{Estimaciones a Largo Plazo}
+\begin{frame}[label={sec:org26dfb4e}]{Estimaciones a Largo Plazo}
 \begin{itemize}
 \item Nos interesan \alert{estimaciones a largo plazo} del funcionamiento de los sistemas FV en una localización concreta.
 \item Las fuentes de datos de radiación solar deben:
@@ -1133,7 +1151,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1bb6a03}]{Variabilidad Temporal}
+\begin{frame}[label={sec:orgb01b294}]{Variabilidad Temporal}
 \begin{center}
 \includegraphics[height=0.45\textheight]{../figs/VariabilidadRadiacionDiario.pdf}
 \end{center}
@@ -1145,7 +1163,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org88da936}]{Variabilidad Espacial}
+\begin{frame}[label={sec:orgb14a5fb}]{Variabilidad Espacial}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/SpatialVariability.jpg}
 \end{center}
@@ -1157,19 +1175,19 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb10e792}]{Resumen: requerimientos}
-\begin{itemize}
-\item Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
+\begin{frame}[label={sec:org29f0cd7}]{Resumen}
+\begin{block}{Requerimientos}
+Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
 \begin{itemize}
 \item \alert{Medidas Cercanas}: \(\leq \SI{10}{km}\)
 \item \alert{Series Temporales Largas}: \(\simeq 10 \text{ años}\)
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
 \subsection{Fuentes de Datos}
-\label{sec:org4d8083f}
-\begin{frame}[label={sec:org7270c1b}]{Estaciones Meteorológicas}
+\label{sec:org7ac1588}
+\begin{frame}[label={sec:orgfa6a70a}]{Estaciones Meteorológicas}
 \begin{itemize}
 \item Series temporales largas
 \item Alta resolución temporal (\(\SI{1}{\min}\))
@@ -1187,7 +1205,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{frame}
 
 
-\begin{frame}[label={sec:org93240b2}]{Imágenes de Satelite}
+\begin{frame}[label={sec:org5df10b3}]{Imágenes de Satelite}
 \begin{itemize}
 \item Baja resolución temporal (\(\SI{1}{hora}\)).
 
@@ -1200,7 +1218,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{frame}
 
 
-\begin{frame}[label={sec:org89dec51}]{Métodos Híbridos}
+\begin{frame}[label={sec:org489f768}]{Métodos Híbridos}
 \begin{itemize}
 \item Las medidas terrestres se mezclan con las estimaciones de satélite para mejorar la resolución espacial.
 \item Interpolación Espacial.
@@ -1219,7 +1237,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org65f9b39}]{Fuentes de Datos}
+\begin{frame}[label={sec:orgd165912}]{Fuentes de Datos}
 \url{https://github.com/oscarperpinan/mds/wiki}
 
 \begin{itemize}
@@ -1240,8 +1258,8 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{frame}
 
 \subsection{Control de Calidad}
-\label{sec:orgae6dcdd}
-\begin{frame}[label={sec:org58f5391}]{Introducción}
+\label{sec:orge992522}
+\begin{frame}[label={sec:org7cc2619}]{Introducción}
 \begin{itemize}
 \item Es necesario filtrar y corregir las medidas para eliminar datos erróneos y valores extremos.
 \begin{itemize}
@@ -1252,7 +1270,7 @@ Alto & 0.92 & 0.27 & -0.023\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfb4923c}]{Límites Físicos}
+\begin{frame}[label={sec:orge6ff8f0}]{Límites Físicos}
 \begin{itemize}
 \item El índice de claridad no puede ser mayor que 1 (la irradiación global diaria no puede superar la extra-atmosférica).
 \end{itemize}
@@ -1272,14 +1290,14 @@ K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org8ef8822}]{Coherencia Espacial}
+\begin{frame}[label={sec:orgd8cf720}]{Coherencia Espacial}
 \begin{itemize}
 \item Las medidas de una estación se deben comparar con \alert{estaciones cercanas} (por ejemplo, mediante interpolación espacial).
 \item La comparación se debe realizar con \alert{valores agregados} (medias diarias o mensuales).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge207278}]{Análisis Estadístico de las Desviaciones}
+\begin{frame}[label={sec:org220e4f3}]{Análisis Estadístico de las Desviaciones}
 \begin{itemize}
 \item Desviaciones, \(\mathbf{D}\), entre observaciones, \(\mathbf{O}\), y un modelo, \(\mathbf{M}\) (u otro conjunto de observaciones):
 \end{itemize}
@@ -1297,7 +1315,7 @@ K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org69e7bd0}]{Métricas}
+\begin{frame}[label={sec:orgc116573}]{Métricas}
 \begin{itemize}
 \item Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
 \end{itemize}
