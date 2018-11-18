@@ -9,18 +9,34 @@
 
 *** Bandas de energía
 
- #+ATTR_BEAMER: :overlay <+->
  - En un *sólido* el número de átomos es tan elevado que los niveles de energía forman *bandas continuas de energía*.
-
  - Los *electrones* asociados a los átomos del sólido *llenan estas bandas en orden ascendente*.
+ #+BEGIN_CENTER
+
+ [[file:../figs/simplified_band_diagram.jpg]]
+
+ #+END_CENTER
+\footnotetext[2]{http://commons.wikimedia.org/}
+
+
+
+
+*** Bandas de energía
 
  - La banda de mayor energía completamente ocupada se denomina *banda de valencia* (/electrones ligados a átomos/).
 
  - La siguiente banda, parcialmente ocupada o vacía, se denominada *banda de conducción* (/electrones desligados de átomos/).
 
- - Estas bandas pueden estar separadas por otra banda de energías que corresponde a *estados no permitidos* (*banda prohibida*), o *pueden estar solapadas* permitiendo una transición fácil de una a otra.
+ #+BEGIN_CENTER
+
+ [[file:../figs/simplified_band_diagram.jpg]]
+
+ #+END_CENTER
+\footnotetext[2]{http://commons.wikimedia.org/}
 
 *** Bandas de energía
+ - Estas bandas pueden estar separadas por otra banda de energías que corresponde a *estados no permitidos* (*banda prohibida*), o *pueden estar solapadas* permitiendo una transición fácil de una a otra.
+
  #+BEGIN_CENTER
 
  [[file:../figs/simplified_band_diagram.jpg]]
@@ -31,10 +47,30 @@
 *** Conductores, aislantes y semiconductores
 
  Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
- #+ATTR_BEAMER: :overlay <+->
+
  - En un *conductor* la $E_{g}$ es muy baja y los electrones circulan fácilmente por la banda de conducción.
 
+ #+BEGIN_CENTER
+
+ [[file:../figs/simplified_band_diagram.jpg]]
+
+ #+END_CENTER
+
+*** Conductores, aislantes y semiconductores
+
+ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
+
  - En un *aislante* se necesita una cantidad de energía muy alta para que los electrones puedan acceder a la banda de conducción   ($E_{g}>\SI{5}{\electronvolt}$)
+
+ #+BEGIN_CENTER
+
+ [[file:../figs/simplified_band_diagram.jpg]]
+
+ #+END_CENTER
+
+*** Conductores, aislantes y semiconductores
+
+ Las *propiedades eléctricas* del sólido dependen de esta *posición relativa entre bandas*.
 
  - En un *semiconductor* la $E_{g}$ es baja ($E_{g}<\SI{5}{\electronvolt}$): los electrones pueden "saltar" a la banda de conducción con un aporte energético.
 
@@ -42,14 +78,11 @@
 
    - $E_{g}(AsGa)=\SI{1.4}{\electronvolt}$
 
-*** Conductores, aislantes y semiconductores
+ #+BEGIN_CENTER
 
-**** La conductividad de los materiales depende de la *concentración de electrones libres* (n) presentes en la banda de conducción
+ [[file:../figs/simplified_band_diagram.jpg]]
 
-**** Valores típicos de n
- - Metal: \SI{1e22}{\per\cm\cubed}
- - Aislante: \SI{10}{\per\cm\cubed}
- - Semiconductor: \SI{1e10}{\per\cm\cubed} a T = \SI{300}{\kelvin}
+ #+END_CENTER
 
 ** Semiconductores
 
@@ -58,12 +91,8 @@
  [[file:../figs/silicio_T0K.jpg]]
  #+END_CENTER
 \footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
+
 *** Generación de electrón-hueco (T > \SI{0}{\kelvin})
- #+BEGIN_CENTER
- file:../figs/silicio_T300K.jpg
- #+END_CENTER
-\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
-*** Generación de electrón-hueco
     :PROPERTIES:
     :beamer_opt: plain
     :END:
@@ -84,6 +113,11 @@
      :END:
 
  [[file:../figs/silicio_T300K.jpg]]
+**** :B_ignoreheading:
+     :PROPERTIES:
+     :BEAMER_env: ignoreheading
+     :END:
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 
 *** Recombinación de un par electrón-hueco
     :PROPERTIES:
@@ -104,6 +138,12 @@
      :END:
 
  [[file:../figs/silicio_T300K.jpg]]
+
+**** :B_ignoreheading:
+     :PROPERTIES:
+     :BEAMER_env: ignoreheading
+     :END:
+\footnotetext[2]{Figura de Sedra and Smith, Microelectronic Circuits}
 
 
 ** Dopaje de semiconductores
@@ -313,12 +353,26 @@
 
 *** Ecuación del Diodo
 
-- $$I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]$$ donde $I_{0}$ es la corriente de saturación en oscuridad del diodo, $V$ la tensión aplicada al diodo y $m$ el factor de idealidad del diodo.
+\[
+\boxed{I_{D}=I_{0}\cdot[\exp(\frac{V}{m\cdot V_{T}})-1]}
+\] 
 
-- Para una temperatura ambiente de $\SI{300}{\kelvin}$,
-$$V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}=\SI{25.85}{\milli\volt}$$ donde
-$\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
-(en grados Kelvin), y $\mathrm{e}$ es la carga del electrón.
+- $I_{0}$: corriente de saturación en oscuridad del diodo,
+- $V$: tensión aplicada al diodo
+- $m$: factor de idealidad del diodo (1 o 2)
+
+\[
+V_{T}=\frac{\mathrm{k}T}{\mathrm{e}}
+\] 
+
+\[
+V_T(\SI{300}{\kelvin}) = \SI{25.85}{\milli\volt}
+\]
+
+- $\mathrm{k}$: constante de Boltzmann
+- $T$: temperatura del diodo (en grados Kelvin)
+- $\mathrm{e}$: carga del electrón
+
 
 *** 
 
@@ -327,57 +381,53 @@ $\mathrm{k}$ es la constante de Boltzmann, $T$ la temperatura del diodo
 
 * Unión P-N iluminada
 
-*** 
+*** Efecto fotoeléctrico
+-  Efecto fotoeléctrico: *los electrones se desplazan a la banda de conducción por el aporte energético de fotones* ($E_{f}=\frac{h\cdot c}{\lambda}$).
+
 
 [[../figs/CelulaSolar.pdf]]
 
-*** Efecto fotoeléctrico
- #+ATTR_BEAMER: :overlay <+->
--  Efecto fotoeléctrico: *los electrones se desplazan a la banda de conducción por el aporte energético de fotones* ($E_{f}=\frac{h\cdot c}{\lambda}$).
+*** Unión p-n iluminada
 
 -  Al *iluminar una unión p-n*, el *campo eléctrico* de la unión conduce los portadores y *dificulta la recombinación*.
 
--  La *fotocorriente* es ahora *aprovechable* por un circuito externo (/corriente de iluminación, corriente de generación/)
-
--  La presencia de *tensión en los terminales* de la unión (por ejemplo, caída de tensión en una resistencia alimentada por la fotocorriente) *favorece la recombinación* (/corriente de oscuridad o corriente de diodo/).
-
-
-*** Absorción de luz y generación de portadores
-
- #+ATTR_BEAMER: :overlay <+->
--  Si el *fotón es poco energético* ($E_{f}<E_{g}$) *no interactúa con
-   el semiconductor* (como si fuese transparente)
-
-   -  Fotones en el espectro visible ($400\, nm<\lambda<700\, nm$) y
-      ultravioleta ($\lambda<400\, nm$) rompen enlaces.
-
-   -  Si $\lambda>1100\, nm$ (infrarrojo) el fotón no interactúa.
-
--  Los *fotones más energéticos* (baja longitud de onda) son *absorbidos en la superficie*.
-
--  Los *fotones menos energéticos* (alta longitud de onda) penetran en el interior hasta *romper un enlace*.
-
-*** Absorción de luz y generación de portadores
- #+ATTR_BEAMER: :overlay <+->
--  Los fotones con $E_{f}<E_{g}$ atraviesan el cristal sin ser absorbidos: *pérdidas de no-absorción*
-
--  Fotones con $E_{f}>E_{g}$:
-
-   -  Debido a anchura del semiconductor y coeficiente de absorción del
-      material parte no son absorbidos: *pérdidas de transmisión*
-
-   -  Debido a diferencia de índices de refracción: *pérdidas de
-      reflexión*
-
-   -  Parte de los portadores generadores se recombinan dentro del
-      dispositivo: *pérdidas por recombinación*
-
-* Funcionamiento de una célula solar
-
-*** 
 
 [[../figs/CelulaSolar.pdf]]
 
+*** Corriente de Iluminación
+
+-  La *fotocorriente* es ahora *aprovechable* por un circuito externo (/corriente de iluminación, corriente de generación/)
+
+
+[[../figs/CelulaSolar.pdf]]
+
+
+*** Tensión en Terminales
+
+-  La presencia de *tensión en los terminales* de la unión (por ejemplo, caída de tensión en una resistencia alimentada por la fotocorriente) *favorece la recombinación* (/corriente de oscuridad o corriente de diodo/).
+
+[[../figs/CelulaSolar.pdf]]
+
+
+
+*** Absorción de luz y generación de portadores
+
+ #+ATTR_BEAMER: :overlay <+->
+- Si el *fotón es poco energético* ($E_{f}<E_{g}$) *no interactúa con el semiconductor* (como si fuese transparente)
+
+- Fotones con $E_{f}>E_{g}$:
+  #+ATTR_BEAMER: :overlay <.->
+  - Los *fotones más energéticos* (baja longitud de onda) son *absorbidos en la superficie* (no rompen enlace)
+
+  - Los *fotones menos energéticos* (alta longitud de onda) penetran en el interior hasta *romper un enlace*.
+
+- Pérdidas:
+  #+ATTR_BEAMER: :overlay <.->
+  - Diferencia de índices de refracción: *pérdidas de reflexión*
+
+  - Parte de los portadores generadores se recombinan dentro del dispositivo: *pérdidas por recombinación*
+
+* Funcionamiento de una célula solar
 
 ** Curva IV y Puntos Característicos
 *** Característica I-V de iluminación
@@ -393,19 +443,25 @@ $$I_{D}=I_{0}\cdot\left[\exp\left(\frac{e\cdot V}{m\cdot k\cdot
 
 **** Corriente de Cortocircuito
 
-$$I_{sc}=I(V=0)\Rightarrow I_{D}=0\Rightarrow I=I_{L}$$
-
+#+BEGIN_EXPORT latex
+\[
+I_{sc}=I_L
+\]
+#+END_EXPORT
 **** Tensión de Circuito Abierto
 
-$$V_{oc}=V(I=0)\Rightarrow I_{L}=I_{D}\Rightarrow
-V_{oc}=m\cdot\frac{k\cdot
-  T_{c}}{e}\cdot\ln\left(\frac{I_{L}}{I_{0}}+1\right)$$
-
+#+BEGIN_EXPORT latex
+\[
+V_{oc}=m \cdot \frac{k \cdot T_{c}}{e}\cdot\ln\left(\frac{I_{L}}{I_{0}}+1\right)
+\]
+#+END_EXPORT
 **** Ecuación general
 
-$$I=I_{sc}\cdot\left[1-\exp\left(\frac{e\cdot(V_{oc}-V)}{m\cdot k\cdot
-      T_{c}}\right)\right]$$
-
+#+BEGIN_EXPORT latex
+\[
+I = I_{sc} \cdot \left[1-\exp\left(\frac{e \cdot (V_{oc}-V)}{m \cdot k \cdot T_{c}}\right)\right]
+\]
+#+END_EXPORT
 
 *** Punto de máxima potencia
 **** $0<V<V_{mpp}$
@@ -463,11 +519,19 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 *** Radiación
 
    -  *Corriente de cortocircuito proporcional a intensidad de radiación*
-      $I_{sc} = I^*_{sc}\cdot\frac{G_{ef}}{G^{*}}$
+      
+#+BEGIN_EXPORT latex
+\[
+\boxed{I_{sc} = I^*_{sc}\cdot\frac{G_{ef}}{G^{*}}}
+\]
+#+END_EXPORT
 
    -  Relación logarítmica con tensión de circuito abierto:
-      $V_{oc2}=V_{oc1}+\frac{mkT}{e}\cdot\ln(G_2/G_1)$
-
+     #+BEGIN_EXPORT latex
+     \[
+     V_{oc2}=V_{oc1}+\frac{mkT}{e}\cdot\ln(G_2/G_1)
+     \]
+     #+END_EXPORT
    -  El factor de forma aumenta ligeramente
 
    -  La eficiencia crece de forma logarítmica hasta determinado nivel.
@@ -480,7 +544,12 @@ $$\eta = \frac{I_{mpp}\cdot V_{mpp}}{A \cdot G}$$
 
    -  Se estrecha el salto entre banda de valencia y conducción: aumenta /ligeramente/ la fotocorriente
 
-   -  *Disminuye linealmente la tensión de circuito abierto*: $dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}$
+   -  *Disminuye linealmente la tensión de circuito abierto*: 
+     #+BEGIN_EXPORT latex
+     \[
+       \boxed{dV_{oc}/dT_{c}=\SI{-2.3}{\milli\volt\per\celsius}}
+     \]
+     #+END_EXPORT
 
    -  Disminuye el factor de forma y la eficiencia:
       $d\eta/dT_{c}=\SI{-0.4}{\percent\per\celsius}$
