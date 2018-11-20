@@ -555,6 +555,9 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 | $d_n$ | 199 | 230 | 261 | 292 | 322 | 347 |
 
 ** Radiación solar en la superficie terrestre
+*** 
+
+[[../figs/ProcedimientoCalculoRadiacionInclinada_G0.pdf]]
 
 *** Interacción de la radiación con la atmósfera
 
@@ -714,11 +717,11 @@ F_{Dd} = \begin{cases}
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/PVUrban.png]]
 
+
+** Irradiancia a partir de irradiación diaria
 *** 
 
 [[../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf]]
-
-** Irradiancia a partir de irradiación diaria
 
 *** Planteamiento
 
@@ -840,16 +843,6 @@ D_{ef}^{cir}(\beta,\alpha) &= D^{cir}(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)
 R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot(1-FT_{R}(\beta))
 \end{align*}
 #+END_EXPORT
-*** Coeficientes
-
-
-| Grado de Suciedad | $\frac{T_{sucio}(0)}{T_{limpio}(0)}$ | $a_{r}$ | $c_{2}$ |
-|-------------------+--------------------------------------+---------+---------|
-| Limpio            |                                    1 |    0.17 |  -0.069 |
-| Bajo              |                                 0.98 |    0.20 |  -0.054 |
-| Medio             |                                 0.97 |    0.21 |  -0.049 |
-| Alto              |                                 0.92 |    0.27 |  -0.023 |
-
 *** Pérdidas anuales
 
 [[../figs/GefVSG.pdf]]
