@@ -706,6 +706,173 @@ F_{Dd} = \begin{cases}
 
    -  Mes de Septiembre (día 261) en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal
       $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+* Bases de Datos
+** Introducción
+*** Variabilidad Solar
+- La *radiación extra-atmosférica* se puede expresar de forma *analítica* en función del día, hora y latitud.
+- La *radiación en la superficie terrestre* es un *proceso estocástico* (aleatorio) debido a la interacción con la atmósfera.
+  - Variabilidad Temporal
+  - Variabilidad Espacial
+*** Estimaciones a Largo Plazo
+- Nos interesan *estimaciones a largo plazo* del funcionamiento de los sistemas FV en una localización concreta.
+- Las fuentes de datos de radiación solar deben:
+  - *capturar el comportamiento a largo plazo* (variabilidad interanual)
+  - y ser *representativas de la localización* (variabilidad espacial).
+
+*** Variabilidad Temporal
+#+ATTR_LATEX: :height 0.45\textheight
+[[../figs/VariabilidadRadiacionDiario.pdf]]
+
+- La variabilidad temporal *incrementa con la resolución temporal* (ej. mayor para valores diarios que para medias mensuales).
+- Las fluctuaciones son *más altas en invierno que en verano*.
+- Reproducir *tendencias a largo plazo* requiere *series temporales largas* (recomendado 10 años).
+
+*** Variabilidad Espacial
+
+#+ATTR_LATEX: :height 0.4\textheight
+[[../figs/SpatialVariability.jpg]]
+
+- La variabilidad espacial depende de la *climatología local*.
+- La variabilidad espacial es *mayor en invierno que en verano* para una misma localización.
+- Las medidas son representativas de las localizaciones cercanas en una distancia limitada (aprox. 10 kms.)
+
+*** Resumen
+
+**** Requerimientos
+Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
+  - *Medidas Cercanas*: $\leq \SI{10}{km}$
+  - *Series Temporales Largas*: $\simeq 10 \text{ años}$
+
+** Fuentes de Datos
+*** Estaciones Meteorológicas
+
+  - Series temporales largas
+  - Alta resolución temporal ($\SI{1}{\min}$)
+  - Baja resolución espacial.
+  - Los errores se deben al medidor (no se emplean modelos).
+
+***** Piranómetro
+#+BEGIN_CENTER
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/piranometro.jpg]]
+#+END_CENTER
+
+
+*** Imágenes de Satelite
+
+  - Baja resolución temporal ($\SI{1}{hora}$).
+
+  - Alta resolución espacial ($\SI{15}{km}$).
+
+  - La radiación global se estima mediante el procesado de las imágenes obtenidas por los radiómetros de los satélites.
+
+  - Los errores se deben a los modelos.
+
+
+*** Métodos Híbridos
+
+  - Las medidas terrestres se mezclan con las estimaciones de satélite para mejorar la resolución espacial.
+  - Interpolación Espacial.
+    - *Inverse Distance Weighting (IDW)* ($d$ es la distancia entre los puntos $x_0$ y  $x_i$)
+      #+BEGIN_EXPORT latex
+      \[
+      \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
+      \]
+
+      \[
+	w_i = 1/d^2(x_0, x_i)
+      \]
+     #+END_EXPORT
+    - *Kriging Ordinario*
+    - *Kriging with External Drift (KED)*
+
+*** Fuentes de Datos
+
+https://github.com/oscarperpinan/mds/wiki
+
+- Estaciones Meteorológicas: https://github.com/oscarperpinan/mds/wiki/stations
+- Satélite
+  - NASA: https://github.com/oscarperpinan/mds/wiki/nasa
+  - CM SAF: https://github.com/oscarperpinan/mds/wiki/cmsaf
+  - LSA SAF: https://github.com/oscarperpinan/mds/wiki/lsasaf
+
+- Métodos Híbridos
+  - PVGIS: https://github.com/oscarperpinan/mds/wiki/pvgis
+  - ADRASE: https://github.com/oscarperpinan/mds/wiki/adrase
+
+** Control de Calidad
+*** Introducción
+- Es necesario filtrar y corregir las medidas para eliminar datos erróneos y valores extremos.
+  - Límites Físicos
+  - Coherencia Espacial
+  - Análisis Estadístico de las Desviaciones
+
+*** Límites Físicos
+
+- El índice de claridad no puede ser mayor que 1 (la irradiación global diaria no puede superar la extra-atmosférica).
+#+BEGIN_EXPORT latex
+\[
+  K_{dT} \leq 1
+\]
+
+\[
+G_d(0) \leq B_{0d}(0)
+\]
+#+END_EXPORT
+
+- El índice de claridad debe ser al menos 0.03
+#+BEGIN_EXPORT latex
+  \[
+  K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
+  \]
+#+END_EXPORT
+
+*** Coherencia Espacial
+
+- Las medidas de una estación se deben comparar con *estaciones cercanas* (por ejemplo, mediante interpolación espacial).
+- La comparación se debe realizar con *valores agregados* (medias diarias o mensuales).
+
+*** Análisis Estadístico de las Desviaciones
+
+- Desviaciones, $\mathbf{D}$, entre observaciones, $\mathbf{O}$, y un modelo, $\mathbf{M}$ (u otro conjunto de observaciones):
+
+#+BEGIN_EXPORT latex
+\[
+\mathbf{O} = \left\{ o_1 \dots o_n \right\}
+\]
+
+\[
+\mathbf{M} = \left\{ m_1 \dots m_n  \right\}
+\]
+
+\[
+\mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
+\]
+#+END_EXPORT
+
+*** Métricas
+
+- Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
+#+BEGIN_EXPORT latex
+  \[
+  MBD = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
+  \]
+#+END_EXPORT
+
+- Root Mean Square Error (RMSD), diferencia cuadrático media:
+#+BEGIN_EXPORT latex
+  \[
+  RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
+  \]
+#+END_EXPORT
+
+- Mean Absolute Deviation (MAD) (El RMSD no es robusto, un error puntual puede distorsionar el estimador, y depende del número de muestras)
+
+#+BEGIN_EXPORT latex
+  \[
+  MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
+  \]
+#+END_EXPORT
 * Radiación Solar en Generadores FV
 
 ** Introducción
@@ -891,173 +1058,6 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 *** Comparación entre Sistemas
 
 [[../figs/compSystemsG0.png]]
-* Bases de Datos
-** Introducción
-*** Variabilidad Solar
-- La *radiación extra-atmosférica* se puede expresar de forma *analítica* en función del día, hora y latitud.
-- La *radiación en la superficie terrestre* es un *proceso estocástico* (aleatorio) debido a la interacción con la atmósfera.
-  - Variabilidad Temporal
-  - Variabilidad Espacial
-*** Estimaciones a Largo Plazo
-- Nos interesan *estimaciones a largo plazo* del funcionamiento de los sistemas FV en una localización concreta.
-- Las fuentes de datos de radiación solar deben:
-  - *capturar el comportamiento a largo plazo* (variabilidad interanual)
-  - y ser *representativas de la localización* (variabilidad espacial).
-
-*** Variabilidad Temporal
-#+ATTR_LATEX: :height 0.45\textheight
-[[../figs/VariabilidadRadiacionDiario.pdf]]
-
-- La variabilidad temporal *incrementa con la resolución temporal* (ej. mayor para valores diarios que para medias mensuales).
-- Las fluctuaciones son *más altas en invierno que en verano*.
-- Reproducir *tendencias a largo plazo* requiere *series temporales largas* (recomendado 10 años).
-
-*** Variabilidad Espacial
-
-#+ATTR_LATEX: :height 0.4\textheight
-[[../figs/SpatialVariability.jpg]]
-
-- La variabilidad espacial depende de la *climatología local*.
-- La variabilidad espacial es *mayor en invierno que en verano* para una misma localización.
-- Las medidas son representativas de las localizaciones cercanas en una distancia limitada (aprox. 10 kms.)
-
-*** Resumen
-
-**** Requerimientos
-Una estimación de la productividad de un SFV confiable y representativa en el largo plazo requiere:
-  - *Medidas Cercanas*: $\leq \SI{10}{km}$
-  - *Series Temporales Largas*: $\simeq 10 \text{ años}$
-
-** Fuentes de Datos
-*** Estaciones Meteorológicas
-
-  - Series temporales largas
-  - Alta resolución temporal ($\SI{1}{\min}$)
-  - Baja resolución espacial.
-  - Los errores se deben al medidor (no se emplean modelos).
-
-***** Piranómetro
-#+BEGIN_CENTER
-#+ATTR_LATEX: :height 0.5\textheight
-[[../figs/piranometro.jpg]]
-#+END_CENTER
-
-
-*** Imágenes de Satelite
-
-  - Baja resolución temporal ($\SI{1}{hora}$).
-
-  - Alta resolución espacial ($\SI{15}{km}$).
-
-  - La radiación global se estima mediante el procesado de las imágenes obtenidas por los radiómetros de los satélites.
-
-  - Los errores se deben a los modelos.
-
-
-*** Métodos Híbridos
-
-  - Las medidas terrestres se mezclan con las estimaciones de satélite para mejorar la resolución espacial.
-  - Interpolación Espacial.
-    - *Inverse Distance Weighting (IDW)* ($d$ es la distancia entre los puntos $x_0$ y  $x_i$)
-      #+BEGIN_EXPORT latex
-      \[
-      \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
-      \]
-
-      \[
-	w_i = 1/d^2(x_0, x_i)
-      \]
-     #+END_EXPORT
-    - *Kriging Ordinario*
-    - *Kriging with External Drift (KED)*
-
-*** Fuentes de Datos
-
-https://github.com/oscarperpinan/mds/wiki
-
-- Estaciones Meteorológicas: https://github.com/oscarperpinan/mds/wiki/stations
-- Satélite
-  - NASA: https://github.com/oscarperpinan/mds/wiki/nasa
-  - CM SAF: https://github.com/oscarperpinan/mds/wiki/cmsaf
-  - LSA SAF: https://github.com/oscarperpinan/mds/wiki/lsasaf
-
-- Métodos Híbridos
-  - PVGIS: https://github.com/oscarperpinan/mds/wiki/pvgis
-  - ADRASE: https://github.com/oscarperpinan/mds/wiki/adrase
-
-** Control de Calidad
-*** Introducción
-- Es necesario filtrar y corregir las medidas para eliminar datos erróneos y valores extremos.
-  - Límites Físicos
-  - Coherencia Espacial
-  - Análisis Estadístico de las Desviaciones
-
-*** Límites Físicos
-
-- El índice de claridad no puede ser mayor que 1 (la irradiación global diaria no puede superar la extra-atmosférica).
-#+BEGIN_EXPORT latex
-\[
-  K_{dT} \leq 1
-\]
-
-\[
-G_d(0) \leq B_{0d}(0)
-\]
-#+END_EXPORT
-
-- El índice de claridad debe ser al menos 0.03
-#+BEGIN_EXPORT latex
-  \[
-  K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
-  \]
-#+END_EXPORT
-
-*** Coherencia Espacial
-
-- Las medidas de una estación se deben comparar con *estaciones cercanas* (por ejemplo, mediante interpolación espacial).
-- La comparación se debe realizar con *valores agregados* (medias diarias o mensuales).
-
-*** Análisis Estadístico de las Desviaciones
-
-- Desviaciones, $\mathbf{D}$, entre observaciones, $\mathbf{O}$, y un modelo, $\mathbf{M}$ (u otro conjunto de observaciones):
-
-#+BEGIN_EXPORT latex
-\[
-\mathbf{O} = \left\{ o_1 \dots o_n \right\}
-\]
-
-\[
-\mathbf{M} = \left\{ m_1 \dots m_n  \right\}
-\]
-
-\[
-\mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
-\]
-#+END_EXPORT
-
-*** Métricas
-
-- Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
-#+BEGIN_EXPORT latex
-  \[
-  MBD = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
-  \]
-#+END_EXPORT
-
-- Root Mean Square Error (RMSD), diferencia cuadrático media:
-#+BEGIN_EXPORT latex
-  \[
-  RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
-  \]
-#+END_EXPORT
-
-- Mean Absolute Deviation (MAD) (El RMSD no es robusto, un error puntual puede distorsionar el estimador, y depende del número de muestras)
-
-#+BEGIN_EXPORT latex
-  \[
-  MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
-  \]
-#+END_EXPORT
 
 
 
