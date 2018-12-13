@@ -37,8 +37,11 @@
    $$C_{A}=\frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{L}$$
 
 -  Capacidad de acumulación: :: relación entre la capacidad útil del acumulador y la energía consumida por la carga.
-$$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
-
+#+BEGIN_EXPORT latex
+\[
+  C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}
+\]
+#+END_EXPORT
 ** Objetivo
 *** Dimensionado
 **** La tarea de dimensionar un sistema fotovoltaico consiste en encontrar la mejor solución de compromiso entre coste y fiabilidad.
@@ -51,32 +54,21 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
 
 ** Ejemplos
 *** Generador grande, acumulador pequeño
+**** Combinación de $C_{A}$ alta y $C_{S}$ baja
+- Ciclos diarios con descargas profundas y frecuentes: perjudicial.
 
--  La *combinación de $C_{A}$ alta y $C_{S}$ baja* conduce a ciclados
-   diarios con descargas profundas y ciclados estacionales
-   cortos.
+- Ciclos estacionales cortos: beneficioso (no estratificación).
 
-   -  Las descargas profundas y frecuentes son perjudiciales para la
-     batería,
-
-   -  La corta longitud de los ciclados estacionales es beneficiosa.
-
-   -  La estratificación será fácilmente compensable con sobrecargas
-      controladas aplicando el mantenimiento adecuado.
+- Estratificación compensable con sobrecargas controladas.
 
 *** Generador pequeño, acumulador grande
 
--  La *combinación de $C_{A}$ baja y $C_{S}$ alta* conduce a ciclados
-   diarios con descargas moderadas y ciclados estacionales largos.
+**** Combinación de $C_{A}$ baja y $C_{S}$ alta
+- Ciclos diarios con descargas moderadas: beneficioso
 
-   -  La baja profundidad de descarga es beneficiosa para la batería,
+- Ciclos estaciones largos:  perjudicial (favorece sulfatación y estratificación)
 
-   -  La longitud de los ciclados estacionales puede favorecer la
-      sulfatación y la estratificación.
-
-   -  Dado el tamaño relativo del generador frente al acumulador, la
-      frecuencia de sobrecargas será baja y la estratificación no será
-      tan fácilmente compensada.
+- Baja frecuencia de sobrecargas, estratificación díficil de compensar.
 
 *** Sistemas Híbridos
 - Cuando $LLP$ es muy alta (p.e. radioenlaces) o la demanda es muy
@@ -86,53 +78,26 @@ $$C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L}$$
 - Es habitual incluir un grupo electrógeno que suministra la energía
   deficitaria y permite reducir el tamaño del SFA.
 
-- Sinergia:
+- *Sinergia*:
 
-  - El grupo electrógeno reduce el tamaño del generador FV y el
-    acumulador sin reducir fiabilidad.
+  - El grupo electrógeno *reduce el tamaño* del *generador FV* y el
+    *acumulador* sin reducir fiabilidad.
 
-  - El generador fotovoltaico reduce horas de funcionamiento del
-    grupo: gasto en combustible y mantenimiento.
+  - El generador fotovoltaico *reduce horas de funcionamiento del grupo*: gasto en combustible y mantenimiento.
 
 ** Métodos de dimensionado
-*** Métodos de dimensionado
-
-**** Método del LLP
-
-A partir de simulaciones o de curvas de isofiabilidad, establece los
-valores de $C_{A}$ y $C_{S}$ para un consumo determinado.
-
-**** Método del mes peor
-- Determina el tamaño de batería y generador para abastecer el consumo durante el mes con peor relación entre radiación y consumo.
-- Si el consumo es constante, el mes peor es aquel de menor radiación.
-- Recomendaciones de expertos según zona geográfica y aplicación (tipología de consumo).
 
 *** Método del LLP
 
+- *Series sintéticas* ("simuladas") de radiación solar que reproducen el comportamiento estadístico en el lugar.
+- Establece valores de $C_{A}$ y $C_{S}$ para un consumo determinado con *curvas de isofiabilidad*.
+#+ATTR_LATEX: :height 0.65\textheight
 [[../figs/CurvasLLP.pdf]]
 
-*** Relación entre tamaño de generador y LLP
-
-- $C_{s}=3$
-
-[[../figs/CurvasLLP_Cs3.pdf]]
-
-*** Método de LLP
-
--  Este proceso de cálculo se apoya en series de valores de radiación
-  solar que reproducen el comportamiento estadístico de la
-  irradiación.
-
--  La predicción del comportamiento del sistema limitada por la
-  incertidumbre asociada.
-
--  Los ejercicios de cálculo para probabilidades de pérdida de carga
-  inferiores a $LLP=\num{1e-2}$ carecen de utilidad.
-
-**** Recordatorio
-"[...] los modelos de simulación muy exactos pueden proporcionar números también muy exactos, pero ello no significa que se traduzcan automáticamente en predicciones también muy exactas."
-
 *** Método del mes peor
+- Determina el tamaño de batería y generador para abastecer el consumo *durante el mes con peor relación entre radiación y consumo*.
+- Si el consumo es constante, el mes peor es aquel de menor radiación.
+- Aplican recomendaciones de expertos según zona geográfica y aplicación (tipología de consumo).
 
 **** Valores según el UTS for SHS
 
@@ -161,7 +126,7 @@ valores de $C_{A}$ y $C_{S}$ para un consumo determinado.
 - Carga en Ah
 #+BEGIN_EXPORT latex
 \[
-Q_L = L / V_b
+\boxed{Q_L = L / V_b}
 \]
 #+END_EXPORT
 
@@ -170,7 +135,7 @@ Q_L = L / V_b
 - Capacidad en Ah (es recomendable no usar baterías en paralelo)
 #+BEGIN_EXPORT latex
 \[
-Q_B = \frac{C_S \cdot Q_L}{PD}
+C_{s}=\frac{C_{U}}{L}=\frac{C_{B}\cdot PD_{max}}{L} \rightarrow \boxed{Q_B = \frac{C_S \cdot Q_L}{PD_{max}}}
 \]
 #+END_EXPORT
 
@@ -185,14 +150,18 @@ C_{A} = \frac{\eta_{G}\cdot A_{G}\cdot\overline{G_{d}}(\beta,\alpha)}{Q_L \cdot 
 \]
 #+END_EXPORT
 
-
-- Corriente de funcionamiento (determina número de ramas)
-
+- Potencia del generador (suponiendo $V_{mpp} \simeq V_{b}$)
 #+BEGIN_EXPORT latex
-\begin{align*}
-I_{g}^{*}\cdot V_{b} &= \eta_{G}\cdot A_{G}\cdot G_{stc}\\
-I_{g}^{*} &=  \frac{C_{A}\cdot Q_{L}\cdot G_{stc}}{\overline{G_{d}}(\beta,\alpha)}
-\end{align*}
+\[
+I_{g}^{*}\cdot V_{b} = \eta_{G}\cdot A_{G}\cdot G^*
+\]
+#+END_EXPORT
+
+- Corriente de funcionamiento (determina número de ramas):
+#+BEGIN_EXPORT latex
+\[
+\boxed{I_{g}^{*} =  \frac{C_{A}\cdot Q_{L}\cdot G^*}{\overline{G_{d}}(\beta,\alpha)}}
+\]
 #+END_EXPORT
 
 - Hay que elegir el número de módulos en serie adecuados a $V_b$
@@ -225,9 +194,13 @@ $\eta_{inv}=0.9$, $\eta_{r}=0.95$, $\eta_{bat}=0.85$ y $\eta_{c}=0.98$.
 
 [[../figs/ConsumoGamma.pdf]]
 
+#+BEGIN_QUOTE
+'[...] mucha gente consume poco y poca gente consume mucho'
+#+END_QUOTE
+
 *** Relación entre el consumo y la fiabilidad
 - La variación en el consumo se amplifica en la variación de la LLP.
-- Diseño robusto: funcionamiento en amplio abanico de condiciones (ambientales y humanas).
+- *Diseño robusto*: funcionamiento en amplio abanico de condiciones (ambientales y humanas).
 #+ATTR_LATEX: :height 0.7\textheight
 [[../figs/ConsumoLLP.pdf]]
 
