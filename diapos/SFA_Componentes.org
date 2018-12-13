@@ -207,6 +207,72 @@ Los factores que influyen sobre la resistencia del acumulador al ciclado son:
 
 -  *La temperatura*: las temperaturas altas aceleran la corrosión en los electrodos disminuyendo los ciclos de vida.
 
+** Tipos de acumuladores
+
+*** Características generales
+
+-  Un acumulador incorporado a un SFA debe ser *capaz de funcionar sometido a ciclados diarios y anuales de carga y descarga*, teniendo en cuenta que la carga entregada por el generador depende directamente de la radiación (variable en los períodos intradiario e intraanual).
+
+-  Debido a las posibles fluctuaciones en la carga aportada, es probable que se sucedan *periodos prolongados en carga parcial*.
+
+-  Es habitual que las *descargas sean a baja intensidad con periodos de descarga largos*, típicamente en torno a las 100 horas.
+
+*** Baterías de arranque
+
+- Habitualmente empleadas en *automóviles*
+
+- Fácilmente localizables en cualquier *mercado local a bajo precio* (relativo)
+
+- *Opción frecuentemente empleada* en sistemas de electrificación rural de *pequeño tamaño* o como *reemplazo* de baterías estropeadas
+
+- Buen comportamiento en descarga de alta intensidad y a bajas temperaturas
+
+- *No son resistentes frente al ciclado*
+
+*** Baterías de tracción
+
+-  Empleadas, por ejemplo, en *carretillas elevadoras*.
+
+-  Soportan *elevado número de ciclos profundos de carga-descarga*.
+
+-  Requieren *aportación de agua* y *mantenimiento frecuente*.
+
+-  Empleo en SFA sólo cuando exista mantenimiento regular.
+
+*** Baterías estacionarias
+
+-  Empleadas en sistemas de alimentación ininterrumpida (*UPS*) o instalaciones remotas (por ejemplo, radioenlaces).
+
+-  Funcionan en *régimen de flotación*.
+
+-  Gran reserva de electrolito aunque realizan poco uso de agua.
+
+-  *Resistencia a la corrosión* y elevada fiabilidad.
+
+-  *Opción muy interesante para SFA*. Precio más elevado frente a las anteriores opciones.
+
+*** Elección de batería
+
+**** Criterios a tener en cuenta
+
+   - *Requisitos técnicos* (capacidad, tipo de ciclado, etc.)
+
+   - *Coste del sistema*
+
+   - Recursos de *mantenimiento*.
+
+   - *Disponibilidad de reemplazo* en el mercado local
+
+   - Capacidad de intervención del usuario.
+
+**** Para aplicaciones fotovoltaicas se recomienda
+
+   - *Baterías estacionarias aireadas de placa positiva tubular*
+
+   - *Baterías SLI modificadas*: placas más gruesas, mayor cantidad de
+     electrolito por encima de las placas, con aleación de Pb-Sb en la
+     rejilla y vaso transparente.
+
 
 ** Composición
 
@@ -262,74 +328,6 @@ Los factores que influyen sobre la resistencia del acumulador al ciclado son:
   - Resistentes a la oxidación
   - Aislantes eléctricos
   - Sin contaminantes
-
-** Tipos de acumuladores
-
-*** Características generales
-
--  Un acumulador incorporado a un SFA debe ser *capaz de funcionar sometido a ciclados diarios y anuales de carga y descarga*, teniendo en cuenta que la carga entregada por el generador depende directamente de la radiación (variable en los períodos intradiario e intraanual).
-
--  Debido a las posibles fluctuaciones en la carga aportada, es probable que se sucedan *periodos prolongados en carga parcial*.
-
--  Es habitual que las *descargas sean a baja intensidad con periodos de descarga largos*, típicamente en torno a las 100 horas.
-
-*** Baterías de arranque
-
--  Habitualmente empleadas en automóviles
-
--  Fácilmente localizables en cualquier mercado local a bajo precio (relativo)
-
--  Opción frecuentemente empleada en sistemas de electrificación rural de pequeño tamaño
-
--  Reemplazo de baterías estropeadas
-
--  Buen comportamiento en descarga de alta intensidad y tienen buen rendimiento de descarga a bajas temperaturas.
-
--  No son resistentes frente al ciclado
-
-*** Baterías de tracción
-
--  Empleadas, por ejemplo, en carretillas elevadoras.
-
--  Resistencia suficiente para soportar un elevado número de ciclos profundos de carga-descarga.
-
--  Requieren aportación de agua y mantenimiento frecuente.
-
--  Empleo en SFA sólo cuando exista mantenimiento regular.
-
-*** Baterías estacionarias
-
--  Empleadas en sistemas de alimentación ininterrumpida (UPS) o instalaciones remotas (por ejemplo, radioenlaces).
-
--  Funcionan en régimen de flotación.
-
--  Gran reserva de electrolito aunque realizan poco uso de agua.
-
--  Resistencia a la corrosión y elevada fiabilidad.
-
--  Opción muy interesante para SFA. Precio más elevado frente a las anteriores opciones.
-
-*** Elección de batería
-
-- Criterios a tener en cuenta:
-
-  - *Requisitos técnicos* (capacidad, tipo de ciclado, etc.)
-
-  - *Coste del sistema*
-
-  - Recursos de *mantenimiento* disponibles durante la vida del sistema,
-
-  - *Disponibilidad de reemplazo* en el mercado local
-
-  - Capacidad de intervención del usuario.
-
-- *Para aplicaciones fotovoltaicas* se recomienda:
-
-  - *Baterías estacionarias aireadas de placa positiva tubular*
-
-  - *Baterías SLI modificadas*: placas más gruesas, mayor cantidad de
-    electrolito por encima de las placas, con aleación de Pb-Sb en la
-    rejilla y vaso transparente.
 
 * Regulador de carga
 
