@@ -1,4 +1,4 @@
-% Created 2018-04-09 lun 18:23
+% Created 2019-02-14 jue 16:00
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,7 @@
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
@@ -36,41 +37,49 @@
 \usetheme[hideothersubsections]{Goettingen}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
-\date{}
+\author{Oscar Perpiñán Lamigueiro}
+\date{\url{http://oscarperpinan.github.io}}
 \title{Solar Radiation on a Horizontal Plane}
 \subtitle{Fundamentals of PV Engineering}
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdfauthor={Oscar Perpiñán Lamigueiro},
  pdftitle={Solar Radiation on a Horizontal Plane},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.1 (Org mode 9.2)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Motivation}
-\label{sec:orgf902906}
-\begin{frame}[label={sec:org8e4a1f3}]{Solar Variability}
+\label{sec:orgdcde097}
+\begin{frame}[label={sec:org177e7ac}]{Solar Variability}
 \begin{itemize}
-\item Extraterrestrial solar radiation is a deterministic process (it depends on latitude, day of year, and time of day).
-\item However, global radiation is a stochastic (random) process because of the interaction with the atmosphere:
+\item \alert{Extraterrestrial} solar radiation is a \alert{deterministic process} (it depends on latitude, day of year, and time of day).
+\item However, \alert{global radiation} is a \alert{stochastic (random) process} because of the interaction with the atmosphere:
 \begin{itemize}
 \item Time variability
 \item Spatial variability
 \end{itemize}
 \end{itemize}
+
+\begin{center}
+\includegraphics[height=0.4\textheight]{/home/oscar/github/esf/figs/SolarRadiationComponents_NREL.png}
+\end{center}
 \end{frame}
-\begin{frame}[label={sec:orgbcdbe4d}]{Long-term Estimations}
+
+\begin{frame}[label={sec:orgcf26303}]{Long-term Estimations}
+We are interested in \alert{long-term estimations} of the performance of PV systems in a definite location.
+
+Solar radiation data sources must:
 \begin{itemize}
-\item We are interested in \alert{long-term estimations} of the performance of PV systems in a definite location.
-\item Solar radiation data sources must \alert{capture the long-term behaviour} (interannual variability) and be \alert{representative of the specified location} (spatial variability).
+\item \alert{capture the long-term behaviour} (interannual variability), and
+\item be \alert{representative of the specified location} (spatial variability).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgab36181}]{Time Variability}
+\begin{frame}[label={sec:orgce5d1c6}]{Time Variability}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/VariabilidadRadiacionDiario.pdf}
 \end{center}
@@ -84,7 +93,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orga5ea8de}]{Spatial Variability}
+\begin{frame}[label={sec:orgec2973c}]{Spatial Variability}
 \begin{center}
 \includegraphics[height=0.4\textheight]{../figs/SpatialVariability.jpg}
 \end{center}
@@ -98,19 +107,19 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org315e6c8}]{Summary: Measurements requirements}
-\begin{itemize}
-\item Reliable and representative long-term estimations of PV performance require:
+\begin{frame}[label={sec:org204fda5}]{Summary: Measurements requirements}
+\begin{block}{}
+\alert{Reliable} and \alert{representative} \alert{long-term estimations} of PV performance require:
 \begin{itemize}
 \item \alert{Nearby measurements}: \(\leq \SI{10}{km}\)
 \item \alert{Long time series}: \(\simeq \SI{10}{years}\)
 \end{itemize}
-\end{itemize}
+\end{block}
 \end{frame}
 
 \section{Data Sources}
-\label{sec:orgb3c4bc7}
-\begin{frame}[label={sec:org8c08b8a}]{Meteorological stations}
+\label{sec:org42d7db7}
+\begin{frame}[label={sec:org1b7a437}]{Meteorological stations}
 \begin{itemize}
 \item Long time series.
 \item High time resolution (\(\SI{1}{\min}\))
@@ -119,20 +128,14 @@
 \end{itemize}
 
 \begin{block}{Pyranometer}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/piranometro.jpg}
+\end{center}
 \end{block}
-\begin{columns}
-\begin{column}{0.4\columnwidth}
-\begin{center}
-\begin{center}
-\includegraphics[width=0.8\textwidth]{../figs/piranometro.jpg}
-\end{center}
-\end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
 
-\begin{frame}[label={sec:orga35a8dd}]{Satellite imaging}
+\begin{frame}[label={sec:org5bfdece}]{Satellite imaging}
 \begin{itemize}
 \item Low time resolution (\(\SI{1}{hour}\) or \(\SI{1}{day}\)).
 
@@ -142,15 +145,15 @@
 
 \item Errors due model inaccuracy (radiation is estimated).
 \end{itemize}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/satellite.png}
+\end{center}
 \end{frame}
 
-
-\begin{frame}[label={sec:org30a4df4}]{Hybrid methods}
+\begin{frame}[label={sec:orga2b1e0c}]{Hybrid methods}
+Ground measurements merged with satellite estimations to increase spatial resolution:
 \begin{itemize}
-\item Ground measurements merged with satellite estimations to increase spatial resolution.
-\item Spatial interpolation
-\begin{itemize}
-\item \alert{Inverse Distance Weighting (IDW)} (\(d\) is the distance between locations \(x_0\) and \(x_i\))
+\item \alert{Inverse Distance Weighting (IDW)} (\(x_0\) is the point where the estimation is required, \(x_i\) are the points with measurements available, \(d\) is the distance between locations \(x_0\) and \(x_i\))
 \[
 \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
 \]
@@ -161,84 +164,76 @@
 \item \alert{Ordinary Kriging}
 \item \alert{Kriging with External Drift (KED)}
 \end{itemize}
-\end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3f4b6aa}]{Data sources}
-\begin{block}{Wiki}
+\begin{frame}[label={sec:org8eba65a}]{Data sources}
 \url{https://github.com/oscarperpinan/mds/wiki}
-\end{block}
-\end{frame}
 
-\begin{frame}[label={sec:orgeebdc20}]{Data sources}
-\begin{block}{Meteorological Stations}
+\begin{itemize}
+\item Meteorological Stations
+\end{itemize}
 \url{https://github.com/oscarperpinan/mds/wiki/stations}
-\end{block}
-\end{frame}
 
-\begin{frame}[label={sec:org045456c}]{Data sources}
-\begin{block}{Satellite Estimations}
+
+\begin{itemize}
+\item Satellite Estimations
 \begin{itemize}
 \item NASA: \url{https://github.com/oscarperpinan/mds/wiki/nasa}
 \item CM SAF: \url{https://github.com/oscarperpinan/mds/wiki/cmsaf}
-\item LSA SAF: \url{https://github.com/oscarperpinan/mds/wiki/lsasaf}
 \end{itemize}
-\end{block}
-\end{frame}
 
-\begin{frame}[label={sec:org04adb32}]{Data sources}
-\begin{block}{Hybrid estimations}
+\item Hybrid estimations
 \begin{itemize}
 \item PVGIS: \url{https://github.com/oscarperpinan/mds/wiki/pvgis}
 \item ADRASE: \url{https://github.com/oscarperpinan/mds/wiki/adrase}
 \end{itemize}
-\end{block}
+\end{itemize}
 \end{frame}
 
 \section{Quality Control}
-\label{sec:org20e8c25}
-\begin{frame}[label={sec:org7fb50a5}]{Motivation}
-\begin{itemize}
-\item Measurements must be filtered and corrected to remove erroneous data and outliers.
+\label{sec:org8ee24e6}
+\begin{frame}[label={sec:orgdb26589}]{Motivation}
+Measurements must be \alert{filtered} and \alert{corrected} to remove erroneous data and outliers.
 \begin{itemize}
 \item Physical limits
 \item Spatial coherence
 \item Statistical analysis of deviations
 \end{itemize}
-\end{itemize}
 \end{frame}
 
 
-\begin{frame}[label={sec:org4c72342}]{Physical limits}
+\begin{frame}[label={sec:orgfd844e9}]{Physical limits}
 \begin{itemize}
-\item Daily clearness index\footnote{Clearness index is defined as the ratio \(K_{dT} = G_d(0) / B_{0d}(0)\).} cannot exceed 1 (daily global irradiation cannot exceed extraterrestrial solar irradiation).
+\item \alert{Upper limit}: daily global irradiation cannot exceed extraterrestrial solar irradiation (daily clearness index\footnote{Clearness index is defined as the ratio \(K_{dT} = G_d(0) / B_{0d}(0)\).} cannot exceed 1).
 \end{itemize}
-\[
-  K_{dT} \leq 1
-\]
-
 \[
 G_d(0) \leq B_{0d}(0)
 \]
 
+\[
+  K_{dT} \leq 1
+\]
+
 \begin{itemize}
-\item Clearness index must be higher than 0.03
+\item \alert{Lower limit}: clearness index must be higher than 0.03
 \end{itemize}
 \[
 K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org3371feb}]{Spatial coherence}
+\begin{frame}[label={sec:orgebbed59}]{Spatial coherence}
+Solar radiation measurements must be coherent between stations in a region.
+
 \begin{itemize}
-\item Measurements from a station should be compared with \alert{nearby stations} (for example, using spatial interpolation)
+\item Measurements from a station should be compared with \alert{nearby stations} (for example, using IDW spatial interpolation)
 \item Comparison must be established with \alert{aggregated values} (daily or monthly averages).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org511fa6c}]{Statistical Analysis of Deviations}
+\begin{frame}[label={sec:orge5a6736}]{Statistical Analysis of Deviations}
 \begin{itemize}
-\item Statistical analysis of the deviations, \(\mathbf{D}\), between Observations, \(\mathbf{O}\), and a Model, \(\mathbf{M}\) (or another set of observations):
+\item Deviations, \(\mathbf{D}\), between Observations, \(\mathbf{O}\), and a Model, \(\mathbf{M}\) (or another set of observations):
 \end{itemize}
 
 \[
@@ -254,7 +249,15 @@ K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org0c23f45}]{Metrics}
+\begin{frame}[label={sec:orgaeff53f}]{Accuracy and Precision}
+\begin{center}
+\includegraphics[height=0.8\textheight]{/home/oscar/github/esf/figs/bias-variance.png}
+\end{center}
+
+\url{http://scott.fortmann-roe.com/docs/BiasVariance.html}
+\end{frame}
+
+\begin{frame}[label={sec:org23ad10b}]{Metrics}
 \begin{itemize}
 \item Mean Bias Difference (MBD):
 \end{itemize}
@@ -263,7 +266,7 @@ MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \f
 \]
 
 \begin{itemize}
-\item Root Mean Square Error (RMSD):
+\item Root Mean Square Difference (RMSD):
 \end{itemize}
 \[
 RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}

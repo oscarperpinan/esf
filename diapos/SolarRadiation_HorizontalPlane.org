@@ -6,13 +6,20 @@
 
 * Motivation
 ** Solar Variability
-- Extraterrestrial solar radiation is a deterministic process (it depends on latitude, day of year, and time of day).
-- However, global radiation is a stochastic (random) process because of the interaction with the atmosphere:
+- *Extraterrestrial* solar radiation is a *deterministic process* (it depends on latitude, day of year, and time of day).
+- However, *global radiation* is a *stochastic (random) process* because of the interaction with the atmosphere:
   - Time variability
   - Spatial variability
+
+#+ATTR_LATEX: :height 0.4\textheight
+[[file:~/github/esf/figs/SolarRadiationComponents_NREL.png]]
+
 ** Long-term Estimations
-- We are interested in *long-term estimations* of the performance of PV systems in a definite location.
-- Solar radiation data sources must *capture the long-term behaviour* (interannual variability) and be *representative of the specified location* (spatial variability).
+We are interested in *long-term estimations* of the performance of PV systems in a definite location.
+
+Solar radiation data sources must:
+  - *capture the long-term behaviour* (interannual variability), and
+  - be *representative of the specified location* (spatial variability).
 
 ** Time Variability
 #+ATTR_LATEX: :height 0.4\textheight
@@ -36,8 +43,8 @@
 - Measurements are representative of nearby locations for a *limited distance* (about 10 kms.)
 
 ** Summary: Measurements requirements
-
-- Reliable and representative long-term estimations of PV performance require:
+*** 
+*Reliable* and *representative* *long-term estimations* of PV performance require:
   - *Nearby measurements*: $\leq \SI{10}{km}$
   - *Long time series*: $\simeq \SI{10}{years}$
 
@@ -50,14 +57,8 @@
   - Errors due to meter inaccuracy (no models required).
 
 **** Pyranometer
-**** 								      :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.4
-    :END:
-#+BEGIN_CENTER
-#+ATTR_LATEX: :width 0.8\textwidth
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/piranometro.jpg]]
-#+END_CENTER
 
 
 ** Satellite imaging
@@ -69,13 +70,13 @@
   - Global solar radiation is estimated by processing images of the satellite radiometers.
 
   - Errors due model inaccuracy (radiation is estimated).
-
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/satellite.png]]
 
 ** Hybrid methods
 
-  - Ground measurements merged with satellite estimations to increase spatial resolution.
-  - Spatial interpolation
-    - *Inverse Distance Weighting (IDW)* ($d$ is the distance between locations $x_0$ and $x_i$)
+Ground measurements merged with satellite estimations to increase spatial resolution:
+    - *Inverse Distance Weighting (IDW)* ($x_0$ is the point where the estimation is required, $x_i$ are the points with measurements available, $d$ is the distance between locations $x_0$ and $x_i$)
       #+BEGIN_EXPORT latex
       \[
       \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
@@ -90,30 +91,23 @@
 
 ** Data sources
 
-*** Wiki 
 https://github.com/oscarperpinan/mds/wiki
 
-** Data sources
-
-*** Meteorological Stations
+- Meteorological Stations
 https://github.com/oscarperpinan/mds/wiki/stations
 
-** Data sources
 
-*** Satellite Estimations
-- NASA: https://github.com/oscarperpinan/mds/wiki/nasa
-- CM SAF: https://github.com/oscarperpinan/mds/wiki/cmsaf
-- LSA SAF: https://github.com/oscarperpinan/mds/wiki/lsasaf
+- Satellite Estimations
+  - NASA: https://github.com/oscarperpinan/mds/wiki/nasa
+  - CM SAF: https://github.com/oscarperpinan/mds/wiki/cmsaf
 
-** Data sources
-
-*** Hybrid estimations
-- PVGIS: https://github.com/oscarperpinan/mds/wiki/pvgis
-- ADRASE: https://github.com/oscarperpinan/mds/wiki/adrase
+- Hybrid estimations
+  - PVGIS: https://github.com/oscarperpinan/mds/wiki/pvgis
+  - ADRASE: https://github.com/oscarperpinan/mds/wiki/adrase
 
 * Quality Control
 ** Motivation
-- Measurements must be filtered and corrected to remove erroneous data and outliers.
+Measurements must be *filtered* and *corrected* to remove erroneous data and outliers.
   - Physical limits
   - Spatial coherence
   - Statistical analysis of deviations
@@ -121,18 +115,18 @@ https://github.com/oscarperpinan/mds/wiki/stations
 
 ** Physical limits
 
-- Daily clearness index[fn:2] cannot exceed 1 (daily global irradiation cannot exceed extraterrestrial solar irradiation).
+- *Upper limit*: daily global irradiation cannot exceed extraterrestrial solar irradiation (daily clearness index[fn:2] cannot exceed 1).
 #+BEGIN_EXPORT latex
-\[
-  K_{dT} \leq 1
-\]
-
 \[
 G_d(0) \leq B_{0d}(0)
 \]
+
+\[
+  K_{dT} \leq 1
+\]
 #+END_EXPORT
 
-- Clearness index must be higher than 0.03
+- *Lower limit*: clearness index must be higher than 0.03
 #+BEGIN_EXPORT latex
   \[
   K_t = \frac{G_d(0)}{B_{0d}(0)} \geq 0.03
@@ -141,12 +135,14 @@ G_d(0) \leq B_{0d}(0)
 
 ** Spatial coherence
 
-- Measurements from a station should be compared with *nearby stations* (for example, using spatial interpolation)
+Solar radiation measurements must be coherent between stations in a region.
+
+- Measurements from a station should be compared with *nearby stations* (for example, using IDW spatial interpolation)
 - Comparison must be established with *aggregated values* (daily or monthly averages).
 
 ** Statistical Analysis of Deviations
 
-- Statistical analysis of the deviations, $\mathbf{D}$, between Observations, $\mathbf{O}$, and a Model, $\mathbf{M}$ (or another set of observations):
+- Deviations, $\mathbf{D}$, between Observations, $\mathbf{O}$, and a Model, $\mathbf{M}$ (or another set of observations):
 
 #+BEGIN_EXPORT latex
 \[
@@ -162,6 +158,12 @@ G_d(0) \leq B_{0d}(0)
 \]
 #+END_EXPORT
 
+** Accuracy and Precision
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:~/github/esf/figs/bias-variance.png]]
+
+http://scott.fortmann-roe.com/docs/BiasVariance.html
+
 ** Metrics
 
 - Mean Bias Difference (MBD):
@@ -171,7 +173,7 @@ G_d(0) \leq B_{0d}(0)
   \]
 #+END_EXPORT
 
-- Root Mean Square Error (RMSD):
+- Root Mean Square Difference (RMSD):
 #+BEGIN_EXPORT latex
   \[
   RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
