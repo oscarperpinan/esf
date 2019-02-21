@@ -1,4 +1,4 @@
-% Created 2019-02-14 jue 16:27
+% Created 2019-02-21 jue 14:37
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -39,9 +39,9 @@
 \item Choose a location inside the perimeter defined by the three stations, and estimate the \textbf{monthly averages} of daily solar radiation using spatial interpolation (IDW).
 
 \noindent\rule{\textwidth}{0.5pt}
-\item \emph{Retrieve \textbf{monthly averages} of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.}
+\item \emph{Retrieve \textbf{monthly averages} of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.\footnote{CMSAF solar radiation data (SIS) are published as daily average \textbf{irradiance} (\(W/m^2\)). Therefore, you have to multiply them by 24 to get daily irradiation values.}}
 \item \emph{Compare the satellite values at the three locations with the monthly averages of the measurements provided by the stations, using statistical metrics.}
-\item \emph{Combine the satellite estimations at the location defined in step \#5 with the \textbf{monthly averages} of the result of that step. Thus, if we denote the monthly averages of daily values of step \#4 with \(G_{dm,IDW}\) and the satellite estimates with \(G_{dm,sat}\), the result of step \#7 is (for each month)}:
+\item \emph{Combine the satellite estimations at the location defined in step \#5 with the \textbf{monthly averages} of the result of that step. Thus, if we denote the monthly averages of daily values of step \#5 with \(G_{dm,IDW}\) and the satellite estimates with \(G_{dm,sat}\), the result of this step is (for each month)}:
 \end{enumerate}
 \[G_{dm} = 1/2 \cdot (G_{dm,IDW} + G_{dm,sat})\]
 

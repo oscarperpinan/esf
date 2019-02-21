@@ -13,11 +13,13 @@
 4. Compare this average time series with each station using statistical metrics (MBD, RMSD, MAD).
 5. Choose a location inside the perimeter defined by the three stations, and estimate the *monthly averages* of daily solar radiation using spatial interpolation (IDW).
    ------
-6. /Retrieve *monthly averages* of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations./
+6. /Retrieve *monthly averages* of solar radiation from a satellite service (preferably CMSAF, with QGis or similar software) for a region covering the three stations.[fn:1]/
 7. /Compare the satellite values at the three locations with the monthly averages of the measurements provided by the stations, using statistical metrics./
-8. /Combine the satellite estimations at the location defined in step #5 with the *monthly averages* of the result of that step. Thus, if we denote the monthly averages of daily values of step #4 with $G_{dm,IDW}$ and the satellite estimates with $G_{dm,sat}$, the result of step #7 is (for each month)/: 
+8. /Combine the satellite estimations at the location defined in step #5 with the *monthly averages* of the result of that step. Thus, if we denote the monthly averages of daily values of step #5 with $G_{dm,IDW}$ and the satellite estimates with $G_{dm,sat}$, the result of this step is (for each month)/: 
 \[G_{dm} = 1/2 \cdot (G_{dm,IDW} + G_{dm,sat})\]
 
 *The result of step #8 (or #5) will be used in Session #2*.
 
+* Footnotes
 
+[fn:1]CMSAF solar radiation data (SIS) are published as daily average *irradiance* ($W/m^2$). Therefore, you have to multiply them by 24 to get daily irradiation values. 
