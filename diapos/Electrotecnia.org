@@ -426,85 +426,73 @@ Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\r
 #+ATTR_LATEX: :height 0.45\textheight
 [[../figs/fasor.pdf]]
 
+*** Tensión y corriente en notación fasorial
 
-*** Impedancia
+[[../figs/ondasTensionCorriente.pdf]]
+
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.4
+     :BEAMER_col: 0.5
      :END:
-#+BEGIN_EXPORT latex
-\begin{align*}
-  \overline{I} &= I\phase{\theta_I}\\
-  \overline{U} &= U\phase{\theta_U}
-\end{align*}
 
-\begin{align*}
-  \overline{U} &= \overline{Z} \cdot \overline{I}\\                 
-  \overline{Z} &= \frac{\overline{U}}{\overline{I}}
-\end{align*}
-
-\[
-\overline{Z} = \frac{U}{I}\phase{\theta_U - \theta_I} = 
-    \begin{cases}
-      Z = \frac{U}{I}\\
-      \theta_Z = \theta_U - \theta_I
-    \end{cases}
-\]
-#+END_EXPORT
+ #+BEGIN_EXPORT latex
+ \begin{align*}
+   \overline{U} &= U\phase{\theta_U}\\
+   \overline{I} &= I\phase{\theta_I}
+ \end{align*}
+ #+END_EXPORT
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.6
+     :BEAMER_col: 0.5
      :END:
 #+ATTR_LATEX: :height 0.5\textheight
-[[../figs/Impedancia.pdf]]
+[[../figs/fasorTensionCorriente.pdf]]
 
-*** Impedancia de los Elementos: Resistencia
 
-#+BEGIN_EXPORT latex
-\[
-\overline{Z}_R = R = R\phase{0}
-\]
-#+END_EXPORT
-
-[[../figs/fasorResistencia.pdf]]
-
-*** Impedancia de los Elementos: Inductancia
+*** Impedancia: relación entre fasores de tensión y corriente
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.4
+     :BEAMER_col: 0.5
      :END:
+ #+BEGIN_EXPORT latex
+ \begin{align*}
+   \overline{U} &= \overline{Z} \cdot \overline{I}\\                 
+   \overline{Z} &= \frac{\overline{U}}{\overline{I}}
+ \end{align*}
+ #+END_EXPORT
 
-#+BEGIN_EXPORT latex
-\[
-\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}} \Rightarrow X_L = \omega L
-\]
-#+END_EXPORT
+ #+BEGIN_EXPORT latex
+ \[
+ \boxed{\overline{Z} = \frac{U}{I}\phase{\theta_U - \theta_I} \Rightarrow 
+     \begin{cases}
+       Z = \frac{U}{I}\\
+       \theta = \theta_U - \theta_I
+     \end{cases}}
+ \]
+ #+END_EXPORT
+
 
 ****                                                                  :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.6
+     :BEAMER_col: 0.5
      :END:
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/fasorTensionCorriente.pdf]]
 
-[[../figs/fasorInductancia.pdf]]
 
-*** Impedancia de los Elementos: Condensador
-****                                                                  :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.4
-     :END:
-#+BEGIN_EXPORT latex
-\[
-\overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}} \Rightarrow X_C = \frac{1}{\omega C}
-\]
-#+END_EXPORT
-****                                                                  :BMCOL:
-     :PROPERTIES:
-     :BEAMER_col: 0.6
-     :END:
+**** Convenio de origen de fases
+ #+BEGIN_EXPORT latex
+ \[
+\theta_U=0 \Rightarrow \begin{cases}
+       Z = \frac{U}{I}\\
+       \theta = -\theta_I
+     \end{cases}
+ \]
+ #+END_EXPORT
 
-[[../figs/fasorCondensador.pdf]]
+
 
 *** Impedancia Genérica
 #+BEGIN_EXPORT latex
@@ -515,80 +503,121 @@ Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\r
 
 [[../figs/fasorImpedancia.pdf]]
 
-** Desfase Tensión - Corriente
-*** Convenio de signos para Desfase
-
--  En general, la tensión es origen de fases ($\theta_{V}=0$).
-#+BEGIN_EXPORT latex
-\begin{align*}
-\theta_Z &= \theta_U - \theta_I\\
-\theta_{I} &= \theta_{V}- \theta_{Z} = -\theta
-\end{align*}
-#+END_EXPORT
-
--  La corriente está retrasada respecto de la tensión un ángulo $\theta = \theta_Z$:
-#+BEGIN_EXPORT latex
-\begin{align*}
-  u(t) &= U_{o}\cdot\sin(\omega \cdot t)\\
-  i(t) &= I_{o}\cdot\sin(\omega \cdot t - \theta)
-\end{align*}
-#+END_EXPORT
-
 *** Circuito Resistivo
-#+BEGIN_EXPORT latex
-\[
-\overline{Z}_R = R = R \phase{0}
-\]
-#+END_EXPORT
+Un circuito resistivo no desfasa (*tensión y corriente en fase*).
 
 [[../figs/resistivo.pdf]]
 
-Un circuito resistivo no desfasa (*tensión y corriente en fase*).
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+ #+BEGIN_EXPORT latex
+ \[
+ \overline{Z}_R = R = R \phase{0}
+ \]
+ #+END_EXPORT
 
-*** Circuito Inductivo puro
-#+BEGIN_EXPORT latex
-\[
-\overline{Z}_L = j\omega L = \omega L \phase{\ang{90}}
-\]
-#+END_EXPORT
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+ [[../figs/fasorResistencia.pdf]]
+
+
+*** Circuito Inductivo puro                                           :BMCOL:
+Un circuito inductivo puro genera *señales en cuadratura* y *retrasa la corriente*.
 
 [[../figs/inductivoPuro.pdf]]
 
-Un circuito inductivo puro genera *señales en cuadratura* y *retrasa la corriente*.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+
+ #+BEGIN_EXPORT latex
+ \[
+ \overline{Z}_L = j\omega L = \omega L \phase{\ang{90}}
+ \]
+ #+END_EXPORT
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+#+ATTR_LATEX: :height 0.4\textheight
+ [[../figs/fasorInductancia.pdf]]
+
 
 *** Circuito Capacitivo puro
+Un circuito capacitivo puro genera *señales en cuadratura* y *adelanta la corriente*.
+
+
+
+[[../figs/capacitivoPuro.pdf]]
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.5
+     :END:
 #+BEGIN_EXPORT latex
 \[
 \overline{Z}_C = \frac{1}{j\omega C} = \frac{1}{\omega C}\phase{\ang{-90}}
 \]
 #+END_EXPORT
 
-[[../figs/capacitivoPuro.pdf]]
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+#+ATTR_LATEX: :height 0.4\textheight
+[[../figs/fasorCondensador.pdf]]
 
-
-Un circuito capacitivo puro genera *señales en cuadratura* y *adelanta la corriente*.
 
 *** Circuito Inductivo con pérdidas
-#+BEGIN_EXPORT latex
-\[
-\overline{Z} = R + j\omega L \Rightarrow \theta > 0
-\]
-#+END_EXPORT
+Un circuito inductivo *retrasa la corriente*.
 
 [[../figs/inductivo.pdf]]
 
-Un circuito inductivo *retrasa la corriente*.
-
-*** Circuito Capacitivo con pérdidas
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
 #+BEGIN_EXPORT latex
 \[
-\overline{Z} = R - \frac{j}{\omega C} \Rightarrow \theta < 0
+\overline{Z} = R + j\omega L \Rightarrow \boxed{\theta > 0}
 \]
 #+END_EXPORT
 
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.55
+     :END:
+[[../figs/fasorInductanciaReal.pdf]]
+
+
+*** Circuito Capacitivo con pérdidas
+Un circuito capacitivo *adelanta la corriente*.
+
 [[../figs/capacitivo.pdf]]
 
-Un circuito capacitivo *adelanta la corriente*.
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
+#+BEGIN_EXPORT latex
+\[
+\overline{Z} = R - \frac{j}{\omega C} \Rightarrow \boxed{\theta < 0}
+\]
+#+END_EXPORT
+
+****                                                                  :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.55
+     :END:
+#+ATTR_LATEX: :height 0.45\textheight
+[[../figs/fasorCondensadorReal.pdf]]
+
 
 ** Potencia
 

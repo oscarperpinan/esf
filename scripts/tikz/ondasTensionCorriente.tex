@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{mathpazo}
+
+\begin{document}
+
+
+
+\begin{tikzpicture}[domain = 0:9, samples = 1000]
+  % \draw[very thin,color=gray] (-0.1,-1.1) grid (10,1.1);
+  \draw[->] (-0.2,0) -- (13.1,0) node[right] {$t$};
+  \draw[->] (0,-1.2) -- (0,1.1);% node[above] {$f(t)$};
+  \draw[thick, color=blue] plot[id=sin15] function{sin(x + pi/12)}
+    node[right] {$i(t) = I_o  \sin(\omega t + \theta_I)$};
+  \draw[thick, color=red] plot[id=sin60] function{sin(x + pi/3)}
+    node[right] {$u(t) = U_o \sin (\omega t + \theta_U)$};
+\end{tikzpicture}
+
+\end{document}
+
+
