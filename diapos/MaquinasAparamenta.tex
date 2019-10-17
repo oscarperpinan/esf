@@ -1,4 +1,4 @@
-% Created 2018-11-10 sáb 19:23
+% Created 2019-10-17 jue 10:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -16,45 +16,56 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{listings}
+\usepackage[spanish]{babel}
+\setbeamercolor{alerted text}{fg=blue!50!black}
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamercolor{block title}{bg=structure.fg!20!bg!50!bg}
+\setbeamercolor{block body}{use=block title,bg=block title.bg}
+\setbeamertemplate{navigation symbols}{\insertsectionnavigationsymbol}
+\lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={¡}{{\textexclamdown}}1 {á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {í}{{\'i}}1 {ú}{{\'u}}1 {º}{{\textordmasculine}}1, showstringspaces=false}
 \usepackage{mathpazo}
-\usepackage{gensymb}
-\usepackage{amsmath}
-\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
-\bibliographystyle{plain}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 \usepackage[emulate=units]{siunitx}
-\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \newunit{\wattpeak}{Wp}
 \newunit{\watthour}{Wh}
 \newunit{\amperehour}{Ah}
+\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
 \usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{footline}[frame number]
-\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
-\usetheme[hideothersubsections]{Goettingen}
+\bibliographystyle{plain}
+\usetheme{Boadilla}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro}
-\date{\url{http://oscarperpinan.github.io}}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
+\date{}
 \title{Máquinas Eléctricas \\ Aparamenta Eléctrica}
+\institute[UPM]{Universidad Politécnica de Madrid}
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro},
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
  pdftitle={Máquinas Eléctricas \\ Aparamenta Eléctrica},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.13)}, 
+ pdfcreator={Emacs 26.1 (Org mode 9.2)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Fundamentos de Electromagnetismo}
-\label{sec:orgcda8945}
+\label{sec:org983de41}
 
-\begin{frame}[label={sec:org7c81573}]{Fuerza Magnética}
+\begin{frame}[label={sec:org5d0edf5}]{Fuerza Magnética}
 Un campo magnético ejerce una fuerza sobre una carga en movimiento (o corriente eléctrica en un conductor) \footnote{Fuerza de Lorentz}.
 \[
 \vec{F} = q (\vec{v} \times \vec{B})
@@ -75,7 +86,7 @@ Un campo magnético ejerce una fuerza sobre una carga en movimiento (o corriente
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orge2118cc}]{Campo Magnético creado por un Conductor}
+\begin{frame}[label={sec:org69803f6}]{Campo Magnético creado por un Conductor}
 Una corriente eléctrica crea un campo magnético en torno al conductor\footnote{Ley de Biot-Savart (y Oersted). Ley de Ampere.}. 
 
 \begin{columns}
@@ -92,7 +103,7 @@ Una corriente eléctrica crea un campo magnético en torno al conductor\footnote
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org887883d}]{Interacción entre Conductores}
+\begin{frame}[label={sec:org5e25e6b}]{Interacción entre Conductores}
 Dos conductores se repelen o atraen según el sentido de sus corrientes.
 
 \begin{center}
@@ -102,7 +113,7 @@ Dos conductores se repelen o atraen según el sentido de sus corrientes.
 Vídeo: \href{https://www.youtube.com/watch?v=2j8D\_N1v0tU\&t=0m15s}{Repulsión entre barras de Alta Tensión}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org03c1321}]{Flujo Magnético}
+\begin{frame}[label={sec:orga3f58e8}]{Flujo Magnético}
 El flujo magnético es la cantidad de líneas de fuerza magnética que atraviesan una superficie. 
 
 Depende de la densidad de campo, \(B\), el área de la superficie, \(A\), y la posición relativa entre ambos, \(\theta\).
@@ -116,7 +127,7 @@ Depende de la densidad de campo, \(B\), el área de la superficie, \(A\), y la p
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9de1f14}]{Ley de Faraday}
+\begin{frame}[label={sec:org8085a22}]{Ley de Faraday}
 \begin{itemize}
 \item Cuando el \alert{flujo magnético} que atraviesa una espira es \alert{variable}
 aparece \alert{tensión inducida}.
@@ -144,11 +155,11 @@ variación.
 
 
 \section{Máquinas Eléctricas}
-\label{sec:org55a2e8c}
+\label{sec:orgb1a5759}
 \subsection{Introducción}
-\label{sec:org7e6befa}
+\label{sec:org71ab13c}
 
-\begin{frame}[label={sec:orgc732bd5}]{Máquina Eléctrica}
+\begin{frame}[label={sec:orgc7edaa0}]{Máquina Eléctrica}
 Una máquina eléctrica realiza una conversión entre dos formas de energía, una de ellas eléctrica:
 
 \begin{itemize}
@@ -158,7 +169,7 @@ Una máquina eléctrica realiza una conversión entre dos formas de energía, un
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1603eb2}]{Partes de una Máquina}
+\begin{frame}[label={sec:org75a9268}]{Partes de una Máquina}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{itemize}
@@ -179,7 +190,7 @@ La transformación de energía eléctrica y mecánica se produce a través del c
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org9db9cf5}]{Inductor e Inducido}
+\begin{frame}[label={sec:orged15999}]{Inductor e Inducido}
 Al elemento que emite el campo magnético se le denomina \alert{inductor} y aquel que es atravesado por este flujo es el \alert{inducido}.
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/Electric_motor_cycle_3.pdf}
@@ -187,8 +198,8 @@ Al elemento que emite el campo magnético se le denomina \alert{inductor} y aque
 \end{frame}
 
 \subsection{Tipos de Motor}
-\label{sec:orga85e835}
-\begin{frame}[label={sec:org1dac7b3}]{Motor asíncrono o de inducción}
+\label{sec:org93fbcc1}
+\begin{frame}[label={sec:orgdfa0341}]{Motor asíncrono o de inducción}
 \begin{itemize}
 \item \alert{Estator-Inductor} alimentado por una \alert{corriente trifásica alterna} (\emph{campo giratorio})
 
@@ -204,7 +215,7 @@ Al elemento que emite el campo magnético se le denomina \alert{inductor} y aque
 Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGlAu0uCHY\&feature=related}{(1)} \href{http://www.youtube.com/watch?v=P-eTLmJC2cQ}{(2)}
 \end{frame}
 
-\begin{frame}[label={sec:org6fae569}]{Motor de corriente continua}
+\begin{frame}[label={sec:org337a9e6}]{Motor de corriente continua}
 \begin{itemize}
 \item \alert{Estator-Inductor} genera \alert{campo constante} (imanes permanentes o alimentado por corriente DC).
 
@@ -218,9 +229,9 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 
 
 \subsection{Tipos de Generador}
-\label{sec:org5da4a4c}
+\label{sec:org2920b89}
 
-\begin{frame}[label={sec:orgd85f351}]{Generador Síncrono o Alternador}
+\begin{frame}[label={sec:orgeac10a2}]{Generador Síncrono o Alternador}
 \begin{itemize}
 \item \alert{Rotor-inductor} alimentado por \alert{corriente continua} mediante anillos.
 
@@ -232,7 +243,7 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org63e2bb0}]{Generador Asíncrono}
+\begin{frame}[label={sec:orga083471}]{Generador Asíncrono}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -254,7 +265,7 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org06e90fe}]{Generador DC}
+\begin{frame}[label={sec:org6459c0a}]{Generador DC}
 \begin{itemize}
 \item \alert{Estator-Inductor} genera campo constante (alimentado por corriente DC o imanes permanentes).
 
@@ -268,8 +279,8 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 
 
 \subsection{Transformador}
-\label{sec:orgf996e50}
-\begin{frame}[label={sec:org45c63f7}]{Fundamento}
+\label{sec:org3da4ad5}
+\begin{frame}[label={sec:orga9e3693}]{Fundamento}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -290,7 +301,7 @@ Vídeos: Motor de inducción artesanal \href{http://www.youtube.com/watch?v=ZRGl
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgd55fc4a}]{Relación de Transformación}
+\begin{frame}[label={sec:orgc0c09c2}]{Relación de Transformación}
 \begin{align*}
 N_{s}\cdot I_{s} &= N_{p}\cdot I_{p}\\
 \frac{V_{p}}{N_{p}} &= \frac{V_{s}}{N_{s}}
@@ -307,18 +318,18 @@ N_{s}\cdot I_{s} &= N_{p}\cdot I_{p}\\
 
 
 \section{Aparamenta eléctrica}
-\label{sec:org8238505}
+\label{sec:org4abb003}
 
 \subsection{Sistema de Suministro Eléctrico}
-\label{sec:orgd59ca60}
-\begin{frame}[label={sec:org03c1fcf}]{Sistema de suministro eléctrico}
+\label{sec:org272364c}
+\begin{frame}[label={sec:orga807fd8}]{Sistema de suministro eléctrico}
 Un \alert{sistema de suministro eléctrico} tiene como objetivo \alert{producir,
 transportar y distribuir energía eléctrica} a los lugares de consumo,
 con el mínimo coste posible en condiciones de \alert{fiabilidad, calidad y
 seguridad}.
 \end{frame}
 
-\begin{frame}[label={sec:org85cffa4}]{Componentes del Sistema de Suministro Eléctrico}
+\begin{frame}[label={sec:org18d3db8}]{Componentes del Sistema de Suministro Eléctrico}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Redelectrica2.png}
 \end{center}
@@ -339,8 +350,8 @@ algunos casos, almacenamiento)
 
 
 \subsection{Definición y Funciones}
-\label{sec:orgf8d9f84}
-\begin{frame}[label={sec:org9997193}]{Aparamenta}
+\label{sec:org778eb37}
+\begin{frame}[label={sec:org79880fe}]{Aparamenta}
 \begin{block}{Definición}
 Equipo, aparato o material previsto para ser conectado a un circuito eléctrico con el fin de asegurar una o varias de las siguientes funciones: 
 
@@ -353,7 +364,7 @@ Equipo, aparato o material previsto para ser conectado a un circuito eléctrico 
 \end{frame}
 
 
-\begin{frame}[label={sec:org610c3c5}]{Protección}
+\begin{frame}[label={sec:org6edfc97}]{Protección}
 \begin{itemize}
 \item Protección de los \alert{elementos de los circuitos} (cables,
 aparamenta) contra las tensiones térmicas y mecánicas de las
@@ -365,12 +376,12 @@ corrientes de cortocircuito. \emph{Ej. Fusibles}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0bd8e96}]{Aislamiento}
+\begin{frame}[label={sec:org5673a68}]{Aislamiento}
 Separar de forma verificable un circuito, un aparato o un elemento de la planta del resto de un sistema que se encuentra en tensión, con el fin de que el personal pueda realizar con total seguridad trabajos en la parte aislada. 
 \emph{Ej. Seccionador}.
 \end{frame}
 
-\begin{frame}[label={sec:org81dc8e4}]{Control}
+\begin{frame}[label={sec:orgf013ea0}]{Control}
 Modificar un sistema en carga para:
 
 \begin{itemize}
@@ -382,7 +393,7 @@ Modificar un sistema en carga para:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3322bbb}]{Arco Eléctrico}
+\begin{frame}[label={sec:orgb67405c}]{Arco Eléctrico}
 \begin{itemize}
 \item Descarga eléctrica que se forma entre dos electrodos sometidos a una diferencia de potencial.
 \end{itemize}
@@ -401,7 +412,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgc2cf8f1}]{Poder de corte y cierre}
+\begin{frame}[label={sec:org057d923}]{Poder de corte y cierre}
 \begin{description}
 \item[{Poder de corte:}] intensidad de corriente que un dispositivo es capaz de cortar bajo una tensión de restablecimiento determinada.
 
@@ -410,9 +421,9 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{frame}
 
 \subsection{Tipos de Dispositivos}
-\label{sec:orgf4cebb0}
+\label{sec:org25e664b}
 
-\begin{frame}[label={sec:org6feced8}]{Seccionador}
+\begin{frame}[label={sec:org782f326}]{Seccionador}
 \begin{itemize}
 \item Dispositivo de dos posiciones (abierto/cerrado) \alert{enclavable} y accionado \alert{manualmente} que proporciona un \alert{aislamiento seguro} de un circuito cuando está enclavado en la posición abierta.
 
@@ -424,11 +435,13 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga7181c7}]{Interruptor de carga}
+\begin{frame}[label={sec:org9b2e299}]{Interruptor de carga}
 \begin{itemize}
 \item Dispositivo no automático (\alert{accionamiento manual}) de dos posiciones (abierto/cerrado).
 
-\item Se utiliza para cerrar y abrir circuitos cargados en condiciones normales de circuitos sin defectos (\alert{no ofrece protección})
+\item Tiene \alert{poder de corte y cierre}.
+
+\item Al ser manual \alert{no ofrece protección} (funcionamiento en condiciones normales del circuito).
 \end{itemize}
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/interruptor_manual.jpg}
@@ -436,9 +449,10 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{frame}
 
 
-\begin{frame}[label={sec:orgceeb356}]{Contactor}
+\begin{frame}[label={sec:org7df2247}]{Contactor}
 \begin{itemize}
 \item Dispositivo de conmutación accionado de forma remota.
+\item Tiene poder de corte y poder de cierre.
 \item Utilizado para tareas de control.
 \end{itemize}
 
@@ -448,13 +462,13 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{frame}
 
 
-\begin{frame}[label={sec:org5fe1b35}]{Fusible}
+\begin{frame}[label={sec:org4a8fff4}]{Fusible}
 \begin{columns}
 \begin{column}{0.7\columnwidth}
 \begin{itemize}
 \item Dispositivo de protección contra sobrecarga (corrientes superiores a un umbral durante un tiempo prolongado).
 
-\item Se funde por Efecto Joule.
+\item Se funde por Efecto Joule y queda destruido.
 
 \item Tiene poder de corte.
 \end{itemize}
@@ -468,7 +482,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=WBTvGqRA4\_0}{Apertura en Alta Tens
 \end{frame}
 
 
-\begin{frame}[label={sec:orgbfb5b6a}]{Interruptor magnetotérmico}
+\begin{frame}[label={sec:orga92985f}]{Interruptor magnetotérmico}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -492,7 +506,7 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgf56ec10}]{Interruptor diferencial}
+\begin{frame}[label={sec:org9953b28}]{Interruptor diferencial}
 \begin{itemize}
 \item Dispositivo \alert{automático} con poder de corte ante una corriente diferencial residual (defecto de aislamiento).
 \item Se emplea para la \alert{protección de las personas}.
@@ -517,9 +531,9 @@ Vídeo: \href{http://www.youtube.com/watch?v=c6QqnLgWbCQ}{Apertura de un PIA}
 
 
 \section{Recursos}
-\label{sec:orgdeabf79}
+\label{sec:orgb00488f}
 
-\begin{frame}[label={sec:org664cbcc}]{Bibliografía}
+\begin{frame}[label={sec:org133cd50}]{Bibliografía}
 \begin{itemize}
 \item \alert{Fraile Mora, J.}: \emph{Máquinas Eléctricas}. Ed. Mc. Graw Hill.
 
