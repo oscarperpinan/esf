@@ -397,7 +397,7 @@ Y = \sqrt{\frac{1}{T}\cdot\int_{0}^{T}y^{2}(t)}
 
 #+BEGIN_EXPORT latex
 \[
-Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\right)^{2}dt}=\frac{Y_{o}}{\sqrt{2}}
+Y=\sqrt{\frac{1}{T}\cdot\int_{0}^{T}\left(Y_{o}\cdot\sin(\omega\cdot t+\theta)\right)^{2}dt}=\boxed{\frac{Y_{o}}{\sqrt{2}}}
 \]
 #+END_EXPORT
 ** Cálculo Fasorial
@@ -671,21 +671,21 @@ Un circuito capacitivo *adelanta la corriente*.
 - Potencia Activa
 #+BEGIN_EXPORT latex
 \[  
-P = U\cdot I\cdot\cos(\theta) = R \cdot I^2
+\boxed{P = U\cdot I\cdot\cos(\theta) = R \cdot I^2}
 \]
 #+END_EXPORT
 
 - Potencia Reactiva
 #+BEGIN_EXPORT latex
 \[
-Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2
+\boxed{Q = U\cdot I\cdot\sin(\theta) = X \cdot I^2}
 \]
 #+END_EXPORT
 
 - Potencia Aparente
 #+BEGIN_EXPORT latex
 \[
-\overline{S} = P + jQ = \overline{U} \cdot \overline{I}^*
+\boxed{\overline{S} = P + jQ = \overline{U} \cdot \overline{I}^*}
 \]
 \[
 |S| = U \cdot I
@@ -767,26 +767,39 @@ Q &= \sum_{i = 1}^n Q_i
 #+END_EXPORT
 
 *** Compensación de reactiva
-
--  El factor de potencia, $\cos(\theta)$, representa la aportación de potencia activa dentro de la potencia aparente.
+El factor de potencia, $\cos(\theta)$, representa la aportación de potencia activa dentro de la potencia aparente.
 #+BEGIN_EXPORT latex
 \[
 P = S \cos \theta
 \]
 #+END_EXPORT
 
--  Sean dos sistemas con misma tensión y potencia activa, y factores de potencia $\cos \theta_1 > \cos \theta_2$.
+Sean dos sistemas con *misma tensión y potencia activa*, y factores de potencia $\cos \theta_1 > \cos \theta_2$.
 
--  El sistema 2 requiere *mayor sección* de cable para transportar la misma potencia activa.
-#+BEGIN_EXPORT latex
-\[
-  \left(\frac{P}{U \cos \theta_1} = I_1 \right) < \left( I_2 = \frac{P}{U \cos \theta_2}\right) 
-\]
-#+END_EXPORT
--  El sistema 2 requiere *mayor potencia aparente* (generador mayor) para alimentar la misma potencia activa.
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/compensacionReactiva.pdf]]
+
+
+*** Compensación de reactiva
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/compensacionReactiva.pdf]]
+
+
+El sistema 2 requiere *mayor potencia aparente* (generador mayor) para alimentar la misma potencia activa.
 #+BEGIN_EXPORT latex
 \[
   \left(\frac{P}{\cos \theta_1} = S_1 \right) < \left( S_2 = \frac{P}{\cos \theta_2}\right) 
+\]
+#+END_EXPORT
+
+*** Compensación de reactiva
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/compensacionReactiva.pdf]]
+
+El sistema 2 requiere *mayor sección* de cable para transportar la misma potencia activa.
+#+BEGIN_EXPORT latex
+\[
+  \left(\frac{P}{U \cos \theta_1} = I_1 \right) < \left( I_2 = \frac{P}{U \cos \theta_2}\right) 
 \]
 #+END_EXPORT
 
@@ -819,7 +832,7 @@ P = S \cos \theta
 \]
 
 \[
-C = \frac{P (\tan \theta - \tan \theta')}{\omega U^2}
+\boxed{C = \frac{P (\tan \theta - \tan \theta')}{\omega U^2}}
 \]
 #+END_EXPORT
 
