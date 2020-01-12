@@ -34,7 +34,7 @@
 
 *** Del plano horizontal al plano inclinado
 
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada.pdf]]
 
 * Geometría Sol y Tierra
@@ -76,13 +76,13 @@
 
 ****                                                               :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.6
+:BEAMER_col: 0.5
 :END:
 [[../figs/SoldesdeTierra.pdf]]
 
 ****                                                               :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.6
+:BEAMER_col: 0.5
 :END:
 [[../figs/SistemaCoordenadasTerrestre-crop.pdf]]
 
@@ -160,16 +160,16 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
    :PROPERTIES:
    :BEAMER_opt: plain
    :END:
-
+   
 ****                                                               :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.6
+:BEAMER_col: 0.5
 :END:
 [[../figs/SoldesdeTierra2.pdf]]
 
 ****                                                               :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.6
+:BEAMER_col: 0.5
 :END:
 [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
@@ -203,12 +203,12 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
     :PROPERTIES:
     :BEAMER_col: 0.55
     :END:
-- $\theta_{zs}$, ángulo entre el Sol y el cenit (vertical en un lugar determinado).
-- $\gamma_s$, altura solar, ángulo complementario de $\theta_{zs}$.
-- Depende de $d_n$, $\omega$, y $\phi$.
+- $\theta_{zs}$: *ángulo cenital*, ángulo entre el Sol y el cenit (vertical en un lugar determinado).
+- $\gamma_s$, *ángulo altura solar*, ángulo complementario de $\theta_{zs}$.
+- Dependen de $d_n$, $\omega$, y $\phi$.
 ****                                                               :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.75
+    :BEAMER_col: 0.5
     :END:
 [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
@@ -225,13 +225,13 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
     :PROPERTIES:
     :BEAMER_col: 0.55
     :END:
-- $\psi_s$, ángulo entre el mediodía solar y la proyección del sol en el plano horizontal.
+- $\psi_s$: *azimut solar*, ángulo entre el mediodía solar y la proyección del sol en el plano horizontal.
 - Depende de $d_n$, $\omega$, y $\phi$.
 - Criterio de Signos: negativo antes del mediodía.
 
 ****                                                               :BMCOL:
     :PROPERTIES:
-    :BEAMER_col: 0.7
+    :BEAMER_col: 0.5
     :END:
 [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
@@ -245,20 +245,6 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 [[../figs/TrayectoriaSolar40S.pdf]]
 
 
-*** Cálculo Ángulos Solares
-
--  Azimut, Ángulo Cenital y Altura Solar, Duración del Dia para el:
-
-   -  Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N
-
-   -  Día del Año: 340, 2 horas después del amanecer, Latitud: 15S
-
--  Duración del día 261 del año en las latitudes 10N, 40N, 70N, 10S,
-   40S, 70S.
-
--  Altura solar en el mediodía del día 25 del año en las latitudes 10N,
-   40N, 10S, 40S.
-
 ** Hora solar y oficial
 *** Hora solar
 
@@ -267,25 +253,23 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 - $\omega$: hora solar real o aparente[º]
 - $TO$: hora oficial [h]
 - $AO$: adelanto oficial por horario de verano [h]
-- $\Delta\lambda$ corrección por huso horario [º]
+- $\Delta\lambda$: corrección por huso horario [º]
 - $EoT$: Ecuación del tiempo (dia solar real y dia solar medio) [min]
 
 *** Hora oficial
 
--  *La hora oficial* es una medida del tiempo *ligada a un meridiano*
-   que sirve de referencia para una zona determinada.
+- *La hora oficial* es una medida del tiempo *ligada a un meridiano*
+  que sirve de referencia para una zona determinada.
 
--  La hora oficial de la España peninsular se rige por el huso horario
-   de Centroeuropa. Este huso horario está situado en
-   $15\degree\mathrm{E}$.
+- La hora oficial de la *España peninsular* se rige por el *huso horario de Centroeuropa*. Este huso horario está situado en
+  $15\degree\mathrm{E}$.
 
--  *Corrección*: $\Delta\lambda=\lambda_{L}-\lambda_{H}$, con
-   $\lambda_{L}$ la longitud local y $\lambda_{H}$ la longitud del huso
-   horario.
+- *Longitudes positivas* al *este del meridiano de Greenwich*.
+  
+- *Corrección*: $\Delta\lambda=\lambda_{L}-\lambda_{H}$, con
+  $\lambda_{L}$ la longitud local y $\lambda_{H}$ la longitud del huso
+  horario. /$\Delta\lambda$ es positiva cuando la localidad está situada al este de su huso horario./
 
--  Longitudes /positivas/ al /este/ del meridiano de Greenwich.
-   $\Delta\lambda$ es positiva cuando la localidad está situada al este
-   de su huso horario.
 
 *** Tiempo solar medio
 
@@ -307,8 +291,9 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 \[
 M=\frac{2\pi}{365.24}\cdot d_{n}
 \]
-
 #+END_EXPORT
+
+#+ATTR_LATEX: :height 0.65\textheight
 [[../figs/EoT.pdf]]
 
 *** Ejemplo de cálculo
@@ -340,9 +325,9 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 * Geometría de los sistemas fotovoltaicos
 *** Definiciones
-- $\theta_s$, ángulo de incidencia (AOI), ángulo entre los rayos solares y la perpendicular al plano del generador.
-- $\alpha$: orientación del generador (0º cuando está orientado al mediodía solar)
-- $\beta$: inclinación del generador (respecto de la superficie horizontal)
+- $\theta_s$, *ángulo de incidencia (AOI)*, ángulo entre los rayos solares y la perpendicular al plano del generador.
+- $\alpha$: *orientación del generador* (0º cuando está orientado al mediodía solar)
+- $\beta$: *inclinación del generador* (respecto de la superficie horizontal)
 
 ** Sistema Estático
 
@@ -447,7 +432,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 *** Sistema de Seguimiento (2x ejes)
 
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SeguidorReocin.jpg]]
 
 *** Ángulo de Incidencia (seguidor 2x)
@@ -471,23 +456,6 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 #+ATTR_LATEX: :height 0.8\textheight
 [[../figs/BetaDoble_40N.pdf]]
 
-*** Ejercicio: cálculo de ángulo de incidencia
-
--  Para: ::
-
-   - Un sistema estático orientado al Sur y con inclinación de 30;
-
-   - Un sistema de seguimiento horizontal N-S;
-
-   - Un sistema de seguimiento acimutal con inclinación a 35;
-
-   - Un sistema de seguimiento a doble eje,
-
--  Calcular :: el ángulo de incidencia para el:
-
-   - Día del Año: 120, 2 horas después del mediodía, Latitud: 37.2N;
-
-   - Día del Año: 340, 2 horas después del amanecer, Latitud: 15S;
 * Radiación Solar en la Superficie Terrestre
 *** Irradiancia e Irradiación
 
@@ -503,16 +471,9 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 ** Radiación Extra-atmosférica
 
+*** Definición y Ecuaciones
+-  Radiación extra-atmosférica: radiación directa del Sol que alcanza la superficie de la atmósfera.
 
-*** Definición
--  La radiación que alcanza la superficie de la atmósfera es radiación
-   directa del Sol.
-
-#+ATTR_LATEX: :height 0.5\textheight
-[[../figs/SolarRadiationComponents_NREL.png]]
-
-
-*** Ecuaciones
 - *Constante solar* $B_{0}=\SI{1367}{\watt\per\meter\squared}$
   (irradiancia solar sobre la superficie normal al vector solar en límite superior de la atmósfera terrestre)
 
@@ -556,7 +517,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 ** Radiación solar en la superficie terrestre
 *** 
-
+#+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_G0.pdf]]
 
 *** Interacción de la radiación con la atmósfera
@@ -569,6 +530,9 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 -  *Modificación de la distribución espacial* (dispersión por
    partículas)
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/SolarRadiationComponents_NREL.png]]
 
 *** Caracterización de la atmósfera
 
@@ -658,6 +622,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 ** Cálculo de componentes de radiación solar
 
 *** 
+#+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_componentes.pdf]]
 
 *** Estimación de Directa y Difusa
@@ -887,7 +852,7 @@ G_d(0) \leq B_{0d}(0)
 
 ** Irradiancia a partir de irradiación diaria
 *** 
-
+#+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf]]
 
 *** Planteamiento
@@ -928,7 +893,7 @@ G_d(0) \leq B_{0d}(0)
 ** Transformación al plano del generador
 
 *** 
-
+#+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_inclinada.pdf]]
 
 *** Planteamiento
@@ -993,13 +958,13 @@ G_d(0) \leq B_{0d}(0)
 ** Pérdidas angulares y por suciedad
 
 *** 
-
+#+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_efectiva.pdf]]
 
 *** Radiación directa
 
 \[B_{ef}(\beta,\alpha)=B(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}(0)}\right]\cdot (1-FT_{B}(\theta_{s}))\]
-
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/Suciedad.pdf]]
 
 *** Difusa y Albedo
@@ -1052,11 +1017,11 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 
 
 *** Comparación entre Sistemas
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/compSystems.pdf]]
 
 *** Comparación entre Sistemas
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/compSystemsG0.png]]
 
 
