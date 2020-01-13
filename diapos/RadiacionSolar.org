@@ -323,159 +323,21 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
    mañana). El Sol culminará ($\omega=0$) cuando sean las 14:31, hora
    oficial.
 
-* Geometría de los sistemas fotovoltaicos
-*** Definiciones
-- $\theta_s$, *ángulo de incidencia (AOI)*, ángulo entre los rayos solares y la perpendicular al plano del generador.
-- $\alpha$: *orientación del generador* (0º cuando está orientado al mediodía solar)
-- $\beta$: *inclinación del generador* (respecto de la superficie horizontal)
 
-** Sistema Estático
+*** 
+[[file:~/github/esf/figs/Kahoot_Logo.png]]
 
-*** Sistema Estático
-
-[[../figs/EstructuraEstaticaSuelo.jpg]]
-
-*** Ángulo de Incidencia
-   :PROPERTIES:
-   :BEAMER_opt: plain
-   :END:
-
-- Si $\alpha=0$
-#+BEGIN_EXPORT latex
-\[
-\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
-\]
-#+END_EXPORT
-
-#+ATTR_LATEX: :height 0.6\textheight
-[[../figs/AngulosSistemaEstatico.pdf]]
-
-- Inclinación Óptima $\beta_{opt} \simeq |\phi| - 10º$.
-
-*** Ángulo de Incidencia
-
-- $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/cosThetaEst_40N.pdf]]
-
-
-** Sistemas con seguimiento
-
-*** Introducción
-#+ATTR_BEAMER: :overlay <+->
-- *Fundamento:*
-  #+ATTR_BEAMER: :overlay <.->
-  - Radiación incidente aumenta al seguir al sol
-
-  - Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
-
-- Las diferentes técnicas de seguimiento son un *compromiso* entre
-  #+ATTR_BEAMER: :overlay <.->
-  - un *apuntamiento perfecto*
-
-  - *sistemas estructurales más económicos*
-
-  - mejores *aprovechamientos del terreno*.
-*** Algunos tipos de seguimiento solar
-#+ATTR_BEAMER: :overlay <+->
--  *Doble eje*
-   #+ATTR_BEAMER: :overlay <.->
-   -  Apuntamiento "perfecto"
-
-   -  Mejor productividad, peor ocupación de terreno.
-
--  *Seguimento acimutal*
-   #+ATTR_BEAMER: :overlay <.->
-   -  Sacrifica un movimiento (inclinación del generador) para conseguir
-      sistemas más económicos.
-
--  *Seguimiento horizontal con eje Norte-Sur*
-   #+ATTR_BEAMER: :overlay <.->
-   -  Sencillez y estabilidad estructural (el eje es horizontal y
-      paralelo al terreno, con tantos puntos de apoyo como se consideren
-      necesarios),
-
-   -  Facilidad de motorización,
-
-   -  Buen aprovechamiento del terreno.
-
-*** Sistema de Seguimiento(1 eje, horizontal N-S)
-
-
-[[../figs/SeguidorEjeHorizontal.jpg]]
-
-
-*** Ángulo de Incidencia (1x eje, horizontal N-S)
-   :PROPERTIES:
-   :BEAMER_opt: plain
-   :END:
-
-\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
-
-#+ATTR_LATEX: :height 0.6\textheight
-[[../figs/AngulosSistemaHorizontalNS.pdf]]
-
-*** Inclinación de Eje Horizontal N-S
-- $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/BetaHoriz_40N.pdf]]
-
-
-
-*** Ángulo de Incidencia de Eje Horizontal N-S
-- $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/cosThetaHoriz_40N.pdf]]
-
-
-
-
-*** Sistema de Seguimiento (2x ejes)
-
-#+ATTR_LATEX: :height 0.9\textheight
-[[../figs/SeguidorReocin.jpg]]
-
-*** Ángulo de Incidencia (seguidor 2x)
-   :PROPERTIES:
-   :BEAMER_opt: plain
-   :END:
-
-[[../figs/Sombra2X.pdf]]
-
-
-#+BEGIN_EXPORT latex
-\begin{align*}
-  \beta &= \theta_{z}\\
-  \alpha &= \psi_{s}\\
-  \cos(\theta_{s}) &= 1
-\end{align*}
-#+END_EXPORT
-*** Inclinación (seguidor 2x)
-
-- $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/BetaDoble_40N.pdf]]
+[[https://play.kahoot.it/v2/?quizId=08c996d2-f567-4db9-80ec-f080daabc508][Ir a Kahoot de Geometría Solar]]
 
 * Radiación Solar en la Superficie Terrestre
-*** Irradiancia e Irradiación
-
-- Irradiancia :: es la densidad de /potencia/ de radiacion solar
-  incidente en una superficie.
-
-  - Unidades: $\si{\watt\per\meter\squared},\,\si{\kilo\watt\per\meter\squared}$
-
-- Irradiación :: es la densidad de /energía/ de radiación solar
-  incidente en una superficie.
-
-  - Unidades: $\si{\watthour\per\meter\squared},\,\si{\kilo\watthour\per\meter\squared}$
 
 ** Radiación Extra-atmosférica
 
-*** Definición y Ecuaciones
--  Radiación extra-atmosférica: radiación directa del Sol que alcanza la superficie de la atmósfera.
+*** Definición
+- *Radiación extra-atmosférica*: radiación directa del Sol que alcanza la superficie de la atmósfera.
 
-- *Constante solar* $B_{0}=\SI{1367}{\watt\per\meter\squared}$
-  (irradiancia solar sobre la superficie normal al vector solar en límite superior de la atmósfera terrestre)
+- *Constante solar* $B_{0}=\SI{1367}{\watt\per\meter\squared}$ (irradiancia solar sobre la superficie normal al vector solar en el límite superior de la atmósfera terrestre)
+*** Ecuaciones
 
 - *Irradiancia extra-atmosférica*
 
@@ -815,29 +677,41 @@ G_d(0) \leq B_{0d}(0)
 \]
 #+END_EXPORT
 
+*** Exactitud y Precisión
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:~/github/esf/figs/bias-variance.png]]
+
+http://scott.fortmann-roe.com/docs/BiasVariance.html
+
 *** Métricas
 
-- Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
+- *Mean Bias Difference (MBD)*, diferencia media (indica si el modelo sobreestima o subestima):
 #+BEGIN_EXPORT latex
   \[
   MBD = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
   \]
 #+END_EXPORT
 
-- Root Mean Square Error (RMSD), diferencia cuadrático media:
+- *Root Mean Square Difference (RMSD)*, diferencia cuadrático media:
 #+BEGIN_EXPORT latex
   \[
   RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
   \]
 #+END_EXPORT
 
-- Mean Absolute Deviation (MAD) (El RMSD no es robusto, un error puntual puede distorsionar el estimador, y depende del número de muestras)
+- *Mean Absolute Deviation (MAD)* (El RMSD no es robusto, un error puntual puede distorsionar el estimador, y depende del número de muestras)
 
 #+BEGIN_EXPORT latex
   \[
   MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
   \]
 #+END_EXPORT
+*** 
+[[file:~/github/esf/figs/Kahoot_Logo.png]]
+
+[[https://play.kahoot.it/v2/?quizId=62ee25e6-4056-4321-b95c-7af71b3fb069][Ir a Kahoot de Radiación Solar en el Plano Horizontal]]
+
 * Radiación Solar en Generadores FV
 
 ** Introducción
@@ -848,6 +722,64 @@ G_d(0) \leq B_{0d}(0)
 
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/PVUrban.png]]
+
+*** Definiciones
+- $\theta_s$, *ángulo de incidencia (AOI)*, ángulo entre los rayos solares y la perpendicular al plano del generador.
+- $\alpha$: *orientación del generador* (0º cuando está orientado al mediodía solar)
+- $\beta$: *inclinación del generador* (respecto de la superficie horizontal)
+** Tipos de Sistemas
+*** Sistema Estático
+
+[[../figs/EstructuraEstaticaSuelo.jpg]]
+
+*** Sistemas con seguimiento
+
+#+ATTR_BEAMER: :overlay <+->
+- *Fundamento:*
+  #+ATTR_BEAMER: :overlay <.->
+  - Radiación incidente aumenta al seguir al sol
+
+  - Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+
+- Las diferentes técnicas de seguimiento son un *compromiso* entre
+  #+ATTR_BEAMER: :overlay <.->
+  - un *apuntamiento perfecto*
+
+  - *sistemas estructurales más económicos*
+
+  - mejores *aprovechamientos del terreno*.
+*** Algunos tipos de seguimiento solar
+#+ATTR_BEAMER: :overlay <+->
+-  *Doble eje*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Apuntamiento "perfecto"
+
+   -  Mejor productividad, peor ocupación de terreno.
+
+-  *Seguimento acimutal*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Sacrifica un movimiento (inclinación del generador) para conseguir
+      sistemas más económicos.
+
+-  *Seguimiento horizontal con eje Norte-Sur*
+   #+ATTR_BEAMER: :overlay <.->
+   -  Sencillez y estabilidad estructural (el eje es horizontal y
+      paralelo al terreno, con tantos puntos de apoyo como se consideren
+      necesarios),
+
+   -  Facilidad de motorización,
+
+   -  Buen aprovechamiento del terreno.
+
+*** Sistema de Seguimiento(1 eje, horizontal N-S)
+
+
+[[../figs/SeguidorEjeHorizontal.jpg]]
+
+*** Sistema de Seguimiento (2x ejes)
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SeguidorReocin.jpg]]
 
 
 ** Irradiancia a partir de irradiación diaria
@@ -883,12 +815,6 @@ G_d(0) \leq B_{0d}(0)
 
 \[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
 #+END_EXPORT
-
-*** Ejercicio
-
--  Calcular :: la irradiancia global y la irradiancia difusa en el plano horizontal
-
-   -  2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
 
 ** Transformación al plano del generador
 
@@ -949,11 +875,78 @@ G_d(0) \leq B_{0d}(0)
 \[\rho=0.2\]
 #+END_EXPORT
 
-*** Ejercicio
+** Geometría de los sistemas fotovoltaicos
+*** Ángulo de Incidencia Sistema Estático
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
 
--  Calcular :: la irradiancia difusa, directa, de albedo y global, en
+- Si $\alpha=0$
+#+BEGIN_EXPORT latex
+\[
+\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
+\]
+#+END_EXPORT
 
-   -  Un generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del mediodía del día 261 en un lugar con latitud  $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+#+ATTR_LATEX: :height 0.6\textheight
+[[../figs/AngulosSistemaEstatico.pdf]]
+
+- Inclinación Óptima $\beta_{opt} \simeq |\phi| - 10º$.
+
+*** Sistema Estático: Ángulo de Incidencia
+
+- $40\degree N$
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/cosThetaEst_40N.pdf]]
+
+
+
+*** Ángulo de Incidencia Seguidor 1x NS
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+#+ATTR_LATEX: :height 0.6\textheight
+[[../figs/AngulosSistemaHorizontalNS.pdf]]
+
+*** Ángulo de Inclinación Seguidor 1x NS
+- $40\degree N$
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/BetaHoriz_40N.pdf]]
+
+
+
+*** Ángulo de Incidencia Seguidor 1x NS
+- $40\degree N$
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/cosThetaHoriz_40N.pdf]]
+
+
+
+
+*** Ángulo de Incidencia Seguidor 2x
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+[[../figs/Sombra2X.pdf]]
+
+
+#+BEGIN_EXPORT latex
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+#+END_EXPORT
+*** Inclinación Seguidor 2x
+
+- $40\degree N$
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/BetaDoble_40N.pdf]]
+
 
 ** Pérdidas angulares y por suciedad
 
@@ -1025,6 +1018,10 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 [[../figs/compSystemsG0.png]]
 
 
+*** 
+[[file:~/github/esf/figs/Kahoot_Logo.png]]
+
+[[https://play.kahoot.it/v2/?quizId=29a16906-539a-4e29-b68c-fe6c9141ef02][Ir a Kahoot de Radiación Solar en un Generador]]
 
 * Footnotes
 
