@@ -333,28 +333,36 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 ** Radiación Extra-atmosférica
 
+*** Irradiancia e Irradiación
+
+- Irradiancia :: es la densidad de /potencia/ de radiacion solar incidente en una superficie.
+ - Unidades: $\si{\watt\per\meter\squared},\,\si{\kilo\watt\per\meter\squared}$
+- Irradiación :: es la densidad de /energía/ de radiación solar incidente en una superficie.
+ - Unidades: $\si{\watthour\per\meter\squared},\,\si{\kilo\watthour\per\meter\squared}$
+
 *** Definición
 - *Radiación extra-atmosférica*: radiación directa del Sol que alcanza la superficie de la atmósfera.
 
 - *Constante solar* $B_{0}=\SI{1367}{\watt\per\meter\squared}$ (irradiancia solar sobre la superficie normal al vector solar en el límite superior de la atmósfera terrestre)
 *** Ecuaciones
 
-- *Irradiancia extra-atmosférica*
+- *Irradiancia extra-atmosférica* ($\si{\watt\per\meter\squared}$)
 
   #+BEGIN_EXPORT latex
   \[B_{0}(0)=B_{0}\cdot\epsilon_{0}\cdot\cos\theta_{zs}\]
   #+END_EXPORT
 
-- *Irradiación extra-atmosférica diaria*  ($\omega_{s}$ en radianes)
+- Factor de corrección por excentricidad
+  #+BEGIN_EXPORT latex
+  \[\epsilon_0 = 1+0,033\cdot\cos(2\pi d_n/365)\]
+  #+END_EXPORT
+
+- *Irradiación extra-atmosférica diaria* ($\si{\watthour\per\meter\squared}$) 
   #+BEGIN_EXPORT latex
   \[
     B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)
   \]
-  #+END_EXPORT
-
-- Factor de corrección por excentricidad
-  #+BEGIN_EXPORT latex
-  \[\epsilon_0 = 1+0,033\cdot\cos(2\pi d_n/365)\]
+  ($\omega_{s}$ en radianes)
   #+END_EXPORT
 
       
@@ -395,35 +403,6 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/SolarRadiationComponents_NREL.png]]
-
-*** Caracterización de la atmósfera
-
--  *Masa de aire*:
-
-   -  Relación entre camino recorrido por rayos directos del Sol a
-      través de la atmósfera hasta la superficie receptora y el que recorrerían en caso de incidencia vertical (AM=1)
-
-   -  $AM \simeq 1/\cos\theta_{zs}$
-
--  *Índice de claridad*
-
-   -  Relación entre la radiación en la superficie terrestre y la
-      radiación extra-atmosférica, ambas en el plano horizontal
-
-   -  El índice de claridad *no depende de las variaciones debidas al
-      movimiento aparente del sol*.
-
-   -  $K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}$ (mensual)
-
-*** Índice de claridad
-
--  $K_{T}$: :: índice de claridad instantáneo. $K_{T}=G/B_{0}$
-
--  $K_{Td}$: :: índice de claridad diario. $K_{Td}=G_{d}/B_{0d}$
-
--  $K_{Tm}$: :: índice de claridad mensual. $K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}$
-
--  $K_{Ta}$: :: índice de claridad anual. $K_{Ta} = G_{a}/B_{0a} = \dots$
 
 *** Componentes de la radiación solar
 
@@ -481,11 +460,44 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 \[B(\beta)\]
 
 #+END_EXPORT
-** Cálculo de componentes de radiación solar
+* Cálculo de componentes de radiación solar
 
 *** 
 #+ATTR_LATEX: :height 0.95\textheight
 [[../figs/ProcedimientoCalculoRadiacionInclinada_componentes.pdf]]
+
+*** Caracterización de la atmósfera
+
+-  *Masa de aire*:
+
+   -  Relación entre camino recorrido por rayos directos del Sol a
+      través de la atmósfera hasta la superficie receptora y el que recorrerían en caso de incidencia vertical (AM=1)
+
+   \[
+     AM \simeq 1/\cos\theta_{zs}
+   \]
+
+-  *Índice de claridad*
+
+   -  Relación entre la radiación en la superficie terrestre y la
+      radiación extra-atmosférica, ambas en el plano horizontal
+
+   -  El índice de claridad *no depende de las variaciones debidas al
+      movimiento aparente del sol*.
+
+   \[
+     K_{Tm}=\frac{G_{d,m}(0)}{B_{0d,m}(0)}
+   \]
+
+*** Índice de claridad
+
+-  $K_{T}$: :: índice de claridad instantáneo. $K_{T}=G/B_{0}$
+
+-  $K_{Td}$: :: índice de claridad diario. $K_{Td}=G_{d}/B_{0d}$
+
+-  $K_{Tm}$: :: índice de claridad mensual. $K_{Tm}=G_{m}/B_{0m}=G_{d,m}/B_{0d,m}$
+
+-  $K_{Ta}$: :: índice de claridad anual. $K_{Ta} = G_{a}/B_{0a} = \dots$
 
 *** Estimación de Directa y Difusa
 
@@ -495,8 +507,11 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 
 -  *Correlación independiente de la latitud* (validez cuasi-universal)
 
-*** Correlaciones $F_{D}$ y $K_{T}$: Ecuación de Page
-
+*** Medias mensuales: Ecuación de Page
+:PROPERTIES:
+:BEAMER_opt: plain
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/FdKtMensual.pdf]]
 
 \[F_{Dm}=1-1.13\cdot K_{Tm}\]
@@ -513,8 +528,11 @@ Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ e
 
 - $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
 
-*** Correlaciones $F_{D}$ y $K_{T}$: Collares-Pereira y Rabl
-
+*** Valores Diarios: Collares-Pereira y Rabl
+:PROPERTIES:
+:BEAMER_opt: plain
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/FdKtDiario.pdf]]
 #+BEGIN_EXPORT latex
 {\scriptsize \[
