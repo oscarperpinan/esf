@@ -42,7 +42,6 @@
 #+LATEX_HEADER: \usepackage{gensymb}
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
-#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 #+LATEX_HEADER: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 #+LATEX_HEADER: \beamertemplatenavigationsymbolsempty
 #+LATEX_HEADER: \setbeamertemplate{footline}[frame number]

@@ -799,7 +799,6 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SeguidorReocin.jpg]]
 
-
 ** Irradiancia a partir de irradiación diaria
 *** 
 #+ATTR_LATEX: :height 0.95\textheight
@@ -807,32 +806,46 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 
 *** Planteamiento
 
-- *Objetivo*: construir un perfil diario promedio de irradiancia global e irradiancia difusa (/cielo claro/)
-- *Puntos clave*:
-  - La variación solar durante una hora es baja: irradiación horaria equivale al valor medio de la irradiancia durante esa hora.
-  - Relación entre irradiancia e irradiación extra-terrestre deducible teóricamente:
+- *Objetivo*: construir un perfil diario promedio de valores de /irradiancia/ global y difusa, $G(0), D(0)$, a partir de valores de /irradiación/ global y difusa diaria, $G_d(0), D_d(0)$.
+
+- *Problema*: conocemos el área de la curva, $G_d(0)$, pero pretendemos obtener los valores que conforman la curva, $G(0)$.
+
+- *Solución*: empleamos un modelo de *cielo claro* a partir de la ratio entre la irradiancia e irradiación extra-atmosférica.
+
+#+begin_export latex
+\[
+\frac{D(0)}{D_d(0)}  = \frac{B_{o}(0)}{B_{0d}(0)} 
+\]
+#+end_export
+
+- *Limitación*: Este modelo es válido como promedio a largo plazo (no es representativo de un día concreto).
+
+
+*** Perfil
+#+BEGIN_EXPORT latex
+\[D(0) = r_D \cdot D_{d}(0)\]
+
+\[G(0) = r_G \cdot G_{d}(0)\]
+#+END_EXPORT
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/RgRd.pdf]]
+
+*** Ecuaciones
 
 #+BEGIN_EXPORT latex
 \[
-\frac{B_{o}(0)}{B_{0d}(0)}=\frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}
+r_D = \frac{B_{o}(0)}{B_{0d}(0)} = \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}
 \]
 #+END_EXPORT
 
-*** Perfil
-
-[[../figs/RgRd.pdf]]
-
-*** Ecuaciones del perfil
-
 #+BEGIN_EXPORT latex
-\[r_{D}=\frac{D(0)}{D_{d}(0)}=\frac{B_{o}(0)}{B_{0d}(0)}\]
-
-\[r_{G}=\frac{G(0)}{G_{d}(0)}=r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
+\[r_G = r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
 
 \[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
 
 \[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
 #+END_EXPORT
+
 
 ** Transformación al plano del generador
 
