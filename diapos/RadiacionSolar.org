@@ -855,9 +855,16 @@ r_D = \frac{B_{o}(0)}{B_{0d}(0)} = \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\o
 
 *** Planteamiento
 
-- *Irradiancia Directa*: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
-- *Irradiancia Difusa*: modelos del estado de cielo, modelo isotrópico o anisotrópico.
-- *Irradiancia de Albedo*: modelo isotrópico con coeficiente de reflexión típico.
+- *Irradiancia Directa* $B(\beta, \alpha)$: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
+- *Irradiancia Difusa*  $D(\beta, \alpha)$: modelos del estado de cielo, modelo isotrópico o anisotrópico.
+- *Irradiancia de Albedo* $R(\beta, \alpha)$: modelo isotrópico con coeficiente de reflexión típico.
+
+#+begin_export latex
+\[
+G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
+\]
+#+end_export
+
 *** Irradiancia Directa
 
 *Irradiancia Directa*: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).

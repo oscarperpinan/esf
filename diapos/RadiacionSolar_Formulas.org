@@ -272,6 +272,6 @@ r_D = \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\co
 *** Irradiancia Global
 #+begin_export latex
 \[
-G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + G(\beta, \alpha)
+G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 \]
 #+end_export
