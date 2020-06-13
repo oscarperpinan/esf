@@ -179,7 +179,7 @@ mundial.
 9. Australia: \SI{7.2}{\giga\watt}
 10. España: \SI{5.6}{\giga\watt}
 
-*** 
+*** Evolución de la potencia acumulada
 
 [[file:../figs/PVWorld.pdf]]
 
