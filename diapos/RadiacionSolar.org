@@ -592,20 +592,17 @@ Una estimación de la productividad de un SFV confiable y representativa en el l
 *** Estaciones Meteorológicas
 
   - Series temporales largas
-  - Alta resolución temporal ($\SI{1}{\min}$)
+  - Alta resolución temporal ($\SI{1}{\sec}$ - $\SI{1}{\min}$)
   - Baja resolución espacial.
   - Los errores se deben al medidor (no se emplean modelos).
-
+    
 ***** Piranómetro
-#+BEGIN_CENTER
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/piranometro.jpg]]
-#+END_CENTER
 
 
 *** Imágenes de Satelite
-
-  - Baja resolución temporal ($\SI{1}{hora}$).
+  - Baja resolución temporal ($\SI{15}{\min}$ - $\SI{1}{hora}$).
 
   - Alta resolución espacial ($\SI{15}{km}$).
 
@@ -613,6 +610,8 @@ Una estimación de la productividad de un SFV confiable y representativa en el l
 
   - Los errores se deben a los modelos.
 
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/CMSAF.png]]
 
 *** Métodos Híbridos
 
@@ -695,7 +694,7 @@ G_d(0) \leq B_{0d}(0)
 \]
 #+END_EXPORT
 
-*** Exactitud y Precisión
+*** Exactitud (/bias/) y Precisión (/variance/)
 
 #+ATTR_LATEX: :height 0.8\textheight
 [[file:~/github/esf/figs/bias-variance.png]]
