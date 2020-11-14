@@ -58,12 +58,33 @@
     eclíptica/
 
 *** Movimiento terrestre
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
 
 [[../figs/PlanoEcliptica.pdf]]
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+   Entre eje polar y plano de la eclíptica: ángulo constante de $23,45\degree$.
+****                                                     :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
 
-   -  Entre el eje polar y el plano de la eclíptica hay un ángulo constante de $23,45\degree$.
 
-   -  Entre el plano ecuatorial y la linea que une la Tierra y el Sol hay un ángulo variable: /declinación./
+   [[../figs/SoldesdeTierra.pdf]]
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+   Entre plano ecuatorial y línea que une Tierra y Sol: ángulo variable, /declinación/.
 
 
 
@@ -360,7 +381,7 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 - *Irradiación extra-atmosférica diaria* ($\si{\watthour\per\meter\squared}$) 
   #+BEGIN_EXPORT latex
   \[
-    B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)
+B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right)
   \]
   ($\omega_{s}$ en radianes)
   #+END_EXPORT
@@ -385,6 +406,24 @@ Calcule la hora solar real correspondiente al día 23 de Abril de 2010
 |-------+-----+-----+-----+-----+-----+-----|
 | $d_n$ | 199 | 230 | 261 | 292 | 322 | 347 |
 
+*** Ejemplo
+
+Calcula la irradiación diaria extra-atmosférica en el plano horizontal del día 18 de septiembre ($d_n = 261$) en un lugar de latitud 40\degree N.
+
+
+#+begin_export latex
+\begin{align*}
+  \delta &= 23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(261+284\right)}{365}\right) = 1.0089\degree\\
+  \\
+  \cos \omega_s &= -\tan(\delta) \tan(\phi) = -0.01478\\
+  \omega_s &= -90.85\degree = \SI{-1.586}{\radian}\\
+  \\
+  \epsilon_0 &= 1+0.033\cdot\cos(2\pi\cdot261/365) = 0.9928151\\
+  \\
+  B_{0d}(0) &= -\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right) = \\
+         &= \SI{8126.37}{\kilo\watthour\per\meter\squared}
+\end{align*}
+#+end_export
 ** Radiación solar en la superficie terrestre
 *** 
 #+ATTR_LATEX: :height 0.95\textheight
@@ -547,10 +586,21 @@ F_{Dd} = \begin{cases}
 
 *** Ejemplo
 
--  Calcular :: las componentes directa y difusa de la radiación solar del:
+Calcula las componentes directa y difusa de la radiación solar del 17
+de Septiembre (día 261) en un lugar con latitud
+$\phi=\ang{40}\mathrm{N}$ y con irradiación global diaria horizontal
+$G_d(0)=\SI{4510}{\watthour\per\meter\squared}$.
 
-   -  Mes de Septiembre (día 261) en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal
-      $G_{d,m}(0)=\SI{2700}{\watthour\per\meter\squared}$.
+#+begin_export latex
+\begin{align*}
+  B_{0d} &= \SI{8126.366}{\watthour\per\meter\squared}\\
+  K_{Td} &= G_{d}/B_{0d} = \frac{2700}{8126.366} = 0.55498\\
+  F_{Dd} &= 1.188 - 2.272 \cdot 0.55498 + 9.473 \cdot 0.55498^{2} -\\
+         &- 21.856 \cdot 0.55498^{3} + 14.648 \cdot 0.55498^{4} = 0.4984\\
+  D_d(0) &= F_{Dd} \cdot G_d(0) = 0.4984 \cdot 4510 = \SI{2247.78}{\watthour\per\meter\squared}\\
+  B_d(0) &= G_d(0) - D_d(0) = \SI{2262.22}{\watthour\per\meter\squared}
+\end{align*}
+#+end_export
 * Bases de Datos
 ** Introducción
 *** Variabilidad Solar
