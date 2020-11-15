@@ -318,32 +318,7 @@ M=\frac{2\pi}{365.24}\cdot d_{n}
 [[../figs/EoT.pdf]]
 
 *** Ejemplo de cálculo
-
-\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
-
-**** 
-Calcule la hora solar real correspondiente al día 23 de Abril de 2010
-  ($\mathrm{EoT=\SI{1.78}{\minute}}$) a las 12 de la mañana, hora
-  oficial de la ciudad de A Coruña, Galicia. Esta localidad está
-  contenida en el meridiano de longitud $8.38\degree\mathrm{W}$ y su
-  hora oficial está regida por el huso horario GMT+1.
-
-*** Solución
-\[\omega=15\cdot(\mathrm{TO}-\mathrm{AO}-12)+\Delta\lambda+\frac{\mathrm{EoT}}{4}\]
-
-#+ATTR_BEAMER: :overlay <+->
--  $\lambda_{L}=-8.38\degree$, $\lambda_{H}=15\degree$ y
-   $\Delta\lambda=-23.38\degree$.
-
--  En España se aplica el horario de verano y este día está incluido
-   en el período afectado, $\mathrm{AO}=1$.
-
--  Por último, para este día $\mathrm{EoT=\SI{1.78}{\minute}}$.
-
--  Así $\omega=-37.94\degree$ (aproximadamente las 9 y media de la
-   mañana). El Sol culminará ($\omega=0$) cuando sean las 14:31, hora
-   oficial.
-
+Calcula la hora solar real correspondiente al día 23 de Abril de 2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña, Galicia. Esta localidad está contenida en el meridiano de longitud $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso horario GMT+1.
 
 *** 
 [[file:~/github/esf/figs/Kahoot_Logo.png]]
@@ -406,24 +381,10 @@ B_{0d}(0)=-\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delt
 |-------+-----+-----+-----+-----+-----+-----|
 | $d_n$ | 199 | 230 | 261 | 292 | 322 | 347 |
 
-*** Ejemplo
+*** Ejemplo de cálculo
 
 Calcula la irradiación diaria extra-atmosférica en el plano horizontal del día 18 de septiembre ($d_n = 261$) en un lugar de latitud 40\degree N.
 
-
-#+begin_export latex
-\begin{align*}
-  \delta &= 23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(261+284\right)}{365}\right) = 1.0089\degree\\
-  \\
-  \cos \omega_s &= -\tan(\delta) \tan(\phi) = -0.01478\\
-  \omega_s &= -90.85\degree = \SI{-1.586}{\radian}\\
-  \\
-  \epsilon_0 &= 1+0.033\cdot\cos(2\pi\cdot261/365) = 0.9928151\\
-  \\
-  B_{0d}(0) &= -\frac{24}{\pi}B_{0}\epsilon_{0}\cdot\left(\omega_{s}\sin\phi\sin\delta+\cos\delta\cos\phi\sin\omega_{s}\right) = \\
-         &= \SI{8126.37}{\kilo\watthour\per\meter\squared}
-\end{align*}
-#+end_export
 ** Radiación solar en la superficie terrestre
 *** 
 #+ATTR_LATEX: :height 0.95\textheight
@@ -555,17 +516,9 @@ Calcula la irradiación diaria extra-atmosférica en el plano horizontal del dí
 
 \[F_{Dm}=1-1.13\cdot K_{Tm}\]
 
-*** Correlaciones $F_{D}$ y $K_{T}$
+*** Ejemplo de cálculo
 
-Ejemplo: en un lugar con $G_{d,m}(0) = \SI{3150}{\watthour\per\meter\squared}$ en un mes con $B_{o,dm}(0) = \SI{4320}{\watthour\per\meter\squared}$  será:
-
-- $K_{Tm}=\frac{3150}{4320}=0.73$
-
-- Según la correlación de Page, $F_{Dm}=1-1.13\cdot0.73=0.175$
-
-- $D_{d,m}(0)=0.175\cdot3150=\SI{551.6}{\watthour\per\meter\squared}$
-
-- $B_{d,m}(0)=3150-551.6=\SI{2598,4}{\watthour\per\meter\squared}$
+Calcula las medias mensuales de las componentes de la irradiación en un lugar de latitud 40\degree N, cuya media mensual de irradiación global en el plano horizontal en el mes de septiembre es de $G_{d,m}(0) = \SI{4150}{\watthour\per\meter\squared}$.
 
 *** Valores Diarios: Collares-Pereira y Rabl
 :PROPERTIES:
@@ -584,23 +537,13 @@ F_{Dd} = \begin{cases}
 {\scriptsize \par}
 #+END_EXPORT
 
-*** Ejemplo
+*** Ejemplo de cálculo
 
 Calcula las componentes directa y difusa de la radiación solar del 17
 de Septiembre (día 261) en un lugar con latitud
 $\phi=\ang{40}\mathrm{N}$ y con irradiación global diaria horizontal
 $G_d(0)=\SI{4510}{\watthour\per\meter\squared}$.
 
-#+begin_export latex
-\begin{align*}
-  B_{0d} &= \SI{8126.366}{\watthour\per\meter\squared}\\
-  K_{Td} &= G_{d}/B_{0d} = \frac{2700}{8126.366} = 0.55498\\
-  F_{Dd} &= 1.188 - 2.272 \cdot 0.55498 + 9.473 \cdot 0.55498^{2} -\\
-         &- 21.856 \cdot 0.55498^{3} + 14.648 \cdot 0.55498^{4} = 0.4984\\
-  D_d(0) &= F_{Dd} \cdot G_d(0) = 0.4984 \cdot 4510 = \SI{2247.78}{\watthour\per\meter\squared}\\
-  B_d(0) &= G_d(0) - D_d(0) = \SI{2262.22}{\watthour\per\meter\squared}
-\end{align*}
-#+end_export
 * Bases de Datos
 ** Introducción
 *** Variabilidad Solar
@@ -848,120 +791,6 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SeguidorReocin.jpg]]
 
-** Irradiancia a partir de irradiación diaria
-*** 
-#+ATTR_LATEX: :height 0.95\textheight
-[[../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf]]
-
-*** Planteamiento
-
-- *Objetivo*: construir un perfil diario promedio de valores de /irradiancia/ global y difusa, $G(0), D(0)$, a partir de valores de /irradiación/ global y difusa diaria, $G_d(0), D_d(0)$.
-
-- *Problema*: conocemos el área de la curva, $G_d(0)$, pero pretendemos obtener los valores que conforman la curva, $G(0)$.
-
-- *Solución*: empleamos un modelo de *cielo claro* a partir de la ratio entre la irradiancia e irradiación extra-atmosférica.
-
-#+begin_export latex
-\[
-\frac{D(0)}{D_d(0)}  = \frac{B_{o}(0)}{B_{0d}(0)} 
-\]
-#+end_export
-
-- *Limitación*: Este modelo es válido como promedio a largo plazo (no es representativo de un día concreto).
-
-
-*** Perfil
-#+BEGIN_EXPORT latex
-\[D(0) = r_D \cdot D_{d}(0)\]
-
-\[G(0) = r_G \cdot G_{d}(0)\]
-#+END_EXPORT
-#+ATTR_LATEX: :height 0.7\textheight
-[[../figs/RgRd.pdf]]
-
-*** Ecuaciones
-
-#+BEGIN_EXPORT latex
-\[
-r_D = \frac{B_{o}(0)}{B_{0d}(0)} = \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}
-\]
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
-\[r_G = r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
-
-\[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
-
-\[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
-#+END_EXPORT
-
-
-** Transformación al plano del generador
-
-*** 
-#+ATTR_LATEX: :height 0.95\textheight
-[[../figs/ProcedimientoCalculoRadiacionInclinada_inclinada.pdf]]
-
-*** Planteamiento
-
-- *Irradiancia Directa* $B(\beta, \alpha)$: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
-- *Irradiancia Difusa*  $D(\beta, \alpha)$: modelos del estado de cielo, modelo isotrópico o anisotrópico.
-- *Irradiancia de Albedo* $R(\beta, \alpha)$: modelo isotrópico con coeficiente de reflexión típico.
-
-#+begin_export latex
-\[
-G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
-\]
-#+end_export
-
-*** Irradiancia Directa
-
-*Irradiancia Directa*: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
-
-#+BEGIN_EXPORT latex
-\[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
-#+END_EXPORT
-
-*** Irradiancia Difusa
-
-[[../figs/AnguloVisionCielo.pdf]]
-
-#+BEGIN_EXPORT latex
-\[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
-#+END_EXPORT
-
-*** Irradiancia Difusa Isotrópica
-
-[[../figs/AnguloVisionCielo.pdf]]
-
-
-#+BEGIN_EXPORT latex
-\[L(\theta_{z},\psi)=cte.\]
-
-\[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
-#+END_EXPORT
-*** Irradiancia Difusa Anisotrópica
-#+BEGIN_EXPORT latex
-\[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
-
-\[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
-
-\[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
-
-\[k_{1} = \frac{B(0)}{B_{0}(0)}\]
-#+END_EXPORT
-
-*** Irradiancia de Albedo
-
-[[../figs/AnguloVisionCielo.pdf]]
-
-
-#+BEGIN_EXPORT latex
-\[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
-
-\[\rho=0.2\]
-#+END_EXPORT
-
 ** Geometría de los sistemas fotovoltaicos
 *** Ángulo de Incidencia Sistema Estático
    :PROPERTIES:
@@ -1034,6 +863,130 @@ G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 #+ATTR_LATEX: :height 0.8\textheight
 [[../figs/BetaDoble_40N.pdf]]
 
+
+** Irradiancia a partir de irradiación diaria
+*** 
+#+ATTR_LATEX: :height 0.95\textheight
+[[../figs/ProcedimientoCalculoRadiacionInclinada_perfil.pdf]]
+
+*** Planteamiento
+
+- *Objetivo*: construir un perfil diario promedio de valores de /irradiancia/ global y difusa, $G(0), D(0)$, a partir de valores de /irradiación/ global y difusa diaria, $G_d(0), D_d(0)$.
+
+- *Problema*: conocemos el área de la curva, $G_d(0)$, pero pretendemos obtener los valores que conforman la curva, $G(0)$.
+
+- *Solución*: empleamos un modelo de *cielo claro* a partir de la ratio entre la irradiancia e irradiación extra-atmosférica.
+
+#+begin_export latex
+\[
+\frac{D(0)}{D_d(0)}  = \frac{B_{o}(0)}{B_{0d}(0)} 
+\]
+#+end_export
+
+- *Limitación*: Este modelo es válido como promedio a largo plazo (no es representativo de un día concreto).
+
+
+*** Perfil
+#+BEGIN_EXPORT latex
+\[D(0) = r_D \cdot D_{d}(0)\]
+
+\[G(0) = r_G \cdot G_{d}(0)\]
+#+END_EXPORT
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/RgRd.pdf]]
+
+*** Ecuaciones
+
+#+BEGIN_EXPORT latex
+\[
+r_D = \frac{B_{o}(0)}{B_{0d}(0)} = \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})}
+\]
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\[r_G = r_{D}\cdot\left(a+b\cdot\cos(\omega)\right)\]
+
+\[a=0.409-0.5016\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+
+\[b=0.6609+0.4767\cdot\sin(\omega_{s}+\frac{\pi}{3})\]
+#+END_EXPORT
+
+*** Ejemplo de cálculo
+
+Calcula la irradiancia global y la irradiancia difusa en el plano horizontal 2 horas antes del mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de irradiación global diaria horizontal $G_{d,m}(0)=\SI{4150}{\watthour\per\meter\squared}$.
+** Transformación al plano del generador
+
+*** 
+#+ATTR_LATEX: :height 0.95\textheight
+[[../figs/ProcedimientoCalculoRadiacionInclinada_inclinada.pdf]]
+
+*** Planteamiento
+
+- *Irradiancia Directa* $B(\beta, \alpha)$: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
+- *Irradiancia Difusa*  $D(\beta, \alpha)$: modelos del estado de cielo, modelo isotrópico o anisotrópico.
+- *Irradiancia de Albedo* $R(\beta, \alpha)$: modelo isotrópico con coeficiente de reflexión típico.
+
+#+begin_export latex
+\[
+G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
+\]
+#+end_export
+
+*** Irradiancia Directa
+
+*Irradiancia Directa*: ecuación analítica basada en geometría solar (ángulo cenital) y del generador (ángulo de incidencia).
+
+#+BEGIN_EXPORT latex
+\[B(\beta,\alpha)=B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+#+END_EXPORT
+
+*** Irradiancia Difusa
+
+[[../figs/AnguloVisionCielo.pdf]]
+
+#+BEGIN_EXPORT latex
+\[D(\beta,\alpha)=\intop_{\Omega}L(\theta_{z},\psi)\cdot\cos(\theta_{z}^{'})d\Omega\]
+#+END_EXPORT
+
+*** Irradiancia Difusa Isotrópica
+
+[[../figs/AnguloVisionCielo.pdf]]
+
+
+#+BEGIN_EXPORT latex
+\[L(\theta_{z},\psi)=cte.\]
+
+\[D(\beta,\alpha)=D(0)\cdot\frac{1+\cos(\beta)}{2}\]
+#+END_EXPORT
+*** Irradiancia Difusa Anisotrópica
+#+BEGIN_EXPORT latex
+\[D(\beta,\alpha) = D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha)\]
+
+\[D^{I}(\beta,\alpha) = D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2}\]
+
+\[D^{C}(\beta,\alpha) = D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})}\]
+
+\[k_{1} = \frac{B(0)}{B_{0}(0)}\]
+#+END_EXPORT
+
+*** Irradiancia de Albedo
+
+[[../figs/AnguloVisionCielo.pdf]]
+
+
+#+BEGIN_EXPORT latex
+\[R(\beta,\alpha)=\rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2}\]
+
+\[\rho=0.2\]
+#+END_EXPORT
+
+*** Ejemplo de cálculo
+
+Calcula la irradiancia difusa, directa, de albedo y global, en un
+generador inclinado $\ang{30}$ y orientado al Sur, 2 horas antes del
+mediodía del día 261 en un lugar con latitud $\phi=\ang{40}\mathrm{N}$
+y con media mensual de irradiación global diaria horizontal
+$G_{d,m}(0)=\SI{4150}{\watthour\per\meter\squared}$.
 
 ** Pérdidas angulares y por suciedad
 
