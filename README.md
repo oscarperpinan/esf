@@ -24,15 +24,15 @@ Internacional</a>.
 
 Puedes citar este libro como:
 
-> Perpiñán, O. 2015. Energía Solar Fotovoltaica. http://oscarperpinan.github.io/esf/.
+> Perpiñán, O. 2020. Energía Solar Fotovoltaica. http://oscarperpinan.github.io/esf/.
 
 Y si usas bibtex: 
 
-    @book{Perpinan2015,
+    @book{Perpinan2020,
     author = {Perpi{\~{n}}{\'{a}}n, O.},
     title = {{Energ{\'{i}}a Solar Fotovoltaica}},
     url = {http://oscarperpinan.github.io/esf/},
-    year = {2015}
+    year = {2020}
     }
 
 
