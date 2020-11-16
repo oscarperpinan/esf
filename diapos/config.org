@@ -26,6 +26,10 @@
 #+LATEX_HEADER: \setbeamercolor{block title}{bg=structure.fg!20!bg!50!bg}
 #+LATEX_HEADER: \setbeamercolor{block body}{use=block title,bg=block title.bg}
 #+LATEX_HEADER: \setbeamertemplate{navigation symbols}{\insertsectionnavigationsymbol}
+#+BEAMER_HEADER: \setbeamertemplate{itemize items}[triangle]
+#+BEAMER_HEADER: \setbeamertemplate{enumerate items}[circle]
+#+BEAMER_HEADER: \setbeamertemplate{section in toc}[circle]
+#+BEAMER_HEADER: \setbeamertemplate{subsection in toc}[circle]
 #+LATEX_HEADER: \lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={¡}{{\textexclamdown}}1 {á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {í}{{\'i}}1 {ú}{{\'u}}1 {º}{{\textordmasculine}}1, showstringspaces=false}
 #+LATEX_HEADER: \usepackage{mathpazo}
 #+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
