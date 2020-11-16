@@ -428,7 +428,7 @@ Calcula la irradiación diaria extra-atmosférica en el plano horizontal del dí
 
 **** Forma, tiempo, lugar
 
--  Forma+Tiempo+Lugar: :: Irradiancia directa (forma) horaria (tiempo)
+-  Forma+Tiempo+Lugar: :: Irradiación directa (forma) horaria (tiempo)
    en el plano del generador (lugar)
 
 -  Promedios: :: Media mensual (periodo) de la irradiación global
