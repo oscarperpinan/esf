@@ -34,11 +34,17 @@
 \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
 
-\usepackage[emulate=units]{siunitx}
-\newunit{\wattpeak}{Wp}
-\newunit{\watthour}{Wh}
-\newunit{\amperehour}{Ah}
-\sisetup{per-mode=fraction, fraction-function=nice, output-decimal-marker=comma}
+\usepackage{siunitx}
+\DeclareSIUnit\kWh{kWh}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit\Wh{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit\Wp{Wp}
+\DeclareSIUnit\kWp{kWp}
+\DeclareSIUnit\celula{celula}
+\DeclareSIUnit{\amperehour}{Ah}
+
+\sisetup{per-mode=symbol-or-fraction}
 %\usepackage{lscape}
 \usepackage{mathpazo}%Letra palatino con fuentes para matemáticas
 \usepackage{flafter}%obliga a que los flotantes aparezcan después de su referencia
@@ -106,12 +112,6 @@ backend=bibtex, doi=true, url=true]{biblatex}
 }
 	
 
-\DeclareSIUnit\kWh{kWh}
-\DeclareSIUnit\Wh{Wh}
-\DeclareSIUnit\Wp{Wp}
-\DeclareSIUnit\kWp{kWp}
-\DeclareSIUnit\amperehour{Ah}
-\DeclareSIUnit\celula{celula}
 
 %\spanishdecimal{.} %Para que no lo sustituya automáticamente por comas
 \addto\captionsspanish{%

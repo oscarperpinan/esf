@@ -6,51 +6,51 @@
 \begin{itemize}
 \item Calcula el Azimut, Ángulo Cenital y Altura Solar, Duración del
   Dia para el día del año 120, 2 horas después del mediodía, latitud
-  $37.2\degree\mathrm{N}$:
+  $\ang{37.2}\mathrm{N}$:
   \[
     2\cdot\left|\omega_{s}\right|=\SI{13.5}{\hour}\]
   \[
-    \gamma_{s}=55.1\degree\]
+    \gamma_{s}=\ang{55.1}\]
   \[
-    \psi_{s}=57.7\degree\]
+    \psi_{s}=\ang{57.7}\]
 
 \item Calcula el Azimut, Ángulo Cenital y Altura Solar, Duración del
   Dia para el día del año día del año 340, 2 horas después del
-  amanecer, latitud $\SI{15}{\degree}\mathrm{S}$:
+  amanecer, latitud $\ang{15}\mathrm{S}$:
 
 \[
   2\cdot\left|\omega_{s}\right|=\SI{12.85}{\hour}\]
 \[
-  \gamma_{s}=27.13\degree\]
+  \gamma_{s}=\ang{27.13}\]
 \[
-  \psi_{s}=-108.2\degree\]
+  \psi_{s}=\ang{-108.2}\]
 
 \item Calcula la duración del día 261 del año en las siguientes
   latitudes:
 
   \begin{itemize}
-  \item $\SI{10}{\degree}\mathrm{N}$: $\SI{12.02}{\hour}$
-  \item $\SI{40}{\degree}\mathrm{N}$: $\SI{12.11}{\hour}$
-  \item $\SI{70}{\degree}\mathrm{N}$: $\SI{12.37}{\hour}$
-  \item $\SI{10}{\degree}\mathrm{S}$: $\SI{11.97}{\hour}$
-  \item $\SI{40}{\degree}\mathrm{S}$: $\SI{11.88}{\hour}$
-  \item $\SI{70}{\degree}\mathrm{S}$: $\SI{11.63}{\hour}$
+  \item $\ang{10}\mathrm{N}$: $\SI{12.02}{\hour}$
+  \item $\ang{40}\mathrm{N}$: $\SI{12.11}{\hour}$
+  \item $\ang{70}\mathrm{N}$: $\SI{12.37}{\hour}$
+  \item $\ang{10}\mathrm{S}$: $\SI{11.97}{\hour}$
+  \item $\ang{40}\mathrm{S}$: $\SI{11.88}{\hour}$
+  \item $\ang{70}\mathrm{S}$: $\SI{11.63}{\hour}$
   \end{itemize}
 
 \item Calcula la altura solar en el mediodía del día 25 del año en las
   latitudes:
 
   \begin{itemize}
-  \item $\SI{10}{\degree}\mathrm{N}$: $\gamma_{s}=60.74\degree$
-  \item $\SI{40}{\degree}\mathrm{N}$: $\gamma_{s}=30.74\degree$
-  \item $\SI{10}{\degree}\mathrm{S}$: $\gamma_{s}=80.74\degree$
-  \item $\SI{40}{\degree}\mathrm{S}$: $\gamma_{s}=69.26\degree$
+  \item $\ang{10}\mathrm{N}$: $\gamma_{s}=\ang{60.74}$
+  \item $\ang{40}\mathrm{N}$: $\gamma_{s}=\ang{30.74}$
+  \item $\ang{10}\mathrm{S}$: $\gamma_{s}=\ang{80.74}$
+  \item $\ang{40}\mathrm{S}$: $\gamma_{s}=\ang{69.26}$
   \end{itemize}
 
 \item Calcula la hora solar real correspondiente al día 23 de Abril de
   2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña,
   Galicia. Esta localidad está contenida en el meridiano de longitud
-  $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso
+  $\ang{8.38}\mathrm{W}$ y su hora oficial está regida por el huso
   horario GMT+1.
 
   Usamos la ecuación:
@@ -64,9 +64,9 @@
 
   En cuanto a las longitudes:
   \begin{align*}
-    \lambda_{L} &= -8.38\degree\\
-    \lambda_{H} &= 15\degree\\
-    \Delta\lambda &= -23.38\degree
+    \lambda_{L} &= -\ang{8.38}\\
+    \lambda_{H} &= \ang{15}\\
+    \Delta\lambda &= \ang{-23.38}
   \end{align*}
   
 
@@ -79,7 +79,7 @@
                   1.9439 + 3.5884\right)\right) = \SI{1.785}{\minute}
   \end{align*}
   
-  Por tanto, $\omega=-37.94\degree$ (aproximadamente las 9 y media de
+  Por tanto, $\omega=\ang{-37.94}$ (aproximadamente las 9 y media de
   la mañana). El Sol culminará ($\omega=0$) cuando sean las 14:31,
   hora oficial.
 
@@ -93,13 +93,13 @@
 \begin{itemize}
 \item Calcula la irradiación diaria extra-atmosférica en el plano
   horizontal del día 18 de septiembre ($d_n = 261$) en un lugar de
-  latitud 40\degree N.
+  latitud $\ang{40}$ N.
 
 \begin{align*}
-  \delta &= 23,45\degree\cdot\sin\left(\frac{2\pi\cdot\left(261+284\right)}{365}\right) = 1.0089\degree\\
+  \delta &= \ang{23,45}\cdot\sin\left(\frac{2\pi\cdot\left(261+284\right)}{365}\right) = \ang{1.0089}\\
   \\
   \cos \omega_s &= -\tan(\delta) \tan(\phi) = -0.01478\\
-  \omega_s &= -90.85\degree = \SI{-1.586}{\radian}\\
+  \omega_s &= \ang{-90.85} = \SI{-1.586}{\radian}\\
   \\
   \epsilon_0 &= 1+0.033\cdot\cos(2\pi\cdot261/365) = 0.9928151\\
   \\
@@ -108,7 +108,7 @@
 \end{align*}
 
 \item Calcula las medias mensuales de las componentes de la
-  irradiación en un lugar de latitud 40\degree N, cuya media mensual
+  irradiación en un lugar de latitud $\ang{40}$ N, cuya media mensual
   de irradiación global en el plano horizontal en el mes de septiembre
   es de $G_{d,m}(0) = \SI{4150}{\watthour\per\meter\squared}$:
 
@@ -117,7 +117,7 @@
   día 261 (día promedio), calculado en el apartado anterior:
 
 \[
-  B_{0d,m}(0) = \SI{8126.37}{\kilo\watthour\per\meter\squared}
+  B_{0d,m}(0) = \SI{8126.37}{\watthour\per\meter\squared}
 \]
 
 Por tanto, el índice de claridad en este mes es:
@@ -147,7 +147,7 @@ Por tanto, las componentes difusa y directa son:
 
 \begin{align*}
   B_{0d} &= \SI{8126.366}{\watthour\per\meter\squared}\\
-  K_{Td} &= G_{d}/B_{0d} = \frac{2700}{8126.366} = 0.55498\\
+  K_{Td} &= \frac{G_{d}}{B_{0d}} = \frac{4510}{8126.366} = 0.55498\\
   F_{Dd} &= 1.188 - 2.272 \cdot 0.55498 + 9.473 \cdot 0.55498^{2} -\\
          &- 21.856 \cdot 0.55498^{3} + 14.648 \cdot 0.55498^{4} = 0.4984\\
   D_d(0) &= F_{Dd} \cdot G_d(0) = 0.4984 \cdot 4510 = \SI{2247.78}{\watthour\per\meter\squared}\\
@@ -162,7 +162,7 @@ Por tanto, las componentes difusa y directa son:
   $G_{d,m}(0)=\SI{4150}{\Wh\per\meter\squared}$.
 
   El valor de $\omega$ 2 horas antes del mediodía es
-  $\omega = \SI{-2}{\hour} = -30\degree.$
+  $\omega = \SI{-2}{\hour} = \ang{-30}.$
 
 \begin{align*}
   r_{D} &= \frac{\pi}{24}\cdot\frac{\cos(\omega)-\cos(\omega_{s})}{\omega_{s}\cdot\cos(\omega_{s})-\sin(\omega_{s})} = 0.113\\
@@ -184,28 +184,28 @@ Por tanto, las componentes difusa y directa son:
 \item Calcula el ángulo de incidencia para el
   \begin{itemize}
   \item Día del Año: 120, 2 horas después del mediodía, Latitud:
-    $\SI{37.2}{\degree}\mathrm{N}$;
+    $\ang{37.2}\mathrm{N}$;
 
     \begin{itemize}
     \item Un sistema estático orientado al Sur y con inclinación de
-      $\SI{30}{\degree}$: $\theta_{s}=30.33\degree$
+      $\ang{30}$: $\theta_{s}=\ang{30.33}$
     \item Un sistema de seguimiento horizontal N-S:
-      $\theta_{s}=17.98\degree$
+      $\theta_{s}=\ang{17.98}$
     \item Un sistema de seguimiento acimutal con inclinación a
-      $\SI{35}{\degree}$: $\theta_{s}=0\degree$
-    \item Un sistema de seguimiento a doble eje: $\theta_{s}=0\degree$
+      $\ang{35}$: $\theta_{s}=\ang{0}$
+    \item Un sistema de seguimiento a doble eje: $\theta_{s}=\ang{0}$
     \end{itemize}
   \item Día del Año: 340, 2 horas después del amanecer, Latitud:
-    $\SI{15}{\degree}\mathrm{S}$;
+    $\ang{15}\mathrm{S}$;
 
     \begin{itemize}
     \item Un sistema estático orientado al Sur y con inclinación de
-      $\SI{30}{\degree}$: $\theta_{s}=75.1\degree$
+      $\ang{30}$: $\theta_{s}=\ang{75.1}$
     \item Un sistema de seguimiento horizontal N-S:
-      $\theta_{s}=16.1\degree$
+      $\theta_{s}=\ang{16.1}$
     \item Un sistema de seguimiento acimutal con inclinación a
-      $\SI{35}{\degree}$: $\theta_{s}=27.87\degree$
-    \item Un sistema de seguimiento a doble eje: $\theta_{s}=0\degree$
+      $\ang{35}$: $\theta_{s}=\ang{27.87}$
+    \item Un sistema de seguimiento a doble eje: $\theta_{s}=\ang{0}$
     \end{itemize}
   \end{itemize}
 

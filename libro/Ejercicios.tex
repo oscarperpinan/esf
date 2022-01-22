@@ -6,7 +6,7 @@
 
  \subsection{Entorno del diseño}
 
-Ante la implantación de un nuevo hipermercado en A Coruña ($\phi=43.37\degree\mathrm{\, N}$),
+Ante la implantación de un nuevo hipermercado en A Coruña ($\phi=\ang{43.37}\mathrm{\, N}$),
 el equipo de arquitectos e ingenieros al cargo del diseño toman en
 consideración las implicaciones del documento HE5 del Código Técnico
 de la Edificación. Consideran que la ubicación del correspondiente
@@ -15,7 +15,7 @@ En esta cubierta, a pesar de los elementos ya proyectados, no hay
 problemas de espacio ni sombras que afecten al generador. No obstante,
 por criterios estéticos deciden alinear el generador con la fachada
 principal del edificio. Este centro tendrá una superficie construida
-de $\SI{8500}{\meter\squared}$, con una fachada desviada $15\degree$
+de $\SI{8500}{\meter\squared}$, con una fachada desviada $\ang{15}$
 del Sur. 
 \begin{enumerate}
 \item ¿Cuales son los ángulos óptimos de inclinación y orientación de este
@@ -61,15 +61,18 @@ del generador fotovoltaico?
 \subsubsection{Solución}
 
 \begin{enumerate}
-\item Los ángulos óptimos son:\[
-\beta_{opt}=3.7+0.69\cdot\phi=33.37\degree\]
+\item Los ángulos óptimos son:
+  \[
+    \beta_{opt}=3.7+0.69\cdot\phi=\ang{33.37}
+  \]
 \[
-\alpha_{opt}=0^{\circ}\]
+  \alpha_{opt}=0^{\circ}
+\]
 Dado que se ha optado por alinear el generador con el edificio, la
-orientación del generador debera ser de $\alpha=15\degree$. Dado
+orientación del generador debera ser de $\alpha=\ang{15}$. Dado
 que el generador se instalará en la cubierta, como una instalacion
 estática convencional, la inclinación puede ser elegida sin restricciones.
-Así, elegimos el número entero más próximo: $\beta=35\degree$.\\
+Así, elegimos el número entero más próximo: $\beta=\ang{35}$.\\
 Las pérdidas debidas a orientación e inclinación, según la fórmula
 propuesta en el HE5-CTE son, con los ángulos escogidos, de 0.84\%.
 Este valor es inferior a las exigencias del CTE, independientemente
@@ -79,7 +82,7 @@ Utilizamos la definición de eficiencia de un generador fotovoltaico:\[
 \eta=0.13=\frac{P_{g}^{*}}{A\cdot\SI{1000}{\watt\per\meter\squared}}\rightarrow A=\SI{98.5}{\meter\squared}\]
 Si utilizamos ROT=2 (estática), el área de cubierta que necesitamos
 es de aproximadamente $\SI{200}{\meter\squared}$.
-\item Para una temperatura ambiente de $25\celsius$ (ecuación \ref{eq:Vmpp_inv})
+\item Para una temperatura ambiente de $\qty{25}{\degreeCelsius}$ (ecuación \ref{eq:Vmpp_inv})
 obtenemos $V_{mpp}=\SI{30.6}{\volt}$. Para el límite inferior de
 la ventana MPP del inversor obtenemos $125/30.6=4.1$, mientras que
 el límite superior obtenemos $450/30.6=14.7$. \\
@@ -126,9 +129,9 @@ red.
 Para facilitar la evaluación de las ofertas el pliego de condiciones
 técnicas del concurso fija unos determinados parámetros del diseño:
 \begin{itemize}
-\item El ángulo de inclinación del generador debe ser de $30\degree$
+\item El ángulo de inclinación del generador debe ser de $\ang{30}$
   con orientación Sur. La latitud del lugar es, para los efectos del
-  cálculo, igual a $41\degree$.
+  cálculo, igual a $\ang{41}$.
 \item Cada centro contará con un sistema fotovoltaico con una potencia
   de generador de $\SI{15}{\kilo\Wp}$.
 \item Cada sistema debe contar con dos o más inversores funcionando en
@@ -285,7 +288,7 @@ cuestiones:
 \subsection{Entorno del diseño}
 
 Un antiguo aeródromo localizado cerca del pueblo leonés de Rodrigatos
-de la Obispalía ($\phi=42.3\degree\mathrm{N}$), abandonado durante
+de la Obispalía ($\phi=\ang{42.3}\mathrm{N}$), abandonado durante
 más de 50 años, es ahora recibido como herencia por un conjunto de
 tres hermanos. Sus variadas orientaciones profesionales e ideológicas
 confluyen en la decisión común de emplear este espacio para alojar
@@ -341,7 +344,7 @@ norte-sur?
 \end{enumerate}
 \item Sobre la base de un generador fotovoltaico estático de 1015 kWp (independientemente
 del resultado del apartado anterior) orientado al Sur e inclinado
-$30\degree$ (independientemente del resultado del primer apartado),
+$\ang{30}$ (independientemente del resultado del primer apartado),
 estime la energía anual producida por el sistema. Suponga que el rendimiento
 global del sistema es del 73\%. Las posibles sombras arrojadas por
 los arboles del perimetro de la finca pueden cuantificarse en un 3\%
@@ -351,9 +354,9 @@ global anual en el plano horizontal es de $\SI{1680}{\kWh\per\meter\squared}$.
 
 \subsubsection{Solución}
 \begin{enumerate}
-\item Los ángulos óptimos son $\beta_{opt}=3.7+0.69\cdot\left|\phi\right|=32.9\degree$
-y $\alpha_{opt}=0^{\circ}$. Es razonable emplear $\beta=30\degree$
-y $\alpha=0\degree$.
+\item Los ángulos óptimos son $\beta_{opt}=3.7+0.69\cdot\left|\phi\right|=\ang{32.9}$
+y $\alpha_{opt}=0^{\circ}$. Es razonable emplear $\beta=\ang{30}$
+y $\alpha=\ang{0}$.
 \item En primer lugar hacemos una estimación del área ocupada sin tener
 en cuenta la configuración eléctrica.
 
@@ -430,7 +433,7 @@ E_{ac}=1015\cdot1824.3\cdot0.73\cdot(1-0.03)=\SI{1311.1}{\mega\Wh}\]
 \subsection{Entorno del diseño}
 
 En el contexto de un programa de electrificación rural en la región
-brasileña cercana a Posse (Goiás) (latitud promedio $\phi=14.1\degree\mathrm{S}$)
+brasileña cercana a Posse (Goiás) (latitud promedio $\phi=\ang{14.1}\mathrm{S}$)
 se acomete la implantación de sistemas fotovoltaicos para centros
 comunales. De acuerdo con los datos de campo obtenidos se propone
 un equipamiento de consumo promedio, valido para la mayoría de estos
@@ -502,7 +505,7 @@ La orientación, como de costumbre, debe ser:\[
 \alpha_{opt}=0^{\circ}\]
 pero, dado que la instalación se ubica en el hemisferio Sur, quedará
 dirigida hacia el horizonte Norte. Para la inclinación, elegimos un
-$\beta=25\degree$.
+$\beta=\ang{25}$.
 \item Según las recomendaciones de diversos estudios y normativas, para
 este tipo de consumo de electrificación rural, es razonable usar $C_{A}=1.1$
 y $C_{S}=5$.
@@ -551,7 +554,7 @@ de baterías no permite otra opción.
 El Banco Interamericano de Desarrollo ha puesto en marcha una
 licitación internacional para el suministro de sistemas fotovoltaicos
 de electrificación rural en determinados municipios del Altiplano
-Boliviano, situados en una latitud de $15\degree\mathrm{S}$.
+Boliviano, situados en una latitud de $\ang{15}\mathrm{S}$.
 
 Esta licitación incluye tres sistemas diferenciados:
 \begin{itemize}
@@ -574,7 +577,7 @@ Esta licitación incluye tres sistemas diferenciados:
 \end{itemize}
 
 Según el pliego, el generador fotovoltaico debe estar inclinado a
-$15\degree$.
+$\ang{15}$.
 
 Elija los valores adecuados de $C_A$ y $C_S$ para cada tipología y
 dimensione el generador fotovoltaico y sistema de acumulación,
@@ -596,7 +599,7 @@ $\eta_{r}=0.95$, $\eta_{bat}=0.85$ y $\eta_{c}=0.98$.
 
 Según los datos de la NASA-SSE recogidos en el pliego de licitación,
 las medias mensuales de radiación global diaria incidente en un plano
-inclinado $15\degree$ son ($\si{\kilo\Wh\per\meter\squared}$):
+inclinado $\ang{15}$ son ($\si{\kilo\Wh\per\meter\squared}$):
 
 \begin{tabular}[center]{cccccccccccc}
   \toprule
