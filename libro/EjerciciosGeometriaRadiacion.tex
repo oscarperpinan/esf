@@ -173,8 +173,8 @@ Por tanto, las componentes difusa y directa son:
 
 \begin{align*}
   D(0) &= r_D \cdot D_{d}(0) = 0.112 \cdot 1755.04 = \SI{197.98}{\watt\per\meter\squared}\\
-  G(0) &= r_G \cdot G_{d}(0) = 0.116 \cdot 2394.97 = \SI{277.54}{\watt\per\meter\squared}\\
-  B(0) &= G(0) - D(0) = \SI{79.56}{\watt\per\meter\squared}
+  G(0) &= r_G \cdot G_{d}(0) = 0.116 \cdot 4150 = \SI{481.4}{\watt\per\meter\squared}\\
+  B(0) &= G(0) - D(0) = \SI{283.42}{\watt\per\meter\squared}
 \end{align*}
 \end{itemize}
 \section{Ángulos y componentes de irradiación en Sistemas
@@ -234,8 +234,8 @@ el plano horizontal obtenidos en un apartado anterior:
 
 \begin{align*}
   D(0) &= \SI{197.98}{\watt\per\meter\squared}\\
-  G(0) &= \SI{277.54}{\watt\per\meter\squared}\\
-  B(0) &= \SI{79.56}{\watt\per\meter\squared}
+  G(0) &= \SI{481.4}{\watt\per\meter\squared}\\
+  B(0) &= \SI{283.42}{\watt\per\meter\squared}
 \end{align*}
 
 Con este conjunto de valores podemos estimar las componentes de
@@ -244,23 +244,23 @@ irradiancia:
 \[
   B(\beta,\alpha) =
   B(0)\cdot\frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})} =
-  \SI{100.93}{\watt\per\meter\squared}
+  \SI{359.53}{\watt\per\meter\squared}
 \]
 
 \begin{align*}
-  k_{1} &= \frac{B(0)}{B_{0}(0)} = 0.087\\
-  D^{I}(\beta,\alpha) &= D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2} = \SI{168.68}{\watt\per\meter\squared}\\
-  D^{C}(\beta,\alpha) &= D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})} = \SI{21.79}{\watt\per\meter\squared}\\
-  D(\beta,\alpha) &= D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha) = \SI{190.48}{\watt\per\meter\squared}
+  k_{1} &= \frac{B(0)}{B_{0}(0)} = 0.3922\\
+  D^{I}(\beta,\alpha) &= D(0) \cdot (1-k_{1}) \cdot \frac{1 + \cos(\beta)}{2} = \SI{112.27}{\watt\per\meter\squared}\\
+  D^{C}(\beta,\alpha) &= D(0) \cdot k_{1} \cdot \frac{\max(0,\cos(\theta_{s}))}{\cos(\theta_{zs})} = \SI{98.5}{\watt\per\meter\squared}\\
+  D(\beta,\alpha) &= D^{I}(\beta,\alpha)+D^{C}(\beta,\alpha) = \SI{210.77}{\watt\per\meter\squared}
 \end{align*}
 
 \begin{align*}
   \rho &= 0.2\\
-  R(\beta,\alpha) &= \rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2} = \SI{3.72}{\watt\per\meter\squared}
+  R(\beta,\alpha) &= \rho\cdot G(0)\cdot\frac{1-\cos(\beta)}{2} = \SI{6.45}{\watt\per\meter\squared}
 \end{align*}
 
 \[
   G(\alpha,\beta) = B(\alpha, \beta) + D(\alpha, \beta) + G(\alpha,
-  \beta) = \SI{294.13}{\watt\per\meter\squared}
+  \beta) = \SI{576.75}{\watt\per\meter\squared}
 \]
 \end{itemize}
