@@ -34,11 +34,12 @@
 #+LATEX_HEADER: \usepackage{mathpazo}
 #+LATEX_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
 #+LATEX_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
-#+LATEX_HEADER: \usepackage[emulate=units]{siunitx}
-#+LATEX_HEADER: \newunit{\wattpeak}{Wp}
-#+LATEX_HEADER: \newunit{\watthour}{Wh}
-#+LATEX_HEADER: \newunit{\amperehour}{Ah}
-#+LATEX_HEADER: \sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
+#+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \sisetup{output-decimal-marker={,}}
+#+LATEX_HEADER: \DeclareSIUnit{\watthour}{Wh}
+#+LATEX_HEADER: \DeclareSIUnit{\wattpeak}{Wp}
+#+LATEX_HEADER: \DeclareSIUnit{\watthour}{Wh}
+#+LATEX_HEADER: \DeclareSIUnit{\amperehour}{Ah}
 #+LATEX_HEADER: \usepackage{steinmetz}
 #+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 #+LATEX_HEADER: \usepackage{fancyvrb}

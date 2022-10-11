@@ -313,8 +313,8 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 #   diverse regions: Montana, Colorado, Illinois, Mississippi,
 #   Pennsylvania, Nevada and South Dakota.
 
-*** MAGRAMA-SIAR
-**** [[http://eportal.magrama.gob.es/websiar/Inicio.aspx]]
+*** SIAR
+**** https://eportal.mapa.gob.es/websiar/Inicio.aspx
 - El Sistema de Información Agroclimática para el Regadío (SiAR)
   registra datos agroclimáticos relacionados con demanda hídrica de
   las zonas de riego.
@@ -328,7 +328,7 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 [[../figs/EstacionesSIAR.jpeg]]
 #+END_CENTER
 
-*** MAGRAMA-SIAR
+*** SIAR
 **** Sensores
 - Temperatura y Humedad
 - Piranómetro

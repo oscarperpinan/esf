@@ -1,4 +1,4 @@
-% Created 2018-11-17 sáb 14:11
+% Created 2022-10-11 mar 13:39
 % Intended LaTeX compiler: pdflatex
 \documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
 \usepackage[utf8]{inputenc}
@@ -16,55 +16,70 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{listings}
+\usepackage[spanish]{babel}
+\setbeamercolor{alerted text}{fg=blue!50!black}
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamercolor{block title}{bg=structure.fg!20!bg!50!bg}
+\setbeamercolor{block body}{use=block title,bg=block title.bg}
+\setbeamertemplate{navigation symbols}{\insertsectionnavigationsymbol}
+\lstset{keywordstyle=\color{blue}, commentstyle=\color{gray!90}, basicstyle=\ttfamily\small, columns=fullflexible, breaklines=true,linewidth=\textwidth, backgroundcolor=\color{gray!23}, basewidth={0.5em,0.4em}, literate={¡}{{\textexclamdown}}1 {á}{{\'a}}1 {ñ}{{\~n}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {í}{{\'i}}1 {ú}{{\'u}}1 {º}{{\textordmasculine}}1, showstringspaces=false}
 \usepackage{mathpazo}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\amperehour}{Ah}
+\usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
-\bibliographystyle{plain}
-\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
-\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
-\usepackage[emulate=units]{siunitx}
-\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
-\newunit{\wattpeak}{Wp}
-\newunit{\watthour}{Wh}
-\newunit{\amperehour}{Ah}
-\usepackage{steinmetz}
-\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{footline}[frame number]
-\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
-\usetheme[hideothersubsections]{Goettingen}
+\bibliographystyle{plain}
+\usetheme{Boadilla}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro}
-\date{\url{http://oscarperpinan.github.io}}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
+\date{}
 \title{Bases de Datos de Radiación Solar}
 \subtitle{Energía Solar Fotovoltaica}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro},
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
  pdftitle={Bases de Datos de Radiación Solar},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.13)}, 
+ pdfcreator={Emacs 27.1 (Org mode 9.4.6)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Bases de Datos}
-\label{sec:orgd908399}
+\label{sec:org6d5373b}
 \subsection{Introducción}
-\label{sec:org23147ce}
+\label{sec:orgb299b1c}
 
-\begin{frame}[label={sec:org58d0ea5}]{Variabilidad Temporal y Espacial}
+\begin{frame}[label={sec:orga52f5f6}]{Variabilidad Temporal y Espacial}
 \begin{itemize}
 \item La irradiancia solar extraterrestre depende de la latitud y el instante temporal (\emph{proceso determinista}).
 \item La irradiancia solar incidente en la superficie terrestre es resultado de la interacción con la atmósfera cambiante: \alert{variabilidad temporal y espacial} (\emph{proceso estocástico}).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga24d126}]{Variabilidad Temporal}
+\begin{frame}[label={sec:org3a8e83d}]{Variabilidad Temporal}
 Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/VariabilidadRadiacionDiario.pdf}
@@ -73,7 +88,7 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 \nocite{Perpinan2009}
 \end{frame}
 
-\begin{frame}[label={sec:org0582560}]{Variabilidad Temporal}
+\begin{frame}[label={sec:org2f1ed1b}]{Variabilidad Temporal}
 \[
 \sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
 \]
@@ -93,7 +108,7 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf984091}]{Variabilidad Espacial}
+\begin{frame}[label={sec:orgd300a70}]{Variabilidad Espacial}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{../figs/SpatialVariability.jpg}
 \end{center}
@@ -105,7 +120,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \nocite{Gueymard.Wilcox2011a}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf0e12e}]{Variabilidad Espacial}
+\begin{frame}[label={sec:org1242af1}]{Variabilidad Espacial}
 \begin{center}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SpatialVariability_Annual.jpg}
@@ -113,7 +128,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org771d867}]{Estimación a partir de Medidas}
+\begin{frame}[label={sec:org856f346}]{Estimación a partir de Medidas}
 \begin{itemize}
 \item Para estimar la radiación incidente es necesario contar con:
 \begin{itemize}
@@ -123,7 +138,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org82b4e09}]{Fuentes de datos}
+\begin{frame}[label={sec:org6ea3e88}]{Fuentes de datos}
 \begin{itemize}
 \item \alert{Estaciones meteorológicas}
 \begin{itemize}
@@ -164,8 +179,8 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{frame}
 
 \subsection{Estaciones Meteorológicas}
-\label{sec:org363c007}
-\begin{frame}[label={sec:org6a4889c}]{Estaciones Meteorológicas: medida directa}
+\label{sec:orgd7397b7}
+\begin{frame}[label={sec:org716f43b}]{Estaciones Meteorológicas: medida directa}
 \begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
 \end{block}
 \begin{columns}
@@ -186,7 +201,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org7ab4726}]{Estaciones Meteorológicas: medida directa}
+\begin{frame}[label={sec:org8474663}]{Estaciones Meteorológicas: medida directa}
 \begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
 \end{block}
 \begin{columns}
@@ -207,7 +222,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{frame}
 
 
-\begin{frame}[label={sec:org400bca1}]{Estaciones Meteorológicas: medida directa}
+\begin{frame}[label={sec:orgc36df35}]{Estaciones Meteorológicas: medida directa}
 \begin{block}{La medida directa de radiación solar se realiza con un piranómetro.}
 \begin{itemize}
 \item Requiere mantenimiento y calibración frecuente.
@@ -223,8 +238,8 @@ las que miden temperatura ambiente y precipitación (1:500).
 \end{frame}
 
 \subsection{Estaciones Meteorológicas: modelos empíricos}
-\label{sec:orga4f7667}
-\begin{frame}[label={sec:org6ac4044}]{Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos}
+\label{sec:org0ca3eb8}
+\begin{frame}[label={sec:org9167652}]{Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos}
 \begin{itemize}
 \item Relaciones entre radiación y otras variables
 \begin{itemize}
@@ -242,7 +257,7 @@ interpolar para otras localizaciones.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd3d9701}]{Estaciones Meteorológicas: modelos empíricos}
+\begin{frame}[label={sec:orgffbd8a6}]{Estaciones Meteorológicas: modelos empíricos}
 \begin{itemize}
 \item Radiación y Horas de Brillo (Angstrom y Prescott)
 \end{itemize}
@@ -256,7 +271,7 @@ interpolar para otras localizaciones.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org306014f}]{Estaciones Meteorológicas: modelos empíricos}
+\begin{frame}[label={sec:org3b56b54}]{Estaciones Meteorológicas: modelos empíricos}
 \begin{itemize}
 \item Radiación y Temperatura (Bristow y Campbell)
 \end{itemize}
@@ -277,9 +292,9 @@ G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
 \end{frame}
 
 \subsection{Imágenes de Satélite}
-\label{sec:orgcfa81a4}
+\label{sec:orge68075b}
 
-\begin{frame}[label={sec:org230edc6}]{Fundamentos}
+\begin{frame}[label={sec:org48fab32}]{Fundamentos}
 \begin{itemize}
 \item Los satélites meteorológicos están equipados con \alert{radiómetros}
 (sensores de radiación electromagnética a diferentes frecuencias)
@@ -297,7 +312,7 @@ radiómetro.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5bfba3e}]{Satelites Geoestacionarios Europeos: Meteosat}
+\begin{frame}[label={sec:org8939792}]{Satelites Geoestacionarios Europeos: Meteosat}
 \begin{itemize}
 \item \alert{MFG}: Meteosat First Generation (7 satélites)
 \begin{itemize}
@@ -322,7 +337,7 @@ radiómetro.
 \end{frame}
 
 
-\begin{frame}[label={sec:org1d5670e}]{Procedimientos: Heliosat-2}
+\begin{frame}[label={sec:org0ad4721}]{Procedimientos: Heliosat-2}
 \begin{block}{Pasos}
 \begin{itemize}
 \item Establecer \alert{albedo de referencia} (\emph{suelo}).
@@ -342,7 +357,7 @@ radiómetro.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4f16fa8}]{Procedimientos: CM SAF}
+\begin{frame}[label={sec:org2a8d2d6}]{Procedimientos: CM SAF}
 \begin{itemize}
 \item \alert{Fundamento}:
 \begin{itemize}
@@ -384,7 +399,7 @@ determinada interpolando en la LUT}.
 
 
 
-\begin{frame}[label={sec:org83b0dad}]{Procedimientos: LSA SAF}
+\begin{frame}[label={sec:orge78268a}]{Procedimientos: LSA SAF}
 \begin{itemize}
 \item Generación de \alert{máscara de nubes} a partir de imagen usando algoritmo de \href{http://www.nwcsaf.org/}{NWC-SAF}.
 \item Para \alert{zonas sin nubes}: modelo de cielo claro sin usar datos de imagen.
@@ -396,16 +411,16 @@ determinada interpolando en la LUT}.
 \end{frame}
 
 \subsection{Fuentes de Datos: Estaciones Terrestres}
-\label{sec:org7478ff7}
+\label{sec:org75f2172}
 
-\begin{frame}[label={sec:orgd00eb96}]{Wiki con recursos}
+\begin{frame}[label={sec:orgcee0eed}]{Wiki con recursos}
 \begin{block}{}
 \url{https://github.com/oscarperpinan/mds/wiki}
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgc443b14}]{Baseline Surface Radiation Network}
+\begin{frame}[label={sec:org9bd9a06}]{Baseline Surface Radiation Network}
 \begin{block}{\url{http://www.bsrn.awi.de/}}
 \begin{itemize}
 \item BSRN provides near-continuous, long-term, in situ-observed,
@@ -422,7 +437,7 @@ globally diverse sites.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org92e650e}]{Baseline Surface Radiation Network}
+\begin{frame}[label={sec:org1de307d}]{Baseline Surface Radiation Network}
 \begin{itemize}
 \item Validation and confirmation of satellite and computer model
 estimates.
@@ -432,7 +447,7 @@ estimates.
 \end{frame}
 
 
-\begin{frame}[label={sec:org3fd0464}]{Measurement and Instrumentation Data Center NREL}
+\begin{frame}[label={sec:org7d36a67}]{Measurement and Instrumentation Data Center NREL}
 \begin{block}{\url{http://www.nrel.gov/midc/}}
 Radiación global, directa y difusa (y otras variables) con muestreo de
   1 min en diversas localidades de EEUU.
@@ -445,8 +460,8 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd125cc6}]{MAGRAMA-SIAR}
-\begin{block}{\url{http://eportal.magrama.gob.es/websiar/Inicio.aspx}}
+\begin{frame}[label={sec:org4915e47}]{SIAR}
+\begin{block}{\url{https://eportal.mapa.gob.es/websiar/Inicio.aspx}}
 \begin{itemize}
 \item El Sistema de Información Agroclimática para el Regadío (SiAR)
 registra datos agroclimáticos relacionados con demanda hídrica de
@@ -465,7 +480,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org2067219}]{MAGRAMA-SIAR}
+\begin{frame}[label={sec:org5456616}]{SIAR}
 \begin{block}{Sensores}
 \begin{itemize}
 \item Temperatura y Humedad
@@ -484,7 +499,7 @@ las zonas de riego.
 \end{frame}
 
 
-\begin{frame}[label={sec:org4f3cdfb}]{AEMET}
+\begin{frame}[label={sec:org6b611a1}]{AEMET}
 \begin{block}{\href{http://www.aemet.es/es/eltiempo/observacion/radiacion}{Radiación}}
 \begin{itemize}
 \item Alrededor de 30 estaciones en todo el territorio.
@@ -501,7 +516,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgc2e2cec}]{Redes de Comunidades Autónomas}
+\begin{frame}[label={sec:orgc734e35}]{Redes de Comunidades Autónomas}
 \begin{itemize}
 \item \href{http://www2.meteogalicia.es/galego/observacion/estacions/estacions.asp}{Meteogalicia}
 \item \href{http://meteo.navarra.es/estaciones/mapadeestaciones.cfm}{MeteoNavarra}
@@ -512,16 +527,16 @@ las zonas de riego.
 \end{frame}
 
 \subsection{Fuentes de Datos: Satélite}
-\label{sec:org2c194d5}
+\label{sec:org25ae0c8}
 
-\begin{frame}[label={sec:orgc757de4}]{Wiki con recursos}
+\begin{frame}[label={sec:orgae58a58}]{Wiki con recursos}
 \begin{block}{}
 \url{https://github.com/oscarperpinan/mds/wiki}
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgf6afac7}]{SSE-NASA}
+\begin{frame}[label={sec:org1c5c5f7}]{SSE-NASA}
 \begin{block}{Surface meteorology and Solar Energy (SSE)}
 \begin{itemize}
 \item 200 satellite-derived meteorology and solar energy parameters
@@ -533,7 +548,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd7f0dd6}]{EUMETSAT - SAF}
+\begin{frame}[label={sec:org3ee81c1}]{EUMETSAT - SAF}
 \begin{itemize}
 \item \alert{\href{http://www.eumetsat.int}{EUMETSAT}} is the European operational satellite agency for monitoring
 weather, climate and the environment.
@@ -546,7 +561,7 @@ services.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga5c6121}]{SAFs}
+\begin{frame}[label={sec:org47caffc}]{SAFs}
 \begin{itemize}
 \item \href{https://wui.cmsaf.eu/safira/action/viewProduktSearch}{SAF on Climate Monitoring (CM SAF)}: provision of satellite-derived geophysical parameter data sets suitable for \alert{climate monitoring}
 
@@ -568,7 +583,7 @@ cover and and fire-related products.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6f10873}]{SAFs: Radiación}
+\begin{frame}[label={sec:org111e96e}]{SAFs: Radiación}
 \begin{itemize}
 \item \alert{CM SAF}: Surface incoming shortwave radiation (\href{http://wui.cmsaf.eu/safira/action/viewDoiDetails?acronym=RAD\_MVIRI\_V001}{SIS})
 
@@ -580,7 +595,7 @@ cover and and fire-related products.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org89b00f8}]{ADRASE - CIEMAT}
+\begin{frame}[label={sec:orgb1dd230}]{ADRASE - CIEMAT}
 \begin{block}{\url{http://adrase.es}}
 \begin{itemize}
 \item Radiación solar media mensual, resolución aproximada de 5x5 km.
@@ -602,9 +617,9 @@ con IDW)
 \end{frame}
 
 \subsection{Métodos híbridos}
-\label{sec:org347b316}
+\label{sec:orgebb7522}
 
-\begin{frame}[label={sec:orgb35f8f1}]{Interpolación Espacial}
+\begin{frame}[label={sec:org6bfca97}]{Interpolación Espacial}
 \begin{block}{\alert{Objetivo}: mejorar la resolución espacial de medidas dispersas}
 \begin{itemize}
 \item \alert{Inverse Distance Weighting (IDW)}: determinista.
@@ -630,7 +645,7 @@ con IDW)
 \end{frame}
 
 
-\begin{frame}[label={sec:orgd7ec951}]{Corrección por topografía}
+\begin{frame}[label={sec:org5c357ea}]{Corrección por topografía}
 \begin{center}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{../figs/downscaling.pdf}
@@ -655,7 +670,7 @@ SVF=1-\int_0^{2\pi}sin^{2} \theta_{hor} d\theta
 \nocite{Hofierka.Suri2002}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org623e5c5}]{PVGIS - \texttt{r.sun}}
+\begin{frame}[label={sec:orgad6933b},fragile]{PVGIS - \texttt{r.sun}}
  \begin{block}{\url{http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php}}
 PVGIS (Photovoltaic Geographical Information System) is a research,
 demonstration and policy-support instrument for geographical
@@ -672,13 +687,13 @@ irradiation on a horizontal surface.
 \end{frame}
 
 \section{Control de Calidad}
-\label{sec:org5373283}
+\label{sec:orgef42918}
 
 \subsection{Estadística}
-\label{sec:org616aedf}
+\label{sec:orgefbae2f}
 
 
-\begin{frame}[label={sec:org25baa8b}]{Variable aleatoria y proceso estocástico}
+\begin{frame}[label={sec:org9e12066}]{Variable aleatoria y proceso estocástico}
 \begin{itemize}
 \item Una \alert{variable aleatoria} es una función que asigna un único numero
 real a cada resultado de un espacio muestral en un experimento.
@@ -688,7 +703,7 @@ lo largo del \alert{tiempo} (p.ej. la radiación).
 \end{frame}
 
 
-\begin{frame}[label={sec:org24ac205}]{Función de densidad de probabilidad}
+\begin{frame}[label={sec:org3fc49a9}]{Función de densidad de probabilidad}
 La función de densidad de probabilidad, \(f(X)\), de una variable
 aleatoria \alert{asigna probabilidad} a un suceso:
 
@@ -707,13 +722,13 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 \end{frame}
 
 
-\begin{frame}[label={sec:org6fd74fa}]{Función de Densidad de Probabilidad}
+\begin{frame}[label={sec:org6e2577f}]{Función de Densidad de Probabilidad}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FuncionDensidadProbabilidad.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org04877b0}]{Histograma}
+\begin{frame}[label={sec:org3c5821b}]{Histograma}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Histograma.pdf}
 \end{center}
@@ -721,7 +736,7 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 
 
-\begin{frame}[label={sec:orge693f29}]{Media, varianza y desviación estándar}
+\begin{frame}[label={sec:org78b20b0}]{Media, varianza y desviación estándar}
 \begin{itemize}
 \item La \alert{media} de una variable aleatoria es el \alert{centro de masas} de su función densidad de probabilidad:
 \end{itemize}
@@ -745,7 +760,7 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 
 
-\begin{frame}[label={sec:org3d2b6cf}]{Combinación lineal de variables aleatorias}
+\begin{frame}[label={sec:orgc885431}]{Combinación lineal de variables aleatorias}
 \begin{itemize}
 \item La \alert{media de la suma} de varias variables aleatorias \alert{independientes} es
 la suma de las medias:
@@ -766,7 +781,7 @@ la suma de las medias:
 
 
 
-\begin{frame}[label={sec:org2520a31}]{Media y varianza de la media muestral}
+\begin{frame}[label={sec:org25fc68a}]{Media y varianza de la media muestral}
 \begin{itemize}
 \item Una \alert{muestra de una población} es un conjunto de variables
 aleatorias independientes (\(X_{1}...X_{n}\)).
@@ -783,7 +798,7 @@ variable aleatoria (que es una suma de variables aleatorias)
 
 
 
-\begin{frame}[label={sec:orgc5e8b34}]{Media y varianza de la media muestral}
+\begin{frame}[label={sec:org9daf144}]{Media y varianza de la media muestral}
 \begin{itemize}
 \item Por tanto, la \alert{media de la media muestral} es la media de población:
 \end{itemize}
@@ -807,7 +822,7 @@ Por tanto, una forma de \alert{reducir la incertidumbre} es realizar la
 
 
 
-\begin{frame}[label={sec:orgd221890}]{Mediana y cuartiles}
+\begin{frame}[label={sec:org6c960c1}]{Mediana y cuartiles}
 \begin{itemize}
 \item La \alert{mediana} divide el conjunto de valores de la variable en \alert{dos
 mitades} iguales (divide el area encerrada por la función densidad
@@ -822,46 +837,46 @@ una \alert{medida de la dispersión} de la variable.
 
 
 \subsection{Gráficos}
-\label{sec:org274bcf7}
+\label{sec:org57b2f8c}
 
 
-\begin{frame}[label={sec:orgbd4e071}]{Función de Densidad de Probabilidad}
+\begin{frame}[label={sec:org30f5b9e}]{Función de Densidad de Probabilidad}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/FuncionDensidadProbabilidad.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org63dedfb}]{Histograma}
+\begin{frame}[label={sec:orgf90dd3a}]{Histograma}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/Histograma.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org9f2c462}]{Gráficos boxplot}
+\begin{frame}[label={sec:org199b37d}]{Gráficos boxplot}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GraficoBoxplot.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org4d5ee9e}]{Gráficos de dispersión}
+\begin{frame}[label={sec:org7f17cb8}]{Gráficos de dispersión}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/GraficoDispersion.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org768348c}]{Matrices de gráficos de dispersión}
+\begin{frame}[label={sec:org0ad7903}]{Matrices de gráficos de dispersión}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/Splom.png}
 \end{center}
 \end{frame}
 
 \subsection{Control de Calidad de Medidas}
-\label{sec:orgac58e67}
+\label{sec:orgf38bc4d}
 
-\begin{frame}[label={sec:orgbc08c0d}]{Introducción}
+\begin{frame}[label={sec:orgceda009}]{Introducción}
 \begin{block}{Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erroneos.}
 \begin{itemize}
 \item Límites Físicos
@@ -876,7 +891,7 @@ una \alert{medida de la dispersión} de la variable.
 
 
 
-\begin{frame}[label={sec:orgf29bfcd}]{Límites físicos}
+\begin{frame}[label={sec:org391c64b}]{Límites físicos}
 \begin{block}{Irradiación Diaria}
 \begin{itemize}
 \item La radiación global en el plano horizontal debe ser inferior a la extraterrestre (\(K_t \leq 1\))
@@ -900,7 +915,7 @@ K_t = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org506b4da}]{Límites físicos}
+\begin{frame}[label={sec:org5d345f9}]{Límites físicos}
 \begin{block}{Irradiancia (intradiaria)}
 \begin{itemize}
 \item El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
@@ -923,7 +938,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org21a181c}]{Tests de persistencia}
+\begin{frame}[label={sec:org3ccb94e}]{Tests de persistencia}
 \begin{block}{Variabilidad de irradiancia}
 \begin{itemize}
 \item La media y la desviación estándar se calculan con todas las muestras de un día completo.
@@ -934,7 +949,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4010a60}]{Tests de rampas}
+\begin{frame}[label={sec:orge5f050a}]{Tests de rampas}
 \begin{block}{Límites a las variaciones de la irradiancia entre instantes sucesivos}
 \[
 \left| k_t(t) - k_t(t-1)\right| < 0.75 \text{ si } \gamma_s(t) > 2\degree
@@ -943,7 +958,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \end{frame}
 
 
-\begin{frame}[label={sec:orgc46b751}]{Tests de envolvente}
+\begin{frame}[label={sec:org22182b8}]{Tests de envolvente}
 \begin{itemize}
 \item Sólo para estaciones con medida simultánea de global y directa/difusa.
 \end{itemize}
@@ -955,7 +970,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \nocite{Younes.Claywell.ea2005}
 \end{frame}
 
-\begin{frame}[label={sec:orge9b1799}]{Coherencia espacial}
+\begin{frame}[label={sec:org1374e14}]{Coherencia espacial}
 \begin{itemize}
 \item Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
 \item Esta comprobación debe realizarse con \alert{datos agregados} (diarios) (la variabilidad espacial intradiaria puede ser alta)
@@ -965,7 +980,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \nocite{Journee.Bertrand2011}
 \end{frame}
 
-\begin{frame}[label={sec:org3bc2677}]{Coherencia espacial}
+\begin{frame}[label={sec:org8833b10}]{Coherencia espacial}
 \begin{block}{Pasos}
 \begin{itemize}
 \item Estimamos la irradiación en el lugar, \(x_0\), con la interpolación espacial de las estaciones cercanas, \(x_i\).
@@ -990,7 +1005,7 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 
 
 
-\begin{frame}[label={sec:orgfcc8332}]{Coherencia estadística}
+\begin{frame}[label={sec:orgcb55b21}]{Coherencia estadística}
 \begin{block}{Una medida puede ser etiquetada como \emph{outlier} si es poco probable que pertenezca a la misma distribución que el conjunto.}
 \end{block}
 \begin{block}{\alert{Método de Chauvenet}}
@@ -1004,7 +1019,7 @@ elementos en el conjunto.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org671967c}]{Método de Chauvenet}
+\begin{frame}[label={sec:orgfbf26c6}]{Método de Chauvenet}
 \begin{itemize}
 \item Sean \(G_d(x_i)\) las medidas de radiación diaria del conjunto formado por N estaciones.
 \end{itemize}
@@ -1044,7 +1059,7 @@ las dos colas.
 \nocite{Perpinan2009}
 \end{frame}
 
-\begin{frame}[label={sec:orgeba12b6}]{Método de Chauvenet}
+\begin{frame}[label={sec:org7cbadb6}]{Método de Chauvenet}
 \[
 d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
 \]
@@ -1064,9 +1079,9 @@ d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
 \end{frame}
 
 \subsection{Control de Calidad de Modelos}
-\label{sec:org385acfc}
+\label{sec:orgbfca314}
 
-\begin{frame}[label={sec:orgc2d4a93}]{Desviación entre modelo y observación}
+\begin{frame}[label={sec:orgb7528a0}]{Desviación entre modelo y observación}
 \begin{itemize}
 \item Sea \(O\) el conjunto de observaciones (medidas) de una variable aleatoria.
 \end{itemize}
@@ -1091,7 +1106,7 @@ d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orgf5d3d38}]{Estimadores frecuentes: MBD y RMSD}
+\begin{frame}[label={sec:orgb039cde}]{Estimadores frecuentes: MBD y RMSD}
 \begin{itemize}
 \item Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
 \end{itemize}
@@ -1107,7 +1122,7 @@ RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} 
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org2d5a669}]{Estimadores frecuentes: MBE y RMSD}
+\begin{frame}[label={sec:org585722f}]{Estimadores frecuentes: MBE y RMSD}
 \begin{itemize}
 \item Varianza de la diferencia (unbiased RMSD):
 \end{itemize}
@@ -1125,7 +1140,7 @@ RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orgc1a5b3f}]{Otros estimadores: MAD}
+\begin{frame}[label={sec:org7adfa19}]{Otros estimadores: MAD}
 \begin{itemize}
 \item Mean Absolute Deviation (MAD):
 \end{itemize}
@@ -1143,7 +1158,7 @@ MAD \leq RMSD \leq n^{1/2} MAD
 \nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
 \end{frame}
 
-\begin{frame}[label={sec:org1fbcdb1}]{Otros estimadores: t y d}
+\begin{frame}[label={sec:org09f08ed}]{Otros estimadores: t y d}
 \begin{itemize}
 \item t de Student (valores pequeños indican buen comportamiento del modelo)
 \begin{itemize}
@@ -1176,7 +1191,7 @@ d_1 = 1 - \frac{\sum_{i=1}^n \left| m_i - o_i \right|}{\sum_{i=1}^n \left(
 \nocite{Willmott.Robeson.ea2012}
 \end{frame}
 
-\begin{frame}[label={sec:org3af66bf}]{Correlación}
+\begin{frame}[label={sec:org978e520}]{Correlación}
 El coeficiente de correlación entre dos conjuntos de datos es una
 medida numérica de la relación \alert{lineal} entre los dos conjuntos (si la
 relación no es lineal, este coeficiente no sirve):
@@ -1186,7 +1201,7 @@ r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org6735254}]{Diagramas de Taylor}
+\begin{frame}[label={sec:org34a4497}]{Diagramas de Taylor}
 \begin{itemize}
 \item Desarrollando \(\sigma^2_{\mathbf{D}}\) y teniendo en cuenta la definición de \(r\):
 \end{itemize}
@@ -1205,7 +1220,7 @@ c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
 \nocite{Taylor2000}
 \end{frame}
 
-\begin{frame}[label={sec:org3a8f334}]{Diagramas de Taylor}
+\begin{frame}[label={sec:orgf80b586}]{Diagramas de Taylor}
 \[
 \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
 - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
@@ -1218,7 +1233,7 @@ c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org157802d}]{Diagramas de Taylor}
+\begin{frame}[label={sec:orge1b0325}]{Diagramas de Taylor}
 \begin{itemize}
 \item \(\sigma^2_{\mathbf{D}}\): Distancia al origen
 \item \(\sigma^2_{\mathbf{O}}\): Eje horizontal
@@ -1233,7 +1248,7 @@ c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
 \end{frame}
 
 
-\begin{frame}[label={sec:org42ec4e3}]{Target Diagram}
+\begin{frame}[label={sec:orgae90127}]{Target Diagram}
 \begin{itemize}
 \item Emplea la relación entre \(RMSD\), \(\sigma^2_{\mathbf{D}}\), y \(\overline{\mathbf{D}}\), normalizadas con \(\sigma_{\mathbf{O}}\):
 \end{itemize}
@@ -1264,7 +1279,7 @@ sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
 \nocite{Jolliff.Kindle.ea2009}
 \end{frame}
 
-\begin{frame}[label={sec:org2a6fccb}]{Target Diagram}
+\begin{frame}[label={sec:org3aa81b6}]{Target Diagram}
 \begin{itemize}
 \item \(\sigma'_{\mathbf{D}}\) (con signo): Eje horizontal
 \item \(\overline{\mathbf{D}}'\): Eje vertical
