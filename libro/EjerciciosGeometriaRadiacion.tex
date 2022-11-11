@@ -140,21 +140,6 @@ Por tanto, las componentes difusa y directa son:
 \end{align*}
 
 
-\item Calcula las componentes directa y difusa de la radiación solar
-  del 17 de Septiembre (día 261) en un lugar con latitud
-  $\phi=\ang{40}\mathrm{N}$ y con irradiación global diaria horizontal
-  $G_d(0)=\SI{4510}{\watthour\per\meter\squared}$.
-
-\begin{align*}
-  B_{0d} &= \SI{8126.366}{\watthour\per\meter\squared}\\
-  K_{Td} &= \frac{G_{d}}{B_{0d}} = \frac{4510}{8126.366} = 0.55498\\
-  F_{Dd} &= 1.188 - 2.272 \cdot 0.55498 + 9.473 \cdot 0.55498^{2} -\\
-         &- 21.856 \cdot 0.55498^{3} + 14.648 \cdot 0.55498^{4} = 0.4984\\
-  D_d(0) &= F_{Dd} \cdot G_d(0) = 0.4984 \cdot 4510 = \SI{2247.78}{\watthour\per\meter\squared}\\
-  B_d(0) &= G_d(0) - D_d(0) = \SI{2262.22}{\watthour\per\meter\squared}
-\end{align*}
-
-
 \item Calcula la irradiancia global y la irradiancia difusa en el
   plano horizontal 2 horas antes del mediodía del día 261 en un lugar
   con latitud $\phi=\ang{40}\mathrm{N}$ y con media mensual de
@@ -171,11 +156,27 @@ Por tanto, las componentes difusa y directa son:
   r_{G} &= r_{D}\cdot\left(a + b\cdot\cos(\omega)\right) = 0.116
 \end{align*}
 
+Calculamos las componentes de irradiancia a partir de los valores de irradiación obtenidos en el ejercicio anterior.
 \begin{align*}
-  D(0) &= r_D \cdot D_{d}(0) = 0.112 \cdot 1755.04 = \SI{197.98}{\watt\per\meter\squared}\\
-  G(0) &= r_G \cdot G_{d}(0) = 0.116 \cdot 4150 = \SI{481.4}{\watt\per\meter\squared}\\
+  D(0) &= r_D \cdot D_{d,m}(0) = 0.112 \cdot 1755.04 = \SI{197.98}{\watt\per\meter\squared}\\
+  G(0) &= r_G \cdot G_{d,m}(0) = 0.116 \cdot 4150 = \SI{481.4}{\watt\per\meter\squared}\\
   B(0) &= G(0) - D(0) = \SI{283.42}{\watt\per\meter\squared}
 \end{align*}
+
+\item Calcula las componentes directa y difusa de la radiación solar
+  del 17 de Septiembre (día 261) en un lugar con latitud
+  $\phi=\ang{40}\mathrm{N}$ y con irradiación global diaria horizontal
+  $G_d(0)=\SI{4510}{\watthour\per\meter\squared}$.
+
+\begin{align*}
+  B_{0d} &= \SI{8126.366}{\watthour\per\meter\squared}\\
+  K_{Td} &= \frac{G_{d}}{B_{0d}} = \frac{4510}{8126.366} = 0.55498\\
+  F_{Dd} &= 1.188 - 2.272 \cdot 0.55498 + 9.473 \cdot 0.55498^{2} -\\
+         &- 21.856 \cdot 0.55498^{3} + 14.648 \cdot 0.55498^{4} = 0.4984\\
+  D_d(0) &= F_{Dd} \cdot G_d(0) = 0.4984 \cdot 4510 = \SI{2247.78}{\watthour\per\meter\squared}\\
+  B_d(0) &= G_d(0) - D_d(0) = \SI{2262.22}{\watthour\per\meter\squared}
+\end{align*}
+
 \end{itemize}
 \section{Ángulos y componentes de irradiación en Sistemas
   Fotovoltaicos}
@@ -264,3 +265,8 @@ irradiancia:
   \beta) = \SI{576.75}{\watt\per\meter\squared}
 \]
 \end{itemize}
+
+%%% Local Variables:
+%%% mode: LaTex
+%%% TeX-master: "ESF.tex"
+%%% End: 
