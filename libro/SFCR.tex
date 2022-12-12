@@ -164,8 +164,7 @@ factores:
 con la potencia del generador%
 \footnote{También deberá tener en cuenta la limitación de potencia que impone
 las características del punto de conexión concedido por la compañía
-eléctrica, tal y como se explica en el apartado \ref{sub:Condiciones-tecnicas-Conexion}.%
-} y con el tipo de seguimiento empleado.
+eléctrica.} y con el tipo de seguimiento empleado.
 \item El rendimiento económico deseado, relacionado con la energía producida
 por el sistema y, por tanto, con el modo de seguimiento empleado y
 con la radiación disponible. 
@@ -256,15 +255,30 @@ generador.
 Los sistemas instalados en edificación no suelen superar la potencia
 de $\SI{100}{\kilo\watt}$. Su interconexión con la red eléctrica se
 realiza frecuentemente en Baja Tensión, aunque esta opción no siempre
-es posible, tal y como se describe en el apartado
-\ref{sub:Condiciones-tecnicas-Conexion}.  En este tipo de SFCR el
-diseño de los sistemas eléctricos debe tener en cuenta las
-canalizaciones previstas o existentes en el edificio.  Por facilidad
-de instalación y mantenimiento, y por seguridad de los sistemas, es
-recomendable el uso de canalizaciones separadas del resto de sistemas
-del edificio. Sin embargo, los criterios de seguridad eléctrica
-aconsejan utilizar una red de tierras común para el edificio y el
-sistema fotovoltaico. Una proporción importante del trabajo de
+es posible, ya sea por superar el límite de potencia o por
+imposibilidad de acceso a un punto de conexión de BT cercano.
+
+Las condiciones técnicas de conexión a la red eléctrica de los
+sistemas de autoconsumo en España se detallan en la ``Guía Técnica de
+Aplicación del REBT: Instalaciones Generadoras de Baja Tensión
+(ITC-BT-40)''\footnote{Accesible en
+  \url{https://industria.gob.es/Calidad-Industrial/seguridadindustrial/instalacionesindustriales/baja-tension/Paginas/guia-tecnica-aplicacion.aspx}.},
+y en el anexo III (Modos de Conexión) de la ``Guía Profesional del
+Autoconsumo''\footnote{Disponible en
+  \url{https://www.idae.es/publicaciones/guia-profesional-de-tramitacion-del-autoconsumo}.}
+publicado por el IDAE. En estos documentos se recopila el catálogo de
+posibilidades de conexión y modos de medición según el tipo de
+autoconsumo (individual o colectivo) y tipo de conexión (en red
+interior o a través de red).
+
+
+En este tipo de SFCR el diseño de los sistemas eléctricos debe tener
+en cuenta las canalizaciones previstas o existentes en el edificio.
+Por facilidad de instalación y mantenimiento, y por seguridad de los
+sistemas, es recomendable el uso de canalizaciones separadas del resto
+de sistemas del edificio. Sin embargo, los criterios de seguridad
+eléctrica aconsejan utilizar una red de tierras común para el edificio
+y el sistema fotovoltaico. Una proporción importante del trabajo de
 ingeniería se dedica a ubicar correctamente el generador para
 maximizar la producción y minimizar el efecto del sombreado, y a
 diseñar y elegir los elementos de anclaje de los módulos al edificio.
@@ -301,85 +315,6 @@ esta aplicación.
 
 
 
-
-\subsection{Condiciones técnicas de la conexión}
-\label{sub:Condiciones-tecnicas-Conexion}
-
-Para percibir una compensación ecónomica por la energía producida o
-intercambiada con la red , el SFCR debe cumplir determinados
-requisitos legales en cuanto a su conexión.
-
-Debe tenerse en cuenta que la reglamentación eléctrica española
-establece la separación administrativa entre la comercialización y la
-distribución de la energía. Así, la empresa que nos suministra energía
-eléctrica en nuestro hogar es distinta de la que adquiere la energía
-que produce el SFCR que podamos tener en nuestro tejado (aunque, cómo
-es habitual, pertenezcan a una misma corporación). Por tanto, al menos
-administrativamente, la generación fotovoltaica y el consumo
-``cercano'' son dos sistemas independientes. No obstante, es claro que
-la corriente eléctrica no entiende de leyes ni contratos, sino que
-fluye según las leyes de Kirchhoff. Así, la energía producida por un
-SFCR será consumida parcial o totalmente en el propio edificio que lo
-alberga o en las cercanías de la instalación.
-
-La separación existente entre empresa comercializadora y empresa
-distribuidora se refleja en la separación de contratos y facturas, y
-por tanto, también de elementos y puntos de medida. La consecuencia
-evidente es que, en general, no pueden utilizarse las lecturas de dos
-contadores distintos (uno de venta y otro de compra) para componer una
-única factura. De esta forma, para poder vender la energía eléctrica
-producida es necesario conectar el sistema fotovoltaico en un punto
-propiedad de la compañía eléctrica, siempre externo a las
-instalaciones eléctricas propias de la edificación o lugar que acoge
-al SFCR. Por otra parte, en España los SFCR que superan la potencia de
-100 kW no pueden conectarse en la red de BT. De aquí que, en ciertos
-casos, la legalización de un sistema fotovoltaico presente ciertas
-complicaciones.
-
-Destacan dos situaciones:
-\begin{itemize}
-\item Titulares con suministro en Media Tensión (MT) con SFCR de
-  potencia menor a 100 kW: a pesar de que la potencia fotovoltaica es
-  menor que el valor que obliga a la conexión en MT, la obligación de
-  conexión en un punto propiedad de la compañía eléctrica implica el
-  uso de un transformador BT-MT distinto al usado para consumo. Sin
-  embargo, esta solución conlleva pérdidas energéticas e incremento de
-  inversión de la instalación inaceptables. El RD 1699/2011 contempla
-  la posibilidad de inyectar ``aguas abajo''%
-  \footnote{En la terminología de redes eléctricas es de uso común las
-    expresiones {}``aguas arriba'' y {}``aguas abajo''. Estas
-    expresiones parten de la suposición de que el flujo de potencia es
-    siempre unidireccional (desde la central de generación, hasta el
-    punto de consumo), de forma que la analogía hidraúlica (el flujo
-    parte de la central situada arriba hacia el punto de consumo
-    situado abajo) permite designar la ubicación de elementos del
-    circuito. Por ejemplo, en una misma linea de consumo, el contador
-    de energía se encuentra {}``aguas arriba'' de los equipos de
-    consumo. Aunque esta terminología es ambigua en las redes donde el
-    flujo de la potencia es bidireccional, tales como aquellas en las
-    que conviven sistemas fotovoltaicos con nodos de consumo, se
-    utiliza con el mismo significado. Así, en el caso de un
-    transformador, el punto de BT está ``aguas abajo'' y la conexión
-    en MT está ``aguas arriba''%
-  } del transformador de consumo y hacer los balances necesarios en
-  las facturas de venta y consumo.
-% Otra posibilidad consiste en medir la energía consumida
-%   en BT (aguas abajo del transformador), inyectar aguas abajo del
-%   transformador y aguas arriba del contador de compra, y compensar
-%   mediante un factor de corrección para contabilizar las pérdidas
-%   debidas al transformador. Esta solución es aplicable pero debe ser
-%   negociada con cada compañía eléctrica.
-
-\item Titulares en edificios de varias viviendas: de nuevo, la
-  necesidad de realizar la conexión aguas arriba del contador de
-  consumo implica, en este caso, la instalación de cableado bajante
-  desde la vivienda en cuestión hasta la sala de contadores del
-  edificio (situado habitualmente en el sotano o plantas bajas). Esta
-  solución no es siempre fácil ni técnica (no siempre existe espacio o
-  canalizaciones disponibles en la bajante del edificio) ni
-  administrativamente (es necesario el permiso de la comunidad de
-  vecinos). 
-\end{itemize}
 
 \section{Inversor DC/AC}
 \label{InversorSFCR}
@@ -475,9 +410,12 @@ de 100 kW o 4 de 250 kW, pero no con 200 de 5 kW).
 
 Por otra parte, la salida de un inversor puede ser monofásica o
 trifásica. En general, un inversor monofásico no supera la potencia de
-$\SI{5}{\kilo\watt}$\footnote{En España la conexión en monofásica sólo
-está permitida para potencias que no superen este valor.}, y son poco comunes los inversores trifásicos de potencia
-inferior a $\SI{10}{\kilo\watt}$.
+$\SI{5}{\kilo\watt}$\footnote{En España, el Real Decreto 244/2019
+  indica que ``Si la potencia nominal de la instalación de generación
+  a conectar a la red de distribución es superior a 15 kW, la conexión
+  de la instalación a la red será trifásica con un desequilibrio entre
+  fases inferior a 5 kW''.}, y son poco comunes los inversores
+trifásicos de potencia inferior a $\SI{10}{\kilo\watt}$.
 
 \subsection{Principio de funcionamiento.}
 
