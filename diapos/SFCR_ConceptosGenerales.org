@@ -211,39 +211,17 @@ $$P_{min}=C\cdot(0.002\cdot S - 5)$$
 *** Separación entre comercialización y generación
 -  La reglamentación eléctrica española establece la separación administrativa entre la comercialización y la distribución de la energía (así, la empresa que nos vende energía eléctrica en nuestro hogar es distinta a la que compra la energía que produce el sistema que podamos tener en nuestro tejado).
 
-*** Generación distribuida
+*** Autoconsumo
 
--  Por tanto, al menos administrativamente, la generación fotovoltaica y el consumo cercano son dos elementos independientes.
+Las condiciones técnicas de conexión a la red eléctrica de los
+sistemas de autoconsumo en España se detallan:
 
--  No obstante, es claro que la corriente eléctrica no entiende de leyes ni contratos, sino que fluye según las leyes de Kirchhoff.
+  - Guía Técnica de Aplicación del REBT: Instalaciones Generadoras de Baja Tensión (ITC-BT-40).
+  - Anexo III (Modos de Conexión) de la Guía Profesional del Autoconsumo del IDAE.
 
--  Así, la energía producida por un SFCR será consumida parcial o totalmente en el propio edificio (generación distribuida).
-
-*** El problema de la medida
-
--  La separación existente entre empresa comercializadora y empresa distribuidora se refleja en la separación de contratos y facturas, y por tanto, también de elementos y puntos de medida.
-
--  Es decir, no pueden utilizarse las lecturas de dos contadores distintos (uno de venta y otro de compra) para componer una única factura.
-
--  El sistema fotovoltaico debe conectarse en un punto propiedad de la compañía eléctrica (por tanto, externo a las instalaciones eléctricas propias del domicilio, empresa, etc).
-
-*** Ejemplo: suministro en MT
-
--  *Titulares con contrato de suministro en Media Tensión con instalaciones fotovoltaicas de potencia menor a 100 kW*
-
-   -  A pesar de que la potencia fotovoltaica es menor que el valor que obliga a la conexión en MT, la otra obligación de conexión en punto propiedad de la compañía eléctrica implica el uso de un transformador BT-MT distinto al usado para consumo.
-
-   -  Sin embargo, esta solución conlleva pérdidas energéticas e incremento de inversión de la instalación que la pueden hacer inviable.
-
-   -  La posibilidad de inyectar aguas abajo del transformador de consumo y hacer los balances necesarios en las facturas de venta y consumo, utilizando las medidas de los respectivos contadores es posible bajo el RD 1699/2011.
-
-*** Ejemplo: comunidades de vecinos
-
--  *Titulares en edificios de varias viviendas*
-
-   -  De nuevo, la necesidad de realizar la conexión aguas arriba al contador de consumo, implica en este caso la instalación de cableado bajante desde la vivienda en cuestión hasta la sala de protecciones del edificio.
-
-   -  Esta solución no es siempre fácil ni técnicamente (no siempre existe espacio o canalizaciones disponibles en la bajante del edificio) ni administrativamente (es necesario el permiso de la comunidad de vecinos).
+En estos documentos se recopila el catálogo de posibilidades según:
+- tipo de autoconsumo (individual o colectivo)
+- tipo de conexión (en red interior o a través de red).
 
 * Inversor de CR
 
