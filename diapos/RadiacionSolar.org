@@ -105,6 +105,7 @@
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/SistemaCoordenadasTerrestre-crop.pdf]]
 
 **** :B_ignoreheading:
@@ -174,7 +175,7 @@
 La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 
 *** Duración del día
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/DuracionDia.pdf]]
 
 *** Ejes locales
@@ -192,6 +193,7 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
 **** :B_ignoreheading:
@@ -204,7 +206,7 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
   
 
 *** Relación entre sistemas de coordenadas
-
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/RelacionSistemasCoordenadas.pdf]]
 
 - *Latitud ($\phi$) con signo*: Positivo para Hemisferio Norte, Negativo para Hemisferio Sur.
@@ -231,7 +233,8 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
     :PROPERTIES:
     :BEAMER_col: 0.5
     :END:
-[[../figs/SistemaCoordenadasLocal-crop.pdf]]
+    #+ATTR_LATEX: :height 0.7\textheight
+    [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
 *** Azimut solar
    :PROPERTIES:
@@ -254,15 +257,17 @@ La longitud del día, $|2 \cdot \omega_s|$, depende de $\phi$ y $d_n$.
     :PROPERTIES:
     :BEAMER_col: 0.5
     :END:
-[[../figs/SistemaCoordenadasLocal-crop.pdf]]
+    #+ATTR_LATEX: :height 0.7\textheight
+    [[../figs/SistemaCoordenadasLocal-crop.pdf]]
 
 *** Trayectoria Solar ($60\degree N$)
 
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/TrayectoriaSolar60N.pdf]]
 
 
 *** Trayectoria Solar ($40\degree S$)
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/TrayectoriaSolar40S.pdf]]
 
 
@@ -321,7 +326,7 @@ M=\frac{2\pi}{365.24}\cdot d_{n}
 Calcula la hora solar real correspondiente al día 23 de Abril de 2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña, Galicia. Esta localidad está contenida en el meridiano de longitud $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso horario GMT+1.
 
 *** 
-[[file:~/github/esf/figs/Kahoot_Logo.png]]
+[[file:../figs/Kahoot_Logo.png]]
 
 [[https://play.kahoot.it/v2/?quizId=08c996d2-f567-4db9-80ec-f080daabc508][Ir a Kahoot de Geometría Solar]]
 
@@ -690,7 +695,7 @@ G_d(0) \leq B_{0d}(0)
 *** Exactitud (/bias/) y Precisión (/variance/)
 
 #+ATTR_LATEX: :height 0.8\textheight
-[[file:~/github/esf/figs/bias-variance.png]]
+[[file:../figs/bias-variance.png]]
 
 http://scott.fortmann-roe.com/docs/BiasVariance.html
 
@@ -718,7 +723,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
   \]
 #+END_EXPORT
 *** 
-[[file:~/github/esf/figs/Kahoot_Logo.png]]
+[[file:../figs/Kahoot_Logo.png]]
 
 [[https://play.kahoot.it/v2/?quizId=62ee25e6-4056-4321-b95c-7af71b3fb069][Ir a Kahoot de Radiación Solar en el Plano Horizontal]]
 
@@ -739,7 +744,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 - $\beta$: *inclinación del generador* (respecto de la superficie horizontal)
 ** Tipos de Sistemas
 *** Sistema Estático
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/EstructuraEstaticaSuelo.jpg]]
 
 *** Sistemas con seguimiento
@@ -783,7 +788,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 
 *** Sistema de Seguimiento(1 eje, horizontal N-S)
 
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SeguidorEjeHorizontal.jpg]]
 
 *** Sistema de Seguimiento (2x ejes)
@@ -804,7 +809,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 \]
 #+END_EXPORT
 
-#+ATTR_LATEX: :height 0.6\textheight
+#+ATTR_LATEX: :height 0.55\textheight
 [[../figs/AngulosSistemaEstatico.pdf]]
 
 - Inclinación Óptima $\beta_{opt} \simeq |\phi| - 10º$.
@@ -812,7 +817,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 *** Sistema Estático: Ángulo de Incidencia
 
 - $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/cosThetaEst_40N.pdf]]
 
 
@@ -824,19 +829,19 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 
 \[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
 
-#+ATTR_LATEX: :height 0.6\textheight
+#+ATTR_LATEX: :height 0.65\textheight
 [[../figs/AngulosSistemaHorizontalNS.pdf]]
 
 *** Ángulo de Inclinación Seguidor 1x NS
 - $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/BetaHoriz_40N.pdf]]
 
 
 
 *** Ángulo de Incidencia Seguidor 1x NS
 - $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/cosThetaHoriz_40N.pdf]]
 
 
@@ -846,10 +851,18 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
    :PROPERTIES:
    :BEAMER_opt: plain
    :END:
-
+   
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/Sombra2X.pdf]]
 
-
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.2
+:END:
 #+BEGIN_EXPORT latex
 \begin{align*}
   \beta &= \theta_{z}\\
@@ -860,7 +873,7 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 *** Inclinación Seguidor 2x
 
 - $40\degree N$
-#+ATTR_LATEX: :height 0.8\textheight
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/BetaDoble_40N.pdf]]
 
 
@@ -941,7 +954,7 @@ G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 #+END_EXPORT
 
 *** Irradiancia Difusa
-
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/AnguloVisionCielo.pdf]]
 
 #+BEGIN_EXPORT latex
@@ -949,7 +962,7 @@ G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 #+END_EXPORT
 
 *** Irradiancia Difusa Isotrópica
-
+#+ATTR_LATEX: :height 0.55\textheight
 [[../figs/AnguloVisionCielo.pdf]]
 
 
@@ -970,7 +983,7 @@ G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 #+END_EXPORT
 
 *** Irradiancia de Albedo
-
+#+ATTR_LATEX: :height 0.55\textheight
 [[../figs/AnguloVisionCielo.pdf]]
 
 
@@ -1009,42 +1022,42 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 \end{align*}
 #+END_EXPORT
 *** Pérdidas anuales
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/GefVSG.pdf]]
 
 ** Radiación Efectiva según tipologías
 
 *** Radiación en Sistema estático
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/FixedKrig.pdf]]
 
 
 
 *** Radiación en Seguimiento Eje Horizontal
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/HorizKrig.pdf]]
 
 
 
 *** Radiación en Seguimiento Doble Eje
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/TwoKrig.pdf]]
 
 
 *** Comparación Doble Eje-Estática
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/TwoFixed.pdf]]
 
 
 
 *** Comparación Doble Eje - Horizontal
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/TwoHoriz.pdf]]
 
 
 
 *** Comparación Eje Horizontal - Estática
-
+#+ATTR_LATEX: :height 0.85\textheight
 [[../figs/HorizFixed.pdf]]
 
 
@@ -1059,7 +1072,7 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 
 
 *** 
-[[file:~/github/esf/figs/Kahoot_Logo.png]]
+[[file:../figs/Kahoot_Logo.png]]
 
 [[https://play.kahoot.it/v2/?quizId=29a16906-539a-4e29-b68c-fe6c9141ef02][Ir a Kahoot de Radiación Solar en un Generador]]
 

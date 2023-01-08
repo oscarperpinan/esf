@@ -363,6 +363,13 @@ elementos en el conjunto.
   \]
 #+END_EXPORT
 
+** Exactitud (/bias/) y Precisión (/variance/)
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:../figs/bias-variance.png]]
+
+http://scott.fortmann-roe.com/docs/BiasVariance.html
+
 ** Estimadores frecuentes: MBD y RMSD
 
 - Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
