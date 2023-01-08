@@ -20,6 +20,10 @@
 La función de densidad de probabilidad, $f(X)$, de una variable
 aleatoria *asigna probabilidad* a un suceso:
 
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 #+BEGIN_EXPORT latex
 
 \[
@@ -36,15 +40,12 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 #+END_EXPORT
 
-
-** Función de Densidad de Probabilidad
-
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
 [[../figs/FuncionDensidadProbabilidad.pdf]]
-
-** Histograma
-
-[[../figs/Histograma.pdf]]
-
 
 
 ** Media, varianza y desviación estándar
@@ -95,28 +96,30 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 - Una *muestra de una población* es un conjunto de variables
   aleatorias independientes ($X_{1}...X_{n}$).
 
-- Si se toma una muestra de una población cuya media es $\mu$ y su
-  varianza es $\sigma^{2}$, entonces la media de la muestra es otra
+- Si se toma una muestra de una población, la media de la muestra es otra
   variable aleatoria (que es una suma de variables aleatorias)
 
 #+BEGIN_EXPORT latex
 \[
-\overline{X}=\frac{1}{n}\sum_{n}X_{i}
+\overline{X}=\frac{1}{i=n}\sum_{n}X_{i}
 \]
 #+END_EXPORT
 
 
 
 ** Media y varianza de la media muestral
+# Navidi pag.123
 
-- Por tanto, la *media de la media muestral* es la media de población:
+Sea una población cuya media es $\mu$ y su varianza es $\sigma^{2}$:
+
+- La *media de la media muestral* es la media poblacional:
 #+BEGIN_EXPORT latex
 \[
-\overline{X}=\frac{1}{n}\sum_{n}X_{i} = \mu
+\mu_{\overline{X}}=\frac{1}{i = n}\sum_{n}\mu_{X_{i}} = \mu
 \]
 #+END_EXPORT
 
-- La *varianza de la media muestral* es la suma de las varianzas:
+- La *varianza de la media muestral* es la varianza poblacional dividido por el número de muestras.
 #+BEGIN_EXPORT latex
 
 \[
@@ -136,7 +139,7 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
   mitades* iguales (divide el area encerrada por la función densidad
   de probabilidad en dos partes iguales).
 - Los *cuartiles* dividen este area en *cuatro* partes iguales. 
-- El area encerrada entre cada par de cuartiles es igual al 25\% del total. 
+- El area encerrada entre cada par de cuartiles es igual al 25% del total. 
 - La *mediana* es el *segundo cuartil*. 
 - La *distancia intercuartil* (definida entre los cuartiles 1 y 3) es
   una *medida de la dispersión* de la variable.
@@ -146,21 +149,21 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 
 ** Función de Densidad de Probabilidad
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/FuncionDensidadProbabilidad.pdf]]
 
 ** Histograma
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/Histograma.pdf]]
 
 
 ** Gráficos boxplot
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/GraficoBoxplot.pdf]]
 
 
 ** Gráficos de dispersión
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/GraficoDispersion.pdf]]
 
 
@@ -185,17 +188,17 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 ** Límites físicos
 
 *** Irradiación Diaria
-- La radiación global en el plano horizontal debe ser inferior a la extraterrestre ($K_t \leq 1$)
+- La radiación global en el plano horizontal debe ser inferior a la extraterrestre ($K_{td} \leq 1$)
 #+BEGIN_EXPORT latex
   \[
-  G_d(0) \leq B_od(0)
+  G_d(0) \leq B_{od}(0)
   \]
 #+END_EXPORT
 
 - El índice de claridad debe ser superior a 0.03
 #+BEGIN_EXPORT latex
   \[
-  K_t = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
+  K_{td} = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
   \]
 #+END_EXPORT
 
@@ -225,27 +228,28 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 \nocite{Journee.Bertrand2011}
 
-** Tests de persistencia
-*** Variabilidad de irradiancia
-- La media y la desviación estándar se calculan con todas las muestras de un día completo.
+** Tests de variabilidad
+*** Test de persistencia
+
 #+BEGIN_EXPORT latex
   \[
   \frac{1}{8} \overline{k_t} \leq \sigma_{k_t} \leq 0.35
   \]
 #+END_EXPORT
+La media y la desviación estándar se calculan con todas las muestras de un día completo.
 
-** Tests de rampas
-*** Límites a las variaciones de la irradiancia entre instantes sucesivos
+*** Test de rampas
+
 #+BEGIN_EXPORT latex
   \[
-  \left| k_t(t) - k_t(t-1)\right| < 0.75 \text{ si } \gamma_s(t) > 2\degree
+  \left| k_t(t) - k_t(t-1)\right| < 0.75 \quad \text{ si } \quad \gamma_s(t) > 2\degree
   \]
 #+END_EXPORT
-
+Límites a las variaciones de la irradiancia entre instantes sucesivos.
 
 ** Tests de envolvente
-- Sólo para estaciones con medida simultánea de global y directa/difusa.
-
+Sólo para estaciones con medida simultánea de global y directa/difusa.
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ConsistencyTest.png]]
 
 \nocite{Younes.Claywell.ea2005}
@@ -278,45 +282,40 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 
 ** Coherencia estadística
-*** Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
+Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
 *** *Método de Chauvenet*
 Una medida es un /outlier/ si la probabilidad de obtener su desviación
 respecto de la media es inferior al inverso de 2 veces el número de
 elementos en el conjunto.
-
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/chauvenet.png]]
 
 ** Método de Chauvenet
-  - Sean $G_d(x_i)$ las medidas de radiación diaria del conjunto formado por N estaciones.
+  1. Sean $G_d(x_i)$ las medidas de radiación diaria del conjunto formado por N estaciones.
+  2. Se calcula la media, $\overline{G}_d$, la desviación estándar, $\sigma_{G_d}$.
+  3. Se calcula la distancia estadística de cada estación al conjunto:
+     #+BEGIN_EXPORT latex
+     \[
+     d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+     \]
+     #+END_EXPORT
 
-\pause
-
-  - Se calcula la media, $\overline{G}_d$, la desviación estándar, $\sigma_{G_d}$.
-
-\pause
-
-  - Se calcula la distancia estadística de cada estación al conjunto:
-#+BEGIN_EXPORT latex
-  \[
-  d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
-  \]
-#+END_EXPORT
-
-\pause
-
-  - En una distribución gaussiana se calcula la distancia estadística
+  4. En una distribución gaussiana se calcula la distancia estadística
     equivalente a la probabilidad límite, $1/2N$, teniendo en cuenta
     las dos colas.
-    - Por ejemplo, para un conjunto de 10 estaciones cada cola es
-      $1/40 = 0.025$, el límite es $\left| d_{max} \right| = 1.96$.
-\pause
+     - Por ejemplo, para un conjunto de 10 estaciones cada cola es
+       $1/40 = 0.025$, el límite es $\left| d_{max} \right| = 1.96$.
 
-  - Aquellas observaciones que superan la distancia son marcadas como outliers.
+  5. Aquellas observaciones que superan la distancia son marcadas como outliers.
 
 \nocite{Perpinan2009}
 
 ** Método de Chauvenet
 
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
 #+BEGIN_EXPORT latex
   \[
   d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
@@ -329,11 +328,13 @@ elementos en el conjunto.
   \]
 #+END_EXPORT
 
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
 #+BEGIN_CENTER
 [[../figs/chauvenet.png]]
 #+END_CENTER
-
-*** Método de Pierce: más robusto y flexible \nocite{Ross2003}
 
 * Control de Calidad de Modelos
 
@@ -370,8 +371,8 @@ elementos en el conjunto.
   MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
   \]
 #+END_EXPORT
-\pause
-- Root Mean Square Error (RMSD), diferencia cuadrático media:
+
+- Root Mean Square Difference (RMSD), diferencia cuadrático media:
 #+BEGIN_EXPORT latex
   \[
   RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
@@ -380,21 +381,21 @@ elementos en el conjunto.
 
 ** Estimadores frecuentes: MBE y RMSD
 
-- Varianza de la diferencia (unbiased RMSD):
+El RMSD agrega información del promedio y la varianza de la
+  diferencia:
+#+BEGIN_EXPORT latex
+\[
+RMSD^2= \overline{\mathbf{D}}^2 + \sigma^2_{\mathbf{D}} 
+\]
+#+END_EXPORT
+
+donde la varianza de la diferencia (unbiased RMSD) se calcula:
 #+BEGIN_EXPORT latex
   \[
   \sigma^2_{\mathbf{D}} = \frac{1}{n} \sum_{i=1}^n (d_i - \overline{\mathbf{D}})^2
   \]
 #+END_EXPORT
-\pause
 
-- El RMSD agrega información del promedio y la varianza de la
-  diferencia:
-#+BEGIN_EXPORT latex
-\[
-RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
-\]
-#+END_EXPORT
 
 ** Otros estimadores: MAD
 
@@ -428,7 +429,6 @@ RMSD^2= \sigma^2_{\mathbf{D}} + \overline{\mathbf{D}}^2
 
 \nocite{Stone1993}
 
-\pause 
 
 - $d_1$: Índice de concordancia de Willmott.
   - Limitado entre 0 (ausencia de concordancia) y 1 (concordancia total).
@@ -449,11 +449,23 @@ El coeficiente de correlación entre dos conjuntos de datos es una
 medida numérica de la relación *lineal* entre los dos conjuntos (si la
 relación no es lineal, este coeficiente no sirve):
 
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 #+BEGIN_EXPORT latex
   \[
   r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}{\sigma_{\mathbf{O}}}\right) \cdot \left(\frac{m_{i}-\overline{\mathbf{M}}}{\sigma_{\mathbf{M}}}\right)
   \]
 #+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/Splom.png]]
+
 
 ** Diagramas de Taylor
 - Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
@@ -482,19 +494,21 @@ relación no es lineal, este coeficiente no sirve):
   \]
 #+END_EXPORT
 
-#+BEGIN_CENTER
-[[../figs/cosenosDiagramaTaylor.png]]
-#+END_CENTER
-
-** Diagramas de Taylor
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
 - $\sigma^2_{\mathbf{D}}$: Distancia al origen
 - $\sigma^2_{\mathbf{O}}$: Eje horizontal
 - $\sigma^2_{\mathbf{M}}$: Eje vertical
 - $r$: acimut
-#+BEGIN_CENTER
-#+attr_latex: :height 0.6\textheight
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+attr_latex: :height 0.8\textheight
 [[../figs/TaylorDiagrama.png]]
-#+END_CENTER
 
 
 ** Target Diagram
@@ -530,19 +544,27 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
   \]
 #+END_EXPORT
 
-- Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación: 
+- Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación.
 
 \nocite{Jolliff.Kindle.ea2009}
 
 ** Target Diagram
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
 - $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
 - $\overline{\mathbf{D}}'$: Eje vertical
 - $RMSD'^2$: Distancia al origen
 
-#+BEGIN_CENTER
-#+attr_latex: :height 0.7\textheight
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+attr_latex: :height 0.9\textheight
 [[../figs/TargetDiagram.pdf]]
-#+END_CENTER
+
 
 
 
