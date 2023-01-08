@@ -1,16 +1,14 @@
-% Created 2022-01-22 sáb 14:03
+% Created 2023-01-08 dom 16:24
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{grffile}
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
-\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
@@ -26,14 +24,14 @@
  pdftitle={Actividad: cálculo de radiación},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.1 (Org mode 9.4.6)}, 
- pdflang={English}}
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 En esta actividad vas a estimar las medias mensuales de la radiación global incidente en el plano horizontal y en el plano de un generador.
 
-Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el siguiente itinerario (en cursiva se indican los apartados opcionales):
+Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el siguiente itinerario:
 
 \begin{enumerate}
 \item Obtén series temporales de \textbf{medidas diarias} de radiación solar de 3 estaciones meteorológicas (recomendable longitud de 10 años).
@@ -41,9 +39,9 @@ Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el 
 \item Obtén una serie temporal \textbf{diaria} representativa de la región calculando la media de las tres series temporales.
 \item Compara esta serie temporal media con las series temporales de cada estación usando métricas estadísticas (MBD, RMSD, MAD).
 \item Elige una localización dentro del perímetro definido por las tres estaciones. Obtén las \textbf{12 medias mensuales} en esta localización empleando interpolación espacial (IDW) a partir de las \textbf{12 medias mensuales} de la radiación filtrada de cada estación (punto 2)
-\item \emph{Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.}
-\item \emph{Compara las medias mensuales de las tres estaciones con las estimaciones satelitales empleando métricas estadísticas.}
-\item \emph{Combina la estimación satelital en la localización del punto 5 con las medias mensuales obtenidas en ese punto.}
+\item Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.
+\item Compara las medias mensuales de las tres estaciones con las estimaciones satelitales empleando métricas estadísticas.
+\item Combina la estimación satelital en la localización del punto 5 con las medias mensuales obtenidas en ese punto.
 \end{enumerate}
 
 A continuación, realizaremos el cálculo de la \textbf{radiación en el plano del generador}. Este generador está localizado en el hemisferio norte, orientado al sur y con una inclinación de 30º. Seguiremos el siguiente itinerario:
