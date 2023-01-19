@@ -1,0 +1,180 @@
+#+TITLE: Geometría y Radiación de los Sistemas Fotovoltaicos
+#+SUBTITLE: Energía Solar Fotovoltaica
+#+STARTUP: indent
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+* Tipos de Sistemas
+** Sistema Estático
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/EstructuraEstaticaSuelo.jpg]]
+
+** Sistemas con seguimiento
+
+- *Fundamento:*
+  - Radiación incidente aumenta al seguir al sol
+
+  - Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+
+- Las diferentes técnicas de seguimiento son un *compromiso* entre
+  
+  - un *apuntamiento perfecto*
+
+  - *sistemas estructurales más económicos*
+
+  - mejores *aprovechamientos del terreno*.
+** Algunos tipos de seguimiento solar
+-  *Doble eje*
+
+   -  Apuntamiento "perfecto"
+
+   -  Mejor productividad, peor ocupación de terreno.
+
+
+-  *Seguimiento horizontal con eje Norte-Sur*
+
+   -  Sencillez y estabilidad estructural (el eje es horizontal y
+      paralelo al terreno, con tantos puntos de apoyo como se consideren
+      necesarios),
+
+   -  Facilidad de motorización,
+
+   -  Buen aprovechamiento del terreno.
+
+** Sistema de Seguimiento (2x ejes)
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SeguidorReocin.jpg]]
+
+** Sistema de Seguimiento(1 eje, horizontal N-S)
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SeguidorEjeHorizontal.jpg]]
+
+* Geometría de los sistemas fotovoltaicos
+** Ángulo de Incidencia Sistema Estático
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+- Si $\alpha=0$
+#+BEGIN_EXPORT latex
+\[
+\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
+\]
+#+END_EXPORT
+
+#+ATTR_LATEX: :height 0.55\textheight
+[[../figs/AngulosSistemaEstatico.pdf]]
+
+- Inclinación Óptima $\beta_{opt} \simeq |\phi| - 10º$.
+
+** Sistema Estático: Ángulo de Incidencia
+
+- $40\degree N$
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/cosThetaEst_40N.pdf]]
+
+
+
+** Ángulo de Incidencia Seguidor 1x NS
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+#+ATTR_LATEX: :height 0.65\textheight
+[[../figs/AngulosSistemaHorizontalNS.pdf]]
+
+** Ángulo de Inclinación Seguidor 1x NS
+- $40\degree N$
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/BetaHoriz_40N.pdf]]
+
+
+
+** Ángulo de Incidencia Seguidor 1x NS
+- $40\degree N$
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/cosThetaHoriz_40N.pdf]]
+
+
+
+
+** Ángulo de Incidencia Seguidor 2x
+   :PROPERTIES:
+   :BEAMER_opt: plain
+   :END:
+   
+***                                                                :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/Sombra2X.pdf]]
+
+***                                                                :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.2
+:END:
+#+BEGIN_EXPORT latex
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+#+END_EXPORT
+** Inclinación Seguidor 2x
+
+- $40\degree N$
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/BetaDoble_40N.pdf]]
+
+
+* Radiación Efectiva según tipologías
+
+** Radiación en Sistema estático
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/FixedKrig.pdf]]
+
+
+
+** Radiación en Seguimiento Eje Horizontal
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/HorizKrig.pdf]]
+
+
+
+** Radiación en Seguimiento Doble Eje
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/TwoKrig.pdf]]
+
+
+** Comparación Doble Eje-Estática
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/TwoFixed.pdf]]
+
+
+
+** Comparación Doble Eje - Horizontal
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/TwoHoriz.pdf]]
+
+
+
+** Comparación Eje Horizontal - Estática
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/HorizFixed.pdf]]
+
+
+
+** Comparación entre Sistemas
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/compSystems.pdf]]
+
+** Comparación entre Sistemas
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/compSystemsG0.png]]
+
+

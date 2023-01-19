@@ -1,0 +1,280 @@
+% Created 2023-01-19 jue 20:48
+% Intended LaTeX compiler: pdflatex
+\documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{diffcoeff}
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
+\bibliographystyle{plain}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\amperehour}{Ah}
+\usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\parskip=5pt
+\usetheme{Boadilla}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
+\date{}
+\title{Geometría y Radiación de los Sistemas Fotovoltaicos}
+\subtitle{Energía Solar Fotovoltaica}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
+\hypersetup{
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
+ pdftitle={Geometría y Radiación de los Sistemas Fotovoltaicos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+
+\section{Tipos de Sistemas}
+\label{sec:org1991092}
+\begin{frame}[label={sec:org2f629b8}]{Sistema Estático}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/EstructuraEstaticaSuelo.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgf724879}]{Sistemas con seguimiento}
+\begin{itemize}
+\item \alert{Fundamento:}
+\begin{itemize}
+\item Radiación incidente aumenta al seguir al sol
+
+\item Pérdidas por reflexión disminuyen si el apuntamiento al sol mejora
+\end{itemize}
+
+\item Las diferentes técnicas de seguimiento son un \alert{compromiso} entre
+
+\begin{itemize}
+\item un \alert{apuntamiento perfecto}
+
+\item \alert{sistemas estructurales más económicos}
+
+\item mejores \alert{aprovechamientos del terreno}.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:org2300d48}]{Algunos tipos de seguimiento solar}
+\begin{itemize}
+\item \alert{Doble eje}
+
+\begin{itemize}
+\item Apuntamiento \guillemotleft{}perfecto\guillemotright{}
+
+\item Mejor productividad, peor ocupación de terreno.
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item \alert{Seguimiento horizontal con eje Norte-Sur}
+
+\begin{itemize}
+\item Sencillez y estabilidad estructural (el eje es horizontal y
+paralelo al terreno, con tantos puntos de apoyo como se consideren
+necesarios),
+
+\item Facilidad de motorización,
+
+\item Buen aprovechamiento del terreno.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org9533494}]{Sistema de Seguimiento (2x ejes)}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/SeguidorReocin.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgb00a17b}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/SeguidorEjeHorizontal.jpg}
+\end{center}
+\end{frame}
+
+\section{Geometría de los sistemas fotovoltaicos}
+\label{sec:orgd599eb9}
+\begin{frame}[label={sec:org2b30d8b},plain]{Ángulo de Incidencia Sistema Estático}
+\begin{itemize}
+\item Si \(\alpha=0\)
+\end{itemize}
+\[
+\cos(\theta_{s}) = \cos(\delta)\cos(\omega)\cos(\beta-|\phi|)- \mathrm{sign}(\phi)\cdot\sin(\delta)\sin(\beta-|\phi|)
+\]
+
+\begin{center}
+\includegraphics[height=0.55\textheight]{../figs/AngulosSistemaEstatico.pdf}
+\end{center}
+
+\begin{itemize}
+\item Inclinación Óptima \(\beta_{opt} \simeq |\phi| - 10º\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgffd7c5a}]{Sistema Estático: Ángulo de Incidencia}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/cosThetaEst_40N.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org1bf6e7a},plain]{Ángulo de Incidencia Seguidor 1x NS}
+\[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
+
+\begin{center}
+\includegraphics[height=0.65\textheight]{../figs/AngulosSistemaHorizontalNS.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgfdd5dbd}]{Ángulo de Inclinación Seguidor 1x NS}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/BetaHoriz_40N.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org3d9a668}]{Ángulo de Incidencia Seguidor 1x NS}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/cosThetaHoriz_40N.pdf}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[label={sec:orgb43583b},plain]{Ángulo de Incidencia Seguidor 2x}
+\begin{columns}
+\begin{column}{0.8\columnwidth}
+\begin{center}
+\includegraphics[height=0.8\textheight]{../figs/Sombra2X.pdf}
+\end{center}
+\end{column}
+
+\begin{column}{0.2\columnwidth}
+\begin{align*}
+  \beta &= \theta_{z}\\
+  \alpha &= \psi_{s}\\
+  \cos(\theta_{s}) &= 1
+\end{align*}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[label={sec:org3f3946b}]{Inclinación Seguidor 2x}
+\begin{itemize}
+\item \(40\degree N\)
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/BetaDoble_40N.pdf}
+\end{center}
+\end{frame}
+
+
+\section{Radiación Efectiva según tipologías}
+\label{sec:org7a16ddc}
+
+\begin{frame}[label={sec:org713b3be}]{Radiación en Sistema estático}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/FixedKrig.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org01ff6ad}]{Radiación en Seguimiento Eje Horizontal}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/HorizKrig.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgd562b2a}]{Radiación en Seguimiento Doble Eje}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/TwoKrig.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org52c63fc}]{Comparación Doble Eje-Estática}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/TwoFixed.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org144f04a}]{Comparación Doble Eje - Horizontal}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/TwoHoriz.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgf21b12c}]{Comparación Eje Horizontal - Estática}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/HorizFixed.pdf}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgec352d2}]{Comparación entre Sistemas}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/compSystems.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org07e02f0}]{Comparación entre Sistemas}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/compSystemsG0.png}
+\end{center}
+\end{frame}
+\end{document}
