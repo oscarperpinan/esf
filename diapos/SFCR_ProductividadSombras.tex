@@ -1,16 +1,14 @@
-% Created 2018-04-09 lun 18:27
+% Created 2023-01-19 jue 19:52
 % Intended LaTeX compiler: pdflatex
-\documentclass[xcolor={usenames,svgnames,dvipsnames}]{beamer}
+\documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{grffile}
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
-\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
@@ -19,44 +17,56 @@
 \usepackage{mathpazo}
 \usepackage{gensymb}
 \usepackage{amsmath}
-\usepackage{chemarr}%flechas para reacciones químicas (SFER.tex)
+\usepackage{diffcoeff}
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \bibliographystyle{plain}
-\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]\end{frame}}
-\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
-\usepackage[emulate=units]{siunitx}
-\sisetup{fraction=nice, decimalsymbol=comma, retain-unity-mantissa = false}
-\newunit{\wattpeak}{Wp}
-\newunit{\watthour}{Wh}
-\newunit{\amperehour}{Ah}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\amperehour}{Ah}
+\usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\beamertemplatenavigationsymbolsempty
-\setbeamertemplate{footline}[frame number]
-\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
-\usetheme[hideothersubsections]{Goettingen}
+\parskip=5pt
+\usetheme{Boadilla}
 \usecolortheme{rose}
 \usefonttheme{serif}
-\author{Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
 \date{}
 \title{SFCR: Productividad y Sombras}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
 \hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro \\ \url{http://oscarperpinan.github.io}},
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
  pdftitle={SFCR: Productividad y Sombras},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.2.2 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Energía Producida por un SFCR}
-\label{sec:orgab82b3f}
+\label{sec:org89f3fe4}
 
 \subsection{Procedimiento de cálculo}
-\label{sec:orgd35a87a}
+\label{sec:orgdfe819c}
 
-\begin{frame}[label={sec:org27a8389}]{Potencia en un SFCR}
+\begin{frame}[label={sec:org44e7e0f}]{Potencia en un SFCR}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Generador FV
 \end{itemize}
@@ -78,7 +88,7 @@ $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
       \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgf6f0688}]{Energía producida}
+\begin{frame}[label={sec:orgead99f6}]{Energía producida}
 $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
 
 \begin{itemize}
@@ -100,14 +110,14 @@ generador
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1e07ef1}]{Productividad}
+\begin{frame}[label={sec:org60d1638}]{Productividad}
 En algunas ocasiones se habla de \alert{productividad} del sistema, \(Y_{f}\),
 que es el cociente entre energía producida y potencia nominal del
 \alert{generador}:
 $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 \end{frame}
 
-\begin{frame}[label={sec:orgd2c9226}]{Performance Ratio}
+\begin{frame}[label={sec:orgb9e1d7d}]{Performance Ratio}
 \begin{itemize}
 \item Está concebido para incluir todas las \alert{pérdidas que no tienen
 dependencia con las condiciones meteorológicas}.
@@ -124,7 +134,7 @@ con la relación entre potencia e irradiancia, \alert{suele aceptarse} que el
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1d398d2}]{Performance Ratio}
+\begin{frame}[label={sec:orgdcb864b}]{Performance Ratio}
 \begin{block}{Desglose de pérdidas}
 \begin{itemize}
 \item \alert{Dispersión de parámetros} entre los módulos que componen el
@@ -146,7 +156,7 @@ características nominales (3\%)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org179adc8}]{Performance Ratio}
+\begin{frame}[label={sec:orga95384c}]{Performance Ratio}
 \begin{block}{Valores reales}
 \begin{itemize}
 \item El análisis de funcionamiento de diversos sistemas FV europeos ha
@@ -163,7 +173,7 @@ sido de 0,8}.
 \end{frame}
 
 
-\begin{frame}[label={sec:org94c42e9}]{Factor de sombras}
+\begin{frame}[label={sec:org62d9a93}]{Factor de sombras}
 \begin{itemize}
 \item \alert{El factor de sombras suele tomar valores alrededor del 2 al 4\%},
 tanto en instalaciones estáticas como de seguimiento.
@@ -175,27 +185,27 @@ con un nivel de ocupación de terreno superior al óptimo).
 \end{frame}
 
 \section{Sombras y ocupación de terreno}
-\label{sec:orgb12641e}
+\label{sec:org67fcaf8}
 
 \subsection{Sombras Lejanas}
-\label{sec:org443fbbd}
+\label{sec:org0b3ca6f}
 
-\begin{frame}[label={sec:org2d647ab}]{Sombras en el horizonte}
+\begin{frame}[label={sec:org56ad3be}]{Sombras en el horizonte}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/SombraIES.pdf}
+\includegraphics[height=0.9\textheight]{../figs/SombraIES.pdf}
 \end{center}
 \end{frame}
 
 \subsection{Sombras Cercanas: sistemas estáticos}
-\label{sec:orgc1bf313}
+\label{sec:org2d8b567}
 
-\begin{frame}[label={sec:org1fb5626}]{Sombras entre filas}
+\begin{frame}[label={sec:orgb97f82f}]{Sombras entre filas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SombraEstaticaInclinado2.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org94b6ee8}]{Sombras entre filas}
+\begin{frame}[label={sec:org32ada03}]{Sombras entre filas}
 \begin{itemize}
 \item Suele establecerse un objetivo de \alert{4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra}.
 
@@ -211,19 +221,44 @@ $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 \end{frame}
 
-\subsection{Sombras Cercanas: sistemas de seguimiento 2X}
-\label{sec:org0d74dae}
-
-
-\begin{frame}[label={sec:org44c524d}]{Separación de seguidores Doble Eje}
+\begin{frame}[label={sec:org27bb504}]{Separación entre filas}
+\begin{columns}
+\begin{column}{0.65\columnwidth}
 \begin{center}
-\includegraphics[height=0.5\textheight]{../figs/Sombras2X.pdf}
+\includegraphics[angle=90,height=0.7\textheight]{../figs/AbacoSombraEst_Ene10.pdf}
+\end{center}
+\end{column}
+
+
+
+\begin{column}{0.35\columnwidth}
+\begin{center}
+\includegraphics[height=0.3\textheight]{../figs/DimensionesSeguidorSombra.pdf}
+\end{center}
+
+\[
+W=\infty\]
+\[
+  ROT=D/L
+\]
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Sombras Cercanas: sistemas de seguimiento 2X}
+\label{sec:org02d486f}
+
+
+
+\begin{frame}[label={sec:org096fa2b}]{Separación de seguidores Doble Eje}
+\begin{center}
+\includegraphics[height=0.45\textheight]{../figs/Sombras2X.pdf}
 \end{center}
 
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/DimensionesSeguidorSombra.pdf}
+\includegraphics[height=0.35\textheight]{../figs/DimensionesSeguidorSombra.pdf}
 \end{center}
 \end{column}
 
@@ -234,13 +269,13 @@ $$E_{ac}=f(ROT)??$$
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org43aa7fc}]{Radiación promedio}
+\begin{frame}[label={sec:orga6fe95e}]{Radiación promedio}
 $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
 
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/plantConfiguration.pdf}
+\includegraphics[height=0.7\textheight]{../figs/plantConfiguration.pdf}
 \end{center}
 \end{column}
 
@@ -253,35 +288,41 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 \end{frame}
 
 
-\begin{frame}[label={sec:org52c99a0}]{Separación de Seguidores Doble Eje}
+\begin{frame}[label={sec:org7f56bd9}]{Separación de Seguidores Doble Eje}
+\begin{columns}
+\begin{column}{0.3\columnwidth}
 $$b=\frac{L}{W}=0.475$$
 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
+\end{column}
 
+\begin{column}{0.7\columnwidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/AbacoSeguidor2X_Ene10.pdf}
+\includegraphics[height=0.9\textheight]{../figs/AbacoSeguidor2X_Ene10.pdf}
 \end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
 
 \subsection{Sombras Cercanas: Seguidores de eje horizontal NS}
-\label{sec:org5414c98}
+\label{sec:orgec69d47}
 
-\begin{frame}[label={sec:org7dbe8f8}]{Separación de Seguidores Eje Horizontal}
+\begin{frame}[label={sec:orgecef636}]{Separación de Seguidores Eje Horizontal}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/SombrasHoriz.pdf}
+\includegraphics[height=0.9\textheight]{../figs/SombrasHoriz.pdf}
 \end{center}
 
 $$W=\infty$$ $$ROT=L_{eo}/L$$
 \end{frame}
 
-\begin{frame}[label={sec:orgf4b7eae}]{Separación de Seguidores Horizontal N-S}
+\begin{frame}[label={sec:org0553353}]{Separación de Seguidores Horizontal N-S}
 \begin{center}
-\includegraphics[angle=90,width=.9\linewidth]{../figs/AbacoSeguidorHorizSombra_Ene10.pdf}
+\includegraphics[angle=90,height=0.9\textheight]{../figs/AbacoSeguidorHorizSombra_Ene10.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org866a460}]{Backtracking}
+\begin{frame}[label={sec:orga4cc589}]{Backtracking}
 \begin{itemize}
 \item El \alert{sombreado} en un generador puede producir problemas por el efecto
 de \alert{punto caliente}.
@@ -304,19 +345,19 @@ la \alert{horizontal en la noche}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1860f2d}]{Backtracking}
+\begin{frame}[label={sec:org6255f7d}]{Backtracking}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/BackTracking.pdf}
+\includegraphics[height=0.9\textheight]{../figs/BackTracking.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfd27fc2}]{Separación con backtracking}
+\begin{frame}[label={sec:org2649b2a}]{Separación con backtracking}
 \begin{center}
-\includegraphics[angle=90,width=.9\linewidth]{../figs/AbacoHorizBT_Ene10.pdf}
+\includegraphics[angle=90,height=0.9\textheight]{../figs/AbacoHorizBT_Ene10.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9ef9342}]{Limitación de ángulo}
+\begin{frame}[label={sec:org17b1a79}]{Limitación de ángulo}
 \begin{itemize}
 \item Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
 
@@ -331,28 +372,31 @@ la \alert{horizontal en la noche}.
 \end{frame}
 
 \subsection{Elección de separaciones}
-\label{sec:org052ebb7}
+\label{sec:orga24127e}
 
 
-\begin{frame}[label={sec:org12cbf84}]{Elección de separaciones}
+\begin{frame}[label={sec:orge417d59}]{Elección de separaciones}
 La \alert{separación óptima} entre elementos (seguidores o estructuras
 estáticas) es aquella que conduce al \alert{mínimo valor del coste de la
-energía} producida por el sistema:
+energía} producida por el sistema.
+
+Al aumentar la separación:
 
 \begin{itemize}
-\item Con mayor separación disminuyen las \alert{pérdidas por sombreado mutuo},
-aumenta la productividad del sistema.
+\item Disminuyen las \alert{pérdidas por sombreado mutuo} (aumenta la
+productividad del
 
-\item Con mayor separación aumentan los \alert{costes relacionados con el area
-ocupada} por unidad de potencia.
+\item Aumentan:
 
-\item Con mayor separación aumentan los \alert{costes relacionados con los
-elementos de unión entre estructuras} (cableado, canalizaciones,
-zanjas).
+\begin{itemize}
+\item los \alert{costes relacionados con el área ocupada} por unidad de
+potencia.
+\item los \alert{costes relacionados con los elementos de unión entre estructuras} (cableado, canalizaciones, zanjas).
+\end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org562cd74}]{Elección de separaciones}
+\begin{frame}[label={sec:org95730fb}]{Elección de separaciones}
 \begin{itemize}
 \item Esta separación óptima \alert{depende} de las \alert{estructuras elegidas} y de
 las \alert{condiciones económicas} de los elementos.
@@ -364,9 +408,9 @@ condiciones del terreno} (fronteras, irregularidades, vaguadas, etc.)
 
 
 
-\begin{frame}[label={sec:org8567bf4}]{ROT y Coste de la energía producida}
+\begin{frame}[label={sec:org86521a7}]{ROT y Coste de la energía producida}
 \begin{columns}
-\begin{column}{0.4\columnwidth}
+\begin{column}{0.3\columnwidth}
 \begin{itemize}
 \item Coste Energía
 $$C_E = \frac{C_P}{E_{AC}}$$
@@ -381,23 +425,23 @@ $$C_p = C_c + C_A + C_{PV}$$
 
 \begin{column}{0.8\columnwidth}
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/GRRoptim.pdf}
+\includegraphics[height=0.9\textheight]{../figs/GRRoptim.pdf}
 \end{center}
 \end{column}
 \end{columns}
 \end{frame}
 
 \section{Resumen}
-\label{sec:org9009c82}
+\label{sec:org0a47e21}
 
-\begin{frame}[label={sec:org9fbadc4}]{Ocupación de terreno y productividad}
+\begin{frame}[label={sec:org09a21b7}]{Ocupación de terreno y productividad}
 \begin{center}
 \begin{tabular}{lrl}
-SFCR & ROT & Productividad\\
+SFCR & ROT & Productividad\\[0pt]
 \hline
-Estático & 2 & 1\\
-Eje Horizontal NS & 4 & 1,05-1,2\\
-Doble Eje & 6 & 1,3-1,5\\
+Estático & 2 & 1\\[0pt]
+Eje Horizontal NS & 4 & 1,05-1,2\\[0pt]
+Doble Eje & 6 & 1,3-1,5\\[0pt]
 \end{tabular}
 \end{center}
 \end{frame}

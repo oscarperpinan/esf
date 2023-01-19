@@ -114,7 +114,7 @@ $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 ** Sombras Lejanas
 
 *** Sombras en el horizonte
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SombraIES.pdf]]
 
 ** Sombras Cercanas: sistemas estáticos
@@ -135,18 +135,46 @@ $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$
 - Para 2 horas antes y después:
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
+*** Separación entre filas
+
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.65
+     :END:
+#+ATTR_LATEX: :options angle=90 :height 0.7\textheight
+[[../figs/AbacoSombraEst_Ene10.pdf]]
+
+
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.35
+     :END:
+     #+ATTR_LATEX: :height 0.3\textheight
+     [[../figs/DimensionesSeguidorSombra.pdf]]
+
+     #+begin_export latex
+     \[
+     W=\infty\]
+     \[
+       ROT=D/L
+     \]
+     #+end_export
+     
 ** Sombras Cercanas: sistemas de seguimiento 2X
 
 
+
 *** Separación de seguidores Doble Eje
-#+ATTR_LATEX: :height 0.5\textheight
+#+ATTR_LATEX: :height 0.45\textheight
 [[../figs/Sombras2X.pdf]]
 
 **** 								      :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.6
      :END:
-
+#+ATTR_LATEX: :height 0.35\textheight
 [[../figs/DimensionesSeguidorSombra.pdf]]
 
 **** 								      :BMCOL:
@@ -164,7 +192,8 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
      :PROPERTIES:
      :BEAMER_col: 0.4
      :END:
-[[../figs/plantConfiguration.pdf]]
+     #+ATTR_LATEX: :height 0.7\textheight
+     [[../figs/plantConfiguration.pdf]]
 
 **** 								      :BMCOL:
      :PROPERTIES:
@@ -175,10 +204,19 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 
 *** Separación de Seguidores Doble Eje
 
+****                                                                  :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
 $$b=\frac{L}{W}=0.475$$
 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 
+****                                                                  :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/AbacoSeguidor2X_Ene10.pdf]]
 
 
@@ -186,12 +224,13 @@ $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 
 *** Separación de Seguidores Eje Horizontal
 
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/SombrasHoriz.pdf]]
 
 $$W=\infty$$ $$ROT=L_{eo}/L$$
 
 *** Separación de Seguidores Horizontal N-S
-#+ATTR_LATEX: :options angle=90
+#+ATTR_LATEX: :options angle=90 :height 0.9\textheight
 [[../figs/AbacoSeguidorHorizSombra_Ene10.pdf]]
 
 *** Backtracking
@@ -214,12 +253,12 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
       la *horizontal en la noche*.
 
 *** Backtracking
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/BackTracking.pdf]]
 
 *** Separación con backtracking
 
-#+ATTR_LATEX: :options angle=90
+#+ATTR_LATEX: :options angle=90 :height 0.9\textheight
 [[../figs/AbacoHorizBT_Ene10.pdf]]
 
 *** Limitación de ángulo
@@ -239,17 +278,18 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
 
 La *separación óptima* entre elementos (seguidores o estructuras
 estáticas) es aquella que conduce al *mínimo valor del coste de la
-energía* producida por el sistema:
+energía* producida por el sistema.
 
--  Con mayor separación disminuyen las *pérdidas por sombreado mutuo*,
-   aumenta la productividad del sistema.
+Al aumentar la separación:
 
--  Con mayor separación aumentan los *costes relacionados con el area
-   ocupada* por unidad de potencia.
+- Disminuyen las *pérdidas por sombreado mutuo* (aumenta la
+  productividad del
 
--  Con mayor separación aumentan los *costes relacionados con los
-   elementos de unión entre estructuras* (cableado, canalizaciones,
-   zanjas).
+- Aumentan:
+
+  - los *costes relacionados con el área ocupada* por unidad de
+    potencia.
+  - los *costes relacionados con los elementos de unión entre estructuras* (cableado, canalizaciones, zanjas).
 
 *** Elección de separaciones
 
@@ -264,7 +304,7 @@ energía* producida por el sistema:
 *** ROT y Coste de la energía producida
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.4
+     :BEAMER_col: 0.3
      :END:
 - Coste Energía
     $$C_E = \frac{C_P}{E_{AC}}$$
@@ -279,7 +319,8 @@ energía* producida por el sistema:
      :PROPERTIES:
      :BEAMER_col: 0.8
      :END:
-[[../figs/GRRoptim.pdf]]
+     #+ATTR_LATEX: :height 0.9\textheight
+     [[../figs/GRRoptim.pdf]]
 
 * Resumen
 
