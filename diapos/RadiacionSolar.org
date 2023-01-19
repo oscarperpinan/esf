@@ -993,6 +993,16 @@ G(\beta, \alpha) = B(\beta, \alpha) + D(\beta, \alpha) + R(\beta, \alpha)
 \[\rho=0.2\]
 #+END_EXPORT
 
+*** Valores diarios
+Los valores diarios son la suma de los valores horarios a lo largo de un día.
+#+BEGIN_EXPORT latex
+\begin{align*}
+  G_d(\alpha, \beta) &= \sum_d G_h(\alpha, \beta)\\
+  D_d(\alpha, \beta) &= \sum_d D_h(\alpha, \beta)\\
+  B_d(\alpha, \beta) &= \sum_d B_h(\alpha, \beta)\\
+\end{align*}
+#+END_EXPORT
+
 *** Ejemplo de cálculo
 
 Calcula la irradiancia difusa, directa, de albedo y global, en un
