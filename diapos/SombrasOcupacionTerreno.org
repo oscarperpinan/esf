@@ -1,0 +1,212 @@
+#+TITLE: Sombras y Ocupación de Terreno
+#+SUBTITLE: Energía Solar Fotovoltaica
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+* Sistemas estáticos
+
+** Sombras entre filas
+
+[[../figs/SombraEstaticaInclinado2.pdf]]
+
+** Sombras entre filas
+
+- Suele establecerse un objetivo de *4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra*.
+
+- La longitud de la sombra de un obstáculo se mide con:$$d=\frac{h}{\tan\gamma_{s}}$$
+
+- En el mediodía del solsticio de invierno 
+$$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$ 
+
+- Para 2 horas antes y después:
+$$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
+** Separación entre filas
+
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.65
+     :END:
+#+ATTR_LATEX: :options angle=90 :height 0.7\textheight
+[[../figs/AbacoSombraEst_Ene10.pdf]]
+
+
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.35
+     :END:
+     #+ATTR_LATEX: :height 0.3\textheight
+     [[../figs/DimensionesSeguidorSombra.pdf]]
+
+     #+begin_export latex
+     \[
+     W=\infty\]
+     \[
+       ROT=D/L
+     \]
+     #+end_export
+     
+
+* Sistemas de seguimiento 2X
+
+
+** Separación de seguidores Doble Eje
+#+ATTR_LATEX: :height 0.45\textheight
+[[../figs/Sombras2X.pdf]]
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+#+ATTR_LATEX: :height 0.35\textheight
+[[../figs/DimensionesSeguidorSombra.pdf]]
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
+$$E_{ac}=f(ROT)??$$
+
+** Radiación promedio
+
+$$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+     #+ATTR_LATEX: :height 0.7\textheight
+     [[../figs/plantConfiguration.pdf]]
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+[[../figs/6trackers.pdf]]
+
+
+** Separación de Seguidores Doble Eje
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+$$b=\frac{L}{W}=0.475$$
+
+$$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/AbacoSeguidor2X_Ene10.pdf]]
+
+
+* Seguidores de eje horizontal NS
+
+** Separación de Seguidores Eje Horizontal
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/SombrasHoriz.pdf]]
+
+$$W=\infty$$ $$ROT=L_{eo}/L$$
+
+** Separación de Seguidores Horizontal N-S
+#+ATTR_LATEX: :options angle=90 :height 0.9\textheight
+[[../figs/AbacoSeguidorHorizSombra_Ene10.pdf]]
+
+** Backtracking
+
+-  El *sombreado* en un generador puede producir problemas por el efecto
+   de *punto caliente*.
+
+-  En seguidores de eje horizontal se puede *evitar la incidencia de
+   sombras* en cualquier instante mediante el "*backtracking*":
+
+   -  Al *amanecer* el seguidor está en posición *horizontal*.
+
+   -  Según avanza el día el seguidor gira en *sentido contrario al
+      movimiento solar para evitar las sombras*.
+
+   -  En un determinado momento se cruza con el sol y puede continuar el
+      movimiento "convencional".
+
+   -  En un instante de la tarde debe volver a cambiar el sentido hasta
+      la *horizontal en la noche*.
+
+** Backtracking
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/BackTracking.pdf]]
+
+** Separación con backtracking
+
+#+ATTR_LATEX: :options angle=90 :height 0.9\textheight
+[[../figs/AbacoHorizBT_Ene10.pdf]]
+
+** Limitación de ángulo
+
+- Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
+
+- Implica un desvio de los seguidores de su posición óptima.
+
+  - Sombras más cortas que en el caso teórico (red más densa).
+
+  - Reducción en la energía generada por incidencia no perpendicular
+
+* Elección de separaciones
+
+
+** Elección de separaciones
+
+La *separación óptima* entre elementos (seguidores o estructuras
+estáticas) es aquella que conduce al *mínimo valor del coste de la
+energía* producida por el sistema.
+
+Al aumentar la separación:
+
+- Disminuyen las *pérdidas por sombreado mutuo* (aumenta la
+  productividad del
+
+- Aumentan:
+
+  - los *costes relacionados con el área ocupada* por unidad de
+    potencia.
+  - los *costes relacionados con los elementos de unión entre estructuras* (cableado, canalizaciones, zanjas).
+
+** Elección de separaciones
+
+- Esta separación óptima *depende* de las *estructuras elegidas* y de
+  las *condiciones económicas* de los elementos.
+
+- La separación finalmente elegida debe *tomar en consideración las
+  condiciones del terreno* (fronteras, irregularidades, vaguadas, etc.)
+
+** Ocupación óptima
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+     #+ATTR_LATEX: :height 0.9\textheight
+     [[../figs/GRRoptim.png]]
+
+*** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+- Coste Energía
+    $$C_E = \frac{C_P}{E_{AC}}$$
+- Coste Sistema
+    $$C_p = C_c + C_A + C_{PV}$$
+
+- $C_{PV}$ entre $\SI{1.5}{\text{\texteuro}\per\watt}$ y $\SI{2.5}{\text{\texteuro}\per\watt}$
+
+- $C_A$ entre $\SI{2}{\text{\texteuro}\per\meter\squared}$ y $\SI{3}{\text{\texteuro}\per\meter\squared}$
+
+** Separaciones y coste de la energía
+
+     #+ATTR_LATEX: :height 0.9\textheight
+     [[../figs/matrixGRR.png]]
+
