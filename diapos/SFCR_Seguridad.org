@@ -128,6 +128,7 @@ del inversor*.
 
 *** Intensidad y tiempo de contacto
 
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/CurvaIntensidadContactoTiempo.pdf]]
 
 *** Trayectoria de la corriente
@@ -146,7 +147,7 @@ del inversor*.
 -  *No es homogénea*: cada parte del cuerpo presenta valores diferentes.
 
 -  *No es estable con el tiempo*: depende de la duración del contacto
-  y de la tensión aplicada (disminuye con la tensión!).
+  y de la tensión aplicada (¡disminuye con la tensión!).
 
 -  Depende del estado de la piel, sudoración, estado físico, superficie
    de contacto, presión.
@@ -178,20 +179,6 @@ del inversor*.
       convencional (la corriente circula por la piel, sin atravesar
       órganos internos).
 
-*** Tensión y corriente de seguridad
-
--  Se establecen dos condiciones: *emplazamientos secos o húmedos*
-   (instalaciones de interior); *emplazamientos mojados* (instalaciones
-   en intemperie).
-
--  Se define como tensión de seguridad la tensión de contacto máxima
-   admisible durante al menos cinco segundos. Para emplazamientos secos
-   es de 120 Vcc y 50 Vca; para *emplazamientos mojados es de 60 Vcc y
-   24 Vca*.
-
--  *La corriente máxima admisible se fija en 30 mA para AC y 100 mA para
-   CC*.
-
 ** Contacto Directo
 
 *** REBT: Contactos Directos
@@ -215,7 +202,7 @@ objetivo:
 
 
 *** Contacto Directo IT
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ContactoDirectoIT_Capacidad.pdf]]
 
 $$I_{f}\leq100\, mA\Longrightarrow R_{iso}\geq10\cdot V_{ocG}-R_{H}$$
@@ -289,7 +276,7 @@ indirectos:
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/ContactoIndirectoIT.pdf]]
 
 $$\begin{aligned}
@@ -300,7 +287,7 @@ I_{F} & = & 0\end{aligned}$$
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ContactoIndirectoIT_simple.pdf]]
 
 
@@ -309,7 +296,7 @@ I_{F} & = & 0\end{aligned}$$
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/ContactoIndirectoTT.pdf]]
 $$V_{c}\simeq I_{scG}\cdot R_{tp}$$
 
@@ -317,7 +304,7 @@ $$V_{c}\simeq I_{scG}\cdot R_{tp}$$
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ContactoIndirectoTT_simple.pdf]]
 
 
@@ -327,14 +314,14 @@ $$V_{c}\simeq I_{scG}\cdot R_{tp}$$
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/ContactoIndirectoTN.pdf]]
 
 **** 								      :BMCOL:
      :PROPERTIES:
      :BEAMER_col: 0.5
      :END:
-#+ATTR_LATEX: :width \textwidth
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/ContactoIndirectoTN_simple.pdf]]
 
 $$V_{c}=0$$
@@ -394,7 +381,7 @@ niveles:
 ** Tormentas eléctricas
 
 *** Formación de las tormentas
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/FormacionTormenta.pdf]]
 
 *** Formación de las tormentas
@@ -438,7 +425,7 @@ producen, son lugares con mayor probabilidad de impacto.
 
 **** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.6
+     :BEAMER_col: 0.4
      :END:
 #+ATTR_LATEX: :height 0.8\textheight
 [[../figs/SobretensionInducida.pdf]]
@@ -467,7 +454,7 @@ La fuerza electromotriz inducida depende de:
 
 
 *** Area y cableado
-
+#+ATTR_LATEX: :width \textwidth
 [[../figs/BucleCableadoOptimo.pdf]]
 
 *** Protección externa
@@ -481,7 +468,7 @@ Un sistema de protección externa contra el rayo se compone de:
 -  Puesta a tierra.
 
 *** Protección externa
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/AreaProteccionPararrayos.pdf]]
 
 *** Protección externa
@@ -513,9 +500,8 @@ Un sistema de protección externa contra el rayo se compone de:
   tierra.
 
 *** Protecciones Internas 
-- Cuando un varistor actúa realiza un cortocircuito entre sus
-  conexiones.
-
+Cuando un varistor actúa realiza un cortocircuito entre sus conexiones.
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/CajaForumDestruida.pdf]]
 
 * Resumen de protecciones
@@ -524,7 +510,7 @@ Un sistema de protección externa contra el rayo se compone de:
     :PROPERTIES:
     :BEAMER_opt: plain
     :END:
-#+ATTR_LATEX: :width 1.2\textwidth
+#+ATTR_LATEX: :width 1\textwidth
 [[../figs/UnifilarCR1.pdf]]
 
 ** Circuito DC
@@ -558,19 +544,37 @@ Un sistema de protección externa contra el rayo se compone de:
 
 - La corriente de activación es $I_{2}=1.6\cdot I_{n}$
 
-*** Varistores
+****                                                                  :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+    #+ATTR_LATEX: :height 0.4\textheight
+    [[file:../figs/fusible.jpg]]
 
--  Entrada CC del inversor protegida mediante *varistores* para
+
+****                                                                  :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+    #+ATTR_LATEX: :height 0.5\textheight
+    [[file:../figs/portafusible.JPG]]
+
+*** Descargadores de tensión
+
+-  Entrada CC del inversor protegida mediante *descargadores de tensión* para
   proteger contra sobretensiones de origen atmosférico.
 
 -  Tensión de operación marcada por el diseño del sistema concreto,
   entre la menor tensión en el punto de máxima potencia y la mayor
   tensión de circuito abierto.
 
+  #+ATTR_LATEX: :height 0.5\textheight
+    [[file:../figs/varistorDEHN.jpg]]
+
 
 ** Circuito AC
 *** 
-
+#+ATTR_LATEX: :height 0.9\textheight
 [[../figs/CajaAC.jpg]]
 
 *** Cortocircuitos y sobrecargas
@@ -639,42 +643,15 @@ tomas a tierra que pertenecen a otras instalaciones eléctricas.
   distancias superiores a $\SI{15}{\meter}$.
 
 
-*** Resistencia para conexión TT
-
-$$R_{tp}\leq\frac{V_{max}}{I_{f}}$$
-
-**** Ejemplo
-Una instalación fotovoltaica se considera local mojado,
-así que $V_{max}=\SI{60}{\volt}$. Al ser corriente continua
-$I_{max}=\SI{100}{\milli\ampere}$. Si este generador fotovoltaico
-utiliza el esquema TT será $R_{tp}\leq\SI{600}{\ohm}$.
-
-*** Resistencia para IT
+*** Cálculo de resistencia para generador
 
 - Un sistema IT es intrínsecamente seguro.
-- Si existe un fallo de aislamiento se convierte en un TT. Si aparece
-  un segundo fallo, y no hay limitación de corriente, el requisito es:
-$$R_{tp}\leq\frac{V_{max}}{I_{sc}}$$
+- No obstante, la corriente de defecto máxima es $I_f=\SI{30}{\milli\ampere}$ (vigilante de aislamiento).
+- El sistema de puesta a tierra garantizará que cualquier masa no pueda dar lugar a tensiones de contacto superiores a $V_{max}=\SI{50}{\volt}$.
 
-**** Ejemplo
-Suponiendo $I_{sc}=\SI{150}{\ampere}$, la resistencia de
-la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
-
-*** Práctica común
-
-- Este segundo cálculo arroja un *valor difícilmente alcanzable* en un
-  terreno con valores de resistividad eléctrica normales *dentro de
-  ciertos costes razonables*.
-
-- Se suele adoptar como requisito mínimo
-  $$R_{tp}\leq\frac{V_{max}}{I_{f}}$$ aplicado a la zona de corriente
-  alterna (por tanto, empleando $V_{max}=\SI{24}{\volt}$ y
-  $I_{max}=\SI{30}{\milli\ampere}$).
-
-- Con este primer resultado se diseña un sistema de puesta a tierra y
-  se intenta mejorar para alcanzar
-  $$R_{tp}\leq\frac{V_{max}}{I_{sc}}$$ aplicada al generador
-  fotovoltaico.
+#+begin_export latex
+$$R_{tp}\leq\frac{V_{max}}{I_{f}} = \qty{800}{\ohm}$$
+#+end_export
 
 *** Cálculo de la resistencia de tierra
 
@@ -696,7 +673,7 @@ la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
   equivalente es (aproximadamente) el paralelo de las individuales*.
 
 **** Por ejemplo
-Para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno con
+Para conseguir una $R_{tp}=\SI{5}{\ohm}$ en un terreno con
 $\rho=\SI{100}{\ohm\meter}$ se deberán utilizar aproximadamente 10
 picas de una longitud de 2 metros (cada una de ellas tendrá una
 resistencia $R_{t,i}=\SI{50}{\ohm}$).

@@ -179,20 +179,6 @@ de atravesar órganos vitales dependerá de los puntos de contacto con
 la tensión eléctrica. Los efectos también dependen de la edad, el
 sexo, el estado físico, la fatiga o el miedo. 
 
-En base a estas consideraciones, se establecen unos requisitos para
-la tensión y la corriente de seguridad \cite{RD_842_2002,Gomez-Vidal2000,MestreRovira2002,PerezGabarda2000}: 
-\begin{itemize}
-\item Se establecen dos condiciones: emplazamientos secos o húmedos (instalaciones
-de interior); emplazamientos mojados (instalaciones en intemperie).
-\item Se define como tensión de seguridad la tensión de contacto máxima
-admisible durante al menos cinco segundos. Para emplazamientos secos
-es de $\SI{120}{\volt}$ para corriente continua y $\SI{50}{\volt}$
-para corriente alterna. Para emplazamientos mojados es de $\SI{60}{\volt}$
-para corriente continua y $\SI{24}{\volt}$ para corriente alterna.
-\item La corriente máxima admisible se fija en $\SI{30}{\milli\ampere}$
-para alterna y $\SI{100}{\milli\ampere}$ para continua.
-\end{itemize}
-
 \subsection{Protección contra contactos directos}
 
 La figura \ref{fig:ContactoDirectoTT_TN} muestra los esquemas eléctricos
@@ -554,12 +540,12 @@ con $\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10
 picas de una longitud de 2 metros (cada una de ellas tendrá una resistencia
 $R_{t,i}=\SI{50}{\ohm}$). 
 
-Una de las misiones de la puesta a tierra consiste en disminuir la
+Una de las misiones de la puesta a tierra consiste en limitar la
 tensión de contacto que aparece al circular una corriente de fugas
 durante un contacto indirecto. Los esquemas IT y TN no producen tensión
 de contacto en el primer contacto indirecto y, por tanto, sólo el
 esquema TT necesita \emph{esta} función de la puesta a tierra. En
-este esquema, suponiendo la existencia de un dispositivo de protección
+cualquier caso, suponiendo la existencia de un dispositivo de protección
 (por ejemplo, un vigilante de aislamiento) que limita la corriente
 de fuga, el valor de la resistencia de la puesta a tierra debe cumplir:
 
@@ -567,73 +553,30 @@ de fuga, el valor de la resistencia de la puesta a tierra debe cumplir:
 R_{tp}\leq\frac{V_{max}}{I_{f}}\label{eq:Rtp_TT}\end{equation}
 
 
-Apliquemos la ecuación \ref{eq:Rtp_TT} a un ejemplo concreto. Una
-instalación fotovoltaica se considera local mojado%
-\footnote{Según la ITC-BT-30, se consideran como locales o emplazamientos mojados
-las instalaciones a la intemperie.%
-}, así que la máxima tensión de contacto admisible en la zona de corriente
-continua es $V_{max}=\SI{60}{\volt}$. Al ser corriente continua la
-máxima corriente admisible que puede circular por el cuerpo humano
-es $I_{max}=\SI{100}{\milli\ampere}$. Si este generador fotovoltaico
-utiliza el esquema TT e incorpora un dispositivo de protección que
-limite la corriente de fuga, deberá emplear una toma a tierra que
-cumpla $R_{tp}\leq\SI{600}{\ohm}$.
-
-Un esquema IT es intrínsecamente seguro ante contactos indirectos,
-pero es posible que el generador fotovoltaico ya haya tenido un primer
-defecto a tierra. Si permaneciendo este primer fallo se produce un
-contacto indirecto adicional, el sistema produce una tensión de contacto
-que hay que limitar. En esta situación, dado que el primer fallo a
-tierra transforma el esquema IT en un esquema TT, el valor límite
-de la resistencia de la puesta a tierra en ausencia de un dispositivo
-que limite la corriente de fuga es:
-
-\begin{equation}
-R_{tp}\leq\frac{V_{max}}{I_{sc}}\label{eq:Rtp_IT2}\end{equation}
-\nomenclature[Vmax]{$V_{max}$}{Tensión máxima admisible de seguridad ante un contacto}
-
-Consideremos ahora la instalación fotovoltaica anterior con un esquema
-IT. Suponiendo que el generador tiene una corriente de cortocircuito
-igual a $I_{sc}=\SI{150}{\ampere}$, para proteger frente a la eventualidad
-de la combinación de un primer fallo a tierra con un segundo contacto
-indirecto, suponiendo que el sistema no incorpora un dispositivo que
-limite la corriente de fuga (o para proteger también frente a la posibilidad
-de que éste no realice correctamente su función) la resistencia de
-la puesta a tierra debe ser ahora $R_{tp}\leq\SI{0.4}{\ohm}$.
-
-Este segundo cálculo arroja un valor difícilmente alcanzable en un
-terreno con valores de resistividad eléctrica normales dentro de ciertos
-costes razonables. En general, se suele adoptar como requisito mínimo
-el resultado de la ecuación \ref{eq:Rtp_TT} aplicado a la zona de
-corriente alterna (por tanto, empleando $V_{max}=\SI{24}{\volt}$
-y $I_{max}=\SI{30}{\milli\ampere}$). Con este primer resultado se
-diseña un sistema de puesta a tierra. Según las condiciones del terreno,
-la accesibilidad a personas y coste asumible, se intenta mejorar la
-puesta a tierra con la vista puesta en el resultado de la ecuación
-\ref{eq:Rtp_IT2} aplicada al generador fotovoltaico.
+Apliquemos la ecuación \ref{eq:Rtp_TT} a un ejemplo concreto. La
+tensión de contacto máxima admisible es $V_{max}=\SI{24}{\volt}$, y la
+corriente de defecto máxima admisible es
+$I_{max}=\SI{30}{\milli\ampere}$ (limitada por el vigilante de aislamiento). Por tanto, se deberá emplear una toma a tierra que cumpla $R_{tp}\leq\SI{800}{\ohm}$.
 
 A la hora de realizar puestas a tierra en lugares donde ya existen
 tomas a tierra que pertenecen a otras instalaciones eléctricas es
 importante entender su funcionalidad para tomar la decisión correcta.
-Cuando el sistema de tierra existente corresponda a la instalación
-de Baja Tensión del edificio en el que se ubicará el SFCR (situación
+Cuando el sistema de tierra existente corresponda a la instalación de
+Baja Tensión del edificio en el que se ubicará el SFCR (situación
 habitual en la integración en edificios), se utilizará la puesta a
-tierra existente para conectar las masas del sistema fotovoltaico.
-De esta forma, todas las masas metálicas accesibles para una persona
+tierra existente para conectar las masas del sistema fotovoltaico.  De
+esta forma, todas las masas metálicas accesibles para una persona
 estarán unidas a una superficie equipotencial y así, en caso de fallo
-de aislamiento, no podrá estar expuesto a una tensión peligrosa. Cuando
-el sistema de tierras existente corresponde al neutro de Media Tensión
-del transformador de la compañía eléctrica es necesario separarse
-suficientemente para no interferir en su funcionamiento%
-\footnote{Por ejemplo, el artículo 12 del RD1663/2000 dice expresamente que
-{}``la puesta a tierra de las instalaciones fotovoltaicas interconectadas
-se hará siempre de forma que no se alteren las condiciones de puesta
-a tierra de la red de la empresa distribuidora''.%
-}. Según la ITC-BT-08, dos tomas de tierra son independientes cuando
-al circular la máxima corriente de defecto por una de ellas, la otra
-no alcance, respecto a un punto de potencial cero, una tensión superior
-a $\SI{50}{\volt}$. Para terrenos de resistividad no elevada ($\rho<\SI{100}{\ohm\meter}$),
-esta condición se cumple para distancias superiores a $\SI{15}{\meter}$.
+de aislamiento, no podrá estar expuesto a una tensión
+peligrosa. Cuando el sistema de tierras existente corresponde al
+neutro de Media Tensión del transformador de la compañía eléctrica es
+necesario separarse suficientemente para no interferir en su
+funcionamiento. Según la ITC-BT-08, dos tomas de tierra son
+independientes cuando al circular la máxima corriente de defecto por
+una de ellas, la otra no alcance, respecto a un punto de potencial
+cero, una tensión superior a $\SI{50}{\volt}$. Para terrenos de
+resistividad no elevada ($\rho<\SI{100}{\ohm\meter}$), esta condición
+se cumple para distancias superiores a $\SI{15}{\meter}$.
 
 
 \section{Protección de los equipos}
@@ -802,42 +745,44 @@ sistemas domésticos de electrificación rural) no requieren de sistemas
 protección externa. 
 
 Los métodos de protección frente a sobretensiones persiguen igualar
-los diferentes potenciales que se producen en el momento en el que
-se aparece la sobretensión a uno común de seguridad. Por tanto, estos
-métodos están formados por una red de tierras que proporciona el potencial
-común y por dispositivos que, cuando es necesario, conectan los conductores
-a proteger a este potencial común. Los varistores suelen ser empleados
-para cumplir esta función. El comportamiento de un varistor se asemeja
-a una resistencia variable con la tensión, con un valor muy alto cuando
-la tensión está por debajo de un umbral (de forma que todos los conductores
-permanecen desconectados de tierra en funcionamiento normal) y con
-valor casi nulo cuando se supera el umbral (de forma que todos los
-conductores son conectados a tierra durante la breve duración de la
+los diferentes potenciales que se producen en el momento en el que se
+aparece la sobretensión a uno común de seguridad. Por tanto, estos
+métodos están formados por una red de tierras que proporciona el
+potencial común y por dispositivos que, cuando es necesario, conectan
+los conductores a proteger a este potencial común. Los varistores
+suelen ser empleados para cumplir la función de descargadores de
+tensión. El comportamiento de un varistor se asemeja a una resistencia
+variable con la tensión, con un valor muy alto cuando la tensión está
+por debajo de un umbral (de forma que todos los conductores permanecen
+desconectados de tierra en funcionamiento normal) y con valor casi
+nulo cuando se supera el umbral (de forma que todos los conductores
+son conectados a tierra durante la breve duración de la
 sobretensión). Estos dispositivos tienen un tiempo de actuación bajo
 (inferior a los $\SI{25}{\nano\second}$) y una corriente máxima de
-actuación de $\SI{15}{\kilo\ampere}$, con una tensión residual inferior
-a $\SI{2}{\kilo\volt}$. 
+actuación de $\SI{15}{\kilo\ampere}$, con una tensión residual
+inferior a $\SI{2}{\kilo\volt}$.
 
-Es importante tener en cuenta que cuando un varistor actúa, realiza
-un cortocircuito entre sus conexiones. De ahí que se deba evitar su
-ubicación entre elementos que puedan interactuar de forma dañina cuando
-se produce un cortocircuito. Por ejemplo, la figura \ref{fig:EfectosVaristor}
-muestra el estado en el que quedó una caja de protecciones después
-de que los varistores que albergaba entrasen en funcionamiento. Esta
-caja estaba conectada a la salida del generador fotovoltaico y de
-ella partían varios metros de cable hasta el inversor DC/AC. Pero
-los varistores no eran el último elemento de la caja: entre ellos
-y la salida se instalaron sendos fusibles en cada polo. ¿Qué ocurrió?
-Cuando los varistores entraron en funcionamiento para intentar reducir
-una sobretensión atmosférica, se comportaron como un cortocircuito.
-Este camino fácil ofrecido por los varistores fue aprovechado por
-los condensadores que los inversores tienen en la entrada para descargar
-su carga almacenada. Esta descarga adicional podía ser asumida sin
-problemas por los varistores, pero también atravesó a los fusibles,
-que no estaban capacitados para hacer frente a esta intensidad. Los
-fusibles explotaron y con ellos todos los elementos de la caja. La
-solución fue sencilla: se retiraron todos los fusibles situados entre
-los varistores y el inversor.
+Es importante tener en cuenta que cuando un varistor actúa, realiza un
+cortocircuito entre sus conexiones. De ahí que se deba evitar su
+ubicación entre elementos que puedan interactuar de forma dañina
+cuando se produce un cortocircuito. Por ejemplo, la figura
+\ref{fig:EfectosVaristor} muestra el estado en el que quedó una caja
+de protecciones después de que los descargadores de tensión que
+albergaba entrasen en funcionamiento. Esta caja estaba conectada a la
+salida del generador fotovoltaico y de ella partían varios metros de
+cable hasta el inversor DC/AC. Pero los descargadores no eran el
+último elemento de la caja: entre ellos y la salida se instalaron
+sendos fusibles en cada polo. ¿Qué ocurrió?  Cuando los descargadores
+entraron en funcionamiento para intentar reducir una sobretensión
+atmosférica, se comportaron como un cortocircuito.  Este camino fácil
+ofrecido por los varistores fue aprovechado por los condensadores que
+los inversores tienen en la entrada para descargar su carga
+almacenada. Esta descarga adicional podía ser asumida sin problemas
+por los descargadores, pero también atravesó a los fusibles, que no
+estaban capacitados para hacer frente a esta intensidad. Los fusibles
+explotaron y con ellos todos los elementos de la caja. La solución fue
+sencilla: se retiraron todos los fusibles situados entre los
+descargadores de tensión y el inversor.
 
 %
 \begin{figure}
@@ -846,7 +791,7 @@ los varistores y el inversor.
 \end{centering}
 
 \caption{Efectos del funcionamiento de un diseño defectuoso de una caja de
-protecciones que incluye varistores.\label{fig:EfectosVaristor}}
+protecciones que incluye descargadores de tensión.\label{fig:EfectosVaristor}}
 
 \end{figure}
 
@@ -911,7 +856,7 @@ esta funcionalidad la ofrece el portafusibles y no el fusible mismo.
 \subsubsection{Sobretensiones}
 
 La entrada de los equipos electrónicos (inversores o reguladores)
-está protegida mediante varistores, tal y como ha sido descrito en
+está protegida mediante descargadores de tensión, tal y como ha sido descrito en
 el apartado de protección de equipos. El rango de la tensión de operación
 está definido por la tensión en el punto de máxima potencia y tensión
 de circuito abierto del generador fotovoltaico.
@@ -920,10 +865,10 @@ En la figura \ref{fig:Caja-de-protecci=0000F3n} se muestra un ejemplo
 de una caja de protecciones situada a la salida de un generador fotovoltaico.
 Incluye un conjunto de fusibles de rama tanto en el polo positivo
 como en el negativo. A la salida del paralelo de estos fusibles se
-han instalado tres varistores, uno para conectar el polo positivo
+han instalado tres descargadores de tensión, uno para conectar el polo positivo
 con tierra, otro para conectar el polo negativo con tierra y otro
 tercero para interconectar los dos polos. Existen equipos comerciales
-que incluyen los tres varistores interconectados.
+que incluyen los tres descargadores interconectados.
 
 %
 \begin{figure}
@@ -931,8 +876,9 @@ que incluyen los tres varistores interconectados.
 \includegraphics[scale=0.5]{../figs/CajaProteccionesPhotocampa}
 \end{centering}
 
-\caption[Caja de protección DC]{Caja de protección DC. Incluye dos fusibles por rama y varistores
-entre polos y tierra.\label{fig:Caja-de-protecci=0000F3n}}
+\caption[Caja de protección DC]{Caja de protección DC. Incluye dos
+  fusibles por rama y descargadores de tensión entre polos y
+  tierra.\label{fig:Caja-de-protecci=0000F3n}}
 
 \end{figure}
 
