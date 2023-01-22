@@ -1,0 +1,114 @@
+% Created 2023-01-22 dom 20:22
+% Intended LaTeX compiler: pdflatex
+\documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{diffcoeff}
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
+\bibliographystyle{plain}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\amperehour}{Ah}
+\usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\parskip=5pt
+\usetheme{Boadilla}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
+\date{}
+\title{Introducción a las Centrales Fotovoltaicas}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
+\hypersetup{
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
+ pdftitle={Introducción a las Centrales Fotovoltaicas},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+
+\begin{frame}[label={sec:org3d552c0}]{Definición}
+Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden de MW) diseñado para la venta de energía a la red eléctrica.
+
+\begin{center}
+\includegraphics[width=\textwidth]{../figs/carmona_vistaamplia.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org7147229}]{Características (1)}
+\begin{itemize}
+\item Habitualmente se instalan \alert{sobre suelo}, sin estar necesariamente asociadas a un punto de consumo cercano.
+\item Como solución a las limitaciones de suelo disponible, están apareciendo \alert{sistemas flotantes} (embalses).
+\item Como solución a los conflictos sociales y ambientales por el uso del suelo, están apareciendo \alert{sistemas agrovoltaicos}.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/agrovoltaics.jpg}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org2f9ec8b}]{Características (2)}
+\begin{itemize}
+\item Se emplean \alert{módulos de gran tamaño} (incluso bifaciales) para reducir los tiempos y costes de instalación.
+\item Pueden utilizar \alert{seguidores} para maximizar la producción.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/carmona.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org2f73147}]{Características (y 3)}
+\begin{itemize}
+\item La inyección de la energía eléctrica se realiza en \alert{Media Tensión}.
+\item Incorporan \alert{inversores de gran potencia} y centralizados, y centros de transformación BT/MT.
+\item Pueden incorporar \alert{elementos de acumulación electroquímica} para atenuar los efectos de la variabilidad de la irradiancia, y para la prestación de servicios a la red eléctrica.
+\end{itemize}
+
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/1power_station_de_ingeteam_en_la_planta_pv_bon_nome.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgf66a99b}]{Estado del arte}
+\begin{itemize}
+\item Las centrales fotovoltaicas superan los 530 GW\footnote{Las cifras corresponden a finales de 2021, y provienen del informe \guillemotleft{}\href{https://iea-pvps.org/trends\_reports/trends-2022/}{Trends in Photovoltaic Applications 2022}\guillemotright{} de la Task 1 de IEA-PVPS.}  de potencia total instalada a nivel mundial (200 GW en China, 80 GW en EEUU, 53 en India), el 56\% de la potencia fotovoltaica.
+\item En 2021 se instalaron 95 GW (25 GW en China, 20 GW en EEUU, 12 en India), 86 GW en 2020 y 71 GW in 2019.
+\item Más de 9000 instalaciones han superado la potencia de 4 MW. Alrededor de 10 instalaciones han superado la potencia de 1 GW.
+\end{itemize}
+\end{frame}
+\end{document}
