@@ -15,7 +15,7 @@
 
 *** La radiación solar no se puede calcular analíticamente
 - La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
-- Para estimar la radiación se requiere medidas terrestres o imágenes de satélite.
+- Para estimar la radiación se necesitan medidas terrestres o imágenes de satélite.
 #+ATTR_LATEX: :height 0.5\textheight
 [[../figs/SolarRadiationComponents_NREL.png]]
 

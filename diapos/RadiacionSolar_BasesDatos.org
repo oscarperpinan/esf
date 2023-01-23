@@ -6,6 +6,32 @@
 
 * Introducción
 
+*** Radiación Solar y Sistemas Fotovoltaicos
+- La *energía producida* por un sistema fotovoltaico depende principalmente de la *radiación incidente* en el generador.
+
+- Consecuentemente, la *estimación del comportamiento* de un sistema FV en un determinado lugar durante un período temporal exige *conocer la radiación solar disponible en el plano del generador*.
+
+[[../figs/GCPVScheme.pdf]]
+
+*** La radiación solar no se puede calcular analíticamente
+- La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
+- Para estimar la radiación se necesitan medidas terrestres o imágenes de satélite.
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/SolarRadiationComponents_NREL.png]]
+
+*** Ángulo de Inclinación
+- Los generadores FV tienen un *ángulo de inclinación positivo* para maximizar el rendimiento.
+- Este ángulo depende de la *latitud* del lugar y de la *aplicación del sistema*.
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/PVUrban.png]]
+
+*** Bases de Datos de Radiación Solar
+- Por tanto, es inviable mantener una base de datos de radiación solar *incidente*.
+- Las *bases de datos* registran radiación en el *plano horizontal*.
+- La estimación de la radiación incidente en el plano inclinado requiere un *procedimiento de transposición*.
+
+
 *** Variabilidad Temporal y Espacial
 
 - La irradiancia solar extraterrestre depende de la latitud y el instante temporal (/proceso determinista/).
@@ -349,7 +375,6 @@ https://github.com/oscarperpinan/mds/wiki
 - *[[https://www.eumetsat.int/about-us/satellite-application-facilities-safs][Satellite Application Facilities]] (SAFs)*
   - Centros dedicados al procesamiento de datos de satélite.
   - Generan y distribuyen los productos y servicios EUMETSAT.
-    services.
 
 *** SAFs
 - [[https://wui.cmsaf.eu/safira/action/viewProduktSearch][SAF on Climate Monitoring (CM SAF)]]: datos derivados de imágenes de satélite adecuados para la monitorización del clima.
