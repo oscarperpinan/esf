@@ -1,35 +1,34 @@
-% Created 2023-01-08 dom 16:24
-% Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{color}
-\usepackage{listings}
+\hypersetup{
+ pdfauthor={Oscar Perpiñán Lamigueiro},
+ pdftitle={Actividad: cálculo de radiación},
+ colorlinks=true,       % false: boxed links; true: colored links
+ linkcolor=Brown,          % color of internal links
+ citecolor=BrickRed,        % color of links to bibliography
+ filecolor=black,      % color of file links
+ urlcolor=Blue,           % color of external links 
+ pdflang={Spanish}}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[spanish]{babel}
 \usepackage{mathpazo}
+
 \author{Oscar Perpiñán Lamigueiro}
 \date{}
 \title{Actividad: cálculo de radiación\\\medskip
 \large Energía Solar Fotovoltaica}
-\hypersetup{
- pdfauthor={Oscar Perpiñán Lamigueiro},
- pdftitle={Actividad: cálculo de radiación},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
- pdflang={Spanish}}
 \begin{document}
 
 \maketitle
+
 En esta actividad vas a estimar las medias mensuales de la radiación global incidente en el plano horizontal y en el plano de un generador.
+
+\section{Radiación en el plano horizontal}
 
 Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el siguiente itinerario:
 
@@ -39,10 +38,14 @@ Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el 
 \item Obtén una serie temporal \textbf{diaria} representativa de la región calculando la media de las tres series temporales.
 \item Compara esta serie temporal media con las series temporales de cada estación usando métricas estadísticas (MBD, RMSD, MAD).
 \item Elige una localización dentro del perímetro definido por las tres estaciones. Obtén las \textbf{12 medias mensuales} en esta localización empleando interpolación espacial (IDW) a partir de las \textbf{12 medias mensuales} de la radiación filtrada de cada estación (punto 2)
-\item Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.
+\item Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar; véase anexo) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.
 \item Compara las medias mensuales de las tres estaciones con las estimaciones satelitales empleando métricas estadísticas.
 \item Combina la estimación satelital en la localización del punto 5 con las medias mensuales obtenidas en ese punto.
 \end{enumerate}
+
+\clearpage
+
+\section{Radiación en el plano del generador}
 
 A continuación, realizaremos el cálculo de la \textbf{radiación en el plano del generador}. Este generador está localizado en el hemisferio norte, orientado al sur y con una inclinación de 30º. Seguiremos el siguiente itinerario:
 
@@ -54,5 +57,54 @@ A continuación, realizaremos el cálculo de la \textbf{radiación en el plano d
 \item Obtén los perfiles de irradiancia difusa, global y diaria para cada día promedio (mes). Deberías obtener 24 valores por mes (un total de 12·24=288 valores por componente).
 \item Obtén la irradiancia en el plano del generador realizando la transformación de los valores del punto 12 del plano horizontal al plano del generador.
 \item Suma los resultados del paso anterior para obtener las 12 medias mensuales de radiación diaria (global, difusa y directa) en el plano del generador. Comprueba que estos resultados son superiores a los valores de la radiación en el plano horizontal.
+\end{enumerate}
+
+\clearpage
+
+\section*{Anexo: QGIS}
+\label{sec:orgb85862a}
+
+\href{https://qgis.org/es/site/}{QGIS} is un proyecto de código abierto de un \href{https://es.wikipedia.org/wiki/Sistema\_de\_informaci\%C3\%B3n\_geogr\%C3\%A1fica}{sistema de información
+geográfica} (SIG). Este software es capaz de manejar datos
+vectoriales (puntos, líneas y polígonos) y tipo raster (matrices de
+datos georeferenciados).
+
+Deberías leer \href{https://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_raster/index.html}{este tutorial} para aprender a trabajar con ficheros tipo
+raster, y \href{http://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_vector/index.html}{este tutorial} para trabajar con datos vectoriales.
+
+Hay varios plugins que proporcionan capacidades adicionales. \href{https://docs.qgis.org/3.22/es/docs/training\_manual/qgis\_plugins/fetching\_plugins.html}{Este
+documento} es una guía en el proceso de instalación y utilización de
+plugins. Te pueden interesar los siguientes:
+
+\begin{itemize}
+\item \href{https://plugins.qgis.org/plugins/pointsamplingtool/}{Point sampling tool}, para extraer valores de un fichero raster en un
+punto concreto.
+\item \href{https://docs.qgis.org/3.22/es/docs/user\_manual/plugins/plugins\_interpolation.html}{Interpolation} plugin, para realizar una interpolación IDW de datos
+vectoriales.
+\item Además, también es recomendable el plugin para utilizar \href{https://grass.osgeo.org/}{GRASS}. \href{http://docs.qgis.org/3.22/es/docs/user\_manual/grass\_integration/grass\_integration.html}{Este
+documento} proporciona instrucciones para instalarlo y trabajar con
+él.
+\end{itemize}
+
+\subsection*{Procedimiento}
+\label{sec:orge72c353}
+
+\begin{enumerate}
+\item Añadir capa ráster: leer los 12 ficheros .nc de CMSAF.
+\item Establecer proyección a EPSG:4326
+\item Calculador raster: doble click en la capa, y en la expresión del
+cuadro inferior multiplicar por 24 (create on-the-fly raster).
+\item Añadir capa de texto delimitado: leer fichero SIAR.csv (ubicaciones
+de estaciones). Establecer proyección a EPSG:4326.
+\item Utilizar \emph{Point sampling tool}
+\begin{enumerate}
+\item \emph{Layer containing sampling points} : SIAR
+\item \emph{Layers with bands to get values from}: 12 SISmm.
+\item \emph{Output point vector layer}: crear un nuevo fichero.
+\item Aceptar: aparece una nueva capa con el nombre del fichero creado.
+\item En esta nueva capa, con el botón derecho aparece un menú de
+  opciones: tabla de atributos (valores extraídos). También se puede
+  exportar.
+\end{enumerate}
 \end{enumerate}
 \end{document}
