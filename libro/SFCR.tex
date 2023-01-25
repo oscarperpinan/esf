@@ -1155,6 +1155,7 @@ potencias entre generador e inversor.
 
 
 \subsection{Elección del inversor}
+\label{sec:curva-eficiencia-inversor}
 
 Para calcular la potencia entregada por el inversor, $P_{ac}$\nomenclature[Pac]{$P_{ac}$}{Potencia alterna a la salida de un inversor}\nomenclature[Pdc]{$P_{dc}$}{Potencia continua a la salida de un generador fotovoltaico},
 a partir de la potencia suministrada por el generador fotovoltaico,
@@ -1164,7 +1165,7 @@ con una función basada en tres coeficientes y la normalización de
 la potencia de salida \cite{Jantsch.Schmidt.ea1992}:
 
 \begin{equation}
-\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}\end{equation}
+  \eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}\end{equation}
 donde $p_{o}=P_{ac}/P_{inv}$\nomenclature[Pinv]{$P_{inv}$}{Potencia nominal de un inversor}\nomenclature[po]{$p_{o}$}{Potencia alterna a la salida de un inversor normalizada por la potencia nominal del equipo},
 y $k_{0}^{o}$, $k_{1}^{o}$ y $k_{2}^{o}$\nomenclature[kinv]{$k_{i}^{o}$}{Coeficientes de la curva de eficiencia de un inversor}
 son parámetros adimensionales que definen el comportamiento eléctrico
@@ -1172,7 +1173,7 @@ del inversor. Para obtener la curva o los coeficientes debe recurrirse
 a la información suministrada por el fabricante o bien a una campaña
 de medidas, ya sea en laboratorio o en campo. En todo caso, debe tenerse
 en cuenta que la eficiencia del inversor depende de la tensión de
-entrada \cite{Baumgartner.Schmidt.ea2007}(algunos equipos funcionan más eficientemente en la zona alta
+entrada \cite{Baumgartner.Schmidt.ea2007} (algunos equipos funcionan más eficientemente en la zona alta
 de la ventana de tensión MPP, otros fabricantes prefieren la zona
 baja e incluso algunos eligen la zona intermedia). Este hecho debe
 tenerse en cuenta a la hora de elegir el número de módulos en serie
@@ -1825,7 +1826,8 @@ La potencia entregada a la salida de un SFCR está determinada por los siguiente
   explicado en la sección \ref{sec:sombras}.
 \item El comportamiento eléctrico del generador fotovoltaico, según lo
   estudiado en los capítulos \ref{cha:Celula} y \ref{cha:AsociacionDispositivos}.
-\item La curva de eficiencia del inversor y su ventana de búsqueda del
+\item La curva de eficiencia del inversor (sección
+  \ref{sec:curva-eficiencia-inversor}) y su ventana de búsqueda del
   MPP (sección \ref{InversorSFCR}).
 \item La eficiencia del resto de componentes del sistema,
   principalmente cableado y transformador de BT/MT. Es práctica común
