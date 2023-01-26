@@ -1,0 +1,490 @@
+#+TITLE: Análisis de datos de producción
+#+SUBTITLE: Energía Solar Fotovoltaica
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+** Planteamiento
+
+   The energy produced by a photovoltaic system over a given period can be estimated from the
+incident radiation at the site where the Grid Connected PV System (GCPVS) is located, assuming
+knowledge of certain basic features of the system under study. Due to the inherently stochastic
+nature of solar radiation, the question “How much energy will a GCPVS produce at this location
+over the next few years?” involves an exercise of prediction inevitably subjected to a degree
+of uncertainty. Moreover, during the life cycle of the GCPVS, another question arises: “Is the
+system working correctly?”. 
+
+* Estadística
+
+
+** Variable aleatoria y proceso estocástico
+
+- Una *variable aleatoria* es una función que asigna un único numero
+  real a cada resultado de un espacio muestral en un experimento.
+- Un *proceso estocástico* es una variable aleatoria que evoluciona a
+  lo largo del *tiempo* (p.ej. la radiación).
+ 
+
+** Función de densidad de probabilidad
+
+La función de densidad de probabilidad, $f(X)$, de una variable
+aleatoria *asigna probabilidad* a un suceso:
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+BEGIN_EXPORT latex
+
+\[
+P(a<X<b)=\int_{a}^{b}f(x)dx
+\]
+
+
+\[
+P(X<b)=\int_{-\infty}^{b}f(x)dx\]
+
+
+\[
+P(X>a)=\int_{a}^{\infty}f(x)dx\]
+
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/FuncionDensidadProbabilidad.pdf]]
+
+
+** Media, varianza y desviación estándar
+
+- La *media* de una variable aleatoria es el *centro de masas* de su función densidad de probabilidad:
+
+#+BEGIN_EXPORT latex
+\[
+\mu_{X}=\int_{-\infty}^{\infty}x\cdot f(x)dx
+\]
+#+END_EXPORT
+
+- La *varianza* de una variable aleatoria es la *media del cuadrado de las desviaciones* respecto a la media:
+
+#+BEGIN_EXPORT latex
+\[
+\sigma_{X}^{2}=\int_{-\infty}^{\infty}(x-\mu_{X})^{2}\cdot f(x)dx
+\]
+#+END_EXPORT
+
+- La *desviación estándar* es la raiz cuadrada de la varianza: $\sigma_{X}=\sqrt{\sigma_{X}^2}$
+
+
+
+** Combinación lineal de variables aleatorias
+
+- La *media de la suma* de varias variables aleatorias *independientes* es
+  la suma de las medias:
+#+BEGIN_EXPORT latex
+\[
+\mu_{X_{1}+...+X_{n}}=\mu_{X_{1}}+...+\mu_{X_{n}}
+\]
+#+END_EXPORT
+
+- La *varianza de la /suma o resta/* de varias variables aleatorias
+  *independientes* es la *suma* de las varianzas:
+
+#+BEGIN_EXPORT latex
+\[
+\sigma_{X_{1}\pm...\pm X_{n}}^{2}=\sigma_{X_{1}}^{2}+...+\sigma_{X_{n}}^{2}
+\]
+#+END_EXPORT
+
+
+
+** Media y varianza de la media muestral
+
+- Una *muestra de una población* es un conjunto de variables
+  aleatorias independientes ($X_{1}...X_{n}$).
+
+- Si se toma una muestra de una población, la media de la muestra es otra
+  variable aleatoria (que es una suma de variables aleatorias)
+
+#+BEGIN_EXPORT latex
+\[
+\overline{X}=\frac{1}{i=n}\sum_{n}X_{i}
+\]
+#+END_EXPORT
+
+
+
+** Media y varianza de la media muestral
+# Navidi pag.123
+
+Sea una población cuya media es $\mu$ y su varianza es $\sigma^{2}$:
+
+- La *media de la media muestral* es la media poblacional:
+#+BEGIN_EXPORT latex
+\[
+\mu_{\overline{X}}=\frac{1}{i = n}\sum_{n}\mu_{X_{i}} = \mu
+\]
+#+END_EXPORT
+
+- La *varianza de la media muestral* es la varianza poblacional dividido por el número de muestras.
+#+BEGIN_EXPORT latex
+
+\[
+\sigma_{\overline{X}}^{2}=\sigma_{\frac{1}{n}X_{1}}^{2}+...+\sigma_{\frac{1}{n}X_{n}}^{2}=\frac{\sigma^2}{N}
+\]
+#+END_EXPORT
+
+*** 
+Por tanto, una forma de *reducir la incertidumbre* es realizar la
+*medida en repetidas ocasiones*.
+
+
+
+** Mediana y cuartiles
+
+- La *mediana* divide el conjunto de valores de la variable en *dos
+  mitades* iguales (divide el area encerrada por la función densidad
+  de probabilidad en dos partes iguales).
+- Los *cuartiles* dividen este area en *cuatro* partes iguales. 
+- El area encerrada entre cada par de cuartiles es igual al 25% del total. 
+- La *mediana* es el *segundo cuartil*. 
+- La *distancia intercuartil* (definida entre los cuartiles 1 y 3) es
+  una *medida de la dispersión* de la variable.
+ 
+
+* Gráficos
+
+
+** Función de Densidad de Probabilidad
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/FuncionDensidadProbabilidad.pdf]]
+
+** Histograma
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/Histograma.pdf]]
+
+
+** Gráficos boxplot
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/GraficoBoxplot.pdf]]
+
+
+** Gráficos de dispersión
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/GraficoDispersion.pdf]]
+
+
+** Matrices de gráficos de dispersión
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/Splom.png]]
+
+* Control de Calidad de Medidas
+
+** Introducción
+
+** Coherencia estadística
+Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
+*** *Método de Chauvenet*
+Una medida es un /outlier/ si la probabilidad de obtener su desviación
+respecto de la media es inferior al inverso de 2 veces el número de
+elementos en el conjunto.
+#+ATTR_LATEX: :height 0.5\textheight
+[[../figs/chauvenet.png]]
+
+** Método de Chauvenet
+  1. Sean $G_d(x_i)$ las medidas de radiación diaria del conjunto formado por N estaciones.
+  2. Se calcula la media, $\overline{G}_d$, la desviación estándar, $\sigma_{G_d}$.
+  3. Se calcula la distancia estadística de cada estación al conjunto:
+     #+BEGIN_EXPORT latex
+     \[
+     d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+     \]
+     #+END_EXPORT
+
+  4. En una distribución gaussiana se calcula la distancia estadística
+    equivalente a la probabilidad límite, $1/2N$, teniendo en cuenta
+    las dos colas.
+     - Por ejemplo, para un conjunto de 10 estaciones cada cola es
+       $1/40 = 0.025$, el límite es $\left| d_{max} \right| = 1.96$.
+
+  5. Aquellas observaciones que superan la distancia son marcadas como outliers.
+
+\nocite{Perpinan2009}
+
+** Método de Chauvenet
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+#+BEGIN_EXPORT latex
+  \[
+  d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
+  \]
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+  \[
+  \left| d_i \right| > \left| d_{max} \right|
+  \]
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
+#+BEGIN_CENTER
+[[../figs/chauvenet.png]]
+#+END_CENTER
+
+* Control de Calidad de Modelos
+
+** Desviación entre modelo y observación
+
+- Sea $O$ el conjunto de observaciones (medidas) de una variable aleatoria.
+
+#+BEGIN_EXPORT latex
+  \[
+  \mathbf{O} = \left\{ o_1 \dots o_n \right\}
+  \]
+#+END_EXPORT
+- Sea $M$ el conjunto de resultados de un modelo que aproxima el comportamiento de la variable medida.
+
+#+BEGIN_EXPORT latex
+  \[
+  \mathbf{M} = \left\{ m_1 \dots m_n  \right\}
+  \]
+#+END_EXPORT
+
+- La desviación entre modelo y observación es:
+
+#+BEGIN_EXPORT latex
+  \[
+  \mathbf{D} = \mathbf{M} - \mathbf{O} =  \left\{ (m_1 - o_1) \dots (m_n - o_n)  \right\} = \left\{ d_1 \dots d_n  \right\}
+  \]
+#+END_EXPORT
+
+** Exactitud (/bias/) y Precisión (/variance/)
+
+#+ATTR_LATEX: :height 0.8\textheight
+[[file:../figs/bias-variance.png]]
+
+http://scott.fortmann-roe.com/docs/BiasVariance.html
+
+** Estimadores frecuentes: MBD y RMSD
+
+- Mean Bias Difference (MBD), diferencia media (indica si el modelo sobreestima o subestima):
+#+BEGIN_EXPORT latex
+  \[
+  MBE = \overline{\mathbf{D}} = \overline{\mathbf{M}} - \overline{\mathbf{O}} = \frac{1}{n} \sum_{i=1}^n (m_i - o_i)
+  \]
+#+END_EXPORT
+
+- Root Mean Square Difference (RMSD), diferencia cuadrático media:
+#+BEGIN_EXPORT latex
+  \[
+  RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (m_i - o_i)^2  \right)^{1/2}
+  \]
+#+END_EXPORT
+
+** Estimadores frecuentes: MBE y RMSD
+
+El RMSD agrega información del promedio y la varianza de la
+  diferencia:
+#+BEGIN_EXPORT latex
+\[
+RMSD^2= \overline{\mathbf{D}}^2 + \sigma^2_{\mathbf{D}} 
+\]
+#+END_EXPORT
+
+donde la varianza de la diferencia (unbiased RMSD) se calcula:
+#+BEGIN_EXPORT latex
+  \[
+  \sigma^2_{\mathbf{D}} = \frac{1}{n} \sum_{i=1}^n (d_i - \overline{\mathbf{D}})^2
+  \]
+#+END_EXPORT
+
+
+** Otros estimadores: MAD
+
+- Mean Absolute Deviation (MAD):
+
+#+BEGIN_EXPORT latex
+  \[
+  MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
+  \]
+#+END_EXPORT
+- El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
+#+BEGIN_EXPORT latex
+  \[
+  MAD \leq RMSD \leq n^{1/2} MAD
+  \]
+#+END_EXPORT
+
+\nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
+
+** Otros estimadores: t y d
+
+- t de Student (valores pequeños indican buen comportamiento del modelo)
+  - Permite añadir intervalos de confianza a las diferencias entre
+    modelo y observación
+
+#+BEGIN_EXPORT latex
+  \[
+  t = \left ( \frac{(n-1) MBD^2}{RMSD^2 - MBD^2} \right)^{1/2}
+  \]
+#+END_EXPORT
+
+\nocite{Stone1993}
+
+
+- $d_1$: Índice de concordancia de Willmott.
+  - Limitado entre 0 (ausencia de concordancia) y 1 (concordancia total).
+  - Robusto frente a /outliers/.
+#+BEGIN_EXPORT latex
+  \[
+  d_1 = 1 - \frac{\sum_{i=1}^n \left| m_i - o_i \right|}{\sum_{i=1}^n \left(
+    \left| m_i - \overline{\mathbf{O}}\right| + \left| o_i -
+      \overline{\mathbf{O}} \right| \right)}
+  \]
+#+END_EXPORT
+
+\nocite{Willmott.Robeson.ea2012}
+
+** Correlación
+
+El coeficiente de correlación entre dos conjuntos de datos es una
+medida numérica de la relación *lineal* entre los dos conjuntos (si la
+relación no es lineal, este coeficiente no sirve):
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+BEGIN_EXPORT latex
+  \[
+  r = \frac{1}{n-1} \cdot \sum_{i=1}^{n} \left( \frac{o_{i}-\overline{\mathbf{O}}}{\sigma_{\mathbf{O}}}\right) \cdot \left(\frac{m_{i}-\overline{\mathbf{M}}}{\sigma_{\mathbf{M}}}\right)
+  \]
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/Splom.png]]
+
+
+** Diagramas de Taylor
+- Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
+
+#+BEGIN_EXPORT latex
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
+  \]
+#+END_EXPORT
+- Esta relación es semejante a la ley de los cosenos ($c$, $a$, $b$ son lados de un triángulo y $\phi$ es el ángulo opuesto al lado $c$):
+
+#+BEGIN_EXPORT latex
+  \[
+  c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
+  \]
+#+END_EXPORT
+\nocite{Taylor2000}
+
+** Diagramas de Taylor
+
+#+BEGIN_EXPORT latex
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+  - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
+  \]
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+- $\sigma^2_{\mathbf{D}}$: Distancia al origen
+- $\sigma^2_{\mathbf{O}}$: Eje horizontal
+- $\sigma^2_{\mathbf{M}}$: Eje vertical
+- $r$: acimut
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+attr_latex: :height 0.8\textheight
+[[../figs/TaylorDiagrama.png]]
+
+
+** Target Diagram
+
+- Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
+#+BEGIN_EXPORT latex
+  \[
+  RMSD' = RMSD / \sigma_{\mathbf{O}}
+  \]
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\[
+  \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
+\]
+#+END_EXPORT  
+
+#+BEGIN_EXPORT latex
+\[
+\overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
+\]
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\[
+RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
+\]
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+  \[
+  sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
+  \]
+#+END_EXPORT
+
+- Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación.
+
+\nocite{Jolliff.Kindle.ea2009}
+
+** Target Diagram
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+- $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
+- $\overline{\mathbf{D}}'$: Eje vertical
+- $RMSD'^2$: Distancia al origen
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+attr_latex: :height 0.9\textheight
+[[../figs/TargetDiagram.pdf]]
+
+
+
+
+# * Bibliografía
+
+# ** Bibliografía
+#    :PROPERTIES:
+#    :BEAMER_OPT: allowframebreaks,label=
+#    :END:
+
+
+#    \bibliography{/home/oscar/Investigacion/bibtex/Radiacion.bib
