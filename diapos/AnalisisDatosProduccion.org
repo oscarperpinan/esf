@@ -6,13 +6,10 @@
 
 ** Planteamiento
 
-   The energy produced by a photovoltaic system over a given period can be estimated from the
-incident radiation at the site where the Grid Connected PV System (GCPVS) is located, assuming
-knowledge of certain basic features of the system under study. Due to the inherently stochastic
-nature of solar radiation, the question “How much energy will a GCPVS produce at this location
-over the next few years?” involves an exercise of prediction inevitably subjected to a degree
-of uncertainty. Moreover, during the life cycle of the GCPVS, another question arises: “Is the
-system working correctly?”. 
+- La energía producida por un SFV durante un período puede ser estimada a partir de la radiación incidente y de las características técnicas del sistema.
+- Teniendo en cuenta el carácter estocástico de la radiación solar, la estimación de la energía que producirá un SFV durante los próximos años es un ejercicio de predicción con incertidumbre asociada.
+- El funcionamiento de un SFV puede ser analizado tomando esta estimación como referencia (*comparación modelo-medidas*).
+- En el caso de centrales FV, se pueden detectar problemas de funcionamiento comparando diferentes partes de la central (*coherencia estadística*).
 
 * Estadística
 
@@ -181,66 +178,7 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/Splom.png]]
 
-* Control de Calidad de Medidas
-
-** Introducción
-
-** Coherencia estadística
-Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
-*** *Método de Chauvenet*
-Una medida es un /outlier/ si la probabilidad de obtener su desviación
-respecto de la media es inferior al inverso de 2 veces el número de
-elementos en el conjunto.
-#+ATTR_LATEX: :height 0.5\textheight
-[[../figs/chauvenet.png]]
-
-** Método de Chauvenet
-  1. Sean $G_d(x_i)$ las medidas de radiación diaria del conjunto formado por N estaciones.
-  2. Se calcula la media, $\overline{G}_d$, la desviación estándar, $\sigma_{G_d}$.
-  3. Se calcula la distancia estadística de cada estación al conjunto:
-     #+BEGIN_EXPORT latex
-     \[
-     d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
-     \]
-     #+END_EXPORT
-
-  4. En una distribución gaussiana se calcula la distancia estadística
-    equivalente a la probabilidad límite, $1/2N$, teniendo en cuenta
-    las dos colas.
-     - Por ejemplo, para un conjunto de 10 estaciones cada cola es
-       $1/40 = 0.025$, el límite es $\left| d_{max} \right| = 1.96$.
-
-  5. Aquellas observaciones que superan la distancia son marcadas como outliers.
-
-\nocite{Perpinan2009}
-
-** Método de Chauvenet
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.3
-:END:
-#+BEGIN_EXPORT latex
-  \[
-  d_i = \frac{G_d(x_i) - \overline{G}_d}{\sigma_{G_d}}
-  \]
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
-  \[
-  \left| d_i \right| > \left| d_{max} \right|
-  \]
-#+END_EXPORT
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.8
-:END:
-#+BEGIN_CENTER
-[[../figs/chauvenet.png]]
-#+END_CENTER
-
-* Control de Calidad de Modelos
+* Comparación entre Datos y Estimación
 
 ** Desviación entre modelo y observación
 
@@ -477,6 +415,88 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 [[../figs/TargetDiagram.pdf]]
 
 
+* Coherencia Estadística
+
+** Planteamiento
+- En un sistema compuesto por diferentes *unidades idénticas*, el funcionamiento de todas ellas debe ser el mismo.
+- Los *elementos reales* presentan *diferencias* (tolerancia de potencia, pérdidas de dispersión, suciedad), de forma que el comportamiento de cada unidad se desviará del comportamiento promedio.
+- Si *no hay problemas de funcionamiento*, estas desviaciones no superarán un umbral determinado (*coherencia estadística*).
+- Un análisis estadístico del funcionamiento del conjunto puede *identificar una unidad defectuosa* como aquella que se aparta significativamente del comportamiento promedio.
+** Coherencia estadística
+
+- Una medida puede ser etiquetada como /outlier/ si es poco probable que pertenezca a la misma distribución que el conjunto.
+- En estadística hay métodos diversos para realizar este análisis:
+  - Métodos gráficos
+  - Teorema de Chebyshev.
+  - Criterios de Pierce y Chauvenet
+- Los criterios de Pierce y Chauvenet asumen *distribución gaussiana* (aceptable en nuestro contexto) y son *simples de implementar*, particularmente Chauvenet.
+
+
+** Método de Chauvenet
+Una medida es un /outlier/ si la probabilidad de obtener su desviación
+respecto de la media es inferior al inverso de 2 veces el número de
+elementos en el conjunto.
+#+ATTR_LATEX: :height 0.6\textheight
+[[../figs/chauvenet.png]]
+
+** Método de Chauvenet
+  1. Supongamos un SFV compuesto por $N$ unidades idénticas.
+  2. Sea $Y_{f,i}$ la medida de *productividad diaria* de una de esas unidades. 
+  3. Se calcula la *media*, $\overline{Y}_f$, y la *desviación estándar*, $\sigma_{Y_f}$, del *conjunto*.
+  4. Se calcula la *distancia estadística* de cada unidad respecto del sistema total:
+     #+BEGIN_EXPORT latex
+     \[
+     d_i = \frac{Y_{f,i} - \overline{Y}_f}{\sigma_{Y_f}}
+     \]
+     #+END_EXPORT
+  5. En una distribución gaussiana, se calcula la distancia estadística
+    equivalente a la probabilidad límite de Chauvenet, $1/2N$, teniendo en cuenta
+    que hay dos colas.
+  6. Aquellas observaciones que superan la distancia son *marcadas como outliers*.
+
+\nocite{Perpinan2009}
+
+** Método de Chauvenet
+
+ - Por ejemplo, para un sistema de 10 unidades, la probabilidad es $1/20$.
+
+ - A cada cola le corresponde la mitad, $1/40 = 0.025$.
+
+ - Por tanto, el límite es $d_{max} = - 1.9599$ (cola izquierda, valores por debajo del conjunto).
+
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+#+BEGIN_EXPORT latex
+\[
+  d_i = \frac{Y_{f,i} - \overline{Y}_f}{\sigma_{Y_f}}
+\]
+ #+END_EXPORT
+
+#+BEGIN_EXPORT latex
+  \[
+  \left| d_i \right| > \left| d_{max} \right|
+  \]
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
+#+BEGIN_CENTER
+[[../figs/chauvenet.png]]
+#+END_CENTER
+
+** Métodos gráficos
+
+- Sea $Y_{f,i}(t)$ la serie temporal de la productividad diaria de una unidad del SFV.
+- Sea $\overline{Y}_{f}(t)$ la serie temporal del promedio de la productividad diaria del SFV.
+- Tomando $\overline{Y}_{f}(t)$ como modelo o referencia, podemos emplear los diagramas de Taylor y Target para detectar unidades defectuosas.
+
+#+ATTR_LATEX: :height 0.75\textheight
+[[../figs/TargetDiagram_Dia120.pdf]]
 
 
 # * Bibliografía
