@@ -325,11 +325,6 @@ M=\frac{2\pi}{365.24}\cdot d_{n}
 *** Ejemplo de cálculo
 Calcula la hora solar real correspondiente al día 23 de Abril de 2010 a las 12 de la mañana, hora oficial de la ciudad de A Coruña, Galicia. Esta localidad está contenida en el meridiano de longitud $8.38\degree\mathrm{W}$ y su hora oficial está regida por el huso horario GMT+1.
 
-*** 
-[[file:../figs/Kahoot_Logo.png]]
-
-[[https://play.kahoot.it/v2/?quizId=08c996d2-f567-4db9-80ec-f080daabc508][Ir a Kahoot de Geometría Solar]]
-
 * Radiación Solar en la Superficie Terrestre
 
 ** Radiación Extra-atmosférica
@@ -722,10 +717,6 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
   MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
   \]
 #+END_EXPORT
-*** 
-[[file:../figs/Kahoot_Logo.png]]
-
-[[https://play.kahoot.it/v2/?quizId=62ee25e6-4056-4321-b95c-7af71b3fb069][Ir a Kahoot de Radiación Solar en el Plano Horizontal]]
 
 * Radiación Solar en Generadores FV
 
@@ -1080,11 +1071,6 @@ R_{ef}(\beta,\alpha) &= R(\beta,\alpha)\cdot\left[\frac{T_{sucio}(0)}{T_{limpio}
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/compSystemsG0.png]]
 
-
-*** 
-[[file:../figs/Kahoot_Logo.png]]
-
-[[https://play.kahoot.it/v2/?quizId=29a16906-539a-4e29-b68c-fe6c9141ef02][Ir a Kahoot de Radiación Solar en un Generador]]
 
 * Footnotes
 
