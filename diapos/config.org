@@ -3,6 +3,7 @@
 #+DATE:
 #+BEAMER_HEADER:\institute[UPM]{Universidad Politécnica de Madrid}
 #+STARTUP: beamer
+#+STARTUP: indent
 #+LANGUAGE:  es
 #+OPTIONS:   num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+LaTeX_CLASS: beamer

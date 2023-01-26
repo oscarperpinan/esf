@@ -459,4 +459,109 @@ https://github.com/oscarperpinan/mds/wiki
 
 - Datos de radiación en el plano horizontal de CM-SAF
 - Permite incorporar la corrección por topografía (SVF y horizon blocking) con perfil estándar o con datos importados.
+* Control de calidad
+*** Introducción
+**** Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erróneos.
+- Límites Físicos
+- Tests de variabilidad
+- Coherencia espacial
+
+
+** Límites físicos
+*** Irradiación Diaria
+- La radiación global en el plano horizontal debe ser inferior a la extraterrestre ($K_{td} \leq 1$)
+#+BEGIN_EXPORT latex
+  \[
+  G_d(0) \leq B_{od}(0)
+  \]
+#+END_EXPORT
+
+- El índice de claridad debe ser superior a 0.03
+#+BEGIN_EXPORT latex
+  \[
+  K_{td} = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
+  \]
+#+END_EXPORT
+
+- La radiación global en el plano horizontal debe ser inferior a la de un modelo de cielo claro
+
+\nocite{Younes.Claywell.ea2005, Estevez.Gavilan.ea2011, Geiger.Diabate.ea2002}
+
+*** Irradiancia (intradiaria)
+- El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
+#+BEGIN_EXPORT latex
+  \[
+  k_t < 1  \text{ si } \gamma_s > 2\degree 
+  \]
+#+END_EXPORT
+- Límites inferiores para cielos cubiertos (baja transparencia atmosférica)
+#+BEGIN_EXPORT latex
+  \[
+  k_t \geq 10^{-4} \cdot (\gamma_s - 10\degree)  \text{ si } \gamma_s > 10\degree
+  \]
+
+  \[
+  G \geq 0  \text{ si } \gamma_s \leq 10\degree
+  \]
+#+END_EXPORT
+
+\nocite{Journee.Bertrand2011}
+
+** Tests de variabilidad
+
+*** Tests de variabilidad
+
+Se realizan sobre medidas de irradiancia.
+
+**** Test de persistencia
+Cuando un sensor falla proporciona un valor constante (baja desviación estándar). Si funciona de forma intermitente, la variabilidad puede ser muy alta.
+#+BEGIN_EXPORT latex
+  \[
+  \frac{1}{8} \overline{k}_t \leq \sigma_{k_t} \leq 0.35
+  \]
+#+END_EXPORT
+La media y la desviación estándar se calculan con todas las muestras de un día completo.
+
+**** Test de rampas
+
+Comprueba la existencia de saltos excesivos de irradiancia entre instantes sucesivos.
+#+BEGIN_EXPORT latex
+  \[
+  \left| k_t(t) - k_t(t-1)\right| < 0.75 \quad \text{ si } \quad \gamma_s(t) > 2\degree
+  \]
+#+END_EXPORT
+
+** Coherencia espacial
+*** Planteamiento
+- Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
+- Esta comprobación debe realizarse con *datos agregados* (diarios) (la variabilidad espacial intradiaria puede ser alta)
+- Esta comprobación debe realizarse con estaciones que tienen *clima y geografía similar*.
+
+\nocite{Journee.Bertrand2011}
+
+*** Procedimiento
+
+  - Estimamos la irradiación en el lugar, $x_0$, con la interpolación espacial de las estaciones cercanas, $x_i$.
+    #+BEGIN_EXPORT latex
+    \[
+    \widehat{G}_d(x_0) = \frac{\sum_{i=1}^N w_i G_{d}(x_i)}{\sum_{i=1}^N w_i} 
+    \]
+    #+END_EXPORT
+    Los pesos $w_i$ son una función inversa de la distancia $d$ entre las estaciones (IDW).
+    #+BEGIN_EXPORT latex
+    \[
+      w_i = 1/d^2(x_0, x_i)
+    \]
+    #+END_EXPORT
+
+  - Comparamos la irradiación estimada, $\widehat{G}_d(x_0)$, con la medida en la estación, $G_d(x_0)$.
+  #+BEGIN_EXPORT latex
+  \[
+  \left| \widehat{G}_d(x_0) - G_d(x_0) \right|
+  \]
+  #+END_EXPORT
+  - La diferencia absoluta debe estar por debajo de un límite (p.ej. 50%)
+
+
+
 
