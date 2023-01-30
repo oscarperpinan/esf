@@ -9,6 +9,33 @@
 \begin{document}
 
 	\begin{TeXtoEPS}
-		\input{Fich.tex}
+\pspicture(-3,-8)(10,1)
+
+\newcommand{\pb}[1]{\psframebox*[fillcolor=blue!30]{\parbox[c]{20ex}{\centering #1}}}
+
+
+
+\rput(7, -3){\rnode{CP}{\pb{Caja de Paralelos}}}
+\rput(7, -7){\rnode{Inv}{\pb{Inversor}}}
+\ncangle[angleA=-90,angleB=90]{CP}{Inv}
+\naput[npos=0.2]{$L_{inv}=\SI{85}{\meter}$}
+
+\rput(0,0){\rnode{S1}{\pb{Seguidor 1}}}
+\ncangle[angleA=-90,angleB=180]{S1}{CP}
+\nbput[npos=0.2]{$L_1=\SI{70}{\meter}$}
+
+\rput(5,0){\rnode{S2}{\pb{Seguidor 2}}}
+\ncangle[angleA=-90,angleB=180]{S2}{CP}
+\nbput[npos=0.2]{$L_2=\SI{30}{\meter}$}
+
+\rput(0,-2){\rnode{S3}{\pb{Seguidor 3}}}
+\ncangle[angleA=-90,angleB=180]{S3}{CP}
+\nbput[npos=0.3]{$L_3=\SI{40}{\meter}$}
+
+\rput(5,-2){\rnode{S4}{\pb{Seguidor 4}}}
+\ncangle[angleA=-90,angleB=180]{S4}{CP}
+\nbput[npos=0.3]{$L_4=\SI{1}{\meter}$}
+
+\endpspicture
 	\end{TeXtoEPS}
 \end{document} 
