@@ -367,6 +367,7 @@ https://github.com/oscarperpinan/mds/wiki
 - 200 parámetros meteorológicos y de energía solar derivados de imágenes de satélite.
 - Base de datos de casi 40 años.
 - Resolución 1ºx1º
+- Variable de interés: /All Sky Surface Shortwave Downward Irradiance/
 
 [[https://power.larc.nasa.gov/]]
 
