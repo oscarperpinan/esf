@@ -367,6 +367,7 @@ https://github.com/oscarperpinan/mds/wiki
 - 200 parámetros meteorológicos y de energía solar derivados de imágenes de satélite.
 - Base de datos de casi 40 años.
 - Resolución 1ºx1º
+- Variable de interés: /All Sky Surface Shortwave Downward Irradiance/
 
 [[https://power.larc.nasa.gov/]]
 
@@ -387,7 +388,7 @@ https://github.com/oscarperpinan/mds/wiki
 
 *** SAFs: Radiación 
 
-- *CM SAF*: Surface incoming shortwave radiation ([[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21987_21988&fid=27][SIS]])
+- *CM SAF*: Surface incoming shortwave radiation ([[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21987_21988&fid=27][Daily SIS]], [[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21989_21990&fid=27][Monthly SIS]])
 
   - AEMET ha analizado las estimaciones para España en su [[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas_radiacion_solar][Atlas de Radiación]].
 
