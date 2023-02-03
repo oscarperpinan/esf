@@ -563,5 +563,29 @@ Comprueba la existencia de saltos excesivos de irradiancia entre instantes suces
   - La diferencia absoluta debe estar por debajo de un límite (p.ej. 50%)
 
 
+*** Métricas para diferencias
+
+- Mean Bias Difference (MBD), diferencia media (indica si la medida, X,  está por encima o debajo de la referencia, $R$):
+#+BEGIN_EXPORT latex
+  \[
+  MBE = \overline{\mathbf{D}} = \overline{\mathbf{X}} - \overline{\mathbf{R}} = \frac{1}{n} \sum_{i=1}^n (x_i - r_i)
+  \]
+#+END_EXPORT
+
+- Root Mean Square Difference (RMSD), diferencia cuadrático media:
+#+BEGIN_EXPORT latex
+  \[
+  RMSD = \left(\frac{1}{n} \sum_{i=1}^n d_i^2 \right)^{1/2} =  \left( \frac{1}{n} \sum_{i=1}^n (x_i - r_i)^2  \right)^{1/2}
+  \]
+#+END_EXPORT
+
+- Mean Absolute Deviation (MAD):
+
+#+BEGIN_EXPORT latex
+  \[
+  MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|x_i - r_i\right|
+  \]
+#+END_EXPORT
+
 
 
