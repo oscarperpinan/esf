@@ -17,6 +17,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[spanish]{babel}
 \usepackage{mathpazo}
+\usepackage{enumitem}
 
 \author{Oscar Perpiñán Lamigueiro}
 \date{}
@@ -34,13 +35,11 @@ Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el 
 
 \begin{enumerate}
 \item Obtén series temporales de \textbf{medidas diarias} de radiación solar de 3 estaciones meteorológicas (recomendable longitud de 10 años).
-\item Filtra cada serie empleando límites físicos.
-\item Obtén una serie temporal \textbf{diaria} representativa de la región calculando la media de las tres series temporales.
-\item Compara esta serie temporal media con las series temporales de cada estación usando métricas estadísticas (MBD, RMSD, MAD).
-\item Elige una localización dentro del perímetro definido por las tres estaciones. Obtén las \textbf{12 medias mensuales} en esta localización empleando interpolación espacial (IDW) a partir de las \textbf{12 medias mensuales} de la radiación filtrada de cada estación (punto 2)
-\item Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar; véase anexo) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.
-\item Compara las medias mensuales de las tres estaciones con las estimaciones satelitales empleando métricas estadísticas.
-\item Combina la estimación satelital en la localización del punto 5 con las medias mensuales obtenidas en ese punto.
+\item Filtra cada serie empleando límites físicos. \label{filtrado}
+\item Elige una localización dentro del perímetro definido por las tres estaciones. Obtén las \textbf{12 medias mensuales} en esta localización empleando interpolación espacial (IDW) a partir de las \textbf{12 medias mensuales} de la radiación filtrada de cada estación (punto \ref{filtrado}). \label{idw}
+\item Obtén medias temporales de radiación solar de un servicio satelital (preferiblemente CMSAF,  empleando QGis o software similar; véase anexo) para una región que cubra las tres estaciones\footnote{Los datos de radiación proporcionados por CMSAF son medias diarias de \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos por 24 para obtener valores diarios de \textbf{irradiación}.}.\label{satelite}
+\item Compara las medias mensuales de las tres estaciones con las estimaciones satelitales empleando métricas estadísticas (MBD, RMSD, MAD).
+\item Combina la estimación satelital en la localización del punto \ref{idw} con las medias mensuales obtenidas en ese punto.
 \end{enumerate}
 
 \clearpage
@@ -50,8 +49,8 @@ Para el cálculo de la \textbf{radiación en el plano horizontal} seguiremos el 
 A continuación, realizaremos el cálculo de la \textbf{radiación en el plano del generador}. Este generador está localizado en el hemisferio norte, orientado al sur y con una inclinación de 30º. Seguiremos el siguiente itinerario:
 
 \begin{enumerate}
-\item En la localización elegida en el punto 5 anterior, calcula la declinación, duración del día, e irradiación extra-atmosférica diaria en el plano horizontal \textbf{para los días promedio}.
-\item Calcula el índice de claridad y fracción de difusa para las 12 medias mensuales obtenidas en el punto 8 (o, en su defecto, punto 5). Con estos parámetros obtén las medias mensuales de irradiación difusa y directa diarias en el plano horizontal.
+\item En la localización elegida en el punto \ref{idw} anterior, calcula la declinación, duración del día, e irradiación extra-atmosférica diaria en el plano horizontal \textbf{para los días promedio}.
+\item Calcula el índice de claridad y fracción de difusa para las 12 medias mensuales obtenidas en el punto \ref{satelite} del apartado anterior (o, en su defecto, punto \ref{idw}). Con estos parámetros obtén las medias mensuales de irradiación difusa y directa diarias en el plano horizontal.
 \item Calcula el coseno del ángulo cenital y el coseno del ángulo de incidencia para cada día promedio (mes). Deberías obtener 24 valores por día (un total de 12·24=288 valores por parámetro).
 \item Calcula los perfiles intradiaarios rd y rg para cada dia promedio (mes). Deberías obtener 24 valores por mes (un total de 12·24=288 valores por parámetro).
 \item Obtén los perfiles de irradiancia difusa, global y diaria para cada día promedio (mes). Deberías obtener 24 valores por mes (un total de 12·24=288 valores por componente).
