@@ -1,4 +1,4 @@
-% Created 2023-02-07 mar 09:54
+% Created 2023-02-07 mar 10:00
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -38,7 +38,8 @@
 \usefonttheme{serif}
 \author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
 \date{}
-\title{SFCR: Diseño}
+\title{Configuración Eléctrica del Generador FV en un SFCR}
+\subtitle{Energía Solar Fotovoltaica}
 \institute[UPM]{Universidad Politécnica de Madrid}
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
 \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
@@ -51,7 +52,7 @@
 \setbeamertemplate{subsection in toc}[circle]
 \hypersetup{
  pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
- pdftitle={SFCR: Diseño},
+ pdftitle={Configuración Eléctrica del Generador FV en un SFCR},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
@@ -60,17 +61,10 @@
 
 \maketitle
 
-\section{Generador Fotovoltaico}
-\label{sec:org3c3199a}
+\section{Configuración Eléctrica del Generador}
+\label{sec:org4c172af}
 
-\begin{frame}[label={sec:orgf29a0f8}]{Inclinación y Orientacion}
-$$\beta_{opt}=3.7+0.69 \cdot \left|\phi\right|$$
-\begin{center}
-\includegraphics[height=0.75\textheight]{../figs/PorcentajeProduccionEdificios.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org4423eb9}]{Modulos en serie}
+\begin{frame}[label={sec:orgcfcddd2}]{Modulos en serie}
 \begin{itemize}
 \item El inversor está diseñado para soportar una \alert{tensión máxima en la
 entrada}. Superarla puede conllevar la avería del equipo.
@@ -78,7 +72,6 @@ entrada}. Superarla puede conllevar la avería del equipo.
 \[
   N_{sMAX}=\frac{V_{max,inv}}{V_{ocM}(G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius})}
 \]
-
 \item Por otra parte, el algoritmo de \alert{búsqueda del MPP} se realiza en un
 rango de tensiones limitado. Para evitar pérdidas por trabajar en un
 punto alejado del MPP, la tensión del generador debe estar dentro de
@@ -91,7 +84,7 @@ este rango.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0182f13}]{Ramas en paralelo}
+\begin{frame}[label={sec:org92b7a27}]{Ramas en paralelo}
 \begin{itemize}
 \item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}.
 
@@ -105,7 +98,7 @@ este rango.
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orgc48ca6e}]{Configuración del generador}
+\begin{frame}[label={sec:org87129df}]{Configuración del generador}
 De los cálculos anteriores se obtiene un conjunto de configuraciones del generador que permiten un buen acoplamiento entre inversor y generador. 
 
 Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
@@ -114,17 +107,17 @@ Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
 \item Configuración eléctrica y ubicación física de los módulos en la
 estructura.
 
-\item La curva de eficiencia del inversor depende de la tensión de entrada.
-
 \item Inversión y rendimiento económicos.
 
 \item Espacio disponible.
 
 \item Relación de potencias de generador e inversor.
+
+\item La curva de eficiencia del inversor depende de la tensión de entrada.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2c74426}]{Configuración eléctrica y estructura}
+\begin{frame}[label={sec:orgae882a5}]{Configuración eléctrica y estructura}
 \begin{itemize}
 \item Es recomendable elegir \alert{series} compuestas por un número de módulos
 que puedan ser ubicados en una \alert{única hilera de la estructura}.
@@ -143,7 +136,7 @@ inmediatamente superiores.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1b19cf5}]{Potencia del generador}
+\begin{frame}[label={sec:org761918a}]{Inversión y rendimiento económicos}
 \begin{itemize}
 \item La potencia del generador fotovoltaico está relacionada directamente
 con la \alert{inversión económica} a realizar.
@@ -159,104 +152,63 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org345bf1f}]{Potencia del generador}
+\begin{frame}[label={sec:org205c634}]{Terreno ocupado}
 \begin{itemize}
-\item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el    cálculo económico). Por tanto, debe tenerse en cuenta el espacio disponible (o el coste que se pretende asumir por el uso de terreno).
+\item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el cálculo económico).
 
-\item Según el \alert{tipo de sistema} (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
+\item Por tanto, debe tenerse en cuenta el espacio disponible (o el coste que se pretende asumir por el uso de terreno).
 \end{itemize}
 \end{frame}
 
-\section{Inversor}
-\label{sec:org1f07d87}
+\begin{frame}[label={sec:org01cda50}]{Relación de potencias entre generador e inversor}
+Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
-\begin{frame}[label={sec:org9bb1dfe}]{Curva de eficiencia}
-\begin{itemize}
-\item Eficiencia del inversor, \(\eta_{inv} = P_{ac} / P_{dc}\)
-
-\item Esta relación puede describirse con una función basada en tres coeficientes y la normalización de la potencia de salida, \(p_{o}=P_{ac}/P_{inv}\): $$\eta_{inv}=\frac{p_{o}}{p_{o}+k_{0}^{o}+k_{1}^{o}p_{o}+k_{2}^{o}p_{o}^{2}}$$
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}[label={sec:org97bd406}]{Curva de eficiencia}
-\begin{columns}
-\begin{column}{0.3\columnwidth}
-\(k_{0}^{o}=0.01\)
-
-\(k_{1}^{o}=0.025\)
-
-\(k_{2}^{o}=0.05\)
-\end{column}
-
-\begin{column}{0.7\columnwidth}
 \begin{center}
-\includegraphics[height=0.9\textheight]{../figs/CurvaInversor.pdf}
+\includegraphics[height=0.75\textheight]{../figs/CurvaInversor.pdf}
 \end{center}
-\end{column}
-\end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgaf2591a}]{Relación de potencias}
+
+\begin{frame}[label={sec:org1e777d6}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
-\item Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
-
 \item Por tanto, una de las preguntas a responder es \alert{que relación debe existir entre la potencia del generador FV y el inversor}.
+\end{itemize}
 
-\[F_{DI} = P_{g}^{*}/P_{inv}\]
+\[
+  F_{DI} = P_{g}^{*}/P_{inv}
+\]
 
+\begin{itemize}
 \item Si esta relación es alta, el inversor trabajará con frecuencia en la región de alta eficiencia, pero a cambio es posible que deba limitar la potencia del generador para evitar superar su umbral de corriente admisible.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfc4b758}]{Relación de potencias}
+\begin{frame}[label={sec:orgde9efc6}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
-\item En \alert{sistemas de integración arquitectónica}, donde la orientación e inclinación no son óptimas, esta probabilidad puede ser baja. Así, puede considerarse necesario sobredimensionar el generador FV respecto al inversor (\(P_{g}^{*}/P_{inv}\in\left[1;1.4\right]\)).
-
-\begin{itemize}
-\item CTE-HE5-3.2.3.2: \guillemotleft{}la potencia del inversor será como mínimo el 80\% de la potencia pico real del generador fotovoltaico\guillemotright{}
-\end{itemize}
+\item Según el \alert{tipo de sistema} (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
 
 \item En \alert{sistemas de seguimiento} esta probabilidad suele ser alta. Se recomiendan inversores de potencia similar a la del generador  (\(P_{g}^{*}/P_{inv}\in\left[1;1.2\right]\))
+
+\item No obstante, es posible demostrar que el valor de esta relación no es tan crítico como \alert{elegir un inversor con buena curva de eficiencia}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org51b7c87}]{Relación de potencias}
-No obstante, es posible demostrar que el valor de esta relación no es tan crítico como \alert{elegir un inversor con buena curva de eficiencia}.
+\section{Cableado Eléctrico}
+\label{sec:org773439d}
+
+\begin{frame}[label={sec:orge4ab8b5}]{Características básicas}
+\begin{itemize}
+\item Criterio de caída de tensión.
+
+\item Comprobar intensidad máxima admisible.
+
+\item En sistemas de gran tamaño reducir bucles.
+\end{itemize}
 \end{frame}
 
-\section{Cableado}
-\label{sec:orgf67ffd5}
-
-\begin{frame}[label={sec:orgeb04633}]{Características básicas}
+\begin{frame}[label={sec:org1ccb04f}]{Criterio de Caída de Tensión}
 \begin{itemize}
-\item Diseño del cableado
-
-\begin{itemize}
-\item Criterio de caída de tensión
-
-\item En sistemas de gran tamaño reducir bucles
-
-\item Diseño de estructura e integración: habilitar un camino para
-cableado
-\end{itemize}
-
-\item Tipo de cables
-
-\begin{itemize}
-\item Doble aislamiento
-
-\item Poliolefínas
-\end{itemize}
-\end{itemize}
-\begin{center}
-\includegraphics[height=0.5\textheight]{../figs/PhotocampaCableado.jpg}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org1b4d136}]{Cálculo}
-\begin{itemize}
-\item Habitualmente se descarta el criterio termico y se emplea el criterio de caida de tensión (RBT ITC-BT-07):
+\item En primer lugar se calculan las secciones mediante el criterio de caida de tensión (RBT ITC-BT-07):
 \end{itemize}
 
 \begin{align*}
@@ -269,23 +221,23 @@ cableado
 \item La conductividad del cable, \(\gamma_\theta\), depende del material y de la
 temperatura de operación. Por ejemplo, el cobre:
 \begin{itemize}
-\item \(\gamma_{20} =\SI{58}{\meter\per\ohm\per\milli\meter\squared}\)
-\item \(\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}\).
+\item \(\gamma_{20} = \qty{58}{\meter\per\ohm\per\milli\meter\squared}\)
+\item \(\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}\).
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7810d58}]{Cálculo}
+\begin{frame}[label={sec:org4ebb4c7}]{Criterio de Caída de Tensión}
 \begin{itemize}
-\item En general, se exige una caída máxima de tensión
-\(\SI{1.5}{\percent}\) de la tensión nominal.
+\item Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
+tensión \(\SI{1.5}{\percent}\) de la tensión nominal.
 
 \item Para aplicar correctamente este porcentaje es importante caer en la
 cuenta de que \alert{cada zona (DC y AC) tiene su propia tensión nominal}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org89abe17}]{Cálculo}
+\begin{frame}[label={sec:orga365999}]{Cálculo}
 \begin{block}{Ejemplo}
 \begin{itemize}
 \item En una instalación que conduce \(\SI{75}{\ampere}\) a la salida de un
@@ -308,7 +260,7 @@ inversor a la red se realizará con tres cables de sección
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orge5bb0ce}]{Intensidad máxima admisible}
+\begin{frame}[label={sec:org7c65164}]{Intensidad Máxima Admisible}
 \begin{itemize}
 \item Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
@@ -316,13 +268,12 @@ inversor a la red se realizará con tres cables de sección
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc943450}]{Continua vs. Alterna}
+\begin{frame}[label={sec:org881b4b7}]{Continua vs. Alterna}
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (\emph{distribución en alterna}) o en un centro específico junto al punto de
 conexión a red (\emph{distribución en continua}), \alert{¿cuál es la tensión de
 trabajo en continua que permite optar por una distribución en continua?}
-
 
 Se puede demostrar que para tensiones de generador \(V_{mpp} \geq
 \qty{473}{\volt}\), la distribución en continua es preferible a la
