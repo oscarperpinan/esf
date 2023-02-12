@@ -21,19 +21,14 @@
 
 \author{Oscar Perpiñán Lamigueiro}
 \date{}
-\title{Actividad: cálculo de radiación\\\medskip
+\title{Actividad: cálculo de radiación en el plano horizontal\\\medskip
 \large Energía Solar Fotovoltaica}
 \begin{document}
 
 \maketitle
 
 En esta actividad vas a estimar las medias mensuales de la radiación
-global incidente en el plano horizontal y en el plano de un generador.
-
-\section{Radiación en el plano horizontal}
-
-Para el cálculo de la \textbf{radiación en el plano horizontal}
-seguiremos el siguiente itinerario:
+global en el plano horizontal con el siguiente itinerario:
 
 \begin{enumerate}
 \item Obtén series temporales de \textbf{medidas diarias} de radiación
@@ -42,7 +37,17 @@ seguiremos el siguiente itinerario:
 \item Filtra cada serie empleando límites físicos. \label{filtrado}
 \item Elige una localización dentro del perímetro definido por las
   tres estaciones. Obtén las \textbf{12 medias mensuales} en esta
-  localización empleando interpolación espacial (IDW) a partir de las
+  localización empleando interpolación espacial (IDW)\footnote{Las
+    distancias entre las estaciones no se pueden calcular a partir de
+    las coordenadas de latitud y longitud. Es necesario convertirlas a
+    coordenadas UTM. Se puede utilizar la calculadora geodésica del
+    Instituto Geográfico Nacional,
+    \url{https://www.ign.es/web/calculadora-geodesica} usando los
+    valores por defecto (``Transformación de Datum'', sistema
+    ETRS89.). En este formulario se rellenan los valores de latitud y
+    longitud y se obtienen los valores de las coordenadas UTM x e y,
+    con las que se puede calcular la distancia entre dos puntos con
+    $\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$.} a partir de las
   \textbf{12 medias mensuales} de la radiación filtrada de cada
   estación (punto \ref{filtrado}). \label{idw}
 \item Obtén medias temporales de radiación solar de un servicio
@@ -62,42 +67,8 @@ seguiremos el siguiente itinerario:
 
 \clearpage
 
-\section{Radiación en el plano del generador}
-
-A continuación, realizaremos el cálculo de la \textbf{radiación en el
-  plano del generador}. Este generador está localizado en el
-hemisferio norte, orientado al sur y con una inclinación de
-30º. Seguiremos el siguiente itinerario:
-
-\begin{enumerate}
-\item En la localización elegida en el punto \ref{idw} anterior,
-  calcula la declinación, duración del día, e irradiación
-  extra-atmosférica diaria en el plano horizontal \textbf{para los
-    días promedio}.
-\item Calcula el índice de claridad y fracción de difusa para las 12
-  medias mensuales obtenidas en el punto \ref{satelite} del apartado
-  anterior (o, en su defecto, punto \ref{idw}). Con estos parámetros
-  obtén las medias mensuales de irradiación difusa y directa diarias
-  en el plano horizontal.
-\item Calcula el coseno del ángulo cenital y el coseno del ángulo de
-  incidencia para cada día promedio (mes). Deberías obtener 24 valores
-  por día (un total de 12·24=288 valores por parámetro).
-\item Calcula los perfiles intradiaarios rd y rg para cada dia
-  promedio (mes). Deberías obtener 24 valores por mes (un total de
-  12·24=288 valores por parámetro).
-\item Obtén los perfiles de irradiancia difusa, global y diaria para
-  cada día promedio (mes). Deberías obtener 24 valores por mes (un
-  total de 12·24=288 valores por componente).
-\item Obtén la irradiancia en el plano del generador realizando la
-  transformación de los valores del punto 12 del plano horizontal al
-  plano del generador.
-\item Suma los resultados del paso anterior para obtener las 12 medias
-  mensuales de radiación diaria (global, difusa y directa) en el plano
-  del generador. Comprueba que estos resultados son superiores a los
-  valores de la radiación en el plano horizontal.
-\end{enumerate}
-
 \clearpage
+
 \section{Anexo: CM-SAF}
 \label{sec:cmsaf}
 \href{https://wui.cmsaf.eu/safira/action/viewProduktSearch}{CM-SAF}
@@ -147,18 +118,15 @@ este procedimiento:
 \label{sec:qgis}
 
 \href{https://qgis.org/es/site/}{QGIS} is un proyecto de código
-abierto de
-un
+abierto de un
 \href{https://es.wikipedia.org/wiki/Sistema\_de\_informaci\%C3\%B3n\_geogr\%C3\%A1fica}{sistema
   de información geográfica} (SIG). Este software es capaz de manejar
 datos vectoriales (puntos, líneas y polígonos) y tipo raster (matrices
 de datos georeferenciados).
 
-Deberías
-leer
+Deberías leer
 \href{https://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_raster/index.html}{este
-  tutorial} para aprender a trabajar con ficheros tipo raster,
-y
+  tutorial} para aprender a trabajar con ficheros tipo raster, y
 \href{http://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_vector/index.html}{este
   tutorial} para trabajar con datos vectoriales.
 
@@ -184,23 +152,34 @@ plugins. Te pueden interesar los siguientes:
 \label{sec:orge72c353}
 
 \begin{enumerate}
-\item Añadir capa ráster: leer los 12 ficheros .nc de CMSAF.
-\item Establecer proyección a EPSG:4326
+\item Añadir capa ráster: leer los 12 ficheros ``.nc'' de CMSAF con
+  las medias mensuales de radiación diaria.
+\item Establecer proyección a EPSG:4326.
 \item Calculador raster: doble click en la capa, y en la expresión del
-  cuadro inferior multiplicar por 24 (create on-the-fly raster).
-\item Añadir capa de texto delimitado: leer fichero SIAR.csv
-  (ubicaciones de estaciones). Establecer proyección a EPSG:4326.
+  cuadro inferior multiplicar por 24 (create on-the-fly raster). Esta
+  operación puede omitirse y realizar la multiplicación \emph{después}
+  de extraer los valores en los puntos.
+\item Añadir capa de texto delimitado: leer fichero ``.csv'' que
+  contienen las ubicaciones de las estaciones y la localización en la
+  que se realiza la interpolación con IDW. Este fichero debe tener una
+  columna con el nombre de la estación o un identificador alfanumérico
+  y dos columnas numéricas con la longitud y la latitud. Se puede
+  tomar como ejemplo el fichero ``SIAR.csv'' disponible en moodle. No
+  hay que olvidar establecer la proyección a EPSG:4326.
 \item Utilizar \emph{Point sampling tool}
   \begin{enumerate}
-  \item \emph{Layer containing sampling points} : SIAR
-  \item \emph{Layers with bands to get values from}: 12 SISmm.
-  \item \emph{Output point vector layer}: \emph{Browse} y crear un
-    nuevo fichero.
+  \item \emph{Layer containing sampling points} : Nombre de la capa
+    creada en el punto anterior (fichero ``.csv'').
+  \item \emph{Layers with bands to get values from}: 12 SISmm y la
+    columna que identifica a las estaciones.
+  \item \emph{Output point vector layer}: Pulsar \emph{Browse} y crear
+    un nuevo fichero.
   \item Aceptar: aparece una nueva capa con el nombre del fichero
     creado.
   \item En esta nueva capa, con el botón derecho aparece un menú de
     opciones: tabla de atributos (valores extraídos). También se puede
-    exportar.
+    exportar (botón derecho encima de esta capa, exportar y crear un
+    fichero delimitado por comas).
   \end{enumerate}
 \end{enumerate}
 
