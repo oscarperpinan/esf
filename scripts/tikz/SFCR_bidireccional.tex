@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{mathpazo}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage[european resistors]{circuitikz}
+\begin{document}
+
+
+\begin{circuitikz}
+  \draw (0,0) node[draw, fill=yellow!50!white, circle, minimum size=1cm] (Sun) {};
+  \draw[-Latex] (Sun) -- node[below] {$G_{ef} T_a$} ++(1.5,0) coordinate (A);
+  \draw (A) to [pvmodule, invert, l_= Generador, i^>= $I_{FV, DC}$] (5.5,0)
+  to[sdcac, l_ = Inversor DC/AC, i = $I_{FV, AC}$] (9,0)
+  to [short] (10,0)
+  to [R, *-, l_= Carga, i>^= $I_{C}$] (10, -3) node[vee] {}
+  (10,0) to [oosourcetrans, n = T] (13,0);
+  \draw[-Latex] (T.north east) -- node[above] {$I_{Red, In}$} (T.north west) ;
+  \draw[-Latex] (T.south west) -- node[below] {$I_{Red, Out}$} (T.south east); 
+\end{circuitikz}
+
+\end{document}

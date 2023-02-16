@@ -1,0 +1,274 @@
+#+TITLE: Variabilidad de la Potencia de una Central Fotovoltaica
+#+SUBTITLE: Energía Solar Fotovoltaica
+
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+* Introducción
+
+** Los Sistemas Fotovoltaicos y la Red Eléctrica
+
+Los sistemas fotovoltaicos conectados a red alteran las condiciones de
+funcionamiento habitual de la red.
+
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/SFCR_bidireccional.pdf]]
+ 
+** Los Sistemas Fotovoltaicos y la Red Eléctrica
+
+- Posibilitan la bidireccionalidad del flujo de potencia, con los
+  consiguientes cambios en la tensión de los nodos, y en la corriente
+  conducida por las líneas y transformadores.
+
+#+ATTR_LATEX: :height 0.7\textheight
+[[file:../figs/S_VIP_Irr_line234.pdf]]
+
+** Los Sistemas Fotovoltaicos y la Red Eléctrica
+
+- Las rampas de potencia debidas a las fluctuaciones de radiación
+  solar pueden entorpecer el adecuado funcionamiento de los equipos
+  conectados a la red y los elementos de protección existentes.
+
+  #+ATTR_LATEX: :height 0.75\textheight
+  [[file:../figs/radLowMedHigh.pdf]]
+
+
+** Los Sistemas Fotovoltaicos y la Red Eléctrica
+
+- Los SFCR pueden proporcionar servicios de apoyo a la red gracias a
+  las funcionalidades que incorporan los inversores de conexión a red,
+  capaces de controlar la potencia activa inyectada en el punto de
+  conexión, y la potencia reactiva en funcionamiento normal o para
+  enfrentarse a huecos de tensión.
+
+  #+ATTR_LATEX: :height 0.7\textheight
+  [[file:../figs/hueco-tension.png]]
+
+** Variabilidad de la Radiación
+
+ - La irradiancia solar es un proceso con inercia y con baja
+   probabilidad para mostrar cambios abruptos.
+
+ - La probabilidad de ocurrencia de fluctuaciones elevadas es
+   sustancialmente menor al observar con resoluciones temporales
+   altas.
+
+ #+ATTR_LATEX: :height 0.65\textheight
+[[file:../figs/FluctuacionIrradiancia_Marcosetal2011.png]]
+
+** Variabilidad de la Radiación
+
+- El nivel de fluctuación depende del comportamiento de la atmósfera (mayor en días parcialmente cubiertos).
+
+#+ATTR_LATEX: :height 0.65\textheight
+[[file:../figs/radLowMedHigh.pdf]]
+
+
+* Incertidumbre y Predicción
+** Potencia e Incertidumbre
+
+- La casación entre generación y demanda que se consigue en las redes
+  eléctricas se basa en la programación de las diferentes unidades de
+  generación disponibles para suministrar la demanda prevista y para
+  constituir reservas que hagan frente a las posibles variaciones en
+  la demanda.
+- Esta programación se produce en escalas y horizontes temporales
+  diversos y se actualiza de forma sistemática de acuerdo con las
+  variaciones previstas en la predicción de la demanda.
+- La inclusión masiva de sistemas fotovoltaicos en la red
+  modifica el equilibrio existente y puede implicar el uso de las
+  reservas de generación previstas originalmente para asumir las
+  variaciones de la demanda.
+
+** Predicción de la Potencia
+- En este contexto el reto no es tanto la variabilidad como la
+  predicción de los cambios.
+- La realización de predicciones en horizontes horarios o diarios de
+  la potencia generada por un sistema fotovoltaico o por un grupo de
+  sistemas es crucial para facilitar la integración de sistemas
+  fotovoltaicos en redes eléctricas.
+- La predicción de radiación solar y potencia de sistemas
+  fotovoltaicos es un área de investigación de plena actualidad.
+
+** Ejemplo: proyecto europeo PVCROPS
+  - Herramienta de aprendizaje automático o /machine learning/
+    entrenada con series históricas de predicciones NWP y medidas de
+    potencia eléctrica (30 días en la serie temporal de
+    entrenamiento).
+  - Predicción de potencia AC con resolución horaria y un horizonte
+    temporal de 1 día.
+
+   
+  #+ATTR_LATEX: :height 0.5\textheight
+  [[file:../figs/ForecastShiny.png]]
+
+** Ejemplo: proyecto europeo PVCROPS
+
+
+  - Se emplean como entradas las predicciones de variables
+    meteorológicas generadas por modelos de predicción meteorológica
+    numérica e índices de variación espacial y temporal estimados con
+    las variables meteorológicas.
+   
+  #+ATTR_LATEX: :height 0.7\textheight
+  [[file:../figs/varsComplete.pdf]]
+
+    
+** Ejemplo: proyecto europeo PVCROPS
+
+
+- Genera predicciones probabilísticas, entregando tanto la mediana de
+  la predicción como un intervalo de confianza, que permite
+  cuantificar la fiabilidad de la predicción, y que puede servir como
+  medida indirecta de la variabilidad futura.
+
+#+ATTR_LATEX: :width 0.6\textwidth
+[[file:../figs/powerResult.pdf]]
+
+#+begin_center
+http://vps156.cesvima.upm.es:3838/predictPac/
+#+end_center
+
+
+** Predicciones agregadas
+
+- Las predicciones obtenidas mejoran cuando las predicciones se
+  aplican a un conjunto de sistemas.
+
+* Variabilidad de la Potencia
+
+** Variabilidad de la Potencia 
+El funcionamiento de la red eléctrica persigue el balance instantáneo
+  entre la potencia generada y la potencia consumida, de forma que la
+  variabilidad de los sistemas fotovoltaicos interconectados puede
+  obligar al uso de otros recursos de la red que permitan restablecer
+  el balance.
+** Variabilidad Conjunta
+La variabilidad presente en la irradiancia solar se atenúa:
+- por la dispersión espacial entre diferentes centrales.
+- por la dispersión espacial dentro de una central.
+** Dispersión espacial entre centrales
+
+ - En términos generales, la dispersión espacial de sistemas
+   fotovoltaicos diferentes conectados a la misma red atenúa la
+   variabilidad conjunta.
+   
+   #+ATTR_LATEX: :height 0.5\textheight
+   file:../figs/Variabilidad_DispersionGeografica_Plantas.png
+   
+ - El nivel de atenuación depende principalmente de las
+   características meteorológicas de la zona y época, y de la
+   distancia entre los sistemas.
+   
+ - Para distancias mayores de $\SI{5}{\kilo\meter}$ las fluctuaciones
+   de irradiancia con resolución temporal de 1 minuto están
+   esencialmente incorreladas.
+   
+** Dispersión espacial dentro de una central
+ En términos generales, la dispersión espacial de generadores
+   fotovoltaicos pertenecientes a una misma central atenúa la
+   variabilidad conjunta.
+
+  #+ATTR_LATEX: :height 0.7\textheight
+  file:../figs/Variabilidad_DispersionGeografica_Planta.png
+
+** Dispersión espacial dentro de una central
+
+  - La correlación entre la potencia de cada inversor depende de la resolución temporal, la distancia entre los inversores, y el nivel de fluctuación del día en cuestión:
+    - Escalas temporales inferiores al minuto: correlaciones bajas.
+    - Escalas temporales superiores a los 20 minutos: correlaciones altas y positivas que decrecen de forma exponencial con la distancia, y con una clara dependencia con el nivel de fluctuación diaria.
+    - Escalas temporales intermedias: la correlación depende fuertemente del nivel de fluctuación diario.
+      
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:../figs/corDistMatrix_nls.png]]
+
+** Un sistema fotovoltaico es un filtro paso bajo
+
+  - Las frecuencias altas son atenuadas porque no hay correlación
+    entre las diferentes series temporales,
+  - Las frecuencias bajas permanecen sin alteración gracias a que la
+    correlación alcanza valores cercanos a la unidad
+  - La atenuación de las frecuencias intermedias depende de la
+    distancia entre los inversores y el nivel de fluctuación diario
+
+#+ATTR_LATEX: :height 0.55\textheight
+[[file:../figs/filtroPasoBajoWavelet.pdf]]
+
+** Normativas de red
+- La variabilidad en escalas de tiempo bajas puede influir en mayor o
+  menor medida en el funcionamiento de la red eléctrica.
+- Existencia de normativas y recomendaciones para la integración de
+  sistemas fotovoltaicos en la red.
+- Ejemplo clásico: Autoridad Eléctrica de Puerto Rico incluye en su
+  normativa el concepto de rampa para cuantificar las fluctuaciones
+  admisibles:
+
+#+begin_quote
+A 10% per minute rate (based on AC contracted capacity) limitation shall be enforced. This ramp rate limit applies both to the increase and decrease of power output and is independent of meteorological conditions.
+#+end_quote
+
+** Definiciones de rampas
+Uno de los problemas principales en este requerimiento (y otros similares) es que, aunque es fácil identificar visualmente una rampa en una serie temporal de potencia, no existe consenso en una definición formal que permita identificarla y cuantificarla.
+
+** Ejemplos de definiciones de rampas
+
+- Existe una rampa al inicio de un intervalo temporal si la magnitud del cambio en un instante temporal posterior es mayor que un umbral predeterminado.
+#+begin_export latex
+\[ 
+\left| P(t +\Delta_t) - P(t)\right| > \tau
+\]
+#+end_export  
+
+- Existe una rampa en un intervalo temporal si la diferencia entre los
+  valores máximo y mínimo supera un determinado umbral.
+#+begin_export latex
+  \[
+  \max(\{P_t: t = t_0, \dots, t_0+\Delta_t\}) - \min(\{P_t: t=t_0,
+  \dots, t_0+\Delta_t\}) > \tau
+  \]
+#+end_export
+
+- Existe una rampa dentro de un intervalo si el ratio entre el valor absoluto de la diferencia entre las medidas de potencia en dos instantes temporales, y la longitud del intervalo supera un determinado umbral.
+#+begin_export latex
+  \[
+  \frac{\left|P(t + \Delta_t) - P(t)\right|}{\Delta_t} > \tau
+  \]
+#+end_export  
+
+- Existe una rampa en un intervalo si el valor absoluto de la señal de diferencias filtrada (por ejemplo, mediante una media móvil) supera un determinado umbral.
+
+** Definición de rampas
+La elección de una métrica entre esta variedad de definiciones es un
+*compromiso* entre diferentes requisitos.
+
+- Por un parte, la definición debe ser *coherente y correcta desde un
+  punto de vista matemático*.
+- Por otra parte, los resultados que proporcione la métrica adoptada
+  deben ser *útiles y dotados de significado*.
+- Finalmente, el concepto asociado a la métrica debe estar ligado a
+  las *prácticas y requerimientos comúnmente empleados por los
+  operadores de la red*.
+
+** Limitación de rampas
+
+La limitación de las rampas de los sistemas fotovoltaicos es un
+requerimiento que se debe afrontar, principalmente en el caso de las
+centrales fotovoltaicas de gran tamaño.
+
+Existen tres estrategias principales:
+- el uso de sistemas de acumulación energética;
+- acumulación energética combinada con predicción de rampas;
+- predicción de rampas sin acumulación.
+
+** Limitación de rampas
+- La inclusión de sistemas de acumulación, siendo la opción más
+  evidente en centrales de gran tamaño, conlleva aumentos en los
+  costes de instalación y en la complejidad y mantenimiento del
+  sistema.
+
+- Las herramientas de predicción de rampas combinadas con mecanismos
+  de control en el inversor fotovoltaico permiten reducir el tamaño de
+  la acumulación necesaria, e incluso se puede evitar su inclusión en
+  determinadas combinaciones de potencia instalada y requerimientos de
+  rampas admisibles.
+** Cálculo de sistema de acumulación
