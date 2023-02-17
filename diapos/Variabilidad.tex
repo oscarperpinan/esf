@@ -1,4 +1,4 @@
-% Created 2023-02-16 jue 18:04
+% Created 2023-02-17 vie 11:04
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -33,6 +33,7 @@
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \parskip=5pt
+\usepackage{tikz}
 \usetheme{Boadilla}
 \usecolortheme{rose}
 \usefonttheme{serif}
@@ -62,9 +63,9 @@
 \maketitle
 
 \section{Introducción}
-\label{sec:org95cdf4a}
+\label{sec:orgce5f5b7}
 
-\begin{frame}[label={sec:orgfae1d7d}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org29e0409}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 Los sistemas fotovoltaicos conectados a red alteran las condiciones de
 funcionamiento habitual de la red.
 
@@ -73,7 +74,7 @@ funcionamiento habitual de la red.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3155ed0}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org184de90}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Posibilitan la bidireccionalidad del flujo de potencia, con los
 consiguientes cambios en la tensión de los nodos, y en la corriente
@@ -85,20 +86,20 @@ conducida por las líneas y transformadores.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf23690a}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org70b93b5}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Las rampas de potencia debidas a las fluctuaciones de radiación
 solar pueden entorpecer el adecuado funcionamiento de los equipos
 conectados a la red y los elementos de protección existentes.
 
 \begin{center}
-\includegraphics[height=0.75\textheight]{../figs/radLowMedHigh.pdf}
+\includegraphics[height=0.75\textheight]{../figs/VariacionTension_RampasPotencia.pdf}
 \end{center}
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}[label={sec:org20a79dd}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org1b4459c}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Los SFCR pueden proporcionar servicios de apoyo a la red gracias a
 las funcionalidades que incorporan los inversores de conexión a red,
@@ -112,7 +113,7 @@ enfrentarse a huecos de tensión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org041cefe}]{Variabilidad de la Radiación}
+\begin{frame}[label={sec:orgd1705aa}]{Variabilidad de la Radiación}
 \begin{itemize}
 \item La irradiancia solar es un proceso con inercia y con baja
 probabilidad para mostrar cambios abruptos.
@@ -127,50 +128,74 @@ altas.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org37be77f}]{Variabilidad de la Radiación}
+\begin{frame}[label={sec:orgf2f0f8c}]{Variabilidad de la Radiación}
 \begin{itemize}
 \item El nivel de fluctuación depende del comportamiento de la atmósfera (mayor en días parcialmente cubiertos).
 \end{itemize}
 
 \begin{center}
-\includegraphics[height=0.65\textheight]{../figs/radLowMedHigh.pdf}
+\includegraphics[height=0.8\textheight]{../figs/radLowMedHigh.pdf}
 \end{center}
 \end{frame}
 
 
 \section{Incertidumbre y Predicción}
-\label{sec:org1f108f3}
-\begin{frame}[label={sec:org865d827}]{Potencia e Incertidumbre}
-\begin{itemize}
-\item La casación entre generación y demanda que se consigue en las redes
-eléctricas se basa en la programación de las diferentes unidades de
-generación disponibles para suministrar la demanda prevista y para
-constituir reservas que hagan frente a las posibles variaciones en
-la demanda.
-\item Esta programación se produce en escalas y horizontes temporales
-diversos y se actualiza de forma sistemática de acuerdo con las
-variaciones previstas en la predicción de la demanda.
-\item La inclusión masiva de sistemas fotovoltaicos en la red
-modifica el equilibrio existente y puede implicar el uso de las
-reservas de generación previstas originalmente para asumir las
-variaciones de la demanda.
-\end{itemize}
+\label{sec:org16bb8bb}
+
+\begin{frame}[label={sec:orgcf41d63}]{Generación y Demanda}
+La \alert{casación entre generación y demanda} que se consigue en las redes
+eléctricas se basa en la \alert{programación} de las diferentes unidades de
+\alert{generación} disponibles para suministrar la \alert{demanda prevista} y para
+constituir \alert{reservas} que hagan frente a las posibles \alert{variaciones} en la
+demanda.
+
+\begin{center}
+\includegraphics[height=0.65\textheight]{../figs/CentroOperacionesREE.png}
+\end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgcee2165}]{Predicción de la Potencia}
+
+\begin{frame}[label={sec:org7053c79}]{Programación de la generación}
+Esta programación se produce en \alert{escalas y horizontes temporales diversos} y se \alert{actualiza de forma sistemática} de acuerdo con las variaciones previstas en la predicción de la demanda.
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/CurvaDemandaREE.png}
+\end{center}
+
+\begin{center}
+\url{https://demanda.ree.es/visiona/peninsula/demandaqh/total/}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgb03e95c}]{Participación masiva de la fotovoltaica}
+La \alert{inclusión masiva} de sistemas fotovoltaicos en la red \alert{modifica el
+equilibrio} existente y puede implicar el uso de las reservas de
+generación previstas originalmente para asumir las variaciones de la
+demanda.
+
+\begin{center}
+\includegraphics[height=0.6\textheight]{../figs/EvolucionGeneracionFV_REE.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org575f541}]{Predicción de la Potencia}
+En este contexto el reto no es tanto la variabilidad como la
+\alert{predicción}:
+
 \begin{itemize}
-\item En este contexto el reto no es tanto la variabilidad como la
-predicción de los cambios.
 \item La realización de predicciones en horizontes horarios o diarios de
 la potencia generada por un sistema fotovoltaico o por un grupo de
 sistemas es crucial para facilitar la integración de sistemas
 fotovoltaicos en redes eléctricas.
+
 \item La predicción de radiación solar y potencia de sistemas
 fotovoltaicos es un área de investigación de plena actualidad.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb020f25}]{Ejemplo: proyecto europeo PVCROPS}
+\begin{frame}[label={sec:org58195c0}]{Ejemplo: proyecto europeo PVCROPS}
 \begin{itemize}
 \item Herramienta de aprendizaje automático o \emph{machine learning}
 entrenada con series históricas de predicciones NWP y medidas de
@@ -182,17 +207,15 @@ temporal de 1 día.
 
 
 \begin{center}
-\includegraphics[height=0.5\textheight]{../figs/ForecastShiny.png}
+\includegraphics[height=0.65\textheight]{../figs/ForecastShiny.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9034d88}]{Ejemplo: proyecto europeo PVCROPS}
-\begin{itemize}
-\item Se emplean como entradas las predicciones de variables
+\begin{frame}[label={sec:org6b61eaa}]{Ejemplo: proyecto europeo PVCROPS}
+Se emplean como entradas las predicciones de variables
 meteorológicas generadas por modelos de predicción meteorológica
 numérica e índices de variación espacial y temporal estimados con
 las variables meteorológicas.
-\end{itemize}
 
 \begin{center}
 \includegraphics[height=0.7\textheight]{../figs/varsComplete.pdf}
@@ -200,13 +223,11 @@ las variables meteorológicas.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfa175ba}]{Ejemplo: proyecto europeo PVCROPS}
-\begin{itemize}
-\item Genera predicciones probabilísticas, entregando tanto la mediana de
-la predicción como un intervalo de confianza, que permite
-cuantificar la fiabilidad de la predicción, y que puede servir como
-medida indirecta de la variabilidad futura.
-\end{itemize}
+\begin{frame}[label={sec:orgee86a58}]{Ejemplo: proyecto europeo PVCROPS}
+Genera predicciones probabilísticas, entregando tanto la mediana de la
+predicción como un intervalo de confianza, que permite cuantificar la
+fiabilidad de la predicción, y que puede servir como medida indirecta
+de la variabilidad futura.
 
 \begin{center}
 \includegraphics[width=0.6\textwidth]{../figs/powerResult.pdf}
@@ -218,91 +239,94 @@ medida indirecta de la variabilidad futura.
 \end{frame}
 
 
-\begin{frame}[label={sec:org96e92a9}]{Predicciones agregadas}
-\begin{itemize}
-\item Las predicciones obtenidas mejoran cuando las predicciones se
-aplican a un conjunto de sistemas.
-\end{itemize}
+\begin{frame}[label={sec:orgb040857}]{Predicciones agregadas}
+Las predicciones obtenidas mejoran cuando las predicciones se aplican
+a un conjunto de sistemas.
 \end{frame}
 
 \section{Variabilidad de la Potencia}
-\label{sec:org1aa2668}
+\label{sec:orgf24b87b}
 
-\begin{frame}[label={sec:org1d85f84}]{Variabilidad de la Potencia}
-El funcionamiento de la red eléctrica persigue el balance instantáneo
-  entre la potencia generada y la potencia consumida, de forma que la
-  variabilidad de los sistemas fotovoltaicos interconectados puede
-  obligar al uso de otros recursos de la red que permitan restablecer
-  el balance.
-\end{frame}
-\begin{frame}[label={sec:org9ea15e7}]{Variabilidad Conjunta}
-La variabilidad presente en la irradiancia solar se atenúa:
+\begin{frame}[label={sec:org76432f9}]{Variabilidad Conjunta}
+La variabilidad presente en la irradiancia solar se \alert{atenúa} en la potencia AC:
 \begin{itemize}
-\item por la dispersión espacial entre diferentes centrales.
-\item por la dispersión espacial dentro de una central.
+\item por la \alert{dispersión} espacial \alert{entre diferentes centrales}.
+\item por la \alert{dispersión} espacial \alert{dentro de una central}.
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgbf3b009}]{Dispersión espacial entre centrales}
+
+\begin{frame}[label={sec:orgd2d3202}]{Dispersión espacial entre centrales}
 \begin{itemize}
-\item En términos generales, la dispersión espacial de sistemas
-fotovoltaicos diferentes conectados a la misma red atenúa la
+\item En términos generales, la \alert{dispersión espacial de sistemas
+fotovoltaicos diferentes} conectados a la misma red \alert{atenúa} la
 variabilidad conjunta.
 
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/Variabilidad_DispersionGeografica_Plantas.png}
 \end{center}
 
-\item El nivel de atenuación depende principalmente de las
-características meteorológicas de la zona y época, y de la
-distancia entre los sistemas.
+\item El \alert{nivel de atenuación depende} principalmente de las
+\alert{características meteorológicas} de la zona y época, y de la
+\alert{distancia} entre los sistemas.
 
-\item Para distancias mayores de \(\SI{5}{\kilo\meter}\) las fluctuaciones
+\item Para \alert{distancias mayores de \(\SI{5}{\kilo\meter}\)} las fluctuaciones
 de irradiancia con resolución temporal de 1 minuto están
-esencialmente incorreladas.
+esencialmente \alert{incorreladas}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf1a182b}]{Dispersión espacial dentro de una central}
-En términos generales, la dispersión espacial de generadores
-  fotovoltaicos pertenecientes a una misma central atenúa la
-  variabilidad conjunta.
+\begin{frame}[label={sec:org8ef2a40}]{Dispersión espacial dentro de una central}
+En términos generales, la \alert{dispersión espacial} de generadores
+fotovoltaicos pertenecientes a \alert{una misma central} \alert{atenúa} la
+variabilidad conjunta.
 
 \begin{center}
 \includegraphics[height=0.7\textheight]{../figs/Variabilidad_DispersionGeografica_Planta.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgdb9f711}]{Dispersión espacial dentro de una central}
-\begin{itemize}
-\item La correlación entre la potencia de cada inversor depende de la resolución temporal, la distancia entre los inversores, y el nivel de fluctuación del día en cuestión:
-\begin{itemize}
-\item Escalas temporales inferiores al minuto: correlaciones bajas.
-\item Escalas temporales superiores a los 20 minutos: correlaciones altas y positivas que decrecen de forma exponencial con la distancia, y con una clara dependencia con el nivel de fluctuación diaria.
-\item Escalas temporales intermedias: la correlación depende fuertemente del nivel de fluctuación diario.
-\end{itemize}
-\end{itemize}
+\begin{frame}[label={sec:org20c95ab}]{Dispersión espacial dentro de una central}
+La correlación entre la potencia de cada inversor \alert{depende} de la \alert{resolución temporal}, la \alert{distancia} entre los inversores, y el \alert{nivel de fluctuación del día} en cuestión.
 
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/corDistMatrix_nls.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga7d1a7d}]{Un sistema fotovoltaico es un filtro paso bajo}
-\begin{itemize}
-\item Las frecuencias altas son atenuadas porque no hay correlación
-entre las diferentes series temporales,
-\item Las frecuencias bajas permanecen sin alteración gracias a que la
-correlación alcanza valores cercanos a la unidad
-\item La atenuación de las frecuencias intermedias depende de la
-distancia entre los inversores y el nivel de fluctuación diario
-\end{itemize}
+\begin{frame}[label={sec:org5b288a0}]{Dispersión espacial dentro de una central}
+Escalas temporales bajas (\(\tau <\qty{1}{\min}\)): correlaciones bajas.
 
 \begin{center}
-\includegraphics[height=0.55\textheight]{../figs/filtroPasoBajoWavelet.pdf}
-\end{center}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=0.5\textheight]{../figs/corDistMatrix_nls.png}};
+      \draw[red,ultra thick,rounded corners] (0,0) rectangle (3, 0.55\textheight);
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc060118}]{Normativas de red}
+\begin{frame}[label={sec:org9fb3fff}]{Dispersión espacial dentro de una central}
+Escalas temporales intermedias: la correlación depende fuertemente del nivel de fluctuación diario.
+
+\begin{center}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=0.5\textheight]{../figs/corDistMatrix_nls.png}};
+      \draw[red,ultra thick,rounded corners] (2.6,0) rectangle (7, 0.55\textheight);
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgc4ad31b}]{Dispersión espacial dentro de una central}
+Escalas temporales altas, \(\tau > \qty{20}{\min}\): correlaciones altas y positivas que decrecen de forma exponencial con la distancia; clara dependencia con el nivel de fluctuación diaria.
+
+\begin{center}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=0.5\textheight]{../figs/corDistMatrix_nls.png}};
+      \draw[red,ultra thick,rounded corners] (6.5,0) rectangle (10, 0.55\textheight);
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org4a40ee1}]{Normativas de red}
 \begin{itemize}
 \item La variabilidad en escalas de tiempo bajas puede influir en mayor o
 menor medida en el funcionamiento de la red eléctrica.
@@ -318,11 +342,11 @@ A 10\% per minute rate (based on AC contracted capacity) limitation shall be enf
 \end{quote}
 \end{frame}
 
-\begin{frame}[label={sec:org1e086f4}]{Definiciones de rampas}
+\begin{frame}[label={sec:org95a4697}]{Definiciones de rampas}
 Uno de los problemas principales en este requerimiento (y otros similares) es que, aunque es fácil identificar visualmente una rampa en una serie temporal de potencia, no existe consenso en una definición formal que permita identificarla y cuantificarla.
 \end{frame}
 
-\begin{frame}[label={sec:org00907ab}]{Ejemplos de definiciones de rampas}
+\begin{frame}[label={sec:orgb4ee010}]{Ejemplos de definiciones de rampas}
 \begin{itemize}
 \item Existe una rampa al inicio de un intervalo temporal si la magnitud del cambio en un instante temporal posterior es mayor que un umbral predeterminado.
 \end{itemize}
@@ -351,22 +375,7 @@ valores máximo y mínimo supera un determinado umbral.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8de00e7}]{Definición de rampas}
-La elección de una métrica entre esta variedad de definiciones es un
-\alert{compromiso} entre diferentes requisitos.
-
-\begin{itemize}
-\item Por un parte, la definición debe ser \alert{coherente y correcta desde un
-punto de vista matemático}.
-\item Por otra parte, los resultados que proporcione la métrica adoptada
-deben ser \alert{útiles y dotados de significado}.
-\item Finalmente, el concepto asociado a la métrica debe estar ligado a
-las \alert{prácticas y requerimientos comúnmente empleados por los
-operadores de la red}.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label={sec:org144a388}]{Limitación de rampas}
+\begin{frame}[label={sec:orgdd89c28}]{Limitación de rampas}
 La limitación de las rampas de los sistemas fotovoltaicos es un
 requerimiento que se debe afrontar, principalmente en el caso de las
 centrales fotovoltaicas de gran tamaño.
@@ -379,7 +388,7 @@ Existen tres estrategias principales:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8512a43}]{Limitación de rampas}
+\begin{frame}[label={sec:org2f9138b}]{Limitación de rampas}
 \begin{itemize}
 \item La inclusión de sistemas de acumulación, siendo la opción más
 evidente en centrales de gran tamaño, conlleva aumentos en los
@@ -393,6 +402,21 @@ determinadas combinaciones de potencia instalada y requerimientos de
 rampas admisibles.
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgdb06d63}]{Cálculo de sistema de acumulación}
+\begin{frame}[label={sec:org77e05d2}]{Cálculo de sistema de acumulación}
+La batería es un elemento caro.
+
+Objetivos:
+\begin{itemize}
+\item Dimensionar, en potencia y energía, la batería mínima necesaria.
+\item Desarrollar estrategias de gestión que permitan, cumpliendo con la rampa máxima, minimizar el coste de la energía (LCOE):
+\begin{itemize}
+\item Minimizar Batería
+\item Minimizar Degradación
+\item Minimizar Pérdidas
+\end{itemize}
+\end{itemize}
+
+¿Cuánto almacenamiento es necesario para cumplir con una limitación de
+rampa? Modelo de la peor fluctuación
 \end{frame}
 \end{document}
