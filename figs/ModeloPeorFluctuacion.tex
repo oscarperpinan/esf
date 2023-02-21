@@ -1,0 +1,25 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}[domain = 0:7, samples = 1000]
+  \draw (0, 5) node[left] {$G_{t0}$};
+  \draw (0, 1) node[left] {$G_{t1}$};
+  \draw[thin, dashed, color = gray] (0,1) -- (2, 1);
+  \draw[thin, color = gray, <->] (1, 5) -- node[left] {$\Delta G$}(1, 1);
+  \draw[thick, color=yellow, fill=yellow!10!white] plot[id=Pbat] function{(x > 2) * (- 0.8*(x - 7) - 4*exp(2)*exp(-x))} node[above right, color = yellow!80!black]{$P_{bat}$};
+  \draw[thick, color=red] plot[id=Pfv] function{5*(x < 2) + (x > 2) * (4*exp(2)*exp(-x) + 1)}
+    node[above right] {$P_{FV}(t)$};
+  \draw[thick, color=black] plot[id=G] function{5*(x < 2) + 1 * (x > 2)}
+  node[below right] {$G(t)$};
+  \draw[thick, color=blue] plot[id=Plim] function{5*(x < 2) + (x > 2) * (1 - 0.8*(x - 7))}
+  node[above right] at (4.5, 3) {$P_{lim}(t)$};
+  \draw[->] (-0.2,0) -- (8.1,0) node[right] {$t$};
+  \draw[->] (0,-0.2) -- (0,6.1) node[above] {};
+\end{tikzpicture}
+
+\end{document}
+
+

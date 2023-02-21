@@ -306,34 +306,58 @@ Existen tres estrategias principales:
 #+ATTR_LATEX: :width \textwidth
 [[file:../figs/EsquemaSFCRAcumulacion.pdf]]
 
-** Limitación de rampas
-- La inclusión de sistemas de acumulación conlleva aumentos en los
-  costes de instalación y en la complejidad y mantenimiento del
-  sistema.
+** Suavizado de rampas con acumulación
 
-- Las herramientas de predicción de rampas combinadas con mecanismos
-  de control en el inversor fotovoltaico permiten reducir el tamaño de
-  la acumulación necesaria, e incluso se puede evitar su inclusión en
-  determinadas combinaciones de potencia instalada y requerimientos de
-  rampas admisibles.
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:../figs/SuavizadoRampasAcumulacion.png]]
 
 ** Cálculo del sistema de acumulación
 
+La inclusión de sistemas de acumulación conlleva *aumentos en los
+costes* de instalación y en la *complejidad y mantenimiento* del
+sistema.
+
+Las herramientas de *predicción* de rampas combinadas con *mecanismos de
+control en el inversor* fotovoltaico permiten *reducir* el tamaño de la
+acumulación necesaria.
+
 *** Objetivos
-- Dimensionar, en potencia y energía, la batería mínima necesaria.
-- Desarrollar estrategias de gestión que permitan, cumpliendo con la rampa máxima, minimizar el coste de la energía:
+- Dimensionar, en *potencia y energía*, la batería mínima necesaria.
+- *Desarrollar estrategias de gestión* que permitan, cumpliendo con la rampa máxima, minimizar el coste de la energía:
   - Minimizar Batería
   - Minimizar Degradación
   - Minimizar Pérdidas
 
-** Cálculo del sistema de acumulación
+** Modelo de la peor fluctuación
 
-Modelo de la peor fluctuación:  (la planta actúa como filtro de una fluctuación en la irradiancia, un pulso se transforma en una exponencial)
-# Gráfica diapo 44
+Un pulso de irradiancia se transforma en una exponencial decreciente (la central actúa como filtro paso bajo.
 
+#+ATTR_LATEX: :height 0.75\textheight
+[[file:../figs/ModeloPeorFluctuacion0.pdf]]
+
+** Modelo de la peor fluctuación
+
+El sistema de acumulación regula la potencia de salida para limitar la rampa. 
+
+#+ATTR_LATEX: :height 0.75\textheight
+[[file:../figs/ModeloPeorFluctuacion.pdf]]
+
+** Modelo de la peor fluctuación
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/ModeloPeorFluctuacion.pdf]]
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
 #+begin_export latex
 \[
-  P(t) = 90 \cdot \exp(-t/\tau) + 10
+  P_{FV}(t) = 90 \cdot \exp(-t/\tau) + 10
 \]
 #+end_export
 
@@ -343,31 +367,72 @@ Modelo de la peor fluctuación:  (la planta actúa como filtro de una fluctuaci�
 \]
 #+end_export
 
+- $\tau [\unit{\second}]$: constante de tiempos de la fluctuación
+- $L_{min} [\unit{\kilo\meter}]$: dimensión menor de la central
+  
+** Modelo de la peor fluctuación
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/ModeloPeorFluctuacion.pdf]]
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
 #+begin_export latex
 \[
-  E_{bat} = \frac{0.9 \cdot P_g^*}{3600} \cdot \left( \frac{90}{2 \cdot r_{max}} - \tau \right)
+  P_{bat,max} = \frac{P_g^*}{100} \cdot \left(90 - \tau \cdot RR_{max} \cdot \left( 1 + \ln\frac{90}{\tau \cdot RR_{max}}\right) \right)
 \]
 #+end_export
 
-- $\tau [\unit{\second}]$: constante de tiempos de la fluctuación
-- $L_{min} [\unit{\kilo\meter}]$: dimensión menor de la central
-- $P_g^* [\unit{\kilo\watt}]$: potencia del generador fotovoltaico
-- $r_{\max} [\unit{\%\per\sec}]$: límite de rampa en potencia
+#+begin_export latex
+\[
+  E_{bat} = \frac{0.9 \cdot P_g^*}{3600} \cdot \left( \frac{90}{2 \cdot RR_{max}} - \tau \right)
+\]
+#+end_export
 
-** Ejemplo
+- $P_g^* [\unit{\kilo\watt}]$: potencia del generador fotovoltaico
+- $RR_{max} [\unit{\%\per\sec}]$: límite de rampa en potencia
+- $P_{bat,max} [\unit{\kilo\watt}]$: potencia máxima del sistema de acumulación
+- $E_{bat} [\unit{\kilo\watthour}]$: capacidad del sistema de acumulación.
+  
+** Ejemplo: cálculo de potencia
 
 Datos:
 #+begin_export latex
 \begin{align*}
   P_g^* &= \qty{38.5}{\mega\watt}\\
   L_{min} &= \qty{1.786}{\kilo\meter}\\
-  r_{max} &= \qty{10}{\%\per\min}
+  RR_{max} &= \qty{10}{\%\per\min}
 \end{align*}
 #+end_export
 Resultados:
 #+begin_export latex
 \begin{align*}
   \tau &= 42 \cdot \num{1.786} - \num{0.55} = \qty{74.46}{\second}\\
+  P_{bat,max} &= \frac{\num{38500}}{100} \cdot \left(90 - \num{74.46} \cdot (10/60) \cdot \left( 1 + \ln\frac{90}{\num{74.46} \cdot (10/60)}\right) \right) = \qty{20.4}{\mega\watt}\\
+  \frac{P_{bat,max}}{P_g^*} &= \num{0.53}
+\end{align*}
+#+end_export
+
+** Ejemplo: cálculo de capacidad
+
+Datos:
+#+begin_export latex
+\begin{align*}
+  P_g^* &= \qty{38.5}{\mega\watt}\\
+  L_{min} &= \qty{1.786}{\kilo\meter}\\
+  RR_{max} &= \qty{10}{\%\per\min}
+\end{align*}
+#+end_export
+Resultados:
+#+begin_export latex
+\begin{align*}
   E_{bat} &= \frac{\num{0.9} \cdot \num{38500}}{\num{3600}} \cdot \left( \frac{90}{2 \cdot (10/60)} - \num{74.46} \right) = \qty{1882.05}{\kilo\watthour}\\
   \frac{E_{bat}}{P_g^*} &= \qty{0.049}{\hour} 
 \end{align*}
