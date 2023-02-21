@@ -8,25 +8,83 @@
 ** Modulos en serie
 
 -  El inversor está diseñado para soportar una *tensión máxima en la
-   entrada*. Superarla puede conllevar la avería del equipo.
+   entrada*, $V_{max,inv}$.
+
+   Superarla puede conllevar la *avería* del equipo.
 
   #+begin_export latex
   \[
-    N_{sMAX}=\frac{V_{max,inv}}{V_{ocM}(G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius})}
+    \max(V_{ocG}) < V_{max,inv}
   \]
   #+end_export
--  Por otra parte, el algoritmo de *búsqueda del MPP* se realiza en un
-   rango de tensiones limitado. Para evitar pérdidas por trabajar en un
-   punto alejado del MPP, la tensión del generador debe estar dentro de
-   este rango.
+-  El algoritmo de *búsqueda del MPP* se realiza en un
+   rango de tensiones limitado, $V_{mppMIN}, V_{mppMAX}$.
+
+   Para *evitar pérdidas* por trabajar en un punto alejado del MPP, la tensión del generador debe estar dentro de este rango:
 
   #+begin_export latex
-  \begin{align*}
-    N_{sMPP}^{min}&=\frac{V_{mppMIN}}{V_{mppM}(G_{stc},\, T_{a}=\SI{25}{\celsius})}\\
-    N_{sMPP}^{max}&=\frac{V_{mppMAX}}{V_{mppM}(G_{stc},\, T_{a}=\SI{25}{\celsius})}
-  \end{align*}
+  \[
+    V_{mppMIN} \leq V_{mppG} \leq V_{mppMAX}
+  \]
   #+end_export
+** Procedimiento de cálculo
+#+BEAMER: \framesubtitle{Tensión máxima}
 
+- Temperatura de célula ($G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius}$)
+#+begin_export latex
+\[
+  T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow   T_{c} = -10 + 200 \cdot \frac{NOCT-20}{800}
+\]
+#+end_export
+
+- Tensión del módulo
+#+begin_export latex
+\[
+  V_{ocM} = V_{ocM}^{*} + (T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}} \rightarrow V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
+\]
+#+end_export
+- Número de módulos en serie
+#+begin_export latex
+\[
+      V_{ocG} = N_s \cdot V_{ocM} \rightarrow N_{sMAX}=\frac{V_{max,inv}}{V_{ocM}}
+\]
+#+end_export
+
+** Procedimiento de cálculo
+#+BEAMER: \framesubtitle{Tensión MPP}
+- Temperatura de célula ($G_{stc},\, T_{a}=\SI{25}{\celsius}$)
+#+begin_export latex
+\[
+  T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow T_{c} = 25 + 1000 \cdot \frac{NOCT-20}{800}
+\]
+#+end_export
+- Tensión de circuito abierto del módulo
+#+begin_export latex
+\[
+  V_{ocM} = V_{ocM}^{*} + (T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}} \rightarrow
+  V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
+\]
+#+end_export
+** Procedimiento de cálculo
+#+BEAMER: \framesubtitle{Tensión MPP}
+
+- Tensión MPP del módulo
+#+begin_export latex
+\[
+  V_{mppM} = V_{ocM} \cdot \frac{V_{mppM}^*}{V_{ocM}^*}
+\]
+#+end_export
+- Número de módulos en serie
+#+begin_export latex
+\[
+  V_{mppG} = N_s \cdot V_{mppM} \rightarrow
+  \begin{cases}
+    N_{sMPP}^{min} =\frac{V_{mppMIN}}{V_{mppM}}\\
+    \\
+    N_{sMPP}^{max} = \frac{V_{mppMAX}}{V_{mppM}}
+  \end{cases}
+\]
+#+end_export
 ** Ramas en paralelo
 
 - El fabricante del inversor elige los componentes para soportar una *corriente máxima admisible*.
@@ -43,9 +101,9 @@
 
 ** Configuración del generador
 
-De los cálculos anteriores se obtiene un conjunto de configuraciones del generador que permiten un buen acoplamiento entre inversor y generador. 
+De los cálculos anteriores se obtiene un *conjunto de configuraciones* del generador que permiten un buen acoplamiento entre inversor y generador. 
 
-Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
+Para *elegir una configuración* deben tenerse en cuenta diferentes aspectos:
 
 - Configuración eléctrica y ubicación física de los módulos en la
   estructura.
@@ -63,15 +121,18 @@ Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
 -  Es recomendable elegir *series* compuestas por un número de módulos
    que puedan ser ubicados en una *única hilera de la estructura*.
 
-   -  *Se facilita el trazado del cableado*: la propia estructura puede
-      servir como fijación auxiliar, se evitan cruzamientos indeseados.
+   -  *Se facilita el trazado del cableado*:
 
-   -  *Se minimiza la influencia de las sombras*: es muy frecuente la
-      aparición de sombras entre partes del generador o entre
-      seguidores, sombras de forma rectangular y que comienzan afectando
-      a las partes bajas de la estructura. Al cablear por hileras, las
-      sombras de las hileras bajas no afectan a las hileras
-      inmediatamente superiores.
+     La propia estructura puede servir como fijación auxiliar, se
+     evitan cruzamientos indeseados.
+
+   -  *Se minimiza la influencia de las sombras*:
+
+     Es muy frecuente la aparición de sombras entre partes del
+     generador o entre seguidores, sombras de forma rectangular y que
+     comienzan afectando a las partes bajas de la estructura. Al
+     cablear por hileras, las sombras de las hileras bajas no afectan
+     a las hileras inmediatamente superiores.
 
 ** Inversión y rendimiento económicos
 

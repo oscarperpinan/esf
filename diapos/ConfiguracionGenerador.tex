@@ -1,4 +1,4 @@
-% Created 2023-02-07 mar 10:00
+% Created 2023-02-21 mar 16:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -62,29 +62,90 @@
 \maketitle
 
 \section{Configuración Eléctrica del Generador}
-\label{sec:org4c172af}
+\label{sec:org4f2be15}
 
-\begin{frame}[label={sec:orgcfcddd2}]{Modulos en serie}
+\begin{frame}[label={sec:orgf4c320d}]{Modulos en serie}
 \begin{itemize}
 \item El inversor está diseñado para soportar una \alert{tensión máxima en la
-entrada}. Superarla puede conllevar la avería del equipo.
+entrada}, \(V_{max,inv}\).
+
+Superarla puede conllevar la \alert{avería} del equipo.
 
 \[
-  N_{sMAX}=\frac{V_{max,inv}}{V_{ocM}(G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius})}
+  \max(V_{ocG}) < V_{max,inv}
 \]
-\item Por otra parte, el algoritmo de \alert{búsqueda del MPP} se realiza en un
-rango de tensiones limitado. Para evitar pérdidas por trabajar en un
-punto alejado del MPP, la tensión del generador debe estar dentro de
-este rango.
+\item El algoritmo de \alert{búsqueda del MPP} se realiza en un
+rango de tensiones limitado, \(V_{mppMIN}, V_{mppMAX}\).
 
-\begin{align*}
-  N_{sMPP}^{min}&=\frac{V_{mppMIN}}{V_{mppM}(G_{stc},\, T_{a}=\SI{25}{\celsius})}\\
-  N_{sMPP}^{max}&=\frac{V_{mppMAX}}{V_{mppM}(G_{stc},\, T_{a}=\SI{25}{\celsius})}
-\end{align*}
+Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensión del generador debe estar dentro de este rango:
+
+\[
+  V_{mppMIN} \leq V_{mppG} \leq V_{mppMAX}
+\]
 \end{itemize}
 \end{frame}
+\begin{frame}[label={sec:org00a7af0}]{Procedimiento de cálculo}
+\framesubtitle{Tensión máxima}
 
-\begin{frame}[label={sec:org92b7a27}]{Ramas en paralelo}
+\begin{itemize}
+\item Temperatura de célula (\(G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius}\))
+\end{itemize}
+\[
+  T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow   T_{c} = -10 + 200 \cdot \frac{NOCT-20}{800}
+\]
+
+\begin{itemize}
+\item Tensión del módulo
+\end{itemize}
+\[
+  V_{ocM} = V_{ocM}^{*} + (T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}} \rightarrow V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
+\]
+\begin{itemize}
+\item Número de módulos en serie
+\end{itemize}
+\[
+      V_{ocG} = N_s \cdot V_{ocM} \rightarrow N_{sMAX}=\frac{V_{max,inv}}{V_{ocM}}
+\]
+\end{frame}
+
+\begin{frame}[label={sec:org856645a}]{Procedimiento de cálculo}
+\framesubtitle{Tensión MPP}
+\begin{itemize}
+\item Temperatura de célula (\(G_{stc},\, T_{a}=\SI{25}{\celsius}\))
+\end{itemize}
+\[
+  T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow T_{c} = 25 + 1000 \cdot \frac{NOCT-20}{800}
+\]
+\begin{itemize}
+\item Tensión de circuito abierto del módulo
+\end{itemize}
+\[
+  V_{ocM} = V_{ocM}^{*} + (T_{c}-T_{c}^{*})\cdot\frac{dV_{oc}}{dT_{c}} \rightarrow
+  V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
+\]
+\end{frame}
+\begin{frame}[label={sec:org72ed904}]{Procedimiento de cálculo}
+\framesubtitle{Tensión MPP}
+
+\begin{itemize}
+\item Tensión MPP del módulo
+\end{itemize}
+\[
+  V_{mppM} = V_{ocM} \cdot \frac{V_{mppM}^*}{V_{ocM}^*}
+\]
+\begin{itemize}
+\item Número de módulos en serie
+\end{itemize}
+\[
+  V_{mppG} = N_s \cdot V_{mppM} \rightarrow
+  \begin{cases}
+    N_{sMPP}^{min} =\frac{V_{mppMIN}}{V_{mppM}}\\
+    \\
+    N_{sMPP}^{max} = \frac{V_{mppMAX}}{V_{mppM}}
+  \end{cases}
+\]
+\end{frame}
+\begin{frame}[label={sec:org42257d9}]{Ramas en paralelo}
 \begin{itemize}
 \item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}.
 
@@ -98,10 +159,10 @@ este rango.
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org87129df}]{Configuración del generador}
-De los cálculos anteriores se obtiene un conjunto de configuraciones del generador que permiten un buen acoplamiento entre inversor y generador. 
+\begin{frame}[label={sec:org2403ad0}]{Configuración del generador}
+De los cálculos anteriores se obtiene un \alert{conjunto de configuraciones} del generador que permiten un buen acoplamiento entre inversor y generador. 
 
-Para elegir una configuración deben tenerse en cuenta diferentes aspectos:
+Para \alert{elegir una configuración} deben tenerse en cuenta diferentes aspectos:
 
 \begin{itemize}
 \item Configuración eléctrica y ubicación física de los módulos en la
@@ -117,26 +178,29 @@ estructura.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgae882a5}]{Configuración eléctrica y estructura}
+\begin{frame}[label={sec:org55ba8e9}]{Configuración eléctrica y estructura}
 \begin{itemize}
 \item Es recomendable elegir \alert{series} compuestas por un número de módulos
 que puedan ser ubicados en una \alert{única hilera de la estructura}.
 
 \begin{itemize}
-\item \alert{Se facilita el trazado del cableado}: la propia estructura puede
-servir como fijación auxiliar, se evitan cruzamientos indeseados.
+\item \alert{Se facilita el trazado del cableado}:
 
-\item \alert{Se minimiza la influencia de las sombras}: es muy frecuente la
-aparición de sombras entre partes del generador o entre
-seguidores, sombras de forma rectangular y que comienzan afectando
-a las partes bajas de la estructura. Al cablear por hileras, las
-sombras de las hileras bajas no afectan a las hileras
-inmediatamente superiores.
+La propia estructura puede servir como fijación auxiliar, se
+evitan cruzamientos indeseados.
+
+\item \alert{Se minimiza la influencia de las sombras}:
+
+Es muy frecuente la aparición de sombras entre partes del
+generador o entre seguidores, sombras de forma rectangular y que
+comienzan afectando a las partes bajas de la estructura. Al
+cablear por hileras, las sombras de las hileras bajas no afectan
+a las hileras inmediatamente superiores.
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org761918a}]{Inversión y rendimiento económicos}
+\begin{frame}[label={sec:org2d0b3dd}]{Inversión y rendimiento económicos}
 \begin{itemize}
 \item La potencia del generador fotovoltaico está relacionada directamente
 con la \alert{inversión económica} a realizar.
@@ -152,7 +216,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org205c634}]{Terreno ocupado}
+\begin{frame}[label={sec:org581f758}]{Terreno ocupado}
 \begin{itemize}
 \item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el cálculo económico).
 
@@ -160,7 +224,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org01cda50}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:org38190bf}]{Relación de potencias entre generador e inversor}
 Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
 \begin{center}
@@ -169,7 +233,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 
-\begin{frame}[label={sec:org1e777d6}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:org5aa4e74}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Por tanto, una de las preguntas a responder es \alert{que relación debe existir entre la potencia del generador FV y el inversor}.
 \end{itemize}
@@ -183,7 +247,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgde9efc6}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:orgcd0b6b8}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Según el \alert{tipo de sistema} (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
 
@@ -194,9 +258,9 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 \section{Cableado Eléctrico}
-\label{sec:org773439d}
+\label{sec:org6335d27}
 
-\begin{frame}[label={sec:orge4ab8b5}]{Características básicas}
+\begin{frame}[label={sec:org1af8119}]{Características básicas}
 \begin{itemize}
 \item Criterio de caída de tensión.
 
@@ -206,7 +270,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1ccb04f}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org4ad493d}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item En primer lugar se calculan las secciones mediante el criterio de caida de tensión (RBT ITC-BT-07):
 \end{itemize}
@@ -227,7 +291,7 @@ temperatura de operación. Por ejemplo, el cobre:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4ebb4c7}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org651b74d}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
 tensión \(\SI{1.5}{\percent}\) de la tensión nominal.
@@ -237,7 +301,7 @@ cuenta de que \alert{cada zona (DC y AC) tiene su propia tensión nominal}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga365999}]{Cálculo}
+\begin{frame}[label={sec:org9eb0789}]{Cálculo}
 \begin{block}{Ejemplo}
 \begin{itemize}
 \item En una instalación que conduce \(\SI{75}{\ampere}\) a la salida de un
@@ -260,7 +324,7 @@ inversor a la red se realizará con tres cables de sección
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org7c65164}]{Intensidad Máxima Admisible}
+\begin{frame}[label={sec:org86bbdb9}]{Intensidad Máxima Admisible}
 \begin{itemize}
 \item Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
@@ -268,7 +332,7 @@ inversor a la red se realizará con tres cables de sección
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org881b4b7}]{Continua vs. Alterna}
+\begin{frame}[label={sec:org9b89c5b}]{Continua vs. Alterna}
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (\emph{distribución en alterna}) o en un centro específico junto al punto de
