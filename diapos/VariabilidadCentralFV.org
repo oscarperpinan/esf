@@ -301,6 +301,8 @@ Existen tres estrategias principales:
 - acumulación energética combinada con predicción de rampas;
 - predicción de rampas sin acumulación.
 
+* Sistemas de Acumulación 
+
 ** SFCR con acumulación
 
 #+ATTR_LATEX: :width \textwidth
