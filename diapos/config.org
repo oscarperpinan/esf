@@ -31,7 +31,7 @@
 #+LATEX_HEADER: \DeclareSIUnit{\amperehour}{Ah}
 #+LATEX_HEADER: \usepackage{steinmetz}
 #+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-#+LATEX_HEADER: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+#+LATEX_HEADER: \usepackage[symbol, perpage]{footmisc}
 #+BEAMER_HEADER: \beamertemplatenavigationsymbolsempty
 #+BEAMER_HEADER: \setbeamertemplate{footline}[frame number]
 #+BEAMER_HEADER: \setbeamertemplate{itemize items}[triangle]

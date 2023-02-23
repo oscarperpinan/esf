@@ -9,7 +9,7 @@
   \draw (0, 1) node[left] {$G_{t1}$};
   \draw[thin, dashed, color = gray] (0,1) -- (2, 1);
   \draw[thin, color = gray, <->] (1, 5) -- node[left] {$\Delta G$}(1, 1);
-  \draw[thick, color=yellow, fill=yellow!10!white] plot[id=Pbat] function{(x > 2) * (- 0.8*(x - 7) - 4*exp(2)*exp(-x))} node[above right, color = yellow!80!black]{$P_{bat}$};
+  \draw[thick, color=yellow!80!black, fill=yellow!30!white] plot[id=Pbat] function{(x > 2) * (- 0.8*(x - 7) - 4*exp(2)*exp(-x))} node[above right, color = yellow!80!black]{$P_{bat}$};
   \draw[thick, color=red] plot[id=Pfv] function{5*(x < 2) + (x > 2) * (4*exp(2)*exp(-x) + 1)}
     node[above right] {$P_{FV}(t)$};
   \draw[thick, color=black] plot[id=G] function{5*(x < 2) + 1 * (x > 2)}

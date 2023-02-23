@@ -1,4 +1,4 @@
-% Created 2023-02-21 mar 12:58
+% Created 2023-02-23 jue 10:16
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -31,7 +31,7 @@
 \DeclareSIUnit{\amperehour}{Ah}
 \usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[symbol, perpage]{footmisc}
 \parskip=5pt
 \usepackage{tikz}
 \usetheme{Boadilla}
@@ -63,9 +63,9 @@
 \maketitle
 
 \section{Introducción}
-\label{sec:orgb5bc3f1}
+\label{sec:org6ccbf22}
 
-\begin{frame}[label={sec:org3460630}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org87f83c5}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 Los sistemas fotovoltaicos conectados a red alteran las condiciones de
 funcionamiento habitual de la red.
 
@@ -74,11 +74,11 @@ funcionamiento habitual de la red.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9fa6db6}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org44a2cee}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Posibilitan la bidireccionalidad del flujo de potencia, con los
 consiguientes cambios en la tensión de los nodos, y en la corriente
-conducida por las líneas y transformadores\footnote{\url{https://doi.org/10.3390/solar2010003}}.
+conducida por las líneas y transformadores\footnote{\url{https://dx.doi.org/10.3390/solar2010003}}.
 \end{itemize}
 
 \begin{center}
@@ -86,7 +86,7 @@ conducida por las líneas y transformadores\footnote{\url{https://doi.org/10.339
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgae4e6d2}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org2599bf4}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Las rampas de potencia debidas a las fluctuaciones de radiación
 solar pueden entorpecer el adecuado funcionamiento de los equipos
@@ -99,7 +99,7 @@ conectados a la red y los elementos de protección existentes.
 \end{frame}
 
 
-\begin{frame}[label={sec:org8501d84}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
+\begin{frame}[label={sec:org68d4a4b}]{Los Sistemas Fotovoltaicos y la Red Eléctrica}
 \begin{itemize}
 \item Los SFCR pueden proporcionar servicios de apoyo a la red gracias a
 las funcionalidades que incorporan los inversores de conexión a red,
@@ -113,7 +113,7 @@ enfrentarse a huecos de tensión.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd1329bd}]{Variabilidad de la Radiación}
+\begin{frame}[label={sec:org2381742}]{Variabilidad de la Radiación}
 \begin{itemize}
 \item La irradiancia solar es un proceso con inercia y con baja
 probabilidad para mostrar cambios abruptos.
@@ -128,7 +128,7 @@ altas.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb7d66ea}]{Variabilidad de la Radiación}
+\begin{frame}[label={sec:org9548fb8}]{Variabilidad de la Radiación}
 \begin{itemize}
 \item El nivel de fluctuación depende del comportamiento de la atmósfera (mayor en días parcialmente cubiertos).
 \end{itemize}
@@ -140,9 +140,9 @@ altas.
 
 
 \section{Incertidumbre y Predicción}
-\label{sec:orga5bdb1e}
+\label{sec:orgf3c27c4}
 
-\begin{frame}[label={sec:orga430faa}]{Generación y Demanda}
+\begin{frame}[label={sec:org4f52207}]{Generación y Demanda}
 La \alert{casación entre generación y demanda} que se consigue en las redes
 eléctricas se basa en la \alert{programación} de las diferentes unidades de
 \alert{generación} disponibles para suministrar la \alert{demanda prevista} y para
@@ -155,7 +155,7 @@ demanda.
 \end{frame}
 
 
-\begin{frame}[label={sec:orga457f21}]{Programación de la generación}
+\begin{frame}[label={sec:orgf582c84}]{Programación de la generación}
 Esta programación se produce en \alert{escalas y horizontes temporales diversos} y se \alert{actualiza de forma sistemática} de acuerdo con las variaciones previstas en la predicción de la demanda.
 
 \begin{center}
@@ -168,7 +168,7 @@ Esta programación se produce en \alert{escalas y horizontes temporales diversos
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfbba471}]{Participación masiva de la fotovoltaica}
+\begin{frame}[label={sec:orgb539ca9}]{Participación masiva de la fotovoltaica}
 La \alert{inclusión masiva} de sistemas fotovoltaicos en la red \alert{modifica el
 equilibrio} existente y puede implicar el uso de las reservas de
 generación previstas originalmente para asumir las variaciones de la
@@ -180,29 +180,29 @@ demanda.
 \end{frame}
 
 
-\begin{frame}[label={sec:orga14890d}]{Predicción de la Potencia}
+\begin{frame}[label={sec:org93bfbab}]{Predicción de la Potencia}
 En este contexto, el reto no es tanto la variabilidad como la
 \alert{predicción}:
 
 \begin{itemize}
-\item La realización de predicciones en horizontes horarios o diarios de
+\item La realización de \alert{predicciones en horizontes horarios o diarios} de
 la potencia generada por un sistema fotovoltaico o por un grupo de
-sistemas es crucial para facilitar la integración de sistemas
+sistemas es \alert{crucial para facilitar la integración} de sistemas
 fotovoltaicos en redes eléctricas.
 
 \item La predicción de radiación solar y potencia de sistemas
-fotovoltaicos es un área de investigación de plena actualidad.
+fotovoltaicos es un \alert{área de investigación de plena actualidad}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc34868b}]{Ejemplo: proyecto europeo PVCROPS}
+\begin{frame}[label={sec:org973571f}]{Ejemplo: proyecto europeo PVCROPS}
 \begin{itemize}
-\item Herramienta de aprendizaje automático o \emph{machine learning}
-entrenada con series históricas de predicciones NWP y medidas de
-potencia eléctrica (30 días en la serie temporal de
-entrenamiento)\footnote{\url{http://dx.doi.org/10.1016/j.solener.2015.03.006}}.
-\item Predicción de potencia AC con resolución horaria y un horizonte
-temporal de 1 día.
+\item Herramienta de \alert{aprendizaje automático} o \emph{machine learning}
+entrenada con \alert{series históricas} de \alert{predicciones NWP} y \alert{medidas de
+potencia eléctrica} (30 días en la serie temporal de
+entrenamiento)\footnote{\url{https://dx.doi.org/10.1016/j.solener.2015.03.006}}.
+\item \alert{Predicción de potencia AC} con resolución \alert{horaria} y un horizonte
+temporal de \alert{1 día}.
 \end{itemize}
 
 
@@ -211,10 +211,10 @@ temporal de 1 día.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org688684d}]{Ejemplo: proyecto europeo PVCROPS}
-Se emplean como entradas las predicciones de variables
-meteorológicas generadas por modelos de predicción meteorológica
-numérica e índices de variación espacial y temporal estimados con
+\begin{frame}[label={sec:org195422a}]{Ejemplo: proyecto europeo PVCROPS}
+Se emplean como entradas las predicciones de \alert{variables
+meteorológicas} generadas por modelos de predicción meteorológica
+numérica e \alert{índices de variación espacial y temporal} estimados con
 las variables meteorológicas.
 
 \begin{center}
@@ -223,8 +223,8 @@ las variables meteorológicas.
 \end{frame}
 
 
-\begin{frame}[label={sec:orga68bb6f}]{Ejemplo: proyecto europeo PVCROPS}
-Genera predicciones probabilísticas, entregando tanto la mediana de la
+\begin{frame}[label={sec:orgfa02aa8}]{Ejemplo: proyecto europeo PVCROPS}
+Genera \alert{predicciones probabilísticas}, entregando tanto la mediana de la
 predicción como un intervalo de confianza, que permite cuantificar la
 fiabilidad de la predicción, y que puede servir como medida indirecta
 de la variabilidad futura.
@@ -239,15 +239,19 @@ de la variabilidad futura.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgccaf2a1}]{Predicciones agregadas}
+\begin{frame}[label={sec:org5d6368f}]{Predicciones agregadas}
 Las predicciones obtenidas mejoran cuando las predicciones se aplican
-a un conjunto de sistemas.
+a un conjunto de sistemas.\footnote{\url{https://dx.doi.org/10.1002/pip.1033}}
+
+\begin{center}
+\includegraphics[height=0.7\textheight]{../figs/ForecastEnsembleErrorReduction.png}
+\end{center}
 \end{frame}
 
 \section{Variabilidad de la Potencia}
-\label{sec:org3438aba}
+\label{sec:org8256467}
 
-\begin{frame}[label={sec:org2404499}]{Variabilidad Conjunta}
+\begin{frame}[label={sec:org38e870b}]{Variabilidad Conjunta}
 La variabilidad presente en la irradiancia solar se \alert{atenúa} en la potencia AC:
 \begin{itemize}
 \item por la \alert{dispersión} espacial \alert{entre diferentes centrales}.
@@ -255,11 +259,11 @@ La variabilidad presente en la irradiancia solar se \alert{atenúa} en la potenc
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf2b6c02}]{Dispersión espacial entre centrales}
+\begin{frame}[label={sec:org3d9ed67}]{Dispersión espacial entre centrales}
 \begin{itemize}
 \item En términos generales, la \alert{dispersión espacial de sistemas
 fotovoltaicos diferentes} conectados a la misma red \alert{atenúa} la
-variabilidad conjunta\footnote{\url{https://doi.org/10.1002/pip.1127}}.
+variabilidad conjunta\footnote{\url{https://dx.doi.org/10.1002/pip.1127}}.
 
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/Variabilidad_DispersionGeografica_Plantas.png}
@@ -275,25 +279,25 @@ esencialmente \alert{incorreladas}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5a77ca7}]{Dispersión espacial dentro de una central}
+\begin{frame}[label={sec:org88ae985}]{Dispersión espacial dentro de una central}
 En términos generales, la \alert{dispersión espacial} de generadores
 fotovoltaicos pertenecientes a \alert{una misma central} \alert{atenúa} la
-variabilidad conjunta\footnote{\url{https://doi.org/10.1002/pip.1016}}.
+variabilidad conjunta\footnote{\url{https://dx.doi.org/10.1002/pip.1016}}.
 
 \begin{center}
 \includegraphics[height=0.7\textheight]{../figs/Variabilidad_DispersionGeografica_Planta.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2ed7bba}]{Dispersión espacial dentro de una central}
-La correlación entre la potencia de cada inversor \alert{depende} de la \alert{resolución temporal}, la \alert{distancia} entre los inversores, y el \alert{nivel de fluctuación del día} en cuestión\footnote{\url{http://dx.doi.org/10.1016/j.solener.2012.1}}.
+\begin{frame}[label={sec:org0ff7066}]{Dispersión espacial dentro de una central}
+La correlación entre la potencia de cada inversor \alert{depende} de la \alert{resolución temporal}, la \alert{distancia} entre los inversores, y el \alert{nivel de fluctuación del día} en cuestión\footnote{\url{https://dx.doi.org/10.1016/j.solener.2012.12.004}}.
 
 \begin{center}
 \includegraphics[height=0.6\textheight]{../figs/corDistMatrix_nls.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgcfa9691}]{Dispersión espacial dentro de una central}
+\begin{frame}[label={sec:org61efea9}]{Dispersión espacial dentro de una central}
 Escalas temporales bajas (\(\tau <\qty{1}{\min}\)): correlaciones bajas.
 
 \begin{center}
@@ -304,7 +308,7 @@ Escalas temporales bajas (\(\tau <\qty{1}{\min}\)): correlaciones bajas.
   \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org26a8301}]{Dispersión espacial dentro de una central}
+\begin{frame}[label={sec:org261e8f1}]{Dispersión espacial dentro de una central}
 Escalas temporales intermedias: la correlación depende fuertemente del nivel de fluctuación diario.
 
 \begin{center}
@@ -315,7 +319,7 @@ Escalas temporales intermedias: la correlación depende fuertemente del nivel de
   \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org4998fdc}]{Dispersión espacial dentro de una central}
+\begin{frame}[label={sec:orgded22e6}]{Dispersión espacial dentro de una central}
 Escalas temporales altas, \(\tau > \qty{20}{\min}\): correlaciones altas y positivas que decrecen de forma exponencial con la distancia; clara dependencia con el nivel de fluctuación diaria.
 
 \begin{center}
@@ -326,13 +330,13 @@ Escalas temporales altas, \(\tau > \qty{20}{\min}\): correlaciones altas y posit
   \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org505d75c}]{Normativas de red}
+\begin{frame}[label={sec:orgf67bf1d}]{Normativas de red}
 \begin{itemize}
-\item La variabilidad en escalas de tiempo bajas puede influir en mayor o
-menor medida en el funcionamiento de la red eléctrica.
-\item Existencia de normativas y recomendaciones para la integración de
+\item La \alert{variabilidad} en escalas de tiempo bajas \alert{puede influir} en mayor o
+menor medida en el \alert{funcionamiento de la red eléctrica}.
+\item Existencia de \alert{normativas y recomendaciones} para la integración de
 sistemas fotovoltaicos en la red.
-\item Ejemplo clásico: Autoridad Eléctrica de Puerto Rico incluye en su
+\item \alert{Ejemplo clásico}: Autoridad Eléctrica de Puerto Rico incluye en su
 normativa el concepto de rampa para cuantificar las fluctuaciones
 admisibles:
 \end{itemize}
@@ -342,16 +346,16 @@ A 10\% per minute rate (based on AC contracted capacity) limitation shall be enf
 \end{quote}
 \end{frame}
 
-\begin{frame}[label={sec:org5e787f7}]{Definiciones de rampas}
-Uno de los problemas principales en este requerimiento (y otros similares) es que, aunque es fácil identificar visualmente una rampa en una serie temporal de potencia, no existe consenso en una definición formal que permita identificarla y cuantificarla.
+\begin{frame}[label={sec:org69bae41}]{Definiciones de rampas}
+Uno de los problemas principales en este requerimiento (y otros similares) es que, aunque \alert{es fácil identificar visualmente una rampa} en una serie temporal de potencia, \alert{no existe consenso en una definición formal} que permita identificarla y cuantificarla.
 \end{frame}
 
-\begin{frame}[label={sec:orgb541d62}]{Ejemplos de definiciones de rampas}
+\begin{frame}[label={sec:orge7c250a}]{Ejemplos de definiciones de rampas}
 \begin{itemize}
 \item Existe una rampa al inicio de un intervalo temporal si la magnitud del cambio en un instante temporal posterior es mayor que un umbral predeterminado.
 \end{itemize}
 \[ 
-\left| P(t +\Delta_t) - P(t)\right| > \tau
+\left| P(t +\Delta_t) - P(t)\right| > \psi
 \]
 
 \begin{itemize}
@@ -360,14 +364,14 @@ valores máximo y mínimo supera un determinado umbral.
 \end{itemize}
 \[
 \max(\{P_t: t = t_0, \dots, t_0+\Delta_t\}) - \min(\{P_t: t=t_0,
-\dots, t_0+\Delta_t\}) > \tau
+\dots, t_0+\Delta_t\}) > \psi
 \]
 
 \begin{itemize}
 \item Existe una rampa dentro de un intervalo si el ratio entre el valor absoluto de la diferencia entre las medidas de potencia en dos instantes temporales, y la longitud del intervalo supera un determinado umbral.
 \end{itemize}
 \[
-\frac{\left|P(t + \Delta_t) - P(t)\right|}{\Delta_t} > \tau
+\frac{\left|P(t + \Delta_t) - P(t)\right|}{\Delta_t} > \psi
 \]
 
 \begin{itemize}
@@ -375,35 +379,35 @@ valores máximo y mínimo supera un determinado umbral.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgee5ccfc}]{Limitación de rampas}
+\begin{frame}[label={sec:org1c2afc3}]{Limitación de rampas}
 La limitación de las rampas de los sistemas fotovoltaicos es un
 requerimiento que se debe afrontar, principalmente en el caso de las
 centrales fotovoltaicas de gran tamaño.
 
-Existen tres estrategias principales:
+Existen \alert{tres estrategias} principales:
 \begin{itemize}
-\item el uso de sistemas de acumulación energética;
-\item acumulación energética combinada con predicción de rampas;
-\item predicción de rampas sin acumulación.
+\item el uso de \alert{sistemas de acumulación} energética;
+\item \alert{acumulación} energética combinada \alert{con predicción} de rampas;
+\item \alert{predicción} de rampas \alert{sin acumulación}.
 \end{itemize}
 \end{frame}
 
 \section{Sistemas de Acumulación}
-\label{sec:org5f7476c}
+\label{sec:orgbe7335e}
 
-\begin{frame}[label={sec:org42bcee9}]{SFCR con acumulación}
+\begin{frame}[label={sec:org28183a6}]{SFCR con acumulación}
 \begin{center}
 \includegraphics[width=\textwidth]{../figs/EsquemaSFCRAcumulacion.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org199f82e}]{Suavizado de rampas con acumulación}
+\begin{frame}[label={sec:org636f547}]{Suavizado de rampas con acumulación}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SuavizadoRampasAcumulacion.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org48a4cad}]{Cálculo del sistema de acumulación}
+\begin{frame}[label={sec:org748b605}]{Cálculo del sistema de acumulación}
 La inclusión de sistemas de acumulación conlleva \alert{aumentos en los
 costes} de instalación y en la \alert{complejidad y mantenimiento} del
 sistema.
@@ -425,7 +429,7 @@ acumulación necesaria.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orge5ffdcb}]{Modelo de la peor fluctuación\footnote{\url{http://dx.doi.org/10.1016/j.solener.2013.10.037}}}
+\begin{frame}[label={sec:org309b9de}]{Modelo de la peor fluctuación\footnote{\url{https://dx.doi.org/10.1016/j.solener.2013.10.037}}}
 Un pulso de irradiancia se transforma en una exponencial decreciente (la central actúa como filtro paso bajo.
 
 \begin{center}
@@ -433,15 +437,18 @@ Un pulso de irradiancia se transforma en una exponencial decreciente (la central
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga2536b3}]{Modelo de la peor fluctuación}
+\begin{frame}[label={sec:org07cc1bf}]{Modelo de la peor fluctuación}
 El sistema de acumulación regula la potencia de salida para limitar la rampa. 
+\[
+  P_{bat} = P_{lim} - P_{FV}
+\]
 
 \begin{center}
 \includegraphics[height=0.75\textheight]{../figs/ModeloPeorFluctuacion.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgaeea843}]{Modelo de la peor fluctuación}
+\begin{frame}[label={sec:orgd8a4555}]{Modelo de la peor fluctuación}
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{center}
@@ -459,14 +466,14 @@ El sistema de acumulación regula la potencia de salida para limitar la rampa.
 \]
 
 \begin{itemize}
-\item \(\tau [\unit{\second}]\): constante de tiempos de la fluctuación
+\item \(\tau [\unit{\second}]\): constante de tiempo de la fluctuación
 \item \(L_{min} [\unit{\kilo\meter}]\): dimensión menor de la central
 \end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org3ac78cf}]{Modelo de la peor fluctuación}
+\begin{frame}[label={sec:org230a95b}]{Modelo de la peor fluctuación}
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{center}
@@ -493,7 +500,7 @@ El sistema de acumulación regula la potencia de salida para limitar la rampa.
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgc77e6ec}]{Ejemplo: cálculo de potencia}
+\begin{frame}[label={sec:orgf281eb7}]{Ejemplo: cálculo de potencia}
 Datos:
 \begin{align*}
   P_g^* &= \qty{38.5}{\mega\watt}\\
@@ -508,7 +515,7 @@ Resultados:
 \end{align*}
 \end{frame}
 
-\begin{frame}[label={sec:orgc13eeda}]{Ejemplo: cálculo de capacidad}
+\begin{frame}[label={sec:org6dbec0e}]{Ejemplo: cálculo de capacidad}
 Datos:
 \begin{align*}
   P_g^* &= \qty{38.5}{\mega\watt}\\
@@ -522,27 +529,30 @@ Resultados:
 \end{align*}
 \end{frame}
 
-\begin{frame}[label={sec:org0e74b1b}]{Tecnologías de acumulación\footnote{EASE-EERA Energy Storage Technology Development Roadmap}}
+\begin{frame}[label={sec:org7936b24}]{Tecnologías de acumulación\footnote{\href{https://ease-storage.eu/publication/ease-eera-energy-storage-technology-development-roadmap-2017/}{EASE-EERA Energy Storage Technology Development Roadmap}}}
 \begin{center}
-\includegraphics[width=\textwidth]{../figs/ComparativaTecnologiasAcumulacion.png}
-\end{center}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=0.5\textheight]{../figs/ComparativaTecnologiasAcumulacion.png}};
+      \draw[red,ultra thick,rounded corners] (7,0) rectangle (8.2, 0.5\textheight);
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2ef52c0}]{Tecnologías de acumulación\footnote{\url{http://dx.doi.org/10.1016/j.apenergy.2014.09.081}}}
+\begin{frame}[label={sec:org3c6be95}]{Tecnologías de acumulación\footnote{\url{https://dx.doi.org/10.1016/j.apenergy.2014.09.081}}}
 \begin{center}
 \includegraphics[height=0.8\textheight]{../figs/SistemasAcumulacion_DensidadPotenciaEnergia.png}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org56a8f00}]{Otros usos del sistema de acumulación}
-Los sistemas de acumulación pueden proporcionar servicios adicionales\footnote{\url{https://doi.org/10.1016/j.apenergy.2020.115213}}:
+\begin{frame}[label={sec:orga5f7c44}]{Otros usos del sistema de acumulación}
+Los sistemas de acumulación pueden proporcionar servicios adicionales\footnote{\url{https://dx.doi.org/10.1016/j.apenergy.2020.115213}}:
 
 \begin{itemize}
-\item Regulación de frecuencia: mantener la frecuencia de la red dentro de unos límites.
-\item Emulación de inercia: evitar cambios rápidos tras una descompensación de potencia.
-\item \emph{Black start}: recuperar el sistema eléctrico después de un apagón.
-\item \emph{Capacity Firming}: mantener el nivel de generación durante un período de tiempo.
-\item \emph{Arbitrage} o \emph{time-shift}: comprar energía cuando es barata, vender cuando es cara.
+\item \alert{Regulación de frecuencia}: mantener la frecuencia de la red dentro de unos límites.
+\item \alert{Emulación de inercia}: evitar cambios rápidos tras una descompensación de potencia.
+\item \alert{\emph{Black start}}: recuperar el sistema eléctrico después de un apagón.
+\item \alert{\emph{Capacity Firming}}: mantener el nivel de generación durante un período de tiempo.
+\item \alert{\emph{Arbitrage}} o \emph{time-shift}: comprar energía cuando es barata, vender cuando es cara.
 \end{itemize}
 \end{frame}
 \end{document}
