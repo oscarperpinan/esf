@@ -1221,6 +1221,229 @@ En todo caso, es posible demostrar \cite{Lorenzo2005} que la elección
 de esta relación no es tan importante como elegir un inversor con
 buena curva de eficiencia. 
 
+\subsection{Cableado}
+
+La elección de la sección de cableado en sistemas fotovoltaicos se
+basa principalmente en dos criterios: el térmico y el de la caída de
+tensión. Ambos se deben a la resistencia ofrecida por el cable.  El
+primero está relacionado con el efecto Joule, que supone una emisión
+de calor que debe quedar por debajo de la soportada por el cable.  El
+segundo tiene en cuenta la caída de tensión debida al paso de
+corriente a través de la resistencia equivalente del cable.
+
+\subsubsection{Criterio de caída de tensión}
+\label{sec:criterio-caida-tension}
+
+Para calcular la sección necesaria según el criterio de caída de
+tensión son aplicables las siguientes ecuaciones\footnote{En las ecuaciones se ha despreciado la inductancia de los
+  cables, se ha considerado que el inversor trabaja con factor de
+  potencia unidad,
+  $\cos(\phi)=1$\nomenclature[cosphi]{$\cos(\phi)$}{Factor de potencia
+    de una instalación eléctrica}, y se supone que el material
+  conductor empleado es el cobre. %
+} para los tramos de
+corriente continua ($S_{dc}$), para el tramo ente
+inversor y punto de conexión a red en sistemas monofásicos ($S_{1ac}$), y para sistemas trifásicos ($S_{3ac}$).
+
+\begin{align}
+    S_{dc} &= \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
+    S_{1ac} &= \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
+    S_{3ac} &= \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
+\end{align}
+siendo $S_{dc}$ la sección de los conductores de corriente continua,
+$L_{dc}$ la distancia a cubrir con un circuito de corriente continua
+(el factor 2 tiene en cuenta que se necesitan dos conductores para
+este circuito), $\gamma_\theta$ la conductividad del conductor a una temperatura
+de operación determinada\footnote{La conductividad del cobre a 20ºC de
+  temperatura de operación es $\gamma_{20} =\SI{58}{\meter\per\ohm\per\milli\meter\squared}$ mientras que a 70ºC es
+$\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}$. Cuando un cable está en operación su temperatura alcanza este valor, por lo que es adecuado emplear $\gamma_{70}$.},
+$I_{dc}$ la corriente nominal (habitualmente la del punto MPP) que
+circula por el circuito de corriente continua, y $\Delta V_{dc}$ la
+caída de tensión existente entre la entrada y la salida del circuito
+de corriente continua. La nomenclatura es similar en las otras dos
+ecuaciones.
+
+\nomenclature[Sdc]{$S_{dc}$}{Sección de
+  un conductor de corriente continúa}
+\nomenclature[S1ac]{$S_{1ac}$}{Sección de un conductor de corriente
+  alterna monofásica}
+\nomenclature[S3ac]{$S_{3ac}$}{Sección de un
+  conductor de corriente alterna trifásica}
+\nomenclature[ldc]{$L_{dc}$}{Distancia a cubrir con circuito de
+  corriente continúa}
+\nomenclature[l1ac]{$L_{1ac}$}{Distancia a
+  cubrir con un un circuito de corriente alterna monofásica}
+\nomenclature[l3ac]{$L_{3ac}$}{Distancia a cubrir con un circuito de
+  corriente alterna trifásica}
+\nomenclature[DeltaVdc]{$\Delta V_{dc}$}{Caida de tensión en un
+  circuito de corriente continua}
+\nomenclature[DeltaV1ac]{$\Delta V_{1ac}$}{Caida de tensión en un
+  circuito de corriente alterna monofásica}
+\nomenclature[DeltaV3ac]{$\Delta V_{3ac}$}{Caida de tensión en un
+  circuito de corriente alterna trifásica}
+\nomenclature[gamma_theta]{$\gamma_\theta$}{Conductividad de un conductor a una temperatura de operación determinada}
+
+Según el apartado 5 de la ITC-BT-40, la caída máxima de tensión de la
+tensión nominal entre el generador y el punto de interconexión a la
+Red de Distribución Pública o a la instalación interior, no será
+superior al $\SI{1.5}{\percent}$ para la intensidad nominal.
+Habitualmente se aplica este mismo porcentaje de forma separada para
+los circuitos de continua y de alterna, teniendo en cuenta que cada
+zona (DC y AC) tiene su propia tensión nominal, tal y como se
+especifica en las anteriores ecuaciones.
+
+Por ejemplo, en una instalación que conduce $\SI{75}{\ampere}$ a la
+salida de un inversor trifásico, situado este a $\SI{100}{\meter}$ de
+la conexión a red, se deberá utilizar un cable de sección:
+
+\[
+  S=\frac{\sqrt{3}\cdot100\cdot75}{48\cdot \SI{1.5}{\percent}\cdot400}=\SI{45.1}{\milli\meter\squared}
+\]
+
+Dado que la sección de los cables está normalizada, se deberá optar
+por la sección inmediatamente superior, y por tanto la conexión del
+inversor a la red se realizará con tres cables de sección
+$S=\SI{50}{\milli\meter\squared}$.
+
+Además, hay que tener en cuenta que el requisito de caída de tensión
+afecta a la totalidad del circuito: cuando un circuito está dividido
+en varios tramos (por ejemplo, por el uso de cajas de paralelos), la
+caída de tensión total del circuito es la suma de las respectivas
+caídas en cada uno de los tramos, y es esta suma a la que aplica el
+porcentaje anterior. Al existir varios tramos y una única condición
+existe un grado de libertad que permite fijar la sección de uno de los
+tramos u optimizar el volumen total de conductor empleado. Supongamos
+que el circuito de corriente continua está compuesto por un tramo
+entre los generadores fotovoltaicos y una caja de paralelos, y por otro
+tramo entre la caja de paralelos y el inversor. Se puede demostrar que
+la fracción de caída de tensión en el tramo de la caja de paralelos al
+inversor es \cite{Perpinan2012b}:
+\begin{equation}
+  \frac{\Delta U_{inv}}{\Delta U}= \frac{1}{1+\sqrt{\frac{\sum_{i=1}^nL_{i}^2
+        \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}}
+\end{equation}
+siendo $\Delta U$ la caída de tensión admisible en el circuito,
+$\Delta U_{inv}$ la caída en el tramo desde una caja de paralelos
+hasta la entrada del inversor, $L_i$ la longitud de cableado desde el
+generador hasta la caja de paralelos, $L_{inv}$ la longitud de
+cableado desde la caja hasta el inversor, $I_i$ la corriente que
+circula por este tramo, e $I_{inv}$ la corriente total en el circuito.
+
+Tomemos como ejemplo una instalación en la que se agrupan en una caja
+de paralelos las salidas los generadores ubicados en 20 seguidores,
+cada uno de ellos con $\qty{30}{\ampere}$. Esta caja de paralelos está
+ubicada a $\qty{200}{\meter}$ del inversor y a $\qty{30}{\meter}$ de
+todos los seguidores.
+
+\begin{equation*}
+  \frac{\Delta U_{inv}}{\Delta U} =\frac{1}{1 + \sqrt{\frac{20 \cdot 30^2 \cdot 30}{200^2 \cdot 600 }}} = \num{0.87}
+\end{equation*}
+
+Si la tensión nominal de los generadores es de $\qty{500}{\volt}$,
+este resultado implica que la sección del tramo de la caja de
+paralelos al inversor se diseñará con una caída de tensión de
+$\num{0.87} \cdot \num{1.5} \cdot 500 /100 = \qty{6.525}{\volt}$. El
+tramo desde los generadores hasta la caja de paralelos se diseñará con
+una caída de tensión de
+$(1 - \num{0.87}) \cdot \num{1.5} \cdot 500 /100 =
+\qty{0.975}{\volt}$.
+
+\subsubsection{Criterio térmico}
+\label{sec:criterio-termico}
+
+Una vez calculadas las secciones con el criterio de caída de tensión,
+es necesario comprobar el cumplimiento del criterio térmico. Según el
+apartado 5 de la ITC-BT-40, el cable debe ser dimensionado para una
+intensidad no inferior al $125\%$ de la máxima intensidad del
+generador.
+
+En la zona de corriente de continua esta intensidad máxima se
+corresponde con la corriente de cortocircuito del circuito en
+análisis. Para la sección obtenida con el criterio de caída de
+tensión, el valor $1.25 \cdot I_{sc}$ debe ser inferior a la
+intensidad máxima admisible del cable para sus condiciones de
+servicio.
+
+Las tablas de la ITC-BT-07, recogen valores de intensidad máxima
+admisible para el conjunto de secciones normalizadas para diferentes
+conductores (cobre y aluminio), aislamiento (XLPE, EPR y PVC) y tipo
+de instalación (enterrados, al aire, etc.). Además, existen diversos
+factores de corrección dependiendo de la temperatura ambiente, de las
+condiciones del terreno, de la agrupación de los cables, etc.
+
+En general, debido a la combinación de distancias grandes y corrientes
+de bajo valor, las secciones que resultan del criterio de caída de
+tensión aplicado a los sistemas fotovoltaicos son capaces de conducir
+la corriente del sistema, salvo en conexiones de corta longitud.
+
+Para más detalles sobre el proceso de cálculo, se invita al lector a
+repasar el ejercicio \ref{EjercicioCableado} y a la lectura del Anexo
+2 a las Guías de Aplicación del
+REBT\footnote{\url{https://industria.gob.es/Calidad-Industrial/seguridadindustrial/instalacionesindustriales/baja-tension/Documents/bt/guia_bt_anexo_2_sep03R1.pdf}}.
+
+\subsubsection{Distribución en continua o alterna}
+\label{sec:cableado-dc-ac}
+
+En una planta fotovoltaica con varios inversores trifásicos existe la
+posibilidad de ubicar los inversores debajo del generador FV
+(\emph{distribución en alterna}) o en un centro específico junto al
+punto de conexión a red (\emph{distribución en continua}). ¿Cuál es la
+tensión de trabajo en continua que permite optar por una u otra?. Para
+simplificar la resolución de esta cuestión se emplearán las siguientes
+suposiciones:
+\begin{itemize}
+\item El inversor trabaja con una eficiencia constante de $0.95$.
+\item El inversor no genera potencia reactiva.
+\item La caída de tensión admisible es $\Delta V=1.5\%\cdot U_{nom}$, siendo
+$U_{nom}$ la tensión de trabajo en cada una de las dos opciones.
+Para trifásica, sea $U_{nom}=\SI{400}{\volt}$.
+\end{itemize}
+
+El punto crítico que decide sobre el tipo de distribución a emplear
+es aquel en el que la masa de cableado coincide en las dos opciones.
+Dado que en trifásica se emplean 3 cables (en general, los inversores
+fotovoltaicos no exigen el cableado del neutro) y 2 en monofásica,
+esta condición es $2\cdot S_{dc}l=3\cdot S_{3ac}l$, donde $l$ es
+la longitud de cable a emplear en cuaquiera de las dos opciones. La
+sección de la distribución en continua se calcula con:
+
+\[
+  S_{dc}=\frac{2\cdot l\cdot I_{dc}}{\gamma_\theta\cdot\Delta U_{dc}}
+\]
+mientras que la correspondiente a una distribución trifásica se calcula
+con:
+\[
+  S_{3ac}=\frac{\sqrt{3}\cdot l\cdot I_{3ac}}{\gamma_\theta\cdot\Delta U_{3ac}}
+\]
+donde se supone que el factor de potencia del inversor es la unidad.
+
+Estas expresiones pueden reescribirse utilizando la relación entre
+potencia, tensión y corriente:
+
+\begin{align*}
+  S_{dc}&=\frac{2\cdot l\cdot P_{dc}}{\gamma_\theta\cdot1.5\%\cdot U_{dc}^{2}}\\
+  S_{3ac}&=\frac{l\cdot P_{ac}}{\gamma_\theta\cdot1.5\%\cdot U_{ac}^{2}}
+\end{align*}
+
+
+Con estas ecuaciones, la condición primera se expresa de la siguiente
+forma:
+
+\[
+  2\cdot\frac{2\cdot l\cdot P_{dc}}{\gamma_\theta\cdot1.5\%\cdot U_{dc}^{2}}=3\cdot\frac{l\cdot P_{ac}}{\gamma_\theta\cdot1.5\%\cdot U_{ac}^{2}}
+\]
+y teniendo en cuenta las suposiciones propuestas se puede simplificar para obtener la siguiente relación:
+\[
+  \frac{4}{U_{dc}^{2}}=\frac{3\cdot0.95}{400^{2}}
+\]
+que se resuelve con el resultado final:
+\[
+  U_{dc}\simeq\SI{473}{\volt}
+\]
+Por tanto, si la configuración del generador fotovoltaico es de tal
+forma que su tensión $U_{mpp}$ promedio es igual o superior a este
+valor, la distribución en continua es preferible a la distribución en
+alterna desde el punto de vista de masa de conductor necesario.
 
 \section{Sombras en generadores}
 \label{sec:sombras}
