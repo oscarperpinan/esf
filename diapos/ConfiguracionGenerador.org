@@ -212,12 +212,51 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 ** Criterio de Caída de Tensión
 
 - Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
-  tensión $\SI{1.5}{\percent}$ de la tensión nominal.
+  tensión $\qty{1.5}{\percent}$ de la tensión nominal.
 
 - Para aplicar correctamente este porcentaje es importante caer en la
   cuenta de que *cada zona (DC y AC) tiene su propia tensión nominal*.
 
-** Cálculo
+- Cuando un circuito (en DC o AC) está dividido en varios tramos (por
+  ejemplo, por el uso de cajas de paralelos), la caída de tensión
+  total del circuito es la suma de las respectivas caídas en cada uno
+  de los tramos.
+
+** Cálculo por tramos (DC)
+- Al existir dos tramos y una única condición existe un grado de libertad que permite fijar la sección de uno de los tramos u optimizar el volumen total de conductor empleado.
+
+- La fracción de caída de tensión en el tramo de la caja al inversor es:  
+  #+begin_export latex
+  \begin{equation*}
+    \frac{\Delta U_{inv}}{\Delta U}= \frac{1}{1+\sqrt{\frac{\sum_{i=1}^nL_{i}^2
+          \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}}
+  \end{equation*}
+  #+end_export
+
+  - $\Delta U$ la caída de tensión admisible en el circuito,
+
+  - $\Delta U_{inv}$ la caída en el tramo desde una caja de paralelos hasta la entrada del inversor,
+
+  - $L_i$ la longitud de cableado desde el generador hasta la caja de paralelos,
+  - $L_{inv}$ la longitud de cableado desde la caja hasta el inversor,
+
+  - $I_i$ la corriente que circula por este tramo,
+
+  - $I_{inv}$ la corriente total en el circuito.
+
+** Ejemplo de cálculo por tramos (DC)
+En una instalación se agrupan en una caja de paralelos las salidas los generadores ubicados en 20 seguidores, cada uno de ellos con $\qty{30}{\ampere}$. Esta caja de paralelos está ubicada a $\qty{200}{\meter}$ del inversor y a $\qty{30}{\meter}$ de todos los seguidores.
+#+begin_export latex
+\begin{align*}
+  \frac{\Delta U_{inv}}{\Delta U} &= \frac{1}{1+\sqrt{\frac{\sum_{i=1}^nL_{i}^2
+                                    \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}} = \\
+                                  &=\frac{1}{1 + \sqrt{\frac{20 \cdot 30^2 \cdot 30}{200^2 \cdot 600 }}} = \\
+                                  &= \num{0.87}
+\end{align*}
+#+end_export
+Si la tensión nominal de los generadores es de $\qty{500}{\volt}$, este resultado implica que la sección del tramo de la caja de paralelos al inversor se diseñará con una caída de tensión de $\num{0.87} \cdot \num{1.5} \cdot 500 /100 = \qty{6.525}{\volt}$. El tramo desde los generadores hasta la caja de paralelos se diseñará con una caída de tensión de $(1 - \num{0.87}) \cdot \num{1.5} \cdot 500 /100 = \qty{0.975}{\volt}$.
+
+** Cálculo AC
 
 *** Ejemplo
 - En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un
