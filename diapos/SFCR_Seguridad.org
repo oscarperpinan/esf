@@ -202,7 +202,7 @@ objetivo:
 
 
 *** Contacto Directo IT
-#+ATTR_LATEX: :height 0.9\textheight
+#+ATTR_LATEX: :height 0.5\textheight
 [[../figs/ContactoDirectoIT_Capacidad.pdf]]
 
 $$I_{f}\leq100\, mA\Longrightarrow R_{iso}\geq10\cdot V_{ocG}-R_{H}$$
@@ -647,7 +647,7 @@ tomas a tierra que pertenecen a otras instalaciones eléctricas.
 
 - Un sistema IT es intrínsecamente seguro.
 - No obstante, la corriente de defecto máxima es $I_f=\SI{30}{\milli\ampere}$ (vigilante de aislamiento).
-- El sistema de puesta a tierra garantizará que cualquier masa no pueda dar lugar a tensiones de contacto superiores a $V_{max}=\SI{50}{\volt}$.
+- El sistema de puesta a tierra garantizará que cualquier masa no pueda dar lugar a tensiones de contacto superiores a $V_{max}=\SI{24}{\volt}$[fn:1].
 
 #+begin_export latex
 $$R_{tp}\leq\frac{V_{max}}{I_{f}} = \qty{800}{\ohm}$$
@@ -655,9 +655,21 @@ $$R_{tp}\leq\frac{V_{max}}{I_{f}} = \qty{800}{\ohm}$$
 
 *** Cálculo de la resistencia de tierra
 
-- *Resistencia de puesta a tierra*: Para una pica vertical
-  $R_{t}=\frac{\rho}{L}$, siendo $\rho$ la resistividad del terreno y
-  $L$ la longitud de la pica.
+- *Resistencia de pica vertical*
+
+  #+begin_export latex
+  \[R_{tp}=\frac{\rho}{L_p}\]
+  #+end_export
+  siendo $\rho$ la resistividad del terreno y $L_p$ la longitud de la pica.
+
+- *Resistencia de un conductor enterrado horizontalmente*:
+  
+  #+begin_export latex
+  \[
+    R_{tc}=\frac{2\rho}{L_{c}}
+  \]
+  #+end_export
+  siendo $L_c$ la longitud del conductor.
 
 - *Resistividad en función del terreno*
 
@@ -667,13 +679,48 @@ $$R_{tp}\leq\frac{V_{max}}{I_{f}} = \qty{800}{\ohm}$$
 
 *** Cálculo de la resistencia de tierra
 
-- *Electrodos en paralelo*: Para mejorar la resistencia de toma de
-  tierra, se utilizan varios electrodos interconectados, situados a
-  distancias del orden de 10 m. De esta forma, *la resistencia
-  equivalente es (aproximadamente) el paralelo de las individuales*.
+- *Electrodos en paralelo*:
 
-**** Por ejemplo
-Para conseguir una $R_{tp}=\SI{5}{\ohm}$ en un terreno con
-$\rho=\SI{100}{\ohm\meter}$ se deberán utilizar aproximadamente 10
-picas de una longitud de 2 metros (cada una de ellas tendrá una
-resistencia $R_{t,i}=\SI{50}{\ohm}$).
+  Para mejorar la resistencia de toma de tierra, se utilizan varios
+  electrodos interconectados. La *resistencia equivalente* es
+  (aproximadamente) el *paralelo de las individuales*.
+
+  #+begin_export latex
+  \begin{align*}
+    \frac{1}{R_{t}} &\simeq \frac{1}{R_{tp}} + \frac{1}{R_{tc}} = \\
+                    &=\frac{n_{p}\cdot L_{p}}{\rho} + \frac{L_c}{2\rho}
+  \end{align*}
+#+end_export
+
+*** Ejemplo
+- Se desea conseguir una resistencia de puesta a tierra de $R_{t}=\qty{5}{\ohm}$.
+- Los apoyos están separados $\qty{4}{\meter}$
+- El terreno tiene una resistividad de $\rho=\qty{210}{\ohm\meter}$. 
+#+ATTR_LATEX: :height 0.7\textheight
+[[../figs/PuestaTierra.pdf]]
+
+*** Ejemplo
+
+- En primer lugar calculamos la resistencia aportada por el conductor enterrado:
+#+begin_export latex
+\begin{align*}
+  L_c &= 4 \cdot 2 \cdot 6 = \qty{48}{\meter}\\
+  R_{tc} &= \frac{2\rho}{L_c} = \qty{8.75}{\ohm}
+\end{align*}
+#+end_export
+- La resistencia de una pica vertical de $\qty{2}{\meter}$ con este terreno es de:
+#+begin_export latex
+\begin{equation*}
+  R_{tp} = \frac{\rho}{L_p} = \qty{105}{\ohm}
+\end{equation*}
+#+end_export
+
+- Por tanto, el número total de picas necesarias es:
+#+begin_export latex
+\begin{equation*}
+  \frac{1}{5} =\frac{n_p}{105} + \frac{1}{8.75} \rightarrow n_p = 9
+\end{equation*}
+#+end_export
+* Footnotes
+
+[fn:1]Las anteriores ediciones del REBT distinguían las instalaciones entre locales secos y emplazamientos húmedos o mojados, incluyendo a las instalaciones a la intemperie en esta última categoría. En la revisión de 2022 esta distinción ya no existe, pero las guías de aplicación aún recomiendan los valores de tensión de contacto asociadas a emplazamientos mojados. 

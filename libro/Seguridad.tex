@@ -483,31 +483,39 @@ evita la aparición de estas tensiones.%
 \subsection{Puesta a tierra}
 \label{sec:puesta_tierra}
 Un sistema de puesta a tierra consta de la toma a tierra (generalmente
-picas o placas metálicas resistentes a la corrosión), un conjunto
-de conductores de tierra que conectan la toma a tierra con el borne
+picas o placas metálicas resistentes a la corrosión), un conjunto de
+conductores de tierra que conectan la toma a tierra con el borne
 principal de tierra, lugar al que van conectados los conductores de
-unión equipotencial (para mantener el mismo potencial con otros elementos
-parcialmente enterrados, como canalizaciones metálicas) y los conductores
-de protección, que unen las masas con la toma a tierra. Es importante
-remarcar la necesidad de que todos los elementos del sistema de puesta
-a tierra de un sistema fotovoltaico estén interconectados. De esta
-forma, todas las masas metálicas accesibles por una persona están
-conectadas a una superficie equipotencial, disminuyendo así la posibilidad
-de aparición de tensiones peligrosas entre masas que pertenecen a
-equipos diferentes.
+unión equipotencial (para mantener el mismo potencial con otros
+elementos parcialmente enterrados, como canalizaciones metálicas) y
+los conductores de protección, que unen las masas de los equipos con
+la toma a tierra. Es importante remarcar la necesidad de que todos los
+elementos del sistema de puesta a tierra de un sistema fotovoltaico
+estén interconectados. De esta forma, todas las masas metálicas
+accesibles por una persona están conectadas a una superficie
+equipotencial, disminuyendo así la posibilidad de aparición de
+tensiones peligrosas entre masas que pertenecen a equipos diferentes.
 
-Para el cálculo de la resistencia de la puesta a tierra constituida
-por una única pica vertical, es aplicable la ecuación $R_{t}=\frac{\rho}{L_{p}}$\nomenclature[Rt]{$R_{t}$}{Resistencia de la puesta a tierra}\nomenclature[rho_t]{$\rho$}{Resistividad del terreno},
-siendo $\rho$ la resistividad del terreno y $L_{p}$\nomenclature[Lpica]{$L_{p}$}{Longitud de una pica de puesta a tierra}
-la longitud de la pica. De forma orientativa, la tabla \ref{tab:ValoresResistividad}
-ofrece unos valores medios aproximados de resistividad en función
-del terreno.
+Para el cálculo de la resistencia de la puesta a tierra seguiremos la
+tabla 5 de la ITC-BT-18 del REBT. En esta tabla se indica que la
+resistencia de tierra de una pica vertical es
+$R_{tp}=\frac{\rho}{L_{p}}$, siendo $\rho$ la resistividad del terreno
+y $L_{p}$ la longitud de la pica, y la resistencia de un conductor
+enterrado horizontalmente es $R_{tc}=\frac{2\rho}{L_{c}}$, siendo en
+este caso $L_c$ la longitud del conductor. La tabla
+\ref{tab:ValoresResistividad}, extraída de esta misma ITC, ofrece unos
+valores medios aproximados de resistividad en función del terreno.
 
+\nomenclature[Rtp]{$R_{tp}$}{Resistencia de puesta a tierra de una pica vertical}
+\nomenclature[Rtc]{$R_{tc}$}{Resistencia de puesta a tierra de un conductor enterrado horizontalmente}
+\nomenclature[rho_t]{$\rho$}{Resistividad del terreno}
+\nomenclature[Lpica]{$L_{p}$}{Longitud de una pica de puesta a tierra}
+\nomenclature[Lcond]{$L_{c}$}{Longitud de un conductor enterrado
+  horizontalmente en una puesta a tierra} 
 %
 \begin{table}
 \caption{Valores medios aproximados de la resistividad en función del terreno
 según la ITC-BT-18.\label{tab:ValoresResistividad}}
-
 
 \begin{tabular}{lr}
 \toprule 
@@ -520,25 +528,52 @@ Suelos pedregosos & $\SI{3000}{\ohm\meter}$\tabularnewline
 \end{tabular}
 \end{table}
 
-
-Para mejorar la resistencia de la puesta a tierra, se utilizan varios
-electrodos interconectados separados una cierta distancia. En términos
-generales, es suficiente con ubicar una pica cada $\SI{10}{\meter}$
-o $\SI{15}{\meter}$. La resistencia equivalente del conjunto puede
-aproximarse por el paralelo de las individuales. Así, denotando con
-$n_{p}$\nomenclature[np]{$n_{p}$}{Número de picas interconectadas en una puesta a tierra}
-el número de picas que componen el sistema de puesta a tierra, su
-resistencia es:
-\begin{equation}
-R_{t} \simeq \frac{\rho}{n_{p}\cdot L_{p}}
+Para obtener un determinado valor de resistencia de la puesta a
+tierra, se utilizan varios electrodos interconectados separados una
+cierta distancia. Para el caso de picas verticales, la distancia
+mínima entre ellas debe ser el doble de su longitud (habitualmente de
+\qty{2}{\meter}). De esta forma, la resistencia equivalente del
+conjunto es, aproximadamente, el paralelo de las resistencias
+individuales de los diferentes elementos. Así, denotando con $n_{p}$
+el número de picas que componen el sistema de puesta a tierra, la
+resistencia de una puesta a tierra compuesta por un conjunto de picas
+interconectadas con un conductor enterrado horizontalmente es:
+\begin{align}
+  \frac{1}{R_{t}} &\simeq \frac{1}{R_{tp}} + \frac{1}{R_{tc}} = \\
+                  &=\frac{n_{p}\cdot L_{p}}{\rho} + \frac{L_c}{2\rho}
 \label{eq:Rtvariaspicas}
-\end{equation}
+\end{align}
+\nomenclature[np]{$n_{p}$}{Número de picas interconectadas en una puesta a tierra}
+\nomenclature[Rp]{$R_{p}$}{Resistencia de un sistema de puesta a tierra}
 
+Tomemos como ejemplo la figura \ref{fig:puesta-tierra}, en la que se
+muestra la planta de una instalación compuesta por varios apoyos de la
+estructura de soporte (cuadrados grises) y un conductor enterrado
+horizontalmente (línea roja).
+Supongamos que se desea conseguir una resistencia de puesta a tierra
+de $R_{t}=\qty{5}{\ohm}$, sabiendo que los apoyos están separados
+$\qty{4}{\meter}$ y que el terreno tiene una resistividad de
+$\rho=\qty{210}{\ohm\meter}$. En primer lugar calculamos la
+resistencia aportada por el conductor enterrado:
+\begin{align*}
+  L_c &= 4 \cdot 2 \cdot 6 = \qty{48}{\meter}\\
+  R_{tc} &= \frac{2\rho}{L_c} = \qty{8.75}{\ohm}
+\end{align*}
+Por otra parte, la resistencia de una pica vertical de \qty{2}{\meter} con este terreno es de:
+\begin{equation*}
+  R_{tp} = \frac{\rho}{L_p} = \qty{105}{\ohm}
+\end{equation*}
+Por tanto, el número total de picas necesarias es (ecuación \ref{eq:Rtvariaspicas}):
+\begin{equation*}
+  \frac{1}{5} =\frac{n_p}{105} + \frac{1}{8.75} \rightarrow n_p = 9
+\end{equation*}
 
-Por ejemplo, para conseguir una $R_{t}=\SI{5}{\ohm}$ en un terreno
-con $\rho=\SI{100}{\ohm}$ se deberán utilizar aproximadamente 10
-picas de una longitud de 2 metros (cada una de ellas tendrá una resistencia
-$R_{t,i}=\SI{50}{\ohm}$). 
+\begin{figure}
+  \centering
+  \includegraphics{../figs/PuestaTierra.pdf}
+  \caption{Esquema de un sistema de puesta a tierra compuesto por un conductor enterrado horizontalmente que interconecta picas verticales.}
+  \label{fig:puesta-tierra}
+\end{figure}
 
 Una de las misiones de la puesta a tierra consiste en limitar la
 tensión de contacto que aparece al circular una corriente de fugas
@@ -552,11 +587,15 @@ de fuga, el valor de la resistencia de la puesta a tierra debe cumplir:
 \begin{equation}
 R_{tp}\leq\frac{V_{max}}{I_{f}}\label{eq:Rtp_TT}\end{equation}
 
-
-Apliquemos la ecuación \ref{eq:Rtp_TT} a un ejemplo concreto. La
-tensión de contacto máxima admisible es $V_{max}=\SI{24}{\volt}$, y la
-corriente de defecto máxima admisible es
-$I_{max}=\SI{30}{\milli\ampere}$ (limitada por el vigilante de aislamiento). Por tanto, se deberá emplear una toma a tierra que cumpla $R_{tp}\leq\SI{800}{\ohm}$.
+Apliquemos la ecuación \ref{eq:Rtp_TT} a un ejemplo concreto. Según la
+guía de aplicación de la ITC-BT-30, en las instalaciones de intemperie
+la tensión de contacto no puede superar el valor
+$V_{max}=\SI{24}{\volt}$\footnote{Las anteriores ediciones del REBT distinguían las instalaciones entre locales secos y emplazamientos húmedos o mojados, incluyendo a las instalaciones a la intemperie en esta última categoría. En la revisión de 2022 esta distinción ya no existe, pero las guías de aplicación aún recomiendan los valores de tensión de contacto asociadas a emplazamientos mojados.}. La corriente de defecto máxima admisible es
+$I_{max}=\SI{30}{\milli\ampere}$ (limitada por el vigilante de
+aislamiento). Por tanto, se deberá emplear una toma a tierra que
+cumpla $R_{tp}\leq\SI{800}{\ohm}$. Como hemos visto en el ejemplo
+anterior, este valor es muy fácil de obtener en terrenos con
+resistividades normales.
 
 A la hora de realizar puestas a tierra en lugares donde ya existen
 tomas a tierra que pertenecen a otras instalaciones eléctricas es
@@ -571,12 +610,14 @@ de aislamiento, no podrá estar expuesto a una tensión
 peligrosa. Cuando el sistema de tierras existente corresponde al
 neutro de Media Tensión del transformador de la compañía eléctrica es
 necesario separarse suficientemente para no interferir en su
-funcionamiento. Según la ITC-BT-08, dos tomas de tierra son
+funcionamiento. Según la ITC-BT-18 del REBT, dos tomas de tierra son
 independientes cuando al circular la máxima corriente de defecto por
 una de ellas, la otra no alcance, respecto a un punto de potencial
 cero, una tensión superior a $\SI{50}{\volt}$. Para terrenos de
 resistividad no elevada ($\rho<\SI{100}{\ohm\meter}$), esta condición
-se cumple para distancias superiores a $\SI{15}{\meter}$.
+se cumple para distancias superiores a $\SI{15}{\meter}$. Para
+terrenos con peor conductividad hay que atenerse a las indicaciones
+del artículo 11 de la ITC-BT-18.
 
 
 \section{Protección de los equipos}
@@ -998,13 +1039,11 @@ tensión son aplicables las siguientes ecuaciones\footnote{En las ecuaciones se 
 corriente continua ($S_{dc}$), para el tramo ente
 inversor y punto de conexión a red en sistemas monofásicos ($S_{1ac}$), y para sistemas trifásicos ($S_{3ac}$).
 
-\[
-  \begin{aligned}
-    S_{dc} & = & \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
-    S_{1ac} & = & \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
-    S_{3ac} & = & \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
-  \end{aligned}
-\]
+\begin{align}
+    S_{dc} &= \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
+    S_{1ac} &= \frac{2\cdot L_{1ac}\cdot I_{1ac}}{\gamma_\theta \cdot \Delta V_{1ac}}\\
+    S_{3ac} &= \frac{\sqrt{3} \cdot L_{3ac}\cdot I_{3ac}}{\gamma_\theta \cdot \Delta V_{3ac}}
+\end{align}
 
 siendo $S_{dc}$ la sección de los conductores de corriente continua,
 $L_{dc}$ la distancia a cubrir con un circuito de corriente continua
