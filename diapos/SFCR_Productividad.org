@@ -1,4 +1,4 @@
-#+TITLE: Energía Producida por una SFCR
+#+TITLE: Energía Producida por un SFCR
 #+SUBTITLE: Energía Solar Fotovoltaica
 #+SETUPFILE: config.org
 #+OPTIONS: H:2

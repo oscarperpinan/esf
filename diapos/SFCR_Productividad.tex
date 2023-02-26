@@ -1,4 +1,4 @@
-% Created 2023-02-26 dom 09:05
+% Created 2023-02-26 dom 10:36
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -38,7 +38,7 @@
 \usefonttheme{serif}
 \author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
 \date{}
-\title{Energía Producida por una SFCR}
+\title{Energía Producida por un SFCR}
 \subtitle{Energía Solar Fotovoltaica}
 \institute[UPM]{Universidad Politécnica de Madrid}
 \setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
@@ -52,7 +52,7 @@
 \setbeamertemplate{subsection in toc}[circle]
 \hypersetup{
  pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
- pdftitle={Energía Producida por una SFCR},
+ pdftitle={Energía Producida por un SFCR},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
@@ -62,8 +62,8 @@
 \maketitle
 
 \section{Energía Producida por un SFCR}
-\label{sec:orga4a01ca}
-\begin{frame}[label={sec:orgf13a7af}]{Potencia en un SFCR}
+\label{sec:org2891c78}
+\begin{frame}[label={sec:org398ff81}]{Potencia en un SFCR}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Generador FV
 \end{itemize}
@@ -85,7 +85,7 @@ $$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
       \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
 \end{frame}
 
-\begin{frame}[label={sec:orgb528860}]{Energía producida}
+\begin{frame}[label={sec:org1d64535}]{Estimación de la Energía Producida}
 $$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
 
 \begin{itemize}
@@ -107,14 +107,14 @@ generador
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf6975bd}]{Productividad}
+\begin{frame}[label={sec:org3fc65d5}]{Productividad}
 En algunas ocasiones se habla de \alert{productividad} del sistema, \(Y_{f}\),
 que es el cociente entre energía producida y potencia nominal del
 \alert{generador}:
 $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
 \end{frame}
 
-\begin{frame}[label={sec:orgc2148fe}]{Factor de sombras}
+\begin{frame}[label={sec:orgb202828}]{Factor de sombras}
 \begin{itemize}
 \item \alert{El factor de sombras suele tomar valores alrededor del 2 al 4\%},
 tanto en instalaciones estáticas como de seguimiento.
@@ -126,9 +126,9 @@ con un nivel de ocupación de terreno superior al óptimo).
 \end{frame}
 
 \section{Performance Ratio}
-\label{sec:org5caa54e}
+\label{sec:org86892e3}
 
-\begin{frame}[label={sec:org40b58eb}]{Definición}
+\begin{frame}[label={sec:org143bdc4}]{Definición}
 \begin{itemize}
 \item Está concebido para incluir todas las \alert{pérdidas que no tienen
 dependencia con las condiciones meteorológicas}.
@@ -146,7 +146,7 @@ con la relación entre potencia e irradiancia, \alert{suele aceptarse} que el
 \end{frame}
 
 
-\begin{frame}[label={sec:org083e427}]{Desglose de pérdidas}
+\begin{frame}[label={sec:org48aa246}]{Desglose de pérdidas}
 \begin{itemize}
 \item \alert{Dispersión de parámetros} entre los módulos que componen el
 generador (2-4\%)
@@ -167,7 +167,7 @@ características nominales (3\%)
 \end{frame}
 
 
-\begin{frame}[label={sec:orga858604}]{Valores reales}
+\begin{frame}[label={sec:org155f0c8}]{Valores reales}
 \begin{itemize}
 \item El análisis de funcionamiento de diversos sistemas FV europeos ha
 mostrado que el rango de valores que toma el \emph{performance ratio} es
