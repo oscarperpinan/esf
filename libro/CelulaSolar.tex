@@ -367,12 +367,12 @@ y al texturado de la superficie para conseguir que el rayo de luz
 reflejado vuelva a introducirse en el material.
 
 Suponiendo conocido el número de fotones incidentes por unidad de
-área para cada energía, $S(E)$, y el área del dispositivo, $A$,
+área para cada energía, $S(E)$, y el área del dispositivo, $A_c$,
 la ecuación \ref{eq:Fotocorriente} expresa que el dispositivo no
 podrá aprovechar íntegramente el flujo fotónico incidente.
 
 \begin{equation}
-I_{L}<e\cdot A\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E\label{eq:Fotocorriente}\end{equation}
+I_{L}<e\cdot A_c\cdot\intop_{E_{G}}^{\infty}S(E)\mathrm{d}E\label{eq:Fotocorriente}\end{equation}
 
 
 
@@ -480,7 +480,7 @@ la eficiencia de conversión según la ecuación \ref{eq:EficienciaCelula}
 
 \begin{equation}
 \eta=\frac{I_{mpp}\cdot V_{mpp}}{P_{L}}\label{eq:EficienciaCelula}\end{equation}
-donde $P_{L}$ representa la potencia luminosa que incide en la célula.
+donde $P_{L} = A_c \cdot G_{ef}$ representa la potencia luminosa que incide en la célula.
 Como es evidente de la ecuación \ref{eq:EficienciaCelula}, este valor
 de eficiencia se corresponde al caso en el que el acoplamiento entre
 la carga y la célula permite a ésta trabajar en el punto de máxima
@@ -718,7 +718,7 @@ forma, $FF^{*}=\frac{P_{mpp}^{*}}{I_{sc}^{*}\cdot V_{oc}^{*}}$\nomenclature[FF*]
 y la eficiencia:
 
 \begin{equation}
-\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A\cdot G_{stc}}\label{eq:EficienciaCelula_STC}\end{equation}
+\eta^{*}=\frac{I_{mpp}^{*}\cdot V_{mpp}^{*}}{A_c\cdot G_{stc}}\label{eq:EficienciaCelula_STC}\end{equation}
 \nomenclature[eta*]{$\eta^{*}$}{Eficiencia de una célula en condiciones estándar de medida}
 
 

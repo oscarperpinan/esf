@@ -105,7 +105,7 @@ que corresponden a las células que componen el módulo.
 
 
 \subsection{Comportamiento térmico del módulo}
-
+\label{sec:tonc}
 En las ecuaciones previas se hace referencia a las condiciones estándar
 de medida, ya descritas en el capítulo \ref{cha:Celula}. En estas
 condiciones, la temperatura de célula es de $\SI{25}{\celsius}$.
@@ -151,18 +151,29 @@ trabaja en las siguientes condiciones:
 \item Irradiancia: $G=\SI{800}{\watt\per\meter\squared}$\nomenclature[TONC]{TONC, NOCT}{Temperatura de operación nominal de célula}
 \item Espectro: el correspondiente a $AM=1.5$.
 \item Incidencia normal
-\item Temperatura \emph{ambiente}: $T_{a}=\SI{20}{\celsius}$.
+\item Temperatura \emph{ambiente}: $T_{a}=\SI{20}{\celsius}$. \nomenclature[Ta]{$T_{a}$}{Temperatura ambiente}
 \item Velocidad de viento: $v_{v}=\SI{1}{\meter\per\second}$.
 \end{itemize}
+
 La ecuación \ref{eq:TONC} expresa una aproximación aceptable del
 comportamiento térmico de una célula integrada en un módulo en base
 a las consideraciones previas, donde las unidades de la radiación
-efectiva son $\si{\watt\per\meter\squared}$:\begin{equation}
-T_{c}=T_{a}+G_{ef}\cdot\frac{NOCT-20}{800}\label{eq:TONC}\end{equation}
+efectiva son $\si{\watt\per\meter\squared}$:
+\begin{equation}
+  T_{c}=T_{a}+G_{ef}\cdot\frac{NOCT-20}{800}\label{eq:TONC}
+\end{equation}
 
-
-
-
+Para la simulación del funcionamiento de un módulo fotovoltaico en
+condiciones de operación real, es necesario contar con secuencias de
+valores de temperatura ambiente. En ausencia de información detallada,
+puede asumirse un valor constante $T_a=\SI{25}{\celsius}$ en el caso
+de simulaciones anuales \cite{Perpinan.Lorenzo.ea2007}. Si se dispone
+de los valores máximos y mínimos diarios de la temperatura ambiente,
+es posible sintetizar una secuencia intradiaria mediante una
+combinación de funciones coseno
+\cite{Huld.Suri.ea2006}\footnote{Implementado en la función
+  \href{http://search.r-project.org/R/library/solaR/html/fTemp.html}{\texttt{fTemp}}
+  de \texttt{solaR} \cite{Perpinan2012b}}.
 
 \subsection{Punto caliente}
 

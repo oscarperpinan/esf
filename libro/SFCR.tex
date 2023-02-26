@@ -2025,33 +2025,44 @@ espacio disponible, pueda resultar interesante una técnica que ofrezca
 menor productividad.
 
 
-\section{Cálculo de la productividad de un SFCR}
+\section{Energía Producida por un Sistema Fotovoltaico conectado a
+  la Red}
 
+La potencia entregada a la salida de un SFCR se puede estimar a partir de la secuencia de valores de irradiancia efectiva y temperatura ambiente, tomando en consideración los diversos factores de funcionamiento del sistema que se han descrito en los capítulos anteriores.
 
-La potencia entregada a la salida de un SFCR está determinada por los siguientes factores:
-
+En primer lugar, la potencia del generador fotovoltaico se estima con la ecuación \ref{eq:potencia-generador}, en la que se tienen en cuenta los siguientes factores:
 \begin{itemize}
 \item La irradiancia efectiva incidente en el plano del generador,
-  cuyo procedimiento de cálculo es el objeto de estudio del capítulo \ref{cha:Radiacion}.
-
-
+  cuyo procedimiento de cálculo es el objeto de estudio del capítulo
+  \ref{cha:Radiacion}.
 \item La temperatura ambiente a la que está sometido el generador
-  fotovoltaico. En ausencia de información detallada, puede asumirse
-  un valor constante $T_a=\SI{25}{\celsius}$ en el caso de
-  simulaciones anuales \cite{Perpinan.Lorenzo.ea2007}.  Si se dispone
-  de los valores máximos y mínimos diarios, es posible sintetizar una
-  secuencia intradiaria mediante una combinación de funciones coseno
-  \cite{Huld.Suri.ea2006}\footnote{Implementado en la función
-    \href{http://search.r-project.org/R/library/solaR/html/fTemp.html}{\texttt{fTemp}}
-    de \texttt{solaR} \cite{Perpinan2012b}}.
-  \nomenclature[Ta]{$T_{a}$}{Temperatura ambiente}
+  fotovoltaico, que determina la temperatura de célula, tal y como se
+  detalla en la sección \ref{sec:tonc}.
+\item El comportamiento eléctrico del generador fotovoltaico según lo
+  estudiado en los capítulos \ref{cha:Celula} y
+  \ref{cha:AsociacionDispositivos}, y sintetizado en la eficiencia del
+  generador, de acuerdo a las ecuaciones \ref{eq:EficienciaCelula} y
+  \ref{eq:EficienciaCelula_STC}, suponiendo células idénticas.
+\end{itemize}
+
+\begin{equation}
+  P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
+  \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*
+  \label{eq:potencia-generador}
+\end{equation}
+
+A continuación, se determina la potencia de salida del inversor con la ecuación \ref{eq:potencia-inversor}, en la que se tiene en cuenta la curva de eficiencia del inversor (sección \ref{sec:curva-eficiencia-inversor}) y su ventana de búsqueda del
+MPP (sección \ref{InversorSFCR}).
+
+\begin{equation}
+  P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)
+  \label{eq:potencia-inversor}
+\end{equation}
+
+Aunque no se explicitan en estas ecuaciones, también hay que tomar en consideración otros factores que influyen en el funcionamiento:
+\begin{itemize}
 \item El impacto de sombras sobre el generador, tal y como ha sido
   explicado en la sección \ref{sec:sombras}.
-\item El comportamiento eléctrico del generador fotovoltaico, según lo
-  estudiado en los capítulos \ref{cha:Celula} y \ref{cha:AsociacionDispositivos}.
-\item La curva de eficiencia del inversor (sección
-  \ref{sec:curva-eficiencia-inversor}) y su ventana de búsqueda del
-  MPP (sección \ref{InversorSFCR}).
 \item La eficiencia del resto de componentes del sistema,
   principalmente cableado y transformador de BT/MT. Es práctica común
   considerar constantes las pérdidas asociadas al cableado (por
@@ -2060,176 +2071,29 @@ La potencia entregada a la salida de un SFCR está determinada por los siguiente
   de pérdidas (por ejemplo, $2.5\%$).
 \end{itemize}
 
-% \subsection{Estimación de la irradiancia efectiva}
-%   \label{sec:Gef_SFCR}
-
-%   La irradiancia efectiva incidente en el plano del generador se
-%   calcula a partir de valores de irradiación global en el plano
-%   horizontal definidos para el lugar en estudio. Estos valores están
-%   recogidos en bases de datos de diferentes características (radiación
-%   estimada a partir de imágenes de satélite, estaciones meteorológicas
-%   terrenas, etc.)  con periodos de almacenamiento más o menos largo.
-
-%   Para la elección de la base de datos debe resolverse el compromiso
-%   entre cercanía de la medida al lugar de la instalación y larga
-%   duración de la base temporal.  Debe tenerse en cuenta que las
-%   discrepancias entre bases de datos pueden llegar a ser de hasta el
-%   30\%, y por tanto, todos los resultados posteriores deben manejarse
-%   sin perder la perspectiva de esta incertidumbre.  Por tanto, es
-%   sumamente importante referenciar cualquier estimación de
-%   productividad a la base de datos empleada para el cálculo.
-
-%   El apellido de ``efectiva incidente'' indica que es el resultado de
-%   tener en cuenta la inclinación y orientación del generador, y
-%   también sus características físicas en cuanto a aprovechamiento de
-%   la luz incidente. Por tanto, incluye las pérdidas por suciedad,
-%   transmitancia del vidrio y reflexión por incidencia no
-%   perpendicular. El procedimiento de cálculo de la irradiancia
-%   efectiva a partir de la irradiación global en el plano horizontal se
-%   sintetizan en la Tabla \ref{Tabla calculation
-%     procedure}\footnote{Implementado en la función \href{http://search.r-project.org/R/library/solaR/html/calcGef.html}{\texttt{calcGef}} de
-%     \texttt{solaR} \cite{Perpinan2012b}}.
-
-% %
-%   \begin{table}[p]
-%     \caption{Procedimiento de cálculo de la irradiancia efectiva.}
-%     \label{Tabla calculation procedure}
-%   \begin{tabular}{>{\raggedright}m{6cm}>{\raggedright}m{9cm}}
-%     \toprule 
-%     Paso & Método\tabularnewline
-%     \midrule 
-%     {\footnotesize Descomposición de radiación horizontal global en componentes
-%       directa y difusa.} & {\footnotesize Correlación entre la fracción de difusa y el índice
-%       de claridad. Para valores diarios es de uso común la propuesta de
-%       Collares-Pereira y Rabl \cite{Collares-Pereira.Rabl1979} mientras
-%       que para medias mensuales de valores diarios se emplea frecuentemente
-%       la propuesta de Page \cite{Page1961}.}\tabularnewline
-%     \midrule 
-%     {\footnotesize Estimación de irradiancia a partir de valores diarios
-%       de irradiación.} & {\footnotesize Generador empírico de perfil diario de irradiancia
-%       a partir de valores de irradiación global \cite{Collares-Pereira.Rabl1979}.}\tabularnewline
-%     \midrule 
-%     {\footnotesize Transposición de irradiancia en el plano horizontal
-%       a la superficie inclinada.} & {\footnotesize El cálculo de la radiación directa emplea exclusivamente
-%       consideraciones geométricas. El tratamiento de la radiación difusa
-%       necesita modelar el comportamiento de la esfera celeste. Un modelo
-%       anisotrópico recomendable es el de Hay y McKay \cite{Hay.McKay1985}.}\tabularnewline
-%     \midrule 
-%     {\footnotesize Irradiancia del albedo.} & {\footnotesize Puede modelarse como una irradiancia difusa isotrópica
-%       con un factor de reflexión igual a 0.2 (modificable si se dispone
-%       de información del terreno).}\tabularnewline
-%     \midrule 
-%     {\footnotesize Efectos de la suciedad y el ángulo de incidencia.} & {\footnotesize Son recomendables las ecuaciones propuestas por Martín
-%       y Ruiz \cite{Martin.Ruiz2001}.}\tabularnewline
-%     \midrule
-%     {\footnotesize Efecto del sombreado.} & {\footnotesize Es razonable suponer que el sombreado sólo afecta a
-%       la componente directa de la irradiancia. Por otra parte, una posible
-%       aproximación consiste en considerar que las pérdidas por sombra no
-%       afectan al comportamiento eléctrico del generador y es suficiente
-%       considerarlas en el cálculo de radiación: \[
-%       G_{efs}=D_{ef}+R_{ef}+B_{ef}\cdot(1-FS_{xx})\]}\tabularnewline
-%     \bottomrule
-%   \end{tabular}
-% \end{table}
-% \nomenclature[Gefs]{$G_{efs}$}{Irradiación (o irradiancia)
-%         global efectiva incidente en un generador considerando las
-%         sombras}
-% \nomenclature[Def]{$D_{ef}$}{Irradiancia difusa
-%         efectiva incidente en un
-%         generador}
-% \nomenclature[Bef]{$B_{ef}$}{Irradiancia directa
-%         efectiva incidente en un generador}
-
-% Para el caso particular de los sistemas de conexión a red
-% \emph{estáticos}, el procedimiento de la tabla \ref{Tabla calculation
-%   procedure} puede ser aproximado mediante dos regresiones que
-% relacionan la irradiación anual global efectiva con la irradiación
-% anual global en el plano horizontal \cite{Caamano1998,Lorenzo2002,
-%   Lorenzo2006c}. En primer lugar, se estima la relación entre la
-% irradiación en el plano horizontal con la incidente en un generador
-% con orientación e inclinación óptimas:
-
-% \begin{equation}
-%   \frac{G_{a}(0)}{G_{a}(\beta_{opt})}=1-4.46\cdot10^{-4}\cdot\beta_{opt}-1.19\cdot10^{-4}\cdot\beta_{opt}^{2}
-%   \label{eq:GbetaOpt}
-% \end{equation}
-
-% A continuación, se obtiene la irradiación efectiva a partir de la
-% incidente para el ángulo óptimo de inclinación:
-
-% \begin{align}
-%   \frac{G_{efa}(\beta,\alpha)}{G_{a}(\beta_{opt})} & =g_{1}\cdot(\beta-\beta_{opt})^{2}+g_{2}\cdot(\beta-\beta_{opt})+g_{3}\label{eq:Gef_estefania}\\
-%   g_{i} &
-%   =g_{i1}|\alpha|^{2}+g_{i2}|\alpha|+g_{i3}\label{eq:Gef_estefania_coef}
-% \end{align}
-
-% En estas ecuaciones los ángulos $\beta_{opt}$, $\beta$ y $\alpha$
-% están en grados.
-
-% Los coeficientes para resolver las ecuaciones \ref{eq:Gef_estefania} y
-% \ref{eq:Gef_estefania_coef} son los recogidos en la tabla
-% \ref{tab:CoefGef} para el caso de un módulo con suciedad media.
-
-% \begin{center}
-% %
-%   \begin{table}
-%     \begin{centering}
-%       \begin{tabular}{cccc}
-%         \toprule 
-%         & $i=1$ & $i=2$ & $i=3$\tabularnewline
-%         \midrule
-%         \midrule 
-%         $g_{1i}$ & $8\cdot10^{-9}$ & $3.8\cdot10^{-7}$ & $-1.218\cdot10^{-4}$\tabularnewline
-%         \midrule 
-%         $g_{2i}$ & $-4.27\cdot10^{-7}$ & $8.2\cdot10^{-6}$ & $2.892\cdot10^{-4}$\tabularnewline
-%         \midrule 
-%         $g_{3i}$ & $-2.5\cdot10^{-5}$ & $-1.034\cdot10^{-4}$ & $0.9314$\tabularnewline
-%         \bottomrule
-%       \end{tabular}
-%       \par\end{centering}
-
-%     \caption{Valores de los coeficientes de la ecuación \ref{eq:Gef_estefania_coef}
-%       necesarios para resolver la ecuación \ref{eq:Gef_estefania} para
-%       el caso de un módulo con suciedad media.\label{tab:CoefGef}}
-
-%   \end{table}
-
-%   \par\end{center}
-
-\subsection{Energía Producida por un Sistema Fotovoltaico conectado a
-  la Red}
-
-A partir de la secuencia de valores de irradiancia efectiva y
-temperatura ambiente, se calcula el funcionamiento del generador
-(tensión y corriente MPP, y por tanto potencia), del inversor, del
-cableado y del transformador (si lo hubiese). Estas secuencias
-intradiarias de \emph{potencia} pueden ser integradas en períodos de
+Estas secuencias intradiarias de \emph{potencia} pueden ser integradas en períodos de
 tiempo adecuados para obtener las correspondientes estimaciones de
-\emph{energía} producida en base diaria, mensual o anual.
+\emph{energía} producida en base diaria, mensual o anual:
+
+\begin{equation}
+  E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
+  \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}  
+\end{equation}
 
 El cálculo detallado según este procedimiento exige la ayuda de
 herramientas software que implementen cada paso\footnote{Implementado en la
-  función \href{http://search.r-project.org/R/library/solaR/html/prodGCPV.html}{\texttt{prodGCPV}} de \texttt{solaR} \cite{Perpinan2012b}}. Sin embargo, la
-energía producida por un SFCR en un período anual puede ser estimada,
+  función \href{http://search.r-project.org/R/library/solaR/html/prodGCPV.html}{\texttt{prodGCPV}} de \texttt{solaR} \cite{Perpinan2012b}}.
+
+Sin embargo, la energía producida por un SFCR en un período anual puede ser estimada,
 de forma aproximada, con la ecuación \ref{eq:EnergiaSFCR}:
 
 \begin{equation}
   E_{ac}=P_{g}^{*}\cdot\frac{G_{ef,a}}{G_{stc}} \cdot PR \cdot (1-FS)
   \label{eq:EnergiaSFCR}
 \end{equation}
-\nomenclature[Gefa]{$G_{ef,a}$}{Irradiación global
-  efectiva anual incidente en un generador}
 \nomenclature[PR]{$PR$}{Rendimiento global de un sistema de conexión a
   red (performance ratio)}
-donde $E_{ac}$ es la energía producida anual ($\si{\kWh}$), $G_{stc}$
-es la irradiancia en condiciones estándar de medida (STC,
-$G_{stc}=\SI{1}{\kW\per\meter\squared}$,
-$T_c=\SI{25}{\celsius}$), $P_{g}^{*}$ es la potencia nominal del
-generador FV ($\si{\kilo\Wp}$) en condiciones estándar de
-medida, $G_{ef,a}$ es la irradiación efectiva anual incidente en el
-plano del generador ($\si{\kWh\per\meter\squared}$), $PR$ es el
-rendimiento del sistema o \emph{performance ratio }y $FS$ es el factor
-de sombras, siendo estos dos últimos parámetros adimensionales.
+donde $PR$ es el rendimiento del sistema o \emph{performance ratio }y $FS$ es el factor de sombras, siendo estos dos últimos parámetros adimensionales.
 
 Frecuentemente se utiliza la productividad del sistema, $Y_{f}$, que
 es el cociente entre energía producida y la potencia nominal del
@@ -2274,36 +2138,34 @@ caracterizar la calidad de un sistema fotovoltaico.
 Las pérdidas que habitualmente incluye un PR anual son las que se
 recogen en la Tabla \ref{tab:PR}. El análisis de funcionamiento de diversos sistemas FV europeos llevado
 a cabo por la Agencia Internacional de la Energía
-\cite{Clavadetscher.Nordmann2007} ha mostrado que el rango de valores
+\cite{Nordmann2014} ha mostrado que el rango de valores
 que toma el \emph{performance ratio} anual es bastante amplio, con mínimos
-de 0,4 y máximos de 0,85. Para sistemas instalados desde 1996, el
-valor promedio de esta base de datos europea ha sido de 0,74.
+de 0,4 y máximos de 0,9. Para sistemas instalados entre 1980 a 1990, el valor promedio era de 0,7, mientras que para sistemas instalados entre 2005 a 2012, el valor promedio asciende a 0,8.
 %
 \begin{table}
   \caption{Factores de pérdidas incluidos en el \emph{performance
-      ratio} anual junto
-    con valores recomendados.\label{tab:PR}}
+      ratio} anual junto con valores recomendados.\label{tab:PR}}
 
 \begin{tabular}{>{\centering}p{8cm}c}
   \toprule 
   Factor de pérdidas & Valor\tabularnewline
-  \midrule
-  \midrule 
-  Dispersión de parámetros entre los módulos que componen el generador  & 2-4\%\tabularnewline
-  \midrule 
-  Tolerancia de potencia de los módulos respecto a sus características
-  nominales  & 3\%\tabularnewline
-  \midrule 
-  Temperatura de funcionamiento de los módulos  & 5-8\%\tabularnewline
-  \midrule 
-  Conversión DC/AC realizada por el inversor & 8-12\%\tabularnewline
-  \midrule 
-  Efecto Joule en los cables  & 2-3\%\tabularnewline
-  \midrule 
-  Conversión BT/MT realizada por el transformador & 2-3\%\tabularnewline
-  \midrule 
-  Disponibilidad del sistema  & 0,5-1\%\tabularnewline
-  \bottomrule
+                       \midrule
+                       \midrule 
+                       Dispersión de parámetros entre los módulos que componen el generador  & 2-4\%\tabularnewline
+                                                                                               \midrule 
+                                                                                               Tolerancia de potencia de los módulos respecto a sus características
+                                                                                               nominales  & 3\%\tabularnewline
+                                                                                                            \midrule 
+                                                                                                            Temperatura de funcionamiento de los módulos  & 5-8\%\tabularnewline
+                                                                                                                                                            \midrule 
+                                                                                                                                                            Conversión DC/AC realizada por el inversor & 8-12\%\tabularnewline
+                                                                                                                                                                                                         \midrule 
+                                                                                                                                                                                                         Efecto Joule en los cables  & 2-3\%\tabularnewline
+                                                                                                                                                                                                                                       \midrule 
+                                                                                                                                                                                                                                       Conversión BT/MT realizada por el transformador & 2-3\%\tabularnewline
+                                                                                                                                                                                                                                                                                         \midrule 
+                                                                                                                                                                                                                                                                                         Disponibilidad del sistema  & 0,5-1\%\tabularnewline
+                                                                                                                                                                                                                                                                                                                       \bottomrule
 \end{tabular}
 \end{table}
 

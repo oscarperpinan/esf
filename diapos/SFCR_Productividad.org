@@ -1,0 +1,107 @@
+#+TITLE: Energía Producida por una SFCR
+#+SUBTITLE: Energía Solar Fotovoltaica
+#+SETUPFILE: config.org
+#+OPTIONS: H:2
+
+* Energía Producida por un SFCR
+** Potencia en un SFCR
+
+- *Potencia* a la Salida del Generador FV
+
+$$P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
+      \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*$$
+
+- *Potencia* a la Salida del Inversor
+
+$$P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)$$
+
+- *Energía* Producida por un SFCR
+
+$$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
+      \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
+
+** Estimación de la Energía Producida
+
+$$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
+
+-  $E_{ac}$ es la *energía producida* en un periodo.
+
+-  $G^*$ es la *irradiancia* en condiciones estándar de medida (STC,
+   $G_{stc}=\SI{1}{\kilo\watt\per\meter\squared}$,
+   $T_c=\SI{25}{\celsius}$)
+
+-  $P_{g}^{*}$ es la *potencia nominal* del generador FV
+   ($\si{\kilo\wattpeak}$) en STC
+
+-  $G_{ef}$ es la *irradiación efectiva incidente* en el plano del
+   generador
+
+-  $PR$ es el *rendimiento del sistema* o /performance ratio/
+
+-  $FS$ es el *factor de sombras*
+
+** Productividad
+
+En algunas ocasiones se habla de *productividad* del sistema, $Y_{f}$,
+que es el cociente entre energía producida y potencia nominal del
+*generador*:
+$$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
+
+** Factor de sombras
+
+-  *El factor de sombras suele tomar valores alrededor del 2 al 4%*,
+   tanto en instalaciones estáticas como de seguimiento.
+
+-  En casos específicos este factor puede ser más alto (por ejemplo,
+   debido a la existencia de edificios cercanos, o en aquellas plantas
+   con un nivel de ocupación de terreno superior al óptimo).
+
+* Performance Ratio
+
+** Definición
+-  Está concebido para incluir todas las *pérdidas que no tienen
+  dependencia con las condiciones meteorológicas*.
+
+-  Este factor /puede/ caracterizar el funcionamiento de un sistema
+   *independientemente de la localidad*.
+
+-  En sentido estricto no es cierto porque sí hay relación con la
+   meteorología del lugar.
+
+-  Sin embargo, dado que estos factores son de segundo orden comparados
+   con la relación entre potencia e irradiancia, *suele aceptarse* que el
+   *PR* sirve para caracterizar la *calidad de un sistema fotovoltaico*.
+
+
+** Desglose de pérdidas
+
+-  *Dispersión de parámetros* entre los módulos que componen el
+   generador (2-4%)
+
+-  *Tolerancia de potencia* de los módulos respecto a sus
+   características nominales (3%)
+
+-  *Temperatura* de funcionamiento de los módulos (5-8%)
+
+-  Conversión DC/AC realizada por el *inversor* (8-12%)
+
+-  *Efecto Joule* en los cables (2-3%)
+
+-  Conversión BT/MT realizada por el *transformador* (2-3%)
+
+-  *Disponibilidad* del sistema (0,5-1%)
+
+
+** Valores reales
+
+- El análisis de funcionamiento de diversos sistemas FV europeos ha
+  mostrado que el rango de valores que toma el /performance ratio/ es
+  bastante amplio, con mínimos de 0,4 y máximos de 0,85.
+
+- Para sistemas instalados entre 1980 a 1990, *el valor promedio ha sido de
+  0,7*.
+
+- Para sistemas instalados entre 2005 a 2012, *el valor promedio ha
+  sido de 0,8*.
+
+

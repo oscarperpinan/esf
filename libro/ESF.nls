@@ -1,0 +1,274 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$A_{c}$}]\begingroup Área de una célula\nomeqref {5.5}\nompageref{58}
+  \item [{$A_{G}$}]\begingroup Area de un generador fotovoltaico\nomeqref {7.9}\nompageref{106}
+  \item [{$AL$}]\begingroup Irradiancia de albedo\nomeqref {3.3}\nompageref{26}
+  \item [{$AM$}]\begingroup Masa de aire\nomeqref {3.3}\nompageref{26}
+  \item [{AO}]\begingroup Adelanto oficial durante el horario de verano\nomeqref {2.20}\nompageref{13}
+\nomgroup{B}
+  \item [{$B$}]\begingroup Irradiancia directa\nomeqref {3.3}\nompageref{26}
+  \item [{$b$}]\begingroup Factor de forma de un seguidor\nomeqref {6.24}\nompageref{85}
+  \item [{$B_{0}$}]\begingroup Constante solar o irradiancia solar incidente en un plano normal al vector solar en el límite superior de la atmósfera terrestre\nomeqref {3.0}\nompageref{25}
+  \item [{$\beta_{opt}$}]\begingroup Ángulo de inclinación que optimiza el funcionamiento de un sistema fotovoltaico\nomeqref {6.9}\nompageref{76}
+  \item [{$B_{0}(0)$}]\begingroup Irradiancia extra-atmosférica o extra-terrestre en el plano horizontal\nomeqref {3.1}\nompageref{25}
+  \item [{$B_{0d}(0)$}]\begingroup Irradiación diaria extra-atmosférica o extra-terrestre en el plano horizontal\nomeqref {3.2}\nompageref{25}
+\nomgroup{C}
+  \item [{$C_{A}$}]\begingroup Capacidad normalizada de un generador en un sistema autónomo\nomeqref {7.8}\nompageref{106}
+  \item [{$C_{A}^{'}$}]\begingroup Capacidad normalizada de un generador en un sistema autónomo referida a la radiación horizontal\nomeqref {7.10}\nompageref{106}
+  \item [{$C_{b}$}]\begingroup Capacidad nominal de un acumulador electroquímico\nomeqref {7.0}\nompageref{96}
+  \item [{$C_{iso}$}]\begingroup Capacidad distribuida de un generador fotovoltaico con esquema de conexión a tierra IT\nomeqref {9.4}\nompageref{133}
+  \item [{$\cos (\phi )$}]\begingroup Factor de potencia de una instalación eléctrica\nomeqref {6.18}\nompageref{80}
+  \item [{$C_{S}$}]\begingroup Capacidad normalizada de un acumulador en un sistema autónomo\nomeqref {7.12}\nompageref{106}
+  \item [{$C_{T}$}]\begingroup Coeficiente térmico de un módulo\nomeqref {5.12}\nompageref{62}
+  \item [{$C_{U}$}]\begingroup Capacidad útil de un acumulador electroquímico\nomeqref {7.1}\nompageref{96}
+\nomgroup{D}
+  \item [{$D$}]\begingroup Irradiancia difusa\nomeqref {3.3}\nompageref{26}
+  \item [{$D_{C}$}]\begingroup Irradiancia difusa circumsolar\nomeqref {3.23}\nompageref{33}
+  \item [{$\delta$}]\begingroup Declinación\nomeqref {2.3}\nompageref{6}
+  \item [{$\Delta \lambda$}]\begingroup Diferencia entre la longitud local y la longitud del huso horario\nomeqref {2.18}\nompageref{12}
+  \item [{$\Delta V_{1ac}$}]\begingroup Caida de tensión en un   circuito de corriente alterna monofásica\nomeqref {6.21}\nompageref{81}
+  \item [{$\Delta V_{3ac}$}]\begingroup Caida de tensión en un   circuito de corriente alterna trifásica\nomeqref {6.21}\nompageref{81}
+  \item [{$\Delta V_{dc}$}]\begingroup Caida de tensión en un   circuito de corriente continua\nomeqref {6.21}\nompageref{81}
+  \item [{$D_{I}$}]\begingroup Irradiancia difusa isotrópica\nomeqref {3.23}\nompageref{33}
+  \item [{$d_{min}$}]\begingroup Distancia mínima entre hileras de un generador para evitar el sombreado\nomeqref {6.24}\nompageref{85}
+  \item [{$d_{n}$}]\begingroup Día del año\nomeqref {2.1}\nompageref{5}
+\nomgroup{E}
+  \item [{$\epsilon_{0}$}]\begingroup Corrección debida a la excentricidad   de la elipse de la trayectoria terrestre alrededor del sol\nomeqref {2.2}\nompageref{5}
+  \item [{$E_{ac}$}]\begingroup Energía entregada a la salida de un   inversor\nomeqref {6.35}\nompageref{88}
+  \item [{$E_{ac0}$}]\begingroup Energía entregada a la salida de un   inversor sin considerar las pérdidas por sombreado\nomeqref {6.35}\nompageref{88}
+  \item [{$E_{acS}$}]\begingroup Energía entregada a la salida de un inversor considerando las pérdidas por sombreado\nomeqref {6.35}\nompageref{88}
+  \item [{$E_{def}$}]\begingroup Energía no suministrada en un sistema autónomo\nomeqref {7.7}\nompageref{106}
+  \item [{$E_{f}$}]\begingroup Energía de un fotón\nomeqref {4.2}\nompageref{47}
+  \item [{$E_{g}$}]\begingroup Anchura de la banda prohibida de un material\nomeqref {4.0}\nompageref{43}
+  \item [{EoT}]\begingroup Ecuación del tiempo\nomeqref {2.18}\nompageref{12}
+  \item [{$\eta$}]\begingroup Eficiencia de una célula solar\nomeqref {4.17}\nompageref{52}
+  \item [{$\eta^{*}$}]\begingroup Eficiencia de una célula en condiciones estándar de medida\nomeqref {4.19}\nompageref{52}
+  \item [{$\eta_{bat}$}]\begingroup Rendimiento energético de un acumulador electroquímico\nomeqref {7.23}\nompageref{111}
+  \item [{$\eta_{c}$}]\begingroup Rendimiento energético del cableado\nomeqref {7.23}\nompageref{111}
+  \item [{$\eta_{cs}$}]\begingroup Eficiencia de la conexión serie en un generador\nomeqref {5.15}\nompageref{64}
+  \item [{$\eta_{G}$}]\begingroup Eficiencia de un generador fotovoltaico\nomeqref {7.9}\nompageref{106}
+  \item [{$\eta_{inv}$}]\begingroup Eficiencia de un inversor\nomeqref {6.17}\nompageref{79}
+  \item [{$\eta_{mp}$}]\begingroup Eficiencia de una motobomba en un sistema de bombeo\nomeqref {8.13}\nompageref{122}
+  \item [{$\eta_{r}$}]\begingroup Rendimiento del regulador de un sistema autónomo\nomeqref {7.23}\nompageref{111}
+\nomgroup{F}
+  \item [{$F_{D}$}]\begingroup Fracción de difusa\nomeqref {3.7}\nompageref{28}
+  \item [{$F_{Dd}$}]\begingroup Fracción de difusa diario\nomeqref {3.10}\nompageref{29}
+  \item [{$F_{Dm}$}]\begingroup Fracción de difusa mensual\nomeqref {3.9}\nompageref{28}
+  \item [{$FF$}]\begingroup Factor de forma de un dispositivo fotovoltaico\nomeqref {4.10}\nompageref{49}
+  \item [{$FF^{*}$}]\begingroup Factor de forma de una célula en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$FS$}]\begingroup Factor de sombras en un generador\nomeqref {6.22}\nompageref{83}
+  \item [{$FS_{d}$}]\begingroup Factor de sombras en   dirección diagonal.\nomeqref {6.26}\nompageref{85}
+  \item [{$FS_{eo}$}]\begingroup Factor de   sombras en dirección Este-Oeste.\nomeqref {6.26}\nompageref{85}
+  \item [{$FS_{ns}$}]\begingroup Factor de sombras en dirección   Norte-Sur.\nomeqref {6.26}\nompageref{85}
+  \item [{$FT_{B}$}]\begingroup Factor de pérdidas angulares para la irradiancia directa\nomeqref {3.26}\nompageref{35}
+  \item [{$FT_{D}$}]\begingroup Factor de pérdidas angulares para la irradiancia difusa\nomeqref {3.29}\nompageref{36}
+  \item [{$FT_{R}$}]\begingroup Factor de pérdidas angulares para la irradiancia de albedo\nomeqref {3.29}\nompageref{36}
+\nomgroup{G}
+  \item [{$G$}]\begingroup Irradiancia global\nomeqref {3.4}\nompageref{26}
+  \item [{$g$}]\begingroup Aceleración de la gravedad\nomeqref {8.10}\nompageref{121}
+  \item [{$G(0)$}]\begingroup Irradiancia global en el plano horizontal\nomeqref {3.5}\nompageref{27}
+  \item [{$G_{a}$}]\begingroup Irradiación global anual\nomeqref {3.33}\nompageref{37}
+  \item [{$\gamma_\theta$}]\begingroup Conductividad de un conductor a una temperatura de operación determinada\nomeqref {6.21}\nompageref{81}
+  \item [{$\gamma_{s}$}]\begingroup Altura solar\nomeqref {2.16}\nompageref{10}
+  \item [{$\gamma_{s}$}]\begingroup Altura solar\nomeqref {6.23}\nompageref{84}
+  \item [{$G(\beta,\alpha)$}]\begingroup Irradiancia global incidente en el plano de un generador con una orientación $\beta$ y una inclinación $\alpha$\nomeqref {3.5}\nompageref{27}
+  \item [{$GCR$}]\begingroup Ground coverage ratio\nomeqref {6.22}\nompageref{84}
+  \item [{$\overline{G_{d}}(0)$}]\begingroup Promedio de la irradiación global diaria en el plano horizontal\nomeqref {7.10}\nompageref{106}
+  \item [{$\overline{G_{d}}(\beta,\alpha)$}]\begingroup Promedio de la irradiación global diaria incidente en el plano del generador\nomeqref {7.11}\nompageref{106}
+  \item [{$G_{d,m}$}]\begingroup Promedio mensual de la irradiación global diaria\nomeqref {3.5}\nompageref{27}
+  \item [{$G_{h}$}]\begingroup Irradiación global horaria\nomeqref {3.5}\nompageref{27}
+  \item [{$G(I)$}]\begingroup Irradiancia global en el plano del generador\nomeqref {3.5}\nompageref{27}
+  \item [{$G(n)$}]\begingroup Irradiancia global en un plano perpendicular al vector solar\nomeqref {3.5}\nompageref{27}
+  \item [{$GRR$}]\begingroup Ground requirement ratio\nomeqref {6.22}\nompageref{84}
+  \item [{$G_{s}$}]\begingroup Radiación recibida por una célula sombreada\nomeqref {5.7}\nompageref{61}
+  \item [{$G_{stc}$}]\begingroup Irradiancia incidente en condiciones estandar de medida\nomeqref {4.18}\nompageref{52}
+\nomgroup{H}
+  \item [{$H_{DT}$}]\begingroup Nivel dinámico de un pozo\nomeqref {8.16}\nompageref{122}
+  \item [{$H_{f}$}]\begingroup Altura asociada a las pérdidas de fricción en una tubería\nomeqref {8.11}\nompageref{122}
+  \item [{$H_{OT}$}]\begingroup Diferencia de cotas entre la salida de agua y la entrada en el depósito\nomeqref {8.17}\nompageref{123}
+  \item [{$H_{ST}$}]\begingroup Nivel estático de un pozo\nomeqref {8.16}\nompageref{122}
+  \item [{$H_{t}$}]\begingroup Altura total incluyendo las pérdidas de fricción de la tubería\nomeqref {8.11}\nompageref{122}
+  \item [{$H_{TE}$}]\begingroup Altura total equivalente en un sistema de bombeo\nomeqref {8.16}\nompageref{122}
+  \item [{$H_{v}$}]\begingroup Altura vertical aparente en un sistema de bombeo\nomeqref {8.9}\nompageref{121}
+\nomgroup{I}
+  \item [{$I$}]\begingroup Corriente neta de una célula\nomeqref {4.3}\nompageref{47}
+  \item [{$I_{0}$}]\begingroup corriente de saturación en oscuridad del diodo\nomeqref {4.1}\nompageref{46}
+  \item [{$I_{2}$}]\begingroup Intensidad que asegura efectivamente el funcionamiento del dispositivo de protección\nomeqref {9.12}\nompageref{141}
+  \item [{$I_{B}$}]\begingroup Intensidad de diseño de una línea eléctrica\nomeqref {9.12}\nompageref{141}
+  \item [{$I_{C}$}]\begingroup Corriente de carga de un acumulador electroquímico\nomeqref {7.6}\nompageref{98}
+  \item [{$I_{c}$}]\begingroup Corriente de una célula\nomeqref {5.0}\nompageref{58}
+  \item [{$I_{D}$}]\begingroup Corriente de descarga de un acumulador electroquímico\nomeqref {7.6}\nompageref{98}
+  \item [{$I_{D}$}]\begingroup Corriente de diodo de una célula\nomeqref {4.1}\nompageref{46}
+  \item [{$I_{desc}$}]\begingroup Corriente de descarga de la capacidad distribuida en un generador fotovoltaico con esquema de conexión a tierra IT\nomeqref {9.5}\nompageref{133}
+  \item [{$I_{F}$}]\begingroup Corriente de fuga\nomeqref {9.0}\nompageref{131}
+  \item [{$I_{F,max}$}]\begingroup Corriente máxima de fuga admisible\nomeqref {9.0}\nompageref{131}
+  \item [{$I_{g}$}]\begingroup Corriente de un generador\nomeqref {5.13}\nompageref{63}
+  \item [{$I_{L}$}]\begingroup Corriente de iluminación de una célula\nomeqref {4.3}\nompageref{47}
+  \item [{$I_{m}$}]\begingroup Corriente de un módulo\nomeqref {5.0}\nompageref{58}
+  \item [{$I_{max,INV}$}]\begingroup Máxima corriente admisible en la   entrada de un inversor\nomeqref {6.16}\nompageref{79}
+  \item [{$I_{mpp}$}]\begingroup Corriente de una célula en el punto de máxima potencia\nomeqref {4.7}\nompageref{49}
+  \item [{$I_{mpp}^{*}$}]\begingroup Corriente de una célula en el punto de máxima potencia en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$I_{n}$}]\begingroup Intensidad nominal del dispositivo de protección\nomeqref {9.12}\nompageref{141}
+  \item [{$I_{sc}$}]\begingroup Corriente de cortocircuito de una célula\nomeqref {4.4}\nompageref{48}
+  \item [{$I_{sc}^{*}$}]\begingroup Corriente de cortocircuito de una célula en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$I_{scG}$}]\begingroup Corriente de cortocircuito del   generador\nomeqref {6.16}\nompageref{79}
+  \item [{$I_{scM}$}]\begingroup Corriente de cortocircuito de un   módulo\nomeqref {6.16}\nompageref{79}
+  \item [{$I_{z}$}]\begingroup Intensidad admisible por un conductor\nomeqref {9.12}\nompageref{141}
+\nomgroup{K}
+  \item [{$k$}]\begingroup Constante de Boltzmann\nomeqref {4.1}\nompageref{46}
+  \item [{$k_{1}$}]\begingroup Índice de   anisotropía\nomeqref {3.19}\nompageref{33}
+  \item [{$k_{i}^{o}$}]\begingroup Coeficientes de la curva de eficiencia de un inversor\nomeqref {6.18}\nompageref{79}
+  \item [{$K_{T}$}]\begingroup Índice de claridad\nomeqref {3.5}\nompageref{27}
+  \item [{$K_{Td}$}]\begingroup Índice de claridad diario\nomeqref {3.6}\nompageref{27}
+  \item [{$K_{Tm}$}]\begingroup Índice de claridad mensual\nomeqref {3.7}\nompageref{27}
+\nomgroup{L}
+  \item [{$L, W$}]\begingroup Longitud y anchura de un seguidor\nomeqref {6.24}\nompageref{85}
+  \item [{$L_{1ac}$}]\begingroup Distancia a   cubrir con un un circuito de corriente alterna monofásica\nomeqref {6.21}\nompageref{81}
+  \item [{$L_{3ac}$}]\begingroup Distancia a cubrir con un circuito de   corriente alterna trifásica\nomeqref {6.21}\nompageref{81}
+  \item [{$\lambda$}]\begingroup Inclinación de un generador respecto al eje de giro de un seguidor de eje horizontal Norte-Sur\nomeqref {2.38}\nompageref{17}
+  \item [{$\lambda$}]\begingroup Inclinación del eje de un seguidor\nomeqref {2.47}\nompageref{20}
+  \item [{$\lambda$}]\begingroup Longitud de onda de un fotón\nomeqref {4.2}\nompageref{47}
+  \item [{$\lambda_{H}$}]\begingroup Longitud del huso horario\nomeqref {2.18}\nompageref{12}
+  \item [{$\lambda_{L}$}]\begingroup Longitud de la localidad\nomeqref {2.18}\nompageref{12}
+  \item [{$\phi$}]\begingroup Latitud del lugar\nomeqref {6.9}\nompageref{76}
+  \item [{$L_{c}$}]\begingroup Longitud de un conductor enterrado   horizontalmente en una puesta a tierra\nomeqref {9.7}\nompageref{136}
+  \item [{$L_{dc}$}]\begingroup Energía de las cargas de corriente continua en un sistema autónomo\nomeqref {7.23}\nompageref{111}
+  \item [{$L_{dc}$}]\begingroup Distancia a cubrir con circuito de   corriente continúa\nomeqref {6.21}\nompageref{81}
+  \item [{$L_{eo}$}]\begingroup Separación entre seguidores en sentido Este-Oeste\nomeqref {6.25}\nompageref{85}
+  \item [{LLP}]\begingroup Probabilidad de pérdida de carga en un sistema autónomo\nomeqref {7.7}\nompageref{106}
+  \item [{$L_{n}$}]\begingroup Energía consumida en el período nocturno\nomeqref {7.12}\nompageref{107}
+  \item [{$L_{ns}$}]\begingroup Separación entre seguidores en sentido Norte-Sur\nomeqref {6.25}\nompageref{85}
+  \item [{$L_{p}$}]\begingroup Longitud de una pica de puesta a tierra\nomeqref {9.7}\nompageref{136}
+  \item [{$L_{T}$}]\begingroup Energía total requerida a un sistema autónomo, incluyendo pérdidas de los elementos\nomeqref {7.23}\nompageref{111}
+  \item [{L}]\begingroup Energía total requerida a un sistema autónomo, incluyendo pérdidas de los elementos\nomeqref {7.24}\nompageref{111}
+\nomgroup{M}
+  \item [{$m$}]\begingroup Factor de idealidad del modelo de un diodo\nomeqref {4.1}\nompageref{46}
+  \item [{MPP}]\begingroup Punto de máxima potencia de un dispositivo fotovoltaico\nomeqref {4.7}\nompageref{49}
+  \item [{$\vec{\mu}_{\beta}$}]\begingroup Vector director del plano de un generador estático\nomeqref {2.21}\nompageref{14}
+  \item [{$\vec{\mu}_{\bot}$}]\begingroup Vector perpendicular a los vectores $\vec{\mu}_{c}$ y $\vec{\mu}_{h}$, o a los vectores $\vec{\mu}_{p}$  y $\vec{\mu}_{ec}$\nomeqref {2.6}\nompageref{7}
+  \item [{$\vec{\mu}_{c}$}]\begingroup Vector cenital\nomeqref {2.7}\nompageref{8}
+  \item [{$\vec{\mu}_{D}$}]\begingroup Vector perpendicular al eje de giro de un seguidor de eje horizontal Norte-Sur y contenido en el plano perpendicular al plano del generador\nomeqref {2.36}\nompageref{17}
+  \item [{$\vec{\mu}_{ec}$}]\begingroup Vector ecuatorial\nomeqref {2.6}\nompageref{7}
+  \item [{$\vec{\mu}_{eje}$}]\begingroup Vector del eje de un seguidor de eje horizontal Norte-Sur\nomeqref {2.36}\nompageref{17}
+  \item [{$\vec{\mu}_{eo}$}]\begingroup Vector director de la superficie de un seguidor de eje horizontal Este-Oeste\nomeqref {2.45}\nompageref{19}
+  \item [{$\vec{\mu}_{h}$}]\begingroup Vector tangente al meridiano en dirección al ecuador\nomeqref {2.7}\nompageref{8}
+  \item [{$\vec{\mu}_{\lambda}$}]\begingroup Vector director de la superficie de un seguidor de eje inclinado\nomeqref {2.48}\nompageref{20}
+  \item [{$\vec{\mu}_{ns}$}]\begingroup Vector director de la superficie de un seguidor de eje horizontal Norte-Sur\nomeqref {2.25}\nompageref{15}
+  \item [{$\vec{\mu}_{p}$}]\begingroup Vector polar\nomeqref {2.6}\nompageref{7}
+  \item [{$\vec{\mu}_{s}$}]\begingroup Vector solar\nomeqref {2.6}\nompageref{7}
+\nomgroup{N}
+  \item [{$N_{cp}$}]\begingroup Número de ramas en paralelo en un módulo\nomeqref {5.0}\nompageref{58}
+  \item [{$N_{cs}$}]\begingroup Número de células en serie dentro de un módulo\nomeqref {6.12}\nompageref{78}
+  \item [{$N_{D}$}]\begingroup Número de células asociadas a un diodo de paso\nomeqref {5.7}\nompageref{61}
+  \item [{$N_p$}]\begingroup Número de ramas en paralelo en un generador\nomeqref {6.16}\nompageref{79}
+  \item [{$n_{p}$}]\begingroup Número de picas interconectadas en una puesta a tierra\nomeqref {9.9}\nompageref{136}
+  \item [{$N_{pMAX}$}]\begingroup Número máximo de ramas en paralelo en un   generador acoplado a un inversor de conexión a red.\nomeqref {6.16}\nompageref{79}
+  \item [{$N_s$}]\begingroup Número de módulos en serie en un generador\nomeqref {6.11}\nompageref{78}
+  \item [{$N_{sMAX}$}]\begingroup Máximo número admisible de módulos   en serie en un inversor\nomeqref {6.11}\nompageref{78}
+  \item [{$N_{sMPP}$}]\begingroup Número de módulos en serie adecuado para la ventana MPP de un inversor de conexión a red\nomeqref {6.12}\nompageref{78}
+  \item [{$N_{sMPP}^{max}$}]\begingroup Número máximo de módulos en serie adecuado a la ventana MPP del inversor\nomeqref {6.14}\nompageref{78}
+  \item [{$N_{sMPP}^{min}$}]\begingroup Número mínimo de módulos en serie adecuado a la ventana MPP del inversor\nomeqref {6.13}\nompageref{78}
+  \item [{$N_{T}$}]\begingroup Número total de módulos en un generador\nomeqref {9.1}\nompageref{132}
+\nomgroup{O}
+  \item [{$\omega$}]\begingroup Hora solar o tiempo solar verdadero\nomeqref {2.6}\nompageref{7}
+  \item [{$\omega_{s}$}]\begingroup Ángulo del amanecer\nomeqref {2.17}\nompageref{11}
+\nomgroup{P}
+  \item [{$P_{ac}$}]\begingroup Potencia alterna a la salida de un inversor\nomeqref {6.17}\nompageref{79}
+  \item [{$P_{dc}$}]\begingroup Potencia continua a la salida de un generador fotovoltaico\nomeqref {6.17}\nompageref{79}
+  \item [{$PD_{d}$}]\begingroup Profundidad de descarga diaria de un acumulador electroquímico\nomeqref {7.12}\nompageref{107}
+  \item [{$PD_{e}$}]\begingroup Profundidad de descarga estacional de un acumulador electroquímico\nomeqref {7.12}\nompageref{107}
+  \item [{$PD_{max}$}]\begingroup Máxima profundidad de carga de un acumulador electroquímico\nomeqref {7.1}\nompageref{96}
+  \item [{PD}]\begingroup Profundidad de carga de un acumulador electroquímico\nomeqref {7.0}\nompageref{96}
+  \item [{$P_{el}$}]\begingroup Potencia eléctrica necesaria en la entrada de una motobomba\nomeqref {8.13}\nompageref{122}
+  \item [{$P_{f}$}]\begingroup Pérdidas de fricción en la tubería de un sistema de bombeo\nomeqref {8.11}\nompageref{122}
+  \item [{$P_{g}^{*}$}]\begingroup Potencia del generador en condiciones   STC\nomeqref {6.17}\nompageref{79}
+  \item [{$P_{H}$}]\begingroup Potencia hidraúlica necesaria en un sistema de bombeo de agua\nomeqref {8.9}\nompageref{121}
+  \item [{$\phi$}]\begingroup Latitud\nomeqref {2.7}\nompageref{7}
+  \item [{$P_{inv}$}]\begingroup Potencia nominal de un inversor\nomeqref {6.18}\nompageref{79}
+  \item [{$P_{m}^{*}$}]\begingroup Potencia de un módulo en condiciones STC\nomeqref {6.17}\nompageref{79}
+  \item [{$P_{mpp}$}]\begingroup Potencia máxima de una célula\nomeqref {4.7}\nompageref{49}
+  \item [{$p_{o}$}]\begingroup Potencia alterna a la salida de un inversor normalizada por la potencia nominal del equipo\nomeqref {6.18}\nompageref{79}
+  \item [{$P_{Q}$}]\begingroup Calor disipado al entorno por una célula\nomeqref {5.5}\nompageref{58}
+  \item [{$PR$}]\begingroup Rendimiento global de un sistema de conexión a   red (performance ratio)\nomeqref {6.42}\nompageref{92}
+  \item [{$\psi_{ns}$}]\begingroup Ángulo de inclinación (con signo) de un seguidor de eje horizontal Norte-Sur\nomeqref {2.36}\nompageref{17}
+  \item [{$\psi_{s}$}]\begingroup Ángulo acimutal solar\nomeqref {2.7}\nompageref{8}
+\nomgroup{Q}
+  \item [{$Q$}]\begingroup Caudal de agua en un sistema de bombeo\nomeqref {8.9}\nompageref{121}
+  \item [{$Q_{AP}$}]\begingroup Caudal aparente\nomeqref {8.17}\nompageref{123}
+  \item [{$Q_{d}$}]\begingroup Caudal diario de agua\nomeqref {8.15}\nompageref{122}
+  \item [{$Q_{L}$}]\begingroup Carga demandada en amperios-hora\nomeqref {7.22}\nompageref{109}
+  \item [{$Q_{max}$}]\begingroup Caudal máximo de extracción de un pozo\nomeqref {8.16}\nompageref{122}
+  \item [{$Q_{t}$}]\begingroup Caudal de ensayo de un pozo\nomeqref {8.16}\nompageref{122}
+\nomgroup{R}
+  \item [{$R$}]\begingroup Irradiancia de albedo\nomeqref {3.3}\nompageref{26}
+  \item [{$r$}]\begingroup Distancia   entre el Sol y la Tierra\nomeqref {2.1}\nompageref{5}
+  \item [{$r_{0}$}]\begingroup Distancia promedio entre el Sol y la Tierra   (unidad astronómica)\nomeqref {2.1}\nompageref{5}
+  \item [{$R_{BI}$}]\begingroup Resistencia interna de una batería\nomeqref {7.4}\nompageref{98}
+  \item [{$r_{D}$}]\begingroup Relación entre la irradiancia y la irradiación difusa en el plano horizontal\nomeqref {3.11}\nompageref{30}
+  \item [{$r_{G}$}]\begingroup Relación entre la irradiancia y la irradiación global en el plano horizontal\nomeqref {3.11}\nompageref{30}
+  \item [{$R_{h}$}]\begingroup Resistencia eléctrica equivalente de un ser humano\nomeqref {9.0}\nompageref{131}
+  \item [{$\rho$}]\begingroup Coeficiente de reflexión del   terreno para la irradiancia de albedo\nomeqref {3.23}\nompageref{33}
+  \item [{$\rho$}]\begingroup Densidad del agua\nomeqref {8.10}\nompageref{121}
+  \item [{$\rho$}]\begingroup Resistividad del terreno\nomeqref {9.7}\nompageref{136}
+  \item [{$\rho_{e}$}]\begingroup Densidad del electrolito de una batería de acido-plomo\nomeqref {7.7}\nompageref{98}
+  \item [{$R_{iso}$}]\begingroup Resistencia de aislamiento de un generador\nomeqref {9.1}\nompageref{132}
+  \item [{$R_{iso}^{(m)}$}]\begingroup Resistencia de aislamiento de un modulo\nomeqref {9.1}\nompageref{132}
+  \item [{$ROT$}]\begingroup Ratio de ocupación del terreno\nomeqref {6.22}\nompageref{84}
+  \item [{$R_{p}$}]\begingroup Resistencia de un sistema de puesta a tierra\nomeqref {9.9}\nompageref{136}
+  \item [{$R_{p}$}]\begingroup Resistencia eléctrica equivalente del contacto del cuerpo con el terreno\nomeqref {9.0}\nompageref{131}
+  \item [{$R_{p}$}]\begingroup Resistencia paralelo de una célula solar\nomeqref {4.12}\nompageref{50}
+  \item [{$R_{s}$}]\begingroup Resistencia serie de una célula solar\nomeqref {4.12}\nompageref{50}
+  \item [{$R_{tc}$}]\begingroup Resistencia de puesta a tierra de un conductor enterrado horizontalmente\nomeqref {9.7}\nompageref{136}
+  \item [{$R_{tp}$}]\begingroup Resistencia de la toma a tierra de protección\nomeqref {9.0}\nompageref{131}
+  \item [{$R_{tp}$}]\begingroup Resistencia de puesta a tierra de una pica vertical\nomeqref {9.7}\nompageref{136}
+  \item [{$R_{ts}$}]\begingroup Resistencia de la toma a tierra de servicio\nomeqref {9.0}\nompageref{131}
+\nomgroup{S}
+  \item [{$S_{1ac}$}]\begingroup Sección de un conductor de corriente   alterna monofásica\nomeqref {6.21}\nompageref{81}
+  \item [{$S_{3ac}$}]\begingroup Sección de un   conductor de corriente alterna trifásica\nomeqref {6.21}\nompageref{81}
+  \item [{$S_{dc}$}]\begingroup Sección de   un conductor de corriente continúa\nomeqref {6.21}\nompageref{81}
+  \item [{SFA}]\begingroup Sistema fotovoltaico autónomo\nomeqref {7.0}\nompageref{95}
+  \item [{SFB}]\begingroup Sistema fotovoltaico de bombeo\nomeqref {8.0}\nompageref{115}
+  \item [{SFCR}]\begingroup Sistema fotovoltaico de   conexión a red\nomeqref {6.0}\nompageref{65}
+  \item [{SoC}]\begingroup Estado de carga de un acumulador electroquímico\nomeqref {7.0}\nompageref{96}
+  \item [{STC}]\begingroup Condiciones estándar de medida de un dispositivo fotovoltaico\nomeqref {4.18}\nompageref{52}
+\nomgroup{T}
+  \item [{$T_{a}$}]\begingroup Temperatura ambiente\nomeqref {5.6}\nompageref{59}
+  \item [{$T_{c}$}]\begingroup Temperatura de funcionamiento de una   célula\nomeqref {4.17}\nompageref{52}
+  \item [{$T_{c}^{*}$}]\begingroup Temperatura de célula en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$T_{cs}$}]\begingroup Temperatura de funcionamiento de una célula sombreada\nomeqref {5.10}\nompageref{61}
+  \item [{$\theta_{s}$}]\begingroup Ángulo de incidencia o ángulo entre el vector solar y el vector director de una superficie\nomeqref {2.22}\nompageref{14}
+  \item [{$\theta_{zs}$}]\begingroup Ángulo cenital solar\nomeqref {2.7}\nompageref{8}
+  \item [{$T_{limpio}(0)$}]\begingroup Transmitancia de un vidrio limpio\nomeqref {3.25}\nompageref{35}
+  \item [{TONC, NOCT}]\begingroup Temperatura de operación nominal de célula\nomeqref {5.6}\nompageref{59}
+  \item [{TO}]\begingroup Hora oficial\nomeqref {2.19}\nompageref{13}
+  \item [{$T_{sucio}(0)$}]\begingroup Transmitancia de un vidrio sucio\nomeqref {3.25}\nompageref{35}
+\nomgroup{U}
+  \item [{$U_{rc}$}]\begingroup Tensión de reposición de carga en un regulador\nomeqref {7.7}\nompageref{104}
+  \item [{$U_{rd}$}]\begingroup Tensión de reposición de descarga en un regulador\nomeqref {7.7}\nompageref{105}
+  \item [{$U_{sc}$}]\begingroup Tensión de fin de carga en un regulador\nomeqref {7.7}\nompageref{104}
+  \item [{$U_{sd}$}]\begingroup Tensión de corte de descarga en un regulador\nomeqref {7.7}\nompageref{104}
+\nomgroup{V}
+  \item [{$V$}]\begingroup Tensión en una célula\nomeqref {4.3}\nompageref{47}
+  \item [{$V_{B}$}]\begingroup Tensión en funcionamiento de una batería\nomeqref {7.6}\nompageref{98}
+  \item [{$V_{BI}$}]\begingroup Tensión en circuito abierto de una batería\nomeqref {7.4}\nompageref{98}
+  \item [{$ V_{c}$}]\begingroup Tensión de contacto\nomeqref {9.5}\nompageref{133}
+  \item [{$V_{c}$}]\begingroup Tensión de una célula\nomeqref {5.0}\nompageref{58}
+  \item [{$V_{g}$}]\begingroup Tensión de un generador\nomeqref {5.13}\nompageref{63}
+  \item [{$V_{m}$}]\begingroup Tensión de un módulo\nomeqref {5.0}\nompageref{58}
+  \item [{$V_{max,inv}$}]\begingroup Tensión máxima admisible de entrada a un inversor\nomeqref {6.11}\nompageref{78}
+  \item [{$V_{mpp}$}]\begingroup Tensión de una célula en el punto de máxima potencia\nomeqref {4.7}\nompageref{49}
+  \item [{$V_{mpp}^{*}$}]\begingroup Tensión de una célula en el punto de máxima potencia en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$V_{mppG}$}]\begingroup Tensión MPP del   generador\nomeqref {6.12}\nompageref{78}
+  \item [{$V_{mppM}$}]\begingroup Tensión MPP de un módulo\nomeqref {6.12}\nompageref{78}
+  \item [{$V_{mppMAX}$}]\begingroup Límite superior de la ventana de tensión MPP de un inversor de conexión a red\nomeqref {6.12}\nompageref{78}
+  \item [{$V_{mppMIN}$}]\begingroup Límite inferior de la ventana de   tensión MPP de un inversor de conexión a red\nomeqref {6.12}\nompageref{78}
+  \item [{$V_{oc}$}]\begingroup Tensión de circuito abierto de una célula\nomeqref {4.4}\nompageref{48}
+  \item [{$V_{oc}^{*}$}]\begingroup Tensión de circuito abierto de una célula en condiciones estándar de medida\nomeqref {4.18}\nompageref{52}
+  \item [{$V_{ocG}$}]\begingroup Tensión de circuito abierto del   generador\nomeqref {6.11}\nompageref{78}
+  \item [{$V_{ocM}$}]\begingroup Tensión de circuito abierto del módulo\nomeqref {6.11}\nompageref{78}
+  \item [{$V_{T}$}]\begingroup Potencial térmico\nomeqref {4.1}\nompageref{46}
+\nomgroup{Y}
+  \item [{$Y_{f}$}]\begingroup Productividad de un sistema fotovoltaico\nomeqref {6.43}\nompageref{92}
+
+\end{thenomenclature}

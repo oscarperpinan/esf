@@ -1,0 +1,183 @@
+% Created 2023-02-26 dom 09:05
+% Intended LaTeX compiler: pdflatex
+\documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{mathpazo}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{diffcoeff}
+\usepackage{steinmetz}
+\usepackage{mathtools}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
+\bibliographystyle{plain}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\wattpeak}{Wp}
+\DeclareSIUnit{\watthour}{Wh}
+\DeclareSIUnit{\amperehour}{Ah}
+\usepackage{steinmetz}
+\hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
+\usepackage[symbol, perpage]{footmisc}
+\parskip=5pt
+\usetheme{Boadilla}
+\usecolortheme{rose}
+\usefonttheme{serif}
+\author{\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}}
+\date{}
+\title{Energía Producida por una SFCR}
+\subtitle{Energía Solar Fotovoltaica}
+\institute[UPM]{Universidad Politécnica de Madrid}
+\setbeamercolor{alerted text}{fg=blue!50!black} \setbeamerfont{alerted text}{series=\bfseries}
+\AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
+\AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{subsection in toc}[circle]
+\hypersetup{
+ pdfauthor={\href{https://oscarperpinan.github.io}{Oscar Perpiñán Lamigueiro}},
+ pdftitle={Energía Producida por una SFCR},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\maketitle
+
+\section{Energía Producida por un SFCR}
+\label{sec:orga4a01ca}
+\begin{frame}[label={sec:orgf13a7af}]{Potencia en un SFCR}
+\begin{itemize}
+\item \alert{Potencia} a la Salida del Generador FV
+\end{itemize}
+
+$$P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
+      \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*$$
+
+\begin{itemize}
+\item \alert{Potencia} a la Salida del Inversor
+\end{itemize}
+
+$$P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)$$
+
+\begin{itemize}
+\item \alert{Energía} Producida por un SFCR
+\end{itemize}
+
+$$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
+      \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
+\end{frame}
+
+\begin{frame}[label={sec:orgb528860}]{Energía producida}
+$$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
+
+\begin{itemize}
+\item \(E_{ac}\) es la \alert{energía producida} en un periodo.
+
+\item \(G^*\) es la \alert{irradiancia} en condiciones estándar de medida (STC,
+\(G_{stc}=\SI{1}{\kilo\watt\per\meter\squared}\),
+\(T_c=\SI{25}{\celsius}\))
+
+\item \(P_{g}^{*}\) es la \alert{potencia nominal} del generador FV
+(\(\si{\kilo\wattpeak}\)) en STC
+
+\item \(G_{ef}\) es la \alert{irradiación efectiva incidente} en el plano del
+generador
+
+\item \(PR\) es el \alert{rendimiento del sistema} o \emph{performance ratio}
+
+\item \(FS\) es el \alert{factor de sombras}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgf6975bd}]{Productividad}
+En algunas ocasiones se habla de \alert{productividad} del sistema, \(Y_{f}\),
+que es el cociente entre energía producida y potencia nominal del
+\alert{generador}:
+$$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
+\end{frame}
+
+\begin{frame}[label={sec:orgc2148fe}]{Factor de sombras}
+\begin{itemize}
+\item \alert{El factor de sombras suele tomar valores alrededor del 2 al 4\%},
+tanto en instalaciones estáticas como de seguimiento.
+
+\item En casos específicos este factor puede ser más alto (por ejemplo,
+debido a la existencia de edificios cercanos, o en aquellas plantas
+con un nivel de ocupación de terreno superior al óptimo).
+\end{itemize}
+\end{frame}
+
+\section{Performance Ratio}
+\label{sec:org5caa54e}
+
+\begin{frame}[label={sec:org40b58eb}]{Definición}
+\begin{itemize}
+\item Está concebido para incluir todas las \alert{pérdidas que no tienen
+dependencia con las condiciones meteorológicas}.
+
+\item Este factor \emph{puede} caracterizar el funcionamiento de un sistema
+\alert{independientemente de la localidad}.
+
+\item En sentido estricto no es cierto porque sí hay relación con la
+meteorología del lugar.
+
+\item Sin embargo, dado que estos factores son de segundo orden comparados
+con la relación entre potencia e irradiancia, \alert{suele aceptarse} que el
+\alert{PR} sirve para caracterizar la \alert{calidad de un sistema fotovoltaico}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org083e427}]{Desglose de pérdidas}
+\begin{itemize}
+\item \alert{Dispersión de parámetros} entre los módulos que componen el
+generador (2-4\%)
+
+\item \alert{Tolerancia de potencia} de los módulos respecto a sus
+características nominales (3\%)
+
+\item \alert{Temperatura} de funcionamiento de los módulos (5-8\%)
+
+\item Conversión DC/AC realizada por el \alert{inversor} (8-12\%)
+
+\item \alert{Efecto Joule} en los cables (2-3\%)
+
+\item Conversión BT/MT realizada por el \alert{transformador} (2-3\%)
+
+\item \alert{Disponibilidad} del sistema (0,5-1\%)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:orga858604}]{Valores reales}
+\begin{itemize}
+\item El análisis de funcionamiento de diversos sistemas FV europeos ha
+mostrado que el rango de valores que toma el \emph{performance ratio} es
+bastante amplio, con mínimos de 0,4 y máximos de 0,85.
+
+\item Para sistemas instalados entre 1980 a 1990, \alert{el valor promedio ha sido de
+0,7}.
+
+\item Para sistemas instalados entre 2005 a 2012, \alert{el valor promedio ha
+sido de 0,8}.
+\end{itemize}
+\end{frame}
+\end{document}
