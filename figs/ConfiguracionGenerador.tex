@@ -1,0 +1,41 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}[straight voltages]
+  
+  \foreach \i in {0, 1.5, 3, 4.5, 6}
+  {\draw
+    (\i,0) to [pvmodule] ++(0,3)
+    to [pvmodule, i^>= $I_M$] ++(0,3)
+    edge[dashed] ++(0,2)
+    ++(0,2) to [pvmodule] ++(0,3)
+    to [pvmodule] ++(0,3);
+  }
+  \draw
+  (0,0) to [short, *-*] (1.5,0)
+  to [short, *-*] (3,0)
+  to [short, *-*] (4.5,0)
+  to [short, *-*] (6,0);
+  \draw
+  (0,14) to [short, *-*] (1.5,14)
+  to [short, *-*] (3,14)
+  to [short, *-*] (4.5,14)
+  to [short, *-*] (6,14);
+  \draw
+  (3, -1) to [short, i = $I_g$] (3, 0)
+  (3, 14) to [short, i = $I_g$] (3, 15);
+  \draw[<->]
+  (-1, 0) -- node[left] {$N_s$} (-1, 14);
+  \draw[<->]
+  (0, -1.1) -- node[below] {$N_p$} (6, -1.1);
+  \draw
+  (6.7,3) to [open, v^= $V_M$] (6.7,0)
+  (7.5,16) to [open, v^= $V_G$] (7.5,-2);
+\end{circuitikz}
+
+\end{document}
+
+
