@@ -8,34 +8,33 @@
   
   \foreach \i in {0, 1.5, 3, 4.5, 6}
   {\draw
-    (\i,0) to [pvmodule] ++(0,3)
-    to [pvmodule, i^>= $I_M$] ++(0,3)
-    edge[dashed] ++(0,2)
-    ++(0,2) to [pvmodule] ++(0,3)
-    to [pvmodule] ++(0,3);
+    (0, \i) to [pvmodule] ++(3,0)
+    to [pvmodule, i^>= $I_M$] ++(3,0)
+    edge[dashed] ++(2,0)
+    ++(2,0) to [pvmodule] ++(3,0)
+    to [pvmodule] ++(3,0);
   }
   \draw
-  (0,0) to [short, *-*] (1.5,0)
-  to [short, *-*] (3,0)
-  to [short, *-*] (4.5,0)
-  to [short, *-*] (6,0);
+  (0,0) to [short, *-*] (0,1.5)
+  to [short, *-*] (0,3)
+  to [short, *-*] (0,4.5)
+  to [short, *-*] (0,6);
   \draw
-  (0,14) to [short, *-*] (1.5,14)
-  to [short, *-*] (3,14)
-  to [short, *-*] (4.5,14)
-  to [short, *-*] (6,14);
+  (14,0) to [short, *-*] (14,1.5)
+  to [short, *-*] (14,3)
+  to [short, *-*] (14,4.5)
+  to [short, *-*] (14,6);
   \draw
-  (3, -1) to [short, i = $I_g$] (3, 0)
-  (3, 14) to [short, i = $I_g$] (3, 15);
+  (-1,3) to [short, i = $I_g$] (0,3)
+  (14,3) to [short, i = $I_g$] (15,3);
   \draw[<->]
-  (-1, 0) -- node[left] {$N_s$} (-1, 14);
+  (0,-1) -- node[below] {$N_s$} (14,-1);
   \draw[<->]
-  (0, -1.1) -- node[below] {$N_p$} (6, -1.1);
+  (-1.1,0) -- node[left] {$N_p$} (-1.1,6);
   \draw
-  (6.7,3) to [open, v^= $V_M$] (6.7,0)
-  (7.5,16) to [open, v^= $V_G$] (7.5,-2);
+  (3,6.7) to [open, v= $V_M$] (0,6.7)
+  (16,7.5) to [open, v= $V_G$] (-2,7.5);
 \end{circuitikz}
-
 \end{document}
 
 

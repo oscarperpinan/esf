@@ -1,4 +1,4 @@
-% Created 2023-02-25 sáb 14:44
+% Created 2023-03-01 mié 21:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -62,9 +62,29 @@
 \maketitle
 
 \section{Configuración Eléctrica del Generador}
-\label{sec:org071341c}
+\label{sec:orgcef0ce4}
 
-\begin{frame}[label={sec:org41f92ae}]{Modulos en serie}
+\begin{frame}[label={sec:org8e064de},plain]{}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/ConfiguracionGenerador.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org4edf5e5},plain]{Planteamiento}
+\begin{center}
+\includegraphics[height=0.5\textheight]{../figs/ConfiguracionGenerador.pdf}
+\end{center}
+
+\begin{itemize}
+\item \alert{Objetivo}: determinar número de módulos en serie (\(N_s\)) y ramas en paralelo (\(N_p\)).
+\item No tomamos en cuenta dispersión de parámetros: todos los módulos tienen la \alert{misma tensión} (\(V_M\)) y la \alert{misma corriente} (\(I_M\)).
+\begin{align*}
+  V_G &= N_S \cdot V_M\\
+  I_G &= N_P \cdot I_M
+\end{align*}
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:orgec73f35}]{Modulos en serie}
 \begin{itemize}
 \item El inversor está diseñado para soportar una \alert{tensión máxima en la
 entrada}, \(V_{max,inv}\).
@@ -84,7 +104,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org13b7bce}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:orgce7da57}]{Procedimiento de cálculo}
 \framesubtitle{Tensión máxima}
 
 \begin{itemize}
@@ -108,7 +128,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org9068ba0}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:org9a086db}]{Procedimiento de cálculo}
 \framesubtitle{Tensión MPP}
 \begin{itemize}
 \item Temperatura de célula (\(G_{stc},\, T_{a}=\SI{25}{\celsius}\))
@@ -124,7 +144,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
   V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
 \]
 \end{frame}
-\begin{frame}[label={sec:orgfb6d2f7}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:org154bb18}]{Procedimiento de cálculo}
 \framesubtitle{Tensión MPP}
 
 \begin{itemize}
@@ -145,9 +165,9 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
   \end{cases}
 \]
 \end{frame}
-\begin{frame}[label={sec:org08199cb}]{Ramas en paralelo}
+\begin{frame}[label={sec:org11ecd5e}]{Ramas en paralelo}
 \begin{itemize}
-\item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}.
+\item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}, \(I_{max,INV}\).
 
 \item En general, el inversor es capaz de autoprotegerse ante valores superiores a este umbral desplazando el punto de funcionamiento del generador fuera del MPP.
 
@@ -159,7 +179,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{frame}
 
-\begin{frame}[label={sec:orga1efe5e}]{Configuración del generador}
+\begin{frame}[label={sec:org1a4ba09}]{Configuración del generador}
 De los cálculos anteriores se obtiene un \alert{conjunto de configuraciones} del generador que permiten un buen acoplamiento entre inversor y generador. 
 
 Para \alert{elegir una configuración} deben tenerse en cuenta diferentes aspectos:
@@ -178,7 +198,7 @@ estructura.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2b12462}]{Configuración eléctrica y estructura}
+\begin{frame}[label={sec:orgc744b66}]{Configuración eléctrica y estructura}
 \begin{itemize}
 \item Es recomendable elegir \alert{series} compuestas por un número de módulos
 que puedan ser ubicados en una \alert{única hilera de la estructura}.
@@ -200,7 +220,7 @@ a las hileras inmediatamente superiores.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org5853968}]{Inversión y rendimiento económicos}
+\begin{frame}[label={sec:orgabe5a60}]{Inversión y rendimiento económicos}
 \begin{itemize}
 \item La potencia del generador fotovoltaico está relacionada directamente
 con la \alert{inversión económica} a realizar.
@@ -216,7 +236,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org44df46c}]{Terreno ocupado}
+\begin{frame}[label={sec:org8b15d40}]{Terreno ocupado}
 \begin{itemize}
 \item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el cálculo económico).
 
@@ -224,7 +244,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org3a52120}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:org1d534aa}]{Relación de potencias entre generador e inversor}
 Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
 \begin{center}
@@ -233,7 +253,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 
-\begin{frame}[label={sec:org009135a}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:orgca6c66b}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Por tanto, una de las preguntas a responder es \alert{que relación debe existir entre la potencia del generador FV y el inversor}.
 \end{itemize}
@@ -247,7 +267,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgce48891}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:orgb2df47f}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Según el \alert{tipo de sistema} (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
 
@@ -258,9 +278,15 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 \section{Cableado Eléctrico}
-\label{sec:org1f6ee16}
+\label{sec:orgd5082ee}
 
-\begin{frame}[label={sec:org4c1fa7d}]{Características básicas}
+\begin{frame}[label={sec:org3919c59},plain]{}
+\begin{center}
+\includegraphics[width=\textwidth]{../figs/CableadoCentral.pdf}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org1fc07cc}]{Características básicas}
 \begin{itemize}
 \item Criterio de caída de tensión.
 
@@ -270,7 +296,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgae487c8}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org146ef73}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item En primer lugar se calculan las secciones mediante el criterio de caida de tensión (RBT ITC-BT-07):
 \end{itemize}
@@ -291,7 +317,7 @@ temperatura de operación. Por ejemplo, el cobre:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga4dd634}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org0d24f9e}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
 tensión \(\qty{1.5}{\percent}\) de la tensión nominal.
@@ -306,7 +332,7 @@ de los tramos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org385cebc}]{Cálculo por tramos (DC)}
+\begin{frame}[label={sec:org1fee6ee}]{Cálculo por tramos (DC)}
 \begin{itemize}
 \item Al existir dos tramos y una única condición existe un grado de libertad que permite fijar la sección de uno de los tramos u optimizar el volumen total de conductor empleado.
 
@@ -331,8 +357,8 @@ de los tramos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf754b45}]{Ejemplo de cálculo por tramos (DC)}
-En una instalación se agrupan en una caja de paralelos las salidas los generadores ubicados en 20 seguidores, cada uno de ellos con \(\qty{30}{\ampere}\). Esta caja de paralelos está ubicada a \(\qty{300}{\meter}\) del inversor y a \(\qty{30}{\meter}\) de todos los seguidores.
+\begin{frame}[label={sec:org1a53c47}]{Ejemplo de cálculo por tramos (DC)}
+En una instalación se agrupan en una caja de paralelos las salidas los generadores ubicados en 20 seguidores, cada uno de ellos con \(\qty{30}{\ampere}\). Esta caja de paralelos está ubicada a \(\qty{200}{\meter}\) del inversor y a \(\qty{30}{\meter}\) de todos los seguidores.
 \begin{align*}
   \frac{\Delta U_{inv}}{\Delta U} &= \frac{1}{1+\sqrt{\frac{\sum_{i=1}^nL_{i}^2
                                     \cdot I_{i}}{L_{inv}^2 \cdot I_{inv}}}} = \\
@@ -342,7 +368,7 @@ En una instalación se agrupan en una caja de paralelos las salidas los generado
 Si la tensión nominal de los generadores es de \(\qty{500}{\volt}\), este resultado implica que la sección del tramo de la caja de paralelos al inversor se diseñará con una caída de tensión de \(\num{0.87} \cdot \num{1.5} \cdot 500 /100 = \qty{6.525}{\volt}\). El tramo desde los generadores hasta la caja de paralelos se diseñará con una caída de tensión de \((1 - \num{0.87}) \cdot \num{1.5} \cdot 500 /100 = \qty{0.975}{\volt}\).
 \end{frame}
 
-\begin{frame}[label={sec:orgca43243}]{Cálculo AC}
+\begin{frame}[label={sec:org6a1e122}]{Cálculo AC}
 \begin{block}{Ejemplo}
 \begin{itemize}
 \item En una instalación que conduce \(\SI{75}{\ampere}\) a la salida de un
@@ -365,7 +391,7 @@ inversor a la red se realizará con tres cables de sección
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgdc8650d}]{Intensidad Máxima Admisible}
+\begin{frame}[label={sec:org20b85a2}]{Intensidad Máxima Admisible}
 \begin{itemize}
 \item Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
@@ -373,7 +399,7 @@ inversor a la red se realizará con tres cables de sección
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org464d1d8}]{Continua vs. Alterna}
+\begin{frame}[label={sec:org868168a}]{Continua vs. Alterna}
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (\emph{distribución en alterna}) o en un centro específico junto al punto de

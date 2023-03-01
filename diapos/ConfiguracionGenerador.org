@@ -5,6 +5,30 @@
 
 * Configuración Eléctrica del Generador
 
+**  
+:PROPERTIES:
+:BEAMER_OPT: plain
+:END:
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:../figs/ConfiguracionGenerador.pdf]]
+
+** Planteamiento
+:PROPERTIES:
+:BEAMER_OPT: plain
+:END:
+
+#+ATTR_LATEX: :height 0.5\textheight
+[[file:../figs/ConfiguracionGenerador.pdf]]
+
+- *Objetivo*: determinar número de módulos en serie ($N_s$) y ramas en paralelo ($N_p$).
+- No tomamos en cuenta dispersión de parámetros: todos los módulos tienen la *misma tensión* ($V_M$) y la *misma corriente* ($I_M$).
+  #+begin_export latex
+  \begin{align*}
+    V_G &= N_S \cdot V_M\\
+    I_G &= N_P \cdot I_M
+  \end{align*}
+  #+end_export
 ** Modulos en serie
 
 -  El inversor está diseñado para soportar una *tensión máxima en la
@@ -87,7 +111,7 @@
 #+end_export
 ** Ramas en paralelo
 
-- El fabricante del inversor elige los componentes para soportar una *corriente máxima admisible*.
+- El fabricante del inversor elige los componentes para soportar una *corriente máxima admisible*, $I_{max,INV}$.
 
 - En general, el inversor es capaz de autoprotegerse ante valores superiores a este umbral desplazando el punto de funcionamiento del generador fuera del MPP.
 
@@ -183,6 +207,14 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 - No obstante, es posible demostrar que el valor de esta relación no es tan crítico como *elegir un inversor con buena curva de eficiencia*.
 
 * Cableado Eléctrico
+
+**  
+:PROPERTIES:
+:beamer_opt: plain
+:END:
+
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/CableadoCentral.pdf]]
 
 ** Características básicas
 
