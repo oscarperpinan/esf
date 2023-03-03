@@ -24,6 +24,7 @@
 #+BEAMER_HEADER: \AtBeginSubsection[]{\begin{frame}[plain]\tableofcontents[currentsubsection,sectionstyle=show/hide,subsectionstyle=show/shaded/hide]\end{frame}}
 #+BEAMER_HEADER: \AtBeginSection[]{\begin{frame}[plain]\tableofcontents[currentsection,hideallsubsections]\end{frame}}
 #+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \sisetup{per-mode=symbol}
 #+LATEX_HEADER: \sisetup{output-decimal-marker={,}}
 #+LATEX_HEADER: \DeclareSIUnit{\watthour}{Wh}
 #+LATEX_HEADER: \DeclareSIUnit{\wattpeak}{Wp}

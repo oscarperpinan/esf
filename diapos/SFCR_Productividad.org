@@ -4,95 +4,132 @@
 #+OPTIONS: H:2
 
 * Energía Producida por un SFCR
-** Potencia en un SFCR
+
+** Nomenclatura
+
+- $E_{ac}$: energía producida en un periodo.
+- $G_{stc}, G^*$: irradiancia en condiciones estándar de medida (STC,
+  $G_{stc}=\SI{1}{\kilo\watt\per\meter\squared}$,
+  $T^*_c=\SI{25}{\celsius}$)
+- $P_{g}^{*}$: potencia nominal del generador FV
+  ($\si{\kilo\wattpeak}$) en STC
+- $G_{inc}$: irradiación incidente en el plano del
+  generador (no incluye suciedad, pérdidas de reflexión ni sombreado)
+- $G_{ef}$: irradiación efectiva incidente en el plano del
+  generador
+- $\eta_g$: eficiencia del generador
+- $\eta_{inv}$: eficiencia del inversor
+- $A_g$: área del generador
+
+** Potencia y Energía del Generador
 
 - *Potencia* a la Salida del Generador FV
+#+begin_export latex
+\[
+  P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
+  \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*
+\]
+#+end_export
 
-$$P_{dc} = A_g \cdot \eta_g(G_{ef}, T_a) \cdot  G_{ef} = %
-      \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot \frac{G_{ef}}{G^*} \cdot P_g^*$$
+- *Energía* a la Salida del Generador FV
 
+#+begin_export latex
+\[
+  E_{dc} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
+  \frac{G_{ef}}{G^*} \cdot P_g^*\quad \mathrm{dt}
+\]
+#+end_export
+
+** Potencia y Energía del Sistema
 - *Potencia* a la Salida del Inversor
-
-$$P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)$$
+#+begin_export latex
+\[
+P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{ef}, T_a)
+\]
+#+end_export
 
 - *Energía* Producida por un SFCR
+#+begin_export latex
+\[
+  E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
+  \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}
+\]
+#+end_export
 
-$$E_{ac} = \int_T \frac{\eta_g(G_{ef}, T_a)}{\eta_g^*} \cdot
-      \frac{G_{ef}}{G^*} \cdot \eta_{inv}(G_{ef}, T_a) \cdot P_g^*\quad \mathrm{dt}$$
+* Productividades y Pérdidas
 
-** Estimación de la Energía Producida
+** Planteamiento
 
-$$E_{ac}=P_{g}^{*}\cdot\frac{G_{ef}}{G^*}\cdot PR\cdot (1-FS)$$
+- Las *productividades* son relaciones entre una cantidad de energía y la potencia nominal $P_g^*$.
+  - Indican el funcionamiento real del SFCR en relación con su capacidad asignada.
+- Las *pérdidas* se calculan restando las productividades.
+  - Representan la cantidad de tiempo que el SFCR necesitaría para funcionar a $P_g^*$ para compensar las pérdidas respectivas durante el periodo correspondiente.
+** Productividades
 
--  $E_{ac}$ es la *energía producida* en un periodo.
+- Productividad del Generador 
+  #+begin_export latex
+  \[
+    Y_A = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+  \]
+  #+end_export
 
--  $G^*$ es la *irradiancia* en condiciones estándar de medida (STC,
-   $G_{stc}=\SI{1}{\kilo\watt\per\meter\squared}$,
-   $T_c=\SI{25}{\celsius}$)
+- Productividad del Sistema
+  #+begin_export latex
+  \[
+    Y_f = \frac{E_{ac}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+  \]
+  #+end_export
 
--  $P_{g}^{*}$ es la *potencia nominal* del generador FV
-   ($\si{\kilo\wattpeak}$) en STC
+- Productividad de Referencia[fn:1]
+#+begin_export latex
+\begin{align*}
+  E_{ref} &= P_g^* \cdot \frac{G_{inc}}{G_{stc}}\\
+  Y_r &= \frac{E_{ref}}{P_g^*} = \frac{G_{inc}}{G_{stc}} \quad [\unit{\kilo\watthour\per\kilo\watt}]
+\end{align*}
+  #+end_export
+** Pérdidas de Rendimiento
 
--  $G_{ef}$ es la *irradiación efectiva incidente* en el plano del
-   generador
+*** Pérdidas de captación del campo fotovoltaico.
 
--  $PR$ es el *rendimiento del sistema* o /performance ratio/
+  #+begin_export latex
+  \[
+    L_C = Y_r - Y_A
+  \]
+  #+end_export
+  Incluye pérdidas ópticas (suciedad, reflexión, sombreado), y pérdidas del generador (temperatura, cableado, tolerancia de potencia, dispersión de parámetros, LID, envejecimiento).
 
--  $FS$ es el *factor de sombras*
+*** Pérdidas en el balance del sistema (BOS)
+  #+begin_export latex
+  \[
+    L_{BOS} = Y_A - Y_f
+  \]
+  #+end_export
+  Incluye pérdidas por eficiencia e interrupciones del inversor, cableado,  y transformador.
 
-** Productividad
+  
+* Métricas de Rendimiento
 
-En algunas ocasiones se habla de *productividad* del sistema, $Y_{f}$,
-que es el cociente entre energía producida y potencia nominal del
-*generador*:
-$$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
+** /Performance Ratio/ o rendimiento global
 
-** Factor de sombras
+#+begin_export latex
+\[
+  PR = \frac{Y_f}{Y_r} = \frac{E_{ac}}{P_g^* \cdot \frac{G_{inc}}{G_{stc}}}
+\]
+#+end_export
 
--  *El factor de sombras suele tomar valores alrededor del 2 al 4%*,
-   tanto en instalaciones estáticas como de seguimiento.
+- Está concebido para incluir todas las *pérdidas que no tienen
+ dependencia con las condiciones meteorológicas*.
 
--  En casos específicos este factor puede ser más alto (por ejemplo,
-   debido a la existencia de edificios cercanos, o en aquellas plantas
-   con un nivel de ocupación de terreno superior al óptimo).
+- Este factor /puede/ caracterizar el funcionamiento de un sistema
+  *independientemente de la localidad*.
 
-* Performance Ratio
+- En sentido estricto no es cierto porque sí hay *relación con la temperatura*.
 
-** Definición
--  Está concebido para incluir todas las *pérdidas que no tienen
-  dependencia con las condiciones meteorológicas*.
+  - Un mismo sistema tendrá un PR más alto en un lugar de clima frío que en un lugar de clima cálido.
 
--  Este factor /puede/ caracterizar el funcionamiento de un sistema
-   *independientemente de la localidad*.
+  - El PR de un sistema es estacional (más alto en invierno que en verano).
 
--  En sentido estricto no es cierto porque sí hay relación con la
-   meteorología del lugar.
-
--  Sin embargo, dado que estos factores son de segundo orden comparados
-   con la relación entre potencia e irradiancia, *suele aceptarse* que el
-   *PR* sirve para caracterizar la *calidad de un sistema fotovoltaico*.
-
-
-** Desglose de pérdidas
-
--  *Dispersión de parámetros* entre los módulos que componen el
-   generador (2-4%)
-
--  *Tolerancia de potencia* de los módulos respecto a sus
-   características nominales (3%)
-
--  *Temperatura* de funcionamiento de los módulos (5-8%)
-
--  Conversión DC/AC realizada por el *inversor* (8-12%)
-
--  *Efecto Joule* en los cables (2-3%)
-
--  Conversión BT/MT realizada por el *transformador* (2-3%)
-
--  *Disponibilidad* del sistema (0,5-1%)
-
-
-** Valores reales
+** Valores del PR
 
 - El análisis de funcionamiento de diversos sistemas FV europeos ha
   mostrado que el rango de valores que toma el /performance ratio/ es
@@ -105,3 +142,17 @@ $$Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,(\si{\kilo\watthour\per\kilo\wattpeak})$$
   sido de 0,8*.
 
 
+** Rendimiento Global $\qty{25}{\celsius}$
+
+#+begin_export latex
+\[
+  PR_{25} = \frac{E_{ac}}{\sum_i \left\{P_g^* \cdot \left[1 + \gamma_P \cdot(T_{c,i} - 25)\right]\cdot G_{ef,i}/G_{stc} \cdot \Delta t \right\}}
+\]
+#+end_export
+- Se introduce una corrección con la temperatura utilizando el coeficiente $\gamma$ de dependencia de la potencia del módulo con la temperatura.
+- $\Delta t$ es el intervalo temporal de medida.
+- No elimina totalmente la dependencia estacional porque hay otros efectos estacionales (sombras).
+
+* Footnotes
+
+[fn:1]Atención: se define con la radiación incidente, y no con la efectiva. 

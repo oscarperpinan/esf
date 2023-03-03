@@ -2069,6 +2069,14 @@ Aunque no se explicitan en estas ecuaciones, también hay que tomar en considera
   ejemplo, $1.5\%$) y modelar el funcionamiento del transformador si
   se dispone de información al respecto, o asumir un valor constante
   de pérdidas (por ejemplo, $2.5\%$).
+\item Las pérdidas debidas a la tolerancia de potencia y a la
+  dispersión de parámetros. El valor de la potencia nominal que se
+  emplea en las ecuaciones anteriores, $P_g^*$, resulta de multiplicar
+  la potencia nominal de un módulo, según lo recogido en su ficha
+  técnica, por el número de módulos que componen el generador. De esta
+  forma, este valor de potencia nominal supone que todos los módulos
+  que componen el generador son idénticos y que su potencia es la que
+  se especifica en la ficha de técnica.
 \end{itemize}
 
 Estas secuencias intradiarias de \emph{potencia} pueden ser integradas en períodos de
@@ -2084,63 +2092,105 @@ El cálculo detallado según este procedimiento exige la ayuda de
 herramientas software que implementen cada paso\footnote{Implementado en la
   función \href{http://search.r-project.org/R/library/solaR/html/prodGCPV.html}{\texttt{prodGCPV}} de \texttt{solaR} \cite{Perpinan2012b}}.
 
-Sin embargo, la energía producida por un SFCR en un período anual puede ser estimada,
-de forma aproximada, con la ecuación \ref{eq:EnergiaSFCR}:
+Las estimaciones obtenidas con el procedimiento anterior son de utilidad en la fase de diseño del sistema, en la que es necesario analizar la viabilidad del mismo, y en la fase de operación, en la que sirven de referencia para la comprobación del buen funcionamiento de la instalación.
+
+\subsection{Análisis de medidas de producción}
+\label{sec:analisis-medidas}
+
+En este último contexto, las estimaciones son contrastadas con los datos recogidos por los sistemas de monitorización empleando métricas de rendimiento y pérdidas. En este análisis destacan las aportaciones de la norma IEC-61724-1, cuyo título es ``Rendimiento del sistema fotovoltaico: monitorización''.
+
+Por una parte, define las productividades de las diferentes partes del sistema, como relaciones entre una cantidad de energía y la potencia nominal $P_g^*$, y que indican el funcionamiento real del sistema en relación con su capacidad asignada. Por otra parte, define unos índices de pérdidas, que representan la cantidad de tiempo que el sistema necesitaría para funcionar a $P_g^*$ para compensar las pérdidas respectivas durante el periodo correspondiente.
+
+\subsubsection{Productividades}
+
+Las productividades son las siguientes:
+\begin{itemize}
+\item Productividad del Generador 
+  \begin{equation}
+    \label{eq:ya}
+    Y_A = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+  \end{equation}
+  
+\item Productividad del Sistema
+  \begin{equation}
+    \label{eq:yf}
+    Y_f = \frac{E_{ac}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+  \end{equation}
+\nomenclature[Yf]{$Y_{f}$}{Productividad de un sistema fotovoltaico}
+  
+\item Productividad de Referencia
+
+  En primer lugar, calculamos la energía de referencia, aquella que entregaría un sistema ideal sin pérdidas, de la misma potencia, y disponiendo de la radiación incidente.
+
+  \begin{equation}
+    \label{eq:Eref}
+      E_{ref} = P_g^* \cdot \frac{G_{inc}}{G_{stc}}
+  \end{equation}
+A partir de esta definición obtenemos la productividad de referencia, normalizando a la potencia del generador, y simplificando la expresión:
+  \begin{equation}
+    Y_r = \frac{E_{ref}}{P_g^*} = \frac{G_{inc}}{G_{stc}} \quad [\unit{\kilo\watthour\per\kilo\watt}]
+    \label{eq:yr}
+  \end{equation}
+\end{itemize}
+
+Es importante tener en cuenta que la definición de la productividad de referencia se basa en la radiación global incidente. Sin embargo, el cálculo de la potencia entregada por el generador (ecuación \ref{eq:potencia-generador}) se realiza a partir de la radiación global efectiva. Como se estudió en la sección \ref{sec:RadiacionEfectiva}, la radiación efectiva descuenta las pérdidas debidas a la suciedad y a la incidencia no perpendicular. De forma aproximada podemos escribir la relación:
 
 \begin{equation}
-  E_{ac}=P_{g}^{*}\cdot\frac{G_{ef,a}}{G_{stc}} \cdot PR \cdot (1-FS)
-  \label{eq:EnergiaSFCR}
+  \label{eq:ginc-gef}
+  G_{ef} = G_{inc} \cdot (1- F_{IAM}) \cdot (1 - F_{Suc}) \cdot (1 - F_S)
+\end{equation}
+siendo $F_{IAM}$ las pérdidas por incidencia no perpendicular, $F_{Suc}$ las pérdidas por suciedad, y $F_{S}$ las pérdidas por sombreado. Se verá a continuación que estas pérdidas afloran al comparar la productividad del generador con la de referencia.
+
+\subsubsection{Índices de pérdidas}
+
+Los índices de pérdidas son:
+
+\begin{itemize}
+\item Pérdidas de captación del campo fotovoltaico.
+
+  \begin{equation}
+    \label{eq:lc}
+    L_C = Y_r - Y_A
+  \end{equation}
+  Incluye pérdidas ópticas (suciedad, reflexión, sombreado), y
+  pérdidas del generador (temperatura, cableado, tolerancia de
+  potencia, dispersión de parámetros, LID, y envejecimiento).
+  
+\item Pérdidas en el balance del sistema (BOS)
+  \begin{equation}
+    \label{eq:lbox}
+    L_{BOS} = Y_A - Y_f
+  \end{equation}
+  Incluye pérdidas por eficiencia e interrupciones del inversor, cableado y transformador.
+\end{itemize}
+
+\subsubsection{Métricas de rendimiento}
+
+La norma también aporta la definición de métricas de rendimiento del sistema. Destaca por su frecuente uso el denominado \emph{performance ratio} (PR) o rendimiento global:
+
+\begin{equation}
+  \label{eq:PR}
+  PR = \frac{Y_f}{Y_r} = \frac{E_{ac}}{P_g^* \cdot \frac{G_{inc}}{G_{stc}}}
 \end{equation}
 \nomenclature[PR]{$PR$}{Rendimiento global de un sistema de conexión a
   red (performance ratio)}
-donde $PR$ es el rendimiento del sistema o \emph{performance ratio }y $FS$ es el factor de sombras, siendo estos dos últimos parámetros adimensionales.
 
-Frecuentemente se utiliza la productividad del sistema, $Y_{f}$, que
-es el cociente entre energía producida y la potencia nominal del
-generador fotovoltaico: 
-
-\begin{equation}
-  Y_{f}=\frac{E_{ac}}{P_{g}^{*}}\,\si[per-mode=fraction]{\kWh\per\kWp}
-\end{equation}
-
-\nomenclature[Yf]{$Y_{f}$}{Productividad de un sistema fotovoltaico}
-
-Es importante resaltar que el valor de la potencia nominal que se
-emplea en las ecuaciones anteriores, $P_g^*$, resulta de multiplicar
-la potencia nominal de un módulo, según lo recogido en su ficha
-técnica, por el número de módulos que componen el generador. De esta
-forma, este valor de potencia nominal supone que todos los módulos que
-componen el generador son idénticos y que su potencia es la que se especifica en la ficha de
-técnica. Las pérdidas por dispersión de parámetros y las
-debidas a la tolerancia de potencia quedan incluidos dentro del
-\emph{performance ratio} (tabla \ref{tab:PR}).
-
-
-\subsection{Pérdidas en el Sistema}
-
-El \emph{performance ratio} (PR) es un factor concebido para incluir
-todas las pérdidas de un sistema fotovoltaico que no tienen
-dependencia con las condiciones meteorológicas. De esta forma, este
+Esta métrica está concebida para incluir todas las pérdidas de un sistema fotovoltaico que no tienen dependencia con las condiciones meteorológicas. De esta forma, este
 factor puede caracterizar el funcionamiento de un sistema durante un período
 independientemente de la localidad en la que se ubica. En sentido
 estricto esta afirmación no se corresponde con la realidad porque
 algunas pérdidas incluidas en el PR tienen relación con la
 climatología del lugar. En particular, es destacable el efecto de la
 temperatura en la potencia entregada, y de ahí que este factor de
-mérito varíe de un día al siguiente o de un mes a otro. 
-
-Sin embargo, el uso del PR se realiza normalmente para caracterizar
+mérito presente un comportamiento estacional, variando de un día al siguiente o de un mes a otro.  Sin embargo, el uso del PR se realiza normalmente para caracterizar
 períodos anuales. En este contexto, y dado que la influencia de la
 temperatura es un factor de segundo orden comparado con la relación entre
 energía e irradiación, suele aceptarse que el PR anual sirve para
-caracterizar la calidad de un sistema fotovoltaico.  
+caracterizar la calidad de un sistema fotovoltaico. No obstante, no hay que olvidar que un mismo sistema presentará valores de PR más altos en una localidad de clima frío que en un lugar de clima cálido.
 
 Las pérdidas que habitualmente incluye un PR anual son las que se
-recogen en la Tabla \ref{tab:PR}. El análisis de funcionamiento de diversos sistemas FV europeos llevado
-a cabo por la Agencia Internacional de la Energía
-\cite{Nordmann2014} ha mostrado que el rango de valores
-que toma el \emph{performance ratio} anual es bastante amplio, con mínimos
-de 0,4 y máximos de 0,9. Para sistemas instalados entre 1980 a 1990, el valor promedio era de 0,7, mientras que para sistemas instalados entre 2005 a 2012, el valor promedio asciende a 0,8.
+recogen en la Tabla \ref{tab:PR}. El análisis de funcionamiento de diversos sistemas FV europeos llevado a cabo por la Agencia Internacional de la Energía
+\cite{Nordmann2014} ha mostrado que el rango de valores que toma el \emph{performance ratio} anual es bastante amplio, con mínimos de 0,4 y máximos de 0,9. Para sistemas instalados entre 1980 a 1990, el valor promedio era de 0,7, mientras que para sistemas instalados entre 2005 a 2012, el valor promedio asciende a 0,8.
 %
 \begin{table}
   \caption{Factores de pérdidas incluidos en el \emph{performance
@@ -2169,9 +2219,14 @@ de 0,4 y máximos de 0,9. Para sistemas instalados entre 1980 a 1990, el valor p
 \end{tabular}
 \end{table}
 
+Para solventar los problemas asociados al PR, la norma propone una métrica corregida con la temperatura, denominada rendimiento global a $\qty{25}{\celsius}$:
 
+\begin{equation}
+  \label{eq:PR25}
+  PR_{25} = \frac{E_{ac}}{\sum_i \left\{P_g^* \cdot \left[1 + \gamma_P \cdot(T_{c,i} - 25)\right]\cdot G_{ef,i}/G_{stc} \cdot \Delta t \right\}}
+\end{equation}
 
-
+Con esta definición se introduce una corrección con la temperatura utilizando el coeficiente $\gamma$ de dependencia de la potencia del módulo con la temperatura, donde $\Delta t$ es el intervalo temporal de medida. No obstante, esta definición también tiene limitaciones porque no elimina totalmente la dependencia estacional, dado que hay otros efectos estacionales, particularmente las sombras.
 
 %%% Local Variables:
 %%% mode: LaTex
