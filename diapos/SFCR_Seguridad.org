@@ -8,12 +8,12 @@
 
 *** Contacto Directo e Indirecto
 
+- Partes Activas: :: Conductores y piezas conductoras bajo tensión en
+  servicio normal. Incluyen el conductor neutro y las partes
+  conectadas a él.
+
 - Contacto Directo: :: contacto de personas o animales con partes
   activas de los materiales y equipos
-
-- Partes Activas: :: Conductores y piezas conductoras bajo tensión en
-  servicio normal. Incluyen el conductor neutro o compensador y las
-  partes a ellos conectadas.
 
 - Contacto Indirecto: :: contacto de personas o animales con partes que
   se han puesto bajo tensión como resultado de un fallo de aislamiento.
@@ -29,51 +29,32 @@
 -  Toma de tierra: :: Electrodo, o conjunto de electrodos, en contacto
    con el suelo y que asegura la conexión eléctrica con el mismo.
 
-*** Clases de materiales
-
-**** Material de clase 0
-- Material en el cual la protección contra el choque eléctrico se basa
-  en el aislamiento principal
-- No existe ninguna disposición prevista para la conexión de las
-  partes activas accesibles a un conductor de protección.
-- La protección en caso de defecto en el aislamiento principal depende
-  del entorno.
-
-*** Clases de materiales
-
-**** Material de clase I
-- La protección contra el choque eléctrico se basa en el
-  aislamiento principal *y* en medios de conexión de las partes
-  conductoras accesibles a un conductor de protección puesto a tierra
-- Las partes conductoras accesibles no pueden presentar tensiones
-  peligrosas.
-
-*** Clases de materiales
-
-**** Material de clase II
-- La protección incluye doble aislamiento o aislamiento reforzado.
-
-- No requieren la utilización de puesta a tierra para la protección
-
-- No dependen de las condiciones de la instalación.
-
-**** Material de clase III
-- La protección se basa en la alimentación a muy baja tensión
-  (tensiones inferiores a 50 V en c.a. ó a 75V en c.c.)
-
 *** Tensión de contacto y defecto
+
+**** Tensión de contacto
+- Tensión que aparece entre *partes accesibles simultáneamente* al
+  ocurrir un fallo de aislamiento.
+- Termino empleado en protección contra contactos indirectos.
 
 **** Tensión de defecto
 - Tensión que aparece a causa de un defecto de aislamiento, entre dos
   masas, entre una masa y un elemento conductor, o entre una masa y
   una toma de tierra de referencia.
 
-**** Tensión de contacto
-- Tensión que aparece entre *partes accesibles simultáneamente* al
-  ocurrir un fallo de aislamiento.
-- Es la parte de la tensión de defecto que puede afectar a una
-  persona.
-- Termino empleado en protección contra contactos indirectos.
+*** Clases de materiales
+
+- Material de clase 0
+  - La protección se basa en el aislamiento principal
+- Material de clase I
+  - La protección se basa en el aislamiento principal *y*  en conexión de las partes conductoras accesibles a un conductor de
+    protección puesto a tierra
+  - Las partes conductoras accesibles no pueden presentar tensiones peligrosas.
+- Material de clase II
+  - La protección incluye doble aislamiento o aislamiento reforzado.
+  - No requieren la utilización de puesta a tierra para la protección
+  - No dependen de las condiciones de la instalación.
+- Material de clase III
+  - La protección se basa en la alimentación a muy baja tensión (tensiones inferiores a 50 V en c.a. ó a 75V en c.c.)
 
 *** Esquemas de conexión a tierra
 
@@ -95,19 +76,19 @@
 - TN: :: en alterna, neutro puesto a tierra, y masas conectadas al
   neutro (directamente o a través de un conductor de protección).
 
-- IT: :: todos los conductores activos aislados de tierra, y masas
-  conectadas a tierra.\\
-  /Esquema habitual en zona del generador FV en SFCR europeos/
-
 - TT: :: en alterna, neutro puesto a tierra y masas a tierra, pero de
   forma independiente.\\
   /Instalaciones receptoras en una red de distribución pública de BT/
 
+- IT: :: todos los conductores activos aislados de tierra, y masas
+  conectadas a tierra.\\
+  /Esquema habitual en zona del generador FV en SFCR europeos/
+
 *** Esquemas de conexión a tierra
 
-En un sistema fotovoltaico es de uso común que el esquema de tierra sea
-*IT en la zona del generador fotovoltaico* y *TT a partir de la salida
-del inversor*.
+En un sistema fotovoltaico es de uso común que el esquema de tierra sea:
+- *IT en la zona del generador fotovoltaico*
+- *TT a partir de la salida del inversor*.
 
 * Protección de las personas
 
@@ -125,32 +106,6 @@ del inversor*.
    -  Reducir tensión.
 
    -  Aumentar resistencia (guantes, calzado, aislamiento del suelo)
-
-*** Intensidad y tiempo de contacto
-
-#+ATTR_LATEX: :height 0.9\textheight
-[[../figs/CurvaIntensidadContactoTiempo.pdf]]
-
-*** Trayectoria de la corriente
-
--  La trayectoria se realiza siguiendo la ruta más corta o la de menor
-   resistencia.
-
--  Los efectos son más graves si en la trayectoria se encuentran órganos
-   vitales.
-
--  Además, los efectos dependen de la edad, el sexo, el estado físico,
-   la fatiga, el miedo...
-
-*** Resistencia del cuerpo
-
--  *No es homogénea*: cada parte del cuerpo presenta valores diferentes.
-
--  *No es estable con el tiempo*: depende de la duración del contacto
-  y de la tensión aplicada (¡disminuye con la tensión!).
-
--  Depende del estado de la piel, sudoración, estado físico, superficie
-   de contacto, presión.
 
 *** Frecuencia eléctrica
 
@@ -185,9 +140,7 @@ del inversor*.
 
 Según la ITC-BT-24 las protecciones a utilizar para proteger frente a
 contactos directos deben estar *basadas en evitar que una persona pueda
-entrar en contacto con las partes activas* de la instalación, e incluye
-una protección complementaria cuando las anteriores no consiguen su
-objetivo:
+entrar en contacto con las partes activas* de la instalación.
 
 -  Protección por *aislamiento de las partes activas*
 
@@ -362,17 +315,17 @@ niveles:
    y que inyecta en un polo activo midiendo la corriente de retorno, y
    por tanto, la resistencia de aislamiento.
 
--  En caso de pérdida de aislamiento, :: el vigilante ordena el disparo
-   de los interruptores aislando el campo fotovoltaico afectado. La
-   orden provoca la desconexión del inversor, el cortocircuito del campo
-   y la puesta a tierra del mismo.
+-  En caso de pérdida de aislamiento, :: el vigilante ordena el
+  disparo de los interruptores aislando el campo fotovoltaico
+  afectado. Idealmente activa el cortocircuito del campo y la puesta a
+  tierra del mismo.
 
 *** Nivel 3: Protección en caso de fallo de los niveles 1 y 2:
 
--  En caso de fallo de los niveles anteriores :: aún queda la protección
-   proporcionada por la puesta a tierra directa de todas las masas de la
-   planta. Gracias a ella se limitara la tensión que con respecto a
-   tierra puedan adquirir las masas en caso de derivación.
+-  En caso de fallo de los niveles anteriores :: aún queda la
+  protección proporcionada por la puesta a tierra directa de todas las
+  masas de la planta. Gracias a ella se limitará la tensión que con
+  respecto a tierra puedan adquirir las masas en caso de derivación.
 
 
 
@@ -381,10 +334,18 @@ niveles:
 ** Tormentas eléctricas
 
 *** Formación de las tormentas
-#+ATTR_LATEX: :height 0.9\textheight
+
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :width 0.9\textwidth
 [[../figs/FormacionTormenta.pdf]]
 
-*** Formación de las tormentas
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 
 - Dentro de los núcleos tormentosos se producen campos eléctricos.
 
@@ -401,6 +362,18 @@ niveles:
   descarga y determina el lugar del impacto.
 
 *** Influencia de las condiciones locales
+
+****                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :width 0.9\textwidth
+[[../figs/FormacionTormenta.pdf]]
+
+****                                                              :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 
 -  *La descarga está determinada principalmente por el campo eléctrico
   interno de la nube*, con una menor influencia debida a las
@@ -440,6 +413,20 @@ producen, son lugares con mayor probabilidad de impacto.
 - Un flujo magnético variable produce una *fuerza electromotriz* entre los extremos del área atravesada.
 
 *** Factores de influencia
+    :PROPERTIES:
+    :BEAMER_opt: plain
+    :END:
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+#+ATTR_LATEX: :height 0.8\textheight
+[[../figs/SobretensionInducida.pdf]]
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
 
 La fuerza electromotriz inducida depende de:
 
@@ -473,36 +460,28 @@ Un sistema de protección externa contra el rayo se compone de:
 
 *** Protección externa
 
--  Se debe calcular una *distancia de seguridad* entre la bajada del
-   pararrayos y las instalaciones metálicas cercanas.
+- Se debe calcular una *distancia de seguridad* entre la bajada del
+  pararrayos y las instalaciones metálicas cercanas.
 
--  Se asume que una distancia mayor a 1 metro es superior a la distancia
-   de seguridad.
+  - Se asume que una distancia mayor a 1 metro es superior a la distancia
+    de seguridad.
 
--  *Si la distancia es inferior a la de seguridad*, el sistema de puesta
-   a tierra de la protección externa y la estructura metálica deben
-   *interconectarse* para evitar la existencia de descargas entre
-   conductores.
+- *Si la distancia es inferior a la de seguridad*, el sistema de puesta
+  a tierra de la protección externa y la estructura metálica deben
+  *interconectarse* para evitar la existencia de descargas entre
+  conductores.
 
--  *Si la distancia es superior a la de seguridad*, los sistemas de
-   puesta a tierra deben ser *independientes*.
+- *Si la distancia es superior a la de seguridad*, los sistemas de
+  puesta a tierra deben ser *independientes*.
 
 *** Protecciones internas
 
 - *Todas las masas deben estar conectadas a un sistema de puesta a
   tierra*.
 
-  - En general, la estructura de soporte se conecta directamente
-     a tierra, pero no el marco de los módulos.
-
 - En la entrada/salida de cada elemento a proteger se instalan
   *supresores de tensión (varistores)* entre conductores activos y
   tierra.
-
-*** Protecciones Internas 
-Cuando un varistor actúa realiza un cortocircuito entre sus conexiones.
-#+ATTR_LATEX: :height 0.8\textheight
-[[../figs/CajaForumDestruida.pdf]]
 
 * Resumen de protecciones
 
