@@ -1,4 +1,4 @@
-% Created 2023-03-01 mié 21:53
+% Created 2023-03-11 sáb 09:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -24,6 +24,7 @@
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \bibliographystyle{plain}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
 \sisetup{output-decimal-marker={,}}
 \DeclareSIUnit{\watthour}{Wh}
 \DeclareSIUnit{\wattpeak}{Wp}
@@ -62,15 +63,15 @@
 \maketitle
 
 \section{Configuración Eléctrica del Generador}
-\label{sec:orgcef0ce4}
+\label{sec:org03a2236}
 
-\begin{frame}[label={sec:org8e064de},plain]{}
+\begin{frame}[label={sec:org5f1eb8c},plain]{}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/ConfiguracionGenerador.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org4edf5e5},plain]{Planteamiento}
+\begin{frame}[label={sec:org5cf1480},plain]{Planteamiento}
 \begin{center}
 \includegraphics[height=0.5\textheight]{../figs/ConfiguracionGenerador.pdf}
 \end{center}
@@ -84,7 +85,7 @@
 \end{align*}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgec73f35}]{Modulos en serie}
+\begin{frame}[label={sec:orga36602a}]{Modulos en serie}
 \begin{itemize}
 \item El inversor está diseñado para soportar una \alert{tensión máxima en la
 entrada}, \(V_{max,inv}\).
@@ -104,11 +105,11 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgce7da57}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:orgc43e455}]{Procedimiento de cálculo}
 \framesubtitle{Tensión máxima}
 
 \begin{itemize}
-\item Temperatura de célula (\(G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius}\))
+\item Temperatura de célula (\(G=\qty{200}{\watt\per\meter\squared},\, T_{a}=\qty{-10}{\celsius}\))
 \end{itemize}
 \[
   T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow   T_{c} = -10 + 200 \cdot \frac{NOCT-20}{800}
@@ -128,10 +129,10 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org9a086db}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:orga406547}]{Procedimiento de cálculo}
 \framesubtitle{Tensión MPP}
 \begin{itemize}
-\item Temperatura de célula (\(G_{stc},\, T_{a}=\SI{25}{\celsius}\))
+\item Temperatura de célula (\(G_{stc},\, T_{a}=\qty{25}{\celsius}\))
 \end{itemize}
 \[
   T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow T_{c} = 25 + 1000 \cdot \frac{NOCT-20}{800}
@@ -144,7 +145,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
   V_{ocM} = V_{ocM}^{*} + (T_{c}- 25)\cdot\frac{dV_{oc}}{dT_{c}}
 \]
 \end{frame}
-\begin{frame}[label={sec:org154bb18}]{Procedimiento de cálculo}
+\begin{frame}[label={sec:orge650e3f}]{Procedimiento de cálculo}
 \framesubtitle{Tensión MPP}
 
 \begin{itemize}
@@ -165,7 +166,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
   \end{cases}
 \]
 \end{frame}
-\begin{frame}[label={sec:org11ecd5e}]{Ramas en paralelo}
+\begin{frame}[label={sec:org4bea56e}]{Ramas en paralelo}
 \begin{itemize}
 \item El fabricante del inversor elige los componentes para soportar una \alert{corriente máxima admisible}, \(I_{max,INV}\).
 
@@ -179,7 +180,7 @@ Para \alert{evitar pérdidas} por trabajar en un punto alejado del MPP, la tensi
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org1a4ba09}]{Configuración del generador}
+\begin{frame}[label={sec:orge4dd69e}]{Configuración del generador}
 De los cálculos anteriores se obtiene un \alert{conjunto de configuraciones} del generador que permiten un buen acoplamiento entre inversor y generador. 
 
 Para \alert{elegir una configuración} deben tenerse en cuenta diferentes aspectos:
@@ -198,7 +199,7 @@ estructura.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc744b66}]{Configuración eléctrica y estructura}
+\begin{frame}[label={sec:org44b66e7}]{Configuración eléctrica y estructura}
 \begin{itemize}
 \item Es recomendable elegir \alert{series} compuestas por un número de módulos
 que puedan ser ubicados en una \alert{única hilera de la estructura}.
@@ -220,7 +221,7 @@ a las hileras inmediatamente superiores.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgabe5a60}]{Inversión y rendimiento económicos}
+\begin{frame}[label={sec:orgb002c42}]{Inversión y rendimiento económicos}
 \begin{itemize}
 \item La potencia del generador fotovoltaico está relacionada directamente
 con la \alert{inversión económica} a realizar.
@@ -236,7 +237,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8b15d40}]{Terreno ocupado}
+\begin{frame}[label={sec:org4356579}]{Terreno ocupado}
 \begin{itemize}
 \item La potencia del generador es proporcional al área del generador y al \alert{terreno ocupado} (que también influye, aunque en menor grado, en el cálculo económico).
 
@@ -244,7 +245,7 @@ deseado.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1d534aa}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:org5829c24}]{Relación de potencias entre generador e inversor}
 Dado que la potencia entregada por el generador varía con las condiciones meteorológicas, el inversor trabajará en diferentes zonas de su curva de eficiencia.
 
 \begin{center}
@@ -253,7 +254,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 
-\begin{frame}[label={sec:orgca6c66b}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:org8b78d45}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Por tanto, una de las preguntas a responder es \alert{que relación debe existir entre la potencia del generador FV y el inversor}.
 \end{itemize}
@@ -267,7 +268,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb2df47f}]{Relación de potencias entre generador e inversor}
+\begin{frame}[label={sec:orgd29a630}]{Relación de potencias entre generador e inversor}
 \begin{itemize}
 \item Según el \alert{tipo de sistema} (estático, seguimiento) se debe elegir una relación de potencias de generador e inversor.
 
@@ -278,15 +279,15 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{frame}
 
 \section{Cableado Eléctrico}
-\label{sec:orgd5082ee}
+\label{sec:org0c7f143}
 
-\begin{frame}[label={sec:org3919c59},plain]{}
+\begin{frame}[label={sec:orgafc24d8},plain]{}
 \begin{center}
 \includegraphics[width=\textwidth]{../figs/CableadoCentral.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1fc07cc}]{Características básicas}
+\begin{frame}[label={sec:orgf391c94}]{Características básicas}
 \begin{itemize}
 \item Criterio de caída de tensión.
 
@@ -296,7 +297,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org146ef73}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org48ee6c4}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item En primer lugar se calculan las secciones mediante el criterio de caida de tensión (RBT ITC-BT-07):
 \end{itemize}
@@ -317,7 +318,7 @@ temperatura de operación. Por ejemplo, el cobre:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org0d24f9e}]{Criterio de Caída de Tensión}
+\begin{frame}[label={sec:org595f6a4}]{Criterio de Caída de Tensión}
 \begin{itemize}
 \item Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
 tensión \(\qty{1.5}{\percent}\) de la tensión nominal.
@@ -332,7 +333,7 @@ de los tramos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1fee6ee}]{Cálculo por tramos (DC)}
+\begin{frame}[label={sec:org9b5c4ad}]{Cálculo por tramos (DC)}
 \begin{itemize}
 \item Al existir dos tramos y una única condición existe un grado de libertad que permite fijar la sección de uno de los tramos u optimizar el volumen total de conductor empleado.
 
@@ -357,7 +358,7 @@ de los tramos.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1a53c47}]{Ejemplo de cálculo por tramos (DC)}
+\begin{frame}[label={sec:org788e761}]{Ejemplo de cálculo por tramos (DC)}
 En una instalación se agrupan en una caja de paralelos las salidas los generadores ubicados en 20 seguidores, cada uno de ellos con \(\qty{30}{\ampere}\). Esta caja de paralelos está ubicada a \(\qty{200}{\meter}\) del inversor y a \(\qty{30}{\meter}\) de todos los seguidores.
 \begin{align*}
   \frac{\Delta U_{inv}}{\Delta U} &= \frac{1}{1+\sqrt{\frac{\sum_{i=1}^nL_{i}^2
@@ -368,30 +369,30 @@ En una instalación se agrupan en una caja de paralelos las salidas los generado
 Si la tensión nominal de los generadores es de \(\qty{500}{\volt}\), este resultado implica que la sección del tramo de la caja de paralelos al inversor se diseñará con una caída de tensión de \(\num{0.87} \cdot \num{1.5} \cdot 500 /100 = \qty{6.525}{\volt}\). El tramo desde los generadores hasta la caja de paralelos se diseñará con una caída de tensión de \((1 - \num{0.87}) \cdot \num{1.5} \cdot 500 /100 = \qty{0.975}{\volt}\).
 \end{frame}
 
-\begin{frame}[label={sec:org6a1e122}]{Cálculo AC}
+\begin{frame}[label={sec:org82552ce}]{Cálculo AC}
 \begin{block}{Ejemplo}
 \begin{itemize}
-\item En una instalación que conduce \(\SI{75}{\ampere}\) a la salida de un
-inversor trifásico, situado este a \(\SI{100}{\meter}\) de la conexión
+\item En una instalación que conduce \(\qty{75}{\ampere}\) a la salida de un
+inversor trifásico, situado este a \(\qty{100}{\meter}\) de la conexión
 a red, se deberá utilizar un cable de sección (teniendo en cuenta
-que \(\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}\)).
+que \(\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}\)).
 \end{itemize}
 
 
 \[
-  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \SI{1.5}{\percent}\cdot400}=\SI{45.46}{\milli\meter\squared}
+  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \qty{1.5}{\percent}\cdot400}=\qty{45.46}{\milli\meter\squared}
 \]
 
 \begin{itemize}
 \item Dado que la sección de los cables está normalizada, se deberá optar
 por la sección inmediatamente superior, y por tanto la conexión del
 inversor a la red se realizará con tres cables de sección
-\(S=\SI{50}{\milli\meter\squared}\).
+\(S=\qty{50}{\milli\meter\squared}\).
 \end{itemize}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org20b85a2}]{Intensidad Máxima Admisible}
+\begin{frame}[label={sec:org5a16182}]{Intensidad Máxima Admisible}
 \begin{itemize}
 \item Con este resultado, es necesario comprobar que la intensidad de diseño es inferior a la intensidad máxima admisible del cable para sus condiciones de servicio, según las tablas de la ITC-BT-07.
 
@@ -399,7 +400,7 @@ inversor a la red se realizará con tres cables de sección
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org868168a}]{Continua vs. Alterna}
+\begin{frame}[label={sec:org0c9b1ce}]{Continua vs. Alterna}
 Suponiendo que en una planta con varios inversores trifásicos existe la
 posibilidad de ubicar los inversores debajo del generador FV
 (\emph{distribución en alterna}) o en un centro específico junto al punto de

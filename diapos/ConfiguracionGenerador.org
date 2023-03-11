@@ -54,7 +54,7 @@
 ** Procedimiento de cálculo
 #+BEAMER: \framesubtitle{Tensión máxima}
 
-- Temperatura de célula ($G=\SI{200}{\watt\per\meter\squared},\, T_{a}=\SI{-10}{\celsius}$)
+- Temperatura de célula ($G=\qty{200}{\watt\per\meter\squared},\, T_{a}=\qty{-10}{\celsius}$)
 #+begin_export latex
 \[
   T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow   T_{c} = -10 + 200 \cdot \frac{NOCT-20}{800}
@@ -76,7 +76,7 @@
 
 ** Procedimiento de cálculo
 #+BEAMER: \framesubtitle{Tensión MPP}
-- Temperatura de célula ($G_{stc},\, T_{a}=\SI{25}{\celsius}$)
+- Temperatura de célula ($G_{stc},\, T_{a}=\qty{25}{\celsius}$)
 #+begin_export latex
 \[
   T_{c} = T_{a} + G \cdot \frac{NOCT-20}{800} \rightarrow T_{c} = 25 + 1000 \cdot \frac{NOCT-20}{800}
@@ -291,22 +291,22 @@ Si la tensión nominal de los generadores es de $\qty{500}{\volt}$, este resulta
 ** Cálculo AC
 
 *** Ejemplo
-- En una instalación que conduce $\SI{75}{\ampere}$ a la salida de un
-  inversor trifásico, situado este a $\SI{100}{\meter}$ de la conexión
+- En una instalación que conduce $\qty{75}{\ampere}$ a la salida de un
+  inversor trifásico, situado este a $\qty{100}{\meter}$ de la conexión
   a red, se deberá utilizar un cable de sección (teniendo en cuenta
-  que $\gamma_{70} = \SI{48}{\meter\per\ohm\per\milli\meter\squared}$).
+  que $\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}$).
 
 
 #+BEGIN_EXPORT latex
 \[
-  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \SI{1.5}{\percent}\cdot400}=\SI{45.46}{\milli\meter\squared}
+  S=\frac{\sqrt{3} \cdot 100 \cdot 75}{48 \cdot \qty{1.5}{\percent}\cdot400}=\qty{45.46}{\milli\meter\squared}
 \]
 #+END_EXPORT
 
 - Dado que la sección de los cables está normalizada, se deberá optar
   por la sección inmediatamente superior, y por tanto la conexión del
   inversor a la red se realizará con tres cables de sección
-  $S=\SI{50}{\milli\meter\squared}$.
+  $S=\qty{50}{\milli\meter\squared}$.
 
 ** Intensidad Máxima Admisible
 
