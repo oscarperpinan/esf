@@ -387,13 +387,14 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 \]
 #+END_EXPORT
 
+- Incorporan el signo de la diferencia entre desviaciones estándar del modelo y las observaciones.
+
 #+BEGIN_EXPORT latex
   \[
   sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
   \]
 #+END_EXPORT
 
-- Incorporan el signo de la diferencia entre desviaciones estándar de modelo y observación.
 
 \nocite{Jolliff.Kindle.ea2009}
 
@@ -491,11 +492,11 @@ elementos en el conjunto.
 
 ** Métodos gráficos
 
-- Sea $Y_{f,i}(t)$ la serie temporal de la productividad diaria de una unidad del SFV.
-- Sea $\overline{Y}_{f}(t)$ la serie temporal del promedio de la productividad diaria del SFV.
-- Tomando $\overline{Y}_{f}(t)$ como modelo o referencia, podemos emplear los diagramas de Taylor y Target para detectar unidades defectuosas.
+- Sea $Y_{f,i}(t)$ la serie temporal de la productividad diaria de *una unidad* del SFV.
+- Sea $\widetilde{Y}_{f}(t)$ la serie temporal de la *mediana* de la productividad diaria del SFV *completo*.
+- Tomando $\widetilde{Y}_{f}(t)$ como modelo o referencia, podemos emplear los diagramas de Taylor y Target para detectar unidades defectuosas durante períodos de tiempo.
 
-#+ATTR_LATEX: :height 0.75\textheight
+#+ATTR_LATEX: :height 0.6\textheight
 [[../figs/TargetDiagram_Dia120.pdf]]
 
 
