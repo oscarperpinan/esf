@@ -69,7 +69,7 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 - Productividad del Generador 
   #+begin_export latex
   \[
-    Y_A = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+    Y_a = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
   \]
   #+end_export
 
@@ -93,20 +93,25 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 
   #+begin_export latex
   \[
-    L_C = Y_r - Y_A
+    L_C = Y_r - Y_a
   \]
   #+end_export
   Incluye pérdidas ópticas (suciedad, reflexión, sombreado), y pérdidas del generador (temperatura, cableado, tolerancia de potencia, dispersión de parámetros, LID, envejecimiento).
 
-*** Pérdidas en el balance del sistema (BOS)
+*** Pérdidas en el balance del sistema
   #+begin_export latex
   \[
-    L_{BOS} = Y_A - Y_f
+    L_s = Y_a - Y_f
   \]
   #+end_export
   Incluye pérdidas por eficiencia e interrupciones del inversor, cableado,  y transformador.
 
   
+** Resumen
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:../figs/SankeyDiagrama_SFCR.pdf]]
+
 * Métricas de Rendimiento
 
 ** /Performance Ratio/ o rendimiento global

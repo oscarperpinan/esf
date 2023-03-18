@@ -1,4 +1,4 @@
-% Created 2023-03-03 vie 16:45
+% Created 2023-03-18 sáb 10:59
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -63,9 +63,9 @@
 \maketitle
 
 \section{Energía Producida por un SFCR}
-\label{sec:org7b36448}
+\label{sec:org9ace565}
 
-\begin{frame}[label={sec:org4b9810f}]{Nomenclatura}
+\begin{frame}[label={sec:orgd6d68a6}]{Nomenclatura}
 \begin{itemize}
 \item \(E_{ac}\): energía producida en un periodo.
 \item \(G_{stc}, G^*\): irradiancia en condiciones estándar de medida (STC,
@@ -83,7 +83,7 @@ generador
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8e2e439}]{Potencia y Energía del Generador}
+\begin{frame}[label={sec:orgee47912}]{Potencia y Energía del Generador}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Generador FV
 \end{itemize}
@@ -102,7 +102,7 @@ generador
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org65d9e97}]{Potencia y Energía del Sistema}
+\begin{frame}[label={sec:org8f1b392}]{Potencia y Energía del Sistema}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Inversor
 \end{itemize}
@@ -120,9 +120,9 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 \end{frame}
 
 \section{Productividades y Pérdidas}
-\label{sec:org299b68d}
+\label{sec:org03cf3cc}
 
-\begin{frame}[label={sec:org3f37b54}]{Planteamiento}
+\begin{frame}[label={sec:org4e5e1ee}]{Planteamiento}
 \begin{itemize}
 \item Las \alert{productividades} son relaciones entre una cantidad de energía y la potencia nominal \(P_g^*\).
 \begin{itemize}
@@ -134,11 +134,11 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org2b5ac33}]{Productividades}
+\begin{frame}[label={sec:org23b5b3c}]{Productividades}
 \begin{itemize}
 \item Productividad del Generador 
 \[
-  Y_A = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
+  Y_a = \frac{E_{dc}}{P_g^*} \quad [\unit{\kilo\watthour\per\kilo\wattpeak}]
 \]
 
 \item Productividad del Sistema
@@ -153,27 +153,33 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
   Y_r &= \frac{E_{ref}}{P_g^*} = \frac{G_{inc}}{G_{stc}} \quad [\unit{\kilo\watthour\per\kilo\watt}]
 \end{align*}
 \end{frame}
-\begin{frame}[label={sec:org046fa35}]{Pérdidas de Rendimiento}
+\begin{frame}[label={sec:org641d724}]{Pérdidas de Rendimiento}
 \begin{block}{Pérdidas de captación del campo fotovoltaico.}
 \[
-  L_C = Y_r - Y_A
+  L_C = Y_r - Y_a
 \]
 Incluye pérdidas ópticas (suciedad, reflexión, sombreado), y pérdidas del generador (temperatura, cableado, tolerancia de potencia, dispersión de parámetros, LID, envejecimiento).
 \end{block}
 
-\begin{block}{Pérdidas en el balance del sistema (BOS)}
+\begin{block}{Pérdidas en el balance del sistema}
 \[
-  L_{BOS} = Y_A - Y_f
+  L_s = Y_a - Y_f
 \]
 Incluye pérdidas por eficiencia e interrupciones del inversor, cableado,  y transformador.
 \end{block}
 \end{frame}
 
 
-\section{Métricas de Rendimiento}
-\label{sec:org2b073f8}
+\begin{frame}[label={sec:org4644070}]{Resumen}
+\begin{center}
+\includegraphics[height=0.9\textheight]{../figs/SankeyDiagrama_SFCR.pdf}
+\end{center}
+\end{frame}
 
-\begin{frame}[label={sec:orgcb3fd77}]{\emph{Performance Ratio} o rendimiento global}
+\section{Métricas de Rendimiento}
+\label{sec:org55f87be}
+
+\begin{frame}[label={sec:orgb73023e}]{\emph{Performance Ratio} o rendimiento global}
 \[
   PR = \frac{Y_f}{Y_r} = \frac{E_{ac}}{P_g^* \cdot \frac{G_{inc}}{G_{stc}}}
 \]
@@ -195,7 +201,7 @@ dependencia con las condiciones meteorológicas}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org61d8cc9}]{Valores del PR}
+\begin{frame}[label={sec:orgf1f3c69}]{Valores del PR}
 \begin{itemize}
 \item El análisis de funcionamiento de diversos sistemas FV europeos ha
 mostrado que el rango de valores que toma el \emph{performance ratio} es
@@ -210,7 +216,7 @@ sido de 0,8}.
 \end{frame}
 
 
-\begin{frame}[label={sec:orga78d0ab}]{Rendimiento Global \(\qty{25}{\celsius}\)}
+\begin{frame}[label={sec:orgb545d35}]{Rendimiento Global \(\qty{25}{\celsius}\)}
 \[
   PR_{25} = \frac{E_{ac}}{\sum_i \left\{P_g^* \cdot \left[1 + \gamma_P \cdot(T_{c,i} - 25)\right]\cdot G_{ef,i}/G_{stc} \cdot \Delta t \right\}}
 \]
