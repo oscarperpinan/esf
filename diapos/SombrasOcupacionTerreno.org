@@ -45,6 +45,10 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
      \[
        ROT=D/L
      \]
+     \[
+       GCR=L/D
+     \]
+
      #+end_export
      
 
@@ -67,6 +71,7 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
      :BEAMER_col: 0.4
      :END:
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
+$$GCR=\frac{L \cdot W}{L_{ns}\cdot L_{eo}}$$
 $$E_{ac}=f(ROT)??$$
 
 ** Radiación promedio
@@ -96,6 +101,7 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 $$b=\frac{L}{W}=0.475$$
 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
+$$GCR=\frac{L \cdot W}{L_{ns}\cdot L_{eo}}$$
 
 ***                                                                   :BMCOL:
 :PROPERTIES:
