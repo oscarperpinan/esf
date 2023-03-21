@@ -6,8 +6,8 @@
 
 ** Planteamiento
 
-- La energía producida por un SFV durante un período puede ser estimada a partir de la radiación incidente y de las características técnicas del sistema.
-- Teniendo en cuenta el carácter estocástico de la radiación solar, la estimación de la energía que producirá un SFV durante los próximos años es un ejercicio de predicción con incertidumbre asociada.
+- La *energía producida por un SFV* durante un período puede ser *estimada* a partir de la *radiación incidente* y de las *características técnicas* del sistema.
+- Teniendo en cuenta el carácter estocástico de la radiación solar, la estimación de la energía que producirá un SFV durante los próximos años es un ejercicio de *predicción con incertidumbre* asociada.
 - El funcionamiento de un SFV puede ser analizado tomando esta estimación como referencia (*comparación modelo-medidas*).
 - En el caso de centrales FV, se pueden detectar problemas de funcionamiento comparando diferentes partes de la central (*coherencia estadística*).
 
@@ -178,6 +178,28 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/Splom.png]]
 
+** Gráficos Fotovoltaicos[fn:1]
+
+- $Y_f \sim Y_r$ (valores diarios e intradiarios)
+  
+  Relación lineal creciente. Detección de sombreado, defectos en cableado DC y AC, fallos o limitación del inversor.
+  
+- $Y_a \sim Y_r$ (valores diarios e intradiarios)
+
+  Relación lineal creciente. Detección de sombreado o defectos en cableado DC.
+
+- $pr \sim T_c$  (valores intradiarios)
+
+  Relación lineal decreciente. Detección de sombreado, degradación, o puntos calientes.
+
+- $(T_c - T_a) \sim y_r$ (valores intradiarios)
+
+  Relación lineal creciente. Detección de problemas de disipación de calor.
+
+- $V_G \sim T_c$ (valores intradiarios)
+
+  Relación lineal decreciente. Detección de problemas en el MPPT, limitación del inversor, diodos de bypass.
+  
 * Comparación entre Datos y Estimación
 
 ** Desviación entre modelo y observación
@@ -509,3 +531,7 @@ elementos en el conjunto.
 
 
 #    \bibliography{/home/oscar/Investigacion/bibtex/Radiacion.bib
+
+* Footnotes
+
+[fn:1]Más ejemplos en el informe "[[https://iea-pvps.org/key-topics/analytical-monitoring-of-pv-systems-final/][Analytical Monitoring of Grid-connected Photovoltaic Systems]]" de la Task 13 del IEA-PVPS. 
