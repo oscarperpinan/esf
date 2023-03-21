@@ -3,6 +3,16 @@
 #+SETUPFILE: config.org
 #+OPTIONS: H:2
 
+** Planteamiento
+
+- Al diseñar una central fotovoltaica se debe decidir la ubicación de las diferentes partes del generador resolviendo un *compromiso* entre la mejor *ocupación del terreno* disponible y la minimización del *impacto de sombras mutuas* arrojadas entre los módulos.
+- Métricas de ocupación de terreno:
+  \[GCR = \frac{A_G}{A_T}\]
+  \[ROT = \frac{A_T}{A_G}\]
+*** Ejemplo
+
+Un sistema con un $ROT = 4$ requiere un terreno de un área 4 veces el área del generador fotovoltaico. O, dado que $GCR = 0.25$, el generador fotovoltaico ocupará una cuarta parte del terreno.
+
 * Sistemas estáticos
 
 ** Sombras entre filas
@@ -43,10 +53,10 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
      \[
      W=\infty\]
      \[
-       ROT=D/L
+       ROT=d/L
      \]
      \[
-       GCR=L/D
+       GCR=L/d
      \]
 
      #+end_export
@@ -98,7 +108,6 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 :PROPERTIES:
 :BEAMER_col: 0.3
 :END:
-$$b=\frac{L}{W}=0.475$$
 
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
 $$GCR=\frac{L \cdot W}{L_{ns}\cdot L_{eo}}$$
