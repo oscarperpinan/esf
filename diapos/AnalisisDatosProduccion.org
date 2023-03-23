@@ -152,7 +152,7 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
   una *medida de la dispersión* de la variable.
  
 
-* Gráficos
+* Gráficos estadísticos
 
 
 ** Función de Densidad de Probabilidad
@@ -178,8 +178,9 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/Splom.png]]
 
-** Gráficos Fotovoltaicos[fn:1]
+* Gráficos Fotovoltaicos
 
+** Inventario[fn:1]
 - $Y_f \sim Y_r$ (valores diarios e intradiarios)
   
   Relación lineal creciente. Detección de sombreado, defectos en cableado DC y AC, fallos o limitación del inversor.
@@ -199,7 +200,43 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 - $V_G \sim T_c$ (valores intradiarios)
 
   Relación lineal decreciente. Detección de problemas en el MPPT, limitación del inversor, diodos de bypass.
-  
+
+** $Y_f \sim Y_r$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/YfYr.pdf]]
+
+** Error de funcionamiento $Y_f \sim Y_r$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/ErrorYf.pdf]]
+
+** $Y_a \sim Y_r$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/YaYr.pdf]]
+
+** Error de funcionamiento $Y_a \sim Y_r$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/ErrorMonitorizacion.pdf]]
+
+
+** $pr \sim T_c$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/prTc.pdf]]
+
+** $V_g \sim T_c$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/VgTc.pdf]]
+
+** Error de funcionamiento $V_g \sim T_c$
+
+#+ATTR_LATEX: :height 0.95\textheight
+[[file:../figs/ErrorVgTc.pdf]]
+
 * Comparación entre Datos y Estimación
 
 ** Desviación entre modelo y observación
