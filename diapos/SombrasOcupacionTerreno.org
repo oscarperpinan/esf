@@ -17,13 +17,13 @@ Un sistema con un $ROT = 4$ requiere un terreno de un área 4 veces el área del
 
 ** Sombras entre filas
 
-[[../figs/SombraEstaticaInclinado2.pdf]]
+[[../figs/SombrasEstaticas.pdf]]
 
 ** Sombras entre filas
 
 - Suele establecerse un objetivo de *4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra*.
 
-- La longitud de la sombra de un obstáculo se mide con:$$d=\frac{h}{\tan\gamma_{s}}$$
+- La longitud de la sombra de un obstáculo se mide con:$$s=\frac{h}{\tan\gamma_{s}}$$
 
 - En el mediodía del solsticio de invierno 
 $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$ 
@@ -35,7 +35,7 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
 *** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.65
+     :BEAMER_col: 0.5
      :END:
 #+ATTR_LATEX: :options angle=90 :height 0.7\textheight
 [[../figs/AbacoSombraEst_Ene10.pdf]]
@@ -44,19 +44,18 @@ $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 
 *** 								      :BMCOL:
      :PROPERTIES:
-     :BEAMER_col: 0.35
+     :BEAMER_col: 0.5
      :END:
-     #+ATTR_LATEX: :height 0.3\textheight
-     [[../figs/DimensionesSeguidorSombra.pdf]]
-
+     #+ATTR_LATEX: :width \textwidth
+     [[../figs/SombrasEstaticas.pdf]]
      #+begin_export latex
      \[
-     W=\infty\]
+     W \to \infty\]
      \[
-       ROT=d/L
+       ROT=\frac{A_T}{A_G}=\frac{d+L \cdot \cos(\beta)}{L}
      \]
      \[
-       GCR=L/d
+       GCR=\frac{A_G}{A_L}=\frac{L}{d+L \cdot \cos(\beta)}
      \]
 
      #+end_export
