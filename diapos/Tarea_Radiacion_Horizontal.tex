@@ -34,7 +34,9 @@ global en el plano horizontal con el siguiente itinerario:
 \item Obtén series temporales de \textbf{medidas diarias} de radiación
   solar de 3 estaciones meteorológicas (recomendable longitud de 10
   años).
-\item Filtra cada serie empleando límites físicos. \label{filtrado}
+\item Filtra cada una de las 3 series empleando límites físicos. \label{filtrado}
+\item Para cada ubicación, calcula las 12 medias mensuales de
+  radiación diaria a partir de las series filtradas. \label{medias-mensuales}
 \item Elige una localización dentro del perímetro definido por las
   tres estaciones. Obtén las \textbf{12 medias mensuales} en esta
   localización empleando interpolación espacial (IDW)\footnote{Las
@@ -49,8 +51,8 @@ global en el plano horizontal con el siguiente itinerario:
     con las que se puede calcular la distancia entre dos puntos con
     $\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$.} a partir de las
   \textbf{12 medias mensuales} de la radiación filtrada de cada
-  estación (punto \ref{filtrado}). \label{idw}
-\item Obtén medias temporales de radiación solar de un servicio
+  estación (punto \ref{medias-mensuales}). \label{idw}
+\item Obtén medias mensuales de radiación solar diaria de un servicio
   satelital (preferiblemente CMSAF, empleando QGis o software similar;
   véanse los anexos \ref{sec:cmsaf} y \ref{sec:qgis}) para una región que
   cubra las tres estaciones\footnote{Los datos de radiación
@@ -62,10 +64,9 @@ global en el plano horizontal con el siguiente itinerario:
   estimaciones satelitales empleando métricas estadísticas (MBD, RMSD,
   MAD).
 \item Combina la estimación satelital en la localización del punto
-  \ref{idw} con las medias mensuales obtenidas en ese punto.
+  \ref{idw} con las medias mensuales obtenidas en ese punto haciendo
+  la media aritmética para cada mes.
 \end{enumerate}
-
-\clearpage
 
 \clearpage
 
@@ -86,7 +87,7 @@ Los datos de radiación global se denominan \emph{Surface incoming
   shortwave radiation} (SIS). Para esta práctica utilizaremos
 productos operacionales y las medias mensuales, disponibles
 en:
-\url{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21989_21990&fid=27}.
+\url{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22483&fid=36}.
 
 Para obtener estos datos para una región de interés hay que seguir
 este procedimiento:
@@ -101,9 +102,9 @@ este procedimiento:
   deseado. Al ser medias mensuales, obtendremos un fichero raster para
   cada mes de este rango. Por ejemplo, si elegimos un rango temporal
   que incluye 10 años, obtendremos 120 ficheros raster. Para esta
-  práctica lo haremos de forma más simplificado, eligiendo únicamente
-  un año para obtener 12 ficheros raster, por ejemplo desde 2022-01-01
-  hasta 2022-12-31.
+  práctica lo haremos de forma simplificada, eligiendo únicamente
+  un año para obtener 12 ficheros raster, por ejemplo desde 2023-01-01
+  hasta 2023-12-31.
 \item Una vez definida la región y el rango temporal, se puede
   realizar la solicitud: \emph{Add to order cart}. Para poder
   finalizar la solicitud es necesario tener usuario y contraseña. Si
@@ -125,13 +126,13 @@ datos vectoriales (puntos, líneas y polígonos) y tipo raster (matrices
 de datos georeferenciados).
 
 Deberías leer
-\href{https://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_raster/index.html}{este
+\href{https://docs.qgis.org/3.28/es/docs/user_manual/working_with_raster/index.html}{este
   tutorial} para aprender a trabajar con ficheros tipo raster, y
-\href{http://docs.qgis.org/3.22/es/docs/user\_manual/working\_with\_vector/index.html}{este
+\href{http://docs.qgis.org/3.28/es/docs/user\_manual/working\_with\_vector/index.html}{este
   tutorial} para trabajar con datos vectoriales.
 
 Hay varios plugins que proporcionan capacidades
-adicionales. \href{https://docs.qgis.org/3.22/es/docs/training\_manual/qgis\_plugins/fetching\_plugins.html}{Este
+adicionales. \href{https://docs.qgis.org/3.28/es/docs/training\_manual/qgis\_plugins/fetching\_plugins.html}{Este
   documento} es una guía en el proceso de instalación y utilización de
 plugins. Te pueden interesar los siguientes:
 
@@ -140,10 +141,10 @@ plugins. Te pueden interesar los siguientes:
     sampling tool}, para extraer valores de un fichero raster en un
   punto concreto.
 \item
-  \href{https://docs.qgis.org/3.22/es/docs/user\_manual/plugins/plugins\_interpolation.html}{Interpolation} plugin,
+  \href{https://docs.qgis.org/3.28/es/docs/user\_manual/plugins/plugins\_interpolation.html}{Interpolation} plugin,
   para realizar una interpolación IDW de datos vectoriales.
 \item Además, también es recomendable el plugin para
-  utilizar \href{https://grass.osgeo.org/}{GRASS}. \href{http://docs.qgis.org/3.22/es/docs/user\_manual/grass\_integration/grass\_integration.html}{Este
+  utilizar \href{https://grass.osgeo.org/}{GRASS}. \href{http://docs.qgis.org/3.28/es/docs/user\_manual/grass\_integration/grass\_integration.html}{Este
     documento} proporciona instrucciones para instalarlo y trabajar
   con él.
 \end{itemize}
