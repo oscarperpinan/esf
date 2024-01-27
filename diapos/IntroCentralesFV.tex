@@ -1,4 +1,4 @@
-% Created 2023-01-22 dom 20:22
+% Created 2024-01-27 sáb 17:09
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -24,6 +24,7 @@
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \bibliographystyle{plain}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
 \sisetup{output-decimal-marker={,}}
 \DeclareSIUnit{\watthour}{Wh}
 \DeclareSIUnit{\wattpeak}{Wp}
@@ -31,7 +32,7 @@
 \DeclareSIUnit{\amperehour}{Ah}
 \usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[symbol, perpage]{footmisc}
 \parskip=5pt
 \usetheme{Boadilla}
 \usecolortheme{rose}
@@ -54,13 +55,13 @@
  pdftitle={Introducción a las Centrales Fotovoltaicas},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdfcreator={Emacs 29.1 (Org mode 9.6.11)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
-\begin{frame}[label={sec:org3d552c0}]{Definición}
+\begin{frame}[label={sec:orgdae9f28}]{Definición}
 Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden de MW) diseñado para la venta de energía a la red eléctrica.
 
 \begin{center}
@@ -68,7 +69,7 @@ Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden d
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7147229}]{Características (1)}
+\begin{frame}[label={sec:org539d0c7}]{Características (1)}
 \begin{itemize}
 \item Habitualmente se instalan \alert{sobre suelo}, sin estar necesariamente asociadas a un punto de consumo cercano.
 \item Como solución a las limitaciones de suelo disponible, están apareciendo \alert{sistemas flotantes} (embalses).
@@ -81,7 +82,7 @@ Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden d
 \end{frame}
 
 
-\begin{frame}[label={sec:org2f9ec8b}]{Características (2)}
+\begin{frame}[label={sec:org9dbd947}]{Características (2)}
 \begin{itemize}
 \item Se emplean \alert{módulos de gran tamaño} (incluso bifaciales) para reducir los tiempos y costes de instalación.
 \item Pueden utilizar \alert{seguidores} para maximizar la producción.
@@ -92,7 +93,7 @@ Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden d
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org2f73147}]{Características (y 3)}
+\begin{frame}[label={sec:org9f49608}]{Características (y 3)}
 \begin{itemize}
 \item La inyección de la energía eléctrica se realiza en \alert{Media Tensión}.
 \item Incorporan \alert{inversores de gran potencia} y centralizados, y centros de transformación BT/MT.
@@ -104,11 +105,26 @@ Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden d
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf66a99b}]{Estado del arte}
+\begin{frame}[label={sec:org5b06b2a}]{Estado del arte (1)}
+Las centrales fotovoltaicas superan los 648 GW\footnote{Las cifras corresponden a finales de 2022, y provienen del informe \guillemotleft{}\href{https://iea-pvps.org/trends\_reports/trends-2023/}{Trends in Photovoltaic Applications 2023}\guillemotright{} de la Task 1 de IEA-PVPS.}  de potencia total instalada a nivel mundial (el 55\% de la potencia fotovoltaica total):
 \begin{itemize}
-\item Las centrales fotovoltaicas superan los 530 GW\footnote{Las cifras corresponden a finales de 2021, y provienen del informe \guillemotleft{}\href{https://iea-pvps.org/trends\_reports/trends-2022/}{Trends in Photovoltaic Applications 2022}\guillemotright{} de la Task 1 de IEA-PVPS.}  de potencia total instalada a nivel mundial (200 GW en China, 80 GW en EEUU, 53 en India), el 56\% de la potencia fotovoltaica.
-\item En 2021 se instalaron 95 GW (25 GW en China, 20 GW en EEUU, 12 en India), 86 GW en 2020 y 71 GW in 2019.
-\item Más de 9000 instalaciones han superado la potencia de 4 MW. Alrededor de 10 instalaciones han superado la potencia de 1 GW.
+\item 254 GW en China,
+\item 90 GW en EEUU,
+\item 67 GW en India,
+\item 34 GW en Japón,
+\item 24 GW en España.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org1d89d1d}]{Estado del arte (2)}
+En 2022 se instalaron 120 GW  (frente a 92 GW en 2021 y 84 GW in 2020):
+\begin{itemize}
+\item 54 GW en China,
+\item 14 GW en India,
+\item 12,5 GW en EEUU,
+\item 5,5 GW en España.
 \end{itemize}
 \end{frame}
 \end{document}
