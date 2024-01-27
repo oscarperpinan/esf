@@ -39,6 +39,7 @@
 
 *** Variabilidad Temporal
 Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
+#+ATTR_LATEX: :height 0.8\textheight
 [[../figs/VariabilidadRadiacionDiario.pdf]]
 
 \nocite{Perpinan2009}
@@ -388,16 +389,16 @@ https://github.com/oscarperpinan/mds/wiki
 
 *** SAFs: Radiación 
 
-- *CM SAF*: Surface incoming shortwave radiation ([[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21987_21988&fid=27][Daily SIS]], [[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21989_21990&fid=27][Monthly SIS]])
+- *CM SAF*: Surface incoming shortwave radiation ([[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22482&fid=36][Daily SIS]], [[https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22483&fid=36][Monthly SIS]])
 
-  - AEMET ha analizado las estimaciones para España en su [[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas_radiacion_solar][Atlas de Radiación]].
+  - AEMET analizó las estimaciones para España en su [[http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas_radiacion_solar][Atlas de Radiación]].
 
 - *LSA SAF*: Down-welling surface short-wave radiation flux ([[https://landsaf.ipma.pt/en/products/longwave-shortwave-radiation/dssf/][DSSF]])
 
 # ** INPE (Brasil)
 # http://www.dgi.inpe.br/CDSR/
 
-*** ADRASE - CIEMAT
+*** COMMENT ADRASE - CIEMAT
 **** http://adrase.es
 - Radiación solar media mensual, resolución aproximada de 5x5 km.
   - Media mensual y anual más probable durante un periodo de largo
@@ -410,6 +411,7 @@ https://github.com/oscarperpinan/mds/wiki
 #+ATTR_LATEX: :height 0.35\textheight
 [[../figs/adrase.png]]
 #+END_CENTER
+
 
 * Métodos híbridos
 
@@ -456,10 +458,11 @@ https://github.com/oscarperpinan/mds/wiki
 \nocite{Hofierka.Suri2002}
 
 *** PVGIS - =r.sun=
-**** http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php
+**** [[https://re.jrc.ec.europa.eu/pvg_tools/en/tools.html]]
 
 - Datos de radiación en el plano horizontal de CM-SAF
 - Permite incorporar la corrección por topografía (SVF y horizon blocking) con perfil estándar o con datos importados.
+
 * Control de calidad
 *** Introducción
 **** Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erróneos.
@@ -512,7 +515,7 @@ https://github.com/oscarperpinan/mds/wiki
 
 *** Tests de variabilidad
 
-Se realizan sobre medidas de irradiancia.
+Se realizan sobre medidas de *irradiancia*.
 
 **** Test de persistencia
 Cuando un sensor falla proporciona un valor constante (baja desviación estándar). Si funciona de forma intermitente, la variabilidad puede ser muy alta.

@@ -1,4 +1,4 @@
-% Created 2023-02-03 vie 16:07
+% Created 2024-01-27 sáb 18:44
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -24,6 +24,7 @@
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \bibliographystyle{plain}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
 \sisetup{output-decimal-marker={,}}
 \DeclareSIUnit{\watthour}{Wh}
 \DeclareSIUnit{\wattpeak}{Wp}
@@ -31,7 +32,7 @@
 \DeclareSIUnit{\amperehour}{Ah}
 \usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[symbol, perpage]{footmisc}
 \parskip=5pt
 \usetheme{Boadilla}
 \usecolortheme{rose}
@@ -55,16 +56,16 @@
  pdftitle={Bases de Datos de Radiación Solar},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdfcreator={Emacs 29.1 (Org mode 9.6.11)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Introducción}
-\label{sec:orgb649b77}
+\label{sec:org11ab20c}
 
-\begin{frame}[label={sec:org726dc6f}]{Radiación Solar y Sistemas Fotovoltaicos}
+\begin{frame}[label={sec:orgc5321bc}]{Radiación Solar y Sistemas Fotovoltaicos}
 \begin{itemize}
 \item La \alert{energía producida} por un sistema fotovoltaico depende principalmente de la \alert{radiación incidente} en el generador.
 
@@ -76,7 +77,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf39d259}]{La radiación solar no se puede calcular analíticamente}
+\begin{frame}[label={sec:org667e636}]{La radiación solar no se puede calcular analíticamente}
 \begin{itemize}
 \item La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
 \item Para estimar la radiación se necesitan medidas terrestres o imágenes de satélite.
@@ -86,7 +87,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc614cf5}]{Ángulo de Inclinación}
+\begin{frame}[label={sec:org4adbf18}]{Ángulo de Inclinación}
 \begin{itemize}
 \item Los generadores FV tienen un \alert{ángulo de inclinación positivo} para maximizar el rendimiento.
 \item Este ángulo depende de la \alert{latitud} del lugar y de la \alert{aplicación del sistema}.
@@ -97,7 +98,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org0e27f41}]{Bases de Datos de Radiación Solar}
+\begin{frame}[label={sec:orga97907a}]{Bases de Datos de Radiación Solar}
 \begin{itemize}
 \item Por tanto, es inviable mantener una base de datos de radiación solar \alert{incidente}.
 \item Las \alert{bases de datos} registran radiación en el \alert{plano horizontal}.
@@ -106,23 +107,23 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:org1331d7f}]{Variabilidad Temporal y Espacial}
+\begin{frame}[label={sec:orga5c2d1e}]{Variabilidad Temporal y Espacial}
 \begin{itemize}
 \item La irradiancia solar extraterrestre depende de la latitud y el instante temporal (\emph{proceso determinista}).
 \item La irradiancia solar incidente en la superficie terrestre es resultado de la interacción con la atmósfera cambiante: \alert{variabilidad temporal y espacial} (\emph{proceso estocástico}).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org77ab351}]{Variabilidad Temporal}
+\begin{frame}[label={sec:orgf7d38fe}]{Variabilidad Temporal}
 Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla
 \begin{center}
-\includegraphics[width=.9\linewidth]{../figs/VariabilidadRadiacionDiario.pdf}
+\includegraphics[height=0.8\textheight]{../figs/VariabilidadRadiacionDiario.pdf}
 \end{center}
 
 \nocite{Perpinan2009}
 \end{frame}
 
-\begin{frame}[label={sec:orge513594}]{Variabilidad Temporal}
+\begin{frame}[label={sec:org7f7a6c6}]{Variabilidad Temporal}
 \[
 \sigma_{\overline{G}}=\frac{\sigma_{G}}{\sqrt{N}}
 \]
@@ -142,7 +143,7 @@ Variabilidad de la irradiación diaria, mensual y anual durante el período comp
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfb43fb6}]{Variabilidad Espacial}
+\begin{frame}[label={sec:org83a05b2}]{Variabilidad Espacial}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{../figs/SpatialVariability.jpg}
 \end{center}
@@ -154,7 +155,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \nocite{Gueymard.Wilcox2011a}
 \end{frame}
 
-\begin{frame}[label={sec:org629756f}]{Variabilidad Espacial}
+\begin{frame}[label={sec:org3e4aa3d}]{Variabilidad Espacial}
 \begin{center}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SpatialVariability_Annual.jpg}
@@ -162,7 +163,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org979708d}]{Estimación a partir de Medidas}
+\begin{frame}[label={sec:org641193f}]{Estimación a partir de Medidas}
 \begin{itemize}
 \item Para estimar la radiación incidente es necesario contar con:
 \begin{itemize}
@@ -172,7 +173,7 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf85d684}]{Fuentes de datos}
+\begin{frame}[label={sec:org86439d6}]{Fuentes de datos}
 \begin{itemize}
 \item \alert{Estaciones meteorológicas}
 \begin{itemize}
@@ -213,11 +214,11 @@ COV = 1/G_p \sqrt{\frac{\sum_1^{n}(G_p^2 - G_i^2)}{n}}
 \end{frame}
 
 \section{Estaciones Meteorológicas}
-\label{sec:org8ab74ee}
+\label{sec:orga8b4bbe}
 
 \subsection{Fundamentos}
-\label{sec:org2637981}
-\begin{frame}[label={sec:org3647bb4}]{Medida directa}
+\label{sec:org77fcab4}
+\begin{frame}[label={sec:orga3d4bc5}]{Medida directa}
 La medida directa de radiación solar se realiza con un piranómetro.
 \begin{columns}
 \begin{column}{0.4\columnwidth}
@@ -241,7 +242,7 @@ La medida directa de radiación solar se realiza con un piranómetro.
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgd5d2839}]{Medida directa}
+\begin{frame}[label={sec:orgb89ca53}]{Medida directa}
 \begin{block}{La red de estaciones que miden directamente radiación es escasa para estimaciones precisas en regiones grandes}
 \begin{itemize}
 \item Un piranómetro requiere mantenimiento y calibración frecuente.
@@ -251,7 +252,7 @@ las que miden temperatura ambiente y precipitación (1:500).
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orga49d744}]{Modelos empíricos}
+\begin{frame}[label={sec:org6f14fca}]{Modelos empíricos}
 Frente a la baja densidad de estaciones con medida directa de radiación se emplean modelos empíricos
 
 \begin{itemize}
@@ -271,7 +272,7 @@ interpolar para otras localizaciones.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8253ff9}]{Ejemplos de modelos empíricos}
+\begin{frame}[label={sec:org18112fa}]{Ejemplos de modelos empíricos}
 \begin{itemize}
 \item Radiación y Horas de Brillo (Angstrom y Prescott)
 \end{itemize}
@@ -301,16 +302,16 @@ G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
 
 
 \subsection{Fuentes de Datos}
-\label{sec:org7480f43}
+\label{sec:org6cb66f2}
 
-\begin{frame}[label={sec:orgb30b8a1}]{Wiki con recursos}
+\begin{frame}[label={sec:orgd8fd6c8}]{Wiki con recursos}
 \begin{block}{}
 \url{https://github.com/oscarperpinan/mds/wiki}
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgdb484dd}]{Baseline Surface Radiation Network}
+\begin{frame}[label={sec:org34e27d3}]{Baseline Surface Radiation Network}
 \begin{block}{\url{http://www.bsrn.awi.de/}}
 \begin{itemize}
 \item BSRN proporciona datos casi continuos, a largo plazo, observados in situ, de la superficie terrestre e irradiancias de banda ancha (infrarrojo solar y térmico) de una red de más de 50 sitios globalmente diversos.
@@ -326,7 +327,7 @@ G(0) = a \left(1 - \exp(-b \Delta T^c)\right) \cdot B_o(0)
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org863cfea}]{Measurement and Instrumentation Data Center NREL}
+\begin{frame}[label={sec:org3b435cd}]{Measurement and Instrumentation Data Center NREL}
 Radiación global, directa y difusa (y otras variables) con muestreo de
   1 min en diversas localidades de EEUU.
 
@@ -341,7 +342,7 @@ Radiación global, directa y difusa (y otras variables) con muestreo de
 
 
 
-\begin{frame}[label={sec:org0b4f9a0}]{SIAR}
+\begin{frame}[label={sec:orgc06e0d7}]{SIAR}
 \begin{block}{\url{https://eportal.mapa.gob.es/websiar/Inicio.aspx}}
 \begin{itemize}
 \item El Sistema de Información Agroclimática para el Regadío (SiAR)
@@ -361,7 +362,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgbd5787d}]{SIAR}
+\begin{frame}[label={sec:orgca604fc}]{SIAR}
 \begin{block}{Sensores}
 \begin{itemize}
 \item Temperatura y Humedad
@@ -380,7 +381,7 @@ las zonas de riego.
 \end{frame}
 
 
-\begin{frame}[label={sec:org71f8e7c}]{AEMET}
+\begin{frame}[label={sec:orgc4f5513}]{AEMET}
 \begin{block}{\href{http://www.aemet.es/es/eltiempo/observacion/radiacion}{Radiación}}
 \begin{itemize}
 \item Alrededor de 30 estaciones en todo el territorio.
@@ -397,7 +398,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgb5dec49}]{Redes de Comunidades Autónomas}
+\begin{frame}[label={sec:org9928da7}]{Redes de Comunidades Autónomas}
 \begin{itemize}
 \item \href{https://www.meteogalicia.gal/observacion/estacions/estacions.action?request\_locale=es}{Meteogalicia}
 \item \href{http://meteo.navarra.es/estaciones/mapadeestaciones.cfm}{MeteoNavarra}
@@ -409,12 +410,12 @@ las zonas de riego.
 
 
 \section{Imágenes de Satélite}
-\label{sec:orga9d7cb4}
+\label{sec:org21d174b}
 
 \subsection{Fundamentos}
-\label{sec:org1803b75}
+\label{sec:orgd21043a}
 
-\begin{frame}[label={sec:org61748d9}]{Fundamentos}
+\begin{frame}[label={sec:orgd17bd01}]{Fundamentos}
 \begin{itemize}
 \item Los satélites meteorológicos están equipados con \alert{radiómetros}
 (sensores de radiación electromagnética a diferentes frecuencias)
@@ -432,7 +433,7 @@ radiómetro.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfd48f98}]{Satelites Geoestacionarios Europeos: Meteosat}
+\begin{frame}[label={sec:org4f4b97f}]{Satelites Geoestacionarios Europeos: Meteosat}
 \begin{itemize}
 \item \alert{MFG}: Meteosat First Generation (7 satélites)
 \begin{itemize}
@@ -457,7 +458,7 @@ radiómetro.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgf273eed}]{Procedimientos: Heliosat-2}
+\begin{frame}[label={sec:org651c5ec}]{Procedimientos: Heliosat-2}
 \begin{block}{Pasos}
 \begin{itemize}
 \item Establecer \alert{albedo de referencia} (\emph{suelo}).
@@ -477,7 +478,7 @@ radiómetro.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org8679682}]{Procedimientos: CM SAF}
+\begin{frame}[label={sec:org482070b}]{Procedimientos: CM SAF}
 \alert{Fundamento}
 \begin{itemize}
 \item Se emplea el modelo libRadtran (\alert{Radiative Transfer Model, RTM)}, para
@@ -490,7 +491,7 @@ determinada interpolando en la LUT}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb10767e}]{Procedimientos: CM SAF}
+\begin{frame}[label={sec:orge94b0d0}]{Procedimientos: CM SAF}
 \begin{itemize}
 \item \alert{Dos LUTs}: cielo nuboso, cielo claro.
 \begin{itemize}
@@ -513,7 +514,7 @@ determinada interpolando en la LUT}.
 
 
 
-\begin{frame}[label={sec:org052714a}]{Procedimientos: LSA SAF}
+\begin{frame}[label={sec:org7e0b795}]{Procedimientos: LSA SAF}
 \begin{itemize}
 \item Generación de \alert{máscara de nubes} a partir de imagen usando algoritmo de \href{http://www.nwcsaf.org/}{NWC-SAF}.
 \item Para \alert{zonas sin nubes}: modelo de cielo claro sin usar datos de imagen.
@@ -526,16 +527,16 @@ determinada interpolando en la LUT}.
 
 
 \subsection{Fuentes de Datos}
-\label{sec:org9314820}
+\label{sec:orga19bbab}
 
-\begin{frame}[label={sec:org3b2e320}]{Wiki con recursos}
+\begin{frame}[label={sec:org7126fc0}]{Wiki con recursos}
 \begin{block}{}
 \url{https://github.com/oscarperpinan/mds/wiki}
 \end{block}
 \end{frame}
 
 
-\begin{frame}[label={sec:org6b07744}]{SSE-NASA}
+\begin{frame}[label={sec:orgfd8a351}]{SSE-NASA}
 \begin{block}{Surface meteorology and Solar Energy (SSE)}
 \begin{itemize}
 \item 200 parámetros meteorológicos y de energía solar derivados de imágenes de satélite.
@@ -548,7 +549,7 @@ determinada interpolando en la LUT}.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4d657a6}]{EUMETSAT - SAF}
+\begin{frame}[label={sec:orgf39a39c}]{EUMETSAT - SAF}
 \begin{itemize}
 \item \alert{\href{http://www.eumetsat.int}{EUMETSAT}} es la agencia europea de satélites en operación, para la monitorización de la meteorología, clima y el medio ambiente.
 \item \alert{\href{https://www.eumetsat.int/about-us/satellite-application-facilities-safs}{Satellite Application Facilities} (SAFs)}
@@ -559,7 +560,7 @@ determinada interpolando en la LUT}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf4f6fa2}]{SAFs}
+\begin{frame}[label={sec:orgf365919}]{SAFs}
 \begin{itemize}
 \item \href{https://wui.cmsaf.eu/safira/action/viewProduktSearch}{SAF on Climate Monitoring (CM SAF)}: datos derivados de imágenes de satélite adecuados para la monitorización del clima.
 
@@ -573,43 +574,22 @@ determinada interpolando en la LUT}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7dfd4be}]{SAFs: Radiación}
+\begin{frame}[label={sec:orgf22c515}]{SAFs: Radiación}
 \begin{itemize}
-\item \alert{CM SAF}: Surface incoming shortwave radiation (\href{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21987\_21988\&fid=27}{Daily SIS}, \href{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=21989\_21990\&fid=27}{Monthly SIS})
+\item \alert{CM SAF}: Surface incoming shortwave radiation (\href{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22482\&fid=36}{Daily SIS}, \href{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22483\&fid=36}{Monthly SIS})
 
 \begin{itemize}
-\item AEMET ha analizado las estimaciones para España en su \href{http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas\_radiacion\_solar}{Atlas de Radiación}.
+\item AEMET analizó las estimaciones para España en su \href{http://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/atlas\_radiacion\_solar}{Atlas de Radiación}.
 \end{itemize}
 
 \item \alert{LSA SAF}: Down-welling surface short-wave radiation flux (\href{https://landsaf.ipma.pt/en/products/longwave-shortwave-radiation/dssf/}{DSSF})
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org16574fd}]{ADRASE - CIEMAT}
-\begin{block}{\url{http://adrase.es}}
-\begin{itemize}
-\item Radiación solar media mensual, resolución aproximada de 5x5 km.
-\begin{itemize}
-\item Media mensual y anual más probable durante un periodo de largo
-plazo (imágenes de satélite, modelo aproximadamente Heliosat)
-\item Variabilidad esperada de los valores diarios mensuales: (series
-largas de datos de estaciones de AEMET y extrapolación espacial
-con IDW)
-\end{itemize}
-\end{itemize}
-
-\begin{center}
-\begin{center}
-\includegraphics[height=0.35\textheight]{../figs/adrase.png}
-\end{center}
-\end{center}
-\end{block}
-\end{frame}
-
 \section{Métodos híbridos}
-\label{sec:orgb265a3a}
+\label{sec:org87662f2}
 
-\begin{frame}[label={sec:orgf3bc930}]{Interpolación Espacial}
+\begin{frame}[label={sec:org8c45370}]{Interpolación Espacial}
 \begin{block}{\alert{Objetivo}: mejorar la resolución espacial de medidas dispersas}
 \begin{itemize}
 \item \alert{Inverse Distance Weighting (IDW)}: determinista (los pesos \(w_i\) son una función inversa de la distancia.)
@@ -636,7 +616,7 @@ con IDW)
 \end{frame}
 
 
-\begin{frame}[label={sec:org3e7965e}]{Corrección por topografía}
+\begin{frame}[label={sec:org3281a5d}]{Corrección por topografía}
 \begin{center}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{../figs/downscaling.pdf}
@@ -656,17 +636,18 @@ con IDW)
 \nocite{Hofierka.Suri2002}
 \end{frame}
 
-\begin{frame}[label={sec:org5cf42b2},fragile]{PVGIS - \texttt{r.sun}}
- \begin{block}{\url{http://re.jrc.ec.europa.eu/pvgis/apps4/pvest.php}}
+\begin{frame}[label={sec:org4e6327d},fragile]{PVGIS - \texttt{r.sun}}
+ \begin{block}{\url{https://re.jrc.ec.europa.eu/pvg\_tools/en/tools.html}}
 \begin{itemize}
 \item Datos de radiación en el plano horizontal de CM-SAF
 \item Permite incorporar la corrección por topografía (SVF y horizon blocking) con perfil estándar o con datos importados.
 \end{itemize}
 \end{block}
 \end{frame}
+
 \section{Control de calidad}
-\label{sec:orgbae27f4}
-\begin{frame}[label={sec:org7e03cd6}]{Introducción}
+\label{sec:orgdfc4881}
+\begin{frame}[label={sec:org0385a39}]{Introducción}
 \begin{block}{Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erróneos.}
 \begin{itemize}
 \item Límites Físicos
@@ -678,8 +659,8 @@ con IDW)
 
 
 \subsection{Límites físicos}
-\label{sec:orgb745afa}
-\begin{frame}[label={sec:org4138516}]{Irradiación Diaria}
+\label{sec:orge196355}
+\begin{frame}[label={sec:orge6e7794}]{Irradiación Diaria}
 \begin{itemize}
 \item La radiación global en el plano horizontal debe ser inferior a la extraterrestre (\(K_{td} \leq 1\))
 \end{itemize}
@@ -701,7 +682,7 @@ K_{td} = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
 \nocite{Younes.Claywell.ea2005, Estevez.Gavilan.ea2011, Geiger.Diabate.ea2002}
 \end{frame}
 
-\begin{frame}[label={sec:org2e5cfe7}]{Irradiancia (intradiaria)}
+\begin{frame}[label={sec:org359f3f9}]{Irradiancia (intradiaria)}
 \begin{itemize}
 \item El índice de claridad debe ser inferior a 1 cuando la altura solar es suficiente:
 \end{itemize}
@@ -723,10 +704,10 @@ G \geq 0  \text{ si } \gamma_s \leq 10\degree
 \end{frame}
 
 \subsection{Tests de variabilidad}
-\label{sec:orgdffc78c}
+\label{sec:orga59091e}
 
-\begin{frame}[label={sec:org465deb5}]{Tests de variabilidad}
-Se realizan sobre medidas de irradiancia.
+\begin{frame}[label={sec:orgfe0ecb5}]{Tests de variabilidad}
+Se realizan sobre medidas de \alert{irradiancia}.
 
 \begin{block}{Test de persistencia}
 Cuando un sensor falla proporciona un valor constante (baja desviación estándar). Si funciona de forma intermitente, la variabilidad puede ser muy alta.
@@ -745,8 +726,8 @@ Comprueba la existencia de saltos excesivos de irradiancia entre instantes suces
 \end{frame}
 
 \subsection{Coherencia espacial}
-\label{sec:orgde89147}
-\begin{frame}[label={sec:orgd205464}]{Planteamiento}
+\label{sec:org4dad102}
+\begin{frame}[label={sec:org2d0fa06}]{Planteamiento}
 \begin{itemize}
 \item Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
 \item Esta comprobación debe realizarse con \alert{datos agregados} (diarios) (la variabilidad espacial intradiaria puede ser alta)
@@ -756,7 +737,7 @@ Comprueba la existencia de saltos excesivos de irradiancia entre instantes suces
 \nocite{Journee.Bertrand2011}
 \end{frame}
 
-\begin{frame}[label={sec:org6bc0404}]{Procedimiento}
+\begin{frame}[label={sec:orgb9b4900}]{Procedimiento}
 \begin{itemize}
 \item Estimamos la irradiación en el lugar, \(x_0\), con la interpolación espacial de las estaciones cercanas, \(x_i\).
 \[
@@ -778,7 +759,7 @@ Los pesos \(w_i\) son una función inversa de la distancia \(d\) entre las estac
 \end{frame}
 
 
-\begin{frame}[label={sec:org7009434}]{Métricas para diferencias}
+\begin{frame}[label={sec:orgf8c4ac5}]{Métricas para diferencias}
 \begin{itemize}
 \item Mean Bias Difference (MBD), diferencia media (indica si la medida, X,  está por encima o debajo de la referencia, \(R\)):
 \end{itemize}
