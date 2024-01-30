@@ -82,7 +82,7 @@ Para estimar la radiación incidente es necesario contar con:
 
 **  Piranómetro
 
-La medida directa de radiación solar se realiza con un piranómetro.
+La medida directa de radiación solar global se realiza con un piranómetro.
 ***                                                                :BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.4
@@ -95,11 +95,11 @@ La medida directa de radiación solar se realiza con un piranómetro.
     :PROPERTIES:
     :BEAMER_col: 0.6
     :END:
-- Pila termoeléctrica (termopares con barniz negro)
-  - Alojamiento con dos hemiesferas de cristal.
-  - Flujo de calor por radiación provoca tensión eléctrica en termopila.
-- Respuesta espectral plana para radiación visible.
-- Respuesta perfecta al coseno del ángulo de incidencia (pérdidas por reflexión).
+- Según la precisión, tiempo de respuesta, estabilidad, etc. la ISO 9060-2018 distingue tres tipos:
+  - Clase A (alta calidad)
+  - Clase B (buena calidad)
+  - Clase C (calidad normal)
+- Los piranómetros requieren limpieza, mantenimiento y calibración periódica. 
 
 
 

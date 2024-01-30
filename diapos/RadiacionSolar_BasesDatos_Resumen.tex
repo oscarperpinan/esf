@@ -1,4 +1,4 @@
-% Created 2024-01-27 sáb 19:10
+% Created 2024-01-30 mar 13:38
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -63,9 +63,9 @@
 \maketitle
 
 \section{Introducción}
-\label{sec:orgd359a3c}
+\label{sec:orgde624f2}
 
-\begin{frame}[label={sec:org5ab00b5}]{Radiación Solar y Sistemas Fotovoltaicos}
+\begin{frame}[label={sec:orgeb0186f}]{Radiación Solar y Sistemas Fotovoltaicos}
 \begin{itemize}
 \item La \alert{energía producida} por un sistema fotovoltaico depende principalmente de la \alert{radiación incidente} en el generador.
 
@@ -77,7 +77,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfad2c8c}]{La radiación solar no se puede calcular analíticamente}
+\begin{frame}[label={sec:org4683271}]{La radiación solar no se puede calcular analíticamente}
 \begin{itemize}
 \item La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
 \item Para estimar la radiación se necesitan medidas terrestres o imágenes de satélite.
@@ -87,7 +87,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org6b250eb}]{Ángulo de Inclinación}
+\begin{frame}[label={sec:org38ada84}]{Ángulo de Inclinación}
 \begin{itemize}
 \item Los generadores FV tienen un \alert{ángulo de inclinación positivo} para maximizar el rendimiento.
 \item Este ángulo depende de la \alert{latitud} del lugar y de la \alert{aplicación del sistema}.
@@ -98,7 +98,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7a52207}]{Bases de Datos de Radiación Solar}
+\begin{frame}[label={sec:org2310db8}]{Bases de Datos de Radiación Solar}
 Por tanto, es inviable mantener una base de datos de radiación solar \alert{incidente}:
 \vfill
 \begin{itemize}
@@ -109,7 +109,7 @@ Por tanto, es inviable mantener una base de datos de radiación solar \alert{inc
 \end{frame}
 
 
-\begin{frame}[label={sec:orgef3c4b2}]{Variabilidad Temporal y Espacial}
+\begin{frame}[label={sec:org766d8d4}]{Variabilidad Temporal y Espacial}
 \begin{itemize}
 \item La irradiancia solar extraterrestre depende de la latitud y el instante temporal (\emph{proceso determinista}).
 \vfill
@@ -117,7 +117,7 @@ Por tanto, es inviable mantener una base de datos de radiación solar \alert{inc
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8803d46}]{Variabilidad Temporal}
+\begin{frame}[label={sec:org9d2f816}]{Variabilidad Temporal}
 \emph{Variabilidad de la irradiación diaria, mensual y anual durante el período comprendido entre 2001-2008 en Carmona, Sevilla}
 
 \begin{center}
@@ -126,14 +126,14 @@ Por tanto, es inviable mantener una base de datos de radiación solar \alert{inc
 \end{frame}
 
 
-\begin{frame}[label={sec:org396205a}]{Variabilidad Espacial}
+\begin{frame}[label={sec:orgc67da08}]{Variabilidad Espacial}
 \begin{center}
 \includegraphics[height=0.8\textheight]{../figs/SpatialVariability.jpg}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:orga150124}]{Estimación a partir de Medidas}
+\begin{frame}[label={sec:orgb4d0b8b}]{Estimación a partir de Medidas}
 Para estimar la radiación incidente es necesario contar con:
 \vfill
 \begin{itemize}
@@ -145,7 +145,7 @@ Para estimar la radiación incidente es necesario contar con:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org00e40a9}]{Fuentes de datos}
+\begin{frame}[label={sec:orge1ae9d3}]{Fuentes de datos}
 \begin{itemize}
 \item \alert{Estaciones meteorológicas}
 \begin{itemize}
@@ -171,10 +171,10 @@ Para estimar la radiación incidente es necesario contar con:
 \end{frame}
 
 \section{Estaciones Meteorológicas}
-\label{sec:org78d0863}
+\label{sec:org9ff8012}
 
-\begin{frame}[label={sec:orgecb296e}]{Piranómetro}
-La medida directa de radiación solar se realiza con un piranómetro.
+\begin{frame}[label={sec:orgb41d733}]{Piranómetro}
+La medida directa de radiación solar global se realiza con un piranómetro.
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{center}
@@ -185,13 +185,13 @@ La medida directa de radiación solar se realiza con un piranómetro.
 \end{column}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
-\item Pila termoeléctrica (termopares con barniz negro)
+\item Según la precisión, tiempo de respuesta, estabilidad, etc. la ISO 9060-2018 distingue tres tipos:
 \begin{itemize}
-\item Alojamiento con dos hemiesferas de cristal.
-\item Flujo de calor por radiación provoca tensión eléctrica en termopila.
+\item Clase A (alta calidad)
+\item Clase B (buena calidad)
+\item Clase C (calidad normal)
 \end{itemize}
-\item Respuesta espectral plana para radiación visible.
-\item Respuesta perfecta al coseno del ángulo de incidencia (pérdidas por reflexión).
+\item Los piranómetros requieren limpieza, mantenimiento y calibración periódica.
 \end{itemize}
 \end{column}
 \end{columns}
@@ -199,7 +199,7 @@ La medida directa de radiación solar se realiza con un piranómetro.
 
 
 
-\begin{frame}[label={sec:org435f59d}]{Red SIAR}
+\begin{frame}[label={sec:org9ef7941}]{Red SIAR}
 \begin{block}{\url{https://eportal.mapa.gob.es/websiar/Inicio.aspx}}
 \begin{itemize}
 \item El Sistema de Información Agroclimática para el Regadío (SiAR)
@@ -219,7 +219,7 @@ las zonas de riego.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3b84e56}]{Otros recursos}
+\begin{frame}[label={sec:orgfc5210f}]{Otros recursos}
 \begin{block}{Redes de Comunidades Autónomas}
 \begin{itemize}
 \item \href{https://www.meteogalicia.gal/observacion/estacions/estacions.action?request\_locale=es}{Meteogalicia}
@@ -237,9 +237,9 @@ las zonas de riego.
 \end{frame}
 
 \section{Imágenes de Satélite}
-\label{sec:org6af41fb}
+\label{sec:org828b91e}
 
-\begin{frame}[label={sec:org933fd04}]{Radiómetros}
+\begin{frame}[label={sec:orgaf7a32c}]{Radiómetros}
 \begin{itemize}
 \item Los satélites meteorológicos están equipados con \alert{radiómetros}
 que captan \alert{radiación emitida por la Tierra}.
@@ -263,7 +263,7 @@ radiómetro.
 \end{frame}
 
 
-\begin{frame}[label={sec:org2060c42}]{SSE-NASA}
+\begin{frame}[label={sec:org88f76b7}]{SSE-NASA}
 \begin{block}{Surface meteorology and Solar Energy (SSE)}
 \begin{itemize}
 \item 200 parámetros meteorológicos y de energía solar derivados de imágenes de satélite.
@@ -276,7 +276,7 @@ radiómetro.
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org552a647}]{EUMETSAT - SAF}
+\begin{frame}[label={sec:orgffe6770}]{EUMETSAT - SAF}
 \alert{\href{http://www.eumetsat.int}{EUMETSAT}} es la agencia europea de satélites en operación, para la monitorización de la meteorología, clima y el medio ambiente.
 \vfill
 
@@ -297,9 +297,9 @@ Existen diferentes \alert{\href{https://www.eumetsat.int/about-us/satellite-appl
 \end{frame}
 
 \section{Métodos híbridos}
-\label{sec:orgb6a6b69}
+\label{sec:orgbec3dfa}
 
-\begin{frame}[label={sec:orgd7f718c}]{Herramientas}
+\begin{frame}[label={sec:org35806c4}]{Herramientas}
 \begin{block}{Interpolación espacial}
 \begin{itemize}
 \item \alert{Objetivo}: mejorar la resolución espacial de medidas dispersas
@@ -322,7 +322,7 @@ Existen diferentes \alert{\href{https://www.eumetsat.int/about-us/satellite-appl
 \end{frame}
 
 
-\begin{frame}[label={sec:org79579a9},fragile]{PVGIS - \texttt{r.sun}}
+\begin{frame}[label={sec:org7947fb5},fragile]{PVGIS - \texttt{r.sun}}
  \begin{block}{\url{https://re.jrc.ec.europa.eu/pvg\_tools/en/tools.html}}
 \begin{itemize}
 \item Datos de radiación en el plano horizontal de CM-SAF
@@ -336,8 +336,8 @@ Existen diferentes \alert{\href{https://www.eumetsat.int/about-us/satellite-appl
 \end{frame}
 
 \section{Control de calidad}
-\label{sec:org769a1ab}
-\begin{frame}[label={sec:orgd79e8fe}]{Introducción}
+\label{sec:org9c62f12}
+\begin{frame}[label={sec:org41d4e07}]{Introducción}
 Las medidas recogidas por estaciones meteorológicas se deben filtrar para eliminar datos erróneos.
 
 Para valores de \alert{irradiación diaria} destacan:
@@ -349,7 +349,7 @@ Para valores de \alert{irradiación diaria} destacan:
 \end{frame}
 
 
-\begin{frame}[label={sec:org7552970}]{Límites físicos: Irradiación Diaria}
+\begin{frame}[label={sec:orgba559fd}]{Límites físicos: Irradiación Diaria}
 \begin{itemize}
 \item La radiación global en el plano horizontal debe ser inferior a la extraterrestre (\(K_{td} \leq 1\))
 \end{itemize}
@@ -369,7 +369,7 @@ K_{td} = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgff2c19a}]{Coherencia espacial: planteamiento}
+\begin{frame}[label={sec:orgbb13206}]{Coherencia espacial: planteamiento}
 \begin{itemize}
 \item Las medidas de una estación se pueden comparar con las recogidas por estaciones cercanas.
 \item Esta comprobación debe realizarse con \alert{datos agregados} (diarios) (la variabilidad espacial intradiaria puede ser alta)
@@ -378,7 +378,7 @@ K_{td} = \frac{G_d(0)}{B_{od}(0)} \geq 0.03
 \end{frame}
 
 
-\begin{frame}[label={sec:org0978004}]{Coherencia espacial: procedimiento}
+\begin{frame}[label={sec:orgefd8f74}]{Coherencia espacial: procedimiento}
 \begin{itemize}
 \item Estimamos la irradiación en el lugar, \(x_0\), con la interpolación espacial de las estaciones cercanas, \(x_i\).
 \[
@@ -400,7 +400,7 @@ Los pesos \(w_i\) son una función inversa de la distancia \(d\) entre las estac
 \end{frame}
 
 
-\begin{frame}[label={sec:org289eb55}]{Métricas para diferencias}
+\begin{frame}[label={sec:org38cad6a}]{Métricas para diferencias}
 \begin{itemize}
 \item Mean Bias Difference (MBD), diferencia media (indica si la medida, X,  está por encima o debajo de la referencia, \(R\)):
 \end{itemize}
