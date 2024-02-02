@@ -32,8 +32,8 @@ global en el plano horizontal con el siguiente itinerario:
 
 \begin{enumerate}
 \item Obtén series temporales de \textbf{medidas diarias} de radiación
-  solar de 3 estaciones meteorológicas (recomendable longitud de 10
-  años).
+  solar de 3 estaciones meteorológicas cercanas (recomendable longitud
+  temporal de 10 años).
 \item Filtra cada una de las 3 series empleando límites físicos. \label{filtrado}
 \item Para cada ubicación, calcula las 12 medias mensuales de
   radiación diaria a partir de las series filtradas. \label{medias-mensuales}
@@ -84,10 +84,9 @@ proporciona datos derivados de imágenes de satélite:
 \end{itemize}
 
 Los datos de radiación global se denominan \emph{Surface incoming
-  shortwave radiation} (SIS). Para esta práctica utilizaremos
-productos operacionales y las medias mensuales, disponibles
-en:
-\url{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22483&fid=36}.
+  shortwave radiation} (SIS). Para esta práctica utilizaremos las medias mensuales del CDR, disponibles en la siguiente dirección:
+
+\url{https://wui.cmsaf.eu/safira/action/viewProduktDetails?eid=22200_22483&fid=36}.
 
 Para obtener estos datos para una región de interés hay que seguir
 este procedimiento:
@@ -112,8 +111,10 @@ este procedimiento:
 \item Tras realizar la solicitud se recibirá una notificación por
   correo electrónico pasado un tiempo que depende del tamaño de los
   ficheros solicitados. En este correo se incluye un enlace para
-  realizar la descarga de los ficheros desde un servidor FTP.
+  realizar la descarga de los ficheros.
 \end{enumerate}
+
+Los ficheros tienen asignado un nombre específico cuyo significado se explica en \href{https://www.cmsaf.eu/EN/Products/NamingConvention/download_NamingCconvention.pdf?__blob=publicationFile&v=6}{este documento}.
 
 \section{Anexo: QGIS}
 \label{sec:qgis}
@@ -125,8 +126,7 @@ abierto de un
 datos vectoriales (puntos, líneas y polígonos) y tipo raster (matrices
 de datos georeferenciados).
 
-Deberías leer
-\href{https://docs.qgis.org/3.28/es/docs/user_manual/working_with_raster/index.html}{este
+Es recomendable la lectura de \href{https://docs.qgis.org/3.28/es/docs/user_manual/working_with_raster/index.html}{este
   tutorial} para aprender a trabajar con ficheros tipo raster, y
 \href{http://docs.qgis.org/3.28/es/docs/user\_manual/working\_with\_vector/index.html}{este
   tutorial} para trabajar con datos vectoriales.
@@ -134,32 +134,25 @@ Deberías leer
 Hay varios plugins que proporcionan capacidades
 adicionales. \href{https://docs.qgis.org/3.28/es/docs/training\_manual/qgis\_plugins/fetching\_plugins.html}{Este
   documento} es una guía en el proceso de instalación y utilización de
-plugins. Te pueden interesar los siguientes:
-
-\begin{itemize}
-\item \href{https://plugins.qgis.org/plugins/pointsamplingtool/}{Point
+plugins. En esta práctica emplearemos el \href{https://plugins.qgis.org/plugins/pointsamplingtool/}{Point
     sampling tool}, para extraer valores de un fichero raster en un
   punto concreto.
-\item
-  \href{https://docs.qgis.org/3.28/es/docs/user\_manual/plugins/plugins\_interpolation.html}{Interpolation} plugin,
-  para realizar una interpolación IDW de datos vectoriales.
-\item Además, también es recomendable el plugin para
-  utilizar \href{https://grass.osgeo.org/}{GRASS}. \href{http://docs.qgis.org/3.28/es/docs/user\_manual/grass\_integration/grass\_integration.html}{Este
-    documento} proporciona instrucciones para instalarlo y trabajar
-  con él.
-\end{itemize}
+  También hay herramientas ya instaladas disponibles en la ``Caja de Herramientas'' dentro del menú ``Procesos''.
 
 \subsection*{Procedimiento}
 \label{sec:orge72c353}
 
 \begin{enumerate}
 \item Añadir capa ráster: leer los 12 ficheros ``.nc'' de CMSAF con
-  las medias mensuales de radiación diaria.
-\item Establecer proyección a EPSG:4326.
+  las medias mensuales de radiación diaria\footnote{Dentro del fichero
+    pueden aparecer dos capas, ``SIS'' y ``SISc''. Esta última es un
+    modelo de cielo claro que no es de interés en esta práctica.}.
+\item Una vez añadidas las capas, crear un grupo e incluir las 12 capas.
+\item Establecer la proyección del grupo a EPSG:4326 (longitud-latitud)\footnote{Esta información se puede extraer de los metadatos de las capas, disponibles en ``Propiedades > Información'' con el botón derecho del ratón}.
 \item Calculador raster: doble click en la capa, y en la expresión del
-  cuadro inferior multiplicar por 24 (create on-the-fly raster). Esta
+  cuadro inferior multiplicar por 24 (create on-the-fly raster). \textbf{Esta
   operación puede omitirse y realizar la multiplicación \emph{después}
-  de extraer los valores en los puntos.
+  de extraer los valores en los puntos.}
 \item Añadir capa de texto delimitado: leer fichero ``.csv'' que
   contienen las ubicaciones de las estaciones y la localización en la
   que se realiza la interpolación con IDW. Este fichero debe tener una
