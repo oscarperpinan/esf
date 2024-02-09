@@ -60,9 +60,9 @@ global en el plano horizontal con el siguiente itinerario:
     \textbf{irradiancia} (\(W/m^2\)). Por tanto, debes multiplicarlos
     por 24 para obtener valores diarios de
     \textbf{irradiación}.}.\label{satelite}
-\item Compara las medias mensuales de las tres estaciones con las
-  estimaciones satelitales empleando métricas estadísticas (MBD, RMSD,
-  MAD).
+\item Compara las medias mensuales de cada una de las tres estaciones
+  con las correspondientes estimaciones satelitales empleando métricas
+  estadísticas (MBD, RMSD, MAD).
 \item Combina la estimación satelital en la localización del punto
   \ref{idw} con las medias mensuales obtenidas en ese punto haciendo
   la media aritmética para cada mes.
@@ -154,7 +154,7 @@ plugins. En esta práctica emplearemos el \href{https://plugins.qgis.org/plugins
   operación puede omitirse y realizar la multiplicación \emph{después}
   de extraer los valores en los puntos.}
 \item Añadir capa de texto delimitado: leer fichero ``.csv'' que
-  contienen las ubicaciones de las estaciones y la localización en la
+  contienen las ubicaciones de las estaciones y de la localización en la
   que se realiza la interpolación con IDW. Este fichero debe tener una
   columna con el nombre de la estación o un identificador alfanumérico
   y dos columnas numéricas con la longitud y la latitud. Se puede
