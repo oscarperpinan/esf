@@ -134,6 +134,11 @@
 
 * Radiación Efectiva según tipologías
 
+** Referencia: radiación en plano horizontal
+#+ATTR_LATEX: :height 0.85\textheight
+[[../figs/G0yKrig.pdf]]
+
+ 
 ** Radiación en Sistema estático
 #+ATTR_LATEX: :height 0.85\textheight
 [[../figs/FixedKrig.pdf]]

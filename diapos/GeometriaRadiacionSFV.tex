@@ -1,14 +1,16 @@
-% Created 2023-01-19 jue 20:48
+% Created 2024-02-09 vie 15:08
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{grffile}
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
+\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
@@ -24,6 +26,7 @@
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\tiny, formatcom = {\color{black!70}}}
 \bibliographystyle{plain}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
 \sisetup{output-decimal-marker={,}}
 \DeclareSIUnit{\watthour}{Wh}
 \DeclareSIUnit{\wattpeak}{Wp}
@@ -31,7 +34,7 @@
 \DeclareSIUnit{\amperehour}{Ah}
 \usepackage{steinmetz}
 \hypersetup{colorlinks=true, linkcolor=Blue, urlcolor=Blue}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[symbol, perpage]{footmisc}
 \parskip=5pt
 \usetheme{Boadilla}
 \usecolortheme{rose}
@@ -55,21 +58,21 @@
  pdftitle={Geometría y Radiación de los Sistemas Fotovoltaicos},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdfcreator={Emacs 29.1 (Org mode 9.4.6)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Tipos de Sistemas}
-\label{sec:org1991092}
-\begin{frame}[label={sec:org2f629b8}]{Sistema Estático}
+\label{sec:org3517236}
+\begin{frame}[label={sec:orgdd80a58}]{Sistema Estático}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/EstructuraEstaticaSuelo.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgf724879}]{Sistemas con seguimiento}
+\begin{frame}[label={sec:orgffee32e}]{Sistemas con seguimiento}
 \begin{itemize}
 \item \alert{Fundamento:}
 \begin{itemize}
@@ -89,7 +92,7 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org2300d48}]{Algunos tipos de seguimiento solar}
+\begin{frame}[label={sec:orgd72da2c}]{Algunos tipos de seguimiento solar}
 \begin{itemize}
 \item \alert{Doble eje}
 
@@ -116,21 +119,21 @@ necesarios),
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org9533494}]{Sistema de Seguimiento (2x ejes)}
+\begin{frame}[label={sec:orgbe04945}]{Sistema de Seguimiento (2x ejes)}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SeguidorReocin.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb00a17b}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
+\begin{frame}[label={sec:orgd1ed7c7}]{Sistema de Seguimiento(1 eje, horizontal N-S)}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SeguidorEjeHorizontal.jpg}
 \end{center}
 \end{frame}
 
 \section{Geometría de los sistemas fotovoltaicos}
-\label{sec:orgd599eb9}
-\begin{frame}[label={sec:org2b30d8b},plain]{Ángulo de Incidencia Sistema Estático}
+\label{sec:org047a371}
+\begin{frame}[label={sec:orge004958},plain]{Ángulo de Incidencia Sistema Estático}
 \begin{itemize}
 \item Si \(\alpha=0\)
 \end{itemize}
@@ -147,7 +150,7 @@ necesarios),
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgffd7c5a}]{Sistema Estático: Ángulo de Incidencia}
+\begin{frame}[label={sec:org2f6fa82}]{Sistema Estático: Ángulo de Incidencia}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -158,7 +161,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:org1bf6e7a},plain]{Ángulo de Incidencia Seguidor 1x NS}
+\begin{frame}[label={sec:orgca22380},plain]{Ángulo de Incidencia Seguidor 1x NS}
 \[\cos(\theta_{s})=\cos(\delta)\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}\]
 
 \begin{center}
@@ -166,7 +169,7 @@ necesarios),
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfdd5dbd}]{Ángulo de Inclinación Seguidor 1x NS}
+\begin{frame}[label={sec:orgaf0ef49}]{Ángulo de Inclinación Seguidor 1x NS}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -177,7 +180,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:org3d9a668}]{Ángulo de Incidencia Seguidor 1x NS}
+\begin{frame}[label={sec:org7f95e5e}]{Ángulo de Incidencia Seguidor 1x NS}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -189,7 +192,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:orgb43583b},plain]{Ángulo de Incidencia Seguidor 2x}
+\begin{frame}[label={sec:org3a6a3ee},plain]{Ángulo de Incidencia Seguidor 2x}
 \begin{columns}
 \begin{column}{0.8\columnwidth}
 \begin{center}
@@ -206,7 +209,7 @@ necesarios),
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:org3f3946b}]{Inclinación Seguidor 2x}
+\begin{frame}[label={sec:orgfe82437}]{Inclinación Seguidor 2x}
 \begin{itemize}
 \item \(40\degree N\)
 \end{itemize}
@@ -217,9 +220,16 @@ necesarios),
 
 
 \section{Radiación Efectiva según tipologías}
-\label{sec:org7a16ddc}
+\label{sec:orgc4b8919}
 
-\begin{frame}[label={sec:org713b3be}]{Radiación en Sistema estático}
+\begin{frame}[label={sec:org7566347}]{Referencia: radiación en plano horizontal}
+\begin{center}
+\includegraphics[height=0.85\textheight]{../figs/G0yKrig.pdf}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0d9766d}]{Radiación en Sistema estático}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/FixedKrig.pdf}
 \end{center}
@@ -227,7 +237,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:org01ff6ad}]{Radiación en Seguimiento Eje Horizontal}
+\begin{frame}[label={sec:orgf03d7d8}]{Radiación en Seguimiento Eje Horizontal}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/HorizKrig.pdf}
 \end{center}
@@ -235,14 +245,14 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:orgd562b2a}]{Radiación en Seguimiento Doble Eje}
+\begin{frame}[label={sec:org0c430c8}]{Radiación en Seguimiento Doble Eje}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/TwoKrig.pdf}
 \end{center}
 \end{frame}
 
 
-\begin{frame}[label={sec:org52c63fc}]{Comparación Doble Eje-Estática}
+\begin{frame}[label={sec:org93cdd50}]{Comparación Doble Eje-Estática}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/TwoFixed.pdf}
 \end{center}
@@ -250,7 +260,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:org144f04a}]{Comparación Doble Eje - Horizontal}
+\begin{frame}[label={sec:orgcd30d8b}]{Comparación Doble Eje - Horizontal}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/TwoHoriz.pdf}
 \end{center}
@@ -258,7 +268,7 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:orgf21b12c}]{Comparación Eje Horizontal - Estática}
+\begin{frame}[label={sec:orgf109851}]{Comparación Eje Horizontal - Estática}
 \begin{center}
 \includegraphics[height=0.85\textheight]{../figs/HorizFixed.pdf}
 \end{center}
@@ -266,13 +276,13 @@ necesarios),
 
 
 
-\begin{frame}[label={sec:orgec352d2}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:orgfeb0daa}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/compSystems.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org07e02f0}]{Comparación entre Sistemas}
+\begin{frame}[label={sec:org6bd6e20}]{Comparación entre Sistemas}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/compSystemsG0.png}
 \end{center}
