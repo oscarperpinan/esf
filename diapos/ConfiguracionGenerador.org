@@ -227,7 +227,6 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 ** Criterio de Caída de Tensión
 
 - En primer lugar se calculan las secciones mediante el criterio de caida de tensión (RBT ITC-BT-07):
-
 #+BEGIN_EXPORT latex
 \begin{align*}
     S_{dc} &=  \frac{2 \cdot L_{dc}\cdot I_{dc}}{\gamma_\theta \cdot \Delta V_{dc}}\\
@@ -237,10 +236,13 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 #+END_EXPORT
 
 - La conductividad del cable, $\gamma_\theta$, depende del material y de la
-  temperatura de operación. Por ejemplo, el cobre:
-  - $\gamma_{20} = \qty{58}{\meter\per\ohm\per\milli\meter\squared}$
-  - $\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}$.
+  temperatura de operación:
 
+  | Material | $T = \qty{20}{\degree}$                                                            | $T = \qty{70}{\degree}$                                                            |
+  |----------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------|
+  | Cobre    | $\gamma_{\qty{20}{\degree}} = \qty{58}{\meter\per\ohm\per\milli\meter\squared}$    | $\gamma_{\qty{70}{\degree}} = \qty{48,47}{\meter\per\ohm\per\milli\meter\squared}$ |
+  | Aluminio | $\gamma_{\qty{20}{\degree}} = \qty{35,71}{\meter\per\ohm\per\milli\meter\squared}$ | $\gamma_{\qty{70}{\degree}} = \qty{29,67}{\meter\per\ohm\per\milli\meter\squared}$ |
+  
 ** Criterio de Caída de Tensión
 
 - Según el apartado 5 de la ITC-BT-40, se exige una caída máxima de
@@ -270,11 +272,12 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
   - $\Delta U_{inv}$ la caída en el tramo desde una caja de paralelos hasta la entrada del inversor,
 
   - $L_i$ la longitud de cableado desde el generador hasta la caja de paralelos,
+
+  - $I_i$ la corriente que circula desde el generador hasta la caja de paralelos,
+
   - $L_{inv}$ la longitud de cableado desde la caja hasta el inversor,
-
-  - $I_i$ la corriente que circula por este tramo,
-
-  - $I_{inv}$ la corriente total en el circuito.
+    
+  - $I_{inv}$ la corriente desde la caja hasta el inversor.
 
 ** Ejemplo de cálculo por tramos (DC)
 En una instalación se agrupan en una caja de paralelos las salidas los generadores ubicados en 20 seguidores, cada uno de ellos con $\qty{30}{\ampere}$. Esta caja de paralelos está ubicada a $\qty{200}{\meter}$ del inversor y a $\qty{30}{\meter}$ de todos los seguidores.
@@ -323,8 +326,31 @@ conexión a red (/distribución en continua/), *¿cuál es la tensión de
 trabajo en continua que permite optar por una distribución en continua?*
 
 Se puede demostrar que para tensiones de generador $V_{mpp} \geq
-\qty{473}{\volt}$, la distribución en continua es preferible a la
+\qty{475}{\volt}$, la distribución en continua es preferible a la
 distribución en alterna desde el punto de vista de masa de conductor
 necesario.
 
 
+** Estrategia de Cableado
+
+*** Secuencial (/daisy chain wiring/)
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/DaisyChainWiring.png]]
+
+- Es el modo habitual (todos los instaladores lo conocen).
+- Requiere cable de retorno.
+- El cable sobrante entre módulos debe quedar bien sujeto.
+- Puede requerir más tiempo de instalación.
+  
+** Estrategia de Cableado
+
+*** Salteado (/leapfrog wiring/)
+
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/LeapfrogWiring.png]]
+
+- No requiere cable de retorno.
+- Reduce bucles electromagnéticos.
+- Hay que comprobar que la longitud del cable del módulo es suficiente.
+- Hay menos cable sobrante entre módulos.
+- Puede requerir menos tiempo de instalación.
