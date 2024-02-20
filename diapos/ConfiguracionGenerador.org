@@ -188,7 +188,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
  
 ** Relación de potencias entre generador e inversor
 
-- Por tanto, una de las preguntas a responder es *que relación debe existir entre la potencia del generador FV y el inversor*.
+- Por tanto, una de las preguntas a responder es *qué relación debe existir entre la potencia del generador FV y el inversor*.
 
 #+begin_export latex
 \[
@@ -238,7 +238,7 @@ Dado que la potencia entregada por el generador varía con las condiciones meteo
 - La conductividad del cable, $\gamma_\theta$, depende del material y de la
   temperatura de operación:
 
-  | Material | $T = \qty{20}{\degree}$                                                            | $T = \qty{70}{\degree}$                                                            |
+  | Material | $T = \qty{20}{\celsius}$                                                     | $T = \qty{70}{\celsius}$                                                     |
   |----------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------|
   | Cobre    | $\gamma_{\qty{20}{\degree}} = \qty{58}{\meter\per\ohm\per\milli\meter\squared}$    | $\gamma_{\qty{70}{\degree}} = \qty{48,47}{\meter\per\ohm\per\milli\meter\squared}$ |
   | Aluminio | $\gamma_{\qty{20}{\degree}} = \qty{35,71}{\meter\per\ohm\per\milli\meter\squared}$ | $\gamma_{\qty{70}{\degree}} = \qty{29,67}{\meter\per\ohm\per\milli\meter\squared}$ |
@@ -295,9 +295,9 @@ Si la tensión nominal de los generadores es de $\qty{500}{\volt}$, este resulta
 
 *** Ejemplo
 - En una instalación que conduce $\qty{75}{\ampere}$ a la salida de un
-  inversor trifásico, situado este a $\qty{100}{\meter}$ de la conexión
-  a red, se deberá utilizar un cable de sección (teniendo en cuenta
-  que $\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}$).
+  inversor trifásico, situado éste a $\qty{100}{\meter}$ de la conexión
+  a red, se deberá utilizar un cable de sección (suponiendo cobre y teniendo en cuenta
+  que $\gamma_{70} = \qty{48}{\meter\per\ohm\per\milli\meter\squared}$):
 
 
 #+BEGIN_EXPORT latex
