@@ -164,7 +164,7 @@ Se necesitan tensiones de generador superiores a los $\SI{1000}{\volt}$
 para producir dolor, y tensiones superiores a los $\SI{3000}{\volt}$
 para que exista riesgo por fibrilación.
 
-*** Contacto Directo TT
+*** COMMENT Contacto Directo TT
 
 $$I_{F,max}=\frac{V_{ocG}}{R_{H}+R_{p}+R_{ts}}$$
 
@@ -480,22 +480,28 @@ Un sistema de protección externa contra el rayo se compone de:
   tierra*.
 
 - En la entrada/salida de cada elemento a proteger se instalan
-  *supresores de tensión (varistores)* entre conductores activos y
+  *descargadores de tensión* entre conductores activos y
   tierra.
 
 * Resumen de protecciones
 
-*** Diagrama Unifilar
-    :PROPERTIES:
-    :BEAMER_opt: plain
-    :END:
-#+ATTR_LATEX: :width 1\textwidth
-[[../figs/UnifilarCR1.pdf]]
-
 ** Circuito DC
 *** 
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.4
+     :END:
+     
 #+ATTR_LATEX: :height 0.8\textheight
 [[../figs/CajaProteccionesPhotocampa.pdf]]
+
+**** 								      :BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.6
+     :END:
+
+ #+ATTR_LATEX: :height 0.8\textheight
+   [[file:../figs/proteccionesDC.pdf]]
 
 
 *** Cortocircuitos
@@ -540,15 +546,16 @@ Un sistema de protección externa contra el rayo se compone de:
 
 *** Descargadores de tensión
 
--  Entrada CC del inversor protegida mediante *descargadores de tensión* para
-  proteger contra sobretensiones de origen atmosférico.
+- Entrada CC del inversor protegida mediante *descargadores de tensión* para
+ proteger contra sobretensiones de origen atmosférico.
 
--  Tensión de operación marcada por el diseño del sistema concreto,
-  entre la menor tensión en el punto de máxima potencia y la mayor
-  tensión de circuito abierto.
+- Tensión de operación marcada por el diseño del sistema concreto,
+ entre la menor tensión en el punto de máxima potencia y la mayor
+ tensión de circuito abierto.
 
-  #+ATTR_LATEX: :height 0.5\textheight
-    [[file:../figs/varistorDEHN.jpg]]
+ #+ATTR_LATEX: :height 0.5\textheight
+   [[file:../figs/varistorDEHN.jpg]]
+
 
 
 ** Circuito AC
@@ -592,6 +599,7 @@ Un sistema de protección externa contra el rayo se compone de:
 [[../figs/InterruptorDiferencial.pdf]]
 
 
+* Puesta a tierra
 
 *** Puesta a tierra
 
@@ -602,9 +610,6 @@ Un sistema de protección externa contra el rayo se compone de:
 -  *Las masas de la instalación fotovoltaica estarán conectadas a una
   tierra independiente de la del neutro* de la empresa distribuidora
   de acuerdo con el Reglamento Electrotécnico para Baja Tensión.
-
-
-* Puesta a tierra
 
 *** Tomas de tierra existentes
 
