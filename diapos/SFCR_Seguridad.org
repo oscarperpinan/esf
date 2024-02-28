@@ -506,34 +506,40 @@ Un sistema de protección externa contra el rayo se compone de:
 
 *** Cortocircuitos
 
-- El *cortocircuito* es un punto de trabajo *no peligroso para el
-  generador fotovoltaico*.
+- El *cortocircuito* es un punto de trabajo *no peligroso para un
+  módulo o rama*.
 
-- El cortocircuito puede, sin embargo, ser *perjudicial para el
-  inversor*. Como medio de protección se incluyen fusibles de tipo gG
-  normalizados según EN 60269 en cada polo.
-
-- Para las personas es *peligrosa la realización o eliminación de un
-  cortocircuito franco en el campo generador*, por la posibilidad de
-  que se establezca un arco eléctrico.
+- Sin embargo, cuando hay *ramas en paralelo* hay que limitar la posible
+  *corriente inversa* que podría circular por una rama alimentada por
+  el resto del generador.
 
 - Es recomendable la *conducción separada* del positivo y del negativo
   para evitar cortocircuitos por pérdida de aislamiento.
 
+- Es *peligrosa la realización o eliminación de un cortocircuito
+  franco en el campo generador* en funcionamiento, por la posibilidad
+  de que se establezca un arco eléctrico.
+
 *** Fusibles
 
-- El *fusible por rama* sirve principalmente como *elemento de
-  seccionamiento* (facilita las tareas de mantenimiento).
+- La norma IEC 62548 establece la necesidad de proteger con fusibles
+  cuando la corriente total del conjunto de ramas en paralelo supera
+  el umbral del módulo (según ficha de especificaciones).
 
-- Suele utilizarse $I_{n} \geq 1.25\cdot I_{scG}$
+- Se recomienda emplear *fusibles* de tipo gG *por cada rama* y polo
+  normalizados según EN 60269.
 
-- La corriente de activación es $I_{2}=1.6\cdot I_{n}$
+- Además, el fusible por rama sirve como *elemento de seccionamiento*
+  (facilita las tareas de mantenimiento).
+
+- Se recomienda elegir el fusible con $I_{n} \geq 1.25\cdot
+  I_{scG}$. La corriente de activación es $I_{2}=1.6\cdot I_{n}$
 
 ****                                                                  :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
-    #+ATTR_LATEX: :height 0.4\textheight
+    #+ATTR_LATEX: :height 0.3\textheight
     [[file:../figs/fusible.jpg]]
 
 
@@ -541,7 +547,7 @@ Un sistema de protección externa contra el rayo se compone de:
 :PROPERTIES:
 :BEAMER_col: 0.5
 :END:
-    #+ATTR_LATEX: :height 0.5\textheight
+    #+ATTR_LATEX: :height 0.4\textheight
     [[file:../figs/portafusible.JPG]]
 
 *** Descargadores de tensión
