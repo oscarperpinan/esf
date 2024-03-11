@@ -1,4 +1,4 @@
-% Created 2023-03-18 sáb 10:59
+% Created 2024-03-11 lun 20:21
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
@@ -56,16 +56,16 @@
  pdftitle={Energía Producida por un SFCR},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.6)}, 
+ pdfcreator={Emacs 29.1 (Org mode 9.6.11)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
 \section{Energía Producida por un SFCR}
-\label{sec:org9ace565}
+\label{sec:org1d75121}
 
-\begin{frame}[label={sec:orgd6d68a6}]{Nomenclatura}
+\begin{frame}[label={sec:orgc3bb6f9}]{Nomenclatura}
 \begin{itemize}
 \item \(E_{ac}\): energía producida en un periodo.
 \item \(G_{stc}, G^*\): irradiancia en condiciones estándar de medida (STC,
@@ -83,8 +83,13 @@ generador
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgee47912}]{Potencia y Energía del Generador}
+\begin{frame}[label={sec:org5fc7897}]{Potencia y Energía del Generador}
 \begin{itemize}
+\item \alert{Eficiencia} del generador FV
+
+\[
+  \eta_g^* = \dfrac{P_g^*}{A_g \cdot G^*}
+\]
 \item \alert{Potencia} a la Salida del Generador FV
 \end{itemize}
 \[
@@ -102,7 +107,7 @@ generador
 \]
 \end{frame}
 
-\begin{frame}[label={sec:org8f1b392}]{Potencia y Energía del Sistema}
+\begin{frame}[label={sec:org73db529}]{Potencia y Energía del Sistema}
 \begin{itemize}
 \item \alert{Potencia} a la Salida del Inversor
 \end{itemize}
@@ -120,9 +125,9 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 \end{frame}
 
 \section{Productividades y Pérdidas}
-\label{sec:org03cf3cc}
+\label{sec:orgfa9a064}
 
-\begin{frame}[label={sec:org4e5e1ee}]{Planteamiento}
+\begin{frame}[label={sec:orgcf11392}]{Planteamiento}
 \begin{itemize}
 \item Las \alert{productividades} son relaciones entre una cantidad de energía y la potencia nominal \(P_g^*\).
 \begin{itemize}
@@ -134,7 +139,7 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org23b5b3c}]{Productividades}
+\begin{frame}[label={sec:orgc2d312f}]{Productividades}
 \begin{itemize}
 \item Productividad del Generador 
 \[
@@ -153,7 +158,7 @@ P_{ac} = P_{dc} \cdot \eta_{inv}(P_{dc}, V_{dc}) =  P_{dc} \cdot \eta_{inv}(G_{e
   Y_r &= \frac{E_{ref}}{P_g^*} = \frac{G_{inc}}{G_{stc}} \quad [\unit{\kilo\watthour\per\kilo\watt}]
 \end{align*}
 \end{frame}
-\begin{frame}[label={sec:org641d724}]{Pérdidas de Rendimiento}
+\begin{frame}[label={sec:org0535a56}]{Pérdidas de Rendimiento}
 \begin{block}{Pérdidas de captación del campo fotovoltaico.}
 \[
   L_C = Y_r - Y_a
@@ -170,16 +175,16 @@ Incluye pérdidas por eficiencia e interrupciones del inversor, cableado,  y tra
 \end{frame}
 
 
-\begin{frame}[label={sec:org4644070}]{Resumen}
+\begin{frame}[label={sec:orgac11f86}]{Resumen}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SankeyDiagrama_SFCR.pdf}
 \end{center}
 \end{frame}
 
 \section{Métricas de Rendimiento}
-\label{sec:org55f87be}
+\label{sec:org7f4421f}
 
-\begin{frame}[label={sec:orgb73023e}]{\emph{Performance Ratio} o rendimiento global}
+\begin{frame}[label={sec:org896e582}]{\emph{Performance Ratio} o rendimiento global}
 \[
   PR = \frac{Y_f}{Y_r} = \frac{E_{ac}}{P_g^* \cdot \frac{G_{inc}}{G_{stc}}}
 \]
@@ -201,7 +206,7 @@ dependencia con las condiciones meteorológicas}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf1f3c69}]{Valores del PR}
+\begin{frame}[label={sec:orgf60e272}]{Valores del PR}
 \begin{itemize}
 \item El análisis de funcionamiento de diversos sistemas FV europeos ha
 mostrado que el rango de valores que toma el \emph{performance ratio} es
@@ -216,7 +221,7 @@ sido de 0,8}.
 \end{frame}
 
 
-\begin{frame}[label={sec:orgb545d35}]{Rendimiento Global \(\qty{25}{\celsius}\)}
+\begin{frame}[label={sec:org292cc69}]{Rendimiento Global \(\qty{25}{\celsius}\)}
 \[
   PR_{25} = \frac{E_{ac}}{\sum_i \left\{P_g^* \cdot \left[1 + \gamma_P \cdot(T_{c,i} - 25)\right]\cdot G_{ef,i}/G_{stc} \cdot \Delta t \right\}}
 \]

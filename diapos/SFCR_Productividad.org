@@ -23,6 +23,13 @@
 
 ** Potencia y Energía del Generador
 
+- *Eficiencia* del generador FV
+
+  #+begin_export latex
+  \[
+    \eta_g^* = \dfrac{P_g^*}{A_g \cdot G^*}
+  \]
+  #+end_export
 - *Potencia* a la Salida del Generador FV
 #+begin_export latex
 \[
