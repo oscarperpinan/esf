@@ -1,16 +1,14 @@
-% Created 2023-06-15 jue 10:09
+% Created 2024-03-11 lun 20:16
 % Intended LaTeX compiler: pdflatex
 \documentclass[aspectratio=169, usenames,svgnames,dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{grffile}
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
-\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
@@ -58,13 +56,13 @@
  pdftitle={Sombras y Ocupación de Terreno},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.2 (Org mode 9.4.6)}, 
+ pdfcreator={Emacs 29.1 (Org mode 9.6.11)}, 
  pdflang={Spanish}}
 \begin{document}
 
 \maketitle
 
-\begin{frame}[label={sec:org412f51b}]{Planteamiento}
+\begin{frame}[label={sec:orgbaaa9f1}]{Planteamiento}
 \begin{itemize}
 \item Al diseñar una central fotovoltaica se debe decidir la ubicación de las diferentes partes del generador resolviendo un \alert{compromiso} entre la mejor \alert{ocupación del terreno} disponible y la minimización del \alert{impacto de sombras mutuas} arrojadas entre los módulos.
 \item Métricas de ocupación de terreno:
@@ -77,15 +75,15 @@ Un sistema con un \(ROT = 4\) requiere un terreno de un área 4 veces el área d
 \end{frame}
 
 \section{Sistemas estáticos}
-\label{sec:org02b5893}
+\label{sec:org44514b3}
 
-\begin{frame}[label={sec:org86bfbde}]{Sombras entre filas}
+\begin{frame}[label={sec:orgd8365b1}]{Sombras entre filas}
 \begin{center}
 \includegraphics[width=.9\linewidth]{../figs/SombrasEstaticas.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org60e311d}]{Sombras entre filas}
+\begin{frame}[label={sec:org55f3274}]{Sombras entre filas}
 \begin{itemize}
 \item Suele establecerse un objetivo de \alert{4 horas de sol en torno al mediodía del solsticio de invierno libres de sombra}.
 
@@ -100,7 +98,7 @@ $$\gamma_{s}=90-23.45-\phi\simeq67-\phi$$
 \end{itemize}
 $$d_{min}=\frac{h}{\tan(61\degree-\phi)}$$
 \end{frame}
-\begin{frame}[label={sec:org5c2f544}]{Separación entre filas}
+\begin{frame}[label={sec:org68c7b6c}]{Separación entre filas}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{center}
@@ -128,10 +126,10 @@ W \to \infty\]
 
 
 \section{Sistemas de seguimiento 2X}
-\label{sec:orgc2f561a}
+\label{sec:orgb477a0d}
 
 
-\begin{frame}[label={sec:orgbcc0598}]{Separación de seguidores Doble Eje}
+\begin{frame}[label={sec:org30c2bbf}]{Separación de seguidores Doble Eje}
 \begin{center}
 \includegraphics[height=0.45\textheight]{../figs/Sombras2X.pdf}
 \end{center}
@@ -151,7 +149,7 @@ $$E_{ac}=f(ROT)??$$
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org02af0cc}]{Radiación promedio}
+\begin{frame}[label={sec:org7c70172}]{Radiación promedio}
 $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B} + 2 \cdot G_{ef,C} + G_{ef,D} + 5 \cdot G_{ef,E} \right)$$
 
 \begin{columns}
@@ -170,7 +168,7 @@ $$G_{ef, av} = 1/24 \cdot \left( 10 \cdot G_{ef,0} + 5 \cdot G_{ef,A} + G_{ef,B}
 \end{frame}
 
 
-\begin{frame}[label={sec:org80d5520}]{Separación de Seguidores Doble Eje}
+\begin{frame}[label={sec:org2bfc5e7}]{Separación de Seguidores Doble Eje}
 \begin{columns}
 \begin{column}{0.3\columnwidth}
 $$ROT=\frac{L_{ns}\cdot L_{eo}}{L \cdot W}$$
@@ -187,9 +185,9 @@ $$GCR=\frac{L \cdot W}{L_{ns}\cdot L_{eo}}$$
 
 
 \section{Seguidores de eje horizontal NS}
-\label{sec:org3083c2f}
+\label{sec:org5cbae5c}
 
-\begin{frame}[label={sec:org1b36598}]{Separación de Seguidores Eje Horizontal}
+\begin{frame}[label={sec:org11f455b}]{Separación de Seguidores Eje Horizontal}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/SombrasHoriz.pdf}
 \end{center}
@@ -197,13 +195,27 @@ $$GCR=\frac{L \cdot W}{L_{ns}\cdot L_{eo}}$$
 $$W=\infty$$ $$ROT=L_{eo}/L$$
 \end{frame}
 
-\begin{frame}[label={sec:org4a98c68}]{Separación de Seguidores Horizontal N-S}
+\begin{frame}[label={sec:org97730d5}]{Separación de Seguidores Horizontal N-S}
 \begin{center}
 \includegraphics[angle=90,height=0.9\textheight]{../figs/AbacoSeguidorHorizSombra_Ene10.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org81612f2}]{Backtracking}
+\begin{frame}[label={sec:org8de9cc4}]{Limitación de ángulo}
+\begin{itemize}
+\item Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
+
+\item Implica un desvio de los seguidores de su posición óptima.
+
+\begin{itemize}
+\item Sombras más cortas que en el caso teórico (red más densa).
+
+\item Reducción en la energía generada por incidencia no perpendicular
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org47417ab}]{Backtracking}
 \begin{itemize}
 \item El \alert{sombreado} en un generador puede producir problemas por el efecto
 de \alert{punto caliente}.
@@ -226,37 +238,18 @@ la \alert{horizontal en la noche}.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgee7d257}]{Backtracking}
+\begin{frame}[label={sec:org21123df}]{Backtracking}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/BackTracking.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga47f3aa}]{Separación con backtracking}
-\begin{center}
-\includegraphics[angle=90,height=0.9\textheight]{../figs/AbacoHorizBT_Ene10.pdf}
-\end{center}
-\end{frame}
-
-\begin{frame}[label={sec:org457a760}]{Limitación de ángulo}
-\begin{itemize}
-\item Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
-
-\item Implica un desvio de los seguidores de su posición óptima.
-
-\begin{itemize}
-\item Sombras más cortas que en el caso teórico (red más densa).
-
-\item Reducción en la energía generada por incidencia no perpendicular
-\end{itemize}
-\end{itemize}
-\end{frame}
 
 \section{Elección de separaciones}
-\label{sec:org907683e}
+\label{sec:orgaf12289}
 
 
-\begin{frame}[label={sec:org2a9ac77}]{Elección de separaciones}
+\begin{frame}[label={sec:orgbe9e45a}]{Elección de separaciones}
 La \alert{separación óptima} entre elementos (seguidores o estructuras
 estáticas) es aquella que conduce al \alert{mínimo valor del coste de la
 energía} producida por el sistema.
@@ -265,29 +258,33 @@ Al aumentar la separación:
 
 \begin{itemize}
 \item Disminuyen las \alert{pérdidas por sombreado mutuo} (aumenta la
-productividad del
+productividad del sistema)
 
-\item Aumentan:
+\item Aumentan \alert{los costes relacionados con}:
 
 \begin{itemize}
-\item los \alert{costes relacionados con el área ocupada} por unidad de
-potencia.
-\item los \alert{costes relacionados con los elementos de unión entre estructuras} (cableado, canalizaciones, zanjas).
+\item \alert{el área ocupada} por unidad de potencia.
+\item \alert{los elementos de unión entre estructuras} (cableado, canalizaciones, zanjas).
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org7da03fb}]{Elección de separaciones}
+\begin{frame}[label={sec:org4d8484e}]{Elección de separaciones}
 \begin{itemize}
-\item Esta separación óptima \alert{depende} de las \alert{estructuras elegidas} y de
-las \alert{condiciones económicas} de los elementos.
+\item Esta separación óptima \alert{depende}:
+
+\begin{itemize}
+\item del \alert{tipo de seguimiento},
+
+\item de las \alert{condiciones económicas} de los elementos.
+\end{itemize}
 
 \item La separación finalmente elegida debe \alert{tomar en consideración las
 condiciones del terreno} (fronteras, irregularidades, vaguadas, etc.)
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb73ef4c}]{Ocupación óptima}
+\begin{frame}[label={sec:orgb27201a}]{Ocupación óptima}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{center}
@@ -297,10 +294,11 @@ condiciones del terreno} (fronteras, irregularidades, vaguadas, etc.)
 
 \begin{column}{0.4\columnwidth}
 \begin{itemize}
+\item Coste Sistema (incluye mantenimiento)
+$$C_P = C_c + C_A + C_{PV}$$
+
 \item Coste Energía
 $$C_E = \frac{C_P}{E_{AC}}$$
-\item Coste Sistema
-$$C_p = C_c + C_A + C_{PV}$$
 
 \item \(C_{PV}\) entre \(\SI{1.5}{\text{\texteuro}\per\watt}\) y \(\SI{2.5}{\text{\texteuro}\per\watt}\)
 
@@ -310,7 +308,7 @@ $$C_p = C_c + C_A + C_{PV}$$
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org1f73bf6}]{Separaciones y coste de la energía}
+\begin{frame}[label={sec:orgf358792}]{Separaciones y coste de la energía}
 \begin{center}
 \includegraphics[height=0.9\textheight]{../figs/matrixGRR.png}
 \end{center}

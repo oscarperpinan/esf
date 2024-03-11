@@ -132,6 +132,16 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
 #+ATTR_LATEX: :options angle=90 :height 0.9\textheight
 [[../figs/AbacoSeguidorHorizSombra_Ene10.pdf]]
 
+** Limitación de ángulo
+
+- Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
+
+- Implica un desvio de los seguidores de su posición óptima.
+
+  - Sombras más cortas que en el caso teórico (red más densa).
+
+  - Reducción en la energía generada por incidencia no perpendicular
+
 ** Backtracking
 
 -  El *sombreado* en un generador puede producir problemas por el efecto
@@ -155,20 +165,6 @@ $$W=\infty$$ $$ROT=L_{eo}/L$$
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/BackTracking.pdf]]
 
-** Separación con backtracking
-
-#+ATTR_LATEX: :options angle=90 :height 0.9\textheight
-[[../figs/AbacoHorizBT_Ene10.pdf]]
-
-** Limitación de ángulo
-
-- Es habitual limitar el ángulo de inclinación a valores máximos alrededor de 70° por motivos estructurales (protección frente al viento)
-
-- Implica un desvio de los seguidores de su posición óptima.
-
-  - Sombras más cortas que en el caso teórico (red más densa).
-
-  - Reducción en la energía generada por incidencia no perpendicular
 
 * Elección de separaciones
 
@@ -182,18 +178,20 @@ energía* producida por el sistema.
 Al aumentar la separación:
 
 - Disminuyen las *pérdidas por sombreado mutuo* (aumenta la
-  productividad del
+  productividad del sistema)
 
-- Aumentan:
+- Aumentan *los costes relacionados con*:
 
-  - los *costes relacionados con el área ocupada* por unidad de
-    potencia.
-  - los *costes relacionados con los elementos de unión entre estructuras* (cableado, canalizaciones, zanjas).
+  - *el área ocupada* por unidad de potencia.
+  - *los elementos de unión entre estructuras* (cableado, canalizaciones, zanjas).
 
 ** Elección de separaciones
 
-- Esta separación óptima *depende* de las *estructuras elegidas* y de
-  las *condiciones económicas* de los elementos.
+- Esta separación óptima *depende*:
+
+  - del *tipo de seguimiento*,
+
+  - de las *condiciones económicas* de los elementos.
 
 - La separación finalmente elegida debe *tomar en consideración las
   condiciones del terreno* (fronteras, irregularidades, vaguadas, etc.)
@@ -210,10 +208,12 @@ Al aumentar la separación:
      :PROPERTIES:
      :BEAMER_col: 0.4
      :END:
+
+- Coste Sistema (incluye mantenimiento)
+    $$C_P = C_c + C_A + C_{PV}$$
+
 - Coste Energía
     $$C_E = \frac{C_P}{E_{AC}}$$
-- Coste Sistema
-    $$C_p = C_c + C_A + C_{PV}$$
 
 - $C_{PV}$ entre $\SI{1.5}{\text{\texteuro}\per\watt}$ y $\SI{2.5}{\text{\texteuro}\per\watt}$
 
