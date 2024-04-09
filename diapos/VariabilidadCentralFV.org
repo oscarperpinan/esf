@@ -3,63 +3,75 @@
 
 #+SETUPFILE: config.org
 #+LATEX_HEADER: \usepackage{tikz}
-#+OPTIONS: H:2
+#+OPTIONS: H:3
 
 * Introducción
 
 ** Los Sistemas Fotovoltaicos y la Red Eléctrica
 
+*** Alteración de las condiciones de funcionamiento de la red
 Los sistemas fotovoltaicos conectados a red alteran las condiciones de
 funcionamiento habitual de la red.
 
+- Bidireccionalidad del flujo de potencia
+- Rampas de potencia
+- Servicios de apoyo
+  
 #+ATTR_LATEX: :width \textwidth
 [[file:../figs/SFCR_bidireccional.pdf]]
  
-** Los Sistemas Fotovoltaicos y la Red Eléctrica
+*** Bidireccionalidad del flujo de potencia
 
-- Posibilitan la bidireccionalidad del flujo de potencia, con los
-  consiguientes cambios en la tensión de los nodos, y en la corriente
-  conducida por las líneas y transformadores[fn:8].
+Posibilitan la *bidireccionalidad del flujo de potencia*, con los
+consiguientes *cambios en la tensión de los nodos*, y *en la corriente*
+conducida por las líneas y transformadores[fn:8].
 
 #+ATTR_LATEX: :height 0.65\textheight
 [[file:../figs/S_VIP_Irr_line234.pdf]]
 
-** Los Sistemas Fotovoltaicos y la Red Eléctrica
+*** Rampas de potencia
 
-- Las rampas de potencia debidas a las fluctuaciones de radiación
-  solar pueden entorpecer el adecuado funcionamiento de los equipos
-  conectados a la red y los elementos de protección existentes.
+Las *rampas de potencia* debidas a las *fluctuaciones de radiación solar*
+pueden entorpecer el adecuado funcionamiento de los equipos
+conectados a la red y los elementos de protección existentes.
 
   #+ATTR_LATEX: :height 0.75\textheight
   [[file:../figs/VariacionTension_RampasPotencia.pdf]]
 
 
-** Los Sistemas Fotovoltaicos y la Red Eléctrica
+*** Servicios de apoyo a la red
 
-- Los SFCR pueden proporcionar servicios de apoyo a la red gracias a
-  las funcionalidades que incorporan los inversores de conexión a red,
-  capaces de controlar la potencia activa inyectada en el punto de
-  conexión, y la potencia reactiva en funcionamiento normal o para
-  enfrentarse a huecos de tensión.
+Los SFCR pueden proporcionar *servicios de apoyo* a la red gracias a las
+funcionalidades que incorporan los inversores de conexión a red,
+capaces de *controlar la potencia activa inyectada* en el punto de
+conexión, *y la potencia reactiva* en funcionamiento normal o para
+enfrentarse a *huecos de tensión*.
 
   #+ATTR_LATEX: :height 0.7\textheight
   [[file:../figs/hueco-tension.png]]
 
 ** Variabilidad de la Radiación
 
- - La irradiancia solar es un proceso con inercia y con baja
-   probabilidad para mostrar cambios abruptos.
+*** La variabilidad de la irradiancia solar
+ La irradiancia solar es un *proceso con inercia* que, en general, no
+ presenta alta probabilidad para mostrar cambios abruptos.
 
- - La probabilidad de ocurrencia de fluctuaciones elevadas es
-   sustancialmente menor al observar con resoluciones temporales
-   altas.
+ La *probabilidad y el nivel de las fluctuaciones dependen*:
+ - de la *resolución temporal*,
+ - del *estado de la atmósfera*.
 
- #+ATTR_LATEX: :height 0.65\textheight
+*** Dependencia de la resolución temporal
+ La probabilidad de ocurrencia de fluctuaciones elevadas es
+ sustancialmente menor al observar con resoluciones temporales
+ altas.
+
+ #+ATTR_LATEX: :height 0.75\textheight
 [[file:../figs/FluctuacionIrradiancia_Marcosetal2011.png]]
 
-** Variabilidad de la Radiación
+*** Dependencia de la atmósfera
 
-- El nivel de fluctuación depende del comportamiento de la atmósfera (mayor en días parcialmente cubiertos).
+El nivel de fluctuación depende del comportamiento de la atmósfera
+(mayor en días parcialmente cubiertos).
 
 #+ATTR_LATEX: :height 0.8\textheight
 [[file:../figs/radLowMedHigh.pdf]]
@@ -68,6 +80,7 @@ funcionamiento habitual de la red.
 * Incertidumbre y Predicción
 
 ** Generación y Demanda
+*** Generación y Demanda
 
 La *casación entre generación y demanda* que se consigue en las redes
 eléctricas se basa en la *programación* de las diferentes unidades de
@@ -79,7 +92,7 @@ demanda.
   [[file:../figs/CentroOperacionesREE.png]]
 
 
-** Programación de la generación
+*** Programación de la generación
 Esta programación se produce en *escalas y horizontes temporales diversos* y se *actualiza de forma sistemática* de acuerdo con las variaciones previstas en la predicción de la demanda.
 
   #+ATTR_LATEX: :height 0.6\textheight
@@ -90,7 +103,7 @@ Esta programación se produce en *escalas y horizontes temporales diversos* y se
   #+end_center
 
 
-** Participación masiva de la fotovoltaica
+*** Participación masiva de la fotovoltaica
 
 La *inclusión masiva* de sistemas fotovoltaicos en la red *modifica el
 equilibrio* existente y puede implicar el uso de las reservas de
@@ -100,8 +113,8 @@ demanda.
 #+ATTR_LATEX: :height 0.6\textheight
 [[file:../figs/EvolucionGeneracionFV_REE.png]]
   
-
-** Predicción de la Potencia
+** Predicción de la potencia FV
+*** Predicción de la Potencia
 En este contexto, el reto no es tanto la variabilidad como la
 *predicción*:
 
@@ -113,7 +126,7 @@ En este contexto, el reto no es tanto la variabilidad como la
 - La predicción de radiación solar y potencia de sistemas
   fotovoltaicos es un *área de investigación de plena actualidad*.
 
-** Ejemplo: proyecto europeo PVCROPS
+*** Ejemplo: proyecto europeo PVCROPS
   - Herramienta de *aprendizaje automático* o /machine learning/
     entrenada con *series históricas* de *predicciones NWP* y *medidas de
     potencia eléctrica* (30 días en la serie temporal de
@@ -125,7 +138,7 @@ En este contexto, el reto no es tanto la variabilidad como la
   #+ATTR_LATEX: :height 0.6\textheight
   [[file:../figs/ForecastShiny.png]]
 
-** Ejemplo: proyecto europeo PVCROPS
+*** Ejemplo: proyecto europeo PVCROPS
 
   Se emplean como entradas las predicciones de *variables
   meteorológicas* generadas por modelos de predicción meteorológica
@@ -136,7 +149,7 @@ En este contexto, el reto no es tanto la variabilidad como la
   [[file:../figs/varsComplete.pdf]]
 
     
-** Ejemplo: proyecto europeo PVCROPS
+*** Ejemplo: proyecto europeo PVCROPS
 
 Genera *predicciones probabilísticas*, entregando tanto la mediana de la
 predicción como un intervalo de confianza, que permite cuantificar la
@@ -151,7 +164,7 @@ http://vps156.cesvima.upm.es:3838/predictPac/
 #+end_center
 
 
-** Predicciones agregadas
+*** Predicciones agregadas
 
 Las predicciones obtenidas mejoran cuando las predicciones se aplican
 a un conjunto de sistemas.[fn:10]
@@ -161,29 +174,28 @@ a un conjunto de sistemas.[fn:10]
   
 * Variabilidad de la Potencia
 
-** Variabilidad Conjunta
+*** Variabilidad de la potencia
 La variabilidad presente en la irradiancia solar se *atenúa* en la potencia AC:
 - por la *dispersión* espacial *entre diferentes centrales*.
 - por la *dispersión* espacial *dentro de una central*.
-
 ** Dispersión espacial entre centrales
+*** Dispersión espacial entre centrales
 
- - En términos generales, la *dispersión espacial de sistemas
-   fotovoltaicos diferentes* conectados a la misma red *atenúa* la
-   variabilidad conjunta[fn:6].
+En términos generales, la *dispersión espacial de sistemas
+fotovoltaicos diferentes* conectados a la misma red *atenúa* la
+variabilidad conjunta[fn:6].
    
-   #+ATTR_LATEX: :height 0.5\textheight
+   #+ATTR_LATEX: :height 0.7\textheight
    file:../figs/Variabilidad_DispersionGeografica_Plantas.png
-   
- - El *nivel de atenuación depende* principalmente de las
-   *características meteorológicas* de la zona y época, y de la
-   *distancia* entre los sistemas.
-   
- - Para *distancias mayores de $\SI{5}{\kilo\meter}$* las fluctuaciones
-   de irradiancia con resolución temporal de 1 minuto están
-   esencialmente *incorreladas*.
+
+*** Dependencia de meteorología y distancia   
+ El *nivel de atenuación depende* principalmente:
+ - de las *características meteorológicas* de la zona y época,
+ - y de la *distancia* entre los sistemas[fn:11]. 
    
 ** Dispersión espacial dentro de una central
+
+*** La central atenúa la potencia 
  En términos generales, la *dispersión espacial* de generadores
  fotovoltaicos pertenecientes a *una misma central* *atenúa* la
  variabilidad conjunta[fn:5].
@@ -191,14 +203,14 @@ La variabilidad presente en la irradiancia solar se *atenúa* en la potencia AC:
   #+ATTR_LATEX: :height 0.7\textheight
   file:../figs/Variabilidad_DispersionGeografica_Planta.png
 
-** Dispersión espacial dentro de una central
+*** Dependencia de la resolución temporal, distancia y tipo de día
 
   La correlación entre la potencia de cada inversor *depende* de la *resolución temporal*, la *distancia* entre los inversores, y el *nivel de fluctuación del día* en cuestión[fn:7].
 
   #+ATTR_LATEX: :height 0.6\textheight
   [[file:../figs/corDistMatrix_nls.png]]
 
-** Dispersión espacial dentro de una central
+*** Escalas temporales bajas
 
 Escalas temporales bajas ($\tau <\qty{1}{\min}$): correlaciones bajas.
 
@@ -211,7 +223,7 @@ Escalas temporales bajas ($\tau <\qty{1}{\min}$): correlaciones bajas.
         \end{center}
 #+end_export
 
-** Dispersión espacial dentro de una central
+*** Escalas temporales intermedias
 
 Escalas temporales intermedias: la correlación depende fuertemente del nivel de fluctuación diario.
 
@@ -224,7 +236,7 @@ Escalas temporales intermedias: la correlación depende fuertemente del nivel de
         \end{center}
 #+end_export
 
-** Dispersión espacial dentro de una central
+*** Escalas temporales altas
 
 Escalas temporales altas, $\tau > \qty{20}{\min}$: correlaciones altas y positivas que decrecen de forma exponencial con la distancia; clara dependencia con el nivel de fluctuación diaria.
 
@@ -238,6 +250,7 @@ Escalas temporales altas, $\tau > \qty{20}{\min}$: correlaciones altas y positiv
 #+end_export
 
 ** Normativas de red
+*** Normativas de red
 - La *variabilidad* en escalas de tiempo bajas *puede influir* en mayor o
   menor medida en el *funcionamiento de la red eléctrica*.
 - Existencia de *normativas y recomendaciones* para la integración de
@@ -250,10 +263,10 @@ Escalas temporales altas, $\tau > \qty{20}{\min}$: correlaciones altas y positiv
 A 10% per minute rate (based on AC contracted capacity) limitation shall be enforced. This ramp rate limit applies both to the increase and decrease of power output and is independent of meteorological conditions.
 #+end_quote
 
-** Definiciones de rampas
+*** Definiciones de rampas
 Uno de los problemas principales en este requerimiento (y otros similares) es que, aunque *es fácil identificar visualmente una rampa* en una serie temporal de potencia, *no existe consenso en una definición formal* que permita identificarla y cuantificarla.
 
-** Ejemplos de definiciones de rampas
+*** Ejemplos de definiciones de rampas
 
 - Existe una rampa al inicio de un intervalo temporal si la magnitud del cambio en un instante temporal posterior es mayor que un umbral predeterminado.
 #+begin_export latex
@@ -280,7 +293,7 @@ Uno de los problemas principales en este requerimiento (y otros similares) es qu
 
 - Existe una rampa en un intervalo si el valor absoluto de la señal de diferencias filtrada (por ejemplo, mediante una media móvil) supera un determinado umbral.
 
-** COMMENT Definición de rampas
+*** COMMENT Definición de rampas
 La elección de una métrica entre esta variedad de definiciones es un
 *compromiso* entre diferentes requisitos.
 
@@ -292,7 +305,11 @@ La elección de una métrica entre esta variedad de definiciones es un
   las *prácticas y requerimientos comúnmente empleados por los
   operadores de la red*.
 
-** Limitación de rampas
+
+* Sistemas de Acumulación
+
+** Fundamentos
+*** Limitación de rampas
 
 La limitación de las rampas de los sistemas fotovoltaicos es un
 requerimiento que se debe afrontar, principalmente en el caso de las
@@ -302,21 +319,8 @@ Existen *tres estrategias* principales:
 - el uso de *sistemas de acumulación* energética;
 - *acumulación* energética combinada *con predicción* de rampas;
 - *predicción* de rampas *sin acumulación*.
-
-* Sistemas de Acumulación 
-
-** SFCR con acumulación
-
-#+ATTR_LATEX: :width \textwidth
-[[file:../figs/EsquemaSFCRAcumulacion.pdf]]
-
-** Suavizado de rampas con acumulación
-
-#+ATTR_LATEX: :height 0.9\textheight
-[[file:../figs/SuavizadoRampasAcumulacion.png]]
-
-** Cálculo del sistema de acumulación
-
+ 
+*** Acumulación o predicción
 La inclusión de sistemas de acumulación conlleva *aumentos en los
 costes* de instalación y en la *complejidad y mantenimiento* del
 sistema.
@@ -325,21 +329,35 @@ Las herramientas de *predicción* de rampas combinadas con *mecanismos de
 control en el inversor* fotovoltaico permiten *reducir* el tamaño de la
 acumulación necesaria.
 
+*** SFCR con acumulación
+
+#+ATTR_LATEX: :width \textwidth
+[[file:../figs/EsquemaSFCRAcumulacion.pdf]]
+
+*** Suavizado de rampas con acumulación
+
+#+ATTR_LATEX: :height 0.9\textheight
+[[file:../figs/SuavizadoRampasAcumulacion.png]]
+
+** Cálculo del sistema de acumulación
+
 *** Objetivos
+
+**** Objetivos
 - Dimensionar, en *potencia y energía*, la batería mínima necesaria.
 - *Desarrollar estrategias de gestión* que permitan, cumpliendo con la rampa máxima, minimizar el coste de la energía:
   - Minimizar Batería
   - Minimizar Degradación
   - Minimizar Pérdidas
 
-** Modelo de la peor fluctuación[fn:4]
+*** Modelo de la peor fluctuación[fn:4]
 
 Un pulso de irradiancia se transforma en una exponencial decreciente (la central actúa como filtro paso bajo.
 
 #+ATTR_LATEX: :height 0.7\textheight
 [[file:../figs/ModeloPeorFluctuacion0.pdf]]
 
-** Modelo de la peor fluctuación
+*** Modelo de la peor fluctuación (2)
 
 El sistema de acumulación regula la potencia de salida para limitar la rampa. 
 #+begin_export latex
@@ -351,16 +369,16 @@ El sistema de acumulación regula la potencia de salida para limitar la rampa.
 #+ATTR_LATEX: :height 0.75\textheight
 [[file:../figs/ModeloPeorFluctuacion.pdf]]
 
-** Modelo de la peor fluctuación
+*** Modelo de la peor fluctuación (3)
 
-***                                                                 :BMCOL:
+****                                                                  :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.4
 :END:
 #+ATTR_LATEX: :width \textwidth
 [[file:../figs/ModeloPeorFluctuacion.pdf]]
 
-***                                                                 :BMCOL:
+****                                                                  :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.6
 :END:
@@ -372,23 +390,23 @@ El sistema de acumulación regula la potencia de salida para limitar la rampa.
 
 #+begin_export latex
 \[
-  \tau = 42 \cdot L_{min} - 0.55
+  \tau = a \cdot L_{min} - b
 \]
 #+end_export
 
 - $\tau [\unit{\second}]$: constante de tiempo de la fluctuación
 - $L_{min} [\unit{\kilo\meter}]$: dimensión menor de la central
   
-** Modelo de la peor fluctuación
+*** Modelo de la peor fluctuación (y 4)
 
-***                                                                 :BMCOL:
+****                                                                  :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.4
 :END:
 #+ATTR_LATEX: :width \textwidth
 [[file:../figs/ModeloPeorFluctuacion.pdf]]
 
-***                                                                 :BMCOL:
+****                                                                  :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.6
 :END:
@@ -410,13 +428,15 @@ El sistema de acumulación regula la potencia de salida para limitar la rampa.
 - $P_{bat,max} [\unit{\kilo\watt}]$: potencia máxima del sistema de acumulación
 - $E_{bat} [\unit{\kilo\watthour}]$: capacidad del sistema de acumulación.
   
-** Ejemplo: cálculo de potencia
+*** Ejemplo: cálculo de potencia
 
 Datos:
 #+begin_export latex
 \begin{align*}
   P_g^* &= \qty{38.5}{\mega\watt}\\
   L_{min} &= \qty{1.786}{\kilo\meter}\\
+  a &= 42\\
+  b &= 0.55\\
   RR_{max} &= \qty{10}{\%\per\min}
 \end{align*}
 #+end_export
@@ -429,7 +449,7 @@ Resultados:
 \end{align*}
 #+end_export
 
-** Ejemplo: cálculo de capacidad
+*** Ejemplo: cálculo de capacidad
 
 Datos:
 #+begin_export latex
@@ -447,7 +467,9 @@ Resultados:
 \end{align*}
 #+end_export
 
-** Tecnologías de acumulación[fn:1]
+** Tecnologías de acumulación
+
+*** Tecnologías de acumulación[fn:1]
 
 #+begin_export latex
       \begin{center}
@@ -458,12 +480,12 @@ Resultados:
         \end{center}
 #+end_export
 
-** Tecnologías de acumulación[fn:2]
+*** Tecnologías de acumulación[fn:2]
 
 #+ATTR_LATEX: :height 0.8\textheight
 [[file:../figs/SistemasAcumulacion_DensidadPotenciaEnergia.png]]
 
-** Otros usos del sistema de acumulación
+*** Otros usos del sistema de acumulación
 
 Los sistemas de acumulación pueden proporcionar servicios adicionales[fn:3]:
 
@@ -474,6 +496,9 @@ Los sistemas de acumulación pueden proporcionar servicios adicionales[fn:3]:
 - */Arbitrage/* o /time-shift/: comprar energía cuando es barata, vender cuando es cara.
   
 * Footnotes
+[fn:11]Para *distancias mayores de $\SI{5}{\kilo\meter}$* las
+   fluctuaciones de irradiancia con resolución temporal de 1 minuto
+   están esencialmente *incorreladas*.
 
 [fn:10]https://dx.doi.org/10.1002/pip.1033 
 [fn:9]https://dx.doi.org/10.1016/j.solener.2015.03.006 
