@@ -108,7 +108,7 @@ P(X>a)=\int_{a}^{\infty}f(x)dx\]
 
 #+BEGIN_EXPORT latex
 \[
-\overline{X}=\frac{1}{i=n}\sum_{n}X_{i}
+\overline{X}=\frac{1}{n}\sum_{i=n}X_{i}
 \]
 #+END_EXPORT
 
@@ -122,7 +122,7 @@ Sea una población cuya media es $\mu$ y su varianza es $\sigma^{2}$:
 - La *media de la media muestral* es la media poblacional:
 #+BEGIN_EXPORT latex
 \[
-\mu_{\overline{X}}=\frac{1}{i = n}\sum_{n}\mu_{X_{i}} = \mu
+\mu_{\overline{X}}=\frac{1}{n}\sum_{i = n}\mu_{X_{i}} = \mu
 \]
 #+END_EXPORT
 
@@ -142,6 +142,10 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 ** Mediana y cuartiles
 
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 - La *mediana* divide el conjunto de valores de la variable en *dos
   mitades* iguales (divide el area encerrada por la función densidad
   de probabilidad en dos partes iguales).
@@ -149,8 +153,14 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 - El area encerrada entre cada par de cuartiles es igual al 25% del total. 
 - La *mediana* es el *segundo cuartil*. 
 - La *distancia intercuartil* (definida entre los cuartiles 1 y 3) es
-  una *medida de la dispersión* de la variable.
- 
+  una *medida de la dispersión* de la variable. 
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+#+ATTR_LATEX: :height 0.9\textheight
+[[../figs/cuantiles.pdf]]
 
 * Gráficos estadísticos
 
@@ -165,9 +175,23 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 
 ** Gráficos boxplot
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
+
+- Línea central: mediana (Q2).
+- Límites de la caja: cuantiles Q1 y Q2 (IQR)
+- Bigotes: valores máximo y mínimo o 1.5·IQR.
+- Puntos: valores anómalos (/outliers/).
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.5
+:END:
 #+ATTR_LATEX: :height 0.9\textheight
 [[../figs/GraficoBoxplot.pdf]]
-
 
 ** Gráficos de dispersión
 #+ATTR_LATEX: :height 0.9\textheight
@@ -181,28 +205,40 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 * Gráficos Fotovoltaicos
 
 ** Inventario[fn:1]
-- $Y_f \sim Y_r$ (valores diarios e intradiarios)
+- $Y_f \sim Y_r$ 
   
-  Relación lineal creciente. Detección de sombreado, defectos en cableado DC y AC, fallos o limitación del inversor.
+  Detección de sombreado, defectos en cableado DC y AC, fallos o limitación del inversor.
   
-- $Y_a \sim Y_r$ (valores diarios e intradiarios)
+- $Y_a \sim Y_r$
 
-  Relación lineal creciente. Detección de sombreado o defectos en cableado DC.
+  Detección de sombreado o defectos en cableado DC.
 
-- $pr \sim T_c$  (valores intradiarios)
+- $pr \sim T_c$ 
 
-  Relación lineal decreciente. Detección de sombreado, degradación, o puntos calientes.
+  Detección de sombreado, degradación, o puntos calientes.
 
-- $(T_c - T_a) \sim y_r$ (valores intradiarios)
+- $(T_c - T_a) \sim y_r$
 
-  Relación lineal creciente. Detección de problemas de disipación de calor.
+  Detección de problemas de disipación de calor.
 
-- $V_G \sim T_c$ (valores intradiarios)
+- $V_G \sim T_c$
 
-  Relación lineal decreciente. Detección de problemas en el MPPT, limitación del inversor, diodos de bypass.
+  Detección de problemas en el MPPT, limitación del inversor, diodos de bypass.
 
 ** $Y_f \sim Y_r$
 
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+- Valores diarios e intradiarios.
+- Relación lineal creciente.
+- Detección de sombreado, defectos en cableado DC y AC, fallos o limitación del inversor.
+  
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
 #+ATTR_LATEX: :height 0.95\textheight
 [[file:../figs/YfYr.pdf]]
 
@@ -212,6 +248,18 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 [[file:../figs/ErrorYf.pdf]]
 
 ** $Y_a \sim Y_r$
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+- Valores diarios e intradiarios.
+- Relación lineal creciente.
+- Detección de sombreado o defectos en cableado DC.
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
 
 #+ATTR_LATEX: :height 0.95\textheight
 [[file:../figs/YaYr.pdf]]
@@ -223,11 +271,35 @@ Por tanto, una forma de *reducir la incertidumbre* es realizar la
 
 
 ** $pr \sim T_c$
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+- Valores intradiarios.
+- Relación lineal decreciente.
+- Detección de sombreado, degradación, o puntos calientes.
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
 
 #+ATTR_LATEX: :height 0.95\textheight
 [[file:../figs/prTc.pdf]]
 
 ** $V_g \sim T_c$
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.3
+:END:
+- Valores intradiarios.
+- Relación lineal decreciente.
+- Detección de problemas en el MPPT, limitación del inversor, diodos de bypass.
+
+***                                                                 :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
 
 #+ATTR_LATEX: :height 0.95\textheight
 [[file:../figs/VgTc.pdf]]
@@ -314,16 +386,14 @@ donde la varianza de la diferencia (unbiased RMSD) se calcula:
   MAD = \frac{1}{n} \sum_{i=1}^n \left|d_i\right| =  \frac{1}{n} \sum_{i=1}^n \left|m_i - o_i\right|
   \]
 #+END_EXPORT
-- El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras:
+- El RMSD no es robusto (un error puntual puede distorsionar el estimador) y depende del número de muestras[fn:2]:
 #+BEGIN_EXPORT latex
   \[
   MAD \leq RMSD \leq n^{1/2} MAD
   \]
 #+END_EXPORT
 
-\nocite{Willmott.Matsuura.ea2009, Willmott.Matsuura2005a}
-
-** Otros estimadores: t y d
+** COMMENT Otros estimadores: t y d
 
 - t de Student (valores pequeños indican buen comportamiento del modelo)
   - Permite añadir intervalos de confianza a las diferencias entre
@@ -375,7 +445,7 @@ relación no es lineal, este coeficiente no sirve):
 [[../figs/Splom.png]]
 
 
-** Diagramas de Taylor
+** COMMENT Diagramas de Taylor
 - Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
 
 #+BEGIN_EXPORT latex
@@ -393,7 +463,7 @@ relación no es lineal, este coeficiente no sirve):
 #+END_EXPORT
 \nocite{Taylor2000}
 
-** Diagramas de Taylor
+** COMMENT Diagramas de Taylor
 
 #+BEGIN_EXPORT latex
   \[
@@ -415,39 +485,29 @@ relación no es lineal, este coeficiente no sirve):
 :PROPERTIES:
 :BEAMER_col: 0.7
 :END:
-#+attr_latex: :height 0.8\textheight
+#+attr_latex: :height 0.7\textheight
 [[../figs/TaylorDiagrama.png]]
 
 
-** Target Diagram
+** Target Diagram[fn:3]
 
 - Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
 #+BEGIN_EXPORT latex
   \[
   RMSD' = RMSD / \sigma_{\mathbf{O}}
   \]
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
 \[
   \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
 \]
-#+END_EXPORT  
-
-#+BEGIN_EXPORT latex
 \[
 \overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
 \]
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
 \[
 RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 \]
 #+END_EXPORT
 
-- Incorporan el signo de la diferencia entre desviaciones estándar del modelo y las observaciones.
-
+- Incorpora el signo de la diferencia entre desviaciones estándar del modelo y las observaciones.
 #+BEGIN_EXPORT latex
   \[
   sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
@@ -455,13 +515,11 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 #+END_EXPORT
 
 
-\nocite{Jolliff.Kindle.ea2009}
-
 ** Target Diagram
 
 ***                                                                   :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.3
+:BEAMER_col: 0.4
 :END:
 - $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
 - $\overline{\mathbf{D}}'$: Eje vertical
@@ -469,7 +527,7 @@ RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
 
 ***                                                                   :BMCOL:
 :PROPERTIES:
-:BEAMER_col: 0.7
+:BEAMER_col: 0.6
 :END:
 #+attr_latex: :height 0.9\textheight
 [[../figs/TargetDiagram.pdf]]
@@ -499,7 +557,7 @@ elementos en el conjunto.
 #+ATTR_LATEX: :height 0.6\textheight
 [[../figs/chauvenet.png]]
 
-** Método de Chauvenet
+** Método de Chauvenet[fn:4]
   1. Supongamos un SFV compuesto por $N$ unidades idénticas.
   2. Sea $Y_{f,i}$ la medida de *productividad diaria* de una de esas unidades. 
   3. Se calcula la *media*, $\overline{Y}_f$, y la *desviación estándar*, $\sigma_{Y_f}$, del *conjunto*.
@@ -514,7 +572,6 @@ elementos en el conjunto.
     que hay dos colas.
   6. Aquellas observaciones que superan la distancia son *marcadas como outliers*.
 
-\nocite{Perpinan2009}
 
 ** Método de Chauvenet
 
@@ -553,22 +610,20 @@ elementos en el conjunto.
 
 - Sea $Y_{f,i}(t)$ la serie temporal de la productividad diaria de *una unidad* del SFV.
 - Sea $\widetilde{Y}_{f}(t)$ la serie temporal de la *mediana* de la productividad diaria del SFV *completo*.
-- Tomando $\widetilde{Y}_{f}(t)$ como modelo o referencia, podemos emplear los diagramas de Taylor y Target para detectar unidades defectuosas durante períodos de tiempo.
+- Tomando $\widetilde{Y}_{f}(t)$ como modelo o referencia, podemos
+  emplear diagramas para detectar unidades defectuosas durante diferentes
+  períodos de tiempo.
 
 #+ATTR_LATEX: :height 0.6\textheight
 [[../figs/TargetDiagram_Dia120.pdf]]
 
 
-# * Bibliografía
-
-# ** Bibliografía
-#    :PROPERTIES:
-#    :BEAMER_OPT: allowframebreaks,label=
-#    :END:
-
-
-#    \bibliography{/home/oscar/Investigacion/bibtex/Radiacion.bib
-
 * Footnotes
+[fn:4]https://doi.org/10.1016/j.solener.2009.08.008 
+
+[fn:3]https://doi.org/10.1016/j.jmarsys.2008.05.014 
+[fn:2]https://www.int-res.com/abstracts/cr/v30/n1/p79-82/
+
+https://doi.org/10.1016/j.atmosenv.2008.10.005
 
 [fn:1]Más ejemplos en el informe "[[https://iea-pvps.org/key-topics/analytical-monitoring-of-pv-systems-final/][Analytical Monitoring of Grid-connected Photovoltaic Systems]]" de la Task 13 del IEA-PVPS. 
