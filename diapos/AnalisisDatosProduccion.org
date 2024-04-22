@@ -445,94 +445,6 @@ relación no es lineal, este coeficiente no sirve):
 [[../figs/Splom.png]]
 
 
-** COMMENT Diagramas de Taylor
-- Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
-
-#+BEGIN_EXPORT latex
-  \[
-  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
-- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
-  \]
-#+END_EXPORT
-- Esta relación es semejante a la ley de los cosenos ($c$, $a$, $b$ son lados de un triángulo y $\phi$ es el ángulo opuesto al lado $c$):
-
-#+BEGIN_EXPORT latex
-  \[
-  c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
-  \]
-#+END_EXPORT
-\nocite{Taylor2000}
-
-** COMMENT Diagramas de Taylor
-
-#+BEGIN_EXPORT latex
-  \[
-  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
-  - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
-  \]
-#+END_EXPORT
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.4
-:END:
-- $\sigma^2_{\mathbf{D}}$: Distancia al origen
-- $\sigma^2_{\mathbf{O}}$: Eje horizontal
-- $\sigma^2_{\mathbf{M}}$: Eje vertical
-- $r$: acimut
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.7
-:END:
-#+attr_latex: :height 0.7\textheight
-[[../figs/TaylorDiagrama.png]]
-
-
-** Target Diagram[fn:3]
-
-- Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
-#+BEGIN_EXPORT latex
-  \[
-  RMSD' = RMSD / \sigma_{\mathbf{O}}
-  \]
-\[
-  \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
-\]
-\[
-\overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
-\]
-\[
-RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
-\]
-#+END_EXPORT
-
-- Incorpora el signo de la diferencia entre desviaciones estándar del modelo y las observaciones.
-#+BEGIN_EXPORT latex
-  \[
-  sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
-  \]
-#+END_EXPORT
-
-
-** Target Diagram
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.4
-:END:
-- $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
-- $\overline{\mathbf{D}}'$: Eje vertical
-- $RMSD'^2$: Distancia al origen
-
-***                                                                   :BMCOL:
-:PROPERTIES:
-:BEAMER_col: 0.6
-:END:
-#+attr_latex: :height 0.9\textheight
-[[../figs/TargetDiagram.pdf]]
-
-
 * Coherencia Estadística
 
 ** Planteamiento
@@ -606,7 +518,95 @@ elementos en el conjunto.
 [[../figs/chauvenet.png]]
 #+END_CENTER
 
-** Métodos gráficos
+** COMMENT Métodos gráficos: Diagramas de Taylor
+- Desarrollando $\sigma^2_{\mathbf{D}}$ y teniendo en cuenta la definición de $r$:
+
+#+BEGIN_EXPORT latex
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+- 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r
+  \]
+#+END_EXPORT
+- Esta relación es semejante a la ley de los cosenos ($c$, $a$, $b$ son lados de un triángulo y $\phi$ es el ángulo opuesto al lado $c$):
+
+#+BEGIN_EXPORT latex
+  \[
+  c^2 = a^2 + b^2 - 2 \cdot a \cdot b \cos\phi
+  \]
+#+END_EXPORT
+\nocite{Taylor2000}
+
+** COMMENT Métodos gráficos: Diagramas de Taylor
+
+#+BEGIN_EXPORT latex
+  \[
+  \sigma^2_{\mathbf{D}} = \sigma^2_{\mathbf{O}}  + \sigma^2_{\mathbf{M}}
+  - 2 \cdot \sigma_{\mathbf{O}} \cdot \sigma_{\mathbf{M}} \cdot r 
+  \]
+#+END_EXPORT
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+- $\sigma^2_{\mathbf{D}}$: Distancia al origen
+- $\sigma^2_{\mathbf{O}}$: Eje horizontal
+- $\sigma^2_{\mathbf{M}}$: Eje vertical
+- $r$: acimut
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.7
+:END:
+#+attr_latex: :height 0.7\textheight
+[[../figs/TaylorDiagrama.png]]
+
+
+** Métodos gráficos: Target Diagram[fn:3]
+
+- Emplea la relación entre $RMSD$, $\sigma^2_{\mathbf{D}}$, y $\overline{\mathbf{D}}$, normalizadas con $\sigma_{\mathbf{O}}$:
+#+BEGIN_EXPORT latex
+  \[
+  RMSD' = RMSD / \sigma_{\mathbf{O}}
+  \]
+\[
+  \sigma'_{\mathbf{D}} = \sigma_{\mathbf{D}} / \sigma_{\mathbf{O}} 
+\]
+\[
+\overline{\mathbf{D}}' = \overline{\mathbf{D}} / \sigma_{\mathbf{O}}
+\]
+\[
+RMSD'^2= \sigma'^2_{\mathbf{D}} + \overline{\mathbf{D}}'^2
+\]
+#+END_EXPORT
+
+- Incorpora el signo de la diferencia entre desviaciones estándar del modelo y las observaciones.
+#+BEGIN_EXPORT latex
+  \[
+  sign_{\sigma} =  sign(\sigma_{\mathbf{M}} - \sigma_{\mathbf{O}} )
+  \]
+#+END_EXPORT
+
+
+** Métodos gráficos: Target Diagram
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+- $\sigma'_{\mathbf{D}}$ (con signo): Eje horizontal
+- $\overline{\mathbf{D}}'$: Eje vertical
+- $RMSD'^2$: Distancia al origen
+
+***                                                                   :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+#+attr_latex: :height 0.9\textheight
+[[../figs/TargetDiagram.pdf]]
+
+
+** Ejemplo de uso de Target Diagram
 
 - Sea $Y_{f,i}(t)$ la serie temporal de la productividad diaria de *una unidad* del SFV.
 - Sea $\widetilde{Y}_{f}(t)$ la serie temporal de la *mediana* de la productividad diaria del SFV *completo*.
