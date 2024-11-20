@@ -1889,23 +1889,25 @@ distancia normalizada $l_{eo}=\frac{L_{eo}}{L}$, es posible escribir:
 
 \begin{align}
 FS_{eo} & =\frac{s-l_{eo}}{s}\nonumber \\
- & =1-l_{eo}\cdot\cos(\beta)\nonumber \\
- &
- =1-l_{eo}\cdot\frac{\sin(\omega)}{\sqrt{\sin^{2}(\omega)+\left(\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)\right)^{2}}}\label{eq:FSeoHorizontal}
+ & =1-l_{eo}\cdot\cos(\beta)\nonumber \\\label{eq:FSeoHorizontal}
 \end{align}
 
-En este caso, la  configuración
-de la planta consiste en elegir la distancia entre ejes de seguidores
-contiguos. La figura \ref{fig:SeguidoresEjeHorizontalSeparacion}
-muestra las pérdidas energéticas por sombreado mutuo para diferentes
-separaciones entre ejes. Dado que la distancia está normalizada, esta gráfica relaciona las pérdidas con el ROT.
-Nuevamente aparece una región de valores que representan un buen compromiso
-entre energía producida y ocupación de terreno (alrededor de ROT=4
-con pérdidas por sombreado inferiores al $4\%$). Superar este valor
-de ocupación proporciona incrementos de producción muy bajos que desaconsejan
-aumentar la separación. Por tanto, si para instalaciones de doble eje proponíamos el valor
-de ROT=6, el valor elegido para instalaciones de eje horizontal N-S
-es ROT=4.
+El ángulo $\beta$, la inclinación del generador respecto de la
+ horizontal, se calcula a partir de las ecuaciones \ref{eq:BetaNS}, \ref{eq:tanPsi_NS1} y \ref{eq:tanPsiNS2} que reproducimos nuevamente a continuación:
+
+\begin{equation*}
+  \beta=\left|\psi_{ns}\right|
+\end{equation*}
+
+\begin{equation*}
+  \tan(\psi_{ns})=\frac{\sin(\psi_{s})}{\tan(\gamma_{s})} = \frac{\sin(\omega)}{\cos(\omega)\cos(\phi)+\tan(\delta)\sin(\phi)}
+\end{equation*}
+
+
+En este caso, la configuración de la planta consiste en elegir la
+distancia entre ejes de seguidores contiguos. La figura
+\ref{fig:SeguidoresEjeHorizontalSeparacion} muestra las pérdidas
+ energéticas por sombreado mutuo para diferentes separaciones entre ejes. Dado que la distancia está normalizada, esta gráfica relaciona las pérdidas con el ROT.  Nuevamente aparece una región de valores que representan un buen compromiso entre energía producida y ocupación de terreno (alrededor de ROT=4 con pérdidas por sombreado inferiores al $4\%$). Superar este valor de ocupación proporciona incrementos de producción muy bajos que desaconsejan aumentar la separación. Por tanto, si para instalaciones de doble eje proponíamos el valor de ROT=6, el valor elegido para instalaciones de eje horizontal N-S es ROT=4.
 
 \begin{figure}
   \centering
