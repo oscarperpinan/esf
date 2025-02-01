@@ -125,7 +125,7 @@ La medida directa de radiación solar global se realiza con un piranómetro.
 - [[https://www.meteogalicia.gal/observacion/estacions/estacions.action?request_locale=es][Meteogalicia]]  
 - [[http://meteo.navarra.es/estaciones/mapadeestaciones.cfm][MeteoNavarra]]
 - [[http://www.meteo.cat/observacions/xema][Cataluña]]
-- [[http://www.euskalmet.euskadi.net/s07-5853x/es/meteorologia/lectur.apl?e%3D5][MeteoEuskadi]]
+- [[https://www.euskalmet.euskadi.eus/s07-5853x/es/meteorologia/datos/mapaesta.apl?e=5][MeteoEuskadi]]
 - [[http://www.juntadeandalucia.es/medioambiente/servtc5/WebClima/?lr%3Dlang_es][Andalucía]]
 
 
