@@ -38,23 +38,21 @@ Una central fotovoltaica es un sistema fotovoltaico de gran tamaño (del orden d
 
 * Estado del arte (1)
 
-Las centrales fotovoltaicas superan los 648 GW[fn:1]  de potencia total instalada a nivel mundial (el 55% de la potencia fotovoltaica total):
-  - 254 GW en China,
-  - 90 GW en EEUU,
-  - 67 GW en India,
-  - 34 GW en Japón,
-  - 24 GW en España.
-    
-
+Las centrales fotovoltaicas superan los 877.5 GW[fn:1]  de potencia total instalada a nivel mundial (el 54% de la potencia fotovoltaica total):
+  - 435.26 GW en China,
+  - 117.25 GW en EEUU,
+  - 76.87 GW en India,
+  - 36.85 GW en Japón,
+  - 30.64 GW en España.
 
 * Estado del arte (2)
 
-En 2022 se instalaron 120 GW  (frente a 92 GW en 2021 y 84 GW in 2020):
-- 54 GW en China,
-- 14 GW en India,
-- 12,5 GW en EEUU,
-- 5,5 GW en España.
+En 2023 se instalaron 269.9 GW  (frente a 120 GW en 2022 y 92 GW en 2021):
+- 180.89 GW en China,
+- 24.34 GW en EEUU,
+- 10.03 GW en India,
+- 6.94 GW en España.
   
 * Footnotes
 
-[fn:1]Las cifras corresponden a finales de 2022, y provienen del informe "[[https://iea-pvps.org/trends_reports/trends-2023/][Trends in Photovoltaic Applications 2023]]" de la Task 1 de IEA-PVPS. 
+[fn:1]Las cifras corresponden a finales de 2023, y provienen del informe "[[https://iea-pvps.org/trends_reports/trends-in-pv-applications-2024/][Trends in Photovoltaic Applications 2024]]" de la Task 1 de IEA-PVPS. 
