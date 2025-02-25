@@ -16,6 +16,10 @@ conexión a red.
 
 ** Definición
 
+
+[[../figs/SFCR_Esquema.pdf]]
+
+
 - El equipo de acondicionamiento de potencia, denominado inversor DC/AC, realiza la *conversión de continua a alterna cumpliendo con  determinados requisitos* de tensión eficaz, frecuencia, distorsión armónica de las ondas de tensión y corriente, rendimiento instantáneo y medio, seguridad eléctrica, etc.
 
 - Funciona como fuente de corriente autoconmutada y sincronizada con la red.
@@ -36,6 +40,8 @@ A grandes rasgos, los inversores pueden agruparse en tres categorías:
 -  Los *inversores centrales* son recomendables para instalaciones de
    medio o gran tamaño. Permiten reducir costes (de adquisición,
    instalación y mantenimiento) y aumentar fiabilidad y eficiencia.
+
+\vfill
 
 -  *La potencia del inversor debe estar en consonancia con la potencia
    del generador* (una planta de 1 MWp debiera contar con 10 inversores
@@ -225,11 +231,11 @@ $$\begin{cases}
 
 Existen tres opciones en el mercado de inversores de conexión a red:
 
--  Inversores con transformador de salida en baja frecuencia
+- Inversores con transformador de salida en baja frecuencia
 
--  Inversores sin transformador
+- Inversores con transformador de alta frecuencia
 
--  Inversores con transformador de alta frecuencia
+- Inversores sin transformador
 
 ** Normativa relativa al transformador
 
@@ -247,7 +253,7 @@ La normativa vigente en España obliga al uso de un transformador de aislamiento
 
 -  Objetivo 3: "*la corriente continua inyectada en la red de distribución por una instalación generadora no será superior al 0,5% de la corriente nominal de la misma*", cumplido "*cuando se disponga en la instalación de un transformador separador entre el inversor y el punto de conexión de la red de distribución*". /Los inversores con transformador de alta frecuencia o sin transformador deben demostrar el cumplimiento de este requisito mediante un ensayo descrito en esta nota/.
 
-* Islanding
+* COMMENT Islanding
 ** Definición del problema
 
 [[../figs/Isla.pdf]]

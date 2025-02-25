@@ -11,7 +11,7 @@
 
 - Consecuentemente, la *estimación del comportamiento* de un sistema FV en un determinado lugar durante un período temporal exige *conocer la radiación solar disponible en el plano del generador*.
 
-[[../figs/GCPVScheme.pdf]]
+[[../figs/SFCR_Esquema.pdf]]
 
 ** La radiación solar no se puede calcular analíticamente
 - La radiación solar que alcanza la superficie terrestre es el resultado de complejas interacciones en la atmósfera.
